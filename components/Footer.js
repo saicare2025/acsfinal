@@ -14,7 +14,7 @@ import logo from "../app/assets/logo.png";
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-blue-100 to-orange-100 pt-16 pb-8 w-full overflow-x-hidden">
+    <footer className="bg-white pt-16 pb-8 w-full overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Company Info */}
@@ -22,64 +22,51 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-6 w-full">
               <Image
                 src={logo}
-                alt="Dinar Exchange Logo"
+                alt="Australian Credit Solutions Logo"
                 width={180}
                 height={50}
                 priority
                 className="h-auto max-w-[180px] w-auto"
               />
-              <span className="text-sm font-medium text-blue-900 px-2 py-1 rounded flex items-center gap-1">
-                NZ
-                <Image
-                  src="https://static.vecteezy.com/system/resources/thumbnails/012/024/958/small_2x/new-zealand-flag-with-grunge-texture-png.png"
-                  alt="New Zealand Flag"
-                  width={16}
-                  height={12}
-                  className="rounded-sm"
-                  style={{ minWidth: 16, minHeight: 12 }} // Prevents layout shift
-                />
-              </span>
             </Link>
             <p className="text-blue-900 mb-6 text-sm sm:text-base">
-              New Zealand&apos;s most trusted Iraqi Dinar exchange platform. We
-              provide authentic banknotes with guaranteed security and fast
-              delivery.
+              Australia’s trusted credit repair specialists. We help you restore your credit rating quickly, professionally, and securely.
             </p>
-            <div className="flex items-center gap-3 bg-orange-100 p-3 rounded-lg w-full">
-              <ShieldCheckIcon className="w-5 h-5 sm:w-6 sm:h-6 text-orange-400" />
-              <span className="font-medium text-sm sm:text-base">
-                100% Secure & Authentic
+            <div className="flex items-center gap-3 bg-blue-50 p-3 rounded-lg w-full">
+              <ShieldCheckIcon className="w-5 h-5 sm:w-6 sm:h-6 text-blue" />
+              <span className="font-medium text-sm sm:text-base text-blue-900">
+                100% Secure & Confidential
               </span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="w-full">
-            <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <ArrowRightIcon className="w-5 h-5 text-orange-400" />
+            <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-blue-900">
+              <ArrowRightIcon className="w-5 h-5 text-blue-500" />
               Quick Links
             </h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
                 <Link
-                  href="/buydinar"
-                  className="text-blue-900 hover:text-orange-400 transition-colors flex items-center gap-2 text-sm sm:text-base"
+                  href="/our-service"
+                  className="text-blue-900 hover:text-blue-700 transition-colors flex items-center gap-2 text-sm sm:text-base"
                 >
-                  Buy Iraqi Dinar
+                  Our Service
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/buyzimdoller"
-                  className="text-blue-900 hover:text-orange-400 transition-colors flex items-center gap-2 text-sm sm:text-base"
+                  href="/credit-score"
+                  className="text-blue-900 hover:text-blue-700 transition-colors flex items-center gap-2 text-sm sm:text-base"
                 >
-                  Buy Zimbabwe Dollar
+                  Credit Score Check
                 </Link>
               </li>
               <li>
                 <Link
                   href="/about"
-                  className="text-blue-900 hover:text-orange-400 transition-colors flex items-center gap-2 text-sm sm:text-base"
+                  className="text-blue-900 hover:text-blue-700 transition-colors flex items-center gap-2 text-sm sm:text-base"
                 >
                   About Us
                 </Link>
@@ -87,7 +74,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#testimonials"
-                  className="text-blue-900 hover:text-orange-400 transition-colors flex items-center gap-2 text-sm sm:text-base"
+                  className="text-blue-900 hover:text-blue-700 transition-colors flex items-center gap-2 text-sm sm:text-base"
                 >
                   Testimonials
                 </Link>
@@ -95,16 +82,15 @@ export function Footer() {
               <li>
                 <Link
                   href="#faq"
-                  className="text-blue-900 hover:text-orange-400 transition-colors flex items-center gap-2 text-sm sm:text-base"
+                  className="text-blue-900 hover:text-blue-700 transition-colors flex items-center gap-2 text-sm sm:text-base"
                 >
-                  FAQ&apos;s
+                  FAQs
                 </Link>
               </li>
-              
               <li>
                 <Link
                   href="/contact"
-                  className="text-blue-900 hover:text-orange-400 transition-colors flex items-center gap-2 text-sm sm:text-base"
+                  className="text-blue-900 hover:text-blue-700 transition-colors flex items-center gap-2 text-sm sm:text-base"
                 >
                   Contact Us
                 </Link>
@@ -114,90 +100,69 @@ export function Footer() {
 
           {/* Contact Info */}
           <div className="w-full">
-            <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <PhoneIcon className="w-5 h-5 text-orange-400" />
+            <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-blue-900">
+              <PhoneIcon className="w-5 h-5 text-blue-500" />
               Contact Us
             </h3>
             <ul className="space-y-3 sm:space-y-4">
               <li className="flex items-start gap-3">
-                <PhoneIcon className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 mt-0.5" />
-                <div>
-                  <a
-                    href="tel:+6498724693"
-                    className="hover:text-orange-400 transition-colors block text-sm sm:text-base"
-                  >
-                    +64 9 872 4693
-                  </a>
-                  <span className="text-xs sm:text-sm text-blue-700">
-                    New Zealand
-                  </span>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <PhoneIcon className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 mt-0.5" />
-                <div>
-                  <a
-                    href="tel:+61417460236"
-                    className="hover:text-orange-400 transition-colors block text-sm sm:text-base"
-                  >
-                    +61 417 460 236
-                  </a>
-                  <span className="text-xs sm:text-sm text-blue-700">
-                    Australia
-                  </span>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <EnvelopeIcon className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 mt-0.5" />
+                <PhoneIcon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 mt-0.5" />
                 <a
-                  href="mailto:dinars@dinarexchange.co.nz"
-                  className="hover:text-orange-400 transition-colors text-sm sm:text-base"
+                  href="tel:1300368302"
+                  className="hover:text-blue-700 transition-colors block text-sm sm:text-base text-blue-900"
                 >
-                  dinars@dinarexchange.co.nz
+                  1300 368 302
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPinIcon className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 mt-0.5" />
+                <EnvelopeIcon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 mt-0.5" />
+                <a
+                  href="mailto:help@australiancreditsolutions.com.au"
+                  className="hover:text-blue-700 transition-colors text-sm sm:text-base text-blue-900"
+                >
+                  help@australiancreditsolutions.com.au
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPinIcon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 mt-0.5" />
                 <span className="text-blue-900 text-sm sm:text-base">
-                  Auckland, New Zealand
+                  Sydney, NSW, Australia
                 </span>
               </li>
             </ul>
           </div>
 
-          {/* Payment Info */}
+          {/* Payment & Security */}
           <div className="w-full">
-            <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <BanknotesIcon className="w-5 h-5 text-orange-400" />
+            <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-blue-900">
+              <BanknotesIcon className="w-5 h-5 text-blue-500" />
               Payment & Security
             </h3>
-            <div className="bg-orange-100 p-3 sm:p-4 rounded-lg mb-6">
-              <h4 className="font-medium mb-2 text-sm sm:text-base">
+            <div className="bg-blue-50 p-3 sm:p-4 rounded-lg mb-6">
+              <h4 className="font-medium mb-2 text-sm sm:text-base text-blue-900">
                 Secure Payment Processing
               </h4>
-              <p className="text-blue-900 text-xs sm:text-sm">
-                We only accept payment via Bank Transfer.
+              <p className="text-blue-700 text-xs sm:text-sm">
+                We accept secure payment by Bank Transfer and Credit Card.
               </p>
             </div>
             <Link
-              href="/buydinar"
-              className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto"
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 bg-blue hover:bg-blue-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded-lg transition-colors text-sm sm:text-base w-full sm:w-auto"
             >
-              Start Your Order
+              Start Your Credit Repair
             </Link>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-blue-700 my-6 sm:my-8"></div>
+        <div className="border-t border-blue-100 my-6 sm:my-8"></div>
 
         {/* Bottom Footer */}
         <div className="flex justify-center items-center gap-4 text-center md:text-left">
-          <p className="text-blue-700 text-xs sm:text-sm">
-            © {new Date().getFullYear()} Dinar Exchange New Zealand. All rights
-            reserved.
+          <p className="text-blue text-xs sm:text-sm">
+            © {new Date().getFullYear()} Australian Credit Solutions. All rights reserved.
           </p>
-          
         </div>
       </div>
     </footer>

@@ -53,12 +53,12 @@ const AboutPage = () => {
               variants={fadeIn}
               className="inline-block mb-6"
             >
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-orange-600 rounded-full mx-auto" />
+              <div className="w-20 h-1 bg-gradient-to-r from-blue to-orange-600 rounded-full mx-auto" />
             </motion.div>
             
             <motion.h1 
               variants={itemVariants}
-              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent mb-4"
+              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue to-orange-600 bg-clip-text text-transparent mb-4"
             >
               About Dinar Exchange NZ
             </motion.h1>
@@ -86,7 +86,7 @@ const AboutPage = () => {
                   initial={{ x: -50, opacity: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <span className="text-blue-600">Who</span> We Are
+                  <span className="text-blue">Who</span> We Are
                 </motion.h2>
                 <div className="space-y-4 text-gray-700">
                   <p>
@@ -192,13 +192,13 @@ const AboutPage = () => {
               className="text-center"
             >
               <motion.div
-                className="bg-gradient-to-r from-blue-600 to-orange-600 p-0.5 rounded-full inline-block mb-8"
+                className="bg-gradient-to-r from-blue to-orange-600 p-0.5 rounded-full inline-block mb-8"
                 whileInView={{ scaleX: [0, 1.2, 1] }}
                 initial={{ scaleX: 0 }}
                 transition={{ duration: 0.8 }}
               >
                 <div className="bg-gradient-to-r from-blue-100 to-orange-100 px-8 py-4 rounded-full">
-                  <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-600">
+                  <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue to-orange-600">
                     Our Mission
                   </h2>
                 </div>
@@ -222,7 +222,7 @@ const AboutPage = () => {
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-lg"
             >
               <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-                Contact <span className="text-blue-600">Us</span>
+                Contact <span className="text-blue">Us</span>
               </h2>
               
               <div className="grid md:grid-cols-3 gap-8 text-center">

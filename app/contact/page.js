@@ -42,7 +42,7 @@ const ContactPage = () => {
             className="text-center mb-8"
           >
             <motion.h1 
-              className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent mb-2"
+              className="text-3xl font-bold bg-gradient-to-r from-blue to-orange-500 bg-clip-text text-transparent mb-2"
             >
               Contact Us
             </motion.h1>
@@ -63,13 +63,13 @@ const ContactPage = () => {
               <div className="space-y-5">
                 <div className="flex items-start gap-4">
                   <div className="bg-gradient-to-br from-blue-100 to-orange-100 p-2 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
                     <h3 className="font-medium text-gray-500 text-sm">EMAIL</h3>
-                    <a href="mailto:dinars@dinarexchange.co.nz" className="text-blue-600 hover:text-orange-500 transition-colors">
+                    <a href="mailto:dinars@dinarexchange.co.nz" className="text-blue hover:text-orange-500 transition-colors">
                       dinars@dinarexchange.co.nz
                     </a>
                   </div>
@@ -83,7 +83,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-gray-500 text-sm">PHONE</h3>
-                    <a href="tel:+6498724693" className="text-blue-600 hover:text-orange-500 transition-colors">
+                    <a href="tel:+6498724693" className="text-blue hover:text-orange-500 transition-colors">
                       +64 9 872 4693
                     </a>
                   </div>
@@ -150,7 +150,7 @@ const ContactPage = () => {
 
                 <motion.button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-orange-500 text-white py-2 px-4 rounded-md text-sm font-medium hover:from-blue-600 hover:to-orange-600 transition-all shadow-sm"
+                  className="w-full bg-gradient-to-r from-blue-500 to-orange-500 text-white py-2 px-4 rounded-md text-sm font-medium hover:from-blue hover:to-orange-600 transition-all shadow-sm"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
