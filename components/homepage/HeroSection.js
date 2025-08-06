@@ -39,39 +39,43 @@ export default function HeroSection() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="relative w-full"
           >
+            {/* Desktop Image: Visible on large screens and above */}
             <Image
               src={heroImage.src}
-              height={500}
-              width={400}
               alt="Financial consultation"
-              className="hidden lg:w-full h-[320px] sm:h-[420px] md:h-[480px] lg:h-[580px] object-cover rounded-2xl shadow-2xl border-4 border-white/20"
+              width={400}
+              height={500}
+              className="hidden lg:block w-full md:h-[570px] sm:h-[420px] h-[320px] object-cover rounded-2xl shadow-2xl border-4 border-white/20"
             />
-             <Image
+
+            {/* Mobile Image: Visible below large screens */}
+            <Image
               src={heromobile.src}
-              height={500}
-              width={400}
               alt="Financial consultation"
-              className="w-full lg:hidden h-[250px] object-cover rounded-2xl shadow-2xl border-4 border-white/20"
+              width={400}
+              height={500}
+              className="block lg:hidden w-full h-[250px] object-cover rounded-2xl shadow-2xl border-4 border-white/20"
             />
-            {/* Approval Badge */}
-           
-              <motion.div
-                className="absolute top-0 lg:-top-6 left-0 sm:-left-6 bg-white text-blue-900 px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow-lg font-bold text-xs sm:text-base"
-                initial={{ y: -20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-              >
-                Trusted by 1,000+ Clients
-              </motion.div>
-              <motion.div
-                className="absolute -bottom-0 right-0 sm:-right-6 bg-blue-600/90 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-lg text-xs sm:text-base"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-              >
-                <p className="font-bold">98% Approval Rate</p>
-              </motion.div>
-             
+
+            {/* Approval Badge (top left) */}
+            <motion.div
+              className="absolute top-0 lg:-top-6 left-0 sm:-left-6 bg-white text-blue-900 px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow-lg font-bold text-xs sm:text-base"
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+            >
+              Trusted by 1,000+ Clients
+            </motion.div>
+
+            {/* Approval Rate Badge (bottom right) */}
+            <motion.div
+              className="absolute -bottom-0 right-0 sm:-right-6 bg-blue-600/90 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-lg text-xs sm:text-base"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              <p className="font-bold">98% Approval Rate</p>
+            </motion.div>
           </motion.div>
         </div>
       </div>

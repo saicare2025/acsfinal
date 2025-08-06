@@ -58,7 +58,7 @@ const BlogSection = () => {
 
   return (
     <section className="py-16 bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-50">
-      <div className="container mx-auto px-4">
+      <div className="container max-w-7xl mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
