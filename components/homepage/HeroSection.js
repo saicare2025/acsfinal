@@ -53,7 +53,7 @@ export default function HeroSection() {
             </motion.div>
             {/* Client Trust Badge */}
             <motion.div
-              className="absolute -top-2 lg:-top-6 right-3 sm:-right-6 bg-white text-blue-900 px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow-lg font-bold text-xs sm:text-base"
+              className=" lg:-top-6 right-3 sm:-right-6 bg-white text-blue-900 px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow-lg font-bold text-xs sm:text-base"
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.5 }}
