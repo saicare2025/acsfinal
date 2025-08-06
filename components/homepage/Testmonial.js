@@ -227,7 +227,7 @@ export default function PremiumTestimonialCarousel() {
         >
           {testimonials.map((t, idx) => (
             <SwiperSlide key={idx}>
-              <div className="relative h-full bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 rounded-2xl shadow-lg border border-blue-200 px-8 py-12 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="relative h-full bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 rounded-2xl shadow-lg border border-blue-200 p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 {/* Verified Badge */}
                 <div className="absolute top-4 right-4 flex items-center gap-1 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full border border-blue-200">
                   <ShieldCheckIcon className="w-4 h-4 text-blue" />
