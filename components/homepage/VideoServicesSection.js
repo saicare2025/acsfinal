@@ -93,7 +93,7 @@ const VideoServicesSection = () => {
                   </motion.div>
                 ))}
               </div>
-              <Link href="meeting-schedule">
+              <Link href="/meeting-schedule">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}

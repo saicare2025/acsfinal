@@ -1,11 +1,35 @@
-"use client"
+"use client";
 import { useState } from "react";
-import { User, Mail, Phone, MapPin, ChevronDown } from "lucide-react";
+import {
+  User,
+  Mail,
+  Phone,
+  MapPin,
+  Hash,
+  ClipboardList,
+  BriefcaseBusiness,
+  ChevronDown,
+} from "lucide-react";
 import ScheduleModal from "../ScheduleModal";
 import { useRouter } from "next/navigation";
 
-
 const AUSTRALIAN_STATES = ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"];
+
+const LOOKING_FOR_OPTIONS = [
+  "Home Loan",
+  "Car Loan",
+  "Personal Loan",
+  "For Future Reference",
+];
+
+const EMPLOYMENT_OPTIONS = [
+  "Full Time",
+  "Part Time",
+  "Centrelink",
+  "Job Seeker",
+  "Disability Pension",
+  "Unemployed / Between Jobs",
+];
 
 const TextInput = ({
   label,
@@ -16,6 +40,10 @@ const TextInput = ({
   placeholder,
   Icon,
   error,
+  inputMode,
+  pattern,
+  maxLength,
+  className = "",
 }) => (
   <div className="space-y-1">
     <label className="block text-xs font-semibold uppercase tracking-wider text-blue-900">
@@ -31,11 +59,14 @@ const TextInput = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`w-full rounded-lg border py-2.5 pl-10 pr-4 text-sm transition-all duration-200 ${
+        inputMode={inputMode}
+        pattern={pattern}
+        maxLength={maxLength}
+        className={`w-full rounded-lg border bg-white py-2 pl-10 pr-4 text-sm placeholder:text-blue-400 transition-all duration-200 ${
           error
             ? "border-red-300 focus:border-red-500 focus:ring-red-500"
             : "border-blue-100 focus:border-blue-500 focus:ring-blue-500"
-        }`}
+        } ${className}`}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${name}-error` : undefined}
       />
@@ -56,6 +87,7 @@ const SelectInput = ({
   options,
   Icon,
   error,
+  placeholder,
 }) => (
   <div className="space-y-1">
     <label className="block text-xs font-semibold uppercase tracking-wider text-blue-900">
@@ -65,12 +97,12 @@ const SelectInput = ({
       {Icon && (
         <Icon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-blue-700" />
       )}
-      <ChevronDown className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-blue-700" />
+      <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-blue-700" />
       <select
         name={name}
         value={value}
         onChange={onChange}
-        className={`w-full appearance-none rounded-lg border py-2.5 pl-10 pr-8 text-sm ${
+        className={`w-full appearance-none rounded-lg border bg-white py-2 pl-10 pr-8 text-sm ${
           error
             ? "border-red-300 focus:border-red-500 focus:ring-red-500"
             : "border-blue-100 focus:border-blue-500 focus:ring-blue-500"
@@ -78,9 +110,11 @@ const SelectInput = ({
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${name}-error` : undefined}
       >
-        <option value="" disabled hidden>
-          Select your state
-        </option>
+        {placeholder && (
+          <option value="" disabled hidden>
+            {placeholder}
+          </option>
+        )}
         {options.map((option) => (
           <option key={option} value={option}>
             {option}
@@ -96,13 +130,57 @@ const SelectInput = ({
   </div>
 );
 
+const TextAreaInput = ({
+  label,
+  name,
+  value,
+  onChange,
+  placeholder,
+  Icon,
+  error,
+  rows = 4,
+  className = "",
+}) => (
+  <div className="space-y-1">
+    <label className="block text-xs font-semibold uppercase tracking-wider text-blue-900">
+      {label}
+    </label>
+    <div className="relative">
+      {Icon && <Icon className="absolute left-3 top-3 h-4 w-4 text-blue-700" />}
+      <textarea
+        name={name}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        rows={rows}
+        className={`w-full rounded-lg border bg-white py-2 pl-10 pr-4 text-sm placeholder:text-blue-400 transition-all duration-200 ${
+          error
+            ? "border-red-300 focus:border-red-500 focus:ring-red-500"
+            : "border-blue-100 focus:border-blue-500 focus:ring-blue-500"
+        } ${className}`}
+        aria-invalid={Boolean(error)}
+        aria-describedby={error ? `${name}-error` : undefined}
+      />
+    </div>
+    {error && (
+      <p id={`${name}-error`} className="text-xs text-red-500">
+        {error}
+      </p>
+    )}
+  </div>
+);
+
 export default function CreditAssessmentForm() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     phone: "",
     email: "",
+    lookingFor: "",
+    employment: "",
     state: "",
+    postcode: "",
+    description: "",
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -113,7 +191,6 @@ export default function CreditAssessmentForm() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
     if (formErrors[name]) {
       setFormErrors((prev) => ({ ...prev, [name]: "" }));
     }
@@ -129,8 +206,11 @@ export default function CreditAssessmentForm() {
     } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
       errors.email = "Invalid email format";
     }
+    if (!formData.lookingFor) errors.lookingFor = "Please choose an option";
+    if (!formData.employment) errors.employment = "Please choose an option";
     if (!formData.state) errors.state = "Please select a state";
-
+    if (!/^\d{4}$/.test(formData.postcode))
+      errors.postcode = "4-digit postcode required";
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
@@ -144,31 +224,34 @@ export default function CreditAssessmentForm() {
     setTimeout(() => {
       setIsSubmitting(false);
       setShowScheduleModal(true);
-    }, 600);
+    }, 500);
   };
 
   const handleScheduleSubmit = (scheduleData) => {
-    // Here you would typically send data to your backend
     console.log("Form submission:", { ...formData, ...scheduleData });
-    // Reset form
     setFormData({
       firstName: "",
       lastName: "",
       phone: "",
       email: "",
+      lookingFor: "",
+      employment: "",
       state: "",
+      postcode: "",
+      description: "",
     });
-    router.push("/booking-confirmation");
+    router.push("/");
   };
 
   return (
     <>
       <form
         onSubmit={handleSubmit}
-        className="mx-auto max-w-lg space-y-4 rounded-xl bg-white p-6 shadow-xl"
+        className="mx-auto max-w-2xl space-y-3 rounded-xl bg-white p-4 shadow-lg"
         noValidate
       >
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {/* Name */}
+        <div className="grid gap-3 grid-cols-1 md:grid-cols-2">
           <TextInput
             label="First Name"
             name="firstName"
@@ -177,6 +260,7 @@ export default function CreditAssessmentForm() {
             placeholder="John"
             Icon={User}
             error={formErrors.firstName}
+            className="text-blue-900"
           />
           <TextInput
             label="Last Name"
@@ -186,10 +270,12 @@ export default function CreditAssessmentForm() {
             placeholder="Doe"
             Icon={User}
             error={formErrors.lastName}
+            className="text-blue-900"
           />
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {/* Contact */}
+        <div className="grid gap-3 grid-cols-1 md:grid-cols-2">
           <TextInput
             label="Phone"
             name="phone"
@@ -199,6 +285,8 @@ export default function CreditAssessmentForm() {
             placeholder="04XX XXX XXX"
             Icon={Phone}
             error={formErrors.phone}
+            inputMode="tel"
+            className="text-blue-900"
           />
           <TextInput
             label="Email"
@@ -209,25 +297,80 @@ export default function CreditAssessmentForm() {
             placeholder="your@email.com"
             Icon={Mail}
             error={formErrors.email}
+            inputMode="email"
+            className="text-blue-900"
           />
         </div>
 
-        <SelectInput
-          label="State"
-          name="state"
-          value={formData.state}
+        {/* Dropdowns */}
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+          <SelectInput
+            label="Are you looking for?"
+            name="lookingFor"
+            value={formData.lookingFor}
+            onChange={handleChange}
+            options={LOOKING_FOR_OPTIONS}
+            Icon={ClipboardList}
+            error={formErrors.lookingFor}
+            placeholder="Select an option"
+          />
+          <SelectInput
+            label="Are you currently working?"
+            name="employment"
+            value={formData.employment}
+            onChange={handleChange}
+            options={EMPLOYMENT_OPTIONS}
+            Icon={BriefcaseBusiness}
+            error={formErrors.employment}
+            placeholder="Select an option"
+          />
+        </div>
+
+        {/* State / Postcode */}
+        <div className="grid gap-3 grid-cols-1 md:grid-cols-2">
+          <SelectInput
+            label="State"
+            name="state"
+            value={formData.state}
+            onChange={handleChange}
+            options={AUSTRALIAN_STATES}
+            Icon={MapPin}
+            error={formErrors.state}
+            placeholder="Select your state"
+          />
+          <TextInput
+            label="Post Code"
+            name="postcode"
+            value={formData.postcode}
+            onChange={handleChange}
+            placeholder="e.g., 2150"
+            Icon={Hash}
+            error={formErrors.postcode}
+            inputMode="numeric"
+            pattern="\d{4}"
+            maxLength={4}
+            className="text-blue-900"
+          />
+        </div>
+
+        {/* Description */}
+        <TextAreaInput
+          label="Please share any other info in regards to your credit file"
+          name="description"
+          value={formData.description}
           onChange={handleChange}
-          options={AUSTRALIAN_STATES}
-          Icon={MapPin}
-          error={formErrors.state}
+          placeholder="Add any details you'd like us to know…"
+          Icon={ClipboardList}
+          className="text-blue-900"
         />
 
+        {/* Submit */}
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-2 w-full rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 text-sm font-medium uppercase tracking-wider text-white shadow-md transition-all hover:from-blue-600 hover:to-blue-700 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+          className="mt-1 w-full rounded-lg bg-gradient-to-r from-blue to-blue-800 px-5 py-3 text-sm font-medium uppercase tracking-wider text-white shadow-md transition-all hover:from-blue-600 hover:to-blue-700 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
         >
-          {isSubmitting ? "Processing..." : "Get Free Assessment"}
+          {isSubmitting ? "Processing..." : "Apply Now"}
         </button>
       </form>
 

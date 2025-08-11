@@ -1,73 +1,80 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
+import React from "react";
+import { motion } from "framer-motion";
+import {
   ShieldCheck,
   Search,
   Gavel,
   Clock,
   FileText,
   Fingerprint,
-  ChevronRight
-} from 'lucide-react';
+  ChevronRight,
+} from "lucide-react";
+import Link from "next/link";
 
 const CreditRepairSection = () => {
   const services = [
     {
       icon: <ShieldCheck className="w-6 h-6" />,
       title: "Removing Incorrect Defaults",
-      description: "We'll help fix any false defaults affecting your score."
+      description: "We'll help fix any false defaults affecting your score.",
     },
     {
       icon: <Search className="w-6 h-6" />,
       title: "Disputing Invalid Inquiries",
-      description: "Any unwarranted credit inquiries? We'll challenge them for you."
+      description:
+        "Any unwarranted credit inquiries? We'll challenge them for you.",
     },
     {
       icon: <Gavel className="w-6 h-6" />,
       title: "Court Judgments",
-      description: "Assistance with addressing and resolving any court judgments."
+      description:
+        "Assistance with addressing and resolving any court judgments.",
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Worst Repayment History Disputes",
-      description: "We'll help dispute and correct repayment history inaccuracies."
+      description:
+        "We'll help dispute and correct repayment history inaccuracies.",
     },
     {
       icon: <FileText className="w-6 h-6" />,
       title: "Detailed Credit Report Analysis",
-      description: "Comprehensive breakdown to understand and improve your score."
+      description:
+        "Comprehensive breakdown to understand and improve your score.",
     },
     {
       icon: <Fingerprint className="w-6 h-6" />,
       title: "Fixing Identity Theft Issues",
-      description: "We'll resolve identity theft issues affecting your credit."
-    }
+      description: "We'll resolve identity theft issues affecting your credit.",
+    },
   ];
 
   return (
     <section className="py-16 ">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Are You Facing <span className="text-blue">Credit Score Issues</span>?
+            Are You Facing{" "}
+            <span className="text-blue">Credit Score Issues</span>?
           </h2>
           <p className="text-xl text-blue font-medium mb-6">
             Fix your Credit with the #1 Credit Repair Solution
           </p>
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-600">
-              At Australian Credit Solutions, we help you take control of your financial reputation through expert credit profile management.
+              At Australian Credit Solutions, we help you take control of your
+              financial reputation through expert credit profile management.
             </p>
           </div>
         </motion.div>
 
         <div className="max-w-5xl mx-auto">
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -91,9 +98,13 @@ const CreditRepairSection = () => {
                     <div className="p-2 bg-blue-100/50 rounded-lg text-blue group-hover:bg-blue/10 transition-colors">
                       {service.icon}
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900">{service.title}</h3>
+                    <h3 className="text-lg font-bold text-gray-900">
+                      {service.title}
+                    </h3>
                   </div>
-                  <p className="text-gray-600 pl-12 mb-4">{service.description}</p>
+                  <p className="text-gray-600 pl-12 mb-4">
+                    {service.description}
+                  </p>
                   <button className="flex items-center text-blue font-medium pl-12 group-hover:text-blue-700 transition-colors">
                     Learn more <ChevronRight className="ml-1 w-4 h-4" />
                   </button>
@@ -102,17 +113,18 @@ const CreditRepairSection = () => {
             ))}
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="text-center mt-12"
-        >
-          <button className="px-8 py-3 bg-blue hover:bg-blue-700 text-white font-medium rounded-lg shadow-md transition-colors">
-            Get Your Free Credit Assessment
-          </button>
-        </motion.div>
+        <Link href="/meeting-schedule">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="text-center mt-12"
+          >
+            <button className="px-8 py-3 bg-blue hover:bg-blue-700 text-white font-medium rounded-lg shadow-md transition-colors">
+              Get Your Free Credit Assessment
+            </button>
+          </motion.div>
+        </Link>
       </div>
     </section>
   );
