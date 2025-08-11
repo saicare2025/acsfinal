@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
 ];
 
   return (
-    <section className="lg:py-16 bg-gradient-to-b from-white to-blue-50">
+    <section className="lg:py-16">
       <div className="container max-w-7xl mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

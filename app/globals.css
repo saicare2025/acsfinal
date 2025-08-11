@@ -9,3 +9,8 @@
   --color-blue: #0668a5;
   --color-blue-dark: #1D4ED8;
 }
+/* Ensure all visible slides are fully opaque */
+.swiper-slide { opacity: 1 !important; }
+.swiper-slide-visible { opacity: 1 !important; }
+/* In case a global rule dims aria-hidden elements */
+.swiper-slide[aria-hidden="true"] { opacity: 1 !important; }

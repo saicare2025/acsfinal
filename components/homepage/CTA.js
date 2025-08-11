@@ -23,7 +23,7 @@ export default function CTASection() {
               <h3 className="text-lg font-bold text-gray-800 mb-2">Free Credit Assessment</h3>
               <p className="text-gray-600 text-sm mb-4">Get your personalized credit evaluation</p>
               <Link 
-                href="/free-assessment" 
+                href="/meeting-schedule" 
                 className="mt-auto w-full bg-blue hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
               >
                 Start Now
