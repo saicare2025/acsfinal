@@ -44,7 +44,7 @@ const HelpSection = () => {
   ];
 
   return (
-    <section className="lg:py-16  bg-gradient-to-b from-blue-50 to-white">
+    <section className="lg:py-16 ">
       <div className="container max-w-7xl mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ const HelpSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl shadow-sm overflow-hidden border border-blue-200 hover:shadow-md transition-all"
+              className="bg-gradient-to-br from-white to-blue-100 rounded-xl shadow-sm overflow-hidden border border-blue-200 hover:shadow-md transition-all"
             >
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4">

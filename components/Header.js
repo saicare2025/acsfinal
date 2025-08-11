@@ -10,6 +10,7 @@ import {
   CogIcon,
   PhoneIcon,
   EnvelopeIcon,
+  NewspaperIcon,
 } from "@heroicons/react/24/outline";
 import logo from "../app/assets/logo.png";
 import {
@@ -18,23 +19,29 @@ import {
   LinkedinIcon,
   TwitterIcon,
 } from "lucide-react";
+import Logo from "./Logo";
 
 const NAV_LINKS = [
   { name: "Home", href: "/", icon: <HomeIcon className="w-5 h-5" /> },
   {
-    name: "Our Service",
-    href: "/our-service",
+    name: "Our Services",
+    href: "/our-services",
     icon: <CogIcon className="w-5 h-5" />,
   },
   {
-    name: "Credit Score",
-    href: "/credit-score",
+    name: "Check Credit Score",
+    href: "/credit-quiz",
     icon: <ChartBarIcon className="w-5 h-5" />,
   },
+  {
+    name: "Blogs",
+    href: "/blogs",
+    icon: <NewspaperIcon className="w-5 h-5" />,
+  },
 ];
-
 function MobileMenu({ isOpen, navLinks, onClose }) {
   if (!isOpen) return null;
+
   return (
     <div className="lg:hidden bg-white border-t border-gray-200 z-40">
       <nav className="px-2 py-3 space-y-1">
@@ -50,6 +57,28 @@ function MobileMenu({ isOpen, navLinks, onClose }) {
           </Link>
         ))}
       </nav>
+
+      {/* Mobile CTAs */}
+      <div className="px-3 pb-4 pt-2 border-t border-gray-100 space-y-2">
+        <Link
+          href="/meeting-schedule"
+          onClick={onClose}
+          className="block w-full text-center rounded-lg bg-gradient-to-r from-blue-500 to-blue-700
+                     hover:from-blue-600 hover:to-blue-800 text-white font-medium py-3 shadow-md"
+          aria-label="Start Free Credit Assessment"
+        >
+          Free Credit Assessment
+        </Link>
+
+        <a
+          href="tel:0489265737"
+          className="block w-full text-center rounded-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500
+                     hover:from-cyan-600 hover:via-blue-600 hover:to-indigo-600 text-white font-medium py-3 shadow-md"
+          aria-label="Call Credit Repair Helpline"
+        >
+          Helpline 0489 265 737
+        </a>
+      </div>
     </div>
   );
 }
@@ -115,19 +144,7 @@ export default function Header() {
       >
         <div className="container w-full max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-            aria-label="Go to homepage"
-          >
-            <Image
-              src={logo}
-              alt="Company Logo"
-              width={200}
-              height={60}
-              priority
-            />
-          </Link>
+          <Logo />
 
           {/* Desktop Navigation with Buttons */}
           <div className="hidden lg:flex items-center space-x-6">
@@ -144,22 +161,26 @@ export default function Header() {
               ))}
             </nav>
             <div className="flex items-center space-x-4 ml-6">
-              <button
-                className="bg-gradient-to-r from-blue-500 via-blue to-blue-700
-                 hover:from-blue hover:via-blue-700 hover:to-blue-800
-                 text-white px-4 py-2 rounded-md text-sm font-medium
-                 transition-all duration-200 shadow-md"
-              >
-                Free Credit Assessment
-              </button>
-              <button
+              <Link href="/meeting-schedule">
+                <button
+                  className="bg-gradient-to-r from-blue-500 via-blue to-blue-700
+                hover:from-blue hover:via-blue-700 hover:to-blue-800
+                text-white px-4 py-2 rounded-md text-sm font-medium
+                transition-all duration-200 shadow-md"
+                >
+                  Free Credit Assessment
+                </button>
+              </Link>
+
+              <a
+                href="tel:0489265737"
                 className="bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500
-                 hover:from-cyan-600 hover:via-blue hover:to-indigo-600
-                 text-white px-4 py-2 rounded-md text-sm font-medium
-                 transition-all duration-200 shadow-md"
+             hover:from-cyan-600 hover:via-blue-600 hover:to-indigo-600
+             text-white px-4 py-2 rounded-md text-sm font-medium
+             transition-all duration-200 shadow-md inline-block"
               >
-                Credit Repair Helpline 0489 265 737
-              </button>
+                Helpline 0489 265 737
+              </a>
             </div>
           </div>
 

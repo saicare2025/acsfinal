@@ -45,7 +45,7 @@ const CreditRepairSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+    <section className="py-16 ">
       <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -84,7 +84,7 @@ const CreditRepairSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-sm overflow-hidden border border-blue-100 hover:shadow-md transition-all hover:border-blue-200 group"
+                className="bg-gradient-to-br from-white to-blue-100 rounded-xl shadow-sm overflow-hidden border border-blue-100 hover:shadow-md transition-all hover:border-blue-200 group"
               >
                 <div className="p-6">
                   <div className="flex items-start gap-4 mb-4">

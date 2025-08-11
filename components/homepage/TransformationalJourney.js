@@ -57,7 +57,7 @@ const CreditScoreTransformation = () => {
   };
 
   return (
-    <section className="pt-12 lg:pt-0 lg:py-16 bg-gradient-to-b from-blue-50 to-white">
+    <section className="pt-12 lg:pt-0 lg:py-16">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
