@@ -1,4 +1,4 @@
-import BlogSection from "./Blog";
+
 import CreditRepairSection from "./CreditRepair";
 import CTASection from "./CTA";
 import HeroSection from "./HeroSection";
@@ -21,7 +21,6 @@ export default function HomePage() {
       <VideoServicesSection/>
       <HelpSection/>
       <CreditRepairSection/>
-      <BlogSection/>
       <CTASection/>
       <LoanCalculator/>
     </main>

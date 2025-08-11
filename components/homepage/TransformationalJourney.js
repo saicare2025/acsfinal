@@ -73,7 +73,7 @@ const CreditScoreTransformation = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {successStories.map((story, index) => (
             <motion.div
               key={story.id}
@@ -84,7 +84,7 @@ const CreditScoreTransformation = () => {
               className="bg-white rounded-xl shadow-md overflow-hidden border border-blue-100 hover:shadow-lg transition-all"
             >
               {/* Image with Score Meter */}
-              <div className="relative h-96 w-full">
+              <div className="relative h-[400px] lg:h-[500px]  w-full">
                 <Image
                   src={story.image}
                   alt={story.alt}

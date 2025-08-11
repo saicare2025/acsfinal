@@ -1,3 +1,4 @@
+import FloatingHelpline from "@/components/FloatingHelpline";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         {children}
         <Toaster position="top-right" />
+        <FloatingHelpline/>
       </body>
     </html>
   );

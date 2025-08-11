@@ -119,17 +119,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom Links */}
-        <div className="border-t border-gray-200 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t flex flex-col justify-center items-center gap-2 border-gray-200 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="flex flex-wrap justify-center gap-4 mb-4 md:mb-0">
               <Link
-                href="/terms"
+                href="/terms-conditions"
                 className="text-gray-600 hover:text-blue-600 text-sm"
               >
                 Terms and Conditions
               </Link>
               <Link
-                href="/privacy"
+                href="/privacy-policy"
                 className="text-gray-600 hover:text-blue-600 text-sm"
               >
                 Privacy Policy
@@ -140,12 +140,14 @@ export default function Footer() {
               >
                 Testimonials
               </Link>
-              <Link
-                href="/complaints"
+              <a
+                href="/Complaints.pdf"
+                download="Complaints.pdf"
                 className="text-gray-600 hover:text-blue-600 text-sm"
               >
                 Complaints Handling Policy
-              </Link>
+              </a>
+
               <Link
                 href="/blogs"
                 className="text-gray-600 hover:text-blue-600 text-sm"
@@ -153,12 +155,11 @@ export default function Footer() {
                 Blogs
               </Link>
             </div>
-            <p className="text-gray-600 text-sm text-center md:text-right">
-              © {new Date().getFullYear()} Australian Credit Solutions
-            </p>
           </div>
-
-          <p className="text-gray-500 text-xs mt-4 text-center">
+          <p className="text-gray-600 text-sm text-center md:text-right">
+            © {new Date().getFullYear()} Australian Credit Solutions
+          </p>
+          <p className="text-gray-500 text-xs text-center">
             Australian Credit Solutions specializes exclusively in credit repair
             services and does not provide legal advice. For any legal matters,
             please contact Fogarty Oliver and Rothschilds.
