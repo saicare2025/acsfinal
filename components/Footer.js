@@ -1,196 +1,235 @@
 "use client";
 
 import Link from "next/link";
-import Logo from "./Logo"; // Import your logo component
+import Logo from "./Logo";
+import { motion } from "framer-motion";
+import { Phone, Mail, MapPin, ShieldCheck } from "lucide-react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
+
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((s) => ({ ...s, [name]: value }));
+  };
+
+  const validateForm = () => {
+    const { fullName, email, phone } = formData;
+    if (!fullName.trim()) {
+      alert("Please enter your full name.");
+      return false;
+    }
+    if (!email.trim() || !/^\S+@\S+\.\S+$/.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+    if (!phone.trim()) {
+      alert("Please enter your phone number.");
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const payload = {
+        name: formData.fullName.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone, // raw format
+      };
+
+      const response = await fetch("https://rest.gohighlevel.com/v1/contacts/", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_GHL_API_KEY}`,
+          Version: "2021-07-28",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+      console.log("Full API Response:", result);
+
+      if (!response.ok) {
+        throw new Error(result.message || "GHL API error");
+      }
+
+      const contactId = result.id || result.contact?.id || result.data?.id;
+      if (!contactId) {
+        console.error("Unexpected API response format:", result);
+        throw new Error("No contact ID received. Check console for details.");
+      }
+
+      router.push("/booking-confirmation");
+    } catch (error) {
+      console.error("Submission failed:", error);
+      alert(`Error: ${error.message}`);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
-    <footer className="bg-blue-50 text-gray-800">
+    <footer className="bg-gradient-to-b from-blue-50 to-white text-gray-800 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo and Contact Info */}
-          <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Company Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-5"
+          >
             <Logo className="h-10 w-auto text-blue-900" />
-            <p className="text-sm text-gray-600">ABN 80 650 730 699</p>
-
-            <div className="space-y-2">
-              <div className="flex items-center">
-                <PhoneIcon className="h-5 w-5 text-blue-700 mr-2" />
-                <a
-                  href="tel:1300368302"
-                  className="text-gray-700 hover:text-blue-600 transition-colors"
-                >
-                  1300 368 302
-                </a>
-              </div>
-              <div className="flex items-center">
-                <PhoneIcon className="h-5 w-5 text-blue-700 mr-2" />
-                <a
-                  href="tel:0489265737"
-                  className="text-gray-700 hover:text-blue-600 transition-colors"
-                >
-                  0489 265 737
-                </a>
-              </div>
-              <div className="flex items-center">
-                <MailIcon className="h-5 w-5 text-blue-700 mr-2" />
-                <a
-                  href="mailto:help@australiancreditsolutions.com.au"
-                  className="text-gray-700 hover:text-blue-600 transition-colors"
-                >
-                  help@australiancreditsolutions.com.au
-                </a>
-              </div>
-              <div className="flex items-start">
-                <LocationIcon className="h-5 w-5 text-blue-700 mr-2 mt-0.5" />
-                <address className="text-gray-700 not-italic">
-                  Level 8, 805/220 Collins Street
-                  <br />
-                  Melbourne VIC 3000
-                </address>
-              </div>
-            </div>
-          </div>
-
-          {/* Services by State */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
-              We provide services in all states:
-            </h3>
-            <div className="grid grid-cols-2 gap-2">
-              {[
-                "Adelaide",
-                "Brisbane",
-                "Canberra",
-                "Darwin",
-                "Hobart",
-                "Melbourne",
-                "Perth",
-                "Sydney",
-              ].map((city) => (
-                <Link
-                  key={city}
-                  href={`/credit-quiz`}
-                  className="text-gray-700 hover:text-blue-600 transition-colors"
-                >
-                  Credit Repair {city}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA Form */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
-              Start rebuilding your Future Now with a Free Credit Repair
-              Consultation
-            </h3>
-            <p className="text-gray-600 mb-4">
-              To start the process simply fill out the form below to claim a
-              free Credit Assessment worth $199.
+            <p className="text-gray-600">
+              Australian Credit Solutions helps individuals and businesses
+              manage their credit profiles and financial opportunities.
             </p>
 
-            <form className="space-y-3">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <div className="bg-blue-100 p-1 rounded-full">
+                  <ShieldCheck className="w-4 h-4 text-blue-600" />
+                </div>
+                <span className="text-sm font-medium text-gray-700">
+                  Verified with AFCA and ASIC Australia
+                </span>
+              </div>
+              <p className="text-xs text-gray-500">
+                ABN: 80 650 730 699 | ACN: 650 730 699
+                <br />
+                AFCA membership: 83546
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="space-y-5"
+          >
+            <h3 className="text-xl font-bold text-gray-900">Contact Us</h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="bg-blue-100 p-2 rounded-full">
+                  <Phone className="w-5 h-5 text-blue-600" />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-700">Phone</p>
+                  <a
+                    href="tel:0489265737"
+                    className="text-gray-600 hover:text-blue-600 transition-colors"
+                  >
+                    0489 265 737
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="bg-blue-100 p-2 rounded-full">
+                  <Mail className="w-5 h-5 text-blue-600" />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-700">Email</p>
+                  <a
+                    href="mailto:help@australiancreditsolutions.com.au"
+                    className="text-gray-600 hover:text-blue-600 transition-colors"
+                  >
+                    help@australiancreditsolutions.com.au
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="bg-blue-100 p-2 rounded-full">
+                  <MapPin className="w-5 h-5 text-blue-600" />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-700">Address</p>
+                  <address className="text-gray-600 not-italic">
+                    Level 8, 805/220 Collins Street
+                    <br />
+                    Melbourne VIC 3000
+                  </address>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* CTA Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="space-y-3"
+          >
+            <h3 className="text-xl font-bold text-gray-900">
+              Free Credit Assessment
+            </h3>
+            <p className="text-gray-600">
+              Start rebuilding your credit today with our no-obligation
+              assessment.
+            </p>
+
+            <form onSubmit={handleSubmit} className="space-y-2">
               <input
                 type="text"
+                name="fullName"
                 placeholder="Full Name"
-                className="w-full px-4 py-2 rounded-md border border-gray-300 bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value={formData.fullName}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-1 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               />
-              <input
-                type="tel"
-                placeholder="Phone"
-                className="w-full px-4 py-2 rounded-md border border-gray-300 bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+
               <input
                 type="email"
+                name="email"
                 placeholder="Email Address"
-                className="w-full px-4 py-2 rounded-md border border-gray-300 bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-1 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               />
-              <Link href="/meeting-schedule">
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-md transition-all shadow-md"
-                >
-                  GET HELP NOW
-                </button>
-              </Link>
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-1 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              />
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="mt-1 w-full rounded-lg bg-blue px-5 py-2 text-sm font-medium uppercase tracking-wider text-white shadow-md transition-all hover:from-blue-700 hover:to-blue-900 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                {isSubmitting ? "Processing..." : "Get Free Assesment"}
+              </button>
             </form>
-          </div>
-        </div>
-
-        {/* Bottom Links */}
-        <div className="border-t flex flex-col justify-center items-center gap-2 border-gray-200 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-center items-center">
-            <div className="flex flex-wrap justify-center gap-4 mb-4 md:mb-0">
-              <Link
-                href="/terms-conditions"
-                className="text-gray-600 hover:text-blue-600 text-sm"
-              >
-                Terms and Conditions
-              </Link>
-              <Link
-                href="/privacy-policy"
-                className="text-gray-600 hover:text-blue-600 text-sm"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/testimonials"
-                className="text-gray-600 hover:text-blue-600 text-sm"
-              >
-                Testimonials
-              </Link>
-              <a
-                href="/Complaints.pdf"
-                download="Complaints.pdf"
-                className="text-gray-600 hover:text-blue-600 text-sm"
-              >
-                Complaints Handling Policy
-              </a>
-
-              <Link
-                href="/blogs"
-                className="text-gray-600 hover:text-blue-600 text-sm"
-              >
-                Blogs
-              </Link>
-            </div>
-          </div>
-          <p className="text-gray-600 text-sm text-center md:text-right">
-            © {new Date().getFullYear()} Australian Credit Solutions
-          </p>
-          <p className="text-gray-500 text-xs text-center">
-            Australian Credit Solutions specializes exclusively in credit repair
-            services and does not provide legal advice. For any legal matters,
-            please contact Fogarty Oliver and Rothschilds.
-          </p>
+          </motion.div>
         </div>
       </div>
     </footer>
-  );
-}
-
-// Icon components
-function PhoneIcon(props) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-    </svg>
-  );
-}
-
-function MailIcon(props) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-    </svg>
-  );
-}
-
-function LocationIcon(props) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" />
-    </svg>
   );
 }

@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import MainLayout from "../MainLayout";
-import PremiumTestimonialCarousel from "@/components/homepage/Testmonial";
+import PremiumTestimonialCarousel from "@/components/homepage/Testmonials";
 
 // YouTube video data with your actual links
 const YOUTUBE_VIDEOS = [

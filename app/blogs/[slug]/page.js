@@ -1,33 +1,60 @@
+// app/blogs/[slug]/page.jsx
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { POSTS, getPostBySlug } from "../page";
 import { Clock } from "lucide-react";
 import MainLayout from "@/app/MainLayout";
 
-export function generateStaticParams() {
-  return POSTS.map((p) => ({ slug: p.slug }));
+export async function generateStaticParams() {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs?limit=1000`, {
+      cache: "no-store",
+    });
+    const json = await res.json();
+
+    if (!json.success) return [];
+    return json.data.map((post) => ({ slug: post.slug }));
+  } catch (err) {
+    console.error("Failed to generate static params:", err);
+    return [];
+  }
 }
 
-export function generateMetadata({ params }) {
-  const post = getPostBySlug(params.slug);
-  if (!post) return { title: "Article not found" };
-  return {
-    title: `${post.title} | Blogs`,
-    description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      type: "article",
-      url: `/blogs/${post.slug}`,
-    },
-    alternates: { canonical: `/blogs/${post.slug}` },
-  };
+export async function generateMetadata({ params }) {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs/${params.slug}`, {
+      cache: "no-store",
+    });
+    const json = await res.json();
+
+    if (!json.success) return { title: "Blog not found" };
+
+    const post = json.data;
+    return {
+      title: `${post.title} | Blogs`,
+      description: post.metaDescription || post.excerpt,
+      openGraph: {
+        title: post.title,
+        description: post.metaDescription || post.excerpt,
+        type: "article",
+        url: `/blogs/${post.slug}`,
+      },
+      alternates: { canonical: `/blogs/${post.slug}` },
+    };
+  } catch (err) {
+    return { title: "Blog not found" };
+  }
 }
 
-export default function BlogPostPage({ params }) {
-  const post = getPostBySlug(params.slug);
-  if (!post) return notFound();
+export default async function BlogPostPage({ params }) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs/${params.slug}`, {
+    cache: "no-store",
+  });
+
+  const json = await res.json();
+  if (!json.success || !json.data) return notFound();
+
+  const post = json.data;
 
   return (
     <MainLayout>
@@ -48,17 +75,30 @@ export default function BlogPostPage({ params }) {
         <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
           <span className="inline-flex items-center gap-1">
             <Clock className="w-4 h-4" />
-            {post.readTime}
+            {post.readTime || "5 min read"}
           </span>
-          <time>{post.date}</time>
-          <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-700 text-xs font-semibold">
-            {post.category}
-          </span>
+          <time>
+            {new Date(post.createdAt).toLocaleDateString("en-US", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            })}
+          </time>
         </div>
+
+        {/* Cover Image */}
+        {post.image && (
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-64 object-cover rounded-lg mb-8"
+          />
+        )}
 
         {/* Content */}
         <article className="prose prose-blue max-w-none">
-          {post.content}
+          {/* If content is HTML from CMS or rich editor, dangerouslySetInnerHTML is needed */}
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </article>
 
         {/* Back link */}

@@ -4,7 +4,7 @@ import CTASection from "./CTA";
 import HeroSection from "./HeroSection";
 import HelpSection from "./HowCan";
 import LoanCalculator from "./LoanCalculator";
-import Testimonials3DCarousel from "./Testmonial";
+import Testimonials3DCarousel from "./Testmonials";
 import TransformationalJourney from "./TransformationalJourney";
 import TrustBadge from "./TrustBadge";
 import VideoServicesSection from "./VideoServicesSection";
@@ -17,12 +17,10 @@ export default function HomePage() {
       <TrustBadge />
       <Testimonials3DCarousel />
       <WhyChooseUs />
+      <HelpSection/>
       <TransformationalJourney />
       <VideoServicesSection/>
-      <HelpSection/>
-      <CreditRepairSection/>
       <CTASection/>
-      <LoanCalculator/>
     </main>
   );
 }
