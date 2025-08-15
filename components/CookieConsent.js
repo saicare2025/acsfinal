@@ -103,14 +103,7 @@ export function CookieConsent() {
             >
               Reject All
             </button>
-            <button
-              onClick={() => {
-                // Add custom settings logic if needed
-              }}
-              className="flex-1 px-4 py-2 bg-white text-gray-700 text-sm font-medium rounded-md border border-gray-300 hover:bg-gray-50 transition-colors"
-            >
-              Customize
-            </button>
+         
           </div>
         </div>
       </div>

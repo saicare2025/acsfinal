@@ -60,7 +60,7 @@ const NAV_LINKS = [
   },
   {
     name: "Check Credit Score",
-    href: "/credit-quiz",
+    href: "/quiz",
     icon: <ChartBarIcon className="w-5 h-5" />,
   },
   {

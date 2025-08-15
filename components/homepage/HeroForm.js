@@ -1,36 +1,20 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   User,
   Mail,
   Phone,
   MapPin,
-  Hash,
   ClipboardList,
   BriefcaseBusiness,
   ChevronDown,
 } from "lucide-react";
-import ScheduleModal from "../ScheduleModal";
-import { useRouter } from "next/navigation";
 
+// Constants
 const AUSTRALIAN_STATES = ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"];
 
-const LOOKING_FOR_OPTIONS = [
-  "Home Loan",
-  "Car Loan",
-  "Personal Loan",
-  "For Future Reference",
-];
-
-const EMPLOYMENT_OPTIONS = [
-  "Full Time",
-  "Part Time",
-  "Centrelink",
-  "Job Seeker",
-  "Disability Pension",
-  "Unemployed / Between Jobs",
-];
-
+// Reusable Inputs
 const TextInput = ({
   label,
   name,
@@ -41,7 +25,6 @@ const TextInput = ({
   Icon,
   error,
   inputMode,
-  pattern,
   maxLength,
   className = "",
 }) => (
@@ -60,7 +43,6 @@ const TextInput = ({
         onChange={onChange}
         placeholder={placeholder}
         inputMode={inputMode}
-        pattern={pattern}
         maxLength={maxLength}
         className={`w-full rounded-lg border bg-white py-2 pl-10 pr-4 text-sm placeholder:text-blue-400 transition-all duration-200 ${
           error
@@ -171,87 +153,147 @@ const TextAreaInput = ({
 );
 
 export default function CreditAssessmentForm() {
+  const router = useRouter();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     phone: "",
     email: "",
-    lookingFor: "",
-    employment: "",
     state: "",
-    postcode: "",
+    isEmployed: "",
     description: "",
   });
 
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showScheduleModal, setShowScheduleModal] = useState(false);
-  const router = useRouter();
 
+  // Handlers
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    if (formErrors[name]) {
-      setFormErrors((prev) => ({ ...prev, [name]: "" }));
-    }
+    if (formErrors[name]) setFormErrors((prev) => ({ ...prev, [name]: "" }));
   };
-
   const validateForm = () => {
     const errors = {};
+
+    // Required field validations
     if (!formData.firstName.trim()) errors.firstName = "Required field";
     if (!formData.lastName.trim()) errors.lastName = "Required field";
-    if (!formData.phone.trim()) errors.phone = "Required field";
+
+    // Email validation (required + format check)
     if (!formData.email.trim()) {
       errors.email = "Required field";
     } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
       errors.email = "Invalid email format";
     }
-    if (!formData.lookingFor) errors.lookingFor = "Please choose an option";
-    if (!formData.employment) errors.employment = "Please choose an option";
+
+    // Dropdown validations
     if (!formData.state) errors.state = "Please select a state";
-    if (!/^\d{4}$/.test(formData.postcode))
-      errors.postcode = "4-digit postcode required";
+    if (!formData.isEmployed) errors.isEmployed = "Please choose Yes or No";
+
+    // Phone field exists check (no validation)
+    if (!formData.phone) errors.phone = "Required field"; // Just checking existence
+
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (!validateForm()) return;
+
+  //   setIsSubmitting(true);
+  //   try {
+  //     const response = await fetch("/api/ghl", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(formData),
+  //     });
+
+  //     const result = await response.json();
+
+  //     if (result?.success) {
+  //       alert(result.message || "Submitted successfully.");
+  //       setShowScheduleModal(true);
+  //     } else {
+  //       if (result?.errors) {
+  //         setFormErrors(result.errors);
+  //       } else {
+  //         alert(result?.message || "An error occurred. Please try again.");
+  //       }
+  //     }
+  //   } catch (err) {
+  //     console.error("Submission error:", err);
+  //     alert("An error occurred while submitting the form. Please try again.");
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
+
+    try {
+      const payload = {
+        firstName: formData.firstName.trim(),
+        lastName: formData.lastName.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone, // Raw format
+        state: formData.state,
+        customFields: [
+          { id: "isEmployed", value: formData.isEmployed },
+          { id: "message", value: formData.description || "" },
+        ],
+      };
+
+      const response = await fetch(
+        "https://rest.gohighlevel.com/v1/contacts/",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${process.env.GHL_API_KEY}`,
+            Version: "2021-07-28",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      const result = await response.json();
+      console.log("Full API Response:", result); // 👈 Critical for debugging
+
+      if (!response.ok) {
+        throw new Error(result.message || "GHL API error");
+      }
+
+      // Check for contact ID in different response structures
+      const contactId = result.id || result.contact?.id || result.data?.id;
+      if (!contactId) {
+        console.error("Unexpected API response format:", result);
+        throw new Error("No contact ID received. Check console for details.");
+      }
+
+      router.push("/meeting-schedule");
+    } catch (error) {
+      console.error("Submission failed:", error);
+      alert(`Error: ${error.message}`);
+    } finally {
       setIsSubmitting(false);
-      setShowScheduleModal(true);
-    }, 500);
+    }
   };
-
-  const handleScheduleSubmit = (scheduleData) => {
-    console.log("Form submission:", { ...formData, ...scheduleData });
-    setFormData({
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
-      lookingFor: "",
-      employment: "",
-      state: "",
-      postcode: "",
-      description: "",
-    });
-    router.push("/");
-  };
-
   return (
     <>
       <form
+        id="credit-assesment"
         onSubmit={handleSubmit}
         className="mx-auto max-w-2xl space-y-3 rounded-xl bg-white p-4 shadow-lg"
         noValidate
       >
         {/* Name */}
-        <div className="grid gap-3 grid-cols-1 md:grid-cols-2">
+        <div className="grid gap-3 grid-cols-2">
           <TextInput
             label="First Name"
             name="firstName"
@@ -275,7 +317,7 @@ export default function CreditAssessmentForm() {
         </div>
 
         {/* Contact */}
-        <div className="grid gap-3 grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-2 gap-3 ">
           <TextInput
             label="Phone"
             name="phone"
@@ -302,32 +344,8 @@ export default function CreditAssessmentForm() {
           />
         </div>
 
-        {/* Dropdowns */}
+        {/* State + Employment (Yes/No) */}
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-          <SelectInput
-            label="Are you looking for?"
-            name="lookingFor"
-            value={formData.lookingFor}
-            onChange={handleChange}
-            options={LOOKING_FOR_OPTIONS}
-            Icon={ClipboardList}
-            error={formErrors.lookingFor}
-            placeholder="Select an option"
-          />
-          <SelectInput
-            label="Are you currently working?"
-            name="employment"
-            value={formData.employment}
-            onChange={handleChange}
-            options={EMPLOYMENT_OPTIONS}
-            Icon={BriefcaseBusiness}
-            error={formErrors.employment}
-            placeholder="Select an option"
-          />
-        </div>
-
-        {/* State / Postcode */}
-        <div className="grid gap-3 grid-cols-1 md:grid-cols-2">
           <SelectInput
             label="State"
             name="state"
@@ -338,24 +356,22 @@ export default function CreditAssessmentForm() {
             error={formErrors.state}
             placeholder="Select your state"
           />
-          <TextInput
-            label="Post Code"
-            name="postcode"
-            value={formData.postcode}
+
+          <SelectInput
+            label="Are you employed at the moment?"
+            name="isEmployed"
+            value={formData.isEmployed}
             onChange={handleChange}
-            placeholder="e.g., 2150"
-            Icon={Hash}
-            error={formErrors.postcode}
-            inputMode="numeric"
-            pattern="\d{4}"
-            maxLength={4}
-            className="text-blue-900"
+            options={["Yes", "No"]}
+            Icon={BriefcaseBusiness}
+            error={formErrors.isEmployed}
+            placeholder="Select an option"
           />
         </div>
 
         {/* Description */}
         <TextAreaInput
-          label="Please share any other info in regards to your credit file"
+          label="Message"
           name="description"
           value={formData.description}
           onChange={handleChange}
@@ -368,18 +384,11 @@ export default function CreditAssessmentForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-1 w-full rounded-lg bg-gradient-to-r from-blue to-blue-800 px-5 py-3 text-sm font-medium uppercase tracking-wider text-white shadow-md transition-all hover:from-blue-600 hover:to-blue-700 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+          className="mt-1 w-full rounded-lg bg-blue px-5 py-3 text-sm font-medium uppercase tracking-wider text-white shadow-md transition-all hover:from-blue-700 hover:to-blue-900 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isSubmitting ? "Processing..." : "Apply Now"}
         </button>
       </form>
-
-      {showScheduleModal && (
-        <ScheduleModal
-          onClose={() => setShowScheduleModal(false)}
-          onSubmit={handleScheduleSubmit}
-        />
-      )}
     </>
   );
 }

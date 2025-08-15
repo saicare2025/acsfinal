@@ -2,83 +2,142 @@
 
 import { motion } from "framer-motion";
 import heroImage from "@/app/assets/hero.png";
-import heromobile from "@/app/assets/heromobile.png";
-
 import CreditAssessmentForm from "./HeroForm";
 import Image from "next/image";
+import {
+  CheckBadgeIcon,
+  ShieldCheckIcon,
+  LockClosedIcon,
+  CurrencyDollarIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/solid";
 
 export default function HeroSection() {
   return (
-    <section className="relative lg:py-10 bg-gradient-to-br from-blue-50 to-blue-200 text-white">
-      <div className="max-w-7xl mx-auto lg:px-4 flex flex-col-reverse lg:flex-row items-center lg:gap-8">
-        {/* Right Side - Form (50%) on desktop, above image on mobile */}
-        <div id="" className="w-full lg:w-1/2 flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-            className="w-full max-w-xl bg-white/10 backdrop-blur-lg p-3 sm:p-4 "
-          >
-            {/* Title and subtitle hidden on mobile */}
-            <div className=" lg:mb-6">
-              <h1 className="text-xl sm:text-3xl md:text-4xl font-extrabold leading-tight text-blue-900 drop-shadow-xl mb-3">
-                Are you struggling to get your loans approved?
+    <>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-white to-blue-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col-reverse lg:flex-row items-center relative z-10 gap-8">
+          {/* Left Side - Content (60% on desktop) */}
+          <div className="w-full lg:w-3/5 flex flex-col">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="mb-8"
+            >
+              <h1 className="text-3xl text-center lg:text-start sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-gray-700">
+                Get Your <span className="text-blue">Free Credit</span> Assessment Today
               </h1>
-              <h2 className="text-base md:text-2xl mb-4 font-bold text-gray-700">
-                Free Credit Assessment
+              <h2 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-4">
+                No Win, No Fee - Terms Apply*
               </h2>
-            </div>
-            {/* Form always visible */}
-            <CreditAssessmentForm />
-          </motion.div>
+
+              {/* Form */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+                className="w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+              >
+                <CreditAssessmentForm />
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Right Side - Image and Features (40% on desktop) */}
+          <div className="w-full lg:w-2/5 flex flex-col">
+            {/* Image Container */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="relative rounded-2xl overflow-hidden"
+            >
+              <Image
+                src={heroImage.src}
+                alt="Financial consultation"
+                width={600}
+                height={600}
+                className="w-full h-[400px] object-contain"
+                priority
+                fetchPriority="high"
+              />
+            </motion.div>
+
+            {/* Features Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="bg-white p-4 rounded-2xl shadow-lg border border-gray-100"
+            >
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="bg-green-100 p-2 rounded-full">
+                    <CurrencyDollarIcon className="h-5 w-5 text-green-700" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">
+                      Free Credit Report Review
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Comprehensive analysis at no cost
+                    </p>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <div className="bg-green-100 p-2 rounded-full">
+                    <ShieldCheckIcon className="h-5 w-5 text-green-700" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">
+                      No Win, No Fee * Terms Apply
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      A one-off $330 admin fee applies regardless of outcome.
+                    </p>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <div className="bg-green-100 p-2 rounded-full">
+                    <LockClosedIcon className="h-5 w-5 text-green-700" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">
+                      100% Confidential & Secure
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Your data is protected with bank-level security
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
         </div>
-        <div className="w-full lg:w-1/2  flex items-center justify-center">
+      </section>
+
+      {/* Pricing Information Section */}
+      <section className="bg-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative w-full"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="max-w-3xl mx-auto text-center"
           >
-            {/* Desktop Image: Visible on large screens and above */}
-            <Image
-              src={heroImage.src}
-              alt="Financial consultation"
-              width={400}
-              height={500}
-              className="hidden lg:block w-full md:h-[650px] sm:h-[420px] h-[320px] object-cover rounded-2xl shadow-2xl border-4 border-white/20"
-            />
+            <p className="text-gray-600 text-sm md:text-base">
 
-            {/* Mobile Image: Visible below large screens */}
-            <Image
-              src={heromobile.src}
-              alt="Financial consultation"
-              width={400}
-              height={500}
-              className="block lg:hidden w-full h-[200px] object-cover rounded-2xl shadow-2xl border-4 border-white/20"
-            />
+             *. A one-off $330 administration fee applies regardless of the result. In the past year, more than 98% of our disputes have achieved a successful resolution.
 
-            {/* Approval Badge (top left) */}
-            <motion.div
-              className="absolute top-0 lg:-top-6 left-0 sm:-left-6 bg-white text-blue-900 px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow-lg font-bold text-xs sm:text-base"
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-            >
-              Trusted by 1,000+ Clients
-            </motion.div>
-
-            {/* Approval Rate Badge (bottom right) */}
-            <motion.div
-              className="absolute -bottom-0 right-0 sm:-right-6 bg-blue-600/90 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-lg text-xs sm:text-base"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-            >
-              <p className="font-bold">98% Approval Rate</p>
-            </motion.div>
+            </p>
           </motion.div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
