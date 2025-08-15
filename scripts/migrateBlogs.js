@@ -24,7 +24,7 @@ async function migrateBlogs() {
     process.exit(1);
   }
 
-  const blogFilePath = path.join(__dirname, '..', 'public', 'blogs.json');
+  const blogFilePath = path.join(__dirname, '..', 'public', 'blogs_data.json');
 
   if (!fs.existsSync(blogFilePath)) {
     console.error(`❌ File not found: ${blogFilePath}`);
