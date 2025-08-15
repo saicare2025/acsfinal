@@ -52,15 +52,18 @@ export default function Footer() {
         phone: formData.phone, // raw format
       };
 
-      const response = await fetch("https://rest.gohighlevel.com/v1/contacts/", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_GHL_API_KEY}`,
-          Version: "2021-07-28",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        "https://rest.gohighlevel.com/v1/contacts/",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_GHL_API_KEY}`,
+            Version: "2021-07-28",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
 
       const result = await response.json();
       console.log("Full API Response:", result);
@@ -222,13 +225,66 @@ export default function Footer() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-1 w-full rounded-lg bg-blue px-5 py-2 text-sm font-medium uppercase tracking-wider text-white shadow-md transition-all hover:from-blue-700 hover:to-blue-900 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+                className="mt-1 w-full rounded-lg bg-blue px-5 py-2 text-sm font-medium uppercase tracking-wider text-white shadow-md transition-all hover:from-blue hover:to-blue-900 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {isSubmitting ? "Processing..." : "Get Free Assesment"}
               </button>
             </form>
           </motion.div>
         </div>
+        {/* Services by State */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-4 lg:mt-12 border-t border-gray-200 pt-8"
+        >
+          <h4 className="text-lg font-semibold text-gray-900 mb-3">
+            We provide services in all states:
+          </h4>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-sm text-blue">
+            <li>
+              <Link href="/credit-repair-adelaide" className="hover:underline">
+                Credit Repair Adelaide
+              </Link>
+            </li>
+            <li>
+              <Link href="/credit-repair-brisbane" className="hover:underline">
+                Credit Repair Brisbane
+              </Link>
+            </li>
+            <li>
+              <Link href="/credit-repair-canberra" className="hover:underline">
+                Credit Repair Canberra
+              </Link>
+            </li>
+            <li>
+              <Link href="/credit-repair-darwin" className="hover:underline">
+                Credit Repair Darwin
+              </Link>
+            </li>
+            <li>
+              <Link href="/credit-repair-hobart" className="hover:underline">
+                Credit Repair Hobart
+              </Link>
+            </li>
+            <li>
+              <Link href="/credit-repair-melbourne" className="hover:underline">
+                Credit Repair Melbourne
+              </Link>
+            </li>
+            <li>
+              <Link href="/credit-repair-perth" className="hover:underline">
+                Credit Repair Perth
+              </Link>
+            </li>
+            <li>
+              <Link href="/credit-repair-sydney" className="hover:underline">
+                Credit Repair Sydney
+              </Link>
+            </li>
+          </ul>
+        </motion.div>
       </div>
     </footer>
   );

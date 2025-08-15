@@ -2,9 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import blogData from "../../data/blogs_data.json";
 import Link from "next/link";
-import { Clock } from "lucide-react";
 import MainLayout from "@/app/MainLayout";
+import Image from "next/image";
 
 export default function BlogPostPage() {
   const { slug } = useParams();
@@ -12,43 +13,88 @@ export default function BlogPostPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // useEffect(() => {
+  //   if (!slug) return;
+
+  //   const fetchBlog = async () => {
+  //     try {
+  //       const res = await fetch(`/api/blogs/${slug}`);
+
+  //       if (!res.ok) {
+  //         if (res.status === 404) {
+  //           setError("Blog not found");
+  //           return;
+  //         }
+  //         throw new Error(`Failed to fetch blog: ${res.status}`);
+  //       }
+
+  //       const json = await res.json();
+  //       if (!json.success || !json.data) {
+  //         setError("Blog not found");
+  //         return;
+  //       }
+
+  //       setPost(json.data);
+  //     } catch (err) {
+  //       console.error("❌ Failed to fetch blog:", err);
+  //       setError("Failed to load blog");
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchBlog();
+  // }, [slug]);
   useEffect(() => {
     if (!slug) return;
 
-    const fetchBlog = async () => {
-      try {
-        const res = await fetch(`/api/blogs/${slug}`);
+    setLoading(true);
+    setError(null);
 
-        if (!res.ok) {
-          if (res.status === 404) {
-            setError("Blog not found");
-            return;
-          }
-          throw new Error(`Failed to fetch blog: ${res.status}`);
-        }
+    try {
+      const found = blogData.find((blog) => blog.slug === slug);
 
-        const json = await res.json();
-        if (!json.success || !json.data) {
-          setError("Blog not found");
-          return;
-        }
-
-        setPost(json.data);
-      } catch (err) {
-        console.error("❌ Failed to fetch blog:", err);
-        setError("Failed to load blog");
-      } finally {
-        setLoading(false);
+      if (!found) {
+        setError("Blog not found");
+      } else {
+        setPost(found);
       }
-    };
-
-    fetchBlog();
+    } catch (err) {
+      console.error("❌ Failed to load blog:", err);
+      setError("Failed to load blog");
+    } finally {
+      setLoading(false);
+    }
   }, [slug]);
 
   if (loading) {
     return (
       <MainLayout>
-        <div className="text-center py-20 text-gray-500">Loading blog...</div>
+        <div className="flex flex-col items-center justify-center py-20 text-blue-600">
+          <svg
+            className="animate-spin h-10 w-10 mb-4 text-blue-600"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            ></circle>
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v8H4z"
+            ></path>
+          </svg>
+          <p className="text-sm font-medium text-blue-600">
+            Loading blog post...
+          </p>
+        </div>
       </MainLayout>
     );
   }
@@ -63,49 +109,56 @@ export default function BlogPostPage() {
 
   return (
     <MainLayout>
-      <main className="max-w-3xl mx-auto px-4 py-12">
-        {/* Breadcrumbs */}
-        <nav className="text-sm mb-6 text-gray-500">
-          <Link href="/blogs" className="hover:text-blue-600">
+      <main className="max-w-3xl mx-auto lg:px-4 py-6 lg:py-12">
+        {/* ✅ Professional Breadcrumb */}
+        <nav
+          className="flex items-center text-base mb-4 lg:mb-6 space-x-2"
+          aria-label="Breadcrumb"
+        >
+          <Link
+            href="/"
+            className="text-blue-500 hover:text-blue-600 transition-colors duration-200 hover:underline hover:underline-offset-4"
+          >
+            Home
+          </Link>
+          <span aria-hidden="true" className="text-blue-300">
+            /
+          </span>
+          <Link
+            href="/blogs"
+            className="text-blue-500 hover:text-blue-600 transition-colors duration-200 hover:underline hover:underline-offset-4"
+          >
             Blogs
           </Link>
-          <span className="mx-2">/</span>
-          <span className="text-gray-700">{post.title}</span>
+          <span aria-hidden="true" className="text-blue-300">
+            /
+          </span>
+          <span className="text-blue-700 font-medium truncate max-w-[60%]">
+            {post.title}
+          </span>
         </nav>
 
-        {/* Title */}
-        <h1 className="text-3xl font-bold text-blue-900 mb-2">
+        {/* ✅ Title */}
+        <h1 className="text-3xl lg:text-4xl font-bold text-[#035071] mb-6 leading-tight">
           {post.title || "Untitled"}
         </h1>
 
-        {/* Meta */}
-        <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
-          <span className="inline-flex items-center gap-1">
-            <Clock className="w-4 h-4" />
-            {post.readTime || "5 min read"}
-          </span>
-          <time>
-            {post.createdAt
-              ? new Date(post.createdAt).toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                  year: "numeric",
-                })
-              : "Unknown date"}
-          </time>
-        </div>
-
-        {/* Cover Image */}
+        {/* ✅ Enlarged Cover Image */}
         {post.image && (
-          <img
-            src={post.image}
-            alt={post.title}
-            className="w-full h-64 object-cover rounded-lg mb-8"
-          />
+          <div className="relative w-full h-[250px] md:h-[420px] rounded-xl shadow-lg overflow-hidden">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover rounded-xl"
+              sizes="(max-width: 768px) 100vw, 800px"
+              priority={false} // Set to true if it's above-the-fold
+            />
+          </div>
         )}
 
-        {/* Content */}
-        <article className="prose prose-blue max-w-none">
+        {/* ✅ Blog Content */}
+        <article className="blog max-w-none">
           {typeof post.content === "string" ? (
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
           ) : (
@@ -113,8 +166,8 @@ export default function BlogPostPage() {
           )}
         </article>
 
-        {/* Back Button */}
-        <div className="mt-10">
+        {/* ✅ Back Button */}
+        <div className="mt-12">
           <Link
             href="/blogs"
             className="inline-block px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium hover:from-blue-600 hover:to-indigo-700 shadow"

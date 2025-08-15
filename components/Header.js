@@ -159,7 +159,7 @@ export default function Header() {
               | <span className="font-medium tracking-wide ml-2">Testimonials</span>
             </Link>
           </div>
-          <div className="flex items-center gap-2 lg:gap-4">
+          <div className="flex items-center gap-4">
             <a
               href="https://www.facebook.com/australiancreditsolutions"
               className="hover:text-blue-200"
@@ -190,21 +190,21 @@ export default function Header() {
             </a>
             <a
               href="https://ph.pinterest.com/australiancreditsolutions/"
-              className="hover:text-blue-200"
+              className="hover:text-blue-200 hidden lg:block"
               aria-label="Pinterest"
             >
-              <PinterestIcon className="w-4 h-4" />
+              <PinterestIcon className="w-4 h-4 " />
             </a>
             <a
               href="https://www.youtube.com/@australiancreditsolutions3719"
-              className="hover:text-blue-200"
+              className="hover:text-blue-200 hidden lg:block"
               aria-label="YouTube"
             >
               <YoutubeIcon className="w-4 h-4" />
             </a>
             <a
               href="https://www.tiktok.com/@australiancreditrepair"
-              className="hover:text-blue-200"
+              className="hover:text-blue-200 hidden lg:block"
               aria-label="TikTok"
             >
               <TikTokIcon className="w-4 h-4" />
