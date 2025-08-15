@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb', // Increase the limit here
-    },
-  },
+  // api: {
+  //   bodyParser: {
+  //     sizeLimit: '10mb',
+  //   },
+  // },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'plus.unsplash.com' },
