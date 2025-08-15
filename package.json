@@ -2,12 +2,13 @@
   "name": "dinar-exchange-user-panel",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "migrate-blogs": "node scripts/migrate-blogs.js",
+    "migrate-blogs": "node scripts/migrateBlogs.js",
     "setup": "node scripts/setup.js"
   },
   "dependencies": {

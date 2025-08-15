@@ -34,7 +34,7 @@ BLOB_READ_WRITE_TOKEN=vercel_blob_rw_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 }
 
 // Check if blogs_data.jsonl exists
-const jsonlPath = path.join(__dirname, '..', 'public', 'blogs_data.jsonl');
+const jsonlPath = path.join(__dirname, '..', 'public', 'blogs_data.json');
 const jsonlExists = fs.existsSync(jsonlPath);
 
 if (jsonlExists) {
