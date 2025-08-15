@@ -10,28 +10,37 @@ export default function BlogsPage() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   const LIMIT = 9;
 
   useEffect(() => {
-    async function fetchBlogs() {
-      setLoading(true);
+    const fetchBlogs = async () => {
       try {
-        const res = await fetch(`/api/blogs?page=${page}&limit=${LIMIT}`);
-        const json = await res.json();
+        setLoading(true);
+        setError("");
 
-        if (json.success) {
-          setBlogs(json.data);
-          setTotalPages(json.pagination.pages);
+        const res = await fetch(`/api/blogs?page=${page}&limit=${LIMIT}`);
+
+        if (!res.ok) {
+          throw new Error(`Failed to fetch blogs. Status: ${res.status}`);
+        }
+
+        const data = await res.json();
+
+        if (data.success) {
+          setBlogs(data.data);
+          setTotalPages(data.pagination.pages || 1);
         } else {
-          console.error("Failed to fetch blogs:", json.error);
+          setError(data.error || "Something went wrong while fetching blogs.");
         }
       } catch (err) {
-        console.error("Error fetching blogs:", err);
+        console.error("❌ Error fetching blogs:", err);
+        setError("Failed to load blogs.");
       } finally {
         setLoading(false);
       }
-    }
+    };
 
     fetchBlogs();
   }, [page]);
@@ -57,69 +66,72 @@ export default function BlogsPage() {
               </span>
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Educational resources to help you understand and improve your
-              credit
+              Educational resources to help you understand and improve your credit
             </p>
           </div>
 
-          {/* Loading state */}
+          {/* Error */}
+          {error && (
+            <p className="text-center text-red-500 mb-6">{error}</p>
+          )}
+
+          {/* Loading */}
           {loading && (
             <p className="text-center text-gray-500">Loading blogs...</p>
           )}
 
           {/* Blog Grid */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {blogs.map((post) => (
-              <Link
-                key={post._id}
-                href={`/blogs/${post.slug}`}
-                className="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all overflow-hidden flex flex-col"
-              >
-                {/* Cover Image */}
-                {post.image && (
-                  <div className="w-full h-48 bg-gray-100">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover"
-                    />
+          {!loading && blogs.length > 0 && (
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {blogs.map((post) => (
+                <Link
+                  key={post._id}
+                  href={`/blogs/${post.slug}`}
+                  className="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all overflow-hidden flex flex-col"
+                >
+                  {/* Cover Image */}
+                  {post.image && (
+                    <div className="w-full h-48 bg-gray-100">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+
+                  {/* Content */}
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h2 className="text-lg font-semibold text-blue-900 group-hover:text-blue-700 transition-colors mb-2">
+                      {post.title}
+                    </h2>
+
+                    <p className="text-gray-600 mb-4 flex-grow">
+                      {post.excerpt?.split(" ").slice(0, 25).join(" ") +
+                        (post.excerpt?.split(" ").length > 25 ? "..." : "")}
+                    </p>
+
+                    <div className="mt-auto flex items-center justify-between text-sm text-gray-500">
+                      <span className="inline-flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {post.readTime || "5 min read"}
+                      </span>
+                      <time>
+                        {new Date(post.createdAt).toLocaleDateString("en-US", {
+                          month: "short",
+                          day: "numeric",
+                          year: "numeric",
+                        })}
+                      </time>
+                    </div>
                   </div>
-                )}
+                </Link>
+              ))}
+            </div>
+          )}
 
-                {/* Content */}
-                <div className="p-6 flex flex-col flex-grow">
-                  {/* Title */}
-                  <h2 className="text-lg font-semibold text-blue-900 group-hover:text-blue-700 transition-colors mb-2">
-                    {post.title}
-                  </h2>
-
-                  {/* Short Excerpt */}
-                  <p className="text-gray-600 mb-4 flex-grow">
-                    {post.excerpt?.split(" ").slice(0, 25).join(" ") +
-                      (post.excerpt?.split(" ").length > 15 ? "..." : "")}
-                  </p>
-
-                  {/* Meta Info */}
-                  <div className="mt-auto flex items-center justify-between text-sm text-gray-500">
-                    <span className="inline-flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {post.readTime || "5 min read"}
-                    </span>
-                    <time>
-                      {new Date(post.createdAt).toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
-                    </time>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* Empty state */}
-          {!loading && blogs.length === 0 && (
+          {/* No Blogs Found */}
+          {!loading && blogs.length === 0 && !error && (
             <p className="text-center text-gray-500 mt-6">No blogs found.</p>
           )}
 
@@ -129,7 +141,7 @@ export default function BlogsPage() {
               <button
                 onClick={handlePrev}
                 disabled={page === 1}
-                className="flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-white border border-blue-300 rounded-md hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
+                className="flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-white border border-blue-300 rounded-md hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -154,7 +166,7 @@ export default function BlogsPage() {
               <button
                 onClick={handleNext}
                 disabled={page === totalPages}
-                className="flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-white border border-blue-300 rounded-md hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
+                className="flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-white border border-blue-300 rounded-md hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Next
                 <svg

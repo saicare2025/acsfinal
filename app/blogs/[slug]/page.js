@@ -1,60 +1,65 @@
-// app/blogs/[slug]/page.jsx
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { Clock } from "lucide-react";
 import MainLayout from "@/app/MainLayout";
 
-export async function generateStaticParams() {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs?limit=1000`, {
-      cache: "no-store",
-    });
-    const json = await res.json();
+export default function BlogPostPage() {
+  const { slug } = useParams();
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    if (!json.success) return [];
-    return json.data.map((post) => ({ slug: post.slug }));
-  } catch (err) {
-    console.error("Failed to generate static params:", err);
-    return [];
-  }
-}
+  useEffect(() => {
+    if (!slug) return;
 
-export async function generateMetadata({ params }) {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs/${params.slug}`, {
-      cache: "no-store",
-    });
-    const json = await res.json();
+    const fetchBlog = async () => {
+      try {
+        const res = await fetch(`/api/blogs/${slug}`);
 
-    if (!json.success) return { title: "Blog not found" };
+        if (!res.ok) {
+          if (res.status === 404) {
+            setError("Blog not found");
+            return;
+          }
+          throw new Error(`Failed to fetch blog: ${res.status}`);
+        }
 
-    const post = json.data;
-    return {
-      title: `${post.title} | Blogs`,
-      description: post.metaDescription || post.excerpt,
-      openGraph: {
-        title: post.title,
-        description: post.metaDescription || post.excerpt,
-        type: "article",
-        url: `/blogs/${post.slug}`,
-      },
-      alternates: { canonical: `/blogs/${post.slug}` },
+        const json = await res.json();
+        if (!json.success || !json.data) {
+          setError("Blog not found");
+          return;
+        }
+
+        setPost(json.data);
+      } catch (err) {
+        console.error("❌ Failed to fetch blog:", err);
+        setError("Failed to load blog");
+      } finally {
+        setLoading(false);
+      }
     };
-  } catch (err) {
-    return { title: "Blog not found" };
+
+    fetchBlog();
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <MainLayout>
+        <div className="text-center py-20 text-gray-500">Loading blog...</div>
+      </MainLayout>
+    );
   }
-}
 
-export default async function BlogPostPage({ params }) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs/${params.slug}`, {
-    cache: "no-store",
-  });
-
-  const json = await res.json();
-  if (!json.success || !json.data) return notFound();
-
-  const post = json.data;
+  if (error) {
+    return (
+      <MainLayout>
+        <div className="text-center py-20 text-red-500">{error}</div>
+      </MainLayout>
+    );
+  }
 
   return (
     <MainLayout>
@@ -69,7 +74,9 @@ export default async function BlogPostPage({ params }) {
         </nav>
 
         {/* Title */}
-        <h1 className="text-3xl font-bold text-blue-900 mb-2">{post.title}</h1>
+        <h1 className="text-3xl font-bold text-blue-900 mb-2">
+          {post.title || "Untitled"}
+        </h1>
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
@@ -78,11 +85,13 @@ export default async function BlogPostPage({ params }) {
             {post.readTime || "5 min read"}
           </span>
           <time>
-            {new Date(post.createdAt).toLocaleDateString("en-US", {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-            })}
+            {post.createdAt
+              ? new Date(post.createdAt).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })
+              : "Unknown date"}
           </time>
         </div>
 
@@ -97,11 +106,14 @@ export default async function BlogPostPage({ params }) {
 
         {/* Content */}
         <article className="prose prose-blue max-w-none">
-          {/* If content is HTML from CMS or rich editor, dangerouslySetInnerHTML is needed */}
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          {typeof post.content === "string" ? (
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          ) : (
+            <p>No content available</p>
+          )}
         </article>
 
-        {/* Back link */}
+        {/* Back Button */}
         <div className="mt-10">
           <Link
             href="/blogs"
