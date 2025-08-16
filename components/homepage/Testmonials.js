@@ -11,10 +11,10 @@ import {
   ShieldCheckIcon,
 } from "@heroicons/react/24/solid";
 
-// Swiper styles (make sure these are included globally in your app as well)
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/effect-coverflow";
+// Swiper styles - imported locally since component is dynamically loaded
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
 
 import review1 from "../../app/assets/review-image/1.webp";
 import review2 from "../../app/assets/review-image/2.webp";
@@ -26,7 +26,7 @@ import review7 from "../../app/assets/review-image/7.webp";
 import review8 from "../../app/assets/review-image/8.webp";
 import review9 from "../../app/assets/review-image/9.webp";
 
-import productReview from "../../app/assets/Screenshot_2025-08-11_142949-removebg-preview.png";
+import productReview from "../../app/assets/Screenshot_2025-08-11_142949-removebg-preview.webp";
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 
 

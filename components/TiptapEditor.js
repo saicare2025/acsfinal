@@ -182,3 +182,4 @@ const TiptapEditor = ({ content = '', onChange, placeholder = 'Start writing...'
 };
 
 export default TiptapEditor;
+

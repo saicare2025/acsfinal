@@ -9,26 +9,44 @@ export function CookieConsent() {
   const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookieConsent");
-    if (!consent) {
-      setTimeout(() => setShowConsent(true), 1000); // Show after 1 second delay
+    // Check if we're in the browser and localStorage is available
+    if (typeof window !== 'undefined' && window.localStorage) {
+      try {
+        const consent = localStorage.getItem("cookieConsent");
+        if (!consent) {
+          setShowConsent(true);
+        } else {
+          setConsentGiven(consent === "accepted");
+        }
+      } catch (error) {
+        // Fallback if localStorage is not available
+        setShowConsent(true);
+      }
     } else {
-      setConsentGiven(consent === "accepted");
+      setShowConsent(true);
     }
   }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem("cookieConsent", "accepted");
-    setConsentGiven(true);
+  const acceptCookies = () => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem("cookieConsent", "accepted");
+      }
+    } catch (error) {
+      console.warn('Could not save cookie consent:', error);
+    }
     setShowConsent(false);
-    // Initialize analytics cookies here if needed
   };
 
-  const handleReject = () => {
-    localStorage.setItem("cookieConsent", "rejected");
-    setConsentGiven(false);
+  const rejectCookies = () => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem("cookieConsent", "rejected");
+      }
+    } catch (error) {
+      console.warn('Could not save cookie consent:', error);
+    }
     setShowConsent(false);
-    // Remove any existing analytics cookies here if needed
   };
 
   if (!showConsent) return null;
@@ -92,13 +110,13 @@ export function CookieConsent() {
 
           <div className="mt-4 flex flex-col sm:flex-row flex-wrap gap-3">
             <button
-              onClick={handleAccept}
+              onClick={acceptCookies}
               className="flex-1 px-4 py-2 bg-blue text-white text-sm font-medium rounded-md hover:bg-orange-700 transition-colors"
             >
               Accept All
             </button>
             <button
-              onClick={handleReject}
+              onClick={rejectCookies}
               className="flex-1 px-4 py-2 bg-white text-gray-700 text-sm font-medium rounded-md border border-gray-300 hover:bg-blue-50 transition-colors"
             >
               Reject All

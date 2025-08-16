@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { 
@@ -12,7 +14,7 @@ import {
   Star
 } from 'lucide-react';
 import Image from 'next/image';
-import testimonialImage from '@/app/assets/hero2.png';
+import testimonialImage from '@/app/assets/hero2.webp';
 
 const HelpSection = () => {
   const [expandedCards, setExpandedCards] = useState([]);
@@ -176,6 +178,8 @@ const HelpSection = () => {
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={85}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/30 to-transparent" />
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import heroImage from "@/app/assets/hero2.png";
+import heroImage from "@/app/assets/hero3.webp";
 import CreditAssessmentForm from "./HeroForm";
 import Image from "next/image";
 import {
@@ -55,12 +55,14 @@ export default function HeroSection() {
               className="relative rounded-2xl overflow-hidden"
             >
               <Image
-                src={heroImage.src}
+                src={heroImage}
                 alt="Financial consultation"
                 width={600}
                 height={600}
-                className="w-full h-[380px] object-contain"
+                className="w-full h-[400px] object-contain"
                 priority
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 40vw"
+                quality={85}
               />
             </motion.div>
 

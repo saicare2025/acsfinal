@@ -1,12 +1,12 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { Toaster } from "react-hot-toast";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true
+});
 
 export const metadata = {
   title: "Improve Your Credit Score with Australian Credit Solutions",
@@ -24,10 +24,16 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+ 
   return (
     <html lang="en">
-       <head>
-        {/* Google Tag Manager */}
+      <head>
+        {/* Preconnect to required origins for faster resource loading */}
+        <link rel="preconnect" href="https://embed.tawk.to" />
+        <link rel="preconnect" href="https://cdn.provesrc.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        
+        {/* Google Tag Manager - Load after interactive */}
         {/* <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-MVMW025XRV`}
@@ -46,7 +52,9 @@ export default function RootLayout({ children }) {
             `,
           }}
         /> */}
-        <Script id="tawk-to" strategy="afterInteractive">
+        
+        {/* Tawk.to chat - Load lazily to reduce initial blocking */}
+        <Script id="tawk-to" strategy="lazyOnload">
           {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
             (function(){
@@ -60,9 +68,8 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-
-        
-        <Script id="provesrc" strategy="afterInteractive">
+        {/* Provesrc - Load lazily to reduce initial blocking */}
+        <Script id="provesrc" strategy="lazyOnload">
           {`
             if (!window.provesrc) {
               (function(o,i){
@@ -84,12 +91,10 @@ export default function RootLayout({ children }) {
             }
           `}
         </Script>
-
       </head>
       <body className={inter.className}>
         {children}
-        <Toaster position="top-right" />
-      
+        
       </body>
     </html>
   );

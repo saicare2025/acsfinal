@@ -26,7 +26,7 @@ import review7 from "../../app/assets/review-image/7.webp";
 import review8 from "../../app/assets/review-image/8.webp";
 import review9 from "../../app/assets/review-image/9.webp";
 
-import productReview from "../../app/assets/Screenshot_2025-08-11_142949-removebg-preview.png";
+import productReview from "../../app/assets/Screenshot_2025-08-11_142949-removebg-preview.webp";
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 
 const testimonials = [

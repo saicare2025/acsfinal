@@ -14,7 +14,7 @@ import {
   ChatBubbleLeftRightIcon,
 
 } from "@heroicons/react/24/outline";
-import logo from "../app/assets/logo.png";
+import logo from "../app/assets/logo.webp";
 import {
   FacebookIcon,
   InstagramIcon,

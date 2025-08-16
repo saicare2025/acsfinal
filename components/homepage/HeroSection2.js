@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import heroImage from "@/app/assets/hero3.png";
+import heroImage from "@/app/assets/hero2.webp";
 import CreditAssessmentForm from "./HeroForm";
 import Image from "next/image";
 import {
@@ -55,12 +55,17 @@ export default function HeroSection() {
               className="relative rounded-2xl overflow-hidden"
             >
               <Image
-                src={heroImage.src}
+                src={heroImage}
                 alt="Financial consultation"
                 width={600}
                 height={600}
-                className="w-full  lg:h-[390px] h-[320px]  object-contain"
+                className="w-full h-[400px] object-contain"
                 priority
+                fetchPriority="high"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 40vw"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                quality={85}
               />
             </motion.div>
 
