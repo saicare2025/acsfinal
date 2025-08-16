@@ -117,3 +117,14 @@ article.blog blockquote {
   font-style: italic;
   margin: 1.5rem 0;
 }
+/* Add to your global CSS */
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: Add a fade effect to the edges */
+.swiper-container {
+  padding: 0 20px;
+}

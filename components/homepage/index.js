@@ -1,9 +1,12 @@
 
+import CompanyCarousel from "./CompanySection";
 import CreditRepairSection from "./CreditRepair";
+import CreditRepairProcess from "./CreditRepairProcess ";
 import CTASection from "./CTA";
 import HeroSection from "./HeroSection";
 import HelpSection from "./HowCan";
 import LoanCalculator from "./LoanCalculator";
+import ScrollTestimonials from "./ScrollTestimonials";
 import Testimonials3DCarousel from "./Testmonials";
 import TransformationalJourney from "./TransformationalJourney";
 import TrustBadge from "./TrustBadge";
@@ -19,8 +22,12 @@ export default function HomePage() {
       <WhyChooseUs />
       <HelpSection/>
       <TransformationalJourney />
+      <CompanyCarousel/>
+      <CreditRepairProcess/>
       <VideoServicesSection/>
+      <ScrollTestimonials/>
       <CTASection/>
+      <LoanCalculator/>
     </main>
   );
 }

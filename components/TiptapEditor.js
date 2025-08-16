@@ -57,7 +57,7 @@ const TiptapEditor = ({ content = '', onChange, placeholder = 'Start writing...'
   return (
     <div className="border border-gray-300 rounded-lg overflow-hidden">
       {/* Toolbar */}
-      <div className="bg-gray-50 border-b border-gray-300 p-2 flex flex-wrap gap-1">
+      <div className="bg-blue-50 border-b border-gray-300 p-2 flex flex-wrap gap-1">
         {/* Text formatting */}
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}

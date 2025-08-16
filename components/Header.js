@@ -86,7 +86,7 @@ function MobileMenu({ isOpen, navLinks, onClose }) {
           <Link
             key={link.name}
             href={link.href}
-            className="flex items-center px-3 py-2 text-base font-bold text-gray-900 hover:text-blue-500 hover:bg-gray-50 rounded-md"
+            className="flex items-center px-3 py-2 text-base font-bold text-gray-900 hover:text-blue-500 hover:bg-blue-50 rounded-md"
             onClick={onClose}
           >
             <span className="mr-3">{link.icon}</span>
