@@ -279,7 +279,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/credit-repair-sydney" className="hover:underline">
+              <Link href="/credit_repair_sydney" className="hover:underline">
                 Credit Repair Sydney
               </Link>
             </li>

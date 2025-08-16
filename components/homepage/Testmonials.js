@@ -208,7 +208,7 @@ export default function PremiumTestimonialCarousel2() {
             </div>
             <p className="text-xs sm:text-sm text-gray-600">
               Based on{" "}
-              <span className="font-medium text-blue-700">
+              <span className="font-medium text-blue">
                 976 verified reviews
               </span>
             </p>

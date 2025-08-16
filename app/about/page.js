@@ -171,7 +171,7 @@ const AboutPage = () => {
                 ].map((service, index) => (
                   <motion.div
                     key={index}
-                    className="bg-white p-6 rounded-xl hover:bg-gray-50 transition-colors border border-gray-200"
+                    className="bg-white p-6 rounded-xl hover:bg-blue-50 transition-colors border border-gray-200"
                     whileHover={{ y: -5 }}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
