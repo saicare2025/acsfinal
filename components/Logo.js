@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import logo from "../app/assets/logo.png";
+import logo from "../app/assets/logo.webp";
 import Image from 'next/image';
 
 

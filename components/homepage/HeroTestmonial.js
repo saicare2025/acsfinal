@@ -1,15 +1,21 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { StarIcon, XMarkIcon } from "@heroicons/react/24/solid";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import review2 from "../../app/assets/review-image/review2.png";
-import review3 from "../../app/assets/review-image/review3.png";
-import review4 from "../../app/assets/review-image/review4.png";
-import review8 from "../../app/assets/review-image/review8.png";
+import review1 from "../../app/assets/review-image/1.webp";
+import review2 from "../../app/assets/review-image/2.webp";
+import review3 from "../../app/assets/review-image/3.webp";
+import review4 from "../../app/assets/review-image/4.webp";
+import review5 from "../../app/assets/review-image/5.webp";
+import review6 from "../../app/assets/review-image/6.webp";
+import review7 from "../../app/assets/review-image/7.webp";
+import review8 from "../../app/assets/review-image/8.webp";
+import review9 from "../../app/assets/review-image/9.webp";
 
 const testimonials = [
   {
@@ -59,12 +65,21 @@ export function FloatingTestimonial() {
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  // Show only once using localStorage
+  // Show only once using localStorage - with proper error handling
   useEffect(() => {
-    const hasShown = localStorage.getItem("testimonialShown");
-    if (!hasShown) {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      try {
+        const hasShown = localStorage.getItem("testimonialShown");
+        if (!hasShown) {
+          setVisible(true);
+          localStorage.setItem("testimonialShown", "true");
+        }
+      } catch (error) {
+        console.warn('Could not access localStorage:', error);
+        setVisible(true);
+      }
+    } else {
       setVisible(true);
-      localStorage.setItem("testimonialShown", "true");
     }
   }, []);
 

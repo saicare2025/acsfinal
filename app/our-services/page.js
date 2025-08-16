@@ -5,7 +5,8 @@ import WhyChooseUs from "@/components/homepage/WhyChooseUs";
 import HelpSection from "@/components/homepage/HowCan";
 import CTASection from "@/components/homepage/CTA";
 import MainLayout from "../MainLayout";
-import CreditRepairProcess from "@/components/homepage/CreditRepairProcess ";
+import CreditRepairProcess from "@/components/homepage/CreditRepairProcess";
+
 
 export default function HomePage() {
   return (

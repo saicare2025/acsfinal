@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Calendar, Clock, User } from "lucide-react";
-import logo from "../../app/assets/logo.png";
+import logo from "../../app/assets/logo.webp";
 import Link from "next/link";
 import Image from "next/image";
 import MainLayout from "../MainLayout";

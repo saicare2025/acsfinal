@@ -1,9 +1,11 @@
+"use client";
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
-import home1 from "@/app/assets/h1.png";
-import home2 from "@/app/assets/h2.png";
+import home1 from "@/app/assets/h1.webp";
+import home2 from "@/app/assets/h2.webp";
 
 const CreditScoreTransformation = () => {
   const [expandedCards, setExpandedCards] = useState([]);

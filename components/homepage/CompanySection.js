@@ -5,15 +5,15 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import Image from "next/image";
-import c1 from "@/app/assets/company/1.png";
-import c2 from "@/app/assets/company/2.png";
-import c3 from "@/app/assets/company/3.png";
-import c4 from "@/app/assets/company/4.png";
-import c5 from "@/app/assets/company/5.png";
-import c6 from "@/app/assets/company/6.png";
-import c7 from "@/app/assets/company/1.png";
-import c8 from "@/app/assets/company/2.png";
-import c9 from "@/app/assets/company/3.png";
+import c1 from "@/app/assets/company/1.webp";
+import c2 from "@/app/assets/company/2.webp";
+import c3 from "@/app/assets/company/3.webp";
+import c4 from "@/app/assets/company/4.webp";
+import c5 from "@/app/assets/company/5.webp";
+import c6 from "@/app/assets/company/6.webp";
+import c7 from "@/app/assets/company/1.webp";
+import c8 from "@/app/assets/company/2.webp";
+import c9 from "@/app/assets/company/3.webp";
 
 const CompanyCarousel = () => {
   const companies = [c1, c2, c3, c4, c5, c6, c7, c8, c9];
@@ -78,6 +78,9 @@ const CompanyCarousel = () => {
                     alt={`Company ${index + 1}`}
                     fill
                     className="object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 hover:scale-105"
+                    sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, (max-width: 1024px) 20vw, 16vw"
+                    quality={75}
+                    loading="lazy"
                   />
                 </div>
               </div>

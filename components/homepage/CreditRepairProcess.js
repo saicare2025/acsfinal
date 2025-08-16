@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useMemo } from "react";
 
 export default function CreditRepairProcess({ phoneNumber = "1300 368 302" }) {
