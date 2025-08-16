@@ -19,7 +19,7 @@ const CompanyCarousel = () => {
   const companies = [c1, c2, c3, c4, c5, c6, c7, c8, c9];
 
   return (
-    <div className="lg:py-12 py-8 bg-blue-50">
+    <div className="lg:py-12 py-8 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Title Section */}
         <div className="text-start mb-12">

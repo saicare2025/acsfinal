@@ -70,7 +70,7 @@ const NAV_LINKS = [
   },
     {
     name: "Testimonials",
-    href: "/testimonials",
+    href: "/testimonial",
     icon: <ChatBubbleLeftRightIcon className="w-5 h-5" />,
   },
   

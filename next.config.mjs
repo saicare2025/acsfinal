@@ -13,6 +13,10 @@ const nextConfig = {
       { protocol: 'https', hostname: 'img.freepik.com' },
       { protocol: 'https', hostname: 'static.vecteezy.com' },
       { protocol: 'https', hostname: 'ui-avatars.com' },
+      { protocol: 'https', hostname: 'cdn.productreview.com.au' },
+      { protocol: 'https', hostname: 'ui-avatars.com' },
+
+
     ],
   },
 };
