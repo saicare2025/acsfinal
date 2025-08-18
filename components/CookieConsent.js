@@ -121,7 +121,6 @@ export function CookieConsent() {
             >
               Reject All
             </button>
-         
           </div>
         </div>
       </div>

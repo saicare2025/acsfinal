@@ -15,10 +15,6 @@ const TransformationalJourney = dynamic(() => import("./TransformationalJourney"
   loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg" />
 });
 
-const VideoServicesSection = dynamic(() => import("./VideoServicesSection"), {
-  loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg" />
-});
-
 const LoanCalculator = dynamic(() => import("./LoanCalculator"), {
   loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-lg" />
 });
@@ -32,7 +28,6 @@ export default function HomeClientSections() {
     <>
       <Testimonials3DCarousel />
       <TransformationalJourney />
-      <VideoServicesSection />
       <ScrollTestimonials />
       <CTASection />
       <LoanCalculator />
