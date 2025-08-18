@@ -69,7 +69,7 @@ function MobileMenu({ isOpen, navLinks, onClose }) {
       {/* Mobile CTAs */}
       <div className="px-3 pb-4 pt-2 border-t border-gray-100 space-y-2">
         <Link
-          href="/meeting-schedule"
+          href="/free-credit-assessment"
           onClick={onClose}
           className="block w-full text-center rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-medium py-3 shadow-md"
           aria-label="Start Free Credit Assessment"
@@ -183,7 +183,7 @@ export default function Header() {
             </nav>
 
             <div className="flex items-center space-x-4 ml-6">
-              <Link href="/meeting-schedule">
+              <Link href="/free-credit-assessment">
                 <button
                   className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700
                              hover:from-blue-600 hover:via-blue-700 hover:to-blue-800

@@ -142,7 +142,7 @@ export default function Home() {
                   Call Now: 0489 265 737
                 </a>
                 <Link
-                  href="/free-consultation"
+                  href="/free-credit-assessment"
                   className="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-[#0668a5] transition-colors duration-300 text-center"
                 >
                   Free Credit Assessment

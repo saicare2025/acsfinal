@@ -13,7 +13,7 @@ export default function CTASection() {
           we&apos;re ready to assist you every step of the way.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Free Credit Assessment Button */}
           <div className="bg-white p-1 rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-200">
             <div className="bg-white rounded-lg p-6 h-full flex flex-col items-center">
@@ -23,7 +23,7 @@ export default function CTASection() {
               <h3 className="text-lg font-bold text-gray-800 mb-2">Free Credit Assessment</h3>
               <p className="text-gray-600 text-sm mb-4">Get your personalized credit evaluation</p>
               <Link 
-                href="/meeting-schedule" 
+                href="/free-credit-assessment" 
                 className="mt-auto w-full bg-blue hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
               >
                 Start Now
@@ -48,22 +48,7 @@ export default function CTASection() {
             </div>
           </div>
 
-          {/* Credit Repair Helpline */}
-          <div className="bg-white p-1 rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-200">
-            <div className="bg-white rounded-lg p-6 h-full flex flex-col items-center">
-              <div className="bg-blue-100 p-3 rounded-full mb-4">
-                <EnvelopeIcon className="w-8 h-8 text-blue" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-2">Credit Repair Helpline</h3>
-              <p className="text-gray-600 text-sm mb-4">Immediate assistance with credit issues</p>
-              <a
-                href="tel:0489265737"
-                className="mt-auto w-full bg-blue hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
-              >
-                0489 265 737
-              </a>
-            </div>
-          </div>
+          
         </div>
 
         <p className="text-blue-100 mt-12 text-sm">

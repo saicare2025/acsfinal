@@ -115,7 +115,7 @@ const CreditRepairSection = () => {
             ))}
           </div>
         </div>
-        <Link href="/meeting-schedule">
+        <Link href="/free-credit-assessment">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

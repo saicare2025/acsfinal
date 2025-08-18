@@ -9,7 +9,7 @@ import {
   ShieldCheckIcon,
   LockClosedIcon,
   CurrencyDollarIcon,
-  PhoneIcon,
+
 } from "@heroicons/react/24/solid";
 
 export default function HeroSection() {

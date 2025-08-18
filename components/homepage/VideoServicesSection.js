@@ -59,7 +59,7 @@ export default function VideoServicesSection() {
                 ))}
               </ul>
 
-              <Link href="/meeting-schedule">
+              <Link href="/free-credit-assessment">
                 <button className="px-6 py-2.5 bg-blue hover:bg-blue-700 text-white font-medium rounded-md shadow-sm transition-colors mt-4">
                   Get Your Free Assessment
                 </button>

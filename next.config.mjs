@@ -43,18 +43,9 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
         ],
       },
       {
@@ -74,6 +65,29 @@ const nextConfig = {
             value: 'public, max-age=31536000, immutable',
           },
         ],
+      },
+    ];
+  },
+
+  // 👇 Add redirects here
+  async redirects() {
+    return [
+      // Simple page redirect
+      {
+        source: '/assesment',
+        destination: '/free-credit-assessment',
+        permanent: true,
+      },
+      {
+        source: '/blog-details/:slug',
+        has: [
+          {
+            type: 'query',
+            key: 'id',
+          },
+        ],
+        destination: '/blog-details/:slug',
+        permanent: true,
       },
     ];
   },
