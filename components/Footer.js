@@ -285,6 +285,55 @@ export default function Footer() {
             </li>
           </ul>
         </motion.div>
+        {/* Legal & Utility Links */}
+        <div className="mt-6 border-t border-gray-200 pt-4">
+          <nav
+            className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-gray-600"
+            aria-label="Footer links"
+          >
+            <Link
+              href="/terms-conditions"
+              className="hover:text-blue-700 hover:underline"
+            >
+              Terms and Conditions
+            </Link>
+            <span aria-hidden="true" className="text-gray-300">
+              |
+            </span>
+            <Link
+              href="/privacy-policy"
+              className="hover:text-blue-700 hover:underline"
+            >
+              Privacy Policy
+            </Link>
+            <span aria-hidden="true" className="text-gray-300">
+              |
+            </span>
+            <Link
+              href="/testimonial"
+              className="hover:text-blue-700 hover:underline"
+            >
+              Testimonials
+            </Link>
+            <span aria-hidden="true" className="text-gray-300">
+              |
+            </span>
+            <a
+              href="/Complaints.pdf"
+              download
+              className="hover:text-blue-700 hover:underline"
+            >
+              Complaints Handling Policy
+            </a>
+
+            <span aria-hidden="true" className="text-gray-300">
+              |
+            </span>
+            <Link href="/blogs" className="hover:text-blue-700 hover:underline">
+              Blogs
+            </Link>
+          </nav>
+        </div>
       </div>
     </footer>
   );

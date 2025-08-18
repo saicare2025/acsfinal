@@ -158,8 +158,8 @@ export default function Home() {
               <p className="font-semibold">
                 So if you&apos;re looking for a quick way out of your bad credit
                 position then just pick up your phone, call us now at{" "}
-                <a href="tel:1300368302" className="underline">
-                  1300 368 302
+                <a href="tel:0489265737" className="underline">
+                  0489 265 737
                 </a>
                 .
               </p>
@@ -412,7 +412,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               {/* Call Button 1 */}
               <a
-                href="tel:1300368302"
+                href="tel:0489265737"
                 className="bg-white border-2 border-[#0668a5] text-[#0668a5] hover:bg-blue-50 font-bold py-3 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
               >
                 <svg
@@ -429,7 +429,7 @@ export default function Home() {
                   />
                 </svg>
                 <div className="text-center">
-                  <div className="font-bold">1300 368 302</div>
+                  <div className="font-bold">0489 265 737</div>
                   <div className="text-xs">Credit Repair Helpline</div>
                 </div>
               </a>

@@ -29,9 +29,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Preconnect to required origins for faster resource loading */}
-        <link rel="preconnect" href="https://embed.tawk.to" />
-        <link rel="preconnect" href="https://cdn.provesrc.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+         <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="" />
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" crossOrigin="" />
         
         {/* Google Tag Manager - Load after interactive */}
         {/* <Script
@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         /> */}
         
         {/* Tawk.to chat - Load lazily to reduce initial blocking */}
-        <Script id="tawk-to" strategy="lazyOnload">
+        {/* <Script id="tawk-to" strategy="lazyOnload">
           {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
             (function(){
@@ -66,10 +66,10 @@ export default function RootLayout({ children }) {
               s0.parentNode.insertBefore(s1,s0);
             })();
           `}
-        </Script>
+        </Script> */}
 
         {/* Provesrc - Load lazily to reduce initial blocking */}
-        <Script id="provesrc" strategy="lazyOnload">
+        {/* <Script id="provesrc" strategy="lazyOnload">
           {`
             if (!window.provesrc) {
               (function(o,i){
@@ -90,7 +90,7 @@ export default function RootLayout({ children }) {
               })(window,document);
             }
           `}
-        </Script>
+        </Script> */}
       </head>
       <body className={inter.className}>
         {children}

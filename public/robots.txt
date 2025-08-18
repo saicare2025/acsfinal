@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://australian-credit-solution.vercel.app
+
+# Sitemaps
+Sitemap: https://australian-credit-solution.vercel.app/sitemap.xml

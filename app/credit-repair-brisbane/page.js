@@ -136,10 +136,10 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:1300368302"
+                  href="tel:0489265737"
                   className="bg-white text-[#0668a5] font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition-colors duration-300 text-center shadow-md"
                 >
-                  Call Now: 1300 368 302
+                  Call Now: 0489 265 737
                 </a>
                 <Link
                   href="/free-consultation"
@@ -371,7 +371,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               {/* Call Button 1 */}
               <a
-                href="tel:1300368302"
+                href="tel:0489265737"
                 className="bg-white border-2 border-[#0668a5] text-[#0668a5] hover:bg-blue-50 font-bold py-3 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
               >
                 <svg
@@ -388,7 +388,7 @@ export default function Home() {
                   />
                 </svg>
                 <div className="text-center">
-                  <div className="font-bold">1300 368 302</div>
+                  <div className="font-bold">0489 265 737</div>
                   <div className="text-xs">Credit Repair Helpline</div>
                 </div>
               </a>
