@@ -14,7 +14,7 @@ import {
   Star
 } from 'lucide-react';
 import Image from 'next/image';
-import testimonialImage from '@/app/assets/hero2.webp';
+import testimonialImage from '@/app/assets/hero4.webp';
 
 const HelpSection = () => {
   const [expandedCards, setExpandedCards] = useState([]);
@@ -176,7 +176,7 @@ const HelpSection = () => {
                 src={testimonialImage}
                 alt="Happy client"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
                 sizes="(max-width: 768px) 100vw, 33vw"
                 quality={85}

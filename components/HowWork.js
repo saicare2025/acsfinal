@@ -35,7 +35,7 @@ const HowWorks = () => {
                 Looking to fix your credit and get finance quickly? Contact us
                 or fill out the form to get started.
               </p>
-              <Link href="/meeting-schedule">
+              <Link href="/free-credit-assessment">
                 <button className="bg-blue hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg flex items-center transition-all">
                   Free Credit Assessment <ArrowRight className="ml-2 h-5 w-5" />
                 </button>

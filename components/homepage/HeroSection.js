@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import heroImage from '@/app/assets/hero2.webp';
+import heroImage from '@/app/assets/hero.webp';
 import CreditAssessmentForm from './HeroForm';
 import {
   CurrencyDollarIcon,

@@ -1,4 +1,4 @@
-import HeroSection from "./HeroSection";
+import HeroSection from "./HeroSection2";
 import TrustBadge from "./TrustBadge";
 import WhyChooseUs from "./WhyChooseUs";
 import HelpSection from "./HowCan";
