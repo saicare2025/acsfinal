@@ -12,7 +12,6 @@ import VideoServicesSection from "@/components/homepage/VideoServicesSection";
 import HowWorks from "@/components/HowWork";
 import Link from "next/link";
 
-// ✅ SEO Metadata for Perth Credit Repair
 
 export default function Home() {
   return (
@@ -465,7 +464,7 @@ export default function Home() {
               Common Credit Score Myths
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              There are many misconceptions about credit scores. Let's debunk
+              There are many misconceptions about credit scores. Let&apos;s debunk
               some common myths:
             </p>
           </div>
@@ -687,7 +686,7 @@ export default function Home() {
                 Plan for Major Purchases
               </h3>
               <p className="text-gray-600">
-                If you're planning a major purchase, such as a home or car,
+                If you&apos;re planning a major purchase, such as a home or car,
                 check your credit score and work on improving it if necessary.
               </p>
             </div>
@@ -978,7 +977,7 @@ export default function Home() {
                     />
                   </svg>
                   <span className="text-gray-700">
-                    Becoming an authorised user on a parent's credit card
+                    Becoming an authorised user on a parent&apos;s credit card
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -1803,7 +1802,7 @@ export default function Home() {
             <h3 className="text-2xl font-semibold text-blue mb-6 pb-2 border-b-2 border-blue-200">Government & Non-Profit Resources</h3>
             <ul className="space-y-4">
               {[
-                "Australian Government's MoneySmart - Free tools and calculators",
+                "Australian Government&apos;s MoneySmart - Free tools and calculators",
                 "National Debt Helpline - Free confidential debt advice",
                 "Community Financial Counselling - Low-cost financial counselling"
               ].map((item, index) => (
