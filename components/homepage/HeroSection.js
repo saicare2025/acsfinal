@@ -58,7 +58,7 @@ export default function HeroSection() {
                   priority
                   fetchPriority="high"
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 40vw"
-                  className="w-full h-[400px] object-contain"
+                  className="w-full max-h-[400px] object-contain"
                 />
               </div>
             </MotionScaleIn>
