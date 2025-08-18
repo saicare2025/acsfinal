@@ -1,45 +1,33 @@
-import { createContact} from '@/lib/ghl';
+// app/api/contacts/route.js
+import { createContact } from "@/lib/ghl";
 
-// Unified error handler
-const errorResponse = (message, status = 500) => {
-  return Response.json({ error: message }, { status });
-};
-
-export async function GET() {
-  return errorResponse('GET method not implemented', 405);
-}
+const errorResponse = (message, status = 500, details) =>
+  Response.json({ ok: false, error: message, details }, { status });
 
 export async function POST(request) {
   try {
-    // Enforce JSON content-type
-    const contentType = request.headers.get('content-type');
-    if (!contentType?.includes('application/json')) {
-      return errorResponse('Invalid content type. Expected JSON.', 415);
+    const ct = request.headers.get("content-type") || "";
+    if (!ct.includes("application/json")) {
+      return errorResponse("Invalid content type. Expected JSON.", 415);
     }
 
-    const contactData = await request.json();
+    let contactData;
+    try { contactData = await request.json(); }
+    catch { return errorResponse("Malformed JSON in request body.", 400); }
 
-    const { firstName, lastName, email, phone } = contactData;
+    const { firstName, lastName, email, phone } = contactData || {};
+    if (!firstName || !lastName) return errorResponse("First and last name required.", 400);
+    if (!email && !phone) return errorResponse("Provide email or phone.", 400);
 
-    // Validate required fields
-    if (!firstName || !lastName) {
-      return errorResponse('First name and last name are required', 400);
-    }
-
-    if (!email && !phone) {
-      return errorResponse('Either email or phone must be provided', 400);
-    }
-
-    // Create contact in GHL
-    const newContact = await createContact(contactData);
-
-    return Response.json(newContact, { status: 201 });
-
-  } catch (error) {
-    console.error('POST Contact Error:', error);
-
-    const status = error.message.includes('already exists') ? 409 : 500;
-    return errorResponse(error.message || 'Failed to create contact', status);
+    const created = await createContact(contactData);
+    return Response.json({ ok: true, contact: created }, { status: 201 });
+  } catch (err) {
+    // If lib attached raw response text, surface it
+    const status = err?.status && err.status >= 400 ? err.status : 500;
+    return errorResponse(
+      err?.message || "Failed to create contact.",
+      status,
+      err?.details
+    );
   }
 }
-

@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import blogData from "../../data/blogs_data.json";
 import Link from "next/link";
 import MainLayout from "@/app/MainLayout";
+import HeroSection from "@/components/homepage/HeroSection4";
 
 export default function BlogPostPage() {
   const { slug } = useParams();
@@ -94,10 +95,11 @@ export default function BlogPostPage() {
 
   return (
     <MainLayout>
-      <div className="max-w-7xl mx-auto px-4 py-6 lg:py-12">
+      <HeroSection/>
+      <div className="max-w-5xl mx-auto px-4 py-6 lg:py-12">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main Content */}
-          <main className="lg:flex-1 max-w-3xl">
+          <main>
             {/* Breadcrumb */}
             <nav
               className="flex items-center text-base mb-4 lg:mb-6 space-x-2"
@@ -151,86 +153,7 @@ export default function BlogPostPage() {
             </div>
           </main>
 
-          {/* Recent Articles Sidebar */}
-          <aside className="lg:w-96 flex-shrink-0">
-            <div className="bg-gradient-to-br from-white to-blue-200 p-5 rounded-xl shadow-sm border border-gray-100 sticky top-6">
-              <div className="flex items-center gap-3 mb-5 pb-3 border-b border-gray-100">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-blue-500 w-5 h-5"
-                >
-                  <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-                </svg>
-                <h2 className="text-lg font-bold text-[#035071]">
-                  Recent Articles
-                </h2>
-              </div>
-
-              <ul className="space-y-3">
-                {recentPosts.map((post) => {
-                  const randomReadTime = Math.floor(Math.random() * 21) + 10; // Random between 10-30
-                  return (
-                    <li key={post.slug}>
-                      <Link
-                        href={`/blogs/${post.slug}`}
-                        className="group flex items-start gap-3 p-2 rounded-lg transition-all hover:bg-blue-50 hover:shadow-xs"
-                      >
-                        <div className="bg-blue-100/50 group-hover:bg-blue-200/50 p-1.5 rounded-lg transition-colors">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="18"
-                            height="18"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-blue-600 w-4 h-4"
-                          >
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                          </svg>
-                        </div>
-
-                        <div className="flex-1 min-w-0">
-                          <h3 className="text-sm font-medium text-gray-800 group-hover:text-blue-600 line-clamp-2 transition-colors">
-                            {post.title}
-                          </h3>
-                          <div className="flex items-center gap-1.5 mt-1 text-xs text-gray-500">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className="w-3 h-3"
-                            >
-                              <circle cx="12" cy="12" r="10" />
-                              <polyline points="12 6 12 12 16 14" />
-                            </svg>
-                            <span>{randomReadTime} min read</span>
-                          </div>
-                        </div>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </aside>
+         
         </div>
       </div>
     </MainLayout>

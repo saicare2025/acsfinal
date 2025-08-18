@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 
-export default function CreditRepairProcess({ phoneNumber = "1300 368 302" }) {
+export default function CreditRepairProcess({ phoneNumber = "0489 265 737" }) {
   const [expandedId, setExpandedId] = useState(null);
 
   const steps = useMemo(

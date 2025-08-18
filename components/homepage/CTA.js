@@ -40,10 +40,10 @@ export default function CTASection() {
               <h3 className="text-lg font-bold text-gray-800 mb-2">Call Our Experts</h3>
               <p className="text-gray-600 text-sm mb-4">Speak directly with a credit specialist</p>
               <a
-                href="tel:1300368302"
+                href="tel:0489265737"
                 className="mt-auto w-full bg-blue hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
               >
-                1300 368 302
+                0489 265 737
               </a>
             </div>
           </div>

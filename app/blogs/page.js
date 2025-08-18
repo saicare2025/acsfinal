@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Clock, ArrowRight, ArrowLeft, BookOpen } from "lucide-react";
 import MainLayout from "../MainLayout";
 import blogData from "../data/blogs_data.json";
+import HeroSection from "@/components/homepage/HeroSection";
 
 // Constants
 const LIMIT = 9;
@@ -52,6 +53,7 @@ export default function BlogsPage() {
 
   return (
     <MainLayout>
+      <HeroSection/>
       <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Page Header */}
@@ -137,8 +139,9 @@ function BlogCard({ post }) {
   const needsEllipsis = post.excerpt?.split(" ").length > 25;
 
   return (
+
     <Link
-      href={`/blogs/${post.slug}`}
+      href={`/blog-details/${post.slug}`}
       className="group bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full"
     >
       <div className="p-6 flex flex-col flex-grow">
