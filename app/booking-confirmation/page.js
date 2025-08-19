@@ -10,46 +10,6 @@ import "swiper/css/pagination";
 import MainLayout from "../MainLayout";
 import PremiumTestimonialCarousel from "@/components/homepage/Testmonials";
 
-// YouTube video data with your actual links
-const YOUTUBE_VIDEOS = [
-  {
-    id: "video1",
-    embedId: "kul2qAjNq-Q",
-    title: "Client Success Story - Sarah",
-    thumbnail: "https://img.youtube.com/vi/kul2qAjNq-Q/maxresdefault.jpg",
-  },
-  {
-    id: "video2",
-    embedId: "89ceb0uVZo4",
-    title: "Credit Repair Journey - Michael",
-    thumbnail: "https://img.youtube.com/vi/89ceb0uVZo4/maxresdefault.jpg",
-  },
-  {
-    id: "video3",
-    embedId: "uer-g34e_d8",
-    title: "From 500 to 700 Credit Score",
-    thumbnail: "https://img.youtube.com/vi/uer-g34e_d8/maxresdefault.jpg",
-  },
-  {
-    id: "video4",
-    embedId: "V3VUjwqufhg",
-    title: "Business Loan Approval Story",
-    thumbnail: "https://img.youtube.com/vi/V3VUjwqufhg/maxresdefault.jpg",
-  },
-  {
-    id: "video6",
-    embedId: "89ceb0uVZo4",
-    title: "Credit Repair Journey - Michael",
-    thumbnail: "https://img.youtube.com/vi/89ceb0uVZo4/maxresdefault.jpg",
-  },
-  {
-    id: "video5",
-    embedId: "uer-g34e_d8",
-    title: "From 500 to 700 Credit Score",
-    thumbnail: "https://img.youtube.com/vi/uer-g34e_d8/maxresdefault.jpg",
-  },
-];
-
 export default function BookingConfirmation() {
   // Scroll to top on component mount
   useEffect(() => {
