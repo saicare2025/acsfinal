@@ -7,6 +7,7 @@ import MainLayout from "../MainLayout";
 import logo from "../../app/assets/logo.webp";
 
 export default function MeetingScheduled() {
+
   return (
     <MainLayout>
       {/* GHL form auto-resizer */}
