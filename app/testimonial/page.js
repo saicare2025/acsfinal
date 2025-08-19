@@ -10,7 +10,7 @@ import {
   BuildingOfficeIcon
 } from "@heroicons/react/24/solid";
 import MainLayout from "../MainLayout";
-import testimonialsData from "../../app/data/testimonials.json";
+import testimonialsData from "../../data/testimonials.json";
 
 const INITIAL_LOAD = 15;
 const LOAD_MORE_COUNT = 9;

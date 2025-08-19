@@ -4,7 +4,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { Clock, ArrowRight, ArrowLeft, BookOpen } from "lucide-react";
 import MainLayout from "../MainLayout";
-import blogData from "../data/blogs_data.json";
+import blogData from "../../data/blogs_data.json";
 import HeroSection from "@/components/homepage/HeroSection";
 
 // Constants

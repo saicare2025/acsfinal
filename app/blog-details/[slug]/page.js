@@ -1,11 +1,13 @@
 import fs from 'fs';
 import path from 'path';
+import { JSDOM } from 'jsdom';
 import MainLayout from '@/app/MainLayout';
 import HeroSection from '@/components/homepage/HeroSection4';
 import Link from 'next/link';
 
-export async function getServerSideProps(context) {
-  const { slug } = context.params;
+// ✅ This is now a server component by default
+export default async function BlogPostPage({ params }) {
+  const { slug } = params;
 
   const filePath = path.join(process.cwd(), 'data', 'blogs_data.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
@@ -14,12 +16,14 @@ export async function getServerSideProps(context) {
   const post = blogData.find((blog) => blog.slug === slug);
 
   if (!post) {
-    return {
-      notFound: true,
-    };
+    return (
+      <MainLayout>
+        <div className="text-center py-20 text-red-500">Blog not found</div>
+      </MainLayout>
+    );
   }
 
-  // Process content to remove first h2
+  // ✅ Process HTML content: remove first h2
   let processedContent = post.content;
   if (typeof processedContent === 'string') {
     const tempDiv = new JSDOM(`<div>${processedContent}</div>`).window.document.querySelector('div');
@@ -28,18 +32,7 @@ export async function getServerSideProps(context) {
     processedContent = tempDiv.innerHTML;
   }
 
-  const recentPosts = blogData.filter((blog) => blog.slug !== slug).slice(0, 10);
 
-  return {
-    props: {
-      post,
-      processedContent,
-      recentPosts,
-    },
-  };
-}
-
-export default function BlogPostPage({ post, processedContent }) {
   return (
     <MainLayout>
       <HeroSection />
@@ -55,7 +48,7 @@ export default function BlogPostPage({ post, processedContent }) {
             </nav>
 
             <h1 className="text-3xl lg:text-4xl font-bold text-[#035071] mb-6 leading-tight">
-              {post.title || "Untitled"}
+              {post.title || 'Untitled'}
             </h1>
 
             <article className="blog max-w-none">
@@ -67,7 +60,10 @@ export default function BlogPostPage({ post, processedContent }) {
             </article>
 
             <div className="mt-12">
-              <Link href="/blogs" className="inline-block px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium hover:from-blue-600 hover:to-indigo-700 shadow">
+              <Link
+                href="/blogs"
+                className="inline-block px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium hover:from-blue-600 hover:to-indigo-700 shadow"
+              >
                 ← Back to all articles
               </Link>
             </div>
