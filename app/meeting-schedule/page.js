@@ -21,8 +21,6 @@ export default function MeetingScheduled() {
 
           {/* Card */}
           <div>
-           
-
             {/* Embedded GHL Calendar */}
             <div className="p-0">
               <iframe
