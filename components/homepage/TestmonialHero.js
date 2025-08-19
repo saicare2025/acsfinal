@@ -213,16 +213,26 @@ export default function PremiumTestimonialCarousel2() {
           </div>
 
           {/* Right: Image */}
-          <a href="https://www.productreview.com.au/listings/australian-credit-solutions">
+          <a
+            href="https://www.productreview.com.au/listings/australian-credit-solutions"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read Australian Credit Solutions reviews on ProductReview.com.au"
+            className="group inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600/40 focus-visible:ring-offset-2"
+          >
             <Image
               src={productReview}
-              alt="Best 2025 credit assistance in Australia"
+              alt="" 
+              aria-hidden="true" 
               width={400}
               height={250}
               priority
               sizes="(max-width: 768px) 40vw, (max-width: 1024px) 30vw, 240px"
               className="mt-1 hidden lg:block md:mt-0 h-auto w-28 sm:w-40 md:w-48 lg:w-60 object-contain self-center"
             />
+            <span className="sr-only">
+              Read Australian Credit Solutions reviews on ProductReview.com.au
+            </span>
           </a>
         </div>
       </div>
