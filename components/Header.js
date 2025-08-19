@@ -24,7 +24,12 @@ import Logo from "./Logo";
 /* TikTok & Pinterest icons (plain SVGs) */
 export function TikTokIcon(props) {
   return (
-    <svg {...props} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      {...props}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path d="M12.72 0h3.124c.13 1.157.54 2.263 1.21 3.219.67.955 1.583 1.733 2.646 2.264-.52.757-1.273 1.403-2.157 1.744a6.05 6.05 0 0 1-2.597.287v8.405a6.556 6.556 0 0 1-1.635 4.38 6.556 6.556 0 0 1-4.38 1.635c-1.685 0-3.3-.67-4.494-1.865A6.34 6.34 0 0 1 3.87 15.77a6.34 6.34 0 0 1 1.635-4.494 6.34 6.34 0 0 1 4.494-1.635c.223 0 .44.017.654.048v3.14a3.24 3.24 0 0 0-.654-.064 3.204 3.204 0 0 0-2.278.944 3.204 3.204 0 0 0-.944 2.278c0 .857.334 1.662.944 2.278a3.204 3.204 0 0 0 2.278.944 3.204 3.204 0 0 0 2.278-.944 3.204 3.204 0 0 0 .944-2.278V0z" />
     </svg>
   );
@@ -32,7 +37,12 @@ export function TikTokIcon(props) {
 
 export function PinterestIcon(props) {
   return (
-    <svg {...props} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      {...props}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path d="M12 0C5.373 0 0 5.373 0 12c0 4.991 3.657 9.142 8.438 10.037-.117-.853-.222-2.164.046-3.096.243-.84 1.562-5.34 1.562-5.34s-.398-.797-.398-1.974c0-1.85 1.073-3.232 2.406-3.232 1.136 0 1.682.852 1.682 1.873 0 1.142-.728 2.85-1.103 4.433-.314 1.323.666 2.402 1.977 2.402 2.373 0 4.197-2.5 4.197-6.102 0-3.188-2.293-5.417-5.566-5.417-3.797 0-6.033 2.848-6.033 5.792 0 1.148.444 2.384 1 3.053.11.13.125.244.092.375-.1.4-.332 1.273-.377 1.45-.06.242-.195.294-.45.178-1.676-.778-2.72-3.215-2.72-5.172 0-4.215 3.063-8.085 8.833-8.085 4.633 0 8.233 3.308 8.233 7.742 0 4.6-2.9 8.303-6.922 8.303-1.352 0-2.621-.705-3.055-1.54l-.83 3.156c-.3 1.146-1.113 2.582-1.66 3.454C9.484 23.88 10.729 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" />
     </svg>
   );
@@ -110,7 +120,10 @@ export default function Header() {
         <div className="container max-w-7xl mx-auto flex justify-between items-center py-2 px-4">
           <div className="flex items-center gap-4">
             {/* Phone: always visible */}
-            <a href="tel:0489265737" className="flex items-center gap-2 hover:underline">
+            <a
+              href="tel:0489265737"
+              className="flex items-center gap-2 hover:underline"
+            >
               <PhoneIcon className="w-4 h-4" aria-hidden />
               <span className="font-medium tracking-wide">0489 265 737</span>
             </a>
@@ -125,30 +138,58 @@ export default function Header() {
               </span>
             </a>
             <Link href="/testimonial">
-              <span className="font-medium tracking-wide ml-0 sm:ml-2">| Testimonials</span>
+              <span className="font-medium tracking-wide">| Testimonials</span>
             </Link>
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="https://www.facebook.com/australiancreditsolutions" className="hover:text-blue-200" aria-label="Facebook">
+            <a
+              href="https://www.facebook.com/australiancreditsolutions"
+              className="hover:text-blue-200"
+              aria-label="Facebook"
+            >
               <FacebookIcon className="w-4 h-4" />
             </a>
-            <a href="https://x.com/credits_aussie" className="hover:text-blue-200" aria-label="Twitter">
+            <a
+              href="https://x.com/credits_aussie"
+              className="hover:text-blue-200"
+              aria-label="Twitter"
+            >
               <TwitterIcon className="w-4 h-4" />
             </a>
-            <a href="https://www.instagram.com/australian_credit_solution/" className="hover:text-blue-200" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/australian_credit_solution/"
+              className="hover:text-blue-200"
+              aria-label="Instagram"
+            >
               <InstagramIcon className="w-4 h-4" />
             </a>
-            <a href="https://www.linkedin.com/company/australian-credit-solutions/" className="hover:text-blue-200" aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com/company/australian-credit-solutions/"
+              className="hover:text-blue-200"
+              aria-label="LinkedIn"
+            >
               <LinkedinIcon className="w-4 h-4" />
             </a>
-            <a href="https://ph.pinterest.com/australiancreditsolutions/" className="hover:text-blue-200 hidden lg:block" aria-label="Pinterest">
+            <a
+              href="https://ph.pinterest.com/australiancreditsolutions/"
+              className="hover:text-blue-200 hidden lg:block"
+              aria-label="Pinterest"
+            >
               <PinterestIcon className="w-4 h-4" />
             </a>
-            <a href="https://www.youtube.com/@australiancreditsolutions3719" className="hover:text-blue-200 hidden lg:block" aria-label="YouTube">
+            <a
+              href="https://www.youtube.com/@australiancreditsolutions3719"
+              className="hover:text-blue-200 hidden lg:block"
+              aria-label="YouTube"
+            >
               <YoutubeIcon className="w-4 h-4" />
             </a>
-            <a href="https://www.tiktok.com/@australiancreditrepair" className="hover:text-blue-200 hidden lg:block" aria-label="TikTok">
+            <a
+              href="https://www.tiktok.com/@australiancreditrepair"
+              className="hover:text-blue-200 hidden lg:block"
+              aria-label="TikTok"
+            >
               <TikTokIcon className="w-4 h-4" />
             </a>
           </div>
@@ -193,7 +234,6 @@ export default function Header() {
                   Free Credit Assessment
                 </button>
               </Link>
-             
             </div>
           </div>
 
@@ -203,8 +243,18 @@ export default function Header() {
             onClick={() => setIsMobileMenuOpen((v) => !v)}
             aria-label="Open mobile menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
             <span>MENU</span>
           </button>

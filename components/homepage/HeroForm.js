@@ -44,7 +44,7 @@ const TextInput = ({
         placeholder={placeholder}
         inputMode={inputMode}
         maxLength={maxLength}
-        className={`w-full rounded-lg border bg-white py-2 pl-10 pr-4 text-sm placeholder:text-blue-400 transition-all duration-200 ${
+        className={`w-full rounded-lg border bg-white py-2 pl-10 pr-4 text-sm placeholder:text-blue-900 transition-all duration-200 ${
           error
             ? "border-red-300 focus:border-red-500 focus:ring-red-500"
             : "border-blue-100 focus:border-blue-500 focus:ring-blue-500"
@@ -88,7 +88,7 @@ const SelectInput = ({
           error
             ? "border-red-300 focus:border-red-500 focus:ring-red-500"
             : "border-blue-100 focus:border-blue-500 focus:ring-blue-500"
-        } ${!value ? "text-blue-400" : "text-blue-900"}`}
+        } ${!value ? "text-blue-900" : "text-blue-900"}`}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${name}-error` : undefined}
       >
@@ -135,7 +135,7 @@ const TextAreaInput = ({
         onChange={onChange}
         placeholder={placeholder}
         rows={rows}
-        className={`w-full rounded-lg border bg-white py-2 pl-10 pr-4 text-sm placeholder:text-blue-400 transition-all duration-200 ${
+        className={`w-full rounded-lg border bg-white py-2 pl-10 pr-4 text-sm placeholder:text-blue-900 transition-all duration-200 ${
           error
             ? "border-red-300 focus:border-red-500 focus:ring-red-500"
             : "border-blue-100 focus:border-blue-500 focus:ring-blue-500"
