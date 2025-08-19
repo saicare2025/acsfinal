@@ -35,15 +35,7 @@ export default function MeetingScheduled() {
               />
             </div>
 
-            {/* Footer (optional) */}
-            <div className="border-t border-blue-100 p-4 bg-blue-50 text-right">
-              <a
-                href="https://www.australiancreditsolutions.com.au"
-                className="text-blue-700 text-sm font-medium hover:underline"
-              >
-                Need help? Contact us
-              </a>
-            </div>
+            
           </div>
         </div>
       </div>
