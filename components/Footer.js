@@ -229,6 +229,11 @@ export default function Footer() {
               >
                 {isSubmitting ? "Processing..." : "Get Free Assesment"}
               </button>
+              
+              {/* Admin fee text */}
+              <p className="text-xs text-gray-500 text-center mt-2">
+                A one-off $330 admin fee applies regardless of outcome.
+              </p>
             </form>
           </motion.div>
         </div>
@@ -293,7 +298,7 @@ export default function Footer() {
           >
             <Link
               href="/terms-conditions"
-              className="hover:text-blue-700 hover:underline"
+              className="hover:text-blue hover:underline"
             >
               Terms and Conditions
             </Link>
@@ -302,7 +307,7 @@ export default function Footer() {
             </span>
             <Link
               href="/privacy-policy"
-              className="hover:text-blue-700 hover:underline"
+              className="hover:text-blue hover:underline"
             >
               Privacy Policy
             </Link>
@@ -311,7 +316,7 @@ export default function Footer() {
             </span>
             <Link
               href="/testimonial"
-              className="hover:text-blue-700 hover:underline"
+              className="hover:text-blue hover:underline"
             >
               Testimonials
             </Link>
@@ -321,16 +326,21 @@ export default function Footer() {
             <a
               href="/Complaints.pdf"
               download
-              className="hover:text-blue-700 hover:underline"
+              className="hover:text-blue hover:underline"
             >
               Complaints Handling Policy
             </a>
-
             <span aria-hidden="true" className="text-gray-300">
               |
             </span>
-            <Link href="/blogs" className="hover:text-blue-700 hover:underline">
+            <Link href="/blogs" className="hover:text-blue hover:underline">
               Blogs
+            </Link>
+            <span aria-hidden="true" className="text-gray-300">
+              |
+            </span>
+            <Link href="/faq" className="hover:text-blue hover:underline">
+              FAQ
             </Link>
           </nav>
         </div>

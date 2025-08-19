@@ -1,139 +1,56 @@
-"use client";
+import fs from 'fs';
+import path from 'path';
+import { JSDOM } from 'jsdom';
+import MainLayout from '@/app/MainLayout';
+import HeroSection from '@/components/homepage/HeroSection4';
+import Link from 'next/link';
 
-import React, { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
-import blogData from "../../data/blogs_data.json";
-import Link from "next/link";
-import MainLayout from "@/app/MainLayout";
-import HeroSection from "@/components/homepage/HeroSection4";
+// ✅ This is now a server component by default
+export default async function BlogPostPage({ params }) {
+  const { slug } = params;
 
-export default function BlogPostPage() {
-  const { slug } = useParams();
-  const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [recentPosts, setRecentPosts] = useState([]);
-  const [processedContent, setProcessedContent] = useState("");
+  const filePath = path.join(process.cwd(), 'data', 'blogs_data.json');
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  const blogData = JSON.parse(jsonData);
 
-  useEffect(() => {
-    if (!slug) return;
+  const post = blogData.find((blog) => blog.slug === slug);
 
-    setLoading(true);
-    setError(null);
-
-    try {
-      const found = blogData.find((blog) => blog.slug === slug);
-
-      if (!found) {
-        setError("Blog not found");
-      } else {
-        setPost(found);
-
-        // Process content to remove first h2
-        if (typeof found.content === "string") {
-          const tempDiv = document.createElement("div");
-          tempDiv.innerHTML = found.content;
-          const firstH2 = tempDiv.querySelector("h2");
-          if (firstH2) {
-            firstH2.remove();
-          }
-          setProcessedContent(tempDiv.innerHTML);
-        }
-
-        // Get recent posts (excluding current post)
-        setRecentPosts(
-          blogData.filter((blog) => blog.slug !== slug).slice(0, 10)
-        );
-      }
-    } catch (err) {
-      console.error("Failed to load blog:", err);
-      setError("Failed to load blog");
-    } finally {
-      setLoading(false);
-    }
-  }, [slug]);
-
-  if (loading) {
+  if (!post) {
     return (
       <MainLayout>
-        <div className="flex flex-col items-center justify-center py-20 text-blue-600">
-          <svg
-            className="animate-spin h-10 w-10 mb-4 text-blue-600"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
-            ></circle>
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8v8H4z"
-            ></path>
-          </svg>
-          <p className="text-sm font-medium text-blue-600">
-            Loading blog post...
-          </p>
-        </div>
+        <div className="text-center py-20 text-red-500">Blog not found</div>
       </MainLayout>
     );
   }
 
-  if (error) {
-    return (
-      <MainLayout>
-        <div className="text-center py-20 text-red-500">{error}</div>
-      </MainLayout>
-    );
+  // ✅ Process HTML content: remove first h2
+  let processedContent = post.content;
+  if (typeof processedContent === 'string') {
+    const tempDiv = new JSDOM(`<div>${processedContent}</div>`).window.document.querySelector('div');
+    const firstH2 = tempDiv.querySelector('h2');
+    if (firstH2) firstH2.remove();
+    processedContent = tempDiv.innerHTML;
   }
+
 
   return (
     <MainLayout>
-      <HeroSection/>
+      <HeroSection />
       <div className="max-w-5xl mx-auto px-4 py-6 lg:py-12">
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Main Content */}
           <main>
-            {/* Breadcrumb */}
-            <nav
-              className="flex items-center text-base mb-4 lg:mb-6 space-x-2"
-              aria-label="Breadcrumb"
-            >
-              <Link
-                href="/"
-                className="text-blue-500 hover:text-blue-600 transition-colors duration-200 hover:underline hover:underline-offset-4"
-              >
-                Home
-              </Link>
-              <span aria-hidden="true" className="text-blue-300">
-                /
-              </span>
-              <Link
-                href="/blogs"
-                className="text-blue-500 hover:text-blue-600 transition-colors duration-200 hover:underline hover:underline-offset-4"
-              >
-                Blogs
-              </Link>
-              <span aria-hidden="true" className="text-blue-300">
-                /
-              </span>
-              <span className="text-blue-700 font-medium truncate max-w-[60%]">
-                {post.title}
-              </span>
+            <nav className="flex items-center text-base mb-4 lg:mb-6 space-x-2" aria-label="Breadcrumb">
+              <Link href="/" className="text-blue-500 hover:underline">Home</Link>
+              <span className="text-blue-300">/</span>
+              <Link href="/blogs" className="text-blue-500 hover:underline">Blogs</Link>
+              <span className="text-blue-300">/</span>
+              <span className="text-blue-700 font-medium truncate max-w-[60%]">{post.title}</span>
             </nav>
 
-            {/* Title */}
             <h1 className="text-3xl lg:text-4xl font-bold text-[#035071] mb-6 leading-tight">
-              {post.title || "Untitled"}
+              {post.title || 'Untitled'}
             </h1>
 
-            {/* Blog Content */}
             <article className="blog max-w-none">
               {processedContent ? (
                 <div dangerouslySetInnerHTML={{ __html: processedContent }} />
@@ -142,7 +59,6 @@ export default function BlogPostPage() {
               )}
             </article>
 
-            {/* Back Button */}
             <div className="mt-12">
               <Link
                 href="/blogs"
@@ -152,8 +68,6 @@ export default function BlogPostPage() {
               </Link>
             </div>
           </main>
-
-         
         </div>
       </div>
     </MainLayout>
