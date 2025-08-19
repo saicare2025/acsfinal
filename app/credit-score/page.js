@@ -12,7 +12,6 @@ import VideoServicesSection from "@/components/homepage/VideoServicesSection";
 import HowWorks from "@/components/HowWork";
 import Link from "next/link";
 
-// ✅ SEO Metadata for Perth Credit Repair
 
 export default function Home() {
   return (

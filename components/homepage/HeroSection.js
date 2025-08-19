@@ -11,15 +11,16 @@ import { MotionFadeUp, MotionScaleIn } from './MotionWrapper';
 
 const FeatureItem = ({ Icon, title, description }) => (
   <li className="flex items-start gap-3">
-    <div className="bg-green-100 p-2 rounded-full">
+    <div className="bg-green-100 p-2 rounded-full" aria-hidden="true">
       <Icon className="h-5 w-5 text-green-700" />
     </div>
     <div>
-      <h4 className="font-semibold text-gray-800">{title}</h4>
+      <h3 className="font-semibold text-gray-800">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
   </li>
 );
+
 
 export default function HeroSection() {
   return (
@@ -58,7 +59,7 @@ export default function HeroSection() {
                   priority
                   fetchPriority="high"
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 40vw"
-                  className="w-full h-[400px] object-contain"
+                  className="w-full max-h-[400px] object-contain"
                 />
               </div>
             </MotionScaleIn>
