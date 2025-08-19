@@ -104,43 +104,42 @@ const CreditQuiz = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    const formData = new FormData();
-    formData.append("fullName", contactInfo.fullName);
-    formData.append("phone", contactInfo.phone);
-    formData.append("email", contactInfo.email);
-    formData.append("utm_source", contactInfo.utm_source);
-    formData.append("utm_medium", contactInfo.utm_medium);
-    formData.append("utm_campaign", contactInfo.utm_campaign);
-    formData.append("answers", JSON.stringify(answers));
-    if (image) {
-      formData.append("image", image);
+  const fd = new FormData();
+  fd.append("fullName", contactInfo.fullName || "");
+  fd.append("phone", contactInfo.phone || "");
+  fd.append("email", contactInfo.email || "");
+  fd.append("utm_source", contactInfo.utm_source || "");
+  fd.append("utm_medium", contactInfo.utm_medium || "");
+  fd.append("utm_campaign", contactInfo.utm_campaign || "");
+  fd.append("answers", JSON.stringify(answers || {}));
+  if (image) fd.append("image", image);
+
+  try {
+    const res = await fetch("/api/ghl/quiz-upload", { method: "POST", body: fd });
+
+    let payload;
+    try { payload = await res.clone().json(); }
+    catch { payload = { error: await res.text() }; }
+
+    if (!res.ok || payload?.ok === false) {
+      alert("Submission error: " + (payload?.error || `Request failed (${res.status})`));
+      return;
     }
 
-    try {
-      const res = await fetch("/api/ghl/quiz-upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (!res.ok) {
-        const errorData = await res.json();
-        alert("Submission error: " + errorData.error);
-        setIsSubmitting(false);
-        return;
-      }
-
-      await res.json();
-      router.push("/booking-confirmation");
-    } catch (err) {
-      console.error("Submit failed:", err);
-      alert("Something went wrong. Please try again.");
-      setIsSubmitting(false);
-    }
-  };
+    // success
+    await res.json().catch(() => {}); // no-op; we already parsed clone
+    router.push("/meeting-schedule");
+  } catch (err) {
+    console.error("Submit failed:", err);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const progress = ((currentStep + 1) / (questions.length + 1)) * 100;
   const showImageUpload = currentStep === 4 && answers.has_credit_report === "Yes";

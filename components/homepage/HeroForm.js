@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   User,
@@ -230,36 +230,89 @@ export default function CreditAssessmentForm() {
   //     setIsSubmitting(false);
   //   }
   // };
- const handleSubmit = async (e) => {
+  // somewhere near component init
+  const [utm, setUtm] = useState({
+    source: null,
+    medium: null,
+    campaign: null,
+    term: null,
+    content: null,
+    gclid: null,
+    fbclid: null,
+    msclkid: null,
+  });
+
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    const read = (k) => (p.get(k) || "").trim();
+    setUtm({
+      source: read("utm_source").toLowerCase() || null,
+      medium: read("utm_medium").toLowerCase() || null,
+      campaign: read("utm_campaign") || null,
+      term: read("utm_term") || null,
+      content: read("utm_content") || null,
+      gclid: read("gclid") || null,
+      fbclid: read("fbclid") || null,
+      msclkid: read("msclkid") || null,
+    });
+  }, []);
+  const capitalize = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
+
+  const pickSourceTag = (u) => {
+    if (
+      u?.fbclid ||
+      ["facebook", "fb", "meta", "instagram"].includes(u?.source)
+    )
+      return "FB Campaign";
+    if (
+      u?.gclid ||
+      ["google", "googleads", "adwords"].includes(u?.source) ||
+      ["cpc", "ppc", "sem"].includes(u?.medium)
+    )
+      return "Google";
+    if (u?.msclkid || ["bing", "microsoft"].includes(u?.source)) return "Bing";
+    if (["tiktok", "tt"].includes(u?.source)) return "TikTok";
+    if (["linkedin", "li"].includes(u?.source)) return "LinkedIn";
+    if (["youtube"].includes(u?.source)) return "YouTube";
+    if (u?.source) return capitalize(u.source);
+    return "Direct";
+  };
+
+  const handleSubmit = async (e) => {
   e.preventDefault();
   if (!validateForm()) return;
-
   setIsSubmitting(true);
 
-  // optional: safe reader to avoid JSON parse crashes
   const safeRead = async (res) => {
     const ct = res.headers.get("content-type") || "";
     if (ct.includes("application/json")) return await res.json();
     const text = await res.text();
-    return { ok: false, error: text }; // normalize as JSON-like
+    return { ok: false, error: text };
   };
 
   try {
+    // Build tags from UTM
+    const primary = pickSourceTag(utm);
+    const tags = [primary];
+    if (utm.campaign) tags.push(`cmp:${utm.campaign}`);
+    if (utm.medium)   tags.push(`med:${utm.medium}`);
+    if (utm.term)     tags.push(`term:${utm.term}`);
+
     const payload = {
       firstName: (formData.firstName || "").trim(),
-      lastName: (formData.lastName || "").trim(),
-      email: (formData.email || "").trim(),
-      phone: formData.phone, // raw value; no validation/normalization
+      lastName:  (formData.lastName  || "").trim(),
+      email:     (formData.email     || "").trim(),
+      phone: formData.phone,
       state: formData.state,
+      tags, // 👈 send tags to the API
       customFields: [
-        // ✅ send exactly what the user selected
-        { id: "B1YRYSDJYrX78SFAdFlY", value: formData.isEmployed }, // "Yes" or "No"
+        { id: "B1YRYSDJYrX78SFAdFlY", value: formData.isEmployed }, // Yes/No
         { id: "U4bVkotSBQxyrQSo4ZE9", value: formData.description || "" },
       ],
+      // Optional: also store raw UTM values as custom fields if you have IDs
+      // utm_source: utm.source, utm_campaign: utm.campaign, etc.
     };
 
-    // ✅ ensure this path matches your actual route file
-    // if your file is app/api/contacts/route.js, use "/api/contacts"
     const res = await fetch("/api/ghl/contacts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -270,21 +323,12 @@ export default function CreditAssessmentForm() {
     console.log("Full API Response:", result);
 
     if (!res.ok || result?.ok === false) {
-      const msg =
-        result?.details ||
-        result?.error ||
-        result?.message ||
-        `Request failed (${res.status})`;
+      const msg = result?.details || result?.error || result?.message || `Request failed (${res.status})`;
       throw new Error(msg);
     }
 
-    // Robust contact id extraction
-    const contactId =
-      result?.contact?.id || result?.id || result?.data?.id;
-    if (!contactId) {
-      console.error("Unexpected API response format:", result);
-      throw new Error("No contact ID received. Check console for details.");
-    }
+    const contactId = result?.contact?.id || result?.id || result?.data?.id;
+    if (!contactId) throw new Error("No contact ID received. Check console for details.");
 
     router.push("/meeting-schedule");
   } catch (err) {
@@ -294,7 +338,6 @@ export default function CreditAssessmentForm() {
     setIsSubmitting(false);
   }
 };
-
 
   return (
     <>
