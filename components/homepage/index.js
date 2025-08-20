@@ -8,6 +8,8 @@ import CTASection from "./CTA";
 import HomeClientSections from "./HomeClientSections";
 import CreditRepairSection from "./CreditRepair";
 import CreditRepairProcess from "./CreditRepairProcess.js";
+import PremiumTestimonialCarousel2 from "./Testmonials";
+
 
 
 
@@ -16,6 +18,7 @@ export default function HomePage() {
     <main className="min-h-screen">
       <HeroSection />
       <TrustBadge />
+      <PremiumTestimonialCarousel2/>
       <WhyChooseUs />
       <HelpSection />
       <CompanyCarousel />
