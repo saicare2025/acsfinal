@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { JSDOM } from 'jsdom';
-import MainLayout from '@/app/MainLayout';
-import HeroSection from '@/components/homepage/HeroSection4';
+import MainLayout from '../../MainLayout';
+import HeroSection from '../../../components/homepage/HeroSection4';
 import Link from 'next/link';
 
 // ✅ This is now a server component by default

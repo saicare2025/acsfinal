@@ -1,14 +1,14 @@
 // app/page.js
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import HomePage from "@/components/homepage";
-import CompanyCarousel from "@/components/homepage/CompanySection";
-import HeroSection from "@/components/homepage/HeroSection4";
-import TestimonialSection from "@/components/homepage/ScrollTestimonials";
-import VideoServicesSection from "@/components/homepage/VideoServicesSection";
-import HowWorks from "@/components/HowWork";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import HomePage from "../../components/homepage";
+import CompanyCarousel from "../../components/homepage/CompanySection";
+import HeroSection from "../../components/homepage/HeroSection4";
+import TestimonialSection from "../../components/homepage/ScrollTestimonials";
+import VideoServicesSection from "../../components/homepage/VideoServicesSection";
+import HowWorks from "../../components/HowWork";
 import Link from "next/link";
 
 // ✅ SEO Metadata for Darwin Credit Repair

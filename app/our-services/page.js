@@ -1,10 +1,10 @@
 "use client";
-import HeroSection from "@/components/homepage/HeroSection";
-import Testimonials3DCarousel from "@/components/homepage/TestmonialHero";
-import WhyChooseUs from "@/components/homepage/WhyChooseUs";
-import HelpSection from "@/components/homepage/HowCan";
+import HeroSection from "../../components/homepage/HeroSection";
+import Testimonials3DCarousel from "../../components/homepage/TestmonialHero";
+import WhyChooseUs from "../../components/homepage/WhyChooseUs";
+import HelpSection from "../../components/homepage/HowCan";
 import MainLayout from "../MainLayout";
-import CreditRepairProcess from "@/components/homepage/CreditRepairProcess";
+import CreditRepairProcess from "../../components/homepage/CreditRepairProcess";
 
 
 export default function HomePage() {

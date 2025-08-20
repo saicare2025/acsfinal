@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Clock, ArrowRight, ArrowLeft, BookOpen } from "lucide-react";
 import MainLayout from "../MainLayout";
 import blogData from "../../data/blogs_data.json";
-import HeroSection from "@/components/homepage/HeroSection";
+import HeroSection from "../../components/homepage/HeroSection";
 
 // Constants
 const LIMIT = 9;

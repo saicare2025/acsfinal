@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import heroImage from "@/app/assets/hero2.webp";
+import heroImage from "../../app/assets/hero2.webp";
 import CreditAssessmentForm from "./HeroForm";
 import Image from "next/image";
 import {
