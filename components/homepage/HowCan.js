@@ -14,7 +14,7 @@ import {
   Star
 } from 'lucide-react';
 import Image from 'next/image';
-import testimonialImage from '@/app/assets/hero4.webp';
+import testimonialImage from '../../app/assets/hero4.webp';
 
 const HelpSection = () => {
   const [expandedCards, setExpandedCards] = useState([]);

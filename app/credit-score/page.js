@@ -1,15 +1,15 @@
 // app/page.js
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import HomePage from "@/components/homepage";
-import CompanyCarousel from "@/components/homepage/CompanySection";
-import HeroSection from "@/components/homepage/HeroSection3";
-import HelpSection from "@/components/homepage/HowCan";
-import TestimonialSection from "@/components/homepage/ScrollTestimonials";
-import VideoServicesSection from "@/components/homepage/VideoServicesSection";
-import HowWorks from "@/components/HowWork";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import HomePage from "../../components/homepage";
+import CompanyCarousel from "../../components/homepage/CompanySection";
+import HeroSection from "../../components/homepage/HeroSection3";
+import HelpSection from "../../components/homepage/HowCan";
+import TestimonialSection from "../../components/homepage/ScrollTestimonials";
+import VideoServicesSection from "../../components/homepage/VideoServicesSection";
+import HowWorks from "../../components/HowWork";
 import Link from "next/link";
 
 
