@@ -23,8 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-MVMW025XRV";
-  const TIKTOK_ID =
-    process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID || "C5B6LNC6J7TSRVQBTN00";
+  const TIKTOK_ID = process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID || "C5B6LNC6J7TSRVQBTN00";
 
   return (
     <html lang="en">
@@ -46,6 +45,7 @@ export default function RootLayout({ children }) {
           href="https://www.youtube-nocookie.com"
           crossOrigin=""
         />
+
 
         {/* Consent Mode v2 (recommended). Remove if you don't use a consent banner. */}
         <Script id="consent-defaults" strategy="afterInteractive">
@@ -130,6 +130,7 @@ export default function RootLayout({ children }) {
           src="https://cdn.productreview.com.au/assets/widgets/loader.js"
           strategy="lazyOnload"
         />
+
       </head>
       <body className={inter.className}>
         {/* Single pageview per route */}
