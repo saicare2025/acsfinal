@@ -5,12 +5,12 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
   HomeIcon,
-  ChartBarIcon,
   CogIcon,
   PhoneIcon,
   EnvelopeIcon,
   NewspaperIcon,
   ChatBubbleLeftRightIcon,
+  QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
 import {
   FacebookIcon,
@@ -53,6 +53,8 @@ const NAV_LINKS = [
   { name: "Home", href: "/", Icon: HomeIcon },
   { name: "Our Services", href: "/our-services", Icon: CogIcon },
   { name: "Credit Score", href: "/credit-score", Icon: NewspaperIcon },
+  { name: "Testimonials", href: "/testimonial", Icon: ChatBubbleLeftRightIcon },
+  { name: "FAQ", href: "/faq", Icon: QuestionMarkCircleIcon },
 ];
 
 function MobileMenu({ isOpen, navLinks, onClose }) {
