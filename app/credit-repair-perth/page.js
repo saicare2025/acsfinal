@@ -19,190 +19,423 @@ export default function Home() {
       <Header />
       <HeroSection />
       <VideoServicesSection />
-     <section className="py-16 bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6">
-    {/* Main Heading */}
-    <div className="mb-12">
-      <h2 className="text-3xl font-bold text-[#0668a5] mb-4">
-        Truths About Credit Reports And Credit Scores
-      </h2>
-      <div className="w-24 h-1 bg-[#0668a5] mb-6"></div>
-    </div>
+      <section className="bg-gradient-to-b from-blue via-blue/90 to-blue/80 text-white">
+        <div className="mx-auto max-w-5xl px-4 py-16 lg:py-20">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm backdrop-blur">
+            <span className="h-2 w-2 rounded-full bg-emerald-300" />
+            Perth Credit Repair
+          </div>
+          <h1 className="mt-5 text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+            Credit Repair Perth — Start Fresh with a Local, Trusted Team
+          </h1>
+          <p className="mt-4 text-sm text-blue-100">
+            <strong className="font-semibold">Last updated:</strong> August 20,
+            2025
+          </p>
+          <p className="mt-6 max-w-3xl text-lg text-blue-100">
+            If past bills, unexpected life events, or simple mistakes have left
+            a mark on your credit report, you’re not alone. Many Perth residents
+            come to us feeling stuck — and leave with a clear plan. At{" "}
+            <strong>Australian Credit Solutions</strong>, we carefully review
+            your credit files, challenge incorrect or unfair listings, and guide
+            you step‑by‑step to a healthier credit profile.
+          </p>
+          <p className="mt-3 max-w-3xl text-blue-100">
+            We believe everyone deserves a fair go and a genuine second chance.
+          </p>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-4 py-12 lg:py-16">
+          <h2 className="text-2xl font-semibold text-blue-900">
+            Why Perth Residents Choose Us
+          </h2>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                title: "Local insight",
+                body: "We work with clients across Perth and WA, so we understand the day‑to‑day realities behind credit issues.",
+              },
+              {
+                title: "Straight talk, no pressure",
+                body: "We explain your options in plain English and outline realistic next steps.",
+              },
+              {
+                title: "Privacy and respect",
+                body: "Your information is handled with care under the Australian Privacy Principles.",
+              },
+              {
+                title: "Clear process",
+                body: "We document what we’ll do, why we’re doing it, and how you’ll hear updates.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-blue-100 bg-blue-50/60 p-6 shadow-sm shadow-blue-100 transition hover:shadow-md"
+              >
+                <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-blue-600/10 text-blue-700">
+                  <span className="text-lg">★</span>
+                </div>
+                <h3 className="text-lg font-semibold text-blue-900">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-blue/80">{item.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-blue">
+            From Joondalup to Mandurah, our goal is simple: help you move
+            forward with clarity and confidence.
+          </p>
+        </div>
+      </section>
+      <section className="bg-gradient-to-b from-blue-50 to-white">
+        <div className="mx-auto max-w-5xl px-4 py-12 lg:py-16">
+          <h2 className="text-2xl font-semibold text-blue-900">
+            How We Help — Credit Repair in Perth
+          </h2>
 
-    {/* Introduction */}
-    <div className="mb-8 space-y-4 text-gray-700">
-      <p>
-        A credit score (&apos;credit rating&apos;) is a number that influences whether or not a person can get a loan, an apartment, insurance, phone service - regardless of who they are and what their income might be. Essentially it&apos;s based on your statistical probability of meeting your debt obligations in the past by making on-time payments and not defaulting on loans. In other words, it&apos;s an expression of how risky it is to lend to you, given our knowledge of you over the years.
-      </p>
-      <p>
-        But having a bad credit can affect you. A person with a bad credit history will have a difficult time getting a loan, especially at standard interest rates, because they are considered a more significant risk than other potential borrowers. This is true for all kinds of loans, with the exception of debt consolidation loans, which have various choices available to borrowers with bad credit. Home loans for those with bad credit are one such alternative.
-      </p>
-    </div>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">
+                1) Full Credit File Review
+              </h3>
+              <p className="mt-2 text-blue">
+                We obtain your reports from{" "}
+                <strong>Equifax, illion, and Experian</strong> and check every
+                line for accuracy, timing, and compliance with the Credit
+                Reporting Code.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">
+                2) Disputes &amp; Corrections
+              </h3>
+              <p className="mt-2 text-blue">
+                If something looks wrong, unfair, or out of date, we prepare
+                targeted disputes and work directly with the relevant credit
+                provider or bureau to seek a correction or removal.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">
+                3) Practical Score Rebuild Plan
+              </h3>
+              <p className="mt-2 text-blue">
+                Alongside disputes, we share practical steps you can take to
+                build stronger credit habits over time — the things lenders like
+                to see.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">
+                4) Updates You Can Rely On
+              </h3>
+              <p className="mt-2 text-blue">
+                You’ll receive regular, plain‑language updates so you always
+                know where things stand and what happens next.
+              </p>
+            </div>
+          </div>
 
-    {/* Bad Credit Score Definition */}
-    <div className="mb-8 bg-blue-50 p-6 rounded-lg">
-      <h3 className="text-xl font-semibold text-[#0668a5] mb-4">
-        What Is A Bad Credit Score?
-      </h3>
-      <p className="mb-4">
-        Let&apos;s look at three of the biggest credit agencies in Australia that provide credit reporting services and what they consider a terrible or low credit score.
-      </p>
-      
-      <div className="space-y-6">
-        <div className="flex items-start">
-          <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">1</span>
-          <div>
-            <p>
-              A score of 0 to 505 is considered &quot;below average&quot; by Equifax. This implies that you&apos;re in the lowest 20% of credit-active people, and you&apos;re more likely than the average to have a credit-related problem in the following 12 months. A score of 506 to 665 implies that an adverse event is as likely to occur in the next 12 months for someone in that group as it is for the general population.
+          <p className="mt-6 rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm text-blue-900">
+            <em>Important:</em> We don’t promise specific outcomes or approvals.
+            We provide careful reviews, evidence‑based disputes, and genuine
+            guidance that improves your position over time.
+          </p>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-4 py-12 lg:py-16">
+          <h2 className="text-2xl font-semibold text-blue-900">
+            Issues We Commonly See in Perth
+          </h2>
+          <ul className="mt-6 grid list-disc gap-3 pl-6 text-blue sm:grid-cols-2">
+            <li>
+              <strong>Defaults</strong> (e.g., utilities, telco, personal loans)
+            </li>
+            <li>
+              <strong>Incorrect balances or dates</strong> on paid or closed
+              accounts
+            </li>
+            <li>
+              <strong>Identity mix‑ups</strong> or suspicious activity
+            </li>
+            <li>
+              <strong>Judgments</strong> and historical listings that no longer
+              meet reporting rules
+            </li>
+            <li>
+              <strong>Simple reporting errors</strong> that slip through the
+              cracks
+            </li>
+          </ul>
+          <p className="mt-4 text-blue">
+            If any of this sounds familiar, a calm, methodical review can make a
+            real difference.
+          </p>
+        </div>
+      </section>
+      <section className="bg-gradient-to-b from-white to-blue-50">
+        <div className="mx-auto max-w-5xl px-4 py-12 lg:py-16">
+          <h2 className="text-2xl font-semibold text-blue-900">
+            Our Perth Credit Repair Process — Step by Step
+          </h2>
+          <ol className="mt-6 grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                n: 1,
+                title: "Free consultation",
+                body: "A short conversation to understand your goals and explain how credit repair works in Australia.",
+              },
+              {
+                n: 2,
+                title: "File access & review",
+                body: "We securely access your Equifax, illion, and Experian reports and highlight priority items.",
+              },
+              {
+                n: 3,
+                title: "Strategy & consent",
+                body: "We outline what we’ll dispute and why; nothing proceeds without your go‑ahead.",
+              },
+              {
+                n: 4,
+                title: "Dispute management",
+                body: "We prepare letters, evidence, and follow‑ups with bureaus and credit providers.",
+              },
+              {
+                n: 5,
+                title: "Progress updates",
+                body: "You receive clear updates and timelines. We refine the plan as results come in.",
+              },
+              {
+                n: 6,
+                title: "Rebuild guidance",
+                body: "You leave with practical habits and next steps to support future applications.",
+              },
+            ].map((s) => (
+              <li
+                key={s.n}
+                className="relative rounded-2xl border border-blue-100 bg-white p-6 shadow-sm"
+              >
+                <div className="absolute -top-3 left-6 inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white shadow-sm">
+                  <span className="text-sm font-semibold">{s.n}</span>
+                </div>
+                <h3 className="mt-3 text-lg font-semibold text-blue-900">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-blue">{s.body}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-6 text-blue">
+            Timelines vary by case, but many clients first see movement within{" "}
+            <strong>30–90 days</strong>. Complex matters can take longer, and
+            we’ll set expectations upfront.
+          </p>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-4 py-12 lg:py-16">
+          <h2 className="text-2xl font-semibold text-blue-900">
+            Benefits of Repairing Your Credit
+          </h2>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Fairer finance options",
+                body: "Avoid being held back by errors or outdated listings.",
+              },
+              {
+                title: "Less stress",
+                body: "Clarity and progress replace guesswork and worry.",
+              },
+              {
+                title: "Stronger applications",
+                body: "Better‑presented reports support future loan or rental applications.",
+              },
+            ].map((b) => (
+              <div
+                key={b.title}
+                className="rounded-2xl border border-blue-100 bg-blue-50 p-6 shadow-sm"
+              >
+                <h3 className="text-lg font-semibold text-blue-900">
+                  {b.title}
+                </h3>
+                <p className="mt-2 text-blue">{b.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-blue">
+            Imagine applying with confidence — and knowing your report reflects
+            the real story.
+          </p>
+        </div>
+      </section>
+      <section className="bg-gradient-to-b from-blue-50 to-white">
+        <div className="mx-auto max-w-5xl px-4 py-12 lg:py-16">
+          <h2 className="text-2xl font-semibold text-blue-900">
+            Frequently Asked Questions — Credit Repair Perth
+          </h2>
+
+          <div className="mt-6 space-y-6">
+            <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">
+                How long does it take?
+              </h3>
+              <p className="mt-2 text-blue">
+                Simple corrections can move quickly; others take more time
+                depending on the credit provider and the evidence required. Many
+                clients see initial progress within <strong>30–90 days</strong>.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">
+                Can you remove a default?
+              </h3>
+              <p className="mt-2 text-blue">
+                If a listing is incorrect, unfair, or non‑compliant, we’ll seek
+                a correction or removal. If it’s accurate and compliant, we
+                focus on the best available alternatives and long‑term rebuild
+                steps.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">
+                Is credit repair legal in Australia?
+              </h3>
+              <p className="mt-2 text-blue">
+                Yes. We work within Australian law, the Credit Reporting Code,
+                and guidance from the Office of the Australian Information
+                Commissioner (OAIC).
+              </p>
+            </div>
+            <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">
+                What will it cost?
+              </h3>
+              <p className="mt-2 text-blue">
+                Fees depend on the complexity of your matter. We explain costs
+                before you decide, and there’s <strong>no charge</strong> for
+                your initial consultation.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">
+                Will this guarantee loan approval?
+              </h3>
+              <p className="mt-2 text-blue">
+                No legitimate service can guarantee approvals. Our role is to
+                correct inaccuracies, present your information properly, and
+                guide you toward stronger applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-4 py-12 lg:py-16">
+          <h2 className="text-2xl font-semibold text-blue-900">
+            Talk to a Perth Credit Repair Specialist
+          </h2>
+          <div className="mt-6 rounded-2xl border border-blue-100 bg-blue-50 p-6 shadow-sm">
+            <p className="text-blue">
+              Ready to take the next step? We’d love to listen, review your
+              file, and map out a practical plan — at your pace.
+            </p>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="tel:0489265737"
+                className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 font-medium text-white shadow-sm transition hover:bg-blue-700"
+              >
+                📞 Call <span className="ml-2 font-semibold">0489 265 737</span>
+              </a>
+              <span className="text-blue">
+                💻 Or fill in the enquiry form on this page — it takes less than
+                a minute.
+              </span>
+            </div>
+            <p className="mt-3 font-medium text-blue-900">
+              <strong>Free, no‑obligation consultation.</strong> Clear options.
+              Respectful guidance.
+            </p>
+            <p className="mt-2 text-sm text-blue">
+              <em>Disclaimer:</em> This page is general information, not
+              financial advice. Outcomes vary based on the accuracy of listings,
+              available evidence, and third‑party response times.
             </p>
           </div>
         </div>
-        
-        <div className="flex items-start">
-          <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">2</span>
-          <div>
-            <p>
-              A score of 0 to 549 is regarded as &quot;below average,&quot; while 550 to 624 is considered &quot;fair&quot; by Experian.
-            </p>
-          </div>
+      </section>
+      <section className="bg-gradient-to-b from-blue-50 to-white">
+        <div className="mx-auto max-w-5xl px-4 py-12 lg:py-16">
+          <h2 className="text-2xl font-semibold text-blue-900">
+            We Serve Perth‑Wide
+          </h2>
+          <p className="mt-2 text-blue">
+            We provide credit repair services across Perth and surrounding
+            areas:
+          </p>
+
+          <ul className="mt-6 grid gap-2 sm:grid-cols-2 md:grid-cols-3">
+            {[
+              "Joondalup",
+              "Fremantle",
+              "Rockingham",
+              "Mandurah",
+              "Canning Vale",
+              "Morley",
+              "Baldivis",
+              "Midland",
+              "Armadale",
+              "Ellenbrook",
+              "Clarkson",
+              "Scarborough",
+              "Subiaco",
+              "Victoria Park",
+              "South Perth",
+              "Mount Lawley",
+              "Kwinana",
+              "Gosnells",
+              "Wanneroo",
+              "Leederville",
+              "Belmont",
+              "Applecross",
+              "Osborne Park",
+              "Nedlands",
+              "Northbridge",
+            ].map((suburb) => (
+              <li key={suburb} className="">
+                <span className="inline-block rounded-full border border-blue-200 bg-white px-3 py-1 text-sm text-blue shadow-sm">
+                  {suburb}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-blue">
+            If your suburb isn’t listed, we can still help — get in touch.
+          </p>
         </div>
-        
-        <div className="flex items-start">
-          <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">3</span>
-          <div>
-            <p>
-              A &apos;zero&apos; score is possible for Illion, 1 to 299 is deemed &apos;Low,&apos; and 300 to 499 is referred to as &apos;Room for Improvement.&apos;
-            </p>
-          </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-4 py-12 lg:py-16">
+          <h2 className="text-2xl font-semibold text-blue-900">
+            Who We Are &amp; How We Work
+          </h2>
+          <p className="mt-4 text-blue">
+            Australian Credit Solutions is an Australian‑owned team focused on
+            careful reviews, respectful communication, and transparent steps you
+            can track. Our specialists stay up to date with the Credit Reporting
+            Code and privacy rules, and we’re happy to explain anything in plain
+            English.
+          </p>
+          <p className="mt-3 text-blue">
+            Prefer email first? No problem. Want a quick call to check if it’s
+            worth proceeding? We’ll give you a straight answer.
+          </p>
         </div>
-      </div>
-    </div>
+      </section>
 
-    {/* Get Free Credit Report */}
-    <div className="mb-8">
-      <h3 className="text-xl font-semibold text-[#0668a5] mb-4">
-        Get A Free Credit Report
-      </h3>
-      <p className="mb-4">
-        Get a free credit report. You have one free report every twelve months from each bureau - Contact all three agencies with a written request as more than likely they contain different information that could be important for you to review like some utility or medical bills that creditors had defaulted on and were never brought up to date on before the agency took over those items after they lost it bond. Too many people neglect doing this and end up paying equally as much as if not more on their monthly expenses.
-      </p>
-    </div>
-
-    {/* Check For Errors */}
-    <div className="mb-8">
-      <h3 className="text-xl font-semibold text-[#0668a5] mb-4">
-        Check For Errors
-      </h3>
-      <p className="mb-4">
-        Mistakes such as account closures or false information may be caused by incorrect input of personal details, an incorrectly matched social security number, a misread handwriting signature, and even misspelled words. A simple mistake like including the letter &quot;O&quot; instead of the letter &quot;I&quot; in a person&apos;s name could deprive them or their family members from much-needed funding and considerably affect their lives without a timely credit fix in Perth.
-      </p>
-      <p>
-        Australian Credit Solutions can help people to remove mistakes from their history, which records how they handle borrowing money to meet emergencies and pay for big purchases over time. If an error is found on your record, it needs to be corrected as soon as possible.
-      </p>
-    </div>
-
-    {/* Pay Bills On Time */}
-    <div className="mb-8">
-      <h3 className="text-xl font-semibold text-[#0668a5] mb-4">
-        Paying your bills on time
-      </h3>
-      <p className="mb-4">
-        Don&apos;t pay bills late. Closely related, pay all of your monthly payments on time. Late and missed payments will show up on a credit report and lower a credit score.
-      </p>
-      <p className="mb-4">
-        Avoid opening too many cards or taking out several high-balance loans at the same time. It is likewise wise to keep the amount owed each month below 30% of what you make, which should provide enough breathing room in case finances get tight for any reason.
-      </p>
-      <p>
-        Build a history of responsible borrowing by only applying for new lines of credit when needed and paying them off gradually rather than maxing out one card after another or living beyond your means to handle things financially without going into debt again soon after cutbacks have been made to.
-      </p>
-    </div>
-
-    {/* Monitor Credit Scores */}
-    <div className="mb-8">
-      <h3 className="text-xl font-semibold text-[#0668a5] mb-4">
-        Monitor Your Credit Scores Yearly To See Where You Stand
-      </h3>
-      <p className="mb-4">
-        Regular credit checks are a smart method to keep track of what information is being reported about you. And they are integral to any credit fixing service in Perth.
-      </p>
-      <p className="mb-4">
-        The following are a handful of the most compelling reasons:
-      </p>
-      <ul className="list-disc pl-5 space-y-2 mb-4">
-        <li>Identity Theft</li>
-        <li>Credit Rating Misuse</li>
-        <li>Over-Reporting of Debts</li>
-      </ul>
-      <p className="mb-4">
-        Credit rating abuse can lead to a lower score and a higher interest rate on your loans. Over-reported debts could mean that you&apos;re going into default on obligations that are already paid off or won&apos;t affect your rating.
-      </p>
-      <p>
-        Keep a watch out for any changes on your credit reports, and contact the firm if they don&apos;t appear as expected!
-      </p>
-    </div>
-
-    {/* Unsecured Debts */}
-    <div className="mb-8">
-      <h3 className="text-xl font-semibold text-[#0668a5] mb-4">
-        Get A Handle On Any Unsecured Debts You May Have
-      </h3>
-      <p className="mb-4">
-        Take for example the case of Enzo, who owes $20k on his credit card and $3k on his car loan. This doesn&apos;t sound like too much money at first, but what if he also has two kids in primary school?
-      </p>
-      <p className="mb-4">
-        Now calculating annual living expenses looks like this:
-      </p>
-      <ul className="list-disc pl-5 space-y-1 mb-4">
-        <li>Child Care - $8000;</li>
-        <li>Electricity - $1800;</li>
-        <li>Gas - $1200;</li>
-        <li>Groceries - 3000;</li>
-        <li>Clothes - 3000;</li>
-        <li>Internet (home) - $450;</li>
-      </ul>
-      <p className="mb-4">
-        Throw in another eight months of wages for savings ($10K) and what you&apos;ve got is a disaster waiting to happen.
-      </p>
-      <p>
-        An Australian Credit Lawyer can assist you if you are having trouble making unsecured debt repayments as well as help you fix your credit rating in Perth.
-      </p>
-    </div>
-
-    {/* Loan Advice */}
-    <div className="mb-8">
-      <h3 className="text-xl font-semibold text-[#0668a5] mb-4">
-        Don&apos;t Take Out Too Many Loans At One Time
-      </h3>
-      <ul className="list-disc pl-5 space-y-2 mb-4">
-        <li>consolidate debt with low rates and fees</li>
-        <li>Get better deals for utilities like gas or electricity</li>
-        <li>Be careful about taking out loans that can&apos;t be paid back at once</li>
-      </ul>
-      <p className="mb-4">
-        Keep your balance below 50% of what is offered, such as balances on student or personal loans, car loans or mortgage.
-        For most people, it&apos;s best to keep your balance under 50%. That way, you&apos;ll stay on top of the cash flow and never overspend with credit.
-      </p>
-      <p className="mb-4">
-        If your balance gets too high, creditors might think there&apos;s something wrong with you and either increase your interest rate or lower the credit limit. They might even ask for collateral or stop issuing you new cards.
-      </p>
-      <p>
-        It can be tough to stay below 50% with an empty bank account that perpetually needs its funds replenished, but again... Australian Credit Solutions are here to help! We offer many excellent specials including plan-ahead loans so you can meet expenses in advance. Call us today! Laws are all we do!
-      </p>
-    </div>
-
-    {/* Help Section */}
-    <div className="bg-gradient-to-r from-[#0668a5] to-[#0aa6e8] text-white p-8 rounded-lg">
-      <h3 className="text-2xl font-bold mb-4">
-        How Can I Ask For Help To Fix My Credit In Perth
-      </h3>
-      <div className="space-y-4">
-        <p>
-          Why is it important to ask for help from a credit repair company? The simple answer is because credit repair companies know everything about the law and about how to change bad or negative items on your credit report. You might think that after a certain amount of time, these nasty items will disappear from your report by themselves, but they&apos;re not likely to go away on their own. In fact, many people don&apos;t realize that when you pay off an overdue account in full -- which can be done automatically through some types of loans -- the removal process doesn&apos;t always take place automatically. This is why it&apos;s so important to let an expert handle a credit fix in Perth for you. It is in their best interest for you to have a good score!
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
       <HowWorks />
       <section className="py-16 bg-gradient-to-b from-white to-blue-50 text-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
