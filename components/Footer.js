@@ -229,7 +229,7 @@ export default function Footer() {
               >
                 {isSubmitting ? "Processing..." : "Get Free Assesment"}
               </button>
-              
+
               {/* Admin fee text */}
               <p className="text-xs text-gray-500 text-center mt-2">
                 A one-off $330 admin fee applies regardless of outcome.
@@ -323,13 +323,12 @@ export default function Footer() {
             <span aria-hidden="true" className="text-gray-300">
               |
             </span>
-            <a
-              href="/Complaints.pdf"
-              download
+            <Link
+              href="/complaints-handling-policy"
               className="hover:text-blue hover:underline"
             >
               Complaints Handling Policy
-            </a>
+            </Link>
             <span aria-hidden="true" className="text-gray-300">
               |
             </span>
