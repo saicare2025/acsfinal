@@ -78,17 +78,7 @@ const nextConfig = {
         destination: '/free-credit-assessment',
         permanent: true,
       },
-      {
-        source: '/blog-details/:slug',
-        has: [
-          {
-            type: 'query',
-            key: 'id',
-          },
-        ],
-        destination: '/blog-details/:slug',
-        permanent: true,
-      },
+     
     ];
   },
 };
