@@ -29,7 +29,7 @@ export default function CourtJudgmentRemovalPage() {
         url: "https://www.australiancreditsolutions.com.au/court-judgment-removal",
         name: "Court Judgment Removal Australia | Delete Judgment from Credit Report | 98% Success Rate",
         description:
-          "Remove court judgment from credit report with Australia's specialists. Set aside unfair judgments, disputed amounts, and incorrect records.",
+          "Remove court judgment from credit report with Australia&apos;s specialists. Set aside unfair judgments, disputed amounts, and incorrect records.",
         datePublished: "2024-03-15",
         dateModified: "2024-12-15",
         inLanguage: "en-AU",
@@ -181,7 +181,7 @@ export default function CourtJudgmentRemovalPage() {
           },
           {
             "@type": "Question",
-            name: "What's the difference between removing and setting aside a judgment?",
+            name: "What&apos;s the difference between removing and setting aside a judgment?",
             acceptedAnswer: {
               "@type": "Answer",
               text: "Setting aside means getting the court to cancel the original judgment (usually requiring a new hearing). Removal means correcting credit file reporting errors or satisfied judgments."
@@ -321,7 +321,7 @@ export default function CourtJudgmentRemovalPage() {
                 Got a court judgment destroying your credit file? We remove incorrect judgments and set aside unfair court judgments. <strong>98% success rate</strong> when we take your case. Licensed specialists, <strong>No Win No Fee</strong> policy.
               </p>
               <p className="mt-4 text-base text-slate-700">
-                A court judgment on your credit report is like a financial death sentence. But many court judgments can be removed or set aside—especially if they're incorrect, unfair, or didn't follow proper legal procedures.
+                A court judgment on your credit report is like a financial death sentence. But many court judgments can be removed or set aside—especially if they&apos;re incorrect, unfair, or didn&apos;t follow proper legal procedures.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Link
@@ -351,13 +351,13 @@ export default function CourtJudgmentRemovalPage() {
       {/* Opening Section */}
       <Section title="Court judgments are the nuclear option of credit destruction">
         <p>
-          Right, let's get one thing straight – a court judgment on your credit file is absolutely devastating. We're not talking about a little late payment mark here. Court judgments are the nuclear option of credit destruction. They basically tell every lender "this person had to be taken to court to get their money back."
+          Right, let&apos;s get one thing straight – a court judgment on your credit file is absolutely devastating. We&apos;re not talking about a little late payment mark here. Court judgments are the nuclear option of credit destruction. They basically tell every lender &quot;this person had to be taken to court to get their money back.&quot;
         </p>
         <p className="mt-4">
-          But here's what gets us really fired up: heaps of court judgments on credit files shouldn't actually be there. Maybe you never got proper notice of the court hearing. Maybe the debt was already paid but the judgment never got removed. Maybe the judgment was for the wrong amount, or against the wrong person entirely. Or maybe it was a default judgment that can be set aside because you had a genuine defence.
+          But here&apos;s what gets us really fired up: heaps of court judgments on credit files shouldn&apos;t actually be there. Maybe you never got proper notice of the court hearing. Maybe the debt was already paid but the judgment never got removed. Maybe the judgment was for the wrong amount, or against the wrong person entirely. Or maybe it was a default judgment that can be set aside because you had a genuine defence.
         </p>
         <p className="mt-4">
-          Australian Credit Solutions specialises in court judgment removal across Australia. We're award-winning specialists with a 98% success rate when we take cases. The difference? We only take court judgment cases where we genuinely reckon there are grounds for removal or setting aside. If your judgment is rock-solid and properly obtained, we'll tell you straight up. But if there are procedural problems, errors, or legal grounds to challenge it—we know exactly how to get court judgments removed from credit reports.
+          Australian Credit Solutions specialises in court judgment removal across Australia. We&apos;re award-winning specialists with a 98% success rate when we take cases. The difference? We only take court judgment cases where we genuinely reckon there are grounds for removal or setting aside. If your judgment is rock-solid and properly obtained, we&apos;ll tell you straight up. But if there are procedural problems, errors, or legal grounds to challenge it—we know exactly how to get court judgments removed from credit reports.
         </p>
       </Section>
 
@@ -374,7 +374,7 @@ export default function CourtJudgmentRemovalPage() {
             {
               h: "Your Credit Score Gets Completely Destroyed",
               p:
-                "A single court judgment can drop your credit score by 150–300 points. We've seen people go from excellent credit to barely qualifying for a basic credit card overnight.",
+                "A single court judgment can drop your credit score by 150–300 points. We&apos;ve seen people go from excellent credit to barely qualifying for a basic credit card overnight.",
             },
             {
               h: "Every Lender Sees You as Toxic",
@@ -393,7 +393,7 @@ export default function CourtJudgmentRemovalPage() {
             },
             {
               h: "It Follows You for 5 Years",
-              p: "Judgments stay on your credit file for 5 years from the date they're entered, locking you out of decent finance.",
+              p: "Judgments stay on your credit file for 5 years from the date they&apos;re entered, locking you out of decent finance.",
             },
             {
               h: "Employment and Rental Applications Get Knocked Back",
@@ -403,7 +403,7 @@ export default function CourtJudgmentRemovalPage() {
             {
               h: "Business Finance Becomes Impossible",
               p:
-                "Personal court judgments affect business lending. If you're a business owner or tradie, a judgment can kill your finance options.",
+                "Personal court judgments affect business lending. If you&apos;re a business owner or tradie, a judgment can kill your finance options.",
             },
           ].map((item) => (
             <motion.li 
@@ -421,7 +421,7 @@ export default function CourtJudgmentRemovalPage() {
       {/* What We Remove */}
       <Section title="What Court Judgments We Can Actually Remove or Set Aside">
         <p className="text-slate-700">
-          <strong>Important Legal Note:</strong> We can't remove valid court judgments that were properly obtained through correct legal procedures. But loads of judgments on credit files have problems that create grounds for removal or setting aside.
+          <strong>Important Legal Note:</strong> We can&apos;t remove valid court judgments that were properly obtained through correct legal procedures. But loads of judgments on credit files have problems that create grounds for removal or setting aside.
         </p>
         <motion.div 
           variants={staggerChildren}
@@ -432,9 +432,9 @@ export default function CourtJudgmentRemovalPage() {
         >
           <Card title="Default Judgments That Can Be Set Aside" bullets={[
             "You never received proper notice of the court hearing",
-            "Court papers were sent to old addresses after you'd moved",
+            "Court papers were sent to old addresses after you&apos;d moved",
             "You were overseas or in hospital when the hearing occurred",
-            "You had a genuine defence but couldn't present it",
+            "You had a genuine defence but couldn&apos;t present it",
           ]} />
           <Card title="Procedurally Defective Judgments" bullets={[
             "Incorrect court jurisdiction for the case",
@@ -445,7 +445,7 @@ export default function CourtJudgmentRemovalPage() {
           <Card title="Incorrect Judgment Information" bullets={[
             "Wrong person named in the judgment",
             "Incorrect judgment amounts recorded",
-            "Already paid debts that weren't updated",
+            "Already paid debts that weren&apos;t updated",
             "Judgments for disputed or invalid debts",
           ]} />
           <Card title="Satisfied Judgments Not Updated" bullets={[
@@ -457,10 +457,10 @@ export default function CourtJudgmentRemovalPage() {
           <Card title="Statute of Limitations Issues" bullets={[
             "Debts older than ~6 years (most states) pursued illegally",
             "Acknowledgment of debt issues affecting limitation periods",
-            "Proper limitation defences that weren't raised",
+            "Proper limitation defences that weren&apos;t raised",
           ]} />
           <Card title="Judgments Based on Incorrect/Disputed Debts" bullets={[
-            "Identity theft cases where you weren't responsible",
+            "Identity theft cases where you weren&apos;t responsible",
             "Debts already paid to original creditors",
             "Disputed amounts pursued without resolution",
             "Incorrect charges or fees added to original debts",
@@ -524,16 +524,16 @@ export default function CourtJudgmentRemovalPage() {
           viewport={{ once: true }}
         >
           <Testimonial name="Steve from Wollongong – Tradie Who Never Got Notice">
-            "Had a court judgment for $8,500 from a supplier dispute... ACS proved I was never properly served and got the judgment set aside. Took 8 weeks and saved my business."
+            &quot;Had a court judgment for $8,500 from a supplier dispute... ACS proved I was never properly served and got the judgment set aside. Took 8 weeks and saved my business.&quot;
           </Testimonial>
           <Testimonial name="Maria from Adelaide – Mum Hit by Identity Theft">
-            "Identity theft led to a $12,000 judgment... ACS worked with their solicitor to get it set aside. Credit score jumped from 350 to 710. Home loan approved."
+            &quot;Identity theft led to a $12,000 judgment... ACS worked with their solicitor to get it set aside. Credit score jumped from 350 to 710. Home loan approved.&quot;
           </Testimonial>
           <Testimonial name="Rob from Darwin – Small Business Owner">
-            "$15,000 judgment during COVID despite having paid... ACS got it marked satisfied and removed. Business approvals started again."
+            &quot;$15,000 judgment during COVID despite having paid... ACS got it marked satisfied and removed. Business approvals started again.&quot;
           </Testimonial>
           <Testimonial name="Lisa from Hobart – Teacher Who Moved Interstate">
-            "Judgment from a telco sent to my old address... ACS proved defective service and got it set aside. Credit back to normal."
+            &quot;Judgment from a telco sent to my old address... ACS proved defective service and got it set aside. Credit back to normal.&quot;
           </Testimonial>
         </motion.div>
       </Section>
@@ -548,13 +548,13 @@ export default function CourtJudgmentRemovalPage() {
           className="mt-4 grid gap-4 sm:grid-cols-2"
         >
           {[
-            "We actually understand court judgment law – proper legal work, not just 'credit repair'.",
-            "98% success rate when we take cases – we're selective and honest.",
+            "We actually understand court judgment law – proper legal work, not just &apos;credit repair&apos;.",
+            "98% success rate when we take cases – we&apos;re selective and honest.",
             "No Win, No Fee protection – $330 admin fee, success fees only if we win.",
-            "Three years of industry awards (2022–2024) for results others can't deliver.",
+            "Three years of industry awards (2022–2024) for results others can&apos;t deliver.",
             "Licensed and regulated (ASIC ACL 532003) with professional indemnity insurance.",
             "National coverage across all Australian courts and tribunals.",
-            "We don't give up – we use layered strategies until we find the path that works.",
+            "We don&apos;t give up – we use layered strategies until we find the path that works.",
           ].map((t) => (
             <motion.li 
               key={t} 
@@ -648,7 +648,7 @@ export default function CourtJudgmentRemovalPage() {
           className="mt-2 space-y-4 text-slate-700"
         >
           {[
-            "Default judgments are common: around 80% occur because defendants didn't appear—often due to lack of proper notice.",
+            "Default judgments are common: around 80% occur because defendants didn&apos;t appear—often due to lack of proper notice.",
             "Service of process is strict: defective service can justify setting aside a judgment.",
             "Time limits exist but exceptions apply for lack of service, fraud/misrepresentation, or new evidence.",
             "You still have rights after judgment: payment arrangements, marking satisfied judgments as paid, and challenging incorrect amounts.",
@@ -947,7 +947,7 @@ const faqData = [
     a: "No, only judgments with legal grounds for challenge can be removed or set aside. Valid judgments obtained through proper procedures will stay on your file for 5 years.",
   },
   {
-    q: "What's the difference between removing and setting aside a judgment?",
+    q: "What&apos;s the difference between removing and setting aside a judgment?",
     a: "Setting aside cancels the original judgment via a new court application/hearing. Removal usually means getting it off your credit file when reporting is wrong or marked satisfied.",
   },
   {
@@ -963,8 +963,8 @@ const faqData = [
     a: "Possibly, if there were procedural problems with how the judgment was obtained — for example, defective service or jurisdictional errors.",
   },
   {
-    q: "What if I've already paid the debt but the judgment is still showing?",
-    a: "Satisfied judgments should be marked 'satisfied'. If not, we can get the court records and credit files corrected.",
+    q: "What if I&apos;ve already paid the debt but the judgment is still showing?",
+    a: "Satisfied judgments should be marked &apos;satisfied&apos;. If not, we can get the court records and credit files corrected.",
   },
   {
     q: "How long does court judgment removal take?",
