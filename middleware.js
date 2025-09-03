@@ -26,6 +26,12 @@ export function middleware(request) {
       return NextResponse.redirect(clean, 308);
     }
   }
+   if (decodedPath === '/get-car-loan') {
+    const dest = url.clone();
+    dest.pathname = '/';
+    dest.search = '';
+    return NextResponse.redirect(dest, 308);
+  }
 
   return NextResponse.next();
 }
