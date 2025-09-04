@@ -47,11 +47,32 @@ export default function RootLayout({ children }) {
           crossOrigin=""
         />
 
-        {/* Consent Mode v2 (recommended). Remove if you don't use a consent banner. */}
+        {/* ProductReview settings MUST be defined before the loader */}
+        <Script
+          id="productreview-settings"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.__productReviewSettings = {
+                ...(window.__productReviewSettings || {}),
+                brandId: '407543ca-1287-43ab-a66b-5f78dfd94a6a'
+              };
+            `,
+          }}
+        />
+        {/* ProductReview loader (no event handlers to keep this SSR-safe) */}
+        <Script
+          id="productreview-loader"
+          src="https://cdn.productreview.com.au/assets/widgets/loader.js"
+          async
+          strategy="afterInteractive"
+        />
+
+        {/* Consent Mode v2 defaults */}
         <Script id="consent-defaults" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){dataLayer.push(arguments);} 
             gtag('consent', 'default', {
               ad_user_data: 'denied',
               ad_personalization: 'denied',
@@ -62,7 +83,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* GA4: load lazily; do not auto-send page_view */}
+        {/* GA4 (lazy, no automatic page_view) */}
         {GA_ID && (
           <>
             <Script
@@ -76,7 +97,7 @@ export default function RootLayout({ children }) {
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
+                  function gtag(){dataLayer.push(arguments);} 
                   gtag('js', new Date());
                   gtag('config', '${GA_ID}', { send_page_view: false });
                 `,
@@ -85,7 +106,7 @@ export default function RootLayout({ children }) {
           </>
         )}
 
-        {/* TikTok: defer to browser idle to avoid blocking interactivity */}
+        {/* TikTok (deferred without passing handlers) */}
         {TIKTOK_ID && (
           <Script id="tiktok-deferred" strategy="lazyOnload">
             {`
@@ -117,25 +138,8 @@ export default function RootLayout({ children }) {
             `}
           </Script>
         )}
-        {/* --- ProductReview widget --- */}
-        <Script id="pr-settings" strategy="afterInteractive">
-          {`
-            window.__productReviewSettings = {
-              brandId: '407543ca-1287-43ab-a66b-5f78dfd94a6a'
-            };
-          `}
-        </Script>
-
-        {/* ProductReview loader */}
-        <Script
-          id="pr-loader"
-          src="https://cdn.productreview.com.au/assets/widgets/loader.js"
-          strategy="afterInteractive"
-          async
-        />
       </head>
       <body className={inter.className}>
-        {/* Single pageview per route */}
         <AnalyticsRouteTracker />
         {children}
         <TawkDesktopOnly />
