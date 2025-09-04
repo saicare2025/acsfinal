@@ -1,10 +1,47 @@
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+"use client";
+import React, { useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import arrowIcon from "../app/assets/arrow.png";
 
 const FooterForm = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // ---- Parse UTM params from URL (normalized to: source, medium, campaign, term, content)
+  const utm = useMemo(() => {
+    const keys = [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "source",
+      "medium",
+      "campaign",
+      "term",
+      "content",
+    ];
+    const o = {};
+    keys.forEach((k) => {
+      const v = searchParams.get(k);
+      if (v) o[k.replace(/^utm_/, "")] = v;
+    });
+    return o;
+  }, [searchParams]);
+
+  // ---- Build a primary source tag from UTM
+  const pickSourceTag = (u = {}) => {
+    const src = (u.source || "site").toLowerCase();
+    if (["google", "adwords", "ads"].includes(src)) return "src:google";
+    if (["facebook", "fb", "meta"].includes(src)) return "src:facebook";
+    if (["instagram", "ig"].includes(src)) return "src:instagram";
+    if (["tiktok", "tt"].includes(src)) return "src:tiktok";
+    if (["bing", "microsoft"].includes(src)) return "src:bing";
+    if (["referral", "partner"].includes(src)) return "src:referral";
+    return `src:${src || "site"}`;
+  };
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -34,46 +71,67 @@ const FooterForm = () => {
     return true;
   };
 
+  // ---- Robust reader for JSON or text error payloads
+  const safeRead = async (res) => {
+    const ct = res.headers.get("content-type") || "";
+    if (ct.includes("application/json")) return await res.json();
+    const text = await res.text();
+    return { ok: false, error: text };
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
     setIsSubmitting(true);
 
     try {
+      // Tags from UTM
+      const primary = pickSourceTag(utm);
+      const tags = [primary];
+      if (utm.campaign) tags.push(`cmp:${utm.campaign}`);
+      if (utm.medium) tags.push(`med:${utm.medium}`);
+      if (utm.term) tags.push(`term:${utm.term}`);
+
+      // Split full name into first/last (best-effort)
+      const parts = formData.fullName.trim().split(/\s+/);
+      const firstName = parts.shift() || "";
+      const lastName = parts.join(" ");
+
       const payload = {
-        name: formData.fullName.trim(),
-        email: formData.email.trim(),
+        firstName,
+        lastName,
+        email: (formData.email || "").trim(),
         phone: formData.phone,
+        tags,
+        // Add customFields here if you later collect them in this same form.
       };
 
-      const response = await fetch("https://rest.gohighlevel.com/v1/contacts/", {
+      const res = await fetch("/api/ghl/contacts", {
         method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_GHL_API_KEY}`,
-          Version: "2021-07-28",
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
-      const result = await response.json();
+      const result = await safeRead(res);
       console.log("Full API Response:", result);
 
-      if (!response.ok) {
-        throw new Error(result.message || "GHL API error");
+      if (!res.ok || result?.ok === false) {
+        const msg =
+          result?.details ||
+          result?.error ||
+          result?.message ||
+          `Request failed (${res.status})`;
+        throw new Error(msg);
       }
 
-      const contactId = result.id || result.contact?.id || result.data?.id;
-      if (!contactId) {
-        console.error("Unexpected API response format:", result);
+      const contactId = result?.contact?.id || result?.id || result?.data?.id;
+      if (!contactId)
         throw new Error("No contact ID received. Check console for details.");
-      }
 
-      router.push("/booking-confirmation");
+      router.push("/meeting-schedule");
     } catch (error) {
       console.error("Submission failed:", error);
-      alert(`Error: ${error.message}`);
+      alert(`Error: ${error?.message || "Submission failed"}`);
     } finally {
       setIsSubmitting(false);
     }
@@ -92,10 +150,6 @@ const FooterForm = () => {
             <span className="font-bold text-blue"><br></br>no win no fee.</span>
           </p>
         </div>
-      
-       
-
-       
       </div>
 
       {/* Form */}

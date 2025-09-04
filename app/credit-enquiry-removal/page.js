@@ -7,6 +7,11 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 import FooterForm from "@/components/FooterForm";
+import Image from "next/image";
+
+// Decorative arrows (match the court-judgment-removal pattern)
+import ArrowIcon from "../assets/arrow.png";
+import ArrowIconM from "../assets/arrowm.png";
 
 // Animation variants
 const fadeIn = {
@@ -282,13 +287,15 @@ export default function CreditEnquiryRemovalPage() {
               "@type": "ListItem",
               position: 2,
               name: "Credit Repair Services",
-              item: "https://www.australiancreditsolutions.com.au/credit-repair-australia",
+              item:
+                "https://www.australiancreditsolutions.com.au/credit-repair-australia",
             },
             {
               "@type": "ListItem",
               position: 3,
               name: "Credit Enquiry Removal",
-              item: "https://www.australiancreditsolutions.com.au/credit-enquiry-removal",
+              item:
+                "https://www.australiancreditsolutions.com.au/credit-enquiry-removal",
             },
           ],
         },
@@ -408,64 +415,110 @@ export default function CreditEnquiryRemovalPage() {
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-slate-900">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-100/30 to-blue-200/20 -z-10" />
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:py-24">
-          <div className="flex items-center gap-10">
-            <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-              <h1 className="text-3xl font-extrabold tracking-tight text-gray-800 sm:text-4xl lg:text-5xl">
-                Remove Credit Enquiries Fast{" "}
-                <span className="text-blue">
-                  | Australia&apos;s Leading Enquiry Removal Specialists
+      {/* Hero Section (pattern-matched to CourtJudgmentRemovalPage) */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center lg:gap-12 lg:flex-row lg:items-start">
+            {/* Left Content */}
+            <div className="w-full lg:w-2/3">
+              <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                Remove Credit Enquiries Fast
+                <span className="block mt-2 text-blue">
+                  Australia&apos;s Leading Enquiry Removal Specialists
                 </span>
               </h1>
-              <p className="mt-4 text-lg leading-relaxed text-slate-700">
-                Too many credit enquiries killing your score? We remove
-                unauthorised, duplicate and incorrect enquiries professionally.{" "}
-                <strong>98% success rate</strong> when we take your case.
-                Licensed specialists, <strong>No Win No Fee</strong> policy.
-              </p>
-              <p className="mt-4 text-base text-slate-700">
-                Multiple enquiries can slash your score by 100+ points and block
-                approvals. Our award-winning team removes bad enquiries across
-                Equifax, Experian and Illion — often within weeks, not years.
-              </p>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
+
+              <div className="mt-6 space-y-4">
+                <p className="text-lg leading-relaxed text-gray-700">
+                  Too many credit enquiries killing your score? We remove
+                  unauthorised, duplicate and incorrect enquiries professionally.{" "}
+                  <strong className="font-semibold text-blue">98% success rate</strong>{" "}
+                  when we take your case. Licensed specialists,{" "}
+                  <strong className="font-semibold text-blue">No Win No Fee</strong>{" "}
+                  policy.
+                </p>
+
+                <p className="text-base text-gray-600">
+                  Multiple enquiries can slash your score by 100+ points and
+                  block approvals. Our award-winning team removes bad enquiries
+                  across Equifax, Experian and Illion — often within weeks, not
+                  years.
+                </p>
+              </div>
+
+              {/* CTAs + decorative arrows */}
+              <div
+                className="mt-8 relative flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
+                role="group"
+                aria-label="Primary actions"
+              >
                 <Link
                   href="/free-credit-assessment"
-                  className="inline-flex items-center rounded-xl bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition-all hover:bg-blue hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                   Remove My Credit Enquiries Now
                 </Link>
+
                 <a
                   href="tel:+61489265737"
-                  className="inline-flex items-center rounded-xl border-2 border-blue px-6 py-3 text-base font-semibold text-blue transition hover:bg-blue hover:text-white"
+                  aria-label="Call Australian Credit Solutions on 0489 265 737"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border-2 border-blue px-6 py-3 text-base font-semibold text-blue transition hover:bg-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                   Call 0489 265 737
                 </a>
+
+                {/* Desktop/tablet arrow */}
+                <div className="pointer-events-none hidden lg:block" aria-hidden="true">
+                  <Image
+                    src={ArrowIcon}
+                    alt=""
+                    width={220}
+                    height={70}
+                    loading="lazy"
+                    className="select-none"
+                    priority={false}
+                  />
+                </div>
+                {/* Mobile arrow */}
+                <div className="pointer-events-none lg:hidden flex justify-center" aria-hidden="true">
+                  <Image
+                    src={ArrowIconM}
+                    alt=""
+                    width={200}
+                    height={120}
+                    loading="lazy"
+                    className="select-none"
+                    priority={false}
+                  />
+                </div>
               </div>
-              <ul className="mt-6 flex flex-wrap gap-4 text-sm text-slate-600">
-                <li className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-blue" />
+            </div>
+
+            {/* Right Form */}
+            <div className="w-full lg:w-1/3 relative">
+              <FooterForm
+                heading="Get My Free Enquiry Assessment"
+                subheading="Fast & Confidential"
+                paragraph="Find out if your credit enquiries can be removed — free, fast, and confidential."
+              />
+              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
+                <li className="flex items-center">
+                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
                   98% success rate
                 </li>
-                <li className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-blue" />
+                <li className="flex items-center">
+                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
                   No Win No Fee
                 </li>
-                <li className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-blue" />
+                <li className="flex items-center">
+                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
                   Licensed & insured (ASIC ACL 532003)
                 </li>
               </ul>
-            </motion.div>
-
-            {/* FooterForm with direct props */}
-            <FooterForm
-              heading="Get My Free Enquiry Assessment"
-         
-            />
+            </div>
           </div>
         </div>
       </section>
@@ -479,13 +532,13 @@ export default function CreditEnquiryRemovalPage() {
         </p>
         <p className="mt-4">
           But here’s the truth: many enquiries shouldn’t be on your file at all.
-          Unauthorised, duplicate, or consent‑less checks that breach the
+          Unauthorised, duplicate, or consent-less checks that breach the
           Privacy Act can be removed. Cleaning them up often boosts scores
           dramatically.
         </p>
         <p className="mt-4">
           Australian Credit Solutions specialises in enquiry removal nationwide.
-          We’re award‑winning with a <strong>98% success rate</strong> when we
+          We’re award-winning with a <strong>98% success rate</strong> when we
           accept cases. We only take matters when we’re confident of success —
           and we’ll tell you upfront if we can’t help.
         </p>
@@ -549,7 +602,7 @@ export default function CreditEnquiryRemovalPage() {
               "Employers checking credit without permission",
               "Identity theft applications",
               "Marketing enquiries you never applied for",
-              "Ex‑partners applying using your details",
+              "Ex-partners applying using your details",
             ]}
           />
           <Card
@@ -575,7 +628,7 @@ export default function CreditEnquiryRemovalPage() {
             bullets={[
               "No legitimate business need",
               "Retained beyond legal timeframes",
-              "Cross‑referencing without authorisation",
+              "Cross-referencing without authorisation",
               "Sharing enquiry data without consent",
             ]}
           />
@@ -588,7 +641,7 @@ export default function CreditEnquiryRemovalPage() {
             ]}
           />
           <Card
-            title="Post‑settlement enquiries"
+            title="Post-settlement enquiries"
             bullets={[
               "Mortgage checks after settlement",
               "Credit card checks after cancellation",
@@ -622,7 +675,7 @@ export default function CreditEnquiryRemovalPage() {
             {
               title: "Professional challenge process",
               description:
-                "Legally structured letters with evidence, direct provider engagement, escalation protocols and rigorous follow‑ups.",
+                "Legally structured letters with evidence, direct provider engagement, escalation protocols and rigorous follow-ups.",
             },
             {
               title: "Monitoring & score recovery",
@@ -692,7 +745,7 @@ export default function CreditEnquiryRemovalPage() {
             "No Win No Fee — $330 admin fee; success fees only if we win.",
             "Three consecutive industry awards (2022–2024).",
             "Licensed and regulated (ASIC ACL 532003) with professional indemnity insurance.",
-            "Australia‑wide service; same standards from Darwin to Hobart.",
+            "Australia-wide service; same standards from Darwin to Hobart.",
             "Direct expert communication — no offshore call centres.",
             "Fast turnarounds — unauthorised enquiries often removed quickly once challenged properly.",
           ].map((t) => (
@@ -732,9 +785,9 @@ export default function CreditEnquiryRemovalPage() {
           <PriceCard
             name="Express Enquiry Removal — Urgent"
             timeline="1–2 weeks typically"
-            perfectFor="Home loan pre‑approvals, urgent finance"
+            perfectFor="Home loan pre-approvals, urgent finance"
             includes={[
-              "Same‑day assessment",
+              "Same-day assessment",
               "Priority processing",
               "Daily updates",
             ]}
@@ -784,7 +837,7 @@ export default function CreditEnquiryRemovalPage() {
         >
           {[
             "Credit scores often improve within 30–60 days.",
-            "Automated approval systems stop auto‑declining you.",
+            "Automated approval systems stop auto-declining you.",
             "Better interest rates and access to prime products.",
             "Home, car, personal and business finance become accessible again.",
             "Broker relationships restored; more competitive options open up.",
@@ -877,136 +930,6 @@ export default function CreditEnquiryRemovalPage() {
             </motion.details>
           ))}
         </motion.div>
-      </Section>
-
-      {/* Hidden Costs / Quantifying Impact */}
-      <Section title="The hidden cost of keeping bad enquiries">
-        <div className="mt-2 grid gap-6 lg:grid-cols-2">
-          <div className="space-y-4 text-slate-700">
-            <h3 className="font-semibold text-blue">
-              Quantifying the financial impact
-            </h3>
-            {[
-              "Home loans: best ~6.2% vs premium ~7.5%+; on $500k, the gap can cost ~$162,500 over 30 years.",
-              "Credit cards: clean history → premium rewards & higher limits; enquiry overload → basic cards, low limits, higher fees.",
-              "Car finance: good enquiry profile ~5.9% vs dealer finance 12.9%+; +$6,800 interest on $40k over 5 years.",
-              "Employment & rentals: financial roles and competitive rentals may screen out high‑enquiry applicants.",
-              "Business finance: clean personal enquiries help unlock loans, equipment finance and trade credit.",
-            ].map((text, i) => (
-              <p key={i} className="flex items-start gap-2">
-                <svg
-                  className="h-5 w-5 shrink-0 text-blue mt-0.5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                  />
-                </svg>
-                {text}
-              </p>
-            ))}
-          </div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeIn}
-            viewport={{ once: true }}
-            className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-lg"
-          >
-            <h3 className="text-lg font-semibold text-blue">
-              Your two choices
-            </h3>
-            <ul className="mt-3 space-y-3 text-slate-700">
-              <li className="flex items-start gap-2">
-                <svg
-                  className="h-5 w-5 shrink-0 text-red-500 mt-0.5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-                Wait up to 5 years while paying premium rates and facing
-                rejections.
-              </li>
-              <li className="flex items-start gap-2">
-                <svg
-                  className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                Fix it professionally in weeks with experts who do this every
-                day.
-              </li>
-            </ul>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/free-credit-assessment"
-                className="rounded-lg bg-blue px-5 py-3 font-semibold text-white hover:bg-blue transition-colors"
-              >
-                Start My Assessment
-              </Link>
-              <a
-                href="tel:+61489265737"
-                className="rounded-lg border-2 border-blue px-5 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
-              >
-                Call 0489 265 737
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </Section>
-
-      {/* Getting Started CTA */}
-      <Section title="Getting started: your free enquiry assessment">
-        <ol className="mt-4 space-y-3 text-slate-700">
-          {[
-            "Free phone consultation (10 minutes) — call 0489 265 737.",
-            "Complete credit file review — detailed audit across all three bureaus.",
-            "Removal strategy presentation — which enquiries can be removed and timelines.",
-            "Professional challenge process — we handle everything and keep you updated.",
-            "Results delivery & score monitoring — protect against future unauthorised access.",
-          ].map((step, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
-                {index + 1}
-              </span>
-              {step}
-            </li>
-          ))}
-        </ol>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/free-credit-assessment"
-            className="rounded-lg bg-blue px-6 py-3 font-semibold text-white hover:bg-blue transition-colors"
-          >
-            Book My Free Assessment
-          </Link>
-          <a
-            href="tel:+61489265737"
-            className="rounded-lg border-2 border-blue px-6 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
-          >
-            Call 0489 265 737
-          </a>
-        </div>
       </Section>
 
       {/* Footer trust bar */}
@@ -1184,11 +1107,11 @@ const faqData = [
   },
   {
     q: "Will removing enquiries improve my score immediately?",
-    a: "Improvements typically appear within 30–60 days of removal. The lift depends on how many are removed and your overall profile.",
+    a: "Score improvements typically appear within 30–60 days of removal. The lift depends on how many are removed and your overall profile.",
   },
   {
-    q: "Can I remove enquiries myself?",
-    a: "You can try, but providers and bureaus receive thousands of DIY letters; most fail due to procedural errors or lack of evidence. We structure legal challenges with proof.",
+    q: "Can I remove credit enquiries myself?",
+    a: "You can try, but providers and bureaus receive thousands of DIY dispute letters; most fail due to procedural errors or lack of evidence. We structure legal challenges with proof.",
   },
   {
     q: "What if the enquiry was legitimate?",
