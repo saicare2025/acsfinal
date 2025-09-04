@@ -31,7 +31,7 @@ export default function CreditEnquiryRemovalPage() {
           url: "https://www.australiancreditsolutions.com.au/credit-enquiry-removal",
           name: "Credit Enquiry Removal Australia | Remove Unauthorised Credit Checks | 98% Success Rate",
           description:
-            "Remove unauthorised, duplicate and incorrect credit enquiries fast with Australia's specialists. Stop credit enquiries destroying your score and loan approvals.",
+            "Remove unauthorised, duplicate and incorrect credit enquiries fast with Australia&apos;s specialists. Stop credit enquiries destroying your score and loan approvals.",
           datePublished: "2024-03-15",
           dateModified: "2025-09-04",
           inLanguage: "en-AU",
@@ -230,7 +230,7 @@ export default function CreditEnquiryRemovalPage() {
               name: "What if the enquiry was legitimate but hurt my score?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Legitimate enquiries made with proper consent usually can't be removed. However, many 'legitimate' enquiries have flaws that make them removable.",
+                text: "Legitimate enquiries made with proper consent usually can&apos;t be removed. However, many &apos;legitimate&apos; enquiries have flaws that make them removable.",
               },
             },
             {
@@ -417,7 +417,7 @@ export default function CreditEnquiryRemovalPage() {
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-800 sm:text-4xl lg:text-5xl">
                 Remove Credit Enquiries Fast{" "}
                 <span className="text-blue">
-                  | Australia's Leading Enquiry Removal Specialists
+                  | Australia&apos;s Leading Enquiry Removal Specialists
                 </span>
               </h1>
               <p className="mt-4 text-lg leading-relaxed text-slate-700">
@@ -474,8 +474,8 @@ export default function CreditEnquiryRemovalPage() {
       <Section title="Your credit enquiries are quietly destroying your financial future">
         <p>
           Every time someone checks your credit — whether you applied or not —
-          it gets recorded on your file. Too many enquiries signal "credit
-          hungry" behaviour to lenders, leading to instant rejections.
+          it gets recorded on your file. Too many enquiries signal &quot;credit
+          hungry&quot; behaviour to lenders, leading to instant rejections.
         </p>
         <p className="mt-4">
           But here’s the truth: many enquiries shouldn’t be on your file at all.
@@ -656,23 +656,23 @@ export default function CreditEnquiryRemovalPage() {
           viewport={{ once: true }}
         >
           <Testimonial name="James — Melbourne IT Manager">
-            "Had 23 credit enquiries from a broker who shopped my home loan
+            &quot;Had 23 credit enquiries from a broker who shopped my home loan
             everywhere. ACS removed 19 in 5 weeks. Score +127 points; home loan
-            approved at 0.3% below standard."
+            approved at 0.3% below standard.&quot;
           </Testimonial>
           <Testimonial name="Rebecca — Brisbane Marketing Executive">
-            "Identity theft left 8 unauthorised enquiries. Police report alone
+            &quot;Identity theft left 8 unauthorised enquiries. Police report alone
             wasn’t enough. ACS got all 8 wiped in 3 weeks. Score jumped 420 →
-            720."
+            720.&quot;
           </Testimonial>
           <Testimonial name="Michael — Perth Tradie">
-            "Lender ran my credit 4 times by mistake. Other lenders assumed
+            &quot;Lender ran my credit 4 times by mistake. Other lenders assumed
             desperation. ACS removed duplicates in 10 days; equipment finance
-            approved."
+            approved.&quot;
           </Testimonial>
           <Testimonial name="Sarah — Sydney Teacher">
-            "Car dealership ran 6 separate enquiries for quotes. ACS removed 5
-            of 6. Score improved by 89 points in a month."
+            &quot;Car dealership ran 6 separate enquiries for quotes. ACS removed 5
+            of 6. Score improved by 89 points in a month.&quot;
           </Testimonial>
         </motion.div>
       </Section>
@@ -814,7 +814,7 @@ export default function CreditEnquiryRemovalPage() {
           {[
             "Providers must have clear, informed, documented consent, limited to the product being assessed.",
             "You can challenge incorrect, unauthorised or improperly recorded enquiries.",
-            "Bureaus must respond within 30 days (or 7 days if you're seeking credit within 60 days).",
+            "Bureaus must respond within 30 days (or 7 days if you&apos;re seeking credit within 60 days).",
             "If you suffered financial loss from unauthorised enquiries, you may be entitled to compensation.",
             "Escalate unresolved disputes to AFCA at no cost.",
           ].map((text, index) => (
