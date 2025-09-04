@@ -99,7 +99,7 @@ export default function HowWeHelp() {
       <div className="mx-auto max-w-6xl px-4">
         {/* Top pill */}
         <div className="mx-auto w-fit rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-teal-700 shadow-sm">
-          Yesterday's Mistakes. Corrected Today.
+          Yesterday&apos;s Mistakes. Corrected Today.
         </div>
 
         {/* Heading */}
@@ -109,7 +109,7 @@ export default function HowWeHelp() {
 
         {/* Subheading */}
         <p className="mx-auto mt-4 max-w-3xl text-center text-lg text-zinc-600">
-          We're a credit repair agency that can help you:
+          We&apos;re a credit repair agency that can help you:
         </p>
 
         {/* Cards */}
