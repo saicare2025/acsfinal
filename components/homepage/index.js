@@ -8,22 +8,24 @@ import CTASection from "./CTA";
 import HomeClientSections from "./HomeClientSections";
 import CreditRepairSection from "./CreditRepair";
 import CreditRepairProcess from "./CreditRepairProcess.js";
-import PremiumTestimonialCarousel2 from "./Testmonials";
-
-
-
+import ProductReviewWidget from "./TestmonialProduct"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
       <HeroSection />
       <TrustBadge />
-      <PremiumTestimonialCarousel2/>
+      <ProductReviewWidget
+        // brandId can be overridden if needed:
+        // brandId="407543ca-1287-43ab-a66b-5f78dfd94a6a"
+        className="rounded-2xl border p-4"
+        placeholder="Fetching verified reviews…"
+      />
       <WhyChooseUs />
       <HelpSection />
       <CompanyCarousel />
       <CreditRepairSection />
-      <CreditRepairProcess/>
+      <CreditRepairProcess />
       <HomeClientSections />
     </main>
   );
