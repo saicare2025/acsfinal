@@ -144,7 +144,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <a
               href="https://www.facebook.com/australiancreditsolutions"
               className="hover:text-blue-200"
@@ -194,7 +194,7 @@ export default function Header() {
             >
               <TikTokIcon className="w-4 h-4" />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -6,364 +6,541 @@ import Header from "@/components/Header";
 import Link from "next/link";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
-import CreditAssessmentForm from "@/components/homepage/HeroForm";
+import FooterForm from "@/components/FooterForm";
+import ArrowIcon from "../assets/arrow.png";
+import ArrowIconM from "../assets/arrowm.png";
+
+import Image from "next/image";
 
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 const staggerChildren = {
-  visible: { transition: { staggerChildren: 0.1 } }
+  visible: { transition: { staggerChildren: 0.1 } },
 };
 
 export default function CourtJudgmentRemovalPage() {
   // ===== JSON-LD (previous @graph version) =====
-  const jsonLd = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://www.australiancreditsolutions.com.au/court-judgment-removal",
-        url: "https://www.australiancreditsolutions.com.au/court-judgment-removal",
-        name: "Court Judgment Removal Australia | Delete Judgment from Credit Report | 98% Success Rate",
-        description:
-          "Remove court judgment from credit report with Australia&apos;s specialists. Set aside unfair judgments, disputed amounts, and incorrect records.",
-        datePublished: "2024-03-15",
-        dateModified: "2024-12-15",
-        inLanguage: "en-AU",
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://www.australiancreditsolutions.com.au/#website",
-          name: "Australian Credit Solutions",
-          url: "https://www.australiancreditsolutions.com.au"
-        },
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          "@id": "https://www.australiancreditsolutions.com.au/court-judgment-removal#breadcrumb"
-        },
-        about: {
-          "@type": "Thing",
-          name: "Court Judgment Removal Services",
-          description: "Professional service to remove court judgments from Australian credit files and set aside unfair judgments."
-        },
-        mainEntity: {
-          "@type": "Service",
-          "@id": "https://www.australiancreditsolutions.com.au/court-judgment-removal#service"
-        }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.australiancreditsolutions.com.au/#organization",
-        name: "Australian Credit Solutions",
-        legalName: "Australian Credit Solutions Pty Ltd",
-        url: "https://www.australiancreditsolutions.com.au",
-        logo: "https://www.australiancreditsolutions.com.au/images/acs-logo.png",
-        image: "https://www.australiancreditsolutions.com.au/images/acs-office.jpg",
-        description:
-          "Award-winning Australian court judgment removal specialists helping Australians set aside unfair judgments and restore credit.",
-        telephone: "0489265737",
-        email: "help@australiancreditsolutions.com.au",
-        address: {
-          "@type": "PostalAddress",
-          addressCountry: "AU",
-          addressRegion: "Australia"
-        },
-        sameAs: [
-          "https://www.productreview.com.au/listings/australian-credit-solutions"
-        ],
-        hasCredential: {
-          "@type": "EducationalOccupationalCredential",
-          credentialCategory: "ASIC Australian Credit License",
-          identifier: "532003",
-          recognizedBy: {
-            "@type": "Organization",
-            name: "Australian Securities and Investments Commission",
-            alternateName: "ASIC"
-          }
-        },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.9",
-          reviewCount: "855",
-          bestRating: "5",
-          worstRating: "1"
-        },
-        award: [
-          {
-            "@type": "Award",
-            name: "Industry Excellence Award 2024",
-            description: "Recognized for outstanding court judgment removal services and legal expertise",
-            dateReceived: "2024-01-15"
+  const jsonLd = useMemo(
+    () => ({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id":
+            "https://www.australiancreditsolutions.com.au/court-judgment-removal",
+          url: "https://www.australiancreditsolutions.com.au/court-judgment-removal",
+          name: "Court Judgment Removal Australia | Delete Judgment from Credit Report | 98% Success Rate",
+          description:
+            "Remove court judgment from credit report with Australia&apos;s specialists. Set aside unfair judgments, disputed amounts, and incorrect records.",
+          datePublished: "2024-03-15",
+          dateModified: "2024-12-15",
+          inLanguage: "en-AU",
+          isPartOf: {
+            "@type": "WebSite",
+            "@id": "https://www.australiancreditsolutions.com.au/#website",
+            name: "Australian Credit Solutions",
+            url: "https://www.australiancreditsolutions.com.au",
           },
-          {
-            "@type": "Award",
-            name: "Industry Excellence Award 2023",
-            description: "Award for exceptional results in court judgment disputes and removal",
-            dateReceived: "2023-01-15"
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            "@id":
+              "https://www.australiancreditsolutions.com.au/court-judgment-removal#breadcrumb",
           },
-          {
-            "@type": "Award",
-            name: "Industry Excellence Award 2022",
-            description: "Recognition for innovative court judgment challenge methodologies",
-            dateReceived: "2022-01-15"
-          }
-        ]
-      },
-      {
-        "@type": "Service",
-        "@id": "https://www.australiancreditsolutions.com.au/court-judgment-removal#service",
-        name: "Court Judgment Removal Services Australia",
-        description:
-          "Professional court judgment removal services to set aside unfair judgments and remove incorrect court judgments from credit files.",
-        provider: {
+          about: {
+            "@type": "Thing",
+            name: "Court Judgment Removal Services",
+            description:
+              "Professional service to remove court judgments from Australian credit files and set aside unfair judgments.",
+          },
+          mainEntity: {
+            "@type": "Service",
+            "@id":
+              "https://www.australiancreditsolutions.com.au/court-judgment-removal#service",
+          },
+        },
+        {
           "@type": "Organization",
-          "@id": "https://www.australiancreditsolutions.com.au/#organization"
+          "@id": "https://www.australiancreditsolutions.com.au/#organization",
+          name: "Australian Credit Solutions",
+          legalName: "Australian Credit Solutions Pty Ltd",
+          url: "https://www.australiancreditsolutions.com.au",
+          logo: "https://www.australiancreditsolutions.com.au/images/acs-logo.png",
+          image:
+            "https://www.australiancreditsolutions.com.au/images/acs-office.jpg",
+          description:
+            "Award-winning Australian court judgment removal specialists helping Australians set aside unfair judgments and restore credit.",
+          telephone: "0489265737",
+          email: "help@australiancreditsolutions.com.au",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "AU",
+            addressRegion: "Australia",
+          },
+          sameAs: [
+            "https://www.productreview.com.au/listings/australian-credit-solutions",
+          ],
+          hasCredential: {
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: "ASIC Australian Credit License",
+            identifier: "532003",
+            recognizedBy: {
+              "@type": "Organization",
+              name: "Australian Securities and Investments Commission",
+              alternateName: "ASIC",
+            },
+          },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.9",
+            reviewCount: "855",
+            bestRating: "5",
+            worstRating: "1",
+          },
+          award: [
+            {
+              "@type": "Award",
+              name: "Industry Excellence Award 2024",
+              description:
+                "Recognized for outstanding court judgment removal services and legal expertise",
+              dateReceived: "2024-01-15",
+            },
+            {
+              "@type": "Award",
+              name: "Industry Excellence Award 2023",
+              description:
+                "Award for exceptional results in court judgment disputes and removal",
+              dateReceived: "2023-01-15",
+            },
+            {
+              "@type": "Award",
+              name: "Industry Excellence Award 2022",
+              description:
+                "Recognition for innovative court judgment challenge methodologies",
+              dateReceived: "2022-01-15",
+            },
+          ],
         },
-        areaServed: { "@type": "Country", name: "Australia" },
-        serviceType: "Court Judgment Removal",
-        category: "Legal Financial Services",
-        offers: [
-          {
-            "@type": "Offer",
-            name: "Emergency Judgment Removal – Critical Finance Cases",
-            description: "Expedited court applications for urgent finance situations. Timeline: 3–6 weeks typically.",
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              price: "1650",
-              priceCurrency: "AUD",
-              description: "Includes $330 administration fee"
-            }
+        {
+          "@type": "Service",
+          "@id":
+            "https://www.australiancreditsolutions.com.au/court-judgment-removal#service",
+          name: "Court Judgment Removal Services Australia",
+          description:
+            "Professional court judgment removal services to set aside unfair judgments and remove incorrect court judgments from credit files.",
+          provider: {
+            "@type": "Organization",
+            "@id": "https://www.australiancreditsolutions.com.au/#organization",
           },
-          {
-            "@type": "Offer",
-            name: "Standard Judgment Challenge – Comprehensive Approach",
-            description: "Full legal assessment and court applications for complex cases. Timeline: 6–12 weeks typically.",
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              price: "1100",
-              priceCurrency: "AUD",
-              description: "Includes $330 administration fee"
-            }
+          areaServed: { "@type": "Country", name: "Australia" },
+          serviceType: "Court Judgment Removal",
+          category: "Legal Financial Services",
+          offers: [
+            {
+              "@type": "Offer",
+              name: "Emergency Judgment Removal – Critical Finance Cases",
+              description:
+                "Expedited court applications for urgent finance situations. Timeline: 3–6 weeks typically.",
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                price: "1650",
+                priceCurrency: "AUD",
+                description: "Includes $330 administration fee",
+              },
+            },
+            {
+              "@type": "Offer",
+              name: "Standard Judgment Challenge – Comprehensive Approach",
+              description:
+                "Full legal assessment and court applications for complex cases. Timeline: 6–12 weeks typically.",
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                price: "1100",
+                priceCurrency: "AUD",
+                description: "Includes $330 administration fee",
+              },
+            },
+            {
+              "@type": "Offer",
+              name: "Post-Payment Judgment Cleanup – Satisfaction Issues",
+              description:
+                "For paid judgments not showing as satisfied. Timeline: 4–8 weeks typically.",
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                price: "880",
+                priceCurrency: "AUD",
+                description: "Includes $330 administration fee",
+              },
+            },
+          ],
+          additionalProperty: [
+            {
+              "@type": "PropertyValue",
+              name: "Success Rate",
+              value: "98% when we take cases",
+            },
+            {
+              "@type": "PropertyValue",
+              name: "License Number",
+              value: "ASIC ACL 532003",
+            },
+            {
+              "@type": "PropertyValue",
+              name: "Service Coverage",
+              value: "Australia-wide all courts",
+            },
+            {
+              "@type": "PropertyValue",
+              name: "Policy",
+              value: "No Win No Fee",
+            },
+            {
+              "@type": "PropertyValue",
+              name: "Specialisation",
+              value: "Court judgment removal and setting aside",
+            },
+            {
+              "@type": "PropertyValue",
+              name: "Legal Support",
+              value: "Solicitor network for court applications",
+            },
+          ],
+        },
+        {
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Can all court judgments be removed from credit files?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "No, only judgments with legal grounds for challenge can be removed or set aside. Valid judgments obtained through proper procedures stay on your file for 5 years.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What&apos;s the difference between removing and setting aside a judgment?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Setting aside means getting the court to cancel the original judgment (usually requiring a new hearing). Removal means correcting credit file reporting errors or satisfied judgments.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How much does it cost to set aside a court judgment?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Court filing fees vary by state but are usually $100–$300. Solicitor fees for complex applications can be $2,000–$5,000+. Our service includes solicitor assistance where required at no extra cost.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Will setting aside a judgment remove it from my credit file?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes, if a judgment is successfully set aside, it must be removed from your credit file. We ensure all credit bureaus update their records.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Can I set aside a judgment if I actually owed the money?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Possibly, if there were procedural problems with how the judgment was obtained. Even valid debts can result in invalid judgments if proper legal processes weren’t followed.",
+              },
+            },
+          ],
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id":
+            "https://www.australiancreditsolutions.com.au/court-judgment-removal#breadcrumb",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.australiancreditsolutions.com.au",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Credit Repair Services",
+              item: "https://www.australiancreditsolutions.com.au/credit-repair-australia",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: "Court Judgment Removal",
+              item: "https://www.australiancreditsolutions.com.au/court-judgment-removal",
+            },
+          ],
+        },
+        {
+          "@type": "Review",
+          itemReviewed: {
+            "@type": "Organization",
+            name: "Australian Credit Solutions",
           },
-          {
-            "@type": "Offer",
-            name: "Post-Payment Judgment Cleanup – Satisfaction Issues",
-            description: "For paid judgments not showing as satisfied. Timeline: 4–8 weeks typically.",
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              price: "880",
-              priceCurrency: "AUD",
-              description: "Includes $330 administration fee"
-            }
-          }
-        ],
-        additionalProperty: [
-          { "@type": "PropertyValue", name: "Success Rate", value: "98% when we take cases" },
-          { "@type": "PropertyValue", name: "License Number", value: "ASIC ACL 532003" },
-          { "@type": "PropertyValue", name: "Service Coverage", value: "Australia-wide all courts" },
-          { "@type": "PropertyValue", name: "Policy", value: "No Win No Fee" },
-          { "@type": "PropertyValue", name: "Specialisation", value: "Court judgment removal and setting aside" },
-          { "@type": "PropertyValue", name: "Legal Support", value: "Solicitor network for court applications" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Can all court judgments be removed from credit files?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "No, only judgments with legal grounds for challenge can be removed or set aside. Valid judgments obtained through proper procedures stay on your file for 5 years."
-            }
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
           },
-          {
-            "@type": "Question",
-            name: "What&apos;s the difference between removing and setting aside a judgment?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Setting aside means getting the court to cancel the original judgment (usually requiring a new hearing). Removal means correcting credit file reporting errors or satisfied judgments."
-            }
+          author: { "@type": "Person", name: "Steve R" },
+          datePublished: "2024-03-18",
+          reviewBody:
+            "Had court judgment set aside after never receiving proper notice. ACS proved defective service and got it removed.",
+        },
+        {
+          "@type": "HowTo",
+          name: "How to Remove Court Judgment from Credit File Australia",
+          description:
+            "Step-by-step process to remove court judgments from Australian credit files with professional legal assistance.",
+          totalTime: "PT20M",
+          supply: [
+            {
+              "@type": "HowToSupply",
+              name: "Original court judgment documents",
+            },
+            { "@type": "HowToSupply", name: "Evidence of procedural defects" },
+            { "@type": "HowToSupply", name: "Payment records if applicable" },
+          ],
+          step: [
+            {
+              "@type": "HowToStep",
+              position: 1,
+              name: "Confidential Phone Discussion",
+              text: "Call 0489 265 737 for detailed discussion about judgment background and circumstances.",
+              url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#consultation",
+            },
+            {
+              "@type": "HowToStep",
+              position: 2,
+              name: "Complete Judgment Investigation",
+              text: "Obtain full court records and credit file details to identify potential grounds for challenge.",
+              url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#investigation",
+            },
+            {
+              "@type": "HowToStep",
+              position: 3,
+              name: "Legal Grounds Assessment",
+              text: "Assess all possible legal grounds and recommend best approach — court application or credit bureau challenge.",
+              url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#assessment",
+            },
+            {
+              "@type": "HowToStep",
+              position: 4,
+              name: "Professional Challenge Process",
+              text: "Handle complex legal and administrative work while keeping you fully informed.",
+              url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#challenge",
+            },
+            {
+              "@type": "HowToStep",
+              position: 5,
+              name: "Credit File Cleanup",
+              text: "Ensure credit file is properly updated and provide guidance on future judgment protection.",
+              url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#cleanup",
+            },
+          ],
+        },
+        {
+          "@type": "LegalService",
+          "@id":
+            "https://www.australiancreditsolutions.com.au/court-judgment-removal#legal-service",
+          name: "Court Judgment Removal Legal Services",
+          description:
+            "Professional legal assistance for setting aside court judgments and removing them from Australian credit files.",
+          provider: {
+            "@type": "Organization",
+            "@id": "https://www.australiancreditsolutions.com.au/#organization",
           },
-          {
-            "@type": "Question",
-            name: "How much does it cost to set aside a court judgment?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Court filing fees vary by state but are usually $100–$300. Solicitor fees for complex applications can be $2,000–$5,000+. Our service includes solicitor assistance where required at no extra cost."
-            }
-          },
-          {
-            "@type": "Question",
-            name: "Will setting aside a judgment remove it from my credit file?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, if a judgment is successfully set aside, it must be removed from your credit file. We ensure all credit bureaus update their records."
-            }
-          },
-          {
-            "@type": "Question",
-            name: "Can I set aside a judgment if I actually owed the money?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Possibly, if there were procedural problems with how the judgment was obtained. Even valid debts can result in invalid judgments if proper legal processes weren’t followed."
-            }
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.australiancreditsolutions.com.au/court-judgment-removal#breadcrumb",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.australiancreditsolutions.com.au" },
-          { "@type": "ListItem", position: 2, name: "Credit Repair Services", item: "https://www.australiancreditsolutions.com.au/credit-repair-australia" },
-          { "@type": "ListItem", position: 3, name: "Court Judgment Removal", item: "https://www.australiancreditsolutions.com.au/court-judgment-removal" }
-        ]
-      },
-      {
-        "@type": "Review",
-        itemReviewed: { "@type": "Organization", name: "Australian Credit Solutions" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: "Steve R" },
-        datePublished: "2024-03-18",
-        reviewBody: "Had court judgment set aside after never receiving proper notice. ACS proved defective service and got it removed."
-      },
-      {
-        "@type": "HowTo",
-        name: "How to Remove Court Judgment from Credit File Australia",
-        description: "Step-by-step process to remove court judgments from Australian credit files with professional legal assistance.",
-        totalTime: "PT20M",
-        supply: [
-          { "@type": "HowToSupply", name: "Original court judgment documents" },
-          { "@type": "HowToSupply", name: "Evidence of procedural defects" },
-          { "@type": "HowToSupply", name: "Payment records if applicable" }
-        ],
-        step: [
-          {
-            "@type": "HowToStep",
-            position: 1,
-            name: "Confidential Phone Discussion",
-            text: "Call 0489 265 737 for detailed discussion about judgment background and circumstances.",
-            url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#consultation"
-          },
-          {
-            "@type": "HowToStep",
-            position: 2,
-            name: "Complete Judgment Investigation",
-            text: "Obtain full court records and credit file details to identify potential grounds for challenge.",
-            url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#investigation"
-          },
-          {
-            "@type": "HowToStep",
-            position: 3,
-            name: "Legal Grounds Assessment",
-            text: "Assess all possible legal grounds and recommend best approach — court application or credit bureau challenge.",
-            url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#assessment"
-          },
-          {
-            "@type": "HowToStep",
-            position: 4,
-            name: "Professional Challenge Process",
-            text: "Handle complex legal and administrative work while keeping you fully informed.",
-            url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#challenge"
-          },
-          {
-            "@type": "HowToStep",
-            position: 5,
-            name: "Credit File Cleanup",
-            text: "Ensure credit file is properly updated and provide guidance on future judgment protection.",
-            url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#cleanup"
-          }
-        ]
-      },
-      {
-        "@type": "LegalService",
-        "@id": "https://www.australiancreditsolutions.com.au/court-judgment-removal#legal-service",
-        name: "Court Judgment Removal Legal Services",
-        description: "Professional legal assistance for setting aside court judgments and removing them from Australian credit files.",
-        provider: { "@type": "Organization", "@id": "https://www.australiancreditsolutions.com.au/#organization" },
-        areaServed: { "@type": "Country", name: "Australia" },
-        serviceArea: [
-          { "@type": "State", name: "New South Wales" },
-          { "@type": "State", name: "Victoria" },
-          { "@type": "State", name: "Queensland" },
-          { "@type": "State", name: "Western Australia" },
-          { "@type": "State", name: "South Australia" },
-          { "@type": "State", name: "Tasmania" },
-          { "@type": "State", name: "Northern Territory" },
-          { "@type": "State", name: "Australian Capital Territory" }
-        ],
-        serviceType: "Debt Recovery and Judgment Law"
-      }
-    ]
-  }), []);
+          areaServed: { "@type": "Country", name: "Australia" },
+          serviceArea: [
+            { "@type": "State", name: "New South Wales" },
+            { "@type": "State", name: "Victoria" },
+            { "@type": "State", name: "Queensland" },
+            { "@type": "State", name: "Western Australia" },
+            { "@type": "State", name: "South Australia" },
+            { "@type": "State", name: "Tasmania" },
+            { "@type": "State", name: "Northern Territory" },
+            { "@type": "State", name: "Australian Capital Territory" },
+          ],
+          serviceType: "Debt Recovery and Judgment Law",
+        },
+      ],
+    }),
+    []
+  );
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-slate-900">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-100/30 to-blue-200/20 -z-10" />
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:py-24">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
-            <motion.div 
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-            >
-              <h1 className="text-3xl font-extrabold tracking-tight text-gray-800 sm:text-4xl lg:text-5xl">
-                Court Judgment Removal Australia <span className="text-blue">Delete Judgment from Credit Report Fast</span> 
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center lg:gap-12 lg:flex-row lg:items-start">
+            {/* Left Content */}
+            <div className="w-full lg:w-2/3">
+              <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                Remove Credit Enquiries Fast
+                <span className="block mt-2 text-blue">
+                  Australia's Leading Enquiry Removal Specialists
+                </span>
               </h1>
-              <p className="mt-4 text-lg leading-relaxed text-slate-700">
-                Got a court judgment destroying your credit file? We remove incorrect judgments and set aside unfair court judgments. <strong>98% success rate</strong> when we take your case. Licensed specialists, <strong>No Win No Fee</strong> policy.
-              </p>
-              <p className="mt-4 text-base text-slate-700">
-                A court judgment on your credit report is like a financial death sentence. But many court judgments can be removed or set aside—especially if they&apos;re incorrect, unfair, or didn&apos;t follow proper legal procedures.
-              </p>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
+
+              <div className="mt-6 space-y-4">
+                <p className="text-lg leading-relaxed text-gray-700">
+                  Too many credit enquiries killing your score? We remove
+                  unauthorised, duplicate and incorrect enquiries
+                  professionally.{" "}
+                  <strong className="font-semibold text-blue">
+                    98% success rate
+                  </strong>{" "}
+                  when we take your case. Licensed specialists,{" "}
+                  <strong className="font-semibold text-blue">
+                    No Win No Fee
+                  </strong>{" "}
+                  policy.
+                </p>
+
+                <p className="text-base text-gray-600">
+                  Multiple enquiries can slash your score by 100+ points and
+                  block approvals. Our award-winning team removes bad enquiries
+                  across Equifax, Experian and Illion — often within weeks, not
+                  years.
+                </p>
+              </div>
+
+              {/* CTAs */}
+
+              <div
+                className="mt-8 relative flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
+                role="group"
+                aria-label="Primary actions"
+              >
                 <Link
                   href="/free-credit-assessment"
-                  className="inline-flex items-center rounded-xl bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition-all hover:bg-blue hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Remove My Court Judgment Now
+                  Remove My Credit Enquiries Now
                 </Link>
+
                 <a
                   href="tel:+61489265737"
-                  className="inline-flex items-center rounded-xl border-2 border-blue px-6 py-3 text-base font-semibold text-blue transition hover:bg-blue hover:text-white"
+                  aria-label="Call Australian Credit Solutions on 0489 265 737"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border-2 border-blue px-6 py-3 text-base font-semibold text-blue transition hover:bg-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                   Call 0489 265 737
                 </a>
+
+                {/* Decorative arrow (desktop/tablet only) */}
+                <div
+                  className="pointer-events-none hidden lg:block"
+                  aria-hidden="true"
+                >
+                  <Image
+                    src={ArrowIcon}
+                    alt=""
+                    width={220}
+                    height={70}
+                    loading="lazy"
+                 
+                    className="select-none"
+                    priority={false}
+                  />
+                </div>
+                <div
+                  className="pointer-events-none lg:hidden flex justify-center"
+                  aria-hidden="true"
+                >
+                  <Image
+                    src={ArrowIconM}
+                    alt=""
+                    width={200}
+                    height={120}
+                    loading="lazy"
+                 
+                    className="select-none"
+                    priority={false}
+                  />
+                </div>
               </div>
-              <ul className="mt-6 flex flex-wrap gap-4 text-sm text-slate-600">
-                <li className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-blue"/>98% success rate</li>
-                <li className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-blue"/>No Win No Fee</li>
-                <li className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-blue"/>Licensed & insured (ASIC ACL 532003)</li>
+
+              {/* Trust badges */}
+              
+            </div>
+
+            {/* Right Form with Arrow */}
+            <div className="w-full lg:w-1/3 relative">
+              {/* Form Container */}
+
+              <FooterForm
+                heading="Get My Free Enquiry Assessment"
+                subheading="Fast & Confidential"
+                paragraph="Find out if your credit enquiries can be removed – free, fast, and confidential."
+              />
+              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
+                <li className="flex items-center">
+                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
+                  98% success rate
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
+                  No Win No Fee
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
+                  Licensed & insured (ASIC ACL 532003)
+                </li>
               </ul>
-            </motion.div>
-            <CreditAssessmentForm/>
+            </div>
           </div>
         </div>
+
+        {/* Mobile arrow indicator (shown only on mobile) */}
       </section>
 
       {/* Opening Section */}
       <Section title="Court judgments are the nuclear option of credit destruction">
         <p>
-          Right, let&apos;s get one thing straight – a court judgment on your credit file is absolutely devastating. We&apos;re not talking about a little late payment mark here. Court judgments are the nuclear option of credit destruction. They basically tell every lender &quot;this person had to be taken to court to get their money back.&quot;
+          Right, let&apos;s get one thing straight – a court judgment on your
+          credit file is absolutely devastating. We&apos;re not talking about a
+          little late payment mark here. Court judgments are the nuclear option
+          of credit destruction. They basically tell every lender &quot;this
+          person had to be taken to court to get their money back.&quot;
         </p>
         <p className="mt-4">
-          But here&apos;s what gets us really fired up: heaps of court judgments on credit files shouldn&apos;t actually be there. Maybe you never got proper notice of the court hearing. Maybe the debt was already paid but the judgment never got removed. Maybe the judgment was for the wrong amount, or against the wrong person entirely. Or maybe it was a default judgment that can be set aside because you had a genuine defence.
+          But here&apos;s what gets us really fired up: heaps of court judgments
+          on credit files shouldn&apos;t actually be there. Maybe you never got
+          proper notice of the court hearing. Maybe the debt was already paid
+          but the judgment never got removed. Maybe the judgment was for the
+          wrong amount, or against the wrong person entirely. Or maybe it was a
+          default judgment that can be set aside because you had a genuine
+          defence.
         </p>
         <p className="mt-4">
-          Australian Credit Solutions specialises in court judgment removal across Australia. We&apos;re award-winning specialists with a 98% success rate when we take cases. The difference? We only take court judgment cases where we genuinely reckon there are grounds for removal or setting aside. If your judgment is rock-solid and properly obtained, we&apos;ll tell you straight up. But if there are procedural problems, errors, or legal grounds to challenge it—we know exactly how to get court judgments removed from credit reports.
+          Australian Credit Solutions specialises in court judgment removal
+          across Australia. We&apos;re award-winning specialists with a 98%
+          success rate when we take cases. The difference? We only take court
+          judgment cases where we genuinely reckon there are grounds for removal
+          or setting aside. If your judgment is rock-solid and properly
+          obtained, we&apos;ll tell you straight up. But if there are procedural
+          problems, errors, or legal grounds to challenge it—we know exactly how
+          to get court judgments removed from credit reports.
         </p>
       </Section>
 
       {/* Impact Section */}
       <Section title="How Court Judgments Are Absolutely Annihilating Your Credit">
-        <motion.ul 
+        <motion.ul
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
@@ -373,23 +550,19 @@ export default function CourtJudgmentRemovalPage() {
           {[
             {
               h: "Your Credit Score Gets Completely Destroyed",
-              p:
-                "A single court judgment can drop your credit score by 150–300 points. We&apos;ve seen people go from excellent credit to barely qualifying for a basic credit card overnight.",
+              p: "A single court judgment can drop your credit score by 150–300 points. We&apos;ve seen people go from excellent credit to barely qualifying for a basic credit card overnight.",
             },
             {
               h: "Every Lender Sees You as Toxic",
-              p:
-                "Court judgments are visible to every lender, landlord, and employer who checks your credit. They see that you had to be taken to court to pay a debt.",
+              p: "Court judgments are visible to every lender, landlord, and employer who checks your credit. They see that you had to be taken to court to pay a debt.",
             },
             {
               h: "Automatic Rejections Become the Norm",
-              p:
-                "Most lenders automatically reject applications with a court judgment on file—regardless of income or assets.",
+              p: "Most lenders automatically reject applications with a court judgment on file—regardless of income or assets.",
             },
             {
               h: "Interest Rates Become Obscene",
-              p:
-                "The few lenders who will touch you with a judgment charge premium rates—often 15–25% even for secured loans.",
+              p: "The few lenders who will touch you with a judgment charge premium rates—often 15–25% even for secured loans.",
             },
             {
               h: "It Follows You for 5 Years",
@@ -397,17 +570,15 @@ export default function CourtJudgmentRemovalPage() {
             },
             {
               h: "Employment and Rental Applications Get Knocked Back",
-              p:
-                "Many employers and landlords check for court judgments. Having one can cost you jobs and rentals, especially in competitive markets.",
+              p: "Many employers and landlords check for court judgments. Having one can cost you jobs and rentals, especially in competitive markets.",
             },
             {
               h: "Business Finance Becomes Impossible",
-              p:
-                "Personal court judgments affect business lending. If you&apos;re a business owner or tradie, a judgment can kill your finance options.",
+              p: "Personal court judgments affect business lending. If you&apos;re a business owner or tradie, a judgment can kill your finance options.",
             },
           ].map((item) => (
-            <motion.li 
-              key={item.h} 
+            <motion.li
+              key={item.h}
               variants={fadeIn}
               className="rounded-xl border border-blue-100 bg-white p-5 shadow-sm transition-all hover:shadow-md"
             >
@@ -421,56 +592,77 @@ export default function CourtJudgmentRemovalPage() {
       {/* What We Remove */}
       <Section title="What Court Judgments We Can Actually Remove or Set Aside">
         <p className="text-slate-700">
-          <strong>Important Legal Note:</strong> We can&apos;t remove valid court judgments that were properly obtained through correct legal procedures. But loads of judgments on credit files have problems that create grounds for removal or setting aside.
+          <strong>Important Legal Note:</strong> We can&apos;t remove valid
+          court judgments that were properly obtained through correct legal
+          procedures. But loads of judgments on credit files have problems that
+          create grounds for removal or setting aside.
         </p>
-        <motion.div 
+        <motion.div
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="mt-6 grid gap-6 md:grid-cols-2"
         >
-          <Card title="Default Judgments That Can Be Set Aside" bullets={[
-            "You never received proper notice of the court hearing",
-            "Court papers were sent to old addresses after you&apos;d moved",
-            "You were overseas or in hospital when the hearing occurred",
-            "You had a genuine defence but couldn&apos;t present it",
-          ]} />
-          <Card title="Procedurally Defective Judgments" bullets={[
-            "Incorrect court jurisdiction for the case",
-            "Insufficient notice periods before court hearings",
-            "Failure to serve court documents properly",
-            "Missing mandatory steps in debt recovery process",
-          ]} />
-          <Card title="Incorrect Judgment Information" bullets={[
-            "Wrong person named in the judgment",
-            "Incorrect judgment amounts recorded",
-            "Already paid debts that weren&apos;t updated",
-            "Judgments for disputed or invalid debts",
-          ]} />
-          <Card title="Satisfied Judgments Not Updated" bullets={[
-            "Debts paid in full but judgment not marked satisfied",
-            "Settlement agreements not reflected in court records",
-            "Payment arrangements completed but not updated",
-            "Partial payments not properly recorded",
-          ]} />
-          <Card title="Statute of Limitations Issues" bullets={[
-            "Debts older than ~6 years (most states) pursued illegally",
-            "Acknowledgment of debt issues affecting limitation periods",
-            "Proper limitation defences that weren&apos;t raised",
-          ]} />
-          <Card title="Judgments Based on Incorrect/Disputed Debts" bullets={[
-            "Identity theft cases where you weren&apos;t responsible",
-            "Debts already paid to original creditors",
-            "Disputed amounts pursued without resolution",
-            "Incorrect charges or fees added to original debts",
-          ]} />
+          <Card
+            title="Default Judgments That Can Be Set Aside"
+            bullets={[
+              "You never received proper notice of the court hearing",
+              "Court papers were sent to old addresses after you&apos;d moved",
+              "You were overseas or in hospital when the hearing occurred",
+              "You had a genuine defence but couldn&apos;t present it",
+            ]}
+          />
+          <Card
+            title="Procedurally Defective Judgments"
+            bullets={[
+              "Incorrect court jurisdiction for the case",
+              "Insufficient notice periods before court hearings",
+              "Failure to serve court documents properly",
+              "Missing mandatory steps in debt recovery process",
+            ]}
+          />
+          <Card
+            title="Incorrect Judgment Information"
+            bullets={[
+              "Wrong person named in the judgment",
+              "Incorrect judgment amounts recorded",
+              "Already paid debts that weren&apos;t updated",
+              "Judgments for disputed or invalid debts",
+            ]}
+          />
+          <Card
+            title="Satisfied Judgments Not Updated"
+            bullets={[
+              "Debts paid in full but judgment not marked satisfied",
+              "Settlement agreements not reflected in court records",
+              "Payment arrangements completed but not updated",
+              "Partial payments not properly recorded",
+            ]}
+          />
+          <Card
+            title="Statute of Limitations Issues"
+            bullets={[
+              "Debts older than ~6 years (most states) pursued illegally",
+              "Acknowledgment of debt issues affecting limitation periods",
+              "Proper limitation defences that weren&apos;t raised",
+            ]}
+          />
+          <Card
+            title="Judgments Based on Incorrect/Disputed Debts"
+            bullets={[
+              "Identity theft cases where you weren&apos;t responsible",
+              "Debts already paid to original creditors",
+              "Disputed amounts pursued without resolution",
+              "Incorrect charges or fees added to original debts",
+            ]}
+          />
         </motion.div>
       </Section>
 
       {/* Process */}
       <Section title="Our Proven Court Judgment Removal Process">
-        <motion.ol 
+        <motion.ol
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
@@ -480,30 +672,31 @@ export default function CourtJudgmentRemovalPage() {
           {[
             {
               title: "Complete Judgment Analysis",
-              description: "We obtain your court judgment details from all relevant courts and credit bureaus (Equifax, Experian, Illion) to get the full picture."
+              description:
+                "We obtain your court judgment details from all relevant courts and credit bureaus (Equifax, Experian, Illion) to get the full picture.",
             },
             {
               title: "Legal Grounds Assessment",
-              description: "We check for procedural defects, service issues, statute of limitations defences, factual errors, and satisfaction/payment problems."
+              description:
+                "We check for procedural defects, service issues, statute of limitations defences, factual errors, and satisfaction/payment problems.",
             },
             {
               title: "Evidence Gathering & Documentation",
-              description: "We help compile address changes, payment records, dispute documentation, and any supporting evidence."
+              description:
+                "We help compile address changes, payment records, dispute documentation, and any supporting evidence.",
             },
             {
               title: "Court Application or Credit Bureau Challenge",
-              description: "Depending on grounds, we prepare court applications to set aside the judgment, raise credit bureau challenges, negotiate with creditors, and coordinate with solicitors."
+              description:
+                "Depending on grounds, we prepare court applications to set aside the judgment, raise credit bureau challenges, negotiate with creditors, and coordinate with solicitors.",
             },
             {
               title: "Credit File Cleanup & Monitoring",
-              description: "We ensure all bureaus update records, monitor for reappearance, and guide you on rebuilding your credit profile."
-            }
+              description:
+                "We ensure all bureaus update records, monitor for reappearance, and guide you on rebuilding your credit profile.",
+            },
           ].map((step, index) => (
-            <motion.li 
-              key={index}
-              variants={fadeIn}
-              className="flex gap-4"
-            >
+            <motion.li key={index} variants={fadeIn} className="flex gap-4">
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold">
                 {index + 1}
               </div>
@@ -524,23 +717,30 @@ export default function CourtJudgmentRemovalPage() {
           viewport={{ once: true }}
         >
           <Testimonial name="Steve from Wollongong – Tradie Who Never Got Notice">
-            &quot;Had a court judgment for $8,500 from a supplier dispute... ACS proved I was never properly served and got the judgment set aside. Took 8 weeks and saved my business.&quot;
+            &quot;Had a court judgment for $8,500 from a supplier dispute... ACS
+            proved I was never properly served and got the judgment set aside.
+            Took 8 weeks and saved my business.&quot;
           </Testimonial>
           <Testimonial name="Maria from Adelaide – Mum Hit by Identity Theft">
-            &quot;Identity theft led to a $12,000 judgment... ACS worked with their solicitor to get it set aside. Credit score jumped from 350 to 710. Home loan approved.&quot;
+            &quot;Identity theft led to a $12,000 judgment... ACS worked with
+            their solicitor to get it set aside. Credit score jumped from 350 to
+            710. Home loan approved.&quot;
           </Testimonial>
           <Testimonial name="Rob from Darwin – Small Business Owner">
-            &quot;$15,000 judgment during COVID despite having paid... ACS got it marked satisfied and removed. Business approvals started again.&quot;
+            &quot;$15,000 judgment during COVID despite having paid... ACS got
+            it marked satisfied and removed. Business approvals started
+            again.&quot;
           </Testimonial>
           <Testimonial name="Lisa from Hobart – Teacher Who Moved Interstate">
-            &quot;Judgment from a telco sent to my old address... ACS proved defective service and got it set aside. Credit back to normal.&quot;
+            &quot;Judgment from a telco sent to my old address... ACS proved
+            defective service and got it set aside. Credit back to normal.&quot;
           </Testimonial>
         </motion.div>
       </Section>
 
       {/* Why Choose Us */}
       <Section title="Why Choose Us for Court Judgment Removal">
-        <motion.ul 
+        <motion.ul
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
@@ -556,13 +756,23 @@ export default function CourtJudgmentRemovalPage() {
             "National coverage across all Australian courts and tribunals.",
             "We don&apos;t give up – we use layered strategies until we find the path that works.",
           ].map((t) => (
-            <motion.li 
-              key={t} 
+            <motion.li
+              key={t}
               variants={fadeIn}
               className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-sm text-slate-700"
             >
-              <svg className="h-5 w-5 shrink-0 text-blue mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <svg
+                className="h-5 w-5 shrink-0 text-blue mt-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
               {t}
             </motion.li>
@@ -572,7 +782,7 @@ export default function CourtJudgmentRemovalPage() {
 
       {/* Service Options / Pricing */}
       <Section title="Our Court Judgment Removal Service Options">
-        <motion.div 
+        <motion.div
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
@@ -583,14 +793,22 @@ export default function CourtJudgmentRemovalPage() {
             name="Emergency Judgment Removal"
             timeline="3–6 weeks typically"
             perfectFor="Urgent finance applications, settlement deadlines"
-            includes={["Expedited court applications", "Priority processing", "Daily updates"]}
+            includes={[
+              "Expedited court applications",
+              "Priority processing",
+              "Daily updates",
+            ]}
             price="$1,650"
           />
           <PriceCard
             name="Standard Judgment Challenge"
             timeline="6–12 weeks typically"
             perfectFor="Complex cases, multiple grounds for challenge"
-            includes={["Full legal assessment", "Evidence compilation", "Court applications if required"]}
+            includes={[
+              "Full legal assessment",
+              "Evidence compilation",
+              "Court applications if required",
+            ]}
             price="$1,100"
             featured
           />
@@ -598,12 +816,19 @@ export default function CourtJudgmentRemovalPage() {
             name="Post-Payment Judgment Cleanup"
             timeline="4–8 weeks typically"
             perfectFor="Paid judgments not showing as satisfied"
-            includes={["Creditor negotiation", "Court record updates", "Credit bureau corrections"]}
+            includes={[
+              "Creditor negotiation",
+              "Court record updates",
+              "Credit bureau corrections",
+            ]}
             price="$880"
           />
         </motion.div>
         <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
-          <strong>Multiple Judgment Package – Complete Court Record Cleanup:</strong> 8–16 weeks typically. Custom quote based on number of judgments.
+          <strong>
+            Multiple Judgment Package – Complete Court Record Cleanup:
+          </strong>{" "}
+          8–16 weeks typically. Custom quote based on number of judgments.
           <br />
           <em>All services include our No Win No Fee guarantee.</em>
         </div>
@@ -611,7 +836,7 @@ export default function CourtJudgmentRemovalPage() {
 
       {/* Outcomes */}
       <Section title="What Happens After Your Court Judgment Gets Removed">
-        <motion.ul 
+        <motion.ul
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
@@ -627,8 +852,8 @@ export default function CourtJudgmentRemovalPage() {
             "Peace of mind and confidence with future credit applications.",
             "Guidance to protect against future judgment issues.",
           ].map((t) => (
-            <motion.li 
-              key={t} 
+            <motion.li
+              key={t}
               variants={fadeIn}
               className="rounded-xl border border-blue-100 bg-white p-4 text-sm text-slate-700 shadow-sm transition-all hover:shadow-md"
             >
@@ -640,7 +865,7 @@ export default function CourtJudgmentRemovalPage() {
 
       {/* Legal Rights / Education */}
       <Section title="Understanding Court Judgments: Your Legal Rights">
-        <motion.div 
+        <motion.div
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
@@ -652,15 +877,25 @@ export default function CourtJudgmentRemovalPage() {
             "Service of process is strict: defective service can justify setting aside a judgment.",
             "Time limits exist but exceptions apply for lack of service, fraud/misrepresentation, or new evidence.",
             "You still have rights after judgment: payment arrangements, marking satisfied judgments as paid, and challenging incorrect amounts.",
-            "Get professional help: court procedures are technical; expertise avoids fatal errors."
+            "Get professional help: court procedures are technical; expertise avoids fatal errors.",
           ].map((text, index) => (
-            <motion.p 
+            <motion.p
               key={index}
               variants={fadeIn}
               className="flex items-start gap-2"
             >
-              <svg className="h-5 w-5 shrink-0 text-orange mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <svg
+                className="h-5 w-5 shrink-0 text-orange mt-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
               {text}
             </motion.p>
@@ -670,7 +905,7 @@ export default function CourtJudgmentRemovalPage() {
 
       {/* FAQs */}
       <Section title="Common Questions About Court Judgment Removal">
-        <motion.div 
+        <motion.div
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
@@ -678,18 +913,28 @@ export default function CourtJudgmentRemovalPage() {
           className="mt-4 space-y-4"
         >
           {faqData.map((f, index) => (
-            <motion.details 
-              key={f.q} 
+            <motion.details
+              key={f.q}
               variants={fadeIn}
               className="group rounded-xl border border-blue-100 bg-white p-4 shadow-sm transition-all hover:shadow-md"
             >
               <summary className="cursor-pointer select-none font-semibold text-blue group-open:text-blue flex items-center justify-between">
                 <span>{f.q}</span>
-                <svg className="h-5 w-5 transform group-open:rotate-180 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                <svg
+                  className="h-5 w-5 transform group-open:rotate-180 transition-transform"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </summary>
-              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">{f.a}</p>
+              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
+                {f.a}
+              </p>
             </motion.details>
           ))}
         </motion.div>
@@ -699,49 +944,89 @@ export default function CourtJudgmentRemovalPage() {
       <Section title="The Massive Cost of Keeping a Court Judgment">
         <div className="mt-2 grid gap-6 lg:grid-cols-2">
           <div className="space-y-4 text-slate-700">
-            <h3 className="font-semibold text-blue">Financial Impact Is Devastating</h3>
+            <h3 className="font-semibold text-blue">
+              Financial Impact Is Devastating
+            </h3>
             {[
               "Home loans: Best rates ~6.2% vs non-bank 9–15% with judgments; can cost $200k+ extra interest over 30 years.",
               "Car finance: Clean credit ~5.9% vs 18–25% with judgments; a $40k car can exceed $80k over time.",
               "Credit cards: From premium cards to maybe a $1k secured card at ~25% interest.",
               "Business finance: Personal judgments kill equipment and commercial lending.",
-              "Employment & rentals: Banking, government, and competitive rental markets often reject applicants with judgments."
+              "Employment & rentals: Banking, government, and competitive rental markets often reject applicants with judgments.",
             ].map((text, index) => (
               <p key={index} className="flex items-start gap-2">
-                <svg className="h-5 w-5 shrink-0 text-blue mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                <svg
+                  className="h-5 w-5 shrink-0 text-blue mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                  />
                 </svg>
                 {text}
               </p>
             ))}
           </div>
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             variants={fadeIn}
             viewport={{ once: true }}
             className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-lg"
           >
-            <h3 className="text-lg font-semibold text-blue">Your Two Choices</h3>
+            <h3 className="text-lg font-semibold text-blue">
+              Your Two Choices
+            </h3>
             <ul className="mt-3 space-y-3 text-slate-700">
               <li className="flex items-start gap-2">
-                <svg className="h-5 w-5 shrink-0 text-red-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="h-5 w-5 shrink-0 text-red-500 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
                 Accept the judgment and wait 5 years while finances suffer.
               </li>
               <li className="flex items-start gap-2">
-                <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <svg
+                  className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
                 Fight it with legal expertise to remove or set it aside.
               </li>
             </ul>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/free-credit-assessment" className="rounded-lg bg-blue px-5 py-3 font-semibold text-white hover:bg-blue transition-colors">
+              <Link
+                href="/free-credit-assessment"
+                className="rounded-lg bg-blue px-5 py-3 font-semibold text-white hover:bg-blue transition-colors"
+              >
                 Start My Assessment
               </Link>
-              <a href="tel:+61489265737" className="rounded-lg border-2 border-blue px-5 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors">
+              <a
+                href="tel:+61489265737"
+                className="rounded-lg border-2 border-blue px-5 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
+              >
                 Call 0489 265 737
               </a>
             </div>
@@ -757,7 +1042,7 @@ export default function CourtJudgmentRemovalPage() {
             "Complete judgment investigation — full court records and credit file details.",
             "Legal grounds assessment & strategy — court, bureau, or creditor route.",
             "Professional challenge process — we handle legal/admin work and keep you informed.",
-            "Credit file cleanup & future protection — ensure bureaus update and advise on prevention."
+            "Credit file cleanup & future protection — ensure bureaus update and advise on prevention.",
           ].map((step, index) => (
             <li key={index} className="flex items-start gap-3">
               <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
@@ -768,10 +1053,16 @@ export default function CourtJudgmentRemovalPage() {
           ))}
         </ol>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/free-credit-assessment" className="rounded-lg bg-blue px-6 py-3 font-semibold text-white hover:bg-blue transition-colors">
+          <Link
+            href="/free-credit-assessment"
+            className="rounded-lg bg-blue px-6 py-3 font-semibold text-white hover:bg-blue transition-colors"
+          >
             Book My Free Assessment
           </Link>
-          <a href="tel:+61489265737" className="rounded-lg border-2 border-blue px-6 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors">
+          <a
+            href="tel:+61489265737"
+            className="rounded-lg border-2 border-blue px-6 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
+          >
             Call 0489 265 737
           </a>
         </div>
@@ -816,7 +1107,7 @@ export default function CourtJudgmentRemovalPage() {
 
       {/* Footer trust bar */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           variants={fadeIn}
@@ -825,13 +1116,19 @@ export default function CourtJudgmentRemovalPage() {
         >
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">98% success rate when we take cases</p>
+              <p className="text-sm font-medium">
+                98% success rate when we take cases
+              </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">No Win No Fee — $330 admin fee</p>
+              <p className="text-sm font-medium">
+                No Win No Fee — $330 admin fee
+              </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">Licensed & regulated — ASIC ACL 532003</p>
+              <p className="text-sm font-medium">
+                Licensed & regulated — ASIC ACL 532003
+              </p>
             </div>
           </div>
         </motion.div>
@@ -843,14 +1140,14 @@ export default function CourtJudgmentRemovalPage() {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Footer/>
+      <Footer />
     </main>
   );
 }
 
 function Section({ title, children }) {
   return (
-    <motion.section 
+    <motion.section
       initial="hidden"
       whileInView="visible"
       variants={fadeIn}
@@ -860,14 +1157,16 @@ function Section({ title, children }) {
       <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
         {title}
       </h2>
-      <div className="mt-4 text-base leading-relaxed text-slate-800">{children}</div>
+      <div className="mt-4 text-base leading-relaxed text-slate-800">
+        {children}
+      </div>
     </motion.section>
   );
 }
 
 function Card({ title, bullets = [] }) {
   return (
-    <motion.div 
+    <motion.div
       variants={fadeIn}
       className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
     >
@@ -875,8 +1174,18 @@ function Card({ title, bullets = [] }) {
       <ul className="mt-3 space-y-2 text-sm text-slate-700">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2">
-            <svg className="h-5 w-5 shrink-0 text-orange-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <svg
+              className="h-5 w-5 shrink-0 text-orange-500 mt-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
             </svg>
             {b}
           </li>
@@ -886,9 +1195,16 @@ function Card({ title, bullets = [] }) {
   );
 }
 
-function PriceCard({ name, timeline, perfectFor, includes, price, featured = false }) {
+function PriceCard({
+  name,
+  timeline,
+  perfectFor,
+  includes,
+  price,
+  featured = false,
+}) {
   return (
-    <motion.div 
+    <motion.div
       variants={fadeIn}
       className={`relative rounded-xl border p-6 h-full flex flex-col ${
         featured
@@ -897,7 +1213,9 @@ function PriceCard({ name, timeline, perfectFor, includes, price, featured = fal
       }`}
     >
       {featured && (
-        <span className="absolute -top-3 left-6 inline-block rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white shadow">Most Popular</span>
+        <span className="absolute -top-3 left-6 inline-block rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white shadow">
+          Most Popular
+        </span>
       )}
       <h3 className="text-lg font-semibold text-blue">{name}</h3>
       <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
@@ -905,8 +1223,18 @@ function PriceCard({ name, timeline, perfectFor, includes, price, featured = fal
       <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
         {includes.map((i) => (
           <li key={i} className="flex items-start gap-2">
-            <svg className="h-5 w-5 shrink-0 text-blue-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            <svg
+              className="h-5 w-5 shrink-0 text-blue-500 mt-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
             </svg>
             {i}
           </li>
@@ -914,7 +1242,10 @@ function PriceCard({ name, timeline, perfectFor, includes, price, featured = fal
       </ul>
       <div className="mt-4 flex items-end justify-between">
         <div className="text-2xl font-extrabold text-slate-900">{price}</div>
-        <Link href="/free-credit-assessment" className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm">
+        <Link
+          href="/free-credit-assessment"
+          className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"
+        >
           Start Now
         </Link>
       </div>
@@ -924,7 +1255,7 @@ function PriceCard({ name, timeline, perfectFor, includes, price, featured = fal
 
 function Testimonial({ name, children }) {
   return (
-    <motion.figure 
+    <motion.figure
       variants={fadeIn}
       className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md mb-4"
     >
@@ -936,7 +1267,9 @@ function Testimonial({ name, children }) {
         ))}
       </div>
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">{name}</figcaption>
+      <figcaption className="mt-3 text-sm font-semibold text-blue">
+        {name}
+      </figcaption>
     </motion.figure>
   );
 }
