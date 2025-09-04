@@ -392,7 +392,7 @@ export default function CourtJudgmentRemovalPage() {
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
                 Remove Credit Enquiries Fast
                 <span className="block mt-2 text-blue">
-                  Australia's Leading Enquiry Removal Specialists
+                  Australia&apos;s Leading Enquiry Removal Specialists
                 </span>
               </h1>
 
