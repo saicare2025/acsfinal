@@ -3,8 +3,6 @@ import TrustBadge from "./TrustBadge";
 import WhyChooseUs from "./WhyChooseUs";
 import HelpSection from "./HowCan";
 import CompanyCarousel from "./CompanySection";
-
-import CTASection from "./CTA";
 import HomeClientSections from "./HomeClientSections";
 import CreditRepairSection from "./CreditRepair";
 import CreditRepairProcess from "./CreditRepairProcess.js";
