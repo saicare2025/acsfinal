@@ -64,7 +64,10 @@ export function middleware(request) {
     return NextResponse.redirect(dest, 308);
   }
 
-  return NextResponse.next();
+  // Add pathname to headers for structured data
+  const response = NextResponse.next();
+  response.headers.set('x-pathname', decodedPath);
+  return response;
 }
 
 // Run on everything except common static assets for perf

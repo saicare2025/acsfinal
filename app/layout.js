@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import AnalyticsRouteTracker from "@/components/AnalyticsRouteTracker";
+import GlobalStructuredData from "@/components/GlobalStructuredData";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: true });
 
@@ -46,42 +47,6 @@ export default function RootLayout({ children }) {
           href="https://www.youtube-nocookie.com"
           crossOrigin=""
         />
-
-        {/* ProductReview settings MUST be defined before the loader */}
-        <Script
-          id="productreview-settings"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.__productReviewSettings = {
-                ...(window.__productReviewSettings || {}),
-                brandId: '407543ca-1287-43ab-a66b-5f78dfd94a6a'
-              };
-            `,
-          }}
-        />
-        {/* ProductReview loader (no event handlers to keep this SSR-safe) */}
-        <Script
-          id="productreview-loader"
-          src="https://cdn.productreview.com.au/assets/widgets/loader.js"
-          async
-          strategy="afterInteractive"
-        />
-
-        {/* Consent Mode v2 defaults */}
-        <Script id="consent-defaults" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);} 
-            gtag('consent', 'default', {
-              ad_user_data: 'denied',
-              ad_personalization: 'denied',
-              ad_storage: 'denied',
-              analytics_storage: 'denied',
-              wait_for_update: 500
-            });
-          `}
-        </Script>
 
         {/* GA4 (lazy, no automatic page_view) */}
         {GA_ID && (
@@ -140,7 +105,27 @@ export default function RootLayout({ children }) {
         )}
       </head>
       <body className={inter.className}>
+        <GlobalStructuredData />
         <AnalyticsRouteTracker />
+        <Script
+          id="productreview-settings"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.__productReviewSettings = {
+                ...(window.__productReviewSettings || {}),
+                brandId: '407543ca-1287-43ab-a66b-5f78dfd94a6a'
+              };
+            `,
+          }}
+        />
+        {/* Step 1: loader.js (async) */}
+        <Script
+          id="productreview-loader"
+          src="https://cdn.productreview.com.au/assets/widgets/loader.js"
+          strategy="afterInteractive"
+          async
+        />
         {children}
         <TawkDesktopOnly />
       </body>

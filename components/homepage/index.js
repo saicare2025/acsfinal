@@ -6,14 +6,15 @@ import CompanyCarousel from "./CompanySection";
 import HomeClientSections from "./HomeClientSections";
 import CreditRepairSection from "./CreditRepair";
 import CreditRepairProcess from "./CreditRepairProcess.js";
-import Testimonials from "./Testmonials"
+import PremiumTestimonialCarousel2 from "./Testmonials";
+
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
       <HeroSection />
       <TrustBadge />
-      <Testimonials />
+      <PremiumTestimonialCarousel2/>
       <WhyChooseUs />
       <HelpSection />
       <CompanyCarousel />

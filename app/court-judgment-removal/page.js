@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Link from "next/link";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
+import { useFAQStructuredData } from "../../hooks/useStructuredData";
 import FooterForm from "@/components/FooterForm";
 import ArrowIcon from "../assets/arrow.png";
 import ArrowIconM from "../assets/arrowm.png";
@@ -23,358 +24,32 @@ const staggerChildren = {
 };
 
 export default function CourtJudgmentRemovalPage() {
-  // ===== JSON-LD (previous @graph version) =====
-  const jsonLd = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "@id":
-            "https://www.australiancreditsolutions.com.au/court-judgment-removal",
-          url: "https://www.australiancreditsolutions.com.au/court-judgment-removal",
-          name: "Court Judgment Removal Australia | Delete Judgment from Credit Report | 98% Success Rate",
-          description:
-            "Remove court judgment from credit report with Australia&apos;s specialists. Set aside unfair judgments, disputed amounts, and incorrect records.",
-          datePublished: "2024-03-15",
-          dateModified: "2024-12-15",
-          inLanguage: "en-AU",
-          isPartOf: {
-            "@type": "WebSite",
-            "@id": "https://www.australiancreditsolutions.com.au/#website",
-            name: "Australian Credit Solutions",
-            url: "https://www.australiancreditsolutions.com.au",
-          },
-          breadcrumb: {
-            "@type": "BreadcrumbList",
-            "@id":
-              "https://www.australiancreditsolutions.com.au/court-judgment-removal#breadcrumb",
-          },
-          about: {
-            "@type": "Thing",
-            name: "Court Judgment Removal Services",
-            description:
-              "Professional service to remove court judgments from Australian credit files and set aside unfair judgments.",
-          },
-          mainEntity: {
-            "@type": "Service",
-            "@id":
-              "https://www.australiancreditsolutions.com.au/court-judgment-removal#service",
-          },
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://www.australiancreditsolutions.com.au/#organization",
-          name: "Australian Credit Solutions",
-          legalName: "Australian Credit Solutions Pty Ltd",
-          url: "https://www.australiancreditsolutions.com.au",
-          logo: "https://www.australiancreditsolutions.com.au/images/acs-logo.png",
-          image:
-            "https://www.australiancreditsolutions.com.au/images/acs-office.jpg",
-          description:
-            "Award-winning Australian court judgment removal specialists helping Australians set aside unfair judgments and restore credit.",
-          telephone: "0489265737",
-          email: "help@australiancreditsolutions.com.au",
-          address: {
-            "@type": "PostalAddress",
-            addressCountry: "AU",
-            addressRegion: "Australia",
-          },
-          sameAs: [
-            "https://www.productreview.com.au/listings/australian-credit-solutions",
-          ],
-          hasCredential: {
-            "@type": "EducationalOccupationalCredential",
-            credentialCategory: "ASIC Australian Credit License",
-            identifier: "532003",
-            recognizedBy: {
-              "@type": "Organization",
-              name: "Australian Securities and Investments Commission",
-              alternateName: "ASIC",
-            },
-          },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "855",
-            bestRating: "5",
-            worstRating: "1",
-          },
-          award: [
-            {
-              "@type": "Award",
-              name: "Industry Excellence Award 2024",
-              description:
-                "Recognized for outstanding court judgment removal services and legal expertise",
-              dateReceived: "2024-01-15",
-            },
-            {
-              "@type": "Award",
-              name: "Industry Excellence Award 2023",
-              description:
-                "Award for exceptional results in court judgment disputes and removal",
-              dateReceived: "2023-01-15",
-            },
-            {
-              "@type": "Award",
-              name: "Industry Excellence Award 2022",
-              description:
-                "Recognition for innovative court judgment challenge methodologies",
-              dateReceived: "2022-01-15",
-            },
-          ],
-        },
-        {
-          "@type": "Service",
-          "@id":
-            "https://www.australiancreditsolutions.com.au/court-judgment-removal#service",
-          name: "Court Judgment Removal Services Australia",
-          description:
-            "Professional court judgment removal services to set aside unfair judgments and remove incorrect court judgments from credit files.",
-          provider: {
-            "@type": "Organization",
-            "@id": "https://www.australiancreditsolutions.com.au/#organization",
-          },
-          areaServed: { "@type": "Country", name: "Australia" },
-          serviceType: "Court Judgment Removal",
-          category: "Legal Financial Services",
-          offers: [
-            {
-              "@type": "Offer",
-              name: "Emergency Judgment Removal – Critical Finance Cases",
-              description:
-                "Expedited court applications for urgent finance situations. Timeline: 3–6 weeks typically.",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                price: "1650",
-                priceCurrency: "AUD",
-                description: "Includes $330 administration fee",
-              },
-            },
-            {
-              "@type": "Offer",
-              name: "Standard Judgment Challenge – Comprehensive Approach",
-              description:
-                "Full legal assessment and court applications for complex cases. Timeline: 6–12 weeks typically.",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                price: "1100",
-                priceCurrency: "AUD",
-                description: "Includes $330 administration fee",
-              },
-            },
-            {
-              "@type": "Offer",
-              name: "Post-Payment Judgment Cleanup – Satisfaction Issues",
-              description:
-                "For paid judgments not showing as satisfied. Timeline: 4–8 weeks typically.",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                price: "880",
-                priceCurrency: "AUD",
-                description: "Includes $330 administration fee",
-              },
-            },
-          ],
-          additionalProperty: [
-            {
-              "@type": "PropertyValue",
-              name: "Success Rate",
-              value: "98% when we take cases",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "License Number",
-              value: "ASIC ACL 532003",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "Service Coverage",
-              value: "Australia-wide all courts",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "Policy",
-              value: "No Win No Fee",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "Specialisation",
-              value: "Court judgment removal and setting aside",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "Legal Support",
-              value: "Solicitor network for court applications",
-            },
-          ],
-        },
-        {
-          "@type": "FAQPage",
-          mainEntity: [
-            {
-              "@type": "Question",
-              name: "Can all court judgments be removed from credit files?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "No, only judgments with legal grounds for challenge can be removed or set aside. Valid judgments obtained through proper procedures stay on your file for 5 years.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "What&apos;s the difference between removing and setting aside a judgment?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Setting aside means getting the court to cancel the original judgment (usually requiring a new hearing). Removal means correcting credit file reporting errors or satisfied judgments.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "How much does it cost to set aside a court judgment?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Court filing fees vary by state but are usually $100–$300. Solicitor fees for complex applications can be $2,000–$5,000+. Our service includes solicitor assistance where required at no extra cost.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Will setting aside a judgment remove it from my credit file?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes, if a judgment is successfully set aside, it must be removed from your credit file. We ensure all credit bureaus update their records.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Can I set aside a judgment if I actually owed the money?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Possibly, if there were procedural problems with how the judgment was obtained. Even valid debts can result in invalid judgments if proper legal processes weren’t followed.",
-              },
-            },
-          ],
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id":
-            "https://www.australiancreditsolutions.com.au/court-judgment-removal#breadcrumb",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://www.australiancreditsolutions.com.au",
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Credit Repair Services",
-              item: "https://www.australiancreditsolutions.com.au/credit-repair-australia",
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: "Court Judgment Removal",
-              item: "https://www.australiancreditsolutions.com.au/court-judgment-removal",
-            },
-          ],
-        },
-        {
-          "@type": "Review",
-          itemReviewed: {
-            "@type": "Organization",
-            name: "Australian Credit Solutions",
-          },
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5",
-          },
-          author: { "@type": "Person", name: "Steve R" },
-          datePublished: "2024-03-18",
-          reviewBody:
-            "Had court judgment set aside after never receiving proper notice. ACS proved defective service and got it removed.",
-        },
-        {
-          "@type": "HowTo",
-          name: "How to Remove Court Judgment from Credit File Australia",
-          description:
-            "Step-by-step process to remove court judgments from Australian credit files with professional legal assistance.",
-          totalTime: "PT20M",
-          supply: [
-            {
-              "@type": "HowToSupply",
-              name: "Original court judgment documents",
-            },
-            { "@type": "HowToSupply", name: "Evidence of procedural defects" },
-            { "@type": "HowToSupply", name: "Payment records if applicable" },
-          ],
-          step: [
-            {
-              "@type": "HowToStep",
-              position: 1,
-              name: "Confidential Phone Discussion",
-              text: "Call 0489 265 737 for detailed discussion about judgment background and circumstances.",
-              url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#consultation",
-            },
-            {
-              "@type": "HowToStep",
-              position: 2,
-              name: "Complete Judgment Investigation",
-              text: "Obtain full court records and credit file details to identify potential grounds for challenge.",
-              url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#investigation",
-            },
-            {
-              "@type": "HowToStep",
-              position: 3,
-              name: "Legal Grounds Assessment",
-              text: "Assess all possible legal grounds and recommend best approach — court application or credit bureau challenge.",
-              url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#assessment",
-            },
-            {
-              "@type": "HowToStep",
-              position: 4,
-              name: "Professional Challenge Process",
-              text: "Handle complex legal and administrative work while keeping you fully informed.",
-              url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#challenge",
-            },
-            {
-              "@type": "HowToStep",
-              position: 5,
-              name: "Credit File Cleanup",
-              text: "Ensure credit file is properly updated and provide guidance on future judgment protection.",
-              url: "https://www.australiancreditsolutions.com.au/court-judgment-removal#cleanup",
-            },
-          ],
-        },
-        {
-          "@type": "LegalService",
-          "@id":
-            "https://www.australiancreditsolutions.com.au/court-judgment-removal#legal-service",
-          name: "Court Judgment Removal Legal Services",
-          description:
-            "Professional legal assistance for setting aside court judgments and removing them from Australian credit files.",
-          provider: {
-            "@type": "Organization",
-            "@id": "https://www.australiancreditsolutions.com.au/#organization",
-          },
-          areaServed: { "@type": "Country", name: "Australia" },
-          serviceArea: [
-            { "@type": "State", name: "New South Wales" },
-            { "@type": "State", name: "Victoria" },
-            { "@type": "State", name: "Queensland" },
-            { "@type": "State", name: "Western Australia" },
-            { "@type": "State", name: "South Australia" },
-            { "@type": "State", name: "Tasmania" },
-            { "@type": "State", name: "Northern Territory" },
-            { "@type": "State", name: "Australian Capital Territory" },
-          ],
-          serviceType: "Debt Recovery and Judgment Law",
-        },
-      ],
-    }),
-    []
-  );
+  // FAQ data for structured data
+  const faqData = [
+    {
+      question: "Can all court judgments be removed from credit files?",
+      answer: "No, only judgments with legal grounds for challenge can be removed or set aside. Valid judgments obtained through proper procedures stay on your file for 5 years."
+    },
+    {
+      question: "What's the difference between removing and setting aside a judgment?",
+      answer: "Setting aside means getting the court to cancel the original judgment (usually requiring a new hearing). Removal means correcting credit file reporting errors or satisfied judgments."
+    },
+    {
+      question: "How much does it cost to set aside a court judgment?",
+      answer: "Court filing fees vary by state but are usually $100–$300. Solicitor fees for complex applications can be $2,000–$5,000+. Our service includes solicitor assistance where required at no extra cost."
+    },
+    {
+      question: "Will setting aside a judgment remove it from my credit file?",
+      answer: "Yes, if a judgment is successfully set aside, it must be removed from your credit file. We ensure all credit bureaus update their records."
+    },
+    {
+      question: "Can I set aside a judgment if I actually owed the money?",
+      answer: "Possibly, if there were procedural problems with how the judgment was obtained. Even valid debts can result in invalid judgments if proper legal processes weren't followed."
+    }
+  ];
+
+  // Use structured data hook for FAQ
+  useFAQStructuredData(faqData);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-slate-900">
@@ -1134,12 +809,6 @@ export default function CourtJudgmentRemovalPage() {
         </motion.div>
       </section>
 
-      {/* JSON-LD */}
-      <script
-        type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <Footer />
     </main>
   );

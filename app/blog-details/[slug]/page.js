@@ -4,6 +4,7 @@ import { JSDOM } from 'jsdom';
 import MainLayout from '../../MainLayout';
 import HeroSection from '../../../components/homepage/HeroSection4';
 import Link from 'next/link';
+import BlogStructuredDataClient from '../../../components/BlogStructuredDataClient';
 
 // ✅ This is now a server component by default
 export default async function BlogPostPage({ params }) {
@@ -35,6 +36,12 @@ export default async function BlogPostPage({ params }) {
 
   return (
     <MainLayout>
+      <BlogStructuredDataClient 
+        blogData={{
+          datePublished: '2024-01-01', // You can extract this from post data if available
+          dateModified: new Date().toISOString().split('T')[0]
+        }}
+      />
       <HeroSection />
       <div className="max-w-5xl mx-auto px-4 py-6 lg:py-12">
         <div className="flex flex-col lg:flex-row gap-8">

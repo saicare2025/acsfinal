@@ -26,7 +26,7 @@ const CTASection = dynamic(() => import("./CTA"), {
 export default function HomeClientSections() {
   return (
     <>
-      <Testimonials3DCarousel />
+      
       <TransformationalJourney />
       <ScrollTestimonials />
       <CTASection />
