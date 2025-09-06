@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
           </>
         )}
 
-        {/* TikTok (deferred without passing handlers) */}
+      
         {TIKTOK_ID && (
           <Script id="tiktok-deferred" strategy="lazyOnload">
             {`
