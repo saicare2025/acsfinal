@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
@@ -11,6 +11,7 @@ import {
   NewspaperIcon,
   ChatBubbleLeftRightIcon,
   QuestionMarkCircleIcon,
+  ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 import {
   FacebookIcon,
@@ -49,32 +50,85 @@ export function PinterestIcon(props) {
 }
 
 /* Store icon COMPONENTS here; instantiate them during render */
+const SERVICE_LINKS = [
+  { name: "Credit Enquiry Removal", href: "/credit-enquiry-removal" },
+  { name: "Court Judgment Removal", href: "/court-judgment-removal" },
+  { name: "Worst Repayment History Removal", href: "/worst-repayment-history-removal" },
+  { name: "Credit Repair — Home Loan Approval", href: "/credit-repair-home-loan-approval" },
+  { name: "Credit Repair for Car Finance", href: "/credit-repair-for-car-finance" },
+];
+
 const NAV_LINKS = [
   { name: "Home", href: "/", Icon: HomeIcon },
-  { name: "Our Services", href: "/our-services", Icon: CogIcon },
+  { name: "Our Services", href: "/our-services", Icon: CogIcon, hasDropdown: true },
   { name: "Credit Score", href: "/credit-score", Icon: NewspaperIcon },
   { name: "Testimonials", href: "/testimonial", Icon: ChatBubbleLeftRightIcon },
   { name: "FAQ", href: "/faq", Icon: QuestionMarkCircleIcon },
 ];
 
 function MobileMenu({ isOpen, navLinks, onClose }) {
+  const [expandedService, setExpandedService] = useState(false);
+
   if (!isOpen) return null;
 
   return (
     <div className="lg:hidden bg-white border-t border-gray-200 z-40">
       <nav className="px-2 py-3 space-y-1">
         {navLinks.map((link) => (
-          <Link
-            key={link.name}
-            href={link.href}
-            className="flex items-center px-3 py-2 text-base font-bold text-gray-900 hover:text-blue-500 hover:bg-blue-50 rounded-md"
-            onClick={onClose}
-          >
-            <span className="mr-3">
-              <link.Icon className="w-5 h-5" aria-hidden />
-            </span>
-            {link.name}
-          </Link>
+          <div key={link.name}>
+            {link.hasDropdown ? (
+              <div>
+                <button
+                  className="flex items-center justify-between w-full px-3 py-2 text-base font-bold text-gray-900 hover:text-blue-500 hover:bg-blue-50 rounded-md"
+                  onClick={() => setExpandedService(!expandedService)}
+                  aria-expanded={expandedService}
+                >
+                  <div className="flex items-center">
+                    <span className="mr-3">
+                      <link.Icon className="w-5 h-5" aria-hidden />
+                    </span>
+                    {link.name}
+                  </div>
+                  <ChevronDownIcon 
+                    className={`w-4 h-4 transition-transform ${expandedService ? 'transform rotate-180' : ''}`}
+                    aria-hidden 
+                  />
+                </button>
+                {expandedService && (
+                  <div className="ml-8 mt-1 space-y-1">
+                    <Link
+                      href={link.href}
+                      className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50 rounded-md"
+                      onClick={onClose}
+                    >
+                      View All Services
+                    </Link>
+                    {SERVICE_LINKS.map((serviceLink) => (
+                      <Link
+                        key={serviceLink.href}
+                        href={serviceLink.href}
+                        className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50 rounded-md"
+                        onClick={onClose}
+                      >
+                        {serviceLink.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                href={link.href}
+                className="flex items-center px-3 py-2 text-base font-bold text-gray-900 hover:text-blue-500 hover:bg-blue-50 rounded-md"
+                onClick={onClose}
+              >
+                <span className="mr-3">
+                  <link.Icon className="w-5 h-5" aria-hidden />
+                </span>
+                {link.name}
+              </Link>
+            )}
+          </div>
         ))}
       </nav>
 
@@ -105,7 +159,10 @@ export default function Header() {
   const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [mounted, setMounted] = useState(false); // avoid SSR/client mismatch
+  const dropdownRef = useRef(null);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
@@ -114,6 +171,79 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Handle click outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscape);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isDropdownOpen]);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 150);
+  };
+
+  const handleDropdownClick = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setIsDropdownOpen(!isDropdownOpen);
+    } else if (event.key === 'ArrowDown' && isDropdownOpen) {
+      event.preventDefault();
+      // Focus first dropdown item
+      const firstDropdownItem = dropdownRef.current?.querySelector('a');
+      firstDropdownItem?.focus();
+    }
+  };
+
+  const handleDropdownKeyDown = (event, index, totalItems) => {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      const nextIndex = (index + 1) % totalItems;
+      const nextItem = dropdownRef.current?.querySelectorAll('a')[nextIndex];
+      nextItem?.focus();
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      const prevIndex = index === 0 ? totalItems - 1 : index - 1;
+      const prevItem = dropdownRef.current?.querySelectorAll('a')[prevIndex];
+      prevItem?.focus();
+    } else if (event.key === 'Escape') {
+      event.preventDefault();
+      setIsDropdownOpen(false);
+      // Focus back to the trigger button
+      dropdownRef.current?.querySelector('button')?.focus();
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50">
@@ -212,16 +342,72 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-6">
             <nav className="flex items-center space-x-8">
               {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="flex items-center text-gray-900 font-medium hover:text-blue-500 transition-colors"
-                >
-                  <span className="mr-2">
-                    <link.Icon className="w-5 h-5" aria-hidden />
-                  </span>
-                  {link.name}
-                </Link>
+                <div key={link.name} className="relative">
+                  {link.hasDropdown ? (
+                    <div 
+                      className="relative"
+                      ref={dropdownRef}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <button
+                        className="flex items-center text-gray-900 font-medium hover:text-blue-500 transition-colors"
+                        onClick={handleDropdownClick}
+                        onKeyDown={handleKeyDown}
+                        aria-expanded={isDropdownOpen}
+                        aria-haspopup="true"
+                      >
+                        <span className="mr-2">
+                          <link.Icon className="w-5 h-5" aria-hidden />
+                        </span>
+                        {link.name}
+                        <ChevronDownIcon 
+                          className={`ml-1 w-4 h-4 transition-transform ${isDropdownOpen ? 'transform rotate-180' : ''}`}
+                          aria-hidden 
+                        />
+                      </button>
+                      
+                      {/* Dropdown Menu */}
+                      {isDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                          <Link
+                            href={link.href}
+                            className="block px-4 py-2 text-sm font-medium text-gray-900 hover:text-blue-500 hover:bg-blue-50 transition-colors focus:outline-none focus:bg-blue-50 focus:text-blue-500"
+                            onClick={() => setIsDropdownOpen(false)}
+                            onKeyDown={(e) => handleDropdownKeyDown(e, 0, SERVICE_LINKS.length + 1)}
+                          >
+                            <div className="flex items-center">
+                              <link.Icon className="w-4 h-4 mr-2" aria-hidden />
+                              View All Services
+                            </div>
+                          </Link>
+                          <hr className="my-2 border-gray-100" />
+                          {SERVICE_LINKS.map((serviceLink, index) => (
+                            <Link
+                              key={serviceLink.href}
+                              href={serviceLink.href}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-500 hover:bg-blue-50 transition-colors focus:outline-none focus:bg-blue-50 focus:text-blue-500"
+                              onClick={() => setIsDropdownOpen(false)}
+                              onKeyDown={(e) => handleDropdownKeyDown(e, index + 1, SERVICE_LINKS.length + 1)}
+                            >
+                              {serviceLink.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="flex items-center text-gray-900 font-medium hover:text-blue-500 transition-colors"
+                    >
+                      <span className="mr-2">
+                        <link.Icon className="w-5 h-5" aria-hidden />
+                      </span>
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
               ))}
             </nav>
 

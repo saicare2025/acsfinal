@@ -1,6 +1,6 @@
 "use client";
 import HeroSection from "../../components/homepage/HeroSection";
-import Testimonials3DCarousel from "../../components/homepage/TestmonialHero";
+import Testimonials3DCarousel from "../../components/homepage/Testmonials";
 import WhyChooseUs from "../../components/homepage/WhyChooseUs";
 import HelpSection from "../../components/homepage/HowCan";
 import MainLayout from "../MainLayout";
