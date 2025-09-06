@@ -9,10 +9,79 @@ import TestimonialSection from "../../components/homepage/ScrollTestimonials";
 import VideoServicesSection from "../../components/homepage/VideoServicesSection";
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
+import { useFAQStructuredData } from "../../hooks/useStructuredData";
+import { useEffect } from "react";
 
 // ✅ SEO Metadata for Melbourne Credit Repair
+export const metadata = {
+  title: "Melbourne Credit Repair Experts | Australian Credit Solutions",
+  description:
+    "Improve your credit score with Melbourne's leading credit repair specialists. Australian Credit Solutions removes defaults, corrects credit report errors, and helps you secure better financial opportunities.",
+  keywords: [
+    "Melbourne credit repair",
+    "credit repair services Melbourne",
+    "fix credit score Melbourne",
+    "remove credit defaults Melbourne",
+    "Australian Credit Solutions"
+  ],
+  openGraph: {
+    title: "Melbourne Credit Repair Experts | Australian Credit Solutions",
+    description:
+      "Trusted Melbourne credit repair services to remove defaults, fix errors, and improve your credit score fast.",
+    url: "https://www.australiancreditsolutions.com.au/credit-repair-melbourne",
+    siteName: "Australian Credit Solutions",
+    type: "website",
+    locale: "en_AU",
+    images: [
+      {
+        url: "https://www.australiancreditsolutions.com.au/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Melbourne Credit Repair Experts"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://www.australiancreditsolutions.com.au/credit-repair-melbourne"
+  }
+};
 
 export default function Home() {
+  // FAQ data for structured data (common credit repair questions)
+  const faqData = [
+    {
+      question: "How does credit repair work in Melbourne?",
+      answer: "Credit repair in Melbourne involves reviewing your credit report, identifying errors or unfair listings, and working with credit bureaus and creditors to have them corrected or removed. Australian Credit Solutions uses legal expertise to challenge inaccurate information on your credit file."
+    },
+    {
+      question: "How long does credit repair take in Melbourne?",
+      answer: "Credit repair timeframes vary depending on the complexity of your case. Simple corrections can take 2-4 weeks, while more complex cases involving defaults or judgments may take 6-12 weeks. We provide clear expectations during your free assessment."
+    },
+    {
+      question: "Can you remove defaults from my credit file in Melbourne?",
+      answer: "We can help remove defaults that were incorrectly recorded, unfairly applied, or don't comply with credit reporting guidelines. Valid defaults that were properly applied may need to remain for their statutory period."
+    },
+    {
+      question: "Is credit repair legal in Melbourne?",
+      answer: "Yes, credit repair is completely legal in Melbourne and across Australia. We use your rights under Australian law to dispute incorrect or unfair listings. Our work is fully compliant and regulated under our Australian Credit Licence (ACL 532003)."
+    },
+    {
+      question: "How much does credit repair cost in Melbourne?",
+      answer: "Our fees are transparent and fixed based on your specific situation. We offer a free assessment, no upfront fees, and flexible payment plans. Contact us for a personalized quote based on your credit repair needs."
+    }
+  ];
+
+  // Use structured data hook for FAQ
+  useFAQStructuredData(faqData);
+
+  // Trigger structured data update for service page detection
+  useEffect(() => {
+    // Small delay to ensure DOM is ready
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('structuredDataUpdate'));
+    }, 100);
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col">
       <Header />
