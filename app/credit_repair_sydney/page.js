@@ -9,10 +9,42 @@ import TestimonialSection from "../../components/homepage/ScrollTestimonials";
 import VideoServicesSection from "../../components/homepage/VideoServicesSection";
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
+import { useFAQStructuredData } from "../../hooks/useStructuredData";
+import { useEffect } from "react";
 
 // ✅ SEO Metadata for Sydney Credit Repair
 
 export default function Home() {
+  // FAQ data for Sydney credit repair
+  const faqData = [
+    {
+      question: "How does credit repair work in Sydney?",
+      answer: "Credit repair in Sydney involves reviewing your credit report for errors or unfair listings, then working with credit bureaus and creditors to have them corrected or removed. Australian Credit Solutions specializes in challenging inaccurate information using your rights under Australian law."
+    },
+    {
+      question: "How long does credit repair take in Sydney?", 
+      answer: "Credit repair timeframes vary by case complexity. Simple corrections typically take 2-4 weeks, while complex cases involving defaults or judgments may take 6-12 weeks. We provide realistic expectations during your free consultation."
+    },
+    {
+      question: "Can you help remove defaults in Sydney?",
+      answer: "Yes, we can help remove defaults that were incorrectly recorded, unfairly applied, or don't comply with credit reporting guidelines in Sydney and across Australia. We have expertise in challenging various types of negative listings."
+    },
+    {
+      question: "Is credit repair legal in Sydney?",
+      answer: "Absolutely. Credit repair is completely legal in Sydney and throughout Australia. We operate under Australian Credit Licence (ACL 532003) and use your legal rights to dispute incorrect or unfair credit listings."
+    }
+  ];
+
+  // Use structured data hooks
+  useFAQStructuredData(faqData);
+
+  // Trigger structured data update
+  useEffect(() => {
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('structuredDataUpdate'));
+    }, 100);
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col">
       <Header />

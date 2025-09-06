@@ -316,7 +316,9 @@ export function isServicePage(pathname) {
     'credit-enquiry-removal',
     'worst-repayment-history-removal',
     'credit-score',
-    'default-removal'
+    'default-removal',
+    'credit_repair_sydney',
+    'our-services'
   ];
   
   return servicePatterns.some(pattern => pathname.includes(pattern));
@@ -343,15 +345,38 @@ export function extractServiceName(title, pathname) {
     const titleLower = title.toLowerCase();
     if (titleLower.includes('court judgment removal')) return 'Court Judgment Removal';
     if (titleLower.includes('credit enquiry removal')) return 'Credit Enquiry Removal';
-    if (titleLower.includes('credit repair')) return 'Credit Repair Services';
+    if (titleLower.includes('credit repair')) {
+      // Check for location-specific credit repair
+      if (titleLower.includes('melbourne')) return 'Credit Repair Services Melbourne';
+      if (titleLower.includes('sydney')) return 'Credit Repair Services Sydney';
+      if (titleLower.includes('brisbane')) return 'Credit Repair Services Brisbane';
+      if (titleLower.includes('perth')) return 'Credit Repair Services Perth';
+      if (titleLower.includes('adelaide')) return 'Credit Repair Services Adelaide';
+      if (titleLower.includes('darwin')) return 'Credit Repair Services Darwin';
+      if (titleLower.includes('hobart')) return 'Credit Repair Services Hobart';
+      if (titleLower.includes('canberra')) return 'Credit Repair Services Canberra';
+      return 'Credit Repair Services';
+    }
     if (titleLower.includes('worst repayment history')) return 'Worst Repayment History Removal';
+    if (titleLower.includes('our services')) return 'Credit Repair Services';
   }
 
   // Fall back to pathname
   if (pathname.includes('court-judgment-removal')) return 'Court Judgment Removal';
   if (pathname.includes('credit-enquiry-removal')) return 'Credit Enquiry Removal';
-  if (pathname.includes('credit-repair')) return 'Credit Repair Services';
   if (pathname.includes('worst-repayment-history')) return 'Worst Repayment History Removal';
+  if (pathname.includes('our-services')) return 'Credit Repair Services';
+  
+  // Location-specific credit repair
+  if (pathname.includes('credit-repair-melbourne')) return 'Credit Repair Services Melbourne';
+  if (pathname.includes('credit-repair-sydney') || pathname.includes('credit_repair_sydney')) return 'Credit Repair Services Sydney';
+  if (pathname.includes('credit-repair-brisbane')) return 'Credit Repair Services Brisbane';
+  if (pathname.includes('credit-repair-perth')) return 'Credit Repair Services Perth';
+  if (pathname.includes('credit-repair-adelaide')) return 'Credit Repair Services Adelaide';
+  if (pathname.includes('credit-repair-darwin')) return 'Credit Repair Services Darwin';
+  if (pathname.includes('credit-repair-hobart')) return 'Credit Repair Services Hobart';
+  if (pathname.includes('credit-repair-canberra')) return 'Credit Repair Services Canberra';
+  if (pathname.includes('credit-repair')) return 'Credit Repair Services';
   
   return title; // Default fallback
 }
