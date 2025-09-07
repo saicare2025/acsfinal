@@ -31,13 +31,13 @@ export default function HeroSection() {
           {/* Left Side - Content */}
           <div className="w-full lg:w-3/5 flex flex-col">
             <MotionFadeUp className="mb-8">
-              <h1 className="text-3xl text-center lg:text-start sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-gray-700">
+              <h3 className="text-3xl text-center lg:text-start sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-gray-700">
                 Get Your <span className="text-blue">Free Credit</span> Assessment Today
-              </h1>
+              </h3>
 
-              <h2 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-4">
+              <h4 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-4">
                 No Win, No Fee - Terms Apply*
-              </h2>
+              </h4>
 
               <MotionFadeUp delay={0.05}>
                 <div className="w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">

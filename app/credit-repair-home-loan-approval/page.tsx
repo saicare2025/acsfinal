@@ -10,6 +10,7 @@ import FooterForm from "@/components/FooterForm";
 import ArrowIcon from "../assets/arrow.png";
 import ArrowIconM from "../assets/arrowm.png";
 import Image from "next/image";
+import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
 // Animation variants
 const fadeIn = {
@@ -22,367 +23,31 @@ const staggerChildren = {
 };
 
 export default function CreditRepairHomeLoanApprovalPage() {
-  // ===== JSON-LD (consolidated @graph for this page) =====
-  const jsonLd = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "@id":
-            "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval",
-          url: "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval",
-          name: "Credit Repair for Home Loan Approval Australia | Fix Bad Credit for Mortgage Fast",
-          description:
-            "Fix bad credit for home loan approval with Australia\u2019s specialists. Improve credit score for mortgage, remove defaults, clean repayment history, and get pre-approval ready.",
-          datePublished: "2024-03-15",
-          dateModified: "2024-12-15",
-          inLanguage: "en-AU",
-          isPartOf: {
-            "@type": "WebSite",
-            "@id": "https://www.australiancreditsolutions.com.au/#website",
-            name: "Australian Credit Solutions",
-            url: "https://www.australiancreditsolutions.com.au",
-          },
-          breadcrumb: {
-            "@type": "BreadcrumbList",
-            "@id":
-              "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval#breadcrumb",
-          },
-          about: {
-            "@type": "Thing",
-            name: "Credit Repair for Home Loan Approval",
-            description:
-              "Professional service to fix bad credit specifically for home loan and mortgage approval in Australia",
-          },
-          mainEntity: {
-            "@type": "Service",
-            "@id":
-              "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval#service",
-          },
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://www.australiancreditsolutions.com.au/#organization",
-          name: "Australian Credit Solutions",
-          legalName: "Australian Credit Solutions Pty Ltd",
-          url: "https://www.australiancreditsolutions.com.au",
-          logo: "https://www.australiancreditsolutions.com.au/images/acs-logo.png",
-          image:
-            "https://www.australiancreditsolutions.com.au/images/acs-office.jpg",
-          description:
-            "Award-winning Australian credit repair specialists for home loan approval. Help Australians fix bad credit before mortgage applications.",
-          telephone: "0489265737",
-          email: "help@australiancreditsolutions.com.au",
-          address: {
-            "@type": "PostalAddress",
-            addressCountry: "AU",
-            addressRegion: "Australia",
-          },
-          sameAs: [
-            "https://www.productreview.com.au/listings/australian-credit-solutions",
-          ],
-          hasCredential: {
-            "@type": "EducationalOccupationalCredential",
-            credentialCategory: "ASIC Australian Credit License",
-            identifier: "532003",
-            recognizedBy: {
-              "@type": "Organization",
-              name: "Australian Securities and Investments Commission",
-              alternateName: "ASIC",
-            },
-          },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "855",
-            bestRating: "5",
-            worstRating: "1",
-          },
-          award: [
-            {
-              "@type": "Award",
-              name: "Industry Excellence Award 2024",
-              description:
-                "Recognized for outstanding home loan credit repair services and mortgage approval success",
-              dateReceived: "2024-01-15",
-            },
-            {
-              "@type": "Award",
-              name: "Industry Excellence Award 2023",
-              description:
-                "Award for exceptional results in credit repair for home loan approvals",
-              dateReceived: "2023-01-15",
-            },
-            {
-              "@type": "Award",
-              name: "Industry Excellence Award 2022",
-              description:
-                "Recognition for innovative credit repair methodologies for mortgage applications",
-              dateReceived: "2022-01-15",
-            },
-          ],
-        },
-        {
-          "@type": "Service",
-          "@id":
-            "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval#service",
-          name: "Credit Repair for Home Loan Approval Services Australia",
-          description:
-            "Professional credit repair services specifically for home loan approval. Fix bad credit for mortgage applications: remove defaults, correct repayment history, and clean credit files across Equifax, Experian, and Illion.",
-          provider: {
-            "@type": "Organization",
-            "@id": "https://www.australiancreditsolutions.com.au/#organization",
-          },
-          areaServed: { "@type": "Country", name: "Australia" },
-          serviceType: "Credit Repair for Home Loan Approval",
-          category: "Financial Services",
-          offers: [
-            {
-              "@type": "Offer",
-              name: "Emergency Pre-Approval Service - House Under Contract",
-              description:
-                "Same-day assessment for urgent home loan situations. Timeline: 1-3 weeks typically.",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                price: "1320",
-                priceCurrency: "AUD",
-                description: "Includes $330 administration fee",
-              },
-            },
-            {
-              "@type": "Offer",
-              name: "Express Home Loan Credit Cleanup - House Hunting",
-              description:
-                "Priority processing for active house hunters. Timeline: 3-6 weeks typically.",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                price: "990",
-                priceCurrency: "AUD",
-                description: "Includes $330 administration fee",
-              },
-            },
-            {
-              "@type": "Offer",
-              name: "Complete Credit Overhaul - Planning to Buy",
-              description:
-                "Comprehensive cleanup for future home buyers. Timeline: 6-12 weeks typically.",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                price: "770",
-                priceCurrency: "AUD",
-                description: "Includes $330 administration fee",
-              },
-            },
-          ],
-          additionalProperty: [
-            {
-              "@type": "PropertyValue",
-              name: "Success Rate",
-              value: "98% when we take cases",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "License Number",
-              value: "ASIC ACL 532003",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "Service Coverage",
-              value: "Australia-wide",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "Policy",
-              value: "No Win No Fee",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "Specialisation",
-              value: "Credit repair specifically for home loan approval",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "Target Audience",
-              value: "Home buyers and property investors",
-            },
-          ],
-        },
-        {
-          "@type": "FAQPage",
-          mainEntity: [
-            {
-              "@type": "Question",
-              name: "How long does credit repair take for home loan approval?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Depends on your issues and timeline. Simple problems can be fixed in 1\u20133 weeks for emergency cases. Complex issues typically take 6\u201312 weeks. We always give honest timeframes during assessment.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Will fixing my credit guarantee home loan approval?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "We can\u2019t guarantee loan approval \u2014 that depends on income, deposit, and employment as well. But clean credit dramatically improves your chances and rates.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Should I wait to apply for pre-approval until my credit is fixed?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Usually yes. Failed pre-approvals create more credit enquiries, making the problem worse. Better to fix credit first, then apply with confidence.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "What credit score do I need for home loan approval?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Depends on the lender and loan amount. Generally ~620+ for non-bank lenders, ~650+ for major banks, ~700+ for the best rates.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Can I buy a house with defaults on my credit file?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Possibly, but options are limited with worse rates. It\u2019s usually better to remove defaults first, then apply with clean credit.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "How much does credit repair cost vs. what I\u2019ll save on my mortgage?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Our fees range from $770\u2013$1320. On a $500,000 loan, improving from poor to good credit can save well over $100,000 over the term.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "What if I\u2019m already under contract to buy?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "We offer emergency service for signed contracts. Contact us immediately \u2014 we\u2019ve helped clients fix critical issues in 1\u20133 weeks.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "How to repair credit score for home loan application?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Focus on removing defaults and court judgments, correcting payment history errors, removing unauthorised enquiries, and ensuring cross-bureau consistency.",
-              },
-            },
-          ],
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id":
-            "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval#breadcrumb",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://www.australiancreditsolutions.com.au",
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Credit Repair Services",
-              item: "https://www.australiancreditsolutions.com.au/credit-repair-australia",
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: "Credit Repair for Home Loan Approval",
-              item: "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval",
-            },
-          ],
-        },
-        {
-          "@type": "Review",
-          itemReviewed: {
-            "@type": "Organization",
-            name: "Australian Credit Solutions",
-          },
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5",
-          },
-          author: { "@type": "Person", name: "Sarah M" },
-          datePublished: "2024-03-20",
-          reviewBody:
-            "Removed gym default in 3 weeks that was killing our home loan applications. Got pre-approval at 6.1% variable with 5% deposit.",
-        },
-        {
-          "@type": "HowTo",
-          name: "How to Fix Credit for Mortgage Approval Australia",
-          description:
-            "Step-by-step guide to repair credit for home loan approval with professional assistance",
-          totalTime: "PT15M",
-          supply: [
-            { "@type": "HowToSupply", name: "Credit reports from all bureaus" },
-            {
-              "@type": "HowToSupply",
-              name: "Home loan timeline and requirements",
-            },
-            { "@type": "HowToSupply", name: "Target lender information" },
-          ],
-          step: [
-            {
-              "@type": "HowToStep",
-              position: 1,
-              name: "Urgent Phone Consultation",
-              text: "Call 0489 265 737 to discuss home buying timeline and credit concerns for immediate assessment.",
-              url: "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval#consultation",
-            },
-            {
-              "@type": "HowToStep",
-              position: 2,
-              name: "Credit File Analysis for Home Loans",
-              text: "Complete analysis specifically focused on mortgage approval requirements from all three bureaus.",
-              url: "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval#analysis",
-            },
-            {
-              "@type": "HowToStep",
-              position: 3,
-              name: "Home Loan Lender Strategy",
-              text: "Understand what each major lender requires and which credit issues affect which lenders.",
-              url: "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval#strategy",
-            },
-            {
-              "@type": "HowToStep",
-              position: 4,
-              name: "Priority Credit Repair",
-              text: "Focus on credit problems with biggest impact on home loan approval and interest rates.",
-              url: "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval#repair",
-            },
-            {
-              "@type": "HowToStep",
-              position: 5,
-              name: "Mortgage-Ready Documentation",
-              text: "Receive documentation proving credit improvements for broker or bank pre-approval process.",
-              url: "https://www.australiancreditsolutions.com.au/credit-repair-home-loan-approval#documentation",
-            },
-          ],
-        },
-      ],
-    }),
-    []
-  );
+  const structuredData = generateMinimalStructuredData({
+    pathname: "/credit-repair-home-loan-approval",
+    title: "Credit Repair for Home Loan Approval | Australian Credit Solutions",
+    description:
+      "Credit repair services for home loan approval. Improve your credit score to secure mortgage approval with better terms and interest rates.",
+    isService: true,
+    serviceType: "Credit Repair for Home Loan Approval",
+  });
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       <Header />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
         {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`
+        }}></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center lg:gap-12 lg:flex-row lg:items-start">
@@ -776,7 +441,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
               "Daily updates",
               "Direct lender communication",
             ]}
-            price="$1,320"
+           
           />
           <PriceCard
             name="Express Home Loan Credit Cleanup"
@@ -787,7 +452,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
               "Weekly updates",
               "Mortgage-ready documentation",
             ]}
-            price="$990"
+           
             featured
           />
           <PriceCard
@@ -799,7 +464,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
               "Score optimisation",
               "Ongoing support",
             ]}
-            price="$770"
+           
           />
         </motion.div>
         <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
@@ -901,11 +566,6 @@ export default function CreditRepairHomeLoanApprovalPage() {
         </motion.div>
       </section>
 
-      {/* JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <Footer />
     </main>
   );
@@ -966,7 +626,7 @@ function PriceCard({
   timeline,
   perfectFor,
   includes,
-  price,
+
   featured = false,
 }) {
   return (
@@ -1007,7 +667,7 @@ function PriceCard({
         ))}
       </ul>
       <div className="mt-4 flex items-end justify-between">
-        <div className="text-2xl font-extrabold text-slate-900">{price}</div>
+       
         <Link
           href="/free-credit-assessment"
           className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"

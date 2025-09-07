@@ -1,161 +1,91 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Link from "next/link";
-import { useMemo } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import Header from "@/components/Header";
 import FooterForm from "@/components/FooterForm";
-import ArrowIcon from "../assets/arrow.png";
-import ArrowIconM from "../assets/arrowm.png";
-import Image from "next/image";
+import Footer from "@/components/Footer";
+
+// Animation variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+const staggerChildren = {
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+// Arrow components (simplified as divs)
+const ArrowIcon = () => (
+  <div className="w-48 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue text-sm font-medium">
+    Desktop Arrow →
+  </div>
+);
+
+const ArrowIconM = () => (
+  <div className="w-32 h-20 bg-blue-100 rounded-lg flex items-center justify-center text-blue text-sm font-medium">
+    Mobile Arrow ↓
+  </div>
+);
 
 export default function RHIRemovalPage() {
-  const jsonLd = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "@id": "https://www.australiancreditsolutions.com.au/rhi-removal",
-          url: "https://www.australiancreditsolutions.com.au/rhi-removal",
-          name: "RHI Removal Australia | Remove Repayment History Information | 98% Success Rate",
-          description: "Remove RHI (Repayment History Information) from your credit report with Australia's specialists. Professional RHI removal services with 98% success rate.",
-          datePublished: "2024-12-15",
-          dateModified: "2024-12-15",
-          inLanguage: "en-AU",
-          isPartOf: {
-            "@type": "WebSite",
-            "@id": "https://www.australiancreditsolutions.com.au/#website",
-            name: "Australian Credit Solutions",
-            url: "https://www.australiancreditsolutions.com.au",
-          },
-          breadcrumb: {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.australiancreditsolutions.com.au/rhi-removal#breadcrumb",
-          },
-          about: {
-            "@type": "Thing",
-            name: "RHI Removal Services",
-            description: "Professional service to remove Repayment History Information from Australian credit files.",
-          },
-          mainEntity: {
-            "@type": "Service",
-            "@id": "https://www.australiancreditsolutions.com.au/rhi-removal#service",
-          },
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://www.australiancreditsolutions.com.au/#organization",
-          name: "Australian Credit Solutions",
-          legalName: "Australian Credit Solutions Pty Ltd",
-          url: "https://www.australiancreditsolutions.com.au",
-          logo: "https://www.australiancreditsolutions.com.au/images/acs-logo.png",
-          image: "https://www.australiancreditsolutions.com.au/images/acs-office.jpg",
-          description: "Award-winning Australian RHI removal specialists helping Australians remove incorrect repayment history information and restore credit.",
-          telephone: "0489265737",
-          email: "help@australiancreditsolutions.com.au",
-          address: {
-            "@type": "PostalAddress",
-            addressCountry: "AU",
-            addressRegion: "Australia",
-          },
-          sameAs: [
-            "https://www.productreview.com.au/listings/australian-credit-solutions",
-          ],
-          hasCredential: {
-            "@type": "EducationalOccupationalCredential",
-            credentialCategory: "ASIC Australian Credit License",
-            identifier: "532003",
-            recognizedBy: {
-              "@type": "Organization",
-              name: "Australian Securities and Investments Commission",
-              alternateName: "ASIC",
-            },
-          },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "855",
-            bestRating: "5",
-            worstRating: "1",
-          },
-        },
-        {
-          "@type": "Service",
-          "@id": "https://www.australiancreditsolutions.com.au/rhi-removal#service",
-          name: "RHI Removal Services Australia",
-          description: "Professional RHI removal services to remove incorrect Repayment History Information from credit files.",
-          provider: {
-            "@type": "Organization",
-            "@id": "https://www.australiancreditsolutions.com.au/#organization",
-          },
-          areaServed: { "@type": "Country", name: "Australia" },
-          serviceType: "RHI Removal",
-          category: "Credit Repair Services",
-          offers: [
-            {
-              "@type": "Offer",
-              name: "Standard RHI Removal",
-              description: "Complete RHI removal process with professional assistance.",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                price: "880",
-                priceCurrency: "AUD",
-                description: "Includes $330 administration fee",
-              },
-            },
-          ],
-        },
-        {
-          "@type": "FAQPage",
-          mainEntity: [
-            {
-              "@type": "Question",
-              name: "What is RHI (Repayment History Information)?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "RHI stands for Repayment History Information and shows how you've managed your credit accounts over the past 24 months, including payment history and account status.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Can RHI be removed from my credit file?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes, incorrect or outdated RHI can be removed from your credit file through professional credit repair services.",
-              },
-            },
-          ],
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://www.australiancreditsolutions.com.au/rhi-removal#breadcrumb",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://www.australiancreditsolutions.com.au",
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Credit Repair Services",
-              item: "https://www.australiancreditsolutions.com.au/credit-repair-australia",
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: "RHI Removal",
-              item: "https://www.australiancreditsolutions.com.au/rhi-removal",
-            },
-          ],
-        },
-      ],
-    }),
-    []
-  );
+  // FAQ data
+  const faqData = [
+    {
+      question: "Can you remove all bad repayment history?",
+      answer:
+        "No, we can only dispute and remove incorrect, unfair, or non-compliant entries. If you genuinely paid late and it was recorded correctly with proper notice, it'll stay on your file. But heaps of RHI entries are wrong – those are the ones we can fix.",
+    },
+    {
+      question: "How do I know if my repayment history is incorrect?",
+      answer:
+        "Compare your bank statements with your credit report. If payments show as late but your statements prove you paid on time, that's incorrect RHI we can challenge.",
+    },
+    {
+      question:
+        "Will removing incorrect RHI improve my credit score immediately?",
+      answer:
+        "Score improvements typically show within 30-60 days. How much depends on how many incorrect entries we remove and what else is on your file.",
+    },
+    {
+      question: "What's the difference between RHI and payment defaults?",
+      answer:
+        "RHI shows your monthly payment pattern for 24 months. Defaults are separate listings for debts over $150 that are 60+ days overdue. They're different things that affect your credit differently.",
+    },
+    {
+      question: "Can I dispute repayment history myself?",
+      answer:
+        "You can try, but RHI disputes are technically complex. Credit providers get thousands of dispute letters monthly, and most DIY attempts get rejected for procedural reasons.",
+    },
+    {
+      question: "How long does repayment history stay on my file?",
+      answer:
+        "RHI shows a rolling 24-month window. As new months get added, old months drop off. But incorrect entries need to be actively disputed – they won't just fix themselves.",
+    },
+    {
+      question: "Will disputing RHI hurt my credit score?",
+      answer:
+        "No. Legitimate disputes of incorrect information cannot negatively impact your credit score. Successful removal will improve your score.",
+    },
+    {
+      question: "What if different bureaus show different repayment history?",
+      answer:
+        "That's actually common and often indicates errors. We challenge inconsistencies across Equifax, Experian, and Illion to ensure your RHI is accurate and consistent.",
+    },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Repayment History Removal Australia",
+    description:
+      "Professional RHI removal services to fix incorrect repayment history information on credit files.",
+    provider: {
+      "@type": "Organization",
+      name: "Australian Credit Solutions",
+    },
+  };
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-slate-900">
@@ -163,22 +93,25 @@ export default function RHIRemovalPage() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`
+        }}></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center lg:gap-12 lg:flex-row lg:items-start">
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Remove RHI from Credit Report
+                Repayment History Removal Australia
                 <span className="block mt-2 text-blue">
-                  Australia&apos;s Leading RHI Removal Specialists
+                  Fix Your RHI Fast
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Repayment History Information (RHI) damaging your credit score? We remove incorrect and outdated RHI professionally.{" "}
+                  Got incorrect repayment history information destroying your
+                  credit? We remove unfair RHI marks from your credit file.{" "}
                   <strong className="font-semibold text-blue">
                     98% success rate
                   </strong>{" "}
@@ -190,18 +123,25 @@ export default function RHIRemovalPage() {
                 </p>
 
                 <p className="text-base text-gray-600">
-                  RHI can significantly impact your credit score and loan approvals. Our award-winning team removes bad RHI across Equifax, Experian and Illion — often within weeks, not years.
+                  Repayment History Information (RHI) shows 24 months of payment
+                  patterns that can make or break your credit score. When it's
+                  wrong or unfair, we know exactly how to get it removed under
+                  the Privacy Act 1988.
                 </p>
               </div>
 
               {/* CTAs */}
-              <div className="mt-8 relative flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center" role="group" aria-label="Primary actions">
-                <Link
-                  href="/free-credit-assessment"
+              <div
+                className="mt-8 relative flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
+                role="group"
+                aria-label="Primary actions"
+              >
+                <a
+                  href="#"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Remove My RHI Now
-                </Link>
+                  Remove My Repayment History Now
+                </a>
 
                 <a
                   href="tel:+61489265737"
@@ -212,38 +152,24 @@ export default function RHIRemovalPage() {
                 </a>
 
                 {/* Decorative arrow */}
-                <div className="pointer-events-none hidden lg:block" aria-hidden="true">
-                  <Image
-                    src={ArrowIcon}
-                    alt=""
-                    width={220}
-                    height={70}
-                    loading="lazy"
-                    className="select-none"
-                    priority={false}
-                  />
+                <div
+                  className="pointer-events-none hidden lg:block"
+                  aria-hidden="true"
+                >
+                  <ArrowIcon />
                 </div>
-                <div className="pointer-events-none lg:hidden flex justify-center" aria-hidden="true">
-                  <Image
-                    src={ArrowIconM}
-                    alt=""
-                    width={200}
-                    height={120}
-                    loading="lazy"
-                    className="select-none"
-                    priority={false}
-                  />
+                <div
+                  className="pointer-events-none lg:hidden flex justify-center"
+                  aria-hidden="true"
+                >
+                  <ArrowIconM />
                 </div>
               </div>
             </div>
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterForm
-                heading="Get My Free RHI Assessment"
-                subheading="Fast & Confidential"
-                paragraph="Find out if your RHI can be removed – free, fast, and confidential."
-              />
+              <FooterForm />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
@@ -264,255 +190,548 @@ export default function RHIRemovalPage() {
       </section>
 
       {/* Opening Section */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-          What is RHI and Why It's Damaging Your Credit
-        </h2>
-        <div className="mt-4 text-base leading-relaxed text-slate-800">
-          <p>
-            RHI stands for Repayment History Information, and it's one of the most critical factors affecting your credit score. Unlike traditional credit information that shows your current account status, RHI provides a detailed 24-month history of how you've managed your credit accounts, including payment patterns, account status changes, and financial behavior.
-          </p>
-          <p className="mt-4">
-            The problem is that RHI can contain outdated, incorrect, or misleading information that doesn't reflect your current financial situation. Maybe you had a difficult period a year ago, but you've since recovered and are managing your finances responsibly. However, that old RHI is still dragging down your credit score and affecting your ability to get approved for loans, credit cards, and even rental applications.
-          </p>
-          <p className="mt-4">
-            Australian Credit Solutions specialises in RHI removal across Australia. We're award-winning specialists with a 98% success rate when we take cases. We identify incorrect, outdated, or improperly reported RHI and work with credit bureaus to have it removed from your credit file.
-          </p>
-        </div>
-      </section>
+      <Section title="Look, let's be straight about this – Repayment History Information (RHI) on your credit file can be an absolute killer">
+        <p>
+          Most Aussies don't even know what RHI is until it's too late. It's
+          basically a detailed month-by-month record of your payment behaviour
+          going back 24 months. Every late payment, every missed payment, every
+          "current" status – it's all there for lenders to see.
+        </p>
+        <p className="mt-4">
+          But here's what really gets us fired up: heaps of repayment history
+          information is just plain wrong. We're talking about payments marked
+          late when you paid on time, system glitches that created false marks,
+          payments during hardship arrangements that got recorded incorrectly,
+          or repayment history mistakes across Equifax, Experian, and Illion
+          that nobody bothered to fix.
+        </p>
+        <p className="mt-4">
+          The good news? Under Australian law, we can dispute and remove
+          incorrect or unfair repayment history entries. We help Australians
+          clean up their repayment history under the Privacy Act 1988 and Credit
+          Reporting Code.
+        </p>
+        <p className="mt-4">
+          <strong>Important note:</strong> Accurate late payments cannot be
+          removed, but errors and misreporting can often be corrected – and
+          that's where we come in.
+        </p>
+        <p className="mt-4">
+          Australian Credit Solutions specialises in repayment history removal
+          across Australia. Three years of industry awards, 98% success rate
+          when we take cases, and we only work on cases where we genuinely think
+          we can win.
+        </p>
+        <p className="mt-4">
+          If your repayment history is stuffed but accurate, we'll tell you
+          straight. If it's stuffed and incorrect, we'll fix it.
+        </p>
+      </Section>
 
       {/* Impact Section */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-          How RHI is Destroying Your Credit Score
-        </h2>
-        <div className="mt-4 text-base leading-relaxed text-slate-800">
-          <ul className="mt-2 grid gap-4 sm:grid-cols-2">
-            {[
-              {
-                h: "Your Credit Score Gets Severely Impacted",
-                p: "RHI can drop your credit score by 50–150 points depending on the severity and duration of the negative information.",
-              },
-              {
-                h: "Loan Applications Get Rejected",
-                p: "Lenders see negative RHI as a red flag, often resulting in automatic rejections regardless of your current financial situation.",
-              },
-              {
-                h: "Higher Interest Rates",
-                p: "Even if approved, negative RHI leads to higher interest rates, costing you thousands in additional interest payments.",
-              },
-              {
-                h: "Rental Applications Fail",
-                p: "Many landlords check credit reports and reject applicants with negative RHI, limiting your housing options.",
-              },
-              {
-                h: "Employment Opportunities Affected",
-                p: "Some employers check credit reports and may reject candidates with poor RHI, especially in financial services.",
-              },
-              {
-                h: "Insurance Premiums Increase",
-                p: "Insurance companies use credit information to set rates, and negative RHI can result in higher premiums.",
-              },
-            ].map((item) => (
-              <li
-                key={item.h}
-                className="rounded-xl border border-blue-100 bg-white p-5 shadow-sm transition-all hover:shadow-md"
-              >
-                <h3 className="font-semibold text-blue">{item.h}</h3>
-                <p className="mt-2 text-sm text-slate-700">{item.p}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* What We Remove */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-          What RHI We Can Remove from Your Credit File
-        </h2>
-        <div className="mt-4 text-base leading-relaxed text-slate-800">
-          <p className="text-slate-700">
-            <strong>Important Note:</strong> We can only remove RHI that is incorrect, outdated, or improperly reported. We cannot remove accurate, current RHI that reflects your actual payment history.
-          </p>
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
-            {[
-              {
-                title: "Incorrect Payment History",
-                bullets: [
-                  "Payments marked as late when they were actually on time",
-                  "Incorrect payment amounts recorded",
-                  "Payments applied to wrong accounts",
-                  "Duplicate payment entries",
-                ],
-              },
-              {
-                title: "Outdated Account Status",
-                bullets: [
-                  "Accounts showing as open when they're closed",
-                  "Outdated balance information",
-                  "Incorrect account opening dates",
-                  "Wrong account types listed",
-                ],
-              },
-              {
-                title: "Identity Theft Issues",
-                bullets: [
-                  "Accounts opened fraudulently in your name",
-                  "Payment history from identity theft",
-                  "Incorrect personal information",
-                  "Mixed credit files",
-                ],
-              },
-              {
-                title: "Reporting Errors",
-                bullets: [
-                  "Incorrect reporting by creditors",
-                  "Credit bureau processing errors",
-                  "Data transmission problems",
-                  "System glitches and errors",
-                ],
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
-              >
-                <h3 className="text-lg font-semibold text-blue">{item.title}</h3>
-                <ul className="mt-3 space-y-2 text-sm text-slate-700">
-                  {item.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2">
-                      <svg
-                        className="h-5 w-5 shrink-0 text-orange-500 mt-0.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-          Our Proven RHI Removal Process
-        </h2>
-        <div className="mt-4 text-base leading-relaxed text-slate-800">
-          <ol className="mt-4 space-y-4 text-slate-700">
-            {[
-              {
-                title: "Comprehensive RHI Analysis",
-                description: "We obtain your complete credit file from all three major bureaus (Equifax, Experian, Illion) and analyze your RHI for errors and inconsistencies.",
-              },
-              {
-                title: "Error Identification",
-                description: "Our experts identify incorrect, outdated, or improperly reported RHI that can be challenged and removed.",
-              },
-              {
-                title: "Evidence Compilation",
-                description: "We gather supporting documentation, payment records, and correspondence to support your case for RHI removal.",
-              },
-              {
-                title: "Credit Bureau Challenges",
-                description: "We file formal disputes with credit bureaus, providing evidence and legal arguments for RHI removal.",
-              },
-              {
-                title: "Creditor Negotiations",
-                description: "When necessary, we work directly with creditors to correct inaccurate RHI reporting.",
-              },
-              {
-                title: "Follow-up and Monitoring",
-                description: "We monitor the progress of your disputes and ensure all corrections are properly implemented.",
-              },
-            ].map((step, index) => (
-              <li key={index} className="flex gap-4">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold">
-                  {index + 1}
-                </div>
-                <div>
-                  <strong>{step.title}:</strong> {step.description}
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* Success Stories */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-          Success Stories: Real Australians Who Had RHI Removed
-        </h2>
-        <div className="mt-4 text-base leading-relaxed text-slate-800">
+      <Section title="How Bad Repayment History Is Absolutely Smashing Your Credit">
+        <p>
+          Let's talk about what incorrect repayment history entries are actually
+          costing you:
+        </p>
+        <motion.ul
+          variants={staggerChildren}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-4 grid gap-4 sm:grid-cols-2"
+        >
           {[
             {
-              name: "Sarah from Brisbane – Teacher with Incorrect RHI",
-              quote: "Had incorrect late payment RHI from a credit card I never used... ACS proved the error and got it removed. My credit score jumped from 580 to 720 in just 6 weeks.",
+              h: "RHI Is the Number One Thing Lenders Look At",
+              p: "Forget your credit score for a minute – lenders look directly at your repayment history information. Even one or two late payment marks in the last 12 months can trigger automatic rejections.",
             },
             {
-              name: "Michael from Perth – Small Business Owner",
-              quote: "RHI showed my business account as personal debt... ACS worked with the bank to correct this. Home loan approved within 2 months.",
+              h: "Your Credit Score Gets Hammered",
+              p: 'Poor repayment history can drop your credit score by 100-200 points. We\'ve seen people go from "excellent" to "poor" credit just from incorrect RHI entries.',
             },
             {
-              name: "Lisa from Adelaide – Nurse with Identity Theft",
-              quote: "Identity theft created false RHI entries... ACS got them all removed. Credit back to excellent and car finance approved.",
+              h: "Automated Systems Reject You Instantly",
+              p: "Most lenders use computer systems that scan your repayment history before a human even looks at your application. Recent late payment history = instant rejection, regardless of your income or assets.",
             },
-          ].map((testimonial) => (
-            <figure
-              key={testimonial.name}
-              className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md mb-4"
+            {
+              h: "Interest Rates Become Brutal",
+              p: "Even if you do get approved somewhere, bad repayment history means premium interest rates. We're talking 3-5% higher than standard rates – that's massive money over the life of a loan.",
+            },
+            {
+              h: "It Creates a Nightmare Cycle",
+              p: "Bad repayment history → loan rejections → desperate applications → more credit enquiries → even worse credit profile → more rejections. It's like quicksand.",
+            },
+            {
+              h: "The 24-Month Window Never Closes",
+              p: "New payment data gets added monthly, so if you've got incorrect entries, they keep affecting your credit for the full 24 months unless we get them removed.",
+            },
+          ].map((item) => (
+            <motion.li
+              key={item.h}
+              variants={fadeIn}
+              className="rounded-xl border border-blue-100 bg-white p-5 shadow-sm transition-all hover:shadow-md"
             >
-              <div className="flex text-orange-500 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="h-5 w-5 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <blockquote className="text-slate-700">{testimonial.quote}</blockquote>
-              <figcaption className="mt-3 text-sm font-semibold text-blue">
-                {testimonial.name}
-              </figcaption>
-            </figure>
+              <h3 className="font-semibold text-blue">{item.h}</h3>
+              <p className="mt-2 text-sm text-slate-700">{item.p}</p>
+            </motion.li>
           ))}
-        </div>
-      </section>
+        </motion.ul>
+      </Section>
+
+      {/* What We Remove */}
+      <Section title="What Repayment History Information We Can Actually Remove">
+        <p className="text-slate-700">
+          <strong>Important Legal Note:</strong> We can only dispute and remove
+          incorrect, unfair, or non-compliant repayment history entries.
+          Accurate late payments that were properly applied cannot be removed –
+          but you'd be surprised how many RHI entries shouldn't actually be
+          there.
+        </p>
+        <motion.div
+          variants={staggerChildren}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-6 grid gap-6 md:grid-cols-2"
+        >
+          <Card
+            title="System Processing Disasters"
+            bullets={[
+              "Payments made before due dates but processed after",
+              "Direct debit failures due to bank system outages",
+              "BPAY payments made on time but batch-processed late",
+              "Online payment system crashes during payment processing",
+            ]}
+          />
+          <Card
+            title="Data Entry and Processing Errors"
+            bullets={[
+              "Payments applied to wrong account numbers",
+              "Manual processing errors by credit provider staff",
+              "System upgrades that corrupted payment history data",
+              "Incorrect payment amounts recorded in the system",
+            ]}
+          />
+          <Card
+            title="Hardship Arrangement Violations"
+            bullets={[
+              "Payment arrangements not reflected in repayment history",
+              "Reduced payments marked as late during hardship periods",
+              "COVID-19 payment deferrals incorrectly recorded",
+              "Temporary hardship arrangements not honoured in reporting",
+            ]}
+          />
+          <Card
+            title="Notice and Communication Failures"
+            bullets={[
+              "No adequate notice before marking payments late",
+              "Grace periods not honoured in repayment history",
+              "Disputed payments marked late before resolution",
+              "Communication sent to outdated contact details",
+            ]}
+          />
+          <Card
+            title="Account Administration Stuff-Ups"
+            bullets={[
+              "Account closure dates recorded incorrectly",
+              "Final payment processing errors",
+              "Refunds and credits not reflected in payment history",
+              "Account number changes causing payment misallocation",
+            ]}
+          />
+          <Card
+            title="Cross-Bureau Inconsistencies"
+            bullets={[
+              "Equifax showing different data to Experian and Illion",
+              "Some bureaus missing positive payment history",
+              "Incorrect dates across different reporting bodies",
+              "Duplicate or conflicting repayment information",
+            ]}
+          />
+        </motion.div>
+      </Section>
+
+      {/* Process */}
+      <Section title="Our Proven RHI Removal Process">
+        <motion.ol
+          variants={staggerChildren}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-4 space-y-4 text-slate-700"
+        >
+          {[
+            {
+              title: "Complete Repayment History Analysis",
+              description:
+                "We pull your credit reports from all three major bureaus – Equifax, Experian, and Illion. RHI can vary between bureaus, so we need to see the full picture.",
+            },
+            {
+              title: "Payment Documentation Review",
+              description:
+                "We help you gather evidence to support challenges: bank statements, direct debit records, correspondence, hardship documentation, and system outage evidence.",
+            },
+            {
+              title: "Legal Assessment Under Privacy Act",
+              description:
+                "We assess each incorrect entry against Australian credit reporting laws: Privacy Act 1988 requirements, Credit Reporting Code compliance, and consumer rights.",
+            },
+            {
+              title: "Professional Dispute Process",
+              description:
+                "Generic letters don't work for RHI disputes. Our approach includes detailed challenge letters, comprehensive evidence packages, and systematic follow-up.",
+            },
+            {
+              title: "Ongoing Monitoring and Protection",
+              description:
+                "RHI gets updated monthly, so we monitor your file to ensure successfully challenged entries don't reappear and new accurate data gets recorded properly.",
+            },
+          ].map((step, index) => (
+            <motion.li key={index} variants={fadeIn} className="flex gap-4">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold">
+                {index + 1}
+              </div>
+              <div>
+                <strong>{step.title}:</strong> {step.description}
+              </div>
+            </motion.li>
+          ))}
+        </motion.ol>
+      </Section>
+
+      {/* Success Stories */}
+      <Section title="Success Stories: Real Aussies Who Fixed Their Repayment History">
+        <motion.div
+          variants={staggerChildren}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <Testimonial name="Karen from Newcastle – Teacher Screwed by System Upgrade">
+            "My bank did a massive system upgrade and somehow my 18 months of
+            perfect direct debit payments got recorded as late in their new
+            system. Every single month showed late payment history even though I
+            never missed a payment. Couldn't get a car loan, couldn't refinance
+            my mortgage. Spent 6 months arguing with the bank – they kept saying
+            'computer says no.' ACS came in with legal letters and got the whole
+            18 months of incorrect repayment history removed in 5 weeks. Credit
+            score jumped 156 points. Got my mortgage refinance approved and
+            saved $400 per month."
+          </Testimonial>
+          <Testimonial name="Brett from Cairns – Tradie Hit by COVID Hardship">
+            "During COVID lockdowns, my equipment finance company agreed to
+            reduced payments for 6 months while work was slow. Signed all the
+            paperwork, everything was official. But their system kept marking my
+            payments as late because I wasn't paying the full amount. Ruined my
+            repayment history even though I was following their own hardship
+            arrangement. ACS used the hardship paperwork to prove every single
+            late mark was wrong. Got 6 months of incorrect RHI removed. Finally
+            got the business loan I needed to expand when work picked up."
+          </Testimonial>
+          <Testimonial name="Sandra from Hobart – Mum Who Moved House">
+            "Updated my address with my credit card company when we moved house,
+            but their payments kept going to the old address somehow. Three
+            months of 'missed payments' because their system was posting
+            statements to the wrong address and I had no idea payments weren't
+            going through. By the time I found out, I had 3 months of terrible
+            repayment history. ACS proved the address change was their stuff-up,
+            not mine. Got all 3 months corrected and my credit score back to
+            where it should be."
+          </Testimonial>
+          <Testimonial name="Jim from Gold Coast – Small Business Owner">
+            "Had a personal loan that I always paid early – usually 3-4 days
+            before the due date. Bank upgraded their payment system and suddenly
+            all my early payments were showing as late in the new system. Made
+            no sense but they wouldn't fix it. 12 months of perfect payments
+            showing as late payment history. ACS got bank statements proving
+            every payment was early, challenged the lot, got the entire 12
+            months corrected. Saved my business credit applications."
+          </Testimonial>
+        </motion.div>
+      </Section>
 
       {/* Why Choose Us */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-          Why Choose Us for RHI Removal
-        </h2>
-        <div className="mt-4 text-base leading-relaxed text-slate-800">
-          <ul className="mt-4 grid gap-4 sm:grid-cols-2">
-            {[
-              "We specialise specifically in RHI removal and credit repair – not general financial services.",
-              "98% success rate when we take cases – we're selective and honest about what we can achieve.",
-              "No Win, No Fee protection – $330 admin fee, success fees only if we win.",
-              "Three years of industry awards (2022–2024) for results others can't deliver.",
-              "Licensed and regulated (ASIC ACL 532003) with professional indemnity insurance.",
-              "National coverage across all Australian credit bureaus and financial institutions.",
-              "We don't give up – we use multiple strategies until we find the path that works.",
-            ].map((t) => (
-              <li
-                key={t}
-                className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-sm text-slate-700"
+      <Section title="Why Choose Us for Repayment History Removal">
+        <motion.ul
+          variants={staggerChildren}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-4 grid gap-4 sm:grid-cols-2"
+        >
+          {[
+            "We Actually Understand RHI Laws – Repayment history disputes are complex. We know exactly which arguments work and which ones get ignored by credit providers.",
+            "98% Success Rate When We Take Cases – We're picky about which RHI cases we accept. If we don't think we can prove the entries are incorrect, we'll tell you upfront.",
+            "No Win, No Fee Confidence – You pay our $330 admin fee up front, but if we don't successfully remove your targeted repayment history entries, you don't pay success fees.",
+            "Three Years of Industry Recognition – 2022, 2023, and 2024 Industry Excellence Awards for delivering real results. We're not the biggest spenders on marketing – we're the best at getting outcomes.",
+            "Licensed and Regulated (ASIC ACL 532003) – We operate under proper Australian Securities and Investments Commission licensing. That means we're accountable, insured, and regulated.",
+            "Australia-Wide Service – Credit reporting is federal law, so whether you're in Broome or Ballarat, we can help you with identical service levels.",
+            "Direct Expert Communication – When you call, you'll talk to the actual credit specialist handling your case. No offshore call centres, no script readers.",
+            "We Specialise in Complex Cases – RHI disputes often involve technical system issues and detailed payment analysis. We've got the expertise to handle complex cases that other companies can't manage.",
+          ].map((t) => (
+            <motion.li
+              key={t}
+              variants={fadeIn}
+              className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-sm text-slate-700"
+            >
+              <svg
+                className="h-5 w-5 shrink-0 text-blue mt-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              {t}
+            </motion.li>
+          ))}
+        </motion.ul>
+      </Section>
+
+      {/* Service Options */}
+      <Section title="Our RHI Removal Service Options">
+        <motion.div
+          variants={staggerChildren}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+        >
+          <PriceCard
+            name="Express RHI Cleanup"
+            timeline="2-4 weeks typically"
+            perfectFor="Home loan pre-approvals, urgent business finance"
+            includes={[
+              "Priority processing",
+              "Daily progress updates",
+              "Expedited evidence gathering",
+            ]}
+           
+          />
+          <PriceCard
+            name="Comprehensive RHI Review"
+            timeline="4-8 weeks typically"
+            perfectFor="Multiple incorrect entries, complex payment history issues"
+            includes={[
+              "Complete 24-month analysis",
+              "Detailed evidence compilation",
+              "Weekly reporting",
+            ]}
+           
+            featured
+          />
+          <PriceCard
+            name="Full Repayment History Overhaul"
+            timeline="6-10 weeks typically"
+            perfectFor="Extensive incorrect entries, multiple credit products affected"
+            includes={[
+              "Complete repayment history reconstruction",
+              "Cross-bureau coordination",
+            ]}
+           
+          />
+          <PriceCard
+            name="RHI Protection Service"
+            timeline="Immediate setup + 12 months monitoring"
+            perfectFor="Business owners, property investors, frequent credit users"
+            includes={[
+              "Monthly RHI monitoring",
+              "Immediate dispute assistance",
+              "Early warning alerts",
+            ]}
+         
+          />
+        </motion.div>
+        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
+          <strong>Remember:</strong> All services include our No Win No Fee
+          guarantee – if we don't remove the targeted incorrect repayment
+          history entries, you don't pay success fees.
+        </div>
+      </Section>
+
+      {/* Outcomes */}
+      <Section title="What Happens After Your Repayment History Gets Fixed">
+        <motion.ul
+          variants={staggerChildren}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-4 grid gap-4 sm:grid-cols-2"
+        >
+          {[
+            "Your Credit Score Recovers Fast – Credit scores typically improve within 30-60 days of incorrect RHI removal. We've seen score increases of 100-200 points when extensive incorrect entries are removed.",
+            "Loan Approvals Start Coming Through – Home loan applications that were getting automatic rejections often get approved once repayment history is corrected. Car finance becomes available at standard rates.",
+            "Interest Rates Drop to Normal Levels – Clean repayment history qualifies you for standard market rates instead of the penalty pricing applied to people with poor payment history.",
+            "Automated Systems Stop Rejecting You – Lender computer systems that were automatically declining your applications start approving them once your RHI shows proper payment patterns.",
+            "Business Finance Becomes Accessible – Personal repayment history affects business lending decisions. Clean personal RHI improves access to business loans, equipment finance, and commercial facilities.",
+            "Credit Cards Offer Decent Terms Again – Premium credit products with rewards programs become available. Higher limits get approved. Balance transfer offers at reasonable rates become accessible.",
+            "Peace of Mind Returns – No more explaining payment issues to lenders. No more worrying about automatic rejections. You can apply for credit with confidence.",
+          ].map((t) => (
+            <motion.li
+              key={t}
+              variants={fadeIn}
+              className="rounded-xl border border-blue-100 bg-white p-4 text-sm text-slate-700 shadow-sm transition-all hover:shadow-md"
+            >
+              {t}
+            </motion.li>
+          ))}
+        </motion.ul>
+      </Section>
+
+      {/* Legal Rights */}
+      <Section title="Understanding Your Rights: RHI Under Australian Law">
+        <h3 className="text-lg font-semibold text-blue mt-4">
+          What Credit Providers Must Do
+        </h3>
+        <p className="mt-2 text-slate-700">
+          Under the Privacy Act 1988 and Credit Reporting Code, credit providers
+          have strict obligations for repayment history reporting:
+        </p>
+        <motion.div
+          variants={staggerChildren}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-4 space-y-4 text-slate-700"
+        >
+          {[
+            "Accuracy Requirements: All repayment history information must be factually correct and up-to-date, based on actual payment behaviour, not system errors, consistently reported across all bureaus, and corrected when errors are identified.",
+            "Proper Recording Standards: Payment history must reflect actual payment dates, not processing dates; agreed payment arrangements and hardship provisions; grace periods that are part of the credit contract; and final payments and account closures accurately.",
+            "Consumer Rights for RHI Disputes: You have the right to challenge any incorrect repayment history entries, receive proper investigation of your disputes, have errors corrected across all reporting bureaus, and receive compensation if errors caused financial loss.",
+            "Why Professional Help Is Essential: Credit providers have teams of lawyers and compliance specialists. You need professional representation to ensure your rights are properly exercised and your disputes are taken seriously.",
+          ].map((text, index) => (
+            <motion.p
+              key={index}
+              variants={fadeIn}
+              className="flex items-start gap-2"
+            >
+              <svg
+                className="h-5 w-5 shrink-0 text-orange-500 mt-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              {text}
+            </motion.p>
+          ))}
+        </motion.div>
+      </Section>
+
+      {/* FAQs */}
+      <Section title="Common Questions About RHI Removal">
+        <motion.div
+          variants={staggerChildren}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-4 space-y-4"
+        >
+          {faqData.map((f, index) => (
+            <motion.details
+              key={`faq-${index}`}
+              variants={fadeIn}
+              className="group rounded-xl border border-blue-100 bg-white p-4 shadow-sm transition-all hover:shadow-md"
+            >
+              <summary className="cursor-pointer select-none font-semibold text-blue group-open:text-blue flex items-center justify-between">
+                <span>{f.question}</span>
+                <svg
+                  className="h-5 w-5 transform group-open:rotate-180 transition-transform"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </summary>
+              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
+                {f.answer}
+              </p>
+            </motion.details>
+          ))}
+        </motion.div>
+      </Section>
+
+      {/* Cost of keeping incorrect RHI */}
+      <Section title="The Real Cost of Keeping Incorrect Repayment History">
+        <div className="mt-2 grid gap-6 lg:grid-cols-2">
+          <div className="space-y-4 text-slate-700">
+            <h3 className="font-semibold text-blue">
+              Home Loan Impact Is Massive
+            </h3>
+            <p>Let's talk real numbers on what incorrect RHI is costing you:</p>
+            {[
+              "Clean repayment history: Access to best rates (around 6.2% variable)",
+              "Recent late payment marks: Premium rates (7.5%+ variable)",
+              "Multiple incorrect entries: Often declined completely",
+              "On a $500,000 home loan, that rate difference costs $162,500 over 30 years. That's not small change.",
+              "Car Finance Becomes Expensive: Good payment history gets bank rates from 5.9%, poor RHI means dealer finance from 12.9%+. $40,000 car loan over 5 years? That difference is $6,800 extra in interest.",
+              "Credit Cards Become Basic and Costly: Clean RHI gets you platinum rewards cards with $25,000+ limits and 55-day interest-free. Poor repayment history means basic cards only, $2,000-5,000 limits, higher fees.",
+            ].map((text, index) => (
+              <p key={index} className="flex items-start gap-2">
                 <svg
                   className="h-5 w-5 shrink-0 text-blue mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                  />
+                </svg>
+                {text}
+              </p>
+            ))}
+          </div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeIn}
+            viewport={{ once: true }}
+            className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-lg"
+          >
+            <h3 className="text-lg font-semibold text-blue">
+              Your Two Clear Options
+            </h3>
+            <ul className="mt-3 space-y-3 text-slate-700">
+              <li className="flex items-start gap-2">
+                <svg
+                  className="h-5 w-5 shrink-0 text-red-500 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+                Wait 24 months for incorrect entries to naturally cycle off
+                while paying the financial penalty every single day
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -524,269 +743,93 @@ export default function RHIRemovalPage() {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                {t}
+                Let us dispute and remove the incorrect entries professionally
+                in weeks
               </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Service Options */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-          Our RHI Removal Service Options
-        </h2>
-        <div className="mt-4 text-base leading-relaxed text-slate-800">
-          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                name: "Standard RHI Removal",
-                timeline: "4–8 weeks typically",
-                perfectFor: "Most RHI removal cases",
-                includes: [
-                  "Complete credit file analysis",
-                  "Error identification",
-                  "Credit bureau disputes",
-                  "Creditor negotiations",
-                ],
-                price: "$880",
-                featured: true,
-              },
-              {
-                name: "Complex RHI Removal",
-                timeline: "8–12 weeks typically",
-                perfectFor: "Multiple errors or identity theft",
-                includes: [
-                  "Extended investigation",
-                  "Multiple bureau disputes",
-                  "Legal documentation",
-                  "Ongoing monitoring",
-                ],
-                price: "$1,320",
-                featured: false,
-              },
-              {
-                name: "Emergency RHI Removal",
-                timeline: "2–4 weeks typically",
-                perfectFor: "Urgent loan applications",
-                includes: [
-                  "Priority processing",
-                  "Expedited disputes",
-                  "Daily updates",
-                  "Rush service",
-                ],
-                price: "$1,650",
-                featured: false,
-              },
-            ].map((service) => (
-              <div
-                key={service.name}
-                className={`relative rounded-xl border p-6 h-full flex flex-col ${
-                  service.featured
-                    ? "border-blue-300 bg-gradient-to-b from-blue-50 to-white shadow-lg"
-                    : "border-blue-100 bg-white shadow-sm"
-                }`}
+            </ul>
+            <p className="mt-4 text-sm font-semibold">
+              Which option makes more financial sense?
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#"
+                className="rounded-lg bg-blue px-5 py-3 font-semibold text-white hover:bg-blue-700 transition-colors"
               >
-                {service.featured && (
-                  <span className="absolute -top-3 left-6 inline-block rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white shadow">
-                    Most Popular
-                  </span>
-                )}
-                <h3 className="text-lg font-semibold text-blue">{service.name}</h3>
-                <p className="mt-1 text-sm text-slate-600">Timeline: {service.timeline}</p>
-                <p className="mt-1 text-sm text-slate-600">Perfect for: {service.perfectFor}</p>
-                <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
-                  {service.includes.map((i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <svg
-                        className="h-5 w-5 shrink-0 text-blue-500 mt-0.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      {i}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4 flex items-end justify-between">
-                  <div className="text-2xl font-extrabold text-slate-900">{service.price}</div>
-                  <Link
-                    href="/free-credit-assessment"
-                    className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"
-                  >
-                    Start Now
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
-            <strong>All services include our No Win No Fee guarantee.</strong>
-            <br />
-            <em>Admin fee: $330. Success fees only apply if we successfully remove RHI.</em>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-          Common Questions About RHI Removal
-        </h2>
-        <div className="mt-4 text-base leading-relaxed text-slate-800">
-          <div className="mt-4 space-y-4">
-            {[
-              {
-                q: "What is RHI (Repayment History Information)?",
-                a: "RHI stands for Repayment History Information and shows how you've managed your credit accounts over the past 24 months, including payment history, account status, and financial behavior patterns.",
-              },
-              {
-                q: "Can RHI be removed from my credit file?",
-                a: "Yes, incorrect, outdated, or improperly reported RHI can be removed from your credit file through professional credit repair services. We cannot remove accurate RHI that reflects your actual payment history.",
-              },
-              {
-                q: "How long does RHI removal take?",
-                a: "Standard RHI removal typically takes 4-8 weeks. Complex cases may take 8-12 weeks. We offer emergency services for urgent situations that can be completed in 2-4 weeks.",
-              },
-              {
-                q: "What types of RHI errors can be removed?",
-                a: "We can remove incorrect payment history, outdated account status, identity theft issues, reporting errors, duplicate entries, and mixed credit file problems.",
-              },
-              {
-                q: "How much does RHI removal cost?",
-                a: "Our standard RHI removal service costs $880 (includes $330 admin fee). Complex cases are $1,320, and emergency services are $1,650. All services include our No Win No Fee guarantee.",
-              },
-              {
-                q: "Will removing RHI improve my credit score?",
-                a: "Yes, removing incorrect or outdated RHI can significantly improve your credit score. We've seen improvements of 50-150 points in many cases, depending on the severity of the negative information.",
-              },
-              {
-                q: "Do I need to provide documentation?",
-                a: "Yes, we'll help you gather supporting documentation including payment records, correspondence with creditors, and any evidence that supports your case for RHI removal.",
-              },
-              {
-                q: "What happens if the RHI removal fails?",
-                a: "With our No Win No Fee policy, you only pay the $330 admin fee. If we're unsuccessful in removing the RHI, you don't pay any success fees. We're honest about what we can achieve and only take cases where we believe we can succeed.",
-              },
-            ].map((f) => (
-              <details
-                key={f.q}
-                className="group rounded-xl border border-blue-100 bg-white p-4 shadow-sm transition-all hover:shadow-md"
+                Start My Assessment
+              </a>
+              <a
+                href="tel:+61489265737"
+                className="rounded-lg border-2 border-blue px-5 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
               >
-                <summary className="cursor-pointer select-none font-semibold text-blue group-open:text-blue flex items-center justify-between">
-                  <span>{f.q}</span>
-                  <svg
-                    className="h-5 w-5 transform group-open:rotate-180 transition-transform"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </summary>
-                <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
-                  {f.a}
-                </p>
-              </details>
-            ))}
-          </div>
+                Call 0489 265 737
+              </a>
+            </div>
+          </motion.div>
         </div>
-      </section>
+      </Section>
 
       {/* Getting Started */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-          Getting Started: Your Free RHI Assessment
-        </h2>
-        <div className="mt-4 text-base leading-relaxed text-slate-800">
-          <ol className="mt-4 space-y-3 text-slate-700">
-            {[
-              "Confidential phone discussion (20 minutes) — call 0489 265 737.",
-              "Complete RHI investigation — full credit file analysis from all bureaus.",
-              "Error identification & strategy — determine what RHI can be removed.",
-              "Professional removal process — we handle all disputes and negotiations.",
-              "Credit file cleanup & monitoring — ensure all corrections are implemented.",
-            ].map((step, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
-                  {index + 1}
-                </span>
-                {step}
-              </li>
-            ))}
-          </ol>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link
-              href="/free-credit-assessment"
-              className="rounded-lg bg-blue px-6 py-3 font-semibold text-white hover:bg-blue transition-colors"
-            >
-              Book My Free Assessment
-            </Link>
-            <a
-              href="tel:+61489265737"
-              className="rounded-lg border-2 border-blue px-6 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
-            >
-              Call 0489 265 737
-            </a>
-          </div>
+      <Section title="Getting Started: Your Free RHI Assessment">
+        <ol className="mt-4 space-y-3 text-slate-700">
+          {[
+            "Quick Phone Chat (15 minutes) – Call 0489 265 737 for a no-obligation discussion about your repayment history. We'll explain what RHI is and whether yours looks like it has problems.",
+            "Complete RHI Analysis – If we proceed, we'll obtain your reports from all three bureaus and conduct a detailed month-by-month analysis of your entire 24-month repayment history.",
+            "Evidence Gathering and Strategy – We'll help you gather payment evidence and work out which RHI entries can be successfully challenged under Australian law.",
+            "Professional Dispute Process – We handle all the complex legal paperwork and follow-up while keeping you informed of progress throughout the process.",
+            "Results Monitoring and Protection – Once incorrect entries are removed, we'll monitor your file and provide guidance on maintaining accurate RHI going forward.",
+          ].map((step, index) => (
+            <li key={index} className="flex items-start gap-3">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
+                {index + 1}
+              </span>
+              {step}
+            </li>
+          ))}
+        </ol>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a
+            href="#"
+            className="rounded-lg bg-blue px-6 py-3 font-semibold text-white hover:bg-blue-700 transition-colors"
+          >
+            Book My Free Assessment
+          </a>
+          <a
+            href="tel:+61489265737"
+            className="rounded-lg border-2 border-blue px-6 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
+          >
+            Call 0489 265 737
+          </a>
         </div>
-      </section>
-
-      {/* Internal Linking Blocks */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-          Recommended Services & Resources
-        </h2>
-        <div className="mt-4 text-base leading-relaxed text-slate-800">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div>
-              <h3 className="text-base font-semibold text-blue">Primary Service Links</h3>
-              <nav className="mt-2 space-y-2 text-sm">
-                <Link href="/credit-repair-australia" className="underline">Credit Repair Australia</Link><br />
-                <Link href="/default-removal" className="underline">Default Removal Services</Link><br />
-                <Link href="/late-payment-removal" className="underline">Late Payment Removal</Link><br />
-                <Link href="/credit-enquiry-removal" className="underline">Credit Enquiry Removal</Link><br />
-                <Link href="/court-judgment-removal" className="underline">Court Judgment Removal</Link><br />
-                <Link href="/credit-file-cleanup" className="underline">Credit File Clean-Up</Link>
-              </nav>
-            </div>
-            <div>
-              <h3 className="text-base font-semibold text-blue">RHI Specific Links</h3>
-              <nav className="mt-2 space-y-2 text-sm">
-                <Link href="/remove-incorrect-rhi-credit-report" className="underline">Remove Incorrect RHI</Link><br />
-                <Link href="/rhi-dispute-australia" className="underline">RHI Dispute Australia</Link><br />
-                <Link href="/repayment-history-removal" className="underline">Repayment History Removal</Link><br />
-                <Link href="/credit-payment-history-cleanup" className="underline">Payment History Cleanup</Link><br />
-                <Link href="/rhi-credit-repair" className="underline">RHI Credit Repair</Link>
-              </nav>
-            </div>
-            <div>
-              <h3 className="text-base font-semibold text-blue">Location-Based Links</h3>
-              <nav className="mt-2 space-y-2 text-sm">
-                <Link href="/credit-repair-sydney" className="underline">RHI Removal Sydney</Link><br />
-                <Link href="/credit-repair-melbourne" className="underline">RHI Removal Melbourne</Link><br />
-                <Link href="/credit-repair-brisbane" className="underline">RHI Removal Brisbane</Link><br />
-                <Link href="/credit-repair-perth" className="underline">RHI Removal Perth</Link><br />
-                <Link href="/credit-repair-adelaide" className="underline">RHI Removal Adelaide</Link>
-              </nav>
-            </div>
-          </div>
+        <div className="mt-6 rounded-xl bg-blue-50 p-4 text-center">
+          <p className="text-sm text-slate-600">
+            Ring us on 0489 265 737 right now for a free chat about your
+            repayment history and what we can do to fix it.
+          </p>
+          <p className="mt-2 text-sm text-slate-600">
+            Or complete our quick RHI assessment – takes 90 seconds and we'll
+            contact you within 24 hours with your options.
+          </p>
+          <p className="mt-4 text-sm font-semibold text-blue">
+            We're Australian Credit Solutions: three consecutive years of
+            industry awards, licensed under ASIC ACL 532003, helping Aussies fix
+            their credit since 2019.
+          </p>
+          <p className="mt-2 text-sm font-semibold text-blue">
+            Your repayment history is fixable when it's wrong. Let's get it
+            sorted today.
+          </p>
         </div>
-      </section>
+      </Section>
 
       {/* Footer trust bar */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
-        <div className="rounded-2xl bg-gradient-to-r from-blue to-blue p-6 text-white shadow-lg">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeIn}
+          viewport={{ once: true }}
+          className="rounded-2xl bg-gradient-to-r from-blue to-blue-700 p-6 text-white shadow-lg"
+        >
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
               <p className="text-sm font-medium">
@@ -795,16 +838,16 @@ export default function RHIRemovalPage() {
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
               <p className="text-sm font-medium">
-                No Win No Fee — $330 admin fee
+                No Win No Fee – $330 admin fee
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
               <p className="text-sm font-medium">
-                Licensed & regulated — ASIC ACL 532003
+                Licensed & regulated – ASIC ACL 532003
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* JSON-LD */}
@@ -814,5 +857,134 @@ export default function RHIRemovalPage() {
       />
       <Footer />
     </main>
+  );
+}
+
+function Section({ title, children }) {
+  return (
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeIn}
+      viewport={{ once: true, margin: "-100px" }}
+      className="mx-auto max-w-6xl px-4 py-12"
+    >
+      <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
+        {title}
+      </h2>
+      <div className="mt-4 text-base leading-relaxed text-slate-800">
+        {children}
+      </div>
+    </motion.section>
+  );
+}
+
+function Card({ title, bullets = [] }) {
+  return (
+    <motion.div
+      variants={fadeIn}
+      className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
+    >
+      <h3 className="text-lg font-semibold text-blue">{title}</h3>
+      <ul className="mt-3 space-y-2 text-sm text-slate-700">
+        {bullets.map((b) => (
+          <li key={b} className="flex items-start gap-2">
+            <svg
+              className="h-5 w-5 shrink-0 text-orange-500 mt-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            {b}
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
+}
+
+function PriceCard({
+  name,
+  timeline,
+  perfectFor,
+  includes,
+
+  featured = false,
+}) {
+  return (
+    <motion.div
+      variants={fadeIn}
+      className={`relative rounded-xl border p-6 h-full flex flex-col ${
+        featured
+          ? "border-blue-300 bg-gradient-to-b from-blue-50 to-white shadow-lg"
+          : "border-blue-100 bg-white shadow-sm"
+      }`}
+    >
+      {featured && (
+        <span className="absolute -top-3 left-6 inline-block rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white shadow">
+          Most Popular
+        </span>
+      )}
+      <h3 className="text-lg font-semibold text-blue">{name}</h3>
+      <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
+      <p className="mt-1 text-sm text-slate-600">Perfect for: {perfectFor}</p>
+      <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
+        {includes.map((i) => (
+          <li key={i} className="flex items-start gap-2">
+            <svg
+              className="h-5 w-5 shrink-0 text-blue-500 mt-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            {i}
+          </li>
+        ))}
+      </ul>
+      <div className="mt-4 flex flex-col gap-2">
+        
+        <a
+          href="#"
+          className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue-700 transition-colors text-sm text-center"
+        >
+          Start Now
+        </a>
+      </div>
+    </motion.div>
+  );
+}
+
+function Testimonial({ name, children }) {
+  return (
+    <motion.figure
+      variants={fadeIn}
+      className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md mb-4"
+    >
+      <div className="flex text-orange-500 mb-2">
+        {[...Array(5)].map((_, i) => (
+          <svg key={i} className="h-5 w-5 fill-current" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+      <blockquote className="text-slate-700">{children}</blockquote>
+      <figcaption className="mt-3 text-sm font-semibold text-blue">
+        {name}
+      </figcaption>
+    </motion.figure>
   );
 }

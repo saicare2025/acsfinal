@@ -1,4 +1,4 @@
-import HeroSection from "./HeroSection2";
+import HeroSection from "./HeroMain";
 import TrustBadge from "./TrustBadge";
 import WhyChooseUs from "./WhyChooseUs";
 import HelpSection from "./HowCan";
@@ -6,15 +6,14 @@ import CompanyCarousel from "./CompanySection";
 import HomeClientSections from "./HomeClientSections";
 import CreditRepairSection from "./CreditRepair";
 import CreditRepairProcess from "./CreditRepairProcess.js";
-import PremiumTestimonialCarousel2 from "./Testmonials";
-
+import ReviewWidget from "../../components/homepage/TestmonialProduct"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
       <HeroSection />
       <TrustBadge />
-      <PremiumTestimonialCarousel2/>
+      <ReviewWidget/>
       <WhyChooseUs />
       <HelpSection />
       <CompanyCarousel />

@@ -9,12 +9,27 @@ import TestimonialSection from "../../components/homepage/ScrollTestimonials";
 import VideoServicesSection from "../../components/homepage/VideoServicesSection";
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
+import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
 // ✅ SEO Metadata for Canberra Credit Repair
 
 export default function Home() {
+  // Generate structured data for this service page
+  const structuredData = generateMinimalStructuredData({
+    pathname: "/credit-repair-canberra",
+    title: "Canberra Credit Repair Experts | Australian Credit Solutions",
+    description: "Professional credit repair services in Canberra. Remove defaults, correct credit reports, and improve your credit score with Canberra's trusted credit repair experts.",
+    isService: true,
+    serviceType: "Credit Repair Services Canberra"
+  });
   return (
     <main className="flex min-h-screen flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
       <Header />
       <HeroSection />
       <VideoServicesSection />

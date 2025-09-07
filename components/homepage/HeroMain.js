@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import heroImage from "../../app/assets/hero4.webp";
+import heroImage from "../../app/assets/hero2.webp";
 import CreditAssessmentForm from "./HeroForm";
 import Image from "next/image";
 import {
@@ -9,7 +9,7 @@ import {
   ShieldCheckIcon,
   LockClosedIcon,
   CurrencyDollarIcon,
-  PhoneIcon,
+
 } from "@heroicons/react/24/solid";
 
 export default function HeroSection() {
@@ -26,12 +26,12 @@ export default function HeroSection() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="mb-8"
             >
-              <h3 className="text-3xl text-center lg:text-start sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-gray-700">
+              <h1 className="text-3xl text-center lg:text-start sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-gray-700">
                 Get Your <span className="text-blue">Free Credit</span> Assessment Today
-              </h3>
-              <h4 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-4">
+              </h1>
+              <h2 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-4">
                 No Win, No Fee - Terms Apply*
-              </h4>
+              </h2>
 
               {/* Form */}
               <motion.div

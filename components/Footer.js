@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MapPin, ShieldCheck, FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { PinterestIcon, TikTokIcon } from "./Header";
 
 export default function Footer() {
   const router = useRouter();
@@ -118,6 +119,57 @@ export default function Footer() {
                 <br />
                 AFCA membership: 83546
               </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/australiancreditsolutions"
+                className="hover:text-blue-200"
+                aria-label="Facebook"
+              >
+                <FacebookIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="https://x.com/credits_aussie"
+                className="hover:text-blue-200"
+                aria-label="Twitter"
+              >
+                <TwitterIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/australian_credit_solution/"
+                className="hover:text-blue-200"
+                aria-label="Instagram"
+              >
+                <InstagramIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/australian-credit-solutions/"
+                className="hover:text-blue-200"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="https://ph.pinterest.com/australiancreditsolutions/"
+                className="hover:text-blue-200 hidden lg:block"
+                aria-label="Pinterest"
+              >
+                <PinterestIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.youtube.com/@australiancreditsolutions3719"
+                className="hover:text-blue-200 hidden lg:block"
+                aria-label="YouTube"
+              >
+                <YoutubeIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@australiancreditrepair"
+                className="hover:text-blue-200 hidden lg:block"
+                aria-label="TikTok"
+              >
+                <TikTokIcon className="w-4 h-4" />
+              </a>
             </div>
           </motion.div>
 

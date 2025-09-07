@@ -3,7 +3,9 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import AnalyticsRouteTracker from "@/components/AnalyticsRouteTracker";
-import GlobalStructuredData from "@/components/GlobalStructuredData";
+import ExitIntentPopupWithSuspense from "@/components/ExitIntentPopupWithSuspense";
+import FloatingTestimonials from "@/components/homepage/TestmonialHero";
+
 
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: true });
 
@@ -105,7 +107,6 @@ export default function RootLayout({ children }) {
         )}
       </head>
       <body className={inter.className}>
-        <GlobalStructuredData />
         <AnalyticsRouteTracker />
         <Script
           id="productreview-settings"
@@ -127,7 +128,9 @@ export default function RootLayout({ children }) {
           async
         />
         {children}
+        <ExitIntentPopupWithSuspense />
         <TawkDesktopOnly />
+        <FloatingTestimonials position="left" offsetY={24} offsetX={24} label="Testimonials" />
       </body>
     </html>
   );
