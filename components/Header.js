@@ -12,6 +12,7 @@ import {
   ChatBubbleLeftRightIcon,
   QuestionMarkCircleIcon,
   ChevronDownIcon,
+  ArrowRightIcon,
 } from "@heroicons/react/24/outline";
 import {
   FacebookIcon,
@@ -56,6 +57,11 @@ const SERVICE_LINKS = [
   { name: "Worst Repayment History Removal", href: "/worst-repayment-history-removal" },
   { name: "Credit Repair — Home Loan Approval", href: "/credit-repair-home-loan-approval" },
   { name: "Credit Repair for Car Finance", href: "/credit-repair-for-car-finance" },
+  { name: "Credit Repair After Bankruptcy", href: "/credit-repair-after-bankruptcy" },
+  { name: "Credit Enquiry Removal Australia", href: "/credit-enquiry-removal-australia" },
+  { name: "Credit Repair After Divorce or Separation", href: "/credit-repair-after-divorce-or-separation" },
+  { name: "Credit Repair for First Home Buyers", href: "/credit-repair-for-first-home-buyers" },
+  { name: "Default Removal Services Australia", href: "/default-removal-services-australia" },
 ];
 
 const NAV_LINKS = [
@@ -137,7 +143,7 @@ function MobileMenu({ isOpen, navLinks, onClose }) {
         <Link
           href="/free-credit-assessment"
           onClick={onClose}
-          className="block w-full text-center rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-medium py-3 shadow-md"
+          className="block w-full text-center rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue hover:to-blue-800 text-white font-medium py-3 shadow-md"
           aria-label="Start Free Credit Assessment"
         >
           Free Credit Assessment
@@ -145,7 +151,7 @@ function MobileMenu({ isOpen, navLinks, onClose }) {
 
         <a
           href="tel:0489265737"
-          className="block w-full text-center rounded-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 hover:from-cyan-600 hover:via-blue-600 hover:to-indigo-600 text-white font-medium py-3 shadow-md"
+          className="block w-full text-center rounded-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 hover:from-cyan-600 hover:via-blue hover:to-indigo-600 text-white font-medium py-3 shadow-md"
           aria-label="Call Credit Repair Helpline"
         >
           Helpline 0489 265 737
@@ -274,57 +280,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* <div className="flex items-center gap-4">
-            <a
-              href="https://www.facebook.com/australiancreditsolutions"
-              className="hover:text-blue-200"
-              aria-label="Facebook"
-            >
-              <FacebookIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://x.com/credits_aussie"
-              className="hover:text-blue-200"
-              aria-label="Twitter"
-            >
-              <TwitterIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://www.instagram.com/australian_credit_solution/"
-              className="hover:text-blue-200"
-              aria-label="Instagram"
-            >
-              <InstagramIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/australian-credit-solutions/"
-              className="hover:text-blue-200"
-              aria-label="LinkedIn"
-            >
-              <LinkedinIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://ph.pinterest.com/australiancreditsolutions/"
-              className="hover:text-blue-200 hidden lg:block"
-              aria-label="Pinterest"
-            >
-              <PinterestIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://www.youtube.com/@australiancreditsolutions3719"
-              className="hover:text-blue-200 hidden lg:block"
-              aria-label="YouTube"
-            >
-              <YoutubeIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://www.tiktok.com/@australiancreditrepair"
-              className="hover:text-blue-200 hidden lg:block"
-              aria-label="TikTok"
-            >
-              <TikTokIcon className="w-4 h-4" />
-            </a>
-          </div> */}
+       
         </div>
       </div>
 
@@ -351,55 +307,83 @@ export default function Header() {
                       onMouseLeave={handleMouseLeave}
                     >
                       <button
-                        className="flex items-center text-gray-900 font-medium hover:text-blue-500 transition-colors"
+                        className="flex items-center text-gray-900 font-medium hover:text-blue transition-colors group"
                         onClick={handleDropdownClick}
                         onKeyDown={handleKeyDown}
                         aria-expanded={isDropdownOpen}
                         aria-haspopup="true"
                       >
                         <span className="mr-2">
-                          <link.Icon className="w-5 h-5" aria-hidden />
+                          <link.Icon className="w-5 h-5 group-hover:text-blue" aria-hidden />
                         </span>
                         {link.name}
                         <ChevronDownIcon 
-                          className={`ml-1 w-4 h-4 transition-transform ${isDropdownOpen ? 'transform rotate-180' : ''}`}
+                          className={`ml-1 w-4 h-4 transition-transform ${isDropdownOpen ? 'transform rotate-180 text-blue' : 'text-gray-500 group-hover:text-blue'}`}
                           aria-hidden 
                         />
                       </button>
                       
-                      {/* Dropdown Menu */}
+                      {/* Enhanced Dropdown Menu */}
                       {isDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                        <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-blue-100 py-3 z-50">
+                          {/* Header */}
+                          <div className="px-4 py-2 border-b border-blue-100">
+                            <h3 className="text-sm font-semibold text-blue-800 uppercase tracking-wide flex items-center">
+                              <CogIcon className="w-4 h-4 mr-2" />
+                              Our Services
+                            </h3>
+                          </div>
+                          
+                          {/* View All Link */}
                           <Link
                             href={link.href}
-                            className="block px-4 py-2 text-sm font-medium text-gray-900 hover:text-blue-500 hover:bg-blue-50 transition-colors focus:outline-none focus:bg-blue-50 focus:text-blue-500"
+                            className="flex items-center justify-between px-4 py-3 text-sm font-medium text-blue hover:bg-blue-50 transition-colors focus:outline-none focus:bg-blue-50 border-b border-dashed border-blue-100"
                             onClick={() => setIsDropdownOpen(false)}
                             onKeyDown={(e) => handleDropdownKeyDown(e, 0, SERVICE_LINKS.length + 1)}
                           >
-                            <div className="flex items-center">
-                              <link.Icon className="w-4 h-4 mr-2" aria-hidden />
-                              View All Services
-                            </div>
+                            <span>View All Services</span>
+                            <ArrowRightIcon className="w-4 h-4" />
                           </Link>
-                          <hr className="my-2 border-gray-100" />
-                          {SERVICE_LINKS.map((serviceLink, index) => (
+                          
+                          {/* Services List */}
+                          <div className="max-h-72 overflow-y-auto py-1">
+                            {SERVICE_LINKS.map((serviceLink, index) => (
+                              <Link
+                                key={serviceLink.href}
+                                href={serviceLink.href}
+                                className="block px-4 py-3 text-sm text-gray-700 hover:text-blue hover:bg-blue-50 transition-colors focus:outline-none focus:bg-blue-50 border-b border-dashed border-gray-100 last:border-0"
+                                onClick={() => setIsDropdownOpen(false)}
+                                onKeyDown={(e) => handleDropdownKeyDown(e, index + 1, SERVICE_LINKS.length + 1)}
+                              >
+                                <div className="flex items-start">
+                                  <div className="flex-shrink-0 mt-0.5 mr-3 text-blue-500">
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                  </div>
+                                  <span>{serviceLink.name}</span>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                          
+                          {/* Footer CTA */}
+                          <div className="px-4 py-3 bg-blue-50 rounded-b-lg border-t border-blue-100">
                             <Link
-                              key={serviceLink.href}
-                              href={serviceLink.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-500 hover:bg-blue-50 transition-colors focus:outline-none focus:bg-blue-50 focus:text-blue-500"
+                              href="/free-credit-assessment"
+                              className="block text-center bg-blue hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-md transition-colors"
                               onClick={() => setIsDropdownOpen(false)}
-                              onKeyDown={(e) => handleDropdownKeyDown(e, index + 1, SERVICE_LINKS.length + 1)}
                             >
-                              {serviceLink.name}
+                              Free Assessment
                             </Link>
-                          ))}
+                          </div>
                         </div>
                       )}
                     </div>
                   ) : (
                     <Link
                       href={link.href}
-                      className="flex items-center text-gray-900 font-medium hover:text-blue-500 transition-colors"
+                      className="flex items-center text-gray-900 font-medium hover:text-blue transition-colors"
                     >
                       <span className="mr-2">
                         <link.Icon className="w-5 h-5" aria-hidden />
@@ -414,8 +398,8 @@ export default function Header() {
             <div className="flex items-center space-x-4 ml-6">
               <Link href="/free-credit-assessment">
                 <button
-                  className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700
-                             hover:from-blue-600 hover:via-blue-700 hover:to-blue-800
+                  className="bg-gradient-to-r from-blue-500 via-blue to-blue-700
+                             hover:from-blue hover:via-blue-700 hover:to-blue-800
                              text-white px-4 py-2 rounded-md text-sm font-medium
                              transition-all duration-200 shadow-md"
                 >

@@ -6,12 +6,21 @@ import { Clock, ArrowRight, ArrowLeft, BookOpen } from "lucide-react";
 import MainLayout from "../MainLayout";
 import blogData from "../../data/blogs_data.json";
 import HeroSection from "../../components/homepage/HeroSection";
+import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
 // Constants
 const LIMIT = 9;
 
 // Main Page Component
 export default function BlogsPage() {
+  // Generate structured data for this page
+  const structuredData = generateMinimalStructuredData({
+    pathname: "/blogs",
+    title: "Credit Repair Blog | Australian Credit Solutions",
+    description: "Expert insights on credit repair, financial tips, and industry updates from Australian Credit Solutions professionals.",
+    isService: false
+  });
+
   const [blogs, setBlogs] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -53,6 +62,12 @@ export default function BlogsPage() {
 
   return (
     <MainLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
       <HeroSection/>
       <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,4 +1,4 @@
-// File: app/credit-enquiry-removal/page.js
+// File: app/credit-enquiry-removal/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -27,7 +27,7 @@ export default function CreditEnquiryRemovalPage() {
   const faqData = [
     {
       question: "How many enquiries are too many?",
-      answer: "Generally more than 2-3 enquiries in 3 months starts impacting your score. More than 5-6 enquiries in 12 months seriously damages your credit profile."
+      answer: "There&apos;s no magic number, but generally more than 2-3 enquiries in 3 months starts impacting your score. More than 5-6 enquiries in 12 months seriously damages your credit profile."
     },
     {
       question: "Will removing enquiries improve my credit score immediately?",
@@ -39,34 +39,21 @@ export default function CreditEnquiryRemovalPage() {
     },
     {
       question: "What if the enquiry was legitimate but hurt my score?",
-      answer: "Legitimate enquiries made with proper consent usually can't be removed. However, we often find that enquiries people think were legitimate actually had procedural flaws that make them removable."
+      answer: "Legitimate enquiries made with proper consent usually can&apos;t be removed. However, we often find that enquiries people think were legitimate actually had procedural flaws that make them removable."
     },
     {
       question: "How long do enquiries stay on my file naturally?",
       answer: "Credit enquiries remain visible for 5 years in Australia. However, their impact on your score diminishes over time, with the heaviest impact in the first 12 months."
-    },
-    {
-      question: "Will enquiry removal hurt my credit score?",
-      answer: "No. Removing incorrect or unauthorised enquiries can only help your credit score. There's no negative impact from successful enquiry removal."
-    },
-    {
-      question: "What evidence do you need to remove enquiries?",
-      answer: "This depends on the specific enquiry, but we often use consent documentation, application records, correspondence with credit providers, and identity verification."
-    },
-    {
-      question: "Can you remove all enquiries from my file?",
-      answer: "No ethical company can guarantee removal of all enquiries. We only challenge enquiries where we identify legitimate removal grounds under Australian privacy law."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-enquiry-removal",
-    title: "Remove Credit Enquiries Fast | Australian Credit Solutions",
-    description: "Remove unauthorised credit enquiries fast with Australia's specialists. 98% success rate when we take cases. Licensed specialists, No Win No Fee policy.",
+    title: "Remove Credit Enquiries Fast | Australia&apos;s Leading Credit Enquiry Removal Specialists",
+    description: "Too many credit enquiries killing your credit score? Get unauthorised enquiries removed professionally. 98% success rate when we take your case. Licensed specialists, No Win No Fee policy.",
     isService: true,
-    serviceType: "Credit Enquiry Removal",
-    faqData: faqData
+    serviceType: "Credit Enquiry Removal"
   });
 
   return (
@@ -93,13 +80,14 @@ export default function CreditEnquiryRemovalPage() {
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
                 Remove Credit Enquiries Fast
                 <span className="block mt-2 text-blue">
-                  Australia&apos;s Leading Credit Enquiry Removal Specialists
+                  Australia&apos;s Leading Enquiry Removal Specialists
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Too many credit enquiries killing your credit score? Get unauthorised enquiries removed
+                  Too many credit enquiries killing your score? We remove
+                  unauthorised, duplicate and incorrect enquiries
                   professionally.{" "}
                   <strong className="font-semibold text-blue">
                     98% success rate
@@ -112,9 +100,10 @@ export default function CreditEnquiryRemovalPage() {
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Multiple credit enquiries can slash your credit score by 100+ points, making loan
-                  approval nearly impossible. Our award-winning specialists remove unauthorised, duplicate, and incorrect
-                  enquiries from your credit file – often within weeks, not years.
+                  Multiple enquiries can slash your score by 100+ points and
+                  block approvals. Our award-winning team removes bad enquiries
+                  across Equifax, Experian and Illion — often within weeks, not
+                  years.
                 </p>
               </div>
 
@@ -210,8 +199,8 @@ export default function CreditEnquiryRemovalPage() {
       {/* Opening Section */}
       <Section title="Your credit enquiries are quietly destroying your financial future">
         <p>
-          Every time someone checks your credit – whether you applied or not – it gets recorded on your file. Too
-          many enquiries signal &quot;credit hungry&quot; behaviour to lenders, making them instantly reject your
+          Every time someone checks your credit – whether you applied or not – it gets recorded on your
+          file. Too many enquiries signal &quot;credit hungry&quot; behaviour to lenders, making them instantly reject your
           applications.
         </p>
         <p className="mt-4">
@@ -224,6 +213,8 @@ export default function CreditEnquiryRemovalPage() {
           Australian Credit Solutions specialises in credit enquiry removal across Australia. We&apos;re not another
           generic credit repair company making empty promises. We&apos;re award-winning specialists with a 98%
           success rate when we accept cases, backed by three consecutive years of industry recognition.
+        </p>
+        <p className="mt-4">
           The difference? We only take cases where we&apos;re genuinely confident of success. If we can&apos;t help you win,
           we&apos;ll tell you upfront.
         </p>
@@ -231,10 +222,6 @@ export default function CreditEnquiryRemovalPage() {
 
       {/* Impact Section */}
       <Section title="How Credit Enquiries Destroy Your Credit Score">
-        <p className="mb-6 text-slate-700">
-          Before diving into how we remove enquiries, let&apos;s understand exactly how they&apos;re damaging your
-          financial life:
-        </p>
         <motion.ul
           variants={staggerChildren}
           initial="hidden"
@@ -257,15 +244,19 @@ export default function CreditEnquiryRemovalPage() {
             },
             {
               h: "Different Types Hit Differently",
-              p: "Credit card enquiries usually hit hardest on your score. Personal loan enquiries have moderate impact but signal higher risk. Home loan enquiries have lower individual impact but multiple enquiries from shopping around still hurt.",
+              p: "Credit card enquiries usually hit hardest on your score. Personal loan enquiries have moderate impact. Home loan enquiries have lower individual impact but multiple enquiries still hurt.",
             },
             {
               h: "Time Doesn&apos;t Heal All Wounds",
               p: "While enquiries technically &apos;fall off&apos; after 5 years, their damage compounds over time. Five years of restricted credit access costs you far more than professional removal.",
             },
             {
-              h: "Automatic Approval Systems Work Against You",
-              p: "Many lenders use automated systems that instantly reject applications with too many enquiries. Once enquiries are removed, these systems start approving applications that were previously auto-declined.",
+              h: "Automatic Rejection Systems",
+              p: "Many lenders use computer systems that instantly reject applications with too many enquiries, regardless of your income, assets, or credit history.",
+            },
+            {
+              h: "Premium Interest Rate Penalties",
+              p: "Even when you do get approved, excessive enquiries often mean higher interest rates and worse terms as lenders see you as higher risk.",
             },
           ].map((item) => (
             <motion.li
@@ -282,6 +273,10 @@ export default function CreditEnquiryRemovalPage() {
 
       {/* What We Remove */}
       <Section title="What Enquiries Can Be Removed From Your File">
+        <p className="text-slate-700">
+          <strong>Important Note:</strong> We can only challenge enquiries that violate Australian privacy law or credit reporting requirements. 
+          Legitimate enquiries made with proper consent typically cannot be removed.
+        </p>
         <motion.div
           variants={staggerChildren}
           initial="hidden"
@@ -359,17 +354,17 @@ export default function CreditEnquiryRemovalPage() {
             {
               title: "Complete Enquiry Audit",
               description:
-                "We obtain your credit files from all three major reporting bodies – Equifax, Experian, and Illion. Most DIY removal attempts fail because people only check one bureau. Our comprehensive audit identifies all enquiries across all three bureaus, duplicate enquiries from the same application, and enquiries with suspicious timing or patterns.",
+                "We obtain your credit files from all three major reporting bodies – Equifax, Experian, and Illion. Our comprehensive audit identifies all enquiries across all bureaus, duplicates, suspicious patterns, and procedural violations.",
             },
             {
               title: "Legal Assessment & Removal Strategy",
               description:
-                "Not every enquiry can be challenged – but far more can be removed than most people realise. We assess each enquiry against Privacy Act 1988 consent requirements, credit reporting code compliance, AFCA guidelines, and industry-specific authorisation procedures.",
+                "We assess each enquiry against Privacy Act 1988 consent requirements, credit reporting code compliance, and industry-specific authorisation procedures to determine removal grounds.",
             },
             {
               title: "Professional Challenge Process",
               description:
-                "This is where amateur attempts typically fail. Credit providers and bureaus process thousands of enquiry disputes monthly. Generic template letters get ignored or rejected. Our proven approach includes legally structured challenge letters citing specific breaches and comprehensive supporting evidence.",
+                "Using legally structured challenge letters citing specific breaches, comprehensive supporting evidence, and direct engagement with credit providers when required.",
             },
             {
               title: "Monitoring & Score Recovery",
@@ -402,29 +397,17 @@ export default function CreditEnquiryRemovalPage() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <Testimonial name="James from Melbourne – IT Manager">
-            &quot;Had 23 credit enquiries from a broker who shopped my home
-            loan application everywhere without telling me. Every lender rejected me because of the enquiry
-            overload. ACS removed 19 of the 23 enquiries in 5 weeks. My credit score jumped 127 points and I got
-            home loan approval the following month at 0.3% below the standard rate.&quot;
+          <Testimonial name="James&apos;s Story – Melbourne IT Manager">
+            &quot;Had 23 credit enquiries from a broker who shopped my home loan application everywhere without telling me. Every lender rejected me because of the enquiry overload. ACS removed 19 of the 23 enquiries in 5 weeks. My credit score jumped 127 points and I got home loan approval the following month at 0.3% below the standard rate.&quot;
           </Testimonial>
-          <Testimonial name="Rebecca from Brisbane – Marketing Executive">
-            &quot;Identity theft left me with 8 unauthorised enquiries
-            from credit cards and personal loans I never applied for. Police report wasn&apos;t enough to get them
-            removed myself. ACS provided the legal framework and got all 8 enquiries wiped in 3 weeks. Credit score
-            went from 420 to 720.&quot;
+          <Testimonial name="Rebecca&apos;s Story – Brisbane Marketing Executive">
+            &quot;Identity theft left me with 8 unauthorised enquiries from credit cards and personal loans I never applied for. Police report wasn&apos;t enough to get them removed myself. ACS provided the legal framework and got all 8 enquiries wiped in 3 weeks. Credit score went from 420 to 720.&quot;
           </Testimonial>
-          <Testimonial name="Michael from Perth – Tradie">
-            &quot;Applied for equipment finance and the lender ran my credit 4 times &apos;by
-            mistake.&apos; Other lenders saw the multiple enquiries and assumed I was desperate. Couldn&apos;t get financing
-            anywhere. ACS removed the duplicate enquiries in 10 days and I had equipment approval within the
-            week.&quot;
+          <Testimonial name="Michael&apos;s Story – Perth Tradie">
+            &quot;Applied for equipment finance and the lender ran my credit 4 times &apos;by mistake.&apos; Other lenders saw the multiple enquiries and assumed I was desperate. Couldn&apos;t get financing anywhere. ACS removed the duplicate enquiries in 10 days and I had equipment approval within the week.&quot;
           </Testimonial>
-          <Testimonial name="Sarah from Sydney – Teacher">
-            &quot;Car dealership ran my credit for &apos;quotes&apos; on 6 different finance
-            products without explaining each was a separate enquiry. Killed my credit score overnight. ACS
-            challenged the unauthorised enquiries and got 5 of 6 removed. Score improved by 89 points in one
-            month.&quot;
+          <Testimonial name="Sarah&apos;s Story – Sydney Teacher">
+            &quot;Car dealership ran my credit for &apos;quotes&apos; on 6 different finance products without explaining each was a separate enquiry. Killed my credit score overnight. ACS challenged the unauthorised enquiries and got 5 of 6 removed. Score improved by 89 points in one month.&quot;
           </Testimonial>
         </motion.div>
       </Section>
@@ -439,14 +422,14 @@ export default function CreditEnquiryRemovalPage() {
           className="mt-4 grid gap-4 sm:grid-cols-2"
         >
           {[
-            "Enquiry Removal Specialists – While other companies treat enquiry removal as a side service, it&apos;s one of our core specialities.",
-            "98% Success Rate When We Take Cases – We don&apos;t accept every enquiry removal case. We carefully assess each situation and only proceed when we&apos;re confident of success.",
-            "No Win No Fee Protection – You pay our administration fee ($330) upfront, but if we don&apos;t successfully remove the targeted enquiries, you don&apos;t pay success fees.",
-            "Three Consecutive Industry Awards – 2022, 2023, and 2024 Industry Excellence Awards for outstanding results and client satisfaction.",
-            "Licensed Under ASIC ACL 532003 – We operate under strict ASIC licensing. This means we&apos;re regulated, insured, and accountable for our services.",
-            "Australia-Wide Service – Credit reporting is federally regulated under the Privacy Act 1988, so location doesn&apos;t matter. We help clients from Darwin to Hobart.",
-            "Direct Expert Communication – You&apos;ll work directly with our credit specialists who understand your case, not offshore call centres or automated systems.",
-            "Fast Turnaround Times – Many enquiry challenges resolve faster than other credit repair services because the evidence is often clear-cut.",
+            "Enquiry removal specialists – while other companies treat enquiry removal as a side service, it&apos;s one of our core specialities.",
+            "98% success rate when we take cases – we carefully assess each situation and only proceed when we&apos;re confident of success.",
+            "No Win No Fee protection – you pay our administration fee ($330) upfront, but if we don&apos;t successfully remove the targeted enquiries, you don&apos;t pay success fees.",
+            "Three consecutive industry awards (2022, 2023, and 2024) for outstanding results and client satisfaction from proven results, not marketing hype.",
+            "Licensed under ASIC ACL 532003 – we operate under strict licensing, meaning we&apos;re regulated, insured, and accountable for our services.",
+            "Australia-wide service – credit reporting is federally regulated, so we help clients from Darwin to Hobart with identical service levels.",
+            "Direct expert communication – you&apos;ll work directly with our credit specialists who understand your case, not offshore call centres.",
+            "Fast turnaround times – many enquiry challenges resolve faster because the evidence is often clear-cut.",
           ].map((t) => (
             <motion.li
               key={t}
@@ -479,7 +462,7 @@ export default function CreditEnquiryRemovalPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-2"
         >
           <PriceCard
             name="Express Enquiry Removal"
@@ -490,6 +473,7 @@ export default function CreditEnquiryRemovalPage() {
               "Priority processing",
               "Daily updates",
             ]}
+
            
           />
           <PriceCard
@@ -501,28 +485,37 @@ export default function CreditEnquiryRemovalPage() {
               "Detailed challenge strategy",
               "Weekly reports",
             ]}
-            
+           
             featured
           />
           <PriceCard
             name="Bulk Enquiry Package"
             timeline="4-6 weeks typically"
-            perfectFor="10+ enquiries, broker damage, identity theft"
+            perfectFor="10+ enquiries, broker damage, identity theft aftermath"
             includes={[
               "Coordinated removal strategy",
               "Bulk processing efficiencies",
-              "Comprehensive reporting",
+              "Comprehensive monitoring",
             ]}
-          
+         
+          />
+          <PriceCard
+            name="Enquiry Prevention Package"
+            timeline="Immediate setup + 12 months monitoring"
+            perfectFor="High-value clients, business owners, frequent applicants"
+            includes={[
+              "Credit monitoring",
+              "Enquiry alerts",
+              "Removal insurance",
+            ]}
+         
           />
         </motion.div>
         <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
           <strong>
-            Enquiry Prevention Package – Ongoing Protection:
+            Remember: All services include our No Win No Fee guarantee:
           </strong>{" "}
-          Immediate setup + 12 months monitoring. Perfect for high-value clients, business owners, frequent applicants.
-          <br />
-          <em>All services include our No Win No Fee guarantee – if we don&apos;t remove the targeted enquiries, you don&apos;t pay success fees.</em>
+          If we don&apos;t remove the targeted enquiries, you don&apos;t pay success fees.
         </div>
       </Section>
 
@@ -536,14 +529,13 @@ export default function CreditEnquiryRemovalPage() {
           className="mt-4 grid gap-4 sm:grid-cols-2"
         >
           {[
-            "Immediate Credit Score Boost – Credit scores typically improve within 30-60 days of enquiry removal.",
-            "Automatic Approval Systems Work Again – Many lenders use automated systems that instantly reject applications with too many enquiries. Once enquiries are removed, these systems start approving applications.",
-            "Better Interest Rates – Clean enquiry history signals responsible credit behaviour. This often qualifies you for standard rates instead of premium pricing.",
-            "Successful Finance Applications – Home loans, car finance, credit cards, and personal loans become accessible again.",
-            "Broker Relationships Restored – Mortgage brokers can work with you again instead of declining to submit applications due to enquiry concerns.",
-            "Credit Card Rewards Access – Premium rewards credit cards have strict enquiry limits. Clean enquiry history opens access to valuable points programs.",
-            "Business Finance Opportunities – Personal credit enquiries affect business lending decisions. Clean personal enquiry history improves access to business loans.",
-            "Peace of Mind – You&apos;ll have confidence in your credit applications knowing your enquiry history is clean.",
+            "Immediate credit score boost – scores typically improve within 30-60 days of enquiry removal.",
+            "Automatic approval systems work again – many lenders use automated systems that instantly reject applications with too many enquiries.",
+            "Better interest rates – clean enquiry history signals responsible credit behaviour, often qualifying you for standard rates.",
+            "Successful finance applications – home loans, car finance, credit cards, and personal loans become accessible again.",
+            "Broker relationships restored – mortgage brokers can work with you again instead of declining to submit applications.",
+            "Credit card rewards access – premium rewards credit cards have strict enquiry limits that clean history opens up.",
+            "Business finance opportunities – personal credit enquiries affect business lending decisions, so clean history improves access.",
           ].map((t) => (
             <motion.li
               key={t}
@@ -558,10 +550,6 @@ export default function CreditEnquiryRemovalPage() {
 
       {/* Legal Rights / Education */}
       <Section title="Understanding Your Rights: Privacy Act & Credit Enquiries">
-        <p className="mb-4 text-slate-700">
-          The Privacy Act 1988 provides strong protections around credit enquiries, but most Australians don&apos;t
-          understand these rights:
-        </p>
         <motion.div
           variants={staggerChildren}
           initial="hidden"
@@ -570,11 +558,12 @@ export default function CreditEnquiryRemovalPage() {
           className="mt-2 space-y-4 text-slate-700"
         >
           {[
-            "Consent Requirements: Credit providers must have your clear, informed consent before accessing your credit file. This consent must be given voluntarily without coercion and be specific to the actual credit product being assessed.",
-            "Right to Challenge Incorrect Information: You have the absolute right to dispute any enquiry on your credit file that you believe is incorrect, unauthorised, or improperly recorded.",
-            "Timeframes for Response: Credit reporting bodies must respond to your enquiry disputes within 30 days (or 7 days if you&apos;re seeking credit within 60 days).",
-            "Right to Compensation: If unauthorised enquiries have caused you financial loss (loan rejections, higher interest rates), you may be entitled to compensation.",
-            "Complaint Escalation: If credit providers or bureaus don&apos;t respond appropriately, you can escalate to the Australian Financial Complaints Authority (AFCA) at no cost.",
+            "Consent requirements: Credit providers must have your clear, informed consent before accessing your credit file. This consent must be given voluntarily, specific to the actual credit product, and properly documented.",
+            "Right to challenge incorrect information: You have the absolute right to dispute any enquiry on your credit file that you believe is incorrect, unauthorised, or improperly recorded.",
+            "Timeframes for response: Credit reporting bodies must respond to your enquiry disputes within 30 days (or 7 days if you&apos;re seeking credit within 60 days).",
+            "Right to compensation: If unauthorised enquiries have caused you financial loss (loan rejections, higher interest rates), you may be entitled to compensation.",
+            "Complaint escalation: If credit providers or bureaus don&apos;t respond appropriately, you can escalate to the Australian Financial Complaints Authority (AFCA) at no cost.",
+            "Why professional help matters: These rights are powerful but complex to exercise. Credit providers have teams of lawyers. You need professional representation to level the playing field.",
           ].map((text, index) => (
             <motion.p
               key={index}
@@ -598,10 +587,6 @@ export default function CreditEnquiryRemovalPage() {
             </motion.p>
           ))}
         </motion.div>
-        <p className="mt-4 text-slate-700">
-          <strong>Why Professional Help Matters:</strong> These rights are powerful but complex to exercise. Credit providers
-          have teams of lawyers. You need professional representation to level the playing field.
-        </p>
       </Section>
 
       {/* FAQs */}
@@ -641,7 +626,7 @@ export default function CreditEnquiryRemovalPage() {
         </motion.div>
       </Section>
 
-      {/* Cost of keeping bad enquiries */}
+      {/* Cost of keeping enquiries */}
       <Section title="The Hidden Cost of Keeping Bad Enquiries">
         <div className="mt-2 grid gap-6 lg:grid-cols-2">
           <div className="space-y-4 text-slate-700">
@@ -649,11 +634,12 @@ export default function CreditEnquiryRemovalPage() {
               Quantifying the Financial Impact
             </h3>
             {[
-              "Home Loan Impact: Score 750+: Access to best rates (~6.2% variable). Score 500-649: Premium rates (~7.5%+ variable). On a $500,000 home loan, the difference is $162,500 over 30 years.",
-              "Credit Card Access: Clean enquiry history gets platinum rewards cards with 55-day interest-free periods. Excessive enquiries mean basic cards only with $2,000-5,000 limits.",
-              "Car Finance Rates: Good enquiry profile gets bank rates from 5.9%. Poor enquiry profile forces dealer finance from 12.9%+. On a $40,000 car loan, this costs $6,800 extra in interest.",
-              "Employment Opportunities: Some employers check credit reports for financial roles. Excessive enquiries can cost you job opportunities in banking, finance, and management.",
-              "Business Finance Access: Personal credit enquiries affect business lending. Clean personal enquiry history is often required for business loans, equipment finance, and commercial mortgages.",
+              "Home loan impact: Score 750+ gets best rates (~6.2%), while score <500 often gets declined or forced into non-bank lending (8%+ rates). On a $500,000 home loan, this difference is $162,500 over 30 years.",
+              "Credit card access: Clean enquiry history means platinum rewards cards with 55-day interest-free periods and $25,000+ limits. Excessive enquiries means basic cards only with $2,000-5,000 limits.",
+              "Car finance rates: Good enquiry profile gets bank rates from 5.9%, poor profile gets dealer finance from 12.9%+. On a $40,000 car loan over 5 years, this costs $6,800 extra in interest.",
+              "Employment opportunities: Some employers check credit reports for financial roles. Excessive enquiries can cost you job opportunities in banking, finance, and senior management.",
+              "Business finance access: Personal credit enquiries affect business lending. Clean personal enquiry history is often required for business loans, equipment finance, and commercial mortgages.",
+              "Rental applications: Many landlords now check credit reports. Excessive enquiries can result in rental rejection, especially in competitive markets like Sydney and Melbourne.",
             ].map((text, index) => (
               <p key={index} className="flex items-start gap-2">
                 <svg
@@ -681,7 +667,7 @@ export default function CreditEnquiryRemovalPage() {
             className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-lg"
           >
             <h3 className="text-lg font-semibold text-blue">
-              Your Two Options
+              Why Act Now Instead of Waiting
             </h3>
             <ul className="mt-3 space-y-3 text-slate-700">
               <li className="flex items-start gap-2">
@@ -695,10 +681,26 @@ export default function CreditEnquiryRemovalPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
+                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                Wait around for 5 years while these enquiries naturally drop off, paying through the nose the whole time.
+                Time compounds the damage: Every month you delay is another month of credit score suppression and automatic loan rejections.
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="h-5 w-5 shrink-0 text-orange-500 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                The enquiry removal window: Evidence needed for removal can disappear over time – documentation gets destroyed, staff leave companies.
               </li>
               <li className="flex items-start gap-2">
                 <svg
@@ -714,7 +716,7 @@ export default function CreditEnquiryRemovalPage() {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                Let us sort it out professionally in a few weeks.
+                The sooner we act, the higher our success rate and the faster your score recovery.
               </li>
             </ul>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -739,11 +741,11 @@ export default function CreditEnquiryRemovalPage() {
       <Section title="Getting Started: Your Free Enquiry Assessment">
         <ol className="mt-4 space-y-3 text-slate-700">
           {[
-            "Free Phone Consultation (10 minutes) — Call 0489 265 737 to discuss your enquiry situation. We&apos;ll talk through what&apos;s on your file and identify obvious removal opportunities.",
-            "Complete Credit File Review — If we proceed, we obtain your reports from all three credit bureaus and conduct a detailed enquiry audit.",
-            "Removal Strategy Presentation — We present our findings, explain which enquiries can be removed, provide timeline estimates, and outline our recommended approach.",
-            "Professional Challenge Process — Once you&apos;re ready to proceed, we handle all enquiry challenges while providing regular progress updates.",
-            "Results Delivery & Score Monitoring — We monitor your file until all targeted enquiries are removed and provide guidance on protecting your credit from future unauthorised access.",
+            "Free phone consultation (10 minutes) — call 0489 265 737 to discuss your enquiry situation and identify obvious removal opportunities.",
+            "Complete credit file review — we obtain your reports from all three credit bureaus and conduct a detailed enquiry audit.",
+            "Removal strategy presentation — we present our findings, explain which enquiries can be removed, and provide timeline estimates.",
+            "Professional challenge process — once you&apos;re ready to proceed, we handle all enquiry challenges while providing regular progress updates.",
+            "Results delivery & score monitoring — we monitor your file until all targeted enquiries are removed and provide guidance on protection.",
           ].map((step, index) => (
             <li key={index} className="flex items-start gap-3">
               <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
@@ -759,54 +761,6 @@ export default function CreditEnquiryRemovalPage() {
             className="rounded-lg bg-blue px-6 py-3 font-semibold text-white hover:bg-blue transition-colors"
           >
             Book My Free Assessment
-          </Link>
-          <a
-            href="tel:+61489265737"
-            className="rounded-lg border-2 border-blue px-6 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
-          >
-            Call 0489 265 737
-          </a>
-        </div>
-      </Section>
-
-      {/* Final CTA Section */}
-      <Section title="Ready to Stop These Enquiries Ruining Your Life?">
-        <div className="space-y-4 text-slate-700">
-          <p>
-            Look, don&apos;t spend another day getting knocked back for finance because of enquiries that shouldn&apos;t even
-            be on your file.
-          </p>
-          <p>
-            Every day you leave this stuff sitting there, you&apos;re getting auto-rejected by lender computer systems,
-            paying higher interest rates on any credit you do get approved for, missing out on decent credit cards
-            and finance products, potentially losing job opportunities, and struggling with rental applications.
-          </p>
-          <p>
-            You&apos;ve basically got two options here: Wait around for 5 years while these enquiries naturally drop off,
-            paying through the nose the whole time. Or let us sort it out professionally in a few weeks.
-          </p>
-          <p>
-            Which one sounds smarter to you?
-          </p>
-          <p>
-            Give us a bell on 0489 265 737 right now for a free chat about what enquiries are on your file and what
-            we can do about them. Or fill out our quick online form – takes 60 seconds and we&apos;ll get back to you within
-            24 hours with your options.
-          </p>
-          <p>
-            We&apos;re Australian Credit Solutions: three years of industry awards, licensed under ASIC ACL 532003, and
-            we&apos;ve been helping Aussies fix their credit disasters since 2019.
-          </p>
-          <p className="font-semibold text-blue">
-            Your credit score&apos;s too important to leave to chance. Let&apos;s get it sorted today.
-          </p>
-        </div>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/free-credit-assessment"
-            className="rounded-lg bg-blue px-6 py-3 font-semibold text-white hover:bg-blue transition-colors"
-          >
-            Get My Free Assessment
           </Link>
           <a
             href="tel:+61489265737"
@@ -906,7 +860,6 @@ function PriceCard({
   timeline,
   perfectFor,
   includes,
-  investment,
   featured = false,
 }) {
   return (
@@ -946,10 +899,8 @@ function PriceCard({
           </li>
         ))}
       </ul>
-      {investment && (
-        <p className="mt-3 text-sm font-semibold text-blue">Investment: {investment}</p>
-      )}
       <div className="mt-4 flex items-end justify-between">
+       
         <Link
           href="/free-credit-assessment"
           className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"

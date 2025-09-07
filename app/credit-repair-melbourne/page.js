@@ -9,42 +9,9 @@ import TestimonialSection from "../../components/homepage/ScrollTestimonials";
 import VideoServicesSection from "../../components/homepage/VideoServicesSection";
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
-import { useFAQStructuredData } from "../../hooks/useStructuredData";
-import { useEffect } from "react";
+import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
-// ✅ SEO Metadata for Melbourne Credit Repair
-export const metadata = {
-  title: "Melbourne Credit Repair Experts | Australian Credit Solutions",
-  description:
-    "Improve your credit score with Melbourne's leading credit repair specialists. Australian Credit Solutions removes defaults, corrects credit report errors, and helps you secure better financial opportunities.",
-  keywords: [
-    "Melbourne credit repair",
-    "credit repair services Melbourne",
-    "fix credit score Melbourne",
-    "remove credit defaults Melbourne",
-    "Australian Credit Solutions"
-  ],
-  openGraph: {
-    title: "Melbourne Credit Repair Experts | Australian Credit Solutions",
-    description:
-      "Trusted Melbourne credit repair services to remove defaults, fix errors, and improve your credit score fast.",
-    url: "https://www.australiancreditsolutions.com.au/credit-repair-melbourne",
-    siteName: "Australian Credit Solutions",
-    type: "website",
-    locale: "en_AU",
-    images: [
-      {
-        url: "https://www.australiancreditsolutions.com.au/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Melbourne Credit Repair Experts"
-      }
-    ]
-  },
-  alternates: {
-    canonical: "https://www.australiancreditsolutions.com.au/credit-repair-melbourne"
-  }
-};
+
 
 export default function Home() {
   // FAQ data for structured data (common credit repair questions)
@@ -71,19 +38,23 @@ export default function Home() {
     }
   ];
 
-  // Use structured data hook for FAQ
-  useFAQStructuredData(faqData);
-
-  // Trigger structured data update for service page detection
-  useEffect(() => {
-    // Small delay to ensure DOM is ready
-    setTimeout(() => {
-      window.dispatchEvent(new CustomEvent('structuredDataUpdate'));
-    }, 100);
-  }, []);
+  // Generate structured data for this service page
+  const structuredData = generateMinimalStructuredData({
+    pathname: "/credit-repair-melbourne",
+    title: "Melbourne Credit Repair Experts | Australian Credit Solutions",
+    description: "Improve your credit score with Melbourne's leading credit repair specialists. Australian Credit Solutions removes defaults, corrects credit report errors, and helps you secure better financial opportunities.",
+    isService: true,
+    serviceType: "Credit Repair Services Melbourne"
+  });
 
   return (
     <main className="flex min-h-screen flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
       <Header />
       <HeroSection />
       <VideoServicesSection />

@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MainLayout from "../MainLayout";
-import { useFAQStructuredData } from "../../hooks/useStructuredData";
+import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
 export default function FAQPage() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -164,11 +164,22 @@ export default function FAQPage() {
     }))
   );
 
-  // Use structured data hook
-  useFAQStructuredData(flatFaqData);
+  // Generate structured data for this page
+  const structuredData = generateMinimalStructuredData({
+    pathname: "/faq",
+    title: "Frequently Asked Questions | Australian Credit Solutions",
+    description: "Common questions about credit repair services, processes, and outcomes. Get answers to your credit repair questions from Australian Credit Solutions experts.",
+    isService: false
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 text-slate-800 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
       <MainLayout>
         {/* Header */}
         <motion.header

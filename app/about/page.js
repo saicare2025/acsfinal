@@ -3,6 +3,106 @@
 import { motion } from "framer-motion";
 import MainLayout from "../MainLayout";
 
+const aboutPageStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.australiancreditsolutions.com.au#org",
+      "name": "Australian Credit Solutions",
+      "url": "https://www.australiancreditsolutions.com.au",
+      "logo": "https://www.australiancreditsolutions.com.au/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+61-489-265-737",
+        "email": "help@australiancreditsolutions.com.au",
+        "contactType": "customer service",
+        "areaServed": "AU",
+        "availableLanguage": "English"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "805/220 Collins Street",
+        "addressLocality": "Melbourne",
+        "addressRegion": "VIC",
+        "postalCode": "3000",
+        "addressCountry": "AU"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:30"
+      },
+      "sameAs": [
+        "https://www.productreview.com.au/listings/australian-credit-solutions",
+        "https://www.google.com/maps/place/805%2F220+Collins+St,+Melbourne+VIC+3000"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.australiancreditsolutions.com.au#elisa",
+      "name": "Elisa Rothschild",
+      "jobTitle": "Principal Lawyer & Director",
+      "alumniOf": "Monash University",
+      "worksFor": {
+        "@id": "https://www.australiancreditsolutions.com.au#org"
+      },
+      "knowsAbout": [
+        "Credit Repair",
+        "Credit Law",
+        "Family Law", 
+        "Debt Negotiation",
+        "Consumer Finance"
+      ],
+      "sameAs": "https://www.linkedin.com/in/elisa-rothschild"
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.australiancreditsolutions.com.au/about#aboutpage",
+      "url": "https://www.australiancreditsolutions.com.au/about",
+      "name": "About Australian Credit Solutions",
+      "description": "Learn more about Australian Credit Solutions — a team dedicated to helping Australians rebuild their financial future through proven credit repair and debt recovery services.",
+      "mainEntity": {
+        "@id": "https://www.australiancreditsolutions.com.au#org"
+      },
+      "reviewedBy": {
+        "@id": "https://www.australiancreditsolutions.com.au#elisa"
+      },
+      "isPartOf": {
+        "@id": "https://www.australiancreditsolutions.com.au#website"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.australiancreditsolutions.com.au#website",
+      "url": "https://www.australiancreditsolutions.com.au",
+      "name": "Australian Credit Solutions",
+      "publisher": {
+        "@id": "https://www.australiancreditsolutions.com.au#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.australiancreditsolutions.com.au/about#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.australiancreditsolutions.com.au"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://www.australiancreditsolutions.com.au/about"
+        }
+      ]
+    }
+  ]
+};
+
 const AboutPage = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -37,6 +137,12 @@ const AboutPage = () => {
 
   return (
     <MainLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutPageStructuredData)
+        }}
+      />
       <div className="bg-gradient-to-r from-blue-100 to-orange-100 min-h-screen py-16 px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -53,22 +159,21 @@ const AboutPage = () => {
               variants={fadeIn}
               className="inline-block mb-6"
             >
-              <div className="w-20 h-1 bg-gradient-to-r from-blue to-orange-600 rounded-full mx-auto" />
+              <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-orange-600 rounded-full mx-auto" />
             </motion.div>
             
             <motion.h1 
               variants={itemVariants}
-              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue to-orange-600 bg-clip-text text-transparent mb-4"
+              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent mb-4"
             >
-              About Dinar Exchange NZ
+              About Australian Credit Solutions
             </motion.h1>
             
             <motion.p 
               variants={itemVariants}
               className="text-xl text-gray-800 max-w-3xl mx-auto"
             >
-              Your trusted source for Iraqi Dinars (IQD) and Zimbabwe Dollars (ZIM) 
-              in New Zealand and Australia.
+              Your trusted partner in credit repair and financial recovery across Australia.
             </motion.p>
           </motion.header>
 
@@ -86,18 +191,19 @@ const AboutPage = () => {
                   initial={{ x: -50, opacity: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <span className="text-blue">Who</span> We Are
+                  <span className="text-blue-600">Who</span> We Are
                 </motion.h2>
                 <div className="space-y-4 text-gray-700">
                   <p>
-                    Welcome to Dinar Exchange New Zealand, your trusted source for
-                    Iraqi Dinars (IQD) and Zimbabwe Dollars (ZIM). We proudly serve
-                    customers throughout New Zealand and Australia.
+                    Australian Credit Solutions is a leading credit repair company dedicated to 
+                    helping Australians rebuild their financial future. With expertise in credit 
+                    law and consumer finance, we provide comprehensive solutions to improve credit 
+                    scores and unlock financial opportunities.
                   </p>
                   <p>
-                    As a reputable dealer of collectible currencies since 2012,
-                    we specialize in delivering authentic, high-quality banknotes
-                    with secure transactions and exceptional service.
+                    Led by Principal Lawyer & Director Elisa Rothschild, our team combines legal 
+                    expertise with practical experience to deliver results for our clients across 
+                    Australia.
                   </p>
                 </div>
               </div>
@@ -106,25 +212,17 @@ const AboutPage = () => {
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
               >
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Our Compliance</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    Operates under Oz Trading Group Pty Ltd
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    ABN: 82 158 981 787
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    ACN: 158 981 787
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    AUSTRAC Enrolment: 100311410
-                  </li>
-                </ul>
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Our Leadership</h3>
+                <div className="space-y-3 text-gray-700">
+                  <div>
+                    <p className="font-semibold text-gray-800">Elisa Rothschild</p>
+                    <p className="text-sm">Principal Lawyer & Director</p>
+                    <p className="text-sm">Monash University Graduate</p>
+                  </div>
+                  <p className="text-sm">
+                    Specializing in Credit Law, Family Law, Debt Negotiation, and Consumer Finance
+                  </p>
+                </div>
               </motion.div>
             </motion.section>
 
@@ -145,28 +243,28 @@ const AboutPage = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
                   {
-                    title: "Authentic Currencies",
-                    desc: "Genuine Iraqi Dinar (IQD) and Zimbabwe Dollar (ZIM) banknotes"
+                    title: "Credit Repair",
+                    desc: "Remove defaults, correct errors, and improve your credit score"
                   },
                   {
-                    title: "Secure Transactions",
-                    desc: "Full KYC compliance and protected ordering process"
+                    title: "Credit Enquiry Removal",
+                    desc: "Challenge and remove unauthorized credit inquiries"
                   },
                   {
-                    title: "Competitive Rates",
-                    desc: "Transparent pricing with no hidden fees"
+                    title: "Court Judgment Removal",
+                    desc: "Professional assistance with court judgment matters"
                   },
                   {
-                    title: "Fast Shipping",
-                    desc: "Tracked delivery across New Zealand"
+                    title: "Debt Negotiation",
+                    desc: "Expert negotiation with creditors and collection agencies"
                   },
                   {
-                    title: "Expert Support",
-                    desc: "Knowledgeable customer service team"
+                    title: "Credit Report Analysis",
+                    desc: "Comprehensive review and analysis of your credit profile"
                   },
                   {
-                    title: "Proven Experience",
-                    desc: "Over a decade serving collectors and investors"
+                    title: "Financial Consultation",
+                    desc: "Personalized advice for your financial recovery"
                   }
                 ].map((service, index) => (
                   <motion.div
@@ -192,13 +290,13 @@ const AboutPage = () => {
               className="text-center"
             >
               <motion.div
-                className="bg-gradient-to-r from-blue to-orange-600 p-0.5 rounded-full inline-block mb-8"
+                className="bg-gradient-to-r from-blue-600 to-orange-600 p-0.5 rounded-full inline-block mb-8"
                 whileInView={{ scaleX: [0, 1.2, 1] }}
                 initial={{ scaleX: 0 }}
                 transition={{ duration: 0.8 }}
               >
                 <div className="bg-gradient-to-r from-blue-100 to-orange-100 px-8 py-4 rounded-full">
-                  <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue to-orange-600">
+                  <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-600">
                     Our Mission
                   </h2>
                 </div>
@@ -210,9 +308,9 @@ const AboutPage = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                To provide New Zealanders with a secure, compliant platform for 
-                collectible currency exchange, prioritizing authenticity, 
-                transparency, and exceptional customer experience.
+                To empower Australians to take control of their financial future by providing 
+                expert credit repair services, debt solutions, and financial guidance with 
+                transparency, integrity, and proven results.
               </motion.p>
             </motion.section>
 
@@ -222,7 +320,7 @@ const AboutPage = () => {
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-lg"
             >
               <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-                Contact <span className="text-blue">Us</span>
+                Contact <span className="text-blue-600">Us</span>
               </h2>
               
               <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -233,10 +331,10 @@ const AboutPage = () => {
                   <div className="text-orange-600 text-3xl mb-4">✉️</div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Email</h3>
                   <a 
-                    href="mailto:dinars@dinarexchange.co.nz" 
+                    href="mailto:help@australiancreditsolutions.com.au" 
                     className="text-gray-600 hover:text-orange-600 transition-colors"
                   >
-                    dinars@dinarexchange.co.nz
+                    help@australiancreditsolutions.com.au
                   </a>
                 </motion.div>
                 
@@ -247,10 +345,10 @@ const AboutPage = () => {
                   <div className="text-orange-600 text-3xl mb-4">📞</div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
                   <a 
-                    href="tel:+6498724693" 
+                    href="tel:+61489265737" 
                     className="text-gray-600 hover:text-orange-600 transition-colors"
                   >
-                    +64 9 872 4693
+                    +61 489 265 737
                   </a>
                 </motion.div>
                 
@@ -258,16 +356,12 @@ const AboutPage = () => {
                   whileHover={{ scale: 1.05 }}
                   className="bg-white p-6 rounded-xl border border-gray-200"
                 >
-                  <div className="text-orange-600 text-3xl mb-4">🌐</div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Website</h3>
-                  <a 
-                    href="https://www.DinarExchange.co.nz" 
-                    className="text-gray-600 hover:text-orange-600 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    DinarExchange.co.nz
-                  </a>
+                  <div className="text-orange-600 text-3xl mb-4">🏢</div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Office</h3>
+                  <p className="text-gray-600">
+                    805/220 Collins Street<br />
+                    Melbourne VIC 3000
+                  </p>
                 </motion.div>
               </div>
             </motion.section>

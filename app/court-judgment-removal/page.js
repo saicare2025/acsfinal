@@ -4,12 +4,11 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Link from "next/link";
-import { useMemo } from "react";
 import { motion } from "framer-motion";
-import { useFAQStructuredData } from "../../hooks/useStructuredData";
 import FooterForm from "@/components/FooterForm";
 import ArrowIcon from "../assets/arrow.png";
 import ArrowIconM from "../assets/arrowm.png";
+import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
 import Image from "next/image";
 
@@ -48,17 +47,31 @@ export default function CourtJudgmentRemovalPage() {
     }
   ];
 
-  // Use structured data hook for FAQ
-  useFAQStructuredData(faqData);
+  // Generate structured data for this service page
+  const structuredData = generateMinimalStructuredData({
+    pathname: "/court-judgment-removal",
+    title: "Court Judgment Removal | Australian Credit Solutions",
+    description: "Expert assistance with court judgment removal and resolution to improve your credit profile. Professional legal support for setting aside or removing court judgments from your credit file.",
+    isService: true,
+    serviceType: "Court Judgment Removal"
+  });
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
       <Header />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
         {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`
+        }}></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center lg:gap-12 lg:flex-row lg:items-start">
@@ -473,7 +486,7 @@ export default function CourtJudgmentRemovalPage() {
               "Priority processing",
               "Daily updates",
             ]}
-            price="$1,650"
+        
           />
           <PriceCard
             name="Standard Judgment Challenge"
@@ -484,7 +497,7 @@ export default function CourtJudgmentRemovalPage() {
               "Evidence compilation",
               "Court applications if required",
             ]}
-            price="$1,100"
+           
             featured
           />
           <PriceCard
@@ -496,7 +509,7 @@ export default function CourtJudgmentRemovalPage() {
               "Court record updates",
               "Credit bureau corrections",
             ]}
-            price="$880"
+            
           />
         </motion.div>
         <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
@@ -589,7 +602,7 @@ export default function CourtJudgmentRemovalPage() {
         >
           {faqData.map((f, index) => (
             <motion.details
-              key={f.q}
+              key={`faq-${index}`}
               variants={fadeIn}
               className="group rounded-xl border border-blue-100 bg-white p-4 shadow-sm transition-all hover:shadow-md"
             >
@@ -869,7 +882,6 @@ function PriceCard({
   timeline,
   perfectFor,
   includes,
-  price,
   featured = false,
 }) {
   return (
@@ -910,7 +922,7 @@ function PriceCard({
         ))}
       </ul>
       <div className="mt-4 flex items-end justify-between">
-        <div className="text-2xl font-extrabold text-slate-900">{price}</div>
+        
         <Link
           href="/free-credit-assessment"
           className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"

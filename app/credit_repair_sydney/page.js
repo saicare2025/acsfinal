@@ -9,8 +9,7 @@ import TestimonialSection from "../../components/homepage/ScrollTestimonials";
 import VideoServicesSection from "../../components/homepage/VideoServicesSection";
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
-import { useFAQStructuredData } from "../../hooks/useStructuredData";
-import { useEffect } from "react";
+import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
 // ✅ SEO Metadata for Sydney Credit Repair
 
@@ -35,18 +34,23 @@ export default function Home() {
     }
   ];
 
-  // Use structured data hooks
-  useFAQStructuredData(faqData);
-
-  // Trigger structured data update
-  useEffect(() => {
-    setTimeout(() => {
-      window.dispatchEvent(new CustomEvent('structuredDataUpdate'));
-    }, 100);
-  }, []);
+  // Generate structured data for this service page
+  const structuredData = generateMinimalStructuredData({
+    pathname: "/credit_repair_sydney",
+    title: "Credit Repair Sydney | Australian Credit Solutions",
+    description: "Professional credit repair services in Sydney. Remove defaults, correct credit reports, and improve your credit score with Sydney's trusted credit repair experts.",
+    isService: true,
+    serviceType: "Credit Repair Services Sydney"
+  });
 
   return (
     <main className="flex min-h-screen flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
       <Header />
       <HeroSection />
       <VideoServicesSection />
