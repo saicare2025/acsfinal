@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import AnalyticsRouteTracker from "@/components/AnalyticsRouteTracker";
 import ExitIntentPopupWithSuspense from "@/components/ExitIntentPopupWithSuspense";
-import FloatingTestimonials from "@/components/homepage/TestmonialHero";
 
 
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: true });
@@ -130,7 +129,6 @@ export default function RootLayout({ children }) {
         {children}
         <ExitIntentPopupWithSuspense />
         <TawkDesktopOnly />
-        <FloatingTestimonials position="left" offsetY={24} offsetX={24} label="Testimonials" />
       </body>
     </html>
   );
