@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 // Animation variants
 const fadeIn = {
@@ -199,6 +201,11 @@ export default function CourtJudgmentRemovalPage() {
       </section>
       <ReviewsWidget/>
 
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/court-judgment-removal" />
+      </div>
+
       {/* Opening Section */}
       <Section title="Court judgments are the nuclear option of credit destruction">
         <p>
@@ -219,7 +226,11 @@ export default function CourtJudgmentRemovalPage() {
         </p>
         <p className="mt-4">
           Australian Credit Solutions specialises in court judgment removal
-          across Australia. We&apos;re award-winning specialists with a 98%
+          across Australia. Our{' '}
+          <Link href="/credit-enquiry-removal" className="text-blue-600 hover:text-blue-800 font-medium">
+            credit enquiry removal services
+          </Link>{' '}
+          also help with related credit file issues. We&apos;re award-winning specialists with a 98%
           success rate when we take cases. The difference? We only take court
           judgment cases where we genuinely reckon there are grounds for removal
           or setting aside. If your judgment is rock-solid and properly
@@ -824,6 +835,11 @@ export default function CourtJudgmentRemovalPage() {
           </div>
         </motion.div>
       </section>
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/court-judgment-removal" />
+      </div>
 
       <Footer />
     </main>

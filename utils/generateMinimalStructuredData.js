@@ -185,3 +185,15 @@ function generateMinimalStructuredData({
     "@graph": graph
   };
 }
+
+
+// Helper function to humanize URL segments
+function humanizeSegment(segment) {
+  return segment
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+export { generateMinimalStructuredData };
+

@@ -12,6 +12,8 @@ import ArrowIconM from "../assets/arrowm.png";
 import Image from "next/image";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 
 // Animation variants
@@ -165,6 +167,11 @@ export default function CreditRepairCarFinancePage() {
         </div>
       </section>
       <ReviewsWidget/>
+
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/credit-repair-for-car-finance" />
+      </div>
 
       {/* Opening Section */}
       <Section title="Car finance knock-backs? Let's fix the credit stopping your approval">
@@ -613,6 +620,11 @@ export default function CreditRepairCarFinancePage() {
       </section>
 
       {/* JSON-LD */}
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/credit-repair-for-car-finance" />
+      </div>
 
       <Footer />
     </main>

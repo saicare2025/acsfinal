@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import FooterForm from "@/components/FooterForm";
 import Footer from "@/components/Footer";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 // Animation variants
 const fadeIn = {
@@ -190,6 +192,11 @@ export default function RHIRemovalPage() {
         </div>
       </section>
       <ReviewsWidget/>
+
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/worst-repayment-history-removal" />
+      </div>
 
       {/* Opening Section */}
       <Section title="Look, let's be straight about this – Repayment History Information (RHI) on your credit file can be an absolute killer">
@@ -857,6 +864,12 @@ export default function RHIRemovalPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/worst-repayment-history-removal" />
+      </div>
+      
       <Footer />
     </main>
   );

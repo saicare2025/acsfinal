@@ -12,6 +12,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 // Animation variants
 const fadeIn = {
@@ -199,6 +201,12 @@ export default function FirstHomeBuyerCreditRepairPage() {
         </div>
       </section>
       <ReviewsWidget />
+      
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/credit-repair-for-first-home-buyers" />
+      </div>
+      
       {/* Opening Section */}
       <Section title="Don't let bad credit kill your first home dreams">
         <p>
@@ -208,7 +216,11 @@ export default function FirstHomeBuyerCreditRepairPage() {
         <p className="mt-4">
           House prices are mental, deposits seem impossible to save, and then
           you discover your credit file is stuffed from some mistake you made
-          years ago when you were young and stupid.
+          years ago when you were young and stupid. Our{' '}
+          <Link href="/credit-repair-home-loan-approval" className="text-blue-600 hover:text-blue-800 font-medium">
+            home loan approval services
+          </Link>{' '}
+          can help fix this.
         </p>
         <p className="mt-4">
           Maybe it&apos;s a default from a phone bill you forgot about at uni.
@@ -847,6 +859,11 @@ export default function FirstHomeBuyerCreditRepairPage() {
           </div>
         </motion.div>
       </section>
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/credit-repair-for-first-home-buyers" />
+      </div>
 
       <Footer />
     </main>

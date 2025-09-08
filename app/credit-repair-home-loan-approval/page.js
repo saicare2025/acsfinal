@@ -12,6 +12,8 @@ import ArrowIconM from "../assets/arrowm.png";
 import Image from "next/image";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 
 // Animation variants
@@ -160,6 +162,11 @@ export default function CreditRepairHomeLoanApprovalPage() {
         </div>
       </section>
       <ReviewsWidget/>
+
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/credit-repair-home-loan-approval" />
+      </div>
 
       {/* Opening Section */}
       <Section title="Why your credit is blocking home loan approval">
@@ -568,6 +575,11 @@ export default function CreditRepairHomeLoanApprovalPage() {
           </div>
         </motion.div>
       </section>
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/credit-repair-home-loan-approval" />
+      </div>
 
       <Footer />
     </main>
