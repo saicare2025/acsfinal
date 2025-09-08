@@ -19,35 +19,41 @@ const CreditRepairSection = () => {
       icon: <ShieldCheck className="w-6 h-6" />,
       title: "Removing Incorrect Defaults",
       description: "We'll help fix any false defaults affecting your score.",
+      href: "/credit-enquiry-removal-australia",
     },
     {
       icon: <Search className="w-6 h-6" />,
       title: "Disputing Invalid Inquiries",
       description:
         "Any unwarranted credit inquiries? We'll challenge them for you.",
+      href: "/credit-enquiry-removal",
     },
     {
       icon: <Gavel className="w-6 h-6" />,
       title: "Court Judgments",
       description:
         "Assistance with addressing and resolving any court judgments.",
+      href: "/court-judgment-removal",
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Worst Repayment History Disputes",
       description:
         "We'll help dispute and correct repayment history inaccuracies.",
+      href: "/worst-repayment-history-removal",
     },
     {
       icon: <FileText className="w-6 h-6" />,
       title: "Detailed Credit Report Analysis",
       description:
         "Comprehensive breakdown to understand and improve your score.",
+      href: "/default-removal-services-australia",
     },
     {
       icon: <Fingerprint className="w-6 h-6" />,
       title: "Fixing Identity Theft Issues",
       description: "We'll resolve identity theft issues affecting your credit.",
+      href: "/credit-repair-australia",
     },
   ];
 
@@ -107,9 +113,12 @@ const CreditRepairSection = () => {
                   <p className="text-gray-600 pl-12 mb-4">
                     {service.description}
                   </p>
-                  <button className="flex items-center text-blue font-medium pl-12 group-hover:text-blue-700 transition-colors">
+                  <Link
+                    href={service.href}
+                    className="flex items-center text-blue font-medium pl-12 group-hover:text-blue-700 transition-colors"
+                  >
                     Learn more <ChevronRight className="ml-1 w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             ))}

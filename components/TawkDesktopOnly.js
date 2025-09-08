@@ -4,18 +4,8 @@ import { useEffect, useState } from "react";
 import Script from "next/script";
 
 export default function TawkDesktopOnly() {
-  const [showScript, setShowScript] = useState(false);
+  
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const isMobile = window.innerWidth < 768;
-      if (!isMobile) {
-        setShowScript(true);
-      }
-    }
-  }, []);
-
-  if (!showScript) return null;
 
   return (
     <Script id="tawk-to" strategy="lazyOnload">

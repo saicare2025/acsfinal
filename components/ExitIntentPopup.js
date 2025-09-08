@@ -3,6 +3,10 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { X } from "lucide-react";
 
+const SCROLL_INACTIVITY_MS = 30_000; // 30s after last scroll
+const FULL_INACTIVITY_MS = 60_000;   // 60s after any activity
+const INACTIVITY_POLL_MS = 1_000;    // check every second
+
 const ExitIntentPopup = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -11,8 +15,7 @@ const ExitIntentPopup = () => {
   const [hasShown, setHasShown] = useState(false);
 
   const scrollTimeoutRef = useRef(null);
-  const inactivityTimeoutRef = useRef(null);
-  const lastScrollTimeRef = useRef(Date.now());
+  const inactivityIntervalRef = useRef(null);
   const lastActivityTimeRef = useRef(Date.now());
 
   const [formData, setFormData] = useState({
@@ -55,9 +58,7 @@ const ExitIntentPopup = () => {
 
   useEffect(() => {
     const shown = sessionStorage.getItem("exitPopupShown");
-    if (shown) {
-      setHasShown(true);
-    }
+    if (shown) setHasShown(true);
   }, []);
 
   const showPopup = () => {
@@ -68,75 +69,85 @@ const ExitIntentPopup = () => {
     }
   };
 
-  const closePopup = () => {
-    setIsVisible(false);
-  };
+  const closePopup = () => setIsVisible(false);
 
+  // Any user activity refreshes the "last activity" clock
   const trackActivity = () => {
     lastActivityTimeRef.current = Date.now();
   };
 
+  // Start/refresh a 30s timer after any scroll, then show
   const trackScroll = () => {
-    lastScrollTimeRef.current = Date.now();
-    if (scrollTimeoutRef.current) {
-      clearTimeout(scrollTimeoutRef.current);
-    }
+    if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+    // If it's already shown or permanently suppressed, don't arm the timer
+    if (hasShown || isVisible) return;
     scrollTimeoutRef.current = setTimeout(() => {
       showPopup();
-    }, 10000);
+    }, SCROLL_INACTIVITY_MS);
   };
 
   useEffect(() => {
     if (hasShown) return;
 
     const handleMouseLeave = (e) => {
-      if (e.clientY <= 0) {
-        showPopup();
-      }
+      // Keep your exit-intent behavior as-is (instant), or comment out to delay everything
+      if (e.clientY <= 0) showPopup();
     };
 
     const handlePopState = () => {
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
-      if (isMobile) {
-        showPopup();
-      }
+      const isMobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        ) || window.innerWidth <= 768;
+      if (isMobile) showPopup();
     };
 
-    const activityEvents = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'];
-    activityEvents.forEach(event => {
-      document.addEventListener(event, trackActivity, true);
-    });
+    const activityEvents = [
+      "mousedown",
+      "mousemove",
+      "keypress",
+      "scroll",
+      "touchstart",
+      "click",
+    ];
+    activityEvents.forEach((event) =>
+      document.addEventListener(event, trackActivity, true)
+    );
 
-    document.addEventListener('scroll', trackScroll, true);
+    // Scroll inactivity (30s)
+    document.addEventListener("scroll", trackScroll, true);
 
-    const inactivityCheck = setInterval(() => {
+    // Full inactivity (60s since ANY activity)
+    inactivityIntervalRef.current = setInterval(() => {
+      if (hasShown || isVisible) return;
       const now = Date.now();
       const timeSinceActivity = now - lastActivityTimeRef.current;
-      if (timeSinceActivity >= 30000) {
+      if (timeSinceActivity >= FULL_INACTIVITY_MS) {
         showPopup();
-        clearInterval(inactivityCheck);
+        if (inactivityIntervalRef.current) {
+          clearInterval(inactivityIntervalRef.current);
+          inactivityIntervalRef.current = null;
+        }
       }
-    }, 1000);
+    }, INACTIVITY_POLL_MS);
 
-    document.addEventListener('mouseleave', handleMouseLeave);
-    window.addEventListener('popstate', handlePopState);
+    document.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("popstate", handlePopState);
 
     return () => {
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      window.removeEventListener('popstate', handlePopState);
-      activityEvents.forEach(event => {
-        document.removeEventListener(event, trackActivity, true);
-      });
-      document.removeEventListener('scroll', trackScroll, true);
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("popstate", handlePopState);
+      activityEvents.forEach((event) =>
+        document.removeEventListener(event, trackActivity, true)
+      );
+      document.removeEventListener("scroll", trackScroll, true);
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+      if (inactivityIntervalRef.current) {
+        clearInterval(inactivityIntervalRef.current);
+        inactivityIntervalRef.current = null;
       }
-      if (inactivityTimeoutRef.current) {
-        clearTimeout(inactivityTimeoutRef.current);
-      }
-      clearInterval(inactivityCheck);
     };
-  }, [hasShown]);
+  }, [hasShown, isVisible]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

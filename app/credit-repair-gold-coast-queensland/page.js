@@ -1,4 +1,4 @@
-// File: app/credit-enquiry-removal/page.jsx
+// File: app/credit-repair-gold-coast-queensland/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -23,38 +23,38 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditEnquiryRemovalPage() {
+export default function CreditRepairGoldCoastPage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How many enquiries are too many?",
-      answer: "There&apos;s no magic number, but generally more than 2-3 enquiries in 3 months starts impacting your score. More than 5-6 enquiries in 12 months seriously damages your credit profile."
+      question: "How quickly can credit repair improve my Gold Coast home loan chances?",
+      answer: "Most Gold Coast clients see significant improvements in 6-12 weeks. We've had beachfront apartment approvals within 3 weeks of completing credit repair."
     },
     {
-      question: "Will removing enquiries improve my credit score immediately?",
-      answer: "Score improvements typically show within 30-60 days of enquiry removal. The exact improvement depends on how many enquiries we remove and your overall credit profile."
+      question: "What's the difference between Gold Coast property rates with good vs bad credit?",
+      answer: "Clean credit can get 2.9-3.2% home loans. Bad credit often means 7-9% or outright rejection. On a $780,000 Gold Coast median property, that's $1,960+ extra monthly."
     },
     {
-      question: "Can I remove enquiries myself?",
-      answer: "You can try, but success rates are low. Credit providers and bureaus receive thousands of DIY dispute letters monthly. Most get rejected due to procedural errors or insufficient evidence."
+      question: "Can you help with Gold Coast business finance after credit repair?",
+      answer: "Absolutely. We've helped Gold Coast restaurant owners, tourism operators, and marine businesses secure equipment finance and working capital after credit repair."
     },
     {
-      question: "What if the enquiry was legitimate but hurt my score?",
-      answer: "Legitimate enquiries made with proper consent usually can&apos;t be removed. However, we often find that enquiries people think were legitimate actually had procedural flaws that make them removable."
+      question: "Do you guarantee results for Gold Coast credit repair?",
+      answer: "We have a 98% success rate when we accept cases. Our No Win No Fee policy means you only pay success fees when we achieve results."
     },
     {
-      question: "How long do enquiries stay on my file naturally?",
-      answer: "Credit enquiries remain visible for 5 years in Australia. However, their impact on your score diminishes over time, with the heaviest impact in the first 12 months."
+      question: "How much does Gold Coast credit repair cost?",
+      answer: "$330 admin fee upfront, then success fees only when we remove items. No ongoing monthly charges. The average client saves far more in reduced interest rates."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-enquiry-removal",
-    title: "Remove Credit Enquiries Fast | Australia&apos;s Leading Credit Enquiry Removal Specialists",
-    description: "Too many credit enquiries killing your credit score? Get unauthorised enquiries removed professionally. 98% success rate when we take your case. Licensed specialists, No Win No Fee policy.",
+    pathname: "/credit-repair-gold-coast-queensland",
+    title: "Credit Repair Gold Coast Queensland | Beach Lifestyle Finance | Australian Credit Solutions",
+    description: "Unlock your Gold Coast dream lifestyle with 98% success rate credit repair. Remove defaults, improve scores, access beachside property finance. No Win No Fee. Call 0489 265 737.",
     isService: true,
-    serviceType: "Credit Enquiry Removal"
+    serviceType: "Credit Repair Gold Coast Queensland"
   });
 
   return (
@@ -79,37 +79,31 @@ export default function CreditEnquiryRemovalPage() {
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Remove Credit Enquiries Fast
+                UNLOCK YOUR GOLD COAST DREAM LIFESTYLE
                 <span className="block mt-2 text-blue">
-                  Australia&apos;s Leading Enquiry Removal Specialists
+                  98% SUCCESS RATE GUARANTEED WHEN WE TAKE YOUR CASE
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Too many credit enquiries killing your score? We remove
-                  unauthorised, duplicate and incorrect enquiries
-                  professionally.{" "}
-                  <strong className="font-semibold text-blue">
-                    98% success rate
-                  </strong>{" "}
-                  when we take your case. Licensed specialists,{" "}
-                  <strong className="font-semibold text-blue">
-                    No Win No Fee
-                  </strong>{" "}
-                  policy.
+                  <strong className="font-semibold text-red-600">STOP</strong> letting defaults destroy your beachside paradise dreams. The Gold Coast&apos;s booming property market isn&apos;t waiting. While you&apos;re getting rejected for beachfront apartments, others are securing their slice of coastal heaven at record-low rates.
                 </p>
 
-                <p className="text-base text-gray-600">
-                  Multiple enquiries can slash your score by 100+ points and
-                  block approvals. Our award-winning team removes bad enquiries
-                  across Equifax, Experian and Illion — often within weeks, not
-                  years.
+               
+
+                <p className="text-base text-gray-700">
+                  <strong className="font-semibold text-green-600">BUT HERE&apos;S YOUR GOLD COAST TRANSFORMATION:</strong> ✅ Beachside home loan approved in weeks, not years ✅ Interest rates PLUMMET by 3-6% instantly ✅ Investment property doors swing open ✅ Premium car finance for your coastal cruiser ✅ Business loans for your Gold Coast venture
                 </p>
+
+                <p className="text-base text-blue font-semibold">
+                  📞 Gold Coast Credit Emergency Line: 0489 265 737
+                </p>
+
+                
               </div>
 
               {/* CTAs */}
-
               <div
                 className="mt-8 relative flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
                 role="group"
@@ -119,7 +113,7 @@ export default function CreditEnquiryRemovalPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Remove My Credit Enquiries Now
+                  UNLOCK MY GOLD COAST DREAM
                 </Link>
 
                 <a
@@ -141,7 +135,6 @@ export default function CreditEnquiryRemovalPage() {
                     width={220}
                     height={70}
                     loading="lazy"
-                 
                     className="select-none"
                     priority={false}
                   />
@@ -156,25 +149,19 @@ export default function CreditEnquiryRemovalPage() {
                     width={200}
                     height={120}
                     loading="lazy"
-                 
                     className="select-none"
                     priority={false}
                   />
                 </div>
               </div>
-
-              {/* Trust badges */}
-              
             </div>
 
             {/* Right Form with Arrow */}
             <div className="w-full lg:w-1/3 relative">
-              {/* Form Container */}
-
               <FooterForm
-                heading="Get My Free Enquiry Assessment"
+                heading="Get My Free Gold Coast Credit Assessment"
                 subheading="Fast & Confidential"
-                paragraph="Find out if your credit enquiries can be removed – free, fast, and confidential."
+                paragraph="Find out how we can unlock your Gold Coast lifestyle – free, fast, and confidential."
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
@@ -193,37 +180,40 @@ export default function CreditEnquiryRemovalPage() {
             </div>
           </div>
         </div>
-
-        {/* Mobile arrow indicator (shown only on mobile) */}
       </section>
-        <ReviewsWidget/>
+      <ReviewsWidget/>
 
       {/* Opening Section */}
-      <Section title="Your credit enquiries are quietly destroying your financial future">
+      <Section title="The Gold Coast Credit Crisis (Your Ticket to Paradise)">
         <p>
-          Every time someone checks your credit – whether you applied or not – it gets recorded on your
-          file. Too many enquiries signal &quot;credit hungry&quot; behaviour to lenders, making them instantly reject your
-          applications.
+          Gold Coast median house price: $780,000 and climbing like a high-rise.
         </p>
         <p className="mt-4">
-          But here&apos;s what most Australians don&apos;t know: many credit enquiries shouldn&apos;t be on your file at all.
-          Unauthorised enquiries. Duplicate enquiries. Enquiries made without proper consent. Enquiries that
-          violate privacy laws. These can all be removed – and removing them can boost your credit score
-          dramatically.
+          With perfect credit (750+ score): 2.9% home loan = $3,260/month
+          <br />
+          With bad credit (below 650): 7.2% home loan = $5,220/month
+          <br />
+          <strong className="text-red-600">THE DIFFERENCE: $1,960 MORE every single month = $705,600 extra over 30 years</strong>
         </p>
         <p className="mt-4">
-          Australian Credit Solutions specialises in credit enquiry removal across Australia. We&apos;re not another
-          generic credit repair company making empty promises. We&apos;re award-winning specialists with a 98%
-          success rate when we accept cases, backed by three consecutive years of industry recognition.
+          That&apos;s not just money. That&apos;s your beachside retirement. Your kids&apos; coastal childhood. Your financial paradise.
         </p>
         <p className="mt-4">
-          The difference? We only take cases where we&apos;re genuinely confident of success. If we can&apos;t help you win,
-          we&apos;ll tell you upfront.
+          <strong>Why Gold Coast Residents Are Racing to Fix Their Credit:</strong>
+        </p>
+        <p className="mt-2">
+          🏖️ <strong>GOLD COAST LIFESTYLE PREMIUM</strong> Beach access 365 days a year. World-class entertainment precincts. No winter misery. Clean credit unlocks the coastal lifestyle millions dream about.
+        </p>
+        <p className="mt-2">
+          🚧 <strong>INFRASTRUCTURE BOOM BONANZA</strong> Light Rail expansion. New hospital. Entertainment precinct upgrades. Property values exploding - but only accessible with clean credit.
+        </p>
+        <p className="mt-2">
+          🌊 <strong>TOURISM & BUSINESS GOLDMINE</strong> 6 million annual visitors. Booming hospitality sector. Endless business opportunities. Bad credit = locked out of the action.
         </p>
       </Section>
 
       {/* Impact Section */}
-      <Section title="How Credit Enquiries Destroy Your Credit Score">
+      <Section title="How Bad Credit Is Absolutely Destroying Your Gold Coast Dreams">
         <motion.ul
           variants={staggerChildren}
           initial="hidden"
@@ -233,32 +223,28 @@ export default function CreditEnquiryRemovalPage() {
         >
           {[
             {
-              h: "Immediate Score Impact",
-              p: "Each hard enquiry can drop your credit score by 5-15 points. Multiple enquiries in a short period create a compounding negative effect that can slash your score by 50-100+ points.",
+              h: "Beachfront Properties Become Impossible",
+              p: "Perfect credit gets you 2.9% on that $850,000 Broadbeach apartment. Bad credit? You're looking at 7-9% or outright rejection.",
             },
             {
-              h: "Lender Red Flags",
-              p: "Lenders see multiple enquiries as desperation. Even if your income and assets are strong, too many enquiries trigger automatic rejection systems before a human even reviews your application.",
+              h: "Gold Coast Investment Dreams Crushed",
+              p: "Tourism boom creating massive opportunities. Bad credit locks you out while others build coastal property empires.",
             },
             {
-              h: "The Enquiry Death Spiral",
-              p: "Rejection leads to more applications. More applications create more enquiries. More enquiries guarantee more rejections. It becomes a vicious cycle that&apos;s almost impossible to break.",
+              h: "Premium Car Finance for Coastal Cruising - Gone",
+              p: "That BMW or Mercedes for weekend coastal drives? Bad credit means 15-25% rates or financing rejection.",
             },
             {
-              h: "Different Types Hit Differently",
-              p: "Credit card enquiries usually hit hardest on your score. Personal loan enquiries have moderate impact. Home loan enquiries have lower individual impact but multiple enquiries still hurt.",
+              h: "Marine Finance Becomes Impossible",
+              p: "Boats, jet skis, yachts for Gold Coast water lifestyle? Clean credit gets 5-7%. Bad credit gets rejection or 18% rates.",
             },
             {
-              h: "Time Doesn&apos;t Heal All Wounds",
-              p: "While enquiries technically &apos;fall off&apos; after 5 years, their damage compounds over time. Five years of restricted credit access costs you far more than professional removal.",
+              h: "Tourism Business Finance Blocked",
+              p: "Restaurant fit-outs, tour operator equipment, hospitality expansion - all require clean credit in competitive markets.",
             },
             {
-              h: "Automatic Rejection Systems",
-              p: "Many lenders use computer systems that instantly reject applications with too many enquiries, regardless of your income, assets, or credit history.",
-            },
-            {
-              h: "Premium Interest Rate Penalties",
-              p: "Even when you do get approved, excessive enquiries often mean higher interest rates and worse terms as lenders see you as higher risk.",
+              h: "Coastal Rental Applications Rejected",
+              p: "Competition for beachside rentals is fierce. Landlords can afford to be picky - bad credit puts you at the back of the queue.",
             },
           ].map((item) => (
             <motion.li
@@ -274,10 +260,9 @@ export default function CreditEnquiryRemovalPage() {
       </Section>
 
       {/* What We Remove */}
-      <Section title="What Enquiries Can Be Removed From Your File">
+      <Section title="Gold Coast Credit Problems We Demolish">
         <p className="text-slate-700">
-          <strong>Important Note:</strong> We can only challenge enquiries that violate Australian privacy law or credit reporting requirements. 
-          Legitimate enquiries made with proper consent typically cannot be removed.
+          From Surfers Paradise to Currumbin, we&apos;ve removed defaults that beachside dreams are made of.
         </p>
         <motion.div
           variants={staggerChildren}
@@ -287,64 +272,46 @@ export default function CreditEnquiryRemovalPage() {
           className="mt-6 grid gap-6 md:grid-cols-2"
         >
           <Card
-            title="Unauthorised Enquiries"
+            title="Default Removal - Every Coastal Suburb"
             bullets={[
-              "Employers checking credit without permission",
-              "Identity theft enquiries from fraudulent applications",
-              "Marketing enquiries from companies you never applied to",
-              "Ex-partners applying for credit using your details",
+              "Broadbeach resident: $5,200 Vodafone default OBLITERATED → $850,000 beachfront apartment approved",
+              "Burleigh Heads family: Multiple utility defaults WIPED → Dream home 200m from beach secured",
+              "Southport professional: Credit card default ELIMINATED → Investment property approved same day",
+              "Currumbin retiree: $4,800 medical default GONE → Downsizer loan at premium beachside rates",
             ]}
           />
           <Card
-            title="Duplicate Enquiries"
+            title="Late Payment Obliteration - Queensland Coastal Banks"
             bullets={[
-              "Single home loan application appearing 3-4 times",
-              "Broker applications duplicated across multiple lenders",
-              "System errors creating identical enquiries with different dates",
-              "Refinancing enquiries that duplicate existing records",
+              "Westpac (Pacific Fair, Robina, Southport branches)",
+              "Commonwealth Bank (Surfers Paradise headquarters)",
+              "ANZ (every beachside branch conquered)",
+              "Heritage Bank (local Gold Coast institution)",
             ]}
           />
           <Card
-            title="Procedurally Incorrect Enquiries"
+            title="Credit Enquiry Annihilation"
             bullets={[
-              "No proper consent documentation",
-              "Enquiries made after application withdrawal",
-              "Checks performed by unlicensed credit providers",
-              "Enquiries that exceed authorised scope",
+              "Luxury car dealerships from Southport to Burleigh",
+              "Marine finance for boats and jet skis",
+              "Investment property applications across the Coast",
+              "Business finance for tourism ventures",
             ]}
           />
           <Card
-            title="Privacy Act Violations"
+            title="Gold Coast Specialist Removals"
             bullets={[
-              "Checks made without legitimate business need",
-              "Enquiries retained beyond legal timeframes",
-              "Cross-referencing without proper authorisation",
-              "Sharing enquiry data without consent",
-            ]}
-          />
-          <Card
-            title="Incorrect Information Enquiries"
-            bullets={[
-              "Wrong dates of birth creating identity confusion",
-              "Incorrect addresses linking you to others&apos; credit",
-              "Name variations causing mixed files",
-              "Outdated information still being referenced",
-            ]}
-          />
-          <Card
-            title="Post-Settlement Enquiries"
-            bullets={[
-              "Mortgage enquiries after property settlement",
-              "Credit card enquiries after account cancellation",
-              "Personal loan enquiries after full repayment",
-              "Ongoing monitoring after relationship ended",
+              "Tourism business seasonal finance enquiries",
+              "Marine industry equipment defaults",
+              "Entertainment industry late payments",
+              "Coastal property investment enquiries",
             ]}
           />
         </motion.div>
       </Section>
 
       {/* Process */}
-      <Section title="Our Professional Credit Enquiry Removal Process">
+      <Section title="Our Proven Gold Coast Success Formula">
         <motion.ol
           variants={staggerChildren}
           initial="hidden"
@@ -354,29 +321,19 @@ export default function CreditEnquiryRemovalPage() {
         >
           {[
             {
-              title: "Complete Enquiry Audit",
+              title: "INSTANT COASTAL CREDIT DIAGNOSIS (60 Seconds)",
               description:
-                "We obtain your credit files from all three major reporting bodies – Equifax, Experian, and Illion. Our comprehensive audit identifies all enquiries across all bureaus, duplicates, suspicious patterns, and procedural violations.",
+                "We'll identify every removable barrier between you and your Gold Coast lifestyle. Our coastal specialists analyze defaults from Queensland companies, late payments from beachside banks, marine finance enquiries, and tourism business credit issues.",
             },
             {
-              title: "Legal Assessment & Removal Strategy",
+              title: "SURGICAL STRIKE REMOVAL PROCESS",
               description:
-                "We assess each enquiry against Privacy Act 1988 consent requirements, credit reporting code compliance, and industry-specific authorisation procedures to determine removal grounds.",
+                "Custom-crafted attacks designed for Gold Coast financial freedom. Coast-focused destruction strategy with Queensland regulatory mastery, coastal lender relationships spanning decades, and tourism industry expertise.",
             },
             {
-              title: "Professional Challenge Process",
+              title: "CREDIT SCORE EXPLOSION",
               description:
-                "Using legally structured challenge letters citing specific breaches, comprehensive supporting evidence, and direct engagement with credit providers when required.",
-            },
-            {
-              title: "Monitoring & Score Recovery",
-              description:
-                "Enquiry removal often happens in batches as different parties respond. We monitor your file continuously and track score improvements as enquiries disappear.",
-            },
-            {
-              title: "Prevention Strategy",
-              description:
-                "Once your enquiries are cleaned up, we provide guidance on protecting your file from future unauthorised enquiries and managing legitimate applications to minimise score impact.",
+                "Watch your score rocket toward beachside approval. Gold Coast client transformations: Average improvement 190-340 points in 6-12 weeks. Fastest beachside approval: Default removed in 6 days. Biggest coastal win: Score jumped 368 points in 9 weeks.",
             },
           ].map((step, index) => (
             <motion.li key={index} variants={fadeIn} className="flex gap-4">
@@ -392,30 +349,27 @@ export default function CreditEnquiryRemovalPage() {
       </Section>
 
       {/* Success Stories */}
-      <Section title="Success Stories: Real Results From Enquiry Removal">
+      <Section title="Gold Coast Success Stories That'll Blow Your Mind">
         <motion.div
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <Testimonial name="James&apos;s Story – Melbourne IT Manager">
-            &quot;Had 23 credit enquiries from a broker who shopped my home loan application everywhere without telling me. Every lender rejected me because of the enquiry overload. ACS removed 19 of the 23 enquiries in 5 weeks. My credit score jumped 127 points and I got home loan approval the following month at 0.3% below the standard rate.&quot;
+          <Testimonial name="THE BROADBEACH BEACHFRONT MIRACLE - Marcus & Kelly T.">
+            &quot;$5,200 Vodafone default blocking $850,000 beachfront apartment at Broadbeach luxury high-rise with ocean views. ACS obliterated the default in 19 days using compliance hammer. Apartment approved at 3.1% saving $89,000 over loan term. We&apos;re living 50 meters from the beach with million-dollar morning coffee views.&quot;
           </Testimonial>
-          <Testimonial name="Rebecca&apos;s Story – Brisbane Marketing Executive">
-            &quot;Identity theft left me with 8 unauthorised enquiries from credit cards and personal loans I never applied for. Police report wasn&apos;t enough to get them removed myself. ACS provided the legal framework and got all 8 enquiries wiped in 3 weeks. Credit score went from 420 to 720.&quot;
+          <Testimonial name="THE BURLEIGH HEADS FAMILY PARADISE - Sarah & Jake M. (3 young kids)">
+            &quot;Multiple utility defaults from business closure blocking our dream family home walking distance to Burleigh beach. ACS completed credit file reconstruction in 4 weeks. Home loan approved at 2.9% and our children are now playing on the beach daily, growing up in paradise. Priceless.&quot;
           </Testimonial>
-          <Testimonial name="Michael&apos;s Story – Perth Tradie">
-            &quot;Applied for equipment finance and the lender ran my credit 4 times &apos;by mistake.&apos; Other lenders saw the multiple enquiries and assumed I was desperate. Couldn&apos;t get financing anywhere. ACS removed the duplicate enquiries in 10 days and I had equipment approval within the week.&quot;
-          </Testimonial>
-          <Testimonial name="Sarah&apos;s Story – Sydney Teacher">
-            &quot;Car dealership ran my credit for &apos;quotes&apos; on 6 different finance products without explaining each was a separate enquiry. Killed my credit score overnight. ACS challenged the unauthorised enquiries and got 5 of 6 removed. Score improved by 89 points in one month.&quot;
+          <Testimonial name="THE SOUTHPORT INVESTMENT EMPIRE - Lisa K. (Property maven)">
+            &quot;Credit card default blocking beachside investment expansion and my goal to build Gold Coast rental portfolio. ACS eliminated the default using data accuracy destruction. $1.4M investment property approved SAME DAY. One default was costing me millions in coastal real estate. ACS unlocked my empire.&quot;
           </Testimonial>
         </motion.div>
       </Section>
 
       {/* Why Choose Us */}
-      <Section title="Why Choose Australian Credit Solutions for Enquiry Removal">
+      <Section title="Why Gold Coast Chooses Australian Credit Solutions">
         <motion.ul
           variants={staggerChildren}
           initial="hidden"
@@ -424,14 +378,13 @@ export default function CreditEnquiryRemovalPage() {
           className="mt-4 grid gap-4 sm:grid-cols-2"
         >
           {[
-            "Enquiry removal specialists – while other companies treat enquiry removal as a side service, it&apos;s one of our core specialities.",
-            "98% success rate when we take cases – we carefully assess each situation and only proceed when we&apos;re confident of success.",
-            "No Win No Fee protection – you pay our administration fee ($330) upfront, but if we don&apos;t successfully remove the targeted enquiries, you don&apos;t pay success fees.",
-            "Three consecutive industry awards (2022, 2023, and 2024) for outstanding results and client satisfaction from proven results, not marketing hype.",
-            "Licensed under ASIC ACL 532003 – we operate under strict licensing, meaning we&apos;re regulated, insured, and accountable for our services.",
-            "Australia-wide service – credit reporting is federally regulated, so we help clients from Darwin to Hobart with identical service levels.",
-            "Direct expert communication – you&apos;ll work directly with our credit specialists who understand your case, not offshore call centres.",
-            "Fast turnaround times – many enquiry challenges resolve faster because the evidence is often clear-cut.",
+            "🏆 AWARD-WINNING COASTAL EXCELLENCE (3 CONSECUTIVE YEARS) - Industry Excellence Awards 2022, 2023, 2024. Only credit repair company to achieve this feat.",
+            "📊 UNMATCHED BEACHSIDE SUCCESS RATE - 98% success rate when we accept coastal cases. We only take winnable battles.",
+            "💼 QUEENSLAND COASTAL EXPERTISE - Deep understanding of Gold Coast's tourism business finance, coastal property investment, marine finance, and entertainment industry lending.",
+            "🚀 LIGHTNING-FAST COASTAL RESULTS - Gold Coast priority processing with same-day assessment for urgent beachside purchases.",
+            "🌊 GOLD COAST LIFESTYLE SPECIALISTS - We understand what coastal living means and fight to unlock your paradise.",
+            "⚡ NO WIN NO FEE COASTAL GUARANTEE - You only pay when we unlock your beach lifestyle. $330 admin fee, success fees only when dreams come true.",
+            "🎯 COMPLETE TRANSPARENCY - No false beach dreams, proven coastal results with 2,400+ Gold Coast success stories.",
           ].map((t) => (
             <motion.li
               key={t}
@@ -458,71 +411,59 @@ export default function CreditEnquiryRemovalPage() {
       </Section>
 
       {/* Service Options / Pricing */}
-      <Section title="Our Credit Enquiry Removal Service Options">
+      <Section title="Gold Coast Credit Repair Service Packages">
         <motion.div
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-2"
+          className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           <PriceCard
-            name="Express Enquiry Removal"
-            timeline="1-2 weeks typically"
-            perfectFor="Home loan pre-approvals, urgent finance needs"
+            name="Gold Coast Express Paradise"
+            timeline="2-6 weeks typically"
+            perfectFor="Urgent beachside purchases, settlement deadlines"
             includes={[
-              "Same-day assessment",
-              "Priority processing",
-              "Daily updates",
+              "Emergency Gold Coast processing",
+              "Same-day coastal assessment",
+              "Priority beachside approval pathway",
             ]}
-
-           
           />
           <PriceCard
-            name="Standard Enquiry Removal"
-            timeline="3-4 weeks typically"
-            perfectFor="Multiple enquiries, complex cases"
+            name="Complete Coastal Transformation"
+            timeline="6-12 weeks typically"
+            perfectFor="Full credit makeover for Gold Coast lifestyle"
             includes={[
-              "Full audit",
-              "Detailed challenge strategy",
-              "Weekly reports",
+              "All removable defaults eliminated",
+              "Late payments obliterated",
+              "Credit enquiries annihilated",
+              "Score optimization for beachside rates",
             ]}
-           
             featured
           />
           <PriceCard
-            name="Bulk Enquiry Package"
-            timeline="4-6 weeks typically"
-            perfectFor="10+ enquiries, broker damage, identity theft aftermath"
+            name="Gold Coast Business Liberation"
+            timeline="4-10 weeks typically"
+            perfectFor="Tourism, hospitality, marine industry operators"
             includes={[
-              "Coordinated removal strategy",
-              "Bulk processing efficiencies",
-              "Comprehensive monitoring",
+              "Business credit file cleanup",
+              "Equipment finance preparation",
+              "Seasonal business credit optimization",
             ]}
-         
-          />
-          <PriceCard
-            name="Enquiry Prevention Package"
-            timeline="Immediate setup + 12 months monitoring"
-            perfectFor="High-value clients, business owners, frequent applicants"
-            includes={[
-              "Credit monitoring",
-              "Enquiry alerts",
-              "Removal insurance",
-            ]}
-         
           />
         </motion.div>
         <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
           <strong>
-            Remember: All services include our No Win No Fee guarantee:
+            🌊 GOLD COAST EXCLUSIVE COASTAL OFFER 🌊
           </strong>{" "}
-          If we don&apos;t remove the targeted enquiries, you don&apos;t pay success fees.
+          Call in the next 24 hours for FREE 60-second beachside credit analysis, same-day coastal assessment, and direct access to award-winning specialists.
+          <br />
+          <em>All services include our No Win No Fee guarantee.</em>
         </div>
       </Section>
 
       {/* Outcomes */}
-      <Section title="What Happens After Enquiry Removal">
+      <Section title="What Happens After Your Gold Coast Credit Transformation">
         <motion.ul
           variants={staggerChildren}
           initial="hidden"
@@ -531,13 +472,14 @@ export default function CreditEnquiryRemovalPage() {
           className="mt-4 grid gap-4 sm:grid-cols-2"
         >
           {[
-            "Immediate credit score boost – scores typically improve within 30-60 days of enquiry removal.",
-            "Automatic approval systems work again – many lenders use automated systems that instantly reject applications with too many enquiries.",
-            "Better interest rates – clean enquiry history signals responsible credit behaviour, often qualifying you for standard rates.",
-            "Successful finance applications – home loans, car finance, credit cards, and personal loans become accessible again.",
-            "Broker relationships restored – mortgage brokers can work with you again instead of declining to submit applications.",
-            "Credit card rewards access – premium rewards credit cards have strict enquiry limits that clean history opens up.",
-            "Business finance opportunities – personal credit enquiries affect business lending decisions, so clean history improves access.",
+            "🏖️ Beachside home loan approved at premium rates (2.9-3.2% vs 7-9%)",
+            "🏠 Investment property doors swing open across Gold Coast suburbs",
+            "🚗 Premium car finance for coastal cruising lifestyle",
+            "⛵ Marine finance available for boats, jet skis, and water toys",
+            "🏢 Business loans for Gold Coast tourism and hospitality ventures",
+            "📈 Credit score improvements of 190-340 points in weeks",
+            "💰 Interest rate savings of $1,960+ monthly on typical Gold Coast property",
+            "🌅 Peace of mind knowing your coastal paradise is within reach",
           ].map((t) => (
             <motion.li
               key={t}
@@ -551,7 +493,7 @@ export default function CreditEnquiryRemovalPage() {
       </Section>
 
       {/* Legal Rights / Education */}
-      <Section title="Understanding Your Rights: Privacy Act & Credit Enquiries">
+      <Section title="Understanding Gold Coast Property Finance: Your Credit Rights">
         <motion.div
           variants={staggerChildren}
           initial="hidden"
@@ -560,12 +502,11 @@ export default function CreditEnquiryRemovalPage() {
           className="mt-2 space-y-4 text-slate-700"
         >
           {[
-            "Consent requirements: Credit providers must have your clear, informed consent before accessing your credit file. This consent must be given voluntarily, specific to the actual credit product, and properly documented.",
-            "Right to challenge incorrect information: You have the absolute right to dispute any enquiry on your credit file that you believe is incorrect, unauthorised, or improperly recorded.",
-            "Timeframes for response: Credit reporting bodies must respond to your enquiry disputes within 30 days (or 7 days if you&apos;re seeking credit within 60 days).",
-            "Right to compensation: If unauthorised enquiries have caused you financial loss (loan rejections, higher interest rates), you may be entitled to compensation.",
-            "Complaint escalation: If credit providers or bureaus don&apos;t respond appropriately, you can escalate to the Australian Financial Complaints Authority (AFCA) at no cost.",
-            "Why professional help matters: These rights are powerful but complex to exercise. Credit providers have teams of lawyers. You need professional representation to level the playing field.",
+            "Gold Coast property market is competitive - clean credit gives you the edge over other buyers.",
+            "Tourism industry seasonal income requires specialist lenders who understand Gold Coast business cycles.",
+            "Marine finance has unique requirements - clean credit opens doors to specialist boat and yacht lenders.",
+            "Entertainment precinct developments offer opportunities - but require clean credit for investment approval.",
+            "Infrastructure boom creating property value increases - position yourself with clean credit before prices rise further.",
           ].map((text, index) => (
             <motion.p
               key={index}
@@ -592,7 +533,7 @@ export default function CreditEnquiryRemovalPage() {
       </Section>
 
       {/* FAQs */}
-      <Section title="Common Questions About Credit Enquiry Removal">
+      <Section title="Gold Coast Credit Repair Questions">
         <motion.div
           variants={staggerChildren}
           initial="hidden"
@@ -628,20 +569,19 @@ export default function CreditEnquiryRemovalPage() {
         </motion.div>
       </Section>
 
-      {/* Cost of keeping enquiries */}
-      <Section title="The Hidden Cost of Keeping Bad Enquiries">
+      {/* Cost of keeping bad credit */}
+      <Section title="The Massive Cost of Missing Your Gold Coast Paradise">
         <div className="mt-2 grid gap-6 lg:grid-cols-2">
           <div className="space-y-4 text-slate-700">
             <h3 className="font-semibold text-blue">
-              Quantifying the Financial Impact
+              Every Day Costs You Money and Dreams
             </h3>
             {[
-              "Home loan impact: Score 750+ gets best rates (~6.2%), while score <500 often gets declined or forced into non-bank lending (8%+ rates). On a $500,000 home loan, this difference is $162,500 over 30 years.",
-              "Credit card access: Clean enquiry history means platinum rewards cards with 55-day interest-free periods and $25,000+ limits. Excessive enquiries means basic cards only with $2,000-5,000 limits.",
-              "Car finance rates: Good enquiry profile gets bank rates from 5.9%, poor profile gets dealer finance from 12.9%+. On a $40,000 car loan over 5 years, this costs $6,800 extra in interest.",
-              "Employment opportunities: Some employers check credit reports for financial roles. Excessive enquiries can cost you job opportunities in banking, finance, and senior management.",
-              "Business finance access: Personal credit enquiries affect business lending. Clean personal enquiry history is often required for business loans, equipment finance, and commercial mortgages.",
-              "Rental applications: Many landlords now check credit reports. Excessive enquiries can result in rental rejection, especially in competitive markets like Sydney and Melbourne.",
+              "Gold Coast property appreciation: Missing $158+ daily in equity gains while prices climb",
+              "Interest rate difference: Paying $1,960+ extra monthly with bad credit vs clean credit",
+              "Investment opportunities: Tourism boom creating wealth - but only for those with finance access",
+              "Lifestyle cost: Watching others enjoy beachside paradise while you're locked out",
+              "Business opportunities: 6 million tourists annually - bad credit blocks your piece of the action",
             ].map((text, index) => (
               <p key={index} className="flex items-start gap-2">
                 <svg
@@ -669,7 +609,7 @@ export default function CreditEnquiryRemovalPage() {
             className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-lg"
           >
             <h3 className="text-lg font-semibold text-blue">
-              Why Act Now Instead of Waiting
+              Your Two Choices
             </h3>
             <ul className="mt-3 space-y-3 text-slate-700">
               <li className="flex items-start gap-2">
@@ -683,26 +623,10 @@ export default function CreditEnquiryRemovalPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
-                Time compounds the damage: Every month you delay is another month of credit score suppression and automatic loan rejections.
-              </li>
-              <li className="flex items-start gap-2">
-                <svg
-                  className="h-5 w-5 shrink-0 text-orange-500 mt-0.5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                The enquiry removal window: Evidence needed for removal can disappear over time – documentation gets destroyed, staff leave companies.
+                Stay landlocked while Gold Coast property prices climb beyond reach
               </li>
               <li className="flex items-start gap-2">
                 <svg
@@ -718,7 +642,7 @@ export default function CreditEnquiryRemovalPage() {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                The sooner we act, the higher our success rate and the faster your score recovery.
+                Claim your beachside life with expert credit repair
               </li>
             </ul>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -726,7 +650,7 @@ export default function CreditEnquiryRemovalPage() {
                 href="/free-credit-assessment"
                 className="rounded-lg bg-blue px-5 py-3 font-semibold text-white hover:bg-blue transition-colors"
               >
-                Start My Assessment
+                UNLOCK MY PARADISE
               </Link>
               <a
                 href="tel:+61489265737"
@@ -740,36 +664,54 @@ export default function CreditEnquiryRemovalPage() {
       </Section>
 
       {/* Getting Started CTA */}
-      <Section title="Getting Started: Your Free Enquiry Assessment">
-        <ol className="mt-4 space-y-3 text-slate-700">
-          {[
-            "Free phone consultation (10 minutes) — call 0489 265 737 to discuss your enquiry situation and identify obvious removal opportunities.",
-            "Complete credit file review — we obtain your reports from all three credit bureaus and conduct a detailed enquiry audit.",
-            "Removal strategy presentation — we present our findings, explain which enquiries can be removed, and provide timeline estimates.",
-            "Professional challenge process — once you&apos;re ready to proceed, we handle all enquiry challenges while providing regular progress updates.",
-            "Results delivery & score monitoring — we monitor your file until all targeted enquiries are removed and provide guidance on protection.",
-          ].map((step, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
-                {index + 1}
-              </span>
-              {step}
-            </li>
-          ))}
-        </ol>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/free-credit-assessment"
-            className="rounded-lg bg-blue px-6 py-3 font-semibold text-white hover:bg-blue transition-colors"
-          >
-            Book My Free Assessment
-          </Link>
-          <a
-            href="tel:+61489265737"
-            className="rounded-lg border-2 border-blue px-6 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
-          >
-            Call 0489 265 737
-          </a>
+      <Section title="Ready to Unlock Your Gold Coast Paradise?">
+        <div className="mt-4 space-y-6">
+          <div className="text-center">
+            <h3 className="text-xl font-semibold text-blue mb-4">THE PARADISE CLOCK IS TICKING</h3>
+            <p className="text-slate-700">
+              Every day you delay costs you $158 in extra interest payments and beachside property appreciation you could be capturing. Paradise lifestyle that could be yours right now.
+            </p>
+          </div>
+          
+          <ol className="space-y-3 text-slate-700">
+            {[
+              "🌊 FREE 60-second beachside credit analysis - call 0489 265 737",
+              "📊 Same-day coastal assessment (Gold Coast priority processing)",
+              "🎯 Custom strategy for your beachside dreams",
+              "⚡ Emergency processing for urgent coastal purchases",
+              "🏆 Award-winning specialists unlock your paradise",
+            ].map((step, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
+                  {index + 1}
+                </span>
+                {step}
+              </li>
+            ))}
+          </ol>
+          
+          <div className="text-center bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl">
+            <p className="text-blue font-semibold mb-4">
+              🌊 GOLD COAST EXCLUSIVE COASTAL OFFER 🌊
+            </p>
+            <p className="text-sm text-slate-700 mb-6">
+              When you call in the next 24 hours, you unlock: ✅ FREE 60-second beachside credit analysis ✅ Same-day coastal assessment ✅ No obligation paradise consultation ✅ Emergency processing for urgent beachside purchases ✅ Direct access to award-winning coastal specialists
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <a
+                href="tel:+61489265737"
+                className="rounded-lg bg-blue px-6 py-3 font-semibold text-white hover:bg-blue-700 transition-colors"
+              >
+                CALL NOW: 0489 265 737
+              </a>
+              <Link
+                href="/free-credit-assessment"
+                className="rounded-lg border-2 border-blue px-6 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
+              >
+                UNLOCK MY PARADISE
+              </Link>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -782,6 +724,12 @@ export default function CreditEnquiryRemovalPage() {
           viewport={{ once: true }}
           className="rounded-2xl bg-gradient-to-r from-blue to-blue p-6 text-white shadow-lg"
         >
+          <div className="text-center mb-4">
+            <h3 className="text-lg font-semibold">About Australian Credit Solutions - Gold Coast</h3>
+            <p className="text-sm mt-2">
+              We&apos;ve been unlocking Gold Coast dreams since 2018. Living on the Gold Coast isn&apos;t just about location - it&apos;s about lifestyle, freedom, and waking up in paradise every single day.
+            </p>
+          </div>
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
               <p className="text-sm font-medium">
@@ -798,6 +746,11 @@ export default function CreditEnquiryRemovalPage() {
                 Licensed & regulated — ASIC ACL 532003
               </p>
             </div>
+          </div>
+          <div className="text-center mt-4 text-sm">
+            <p>📞 Gold Coast Direct: 0489 265 737 | 📧 help@australiancreditsolutions.com.au</p>
+            <p>🌐 australiancreditsolutions.com.au/goldcoast | ⭐ 4.9/5 stars from 855+ paradise transformations</p>
+            <p className="mt-2 font-semibold">Stop letting bad credit keep you from your Gold Coast paradise. The beaches are calling, opportunities are everywhere, and your coastal lifestyle is just one phone call away. 🌊🏄‍♂️⚡</p>
           </div>
         </motion.div>
       </section>
@@ -902,7 +855,6 @@ function PriceCard({
         ))}
       </ul>
       <div className="mt-4 flex items-end justify-between">
-       
         <Link
           href="/free-credit-assessment"
           className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"
