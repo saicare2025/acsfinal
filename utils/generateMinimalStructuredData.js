@@ -1,17 +1,5 @@
 // utils/generateMinimalStructuredData.js
 
-/**
- * Generates minimal structured data following the exact patterns from the main pages
- * @param {Object} options - Page configuration
- * @param {string} options.pathname - Full path (e.g., "/court-judgment-removal")
- * @param {string} options.title - Page title
- * @param {string} options.description - Page description
- * @param {boolean} [options.isService] - Whether this is a service page
- * @param {string} [options.serviceType] - Service type for service pages
- * @param {Array} [options.breadcrumbs] - Custom breadcrumb items
- * @param {Array} [options.faqData] - FAQ data for FAQ schema
- * @returns {Object} JSON-LD structured data
- */
 function generateMinimalStructuredData({
   pathname,
   title,
@@ -23,7 +11,11 @@ function generateMinimalStructuredData({
 }) {
   const baseUrl = "https://www.australiancreditsolutions.com.au";
   const canonicalUrl = `${baseUrl}${pathname}`;
-  
+
+  // NEW: person image URL + @id we’ll re-use
+  const personImageUrl = `${baseUrl}/person.jpeg`;
+  const personImageId = `${baseUrl}#elisa-image`;
+
   const graph = [
     // Organization (same as homepage, without aggregateRating)
     {
@@ -59,39 +51,51 @@ function generateMinimalStructuredData({
         "https://www.google.com/maps/place/805%2F220+Collins+St,+Melbourne+VIC+3000"
       ]
     },
-    
-    // Person (same across all pages)
+
+    // NEW: ImageObject node for the person's image
+    {
+      "@type": "ImageObject",
+      "@id": personImageId,
+      "url": personImageUrl,
+      "contentUrl": personImageUrl
+      // Optional (add if you know them):
+      // "width": 800,
+      // "height": 800,
+      // "caption": "Elisa Rothschild"
+    },
+
+    // Person (same across all pages) — now referencing the image by @id
     {
       "@type": "Person",
       "@id": "https://www.australiancreditsolutions.com.au#elisa",
       "name": "Elisa Rothschild",
       "jobTitle": "Principal Lawyer & Director",
       "alumniOf": "Monash University",
-      "worksFor": {
-        "@id": "https://www.australiancreditsolutions.com.au#org"
-      },
+      "worksFor": { "@id": "https://www.australiancreditsolutions.com.au#org" },
       "knowsAbout": [
         "Credit Repair",
         "Credit Law",
-        "Family Law", 
+        "Family Law",
         "Debt Negotiation",
         "Consumer Finance"
       ],
-      "sameAs": "https://www.linkedin.com/in/elisa-rothschild"
+      "sameAs": "https://www.linkedin.com/in/elisa-rothschild",
+      "image": { "@id": personImageId } // <-- this is the key addition
     },
-    
+
     // WebSite (same across all pages)
     {
       "@type": "WebSite",
       "@id": "https://www.australiancreditsolutions.com.au#website",
       "url": "https://www.australiancreditsolutions.com.au",
       "name": "Australian Credit Solutions",
-      "publisher": {
-        "@id": "https://www.australiancreditsolutions.com.au#org"
-      }
+      "publisher": { "@id": "https://www.australiancreditsolutions.com.au#org" }
     }
   ];
 
+  // ...the rest of your function remains unchanged...
+  // (Service, WebPage, BreadcrumbList, FAQPage, return object)
+  
   // Add Service if this is a service page
   if (isService && serviceType) {
     graph.push({
@@ -101,9 +105,7 @@ function generateMinimalStructuredData({
       "name": serviceType,
       "url": canonicalUrl,
       "description": description,
-      "provider": {
-        "@id": "https://www.australiancreditsolutions.com.au#org"
-      },
+      "provider": { "@id": "https://www.australiancreditsolutions.com.au#org" },
       "areaServed": "Australia",
       "offers": {
         "@type": "Offer",
@@ -113,48 +115,31 @@ function generateMinimalStructuredData({
     });
   }
 
-  // WebPage (always included)
   const webPage = {
     "@type": "WebPage",
     "@id": `${canonicalUrl}#webpage`,
     "url": canonicalUrl,
     "name": title,
     "description": description,
-    "reviewedBy": {
-      "@id": "https://www.australiancreditsolutions.com.au#elisa"
-    },
-    "isPartOf": {
-      "@id": "https://www.australiancreditsolutions.com.au#website"
-    }
+    "reviewedBy": { "@id": "https://www.australiancreditsolutions.com.au#elisa" },
+    "isPartOf": { "@id": "https://www.australiancreditsolutions.com.au#website" }
   };
 
-  // Add about reference for service pages
   if (isService) {
-    webPage.about = {
-      "@id": `${canonicalUrl}#service`
-    };
+    webPage.about = { "@id": `${canonicalUrl}#service` };
   } else {
-    webPage.about = {
-      "@id": "https://www.australiancreditsolutions.com.au#org"
-    };
+    webPage.about = { "@id": "https://www.australiancreditsolutions.com.au#org" };
   }
 
   graph.push(webPage);
 
-  // Generate breadcrumb list
   let breadcrumbItems;
   if (breadcrumbs && breadcrumbs.length > 0) {
     breadcrumbItems = breadcrumbs;
   } else {
-    // Auto-build from pathname
     breadcrumbItems = [
-      {
-        position: 1,
-        name: "Home",
-        item: baseUrl
-      }
+      { position: 1, name: "Home", item: baseUrl }
     ];
-
     if (pathname !== "/") {
       const segments = pathname.split("/").filter(Boolean);
       segments.forEach((segment, index) => {
@@ -162,7 +147,7 @@ function generateMinimalStructuredData({
         const url = `${baseUrl}/${segments.slice(0, index + 1).join("/")}`;
         breadcrumbItems.push({
           position: index + 2,
-          name: name,
+          name,
           item: url
         });
       });
@@ -180,7 +165,6 @@ function generateMinimalStructuredData({
     }))
   });
 
-  // Add FAQ schema if FAQ data is provided
   if (faqData && Array.isArray(faqData) && faqData.length > 0) {
     graph.push({
       "@type": "FAQPage",
@@ -201,24 +185,3 @@ function generateMinimalStructuredData({
     "@graph": graph
   };
 }
-
-/**
- * Helper function to humanize URL segments
- * @param {string} segment - URL segment
- * @returns {string} Humanized segment
- */
-function humanizeSegment(segment) {
-  return segment
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
-    .replace(/([A-Z])/g, ' $1')
-    .trim();
-}
-
-// Export for both ES modules and CommonJS
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { generateMinimalStructuredData };
-} 
-
-export { generateMinimalStructuredData };
