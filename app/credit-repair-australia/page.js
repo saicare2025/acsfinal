@@ -12,6 +12,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 // Animation variants
 const fadeIn = {
@@ -109,7 +111,11 @@ export default function CreditRepairAustraliaPage() {
                   you&apos;ve been knocked back for a home loan, car finance, or
                   even a phone contract, we can help. Australian Credit
                   Solutions has helped thousands of Australians remove unfair
-                  credit listings and get their financial lives back on track.
+                  credit listings and get their financial lives back on track. If you need immediate assistance, our{' '}
+                  <Link href="/fix-my-credit-now" className="text-blue-600 hover:text-blue-800 font-medium">
+                    urgent credit repair service
+                  </Link>{' '}
+                  can fast-track your case.
                 </p>
               </div>
 
@@ -192,6 +198,11 @@ export default function CreditRepairAustraliaPage() {
         </div>
       </section>
       <ReviewsWidget />
+
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/credit-repair-australia" />
+      </div>
 
       {/* Opening Section */}
       <Section title="Your credit score shouldn't define your future">
@@ -717,6 +728,11 @@ export default function CreditRepairAustraliaPage() {
           </motion.div>
         </div>
       </Section>
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/credit-repair-australia" />
+      </div>
 
       {/* Footer trust bar */}
       <section className="mx-auto max-w-6xl px-4 pb-20">

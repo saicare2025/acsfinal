@@ -1,4 +1,4 @@
-// File: app/credit-repair-perth/page.jsx
+// File: app/fix-bad-credit-australia/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -12,6 +12,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 // Animation variants
 const fadeIn = {
@@ -23,42 +25,42 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditRepairPerthPage() {
+export default function FixBadCreditAustraliaPage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How much does credit repair cost in Perth?",
-      answer: "Our Perth service operates on a No Win No Fee basis. There's a one-off admin fee of $330 (applies regardless of outcome), then success fees only when we remove items. Most Perth clients find the interest rate savings pay for our service within months."
+      question: "Can you really fix bad credit in Australia?",
+      answer: "Yes, bad credit can often be fixed by removing invalid defaults, late payments, and other incorrect listings from your credit file. Our 98% success rate for accepted cases proves it's possible when done legally and professionally by ASIC licensed specialists."
     },
     {
-      question: "How long does credit repair take in Perth?",
-      answer: "Timeline varies by complexity, but Perth clients typically see results within 2-8 weeks. Urgent cases (property settlements, equipment finance deadlines) often get priority handling."
+      question: "How long does it take to fix bad credit Australia?",
+      answer: "Most bad credit repairs take 2-8 weeks depending on complexity. Simple default removals often take 2-4 weeks, while multiple items or complex cases may take 6-8 weeks. Much faster than waiting 5 years for items to naturally expire."
     },
     {
-      question: "Can you guarantee my defaults will be removed?",
-      answer: "We only take cases where we're genuinely confident of success. Our 98% success rate means if we accept your Perth case, the odds are heavily in your favour."
+      question: "How much does it cost to fix bad credit in Australia?",
+      answer: "Our No Win No Fee structure includes a $330 admin fee (applies regardless of outcome) plus success fees only when we successfully remove items. Most clients find the interest savings from better loan rates more than pay for our service."
     },
     {
-      question: "Do you handle Perth business credit files?",
-      answer: "Absolutely. Many Perth clients are mining contractors, trade businesses, or FIFO workers with side businesses. We repair both personal and business credit files."
+      question: "What bad credit items can be fixed in Australia?",
+      answer: "We can remove defaults, late payments, court judgments, incorrect personal details, and other invalid listings. Items must be incorrectly listed or contain legal errors. Valid, correctly listed items cannot be removed."
     },
     {
-      question: "What if I'm currently overseas (FIFO mining)?",
-      answer: "No problem. Everything's handled remotely - phone, email, secure online systems. Many of our Perth clients work overseas rotations. Distance doesn't affect our service quality."
+      question: "Will fixing bad credit guarantee loan approval?",
+      answer: "While we can't guarantee loan approval (that's the lender's decision), cleaning your credit file dramatically improves approval chances and often qualifies you for much better interest rates. Many clients go from rejection to approval."
     },
     {
-      question: "Can you help with urgent Perth property purchases?",
-      answer: "Yes! We offer emergency processing for Perth residents with urgent property finance needs. Same-day assessment, priority handling, and regular updates."
+      question: "Can I fix bad credit myself in Australia?",
+      answer: "You can try, but credit providers often ignore consumer disputes. Our legal expertise, established relationships, and knowledge of Privacy Act 1988 compliance gives us a 98% success rate that most individuals can't achieve alone."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-repair-perth",
-    title: "Credit Repair Perth | Fix Bad Credit Fast | Mining Boom Finance Specialists",
-    description: "Remove defaults, get approved for Perth's property boom. Award-winning specialists with 98% success rate when we take your case. Same-day assessment available. Call 0489 265 737.",
+    pathname: "/fix-bad-credit-australia",
+    title: "Fix Bad Credit Australia | Remove Defaults Fast | 98% Success Rate | No Win No Fee",
+    description: "Fix bad credit Australia with award-winning specialists. Remove defaults, late payments, improve credit score fast. 98% success rate, No Win No Fee, ASIC licensed. Get approved for loans again.",
     isService: true,
-    serviceType: "Credit Repair Perth Mining Finance"
+    serviceType: "Bad Credit Repair Australia"
   });
 
   return (
@@ -83,64 +85,82 @@ export default function CreditRepairPerthPage() {
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Credit Repair Perth | Fix Bad Credit Fast
+                Fix Bad Credit Australia:
                 <span className="block mt-2 text-blue">
-                  Mining Boom Finance Specialists
+                  Get Your Financial Life Back on Track
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
-                <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
-                </p>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+                  <p className="text-lg font-semibold text-red-800">
+                    Bad credit ruining your life? You&apos;re not alone. Every day, thousands of Australians are rejected for home loans, car finance, and even mobile phone contracts.
+                  </p>
+                </div>
+
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                  <p className="text-lg font-semibold text-green-800">
+                    Here&apos;s the good news: Bad credit can often be fixed. Legally. Permanently. Fast.
+                  </p>
+                </div>
 
                 <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
-                </p>
-
-                <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
+                  Australian Credit Solutions has helped over 5,000 Australians fix bad credit and get their financial lives back on track. <strong>98% success rate when we take your case. No Win, No Fee guarantee. Award-winning results.</strong>
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
-                    <div>⚡ Perth Property Boom Specialists</div>
-                    <div>🎯 Mining Industry Expertise</div>
-                    <div>🏆 Award-Winning Results (3 Years)</div>
-                    <div>💪 No Win, No Fee Confidence</div>
-                    <div>⏰ Same-day assessment available</div>
-                    <div>📞 Direct mining specialist access</div>
+                  <p className="text-sm font-bold text-blue-800 mb-3">💡 Why Bad Credit is Destroying Your Financial Future:</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-blue-700">
+                    <div>
+                      <p className="font-semibold">❌ Loan Rejections That Crush Dreams</p>
+                      <p className="text-xs">Home loans, car finance, business loans denied</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">💰 Massive Interest Rate Penalties</p>
+                      <p className="text-xs">8-12% home loans instead of 3-5%</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">😣 Daily Humiliation and Stress</p>
+                      <p className="text-xs">Rental rejections, credit card knockbacks</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">⏰ 5 Years of Financial Prison</p>
+                      <p className="text-xs">One mistake shouldn&apos;t destroy your future</p>
+                    </div>
                   </div>
                 </div>
 
                 <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Australian Credit Solutions has helped over 3,000 West Australians</p>
-                  <p className="text-xs text-gray-600">Ready to join the Perth success stories? Let&apos;s fix your credit file today.</p>
+                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737 Now</p>
+                  <p className="text-sm font-medium text-gray-800">Free assessment to see if we can fix your bad credit</p>
+                  <p className="text-xs text-gray-600">No obligation, honest advice about your credit repair prospects</p>
                 </div>
               </div>
 
-              <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded">
-                <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="mt-4 p-4 bg-gray-50 border-l-4 border-gray-400 rounded">
+                <div className="grid grid-cols-4 gap-4 text-center">
                   <div>
-                    <p className="text-lg font-bold text-green-600">98% SUCCESS</p>
-                    <p className="text-xs text-gray-700">When We Take Cases</p>
+                    <p className="text-lg font-bold text-red-600">98%</p>
+                    <p className="text-xs text-gray-700">Success Rate</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">2-8 WEEKS</p>
-                    <p className="text-xs text-gray-700">Typical Perth Results</p>
+                    <p className="text-lg font-bold text-red-600">5,000+</p>
+                    <p className="text-xs text-gray-700">Australians Helped</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">3,000+</p>
-                    <p className="text-xs text-gray-700">West Australians Helped</p>
+                    <p className="text-lg font-bold text-red-600">2-8 WEEKS</p>
+                    <p className="text-xs text-gray-700">Typical Results</p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-bold text-red-600">NO WIN</p>
+                    <p className="text-xs text-gray-700">No Fee Policy</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-center text-blue-600">
-                  Don&apos;t let bad credit lock you out of Perth&apos;s mining boom!
+                  One mistake shouldn&apos;t destroy 5 years of your life. Let&apos;s fix it.
                 </p>
               </div>
 
@@ -155,7 +175,7 @@ export default function CreditRepairPerthPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  FIX MY CREDIT NOW 
+                  Fix My Bad Credit Now 
                 </Link>
 
                 <a
@@ -208,9 +228,9 @@ export default function CreditRepairPerthPage() {
               {/* Form Container */}
 
               <FooterForm
-                heading="Get Your Free Perth Credit Assessment"
-                subheading="Same-Day Assessment Available"
-                paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
+                heading="Ready to Fix Your Bad Credit Today?"
+                subheading="Don&apos;t let bad credit control your life for another day"
+                paragraph="Free assessment, no obligation, honest advice. Call 0489 265 737 or complete our 60-second form. Your financial fresh start begins today."
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
@@ -234,11 +254,20 @@ export default function CreditRepairPerthPage() {
       </section>
         <ReviewsWidget/>
 
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/fix-bad-credit-australia" />
+      </div>
+
       {/* Opening Section */}
       <Section title="Sick of Being Knocked Back for Everything?">
         <p className="text-slate-700 mb-6">
           Yeah, we get it mate. Bad credit feels like you&apos;re stuck in a bloody nightmare. Every application gets rejected, 
-          every dream gets crushed. But here&apos;s the thing - most credit problems can actually be fixed.
+          every dream gets crushed. But here&apos;s the thing - most credit problems can actually be fixed. Our comprehensive{' '}
+          <Link href="/credit-repair-australia" className="text-blue-600 hover:text-blue-800 font-medium">
+            credit repair services
+          </Link>{' '}
+          have helped thousands of Australians turn their financial lives around.
         </p>
         
         <div className="grid gap-6 lg:grid-cols-2">
@@ -975,6 +1004,11 @@ export default function CreditRepairPerthPage() {
       </Section>
 
       {/* Getting Started CTA - This section is now integrated above */}
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/fix-bad-credit-australia" />
+      </div>
 
       {/* Footer trust bar */}
       <section className="mx-auto max-w-6xl px-4 pb-20">

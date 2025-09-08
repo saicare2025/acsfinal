@@ -1,4 +1,4 @@
-// File: app/credit-repair-perth/page.jsx
+// File: app/apply-credit-repair/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -23,42 +23,42 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditRepairPerthPage() {
+export default function ApplyCreditRepairPage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How much does credit repair cost in Perth?",
-      answer: "Our Perth service operates on a No Win No Fee basis. There's a one-off admin fee of $330 (applies regardless of outcome), then success fees only when we remove items. Most Perth clients find the interest rate savings pay for our service within months."
+      question: "How do I apply for credit repair in Australia?",
+      answer: "Applying for credit repair is simple - call 0489 265 737 for immediate assessment, request a callback through our website, or email help@australiancreditsolutions.com.au with your situation. We'll review your case and provide a free assessment of what we can fix on your credit file."
     },
     {
-      question: "How long does credit repair take in Perth?",
-      answer: "Timeline varies by complexity, but Perth clients typically see results within 2-8 weeks. Urgent cases (property settlements, equipment finance deadlines) often get priority handling."
+      question: "What information do I need when I apply?",
+      answer: "Just basic details: your name, contact info, and a brief description of your credit issues. We'll handle getting your credit file and doing the detailed legal analysis. No paperwork stress - we make the application process as simple as possible."
     },
     {
-      question: "Can you guarantee my defaults will be removed?",
-      answer: "We only take cases where we're genuinely confident of success. Our 98% success rate means if we accept your Perth case, the odds are heavily in your favour."
+      question: "How long does the application process take?",
+      answer: "The application itself takes 2 minutes by phone or callback request. Our team reviews your case within 24 hours and calls you back with a free assessment. If we can help, most cases are resolved within 2-8 weeks depending on complexity."
     },
     {
-      question: "Do you handle Perth business credit files?",
-      answer: "Absolutely. Many Perth clients are mining contractors, trade businesses, or FIFO workers with side businesses. We repair both personal and business credit files."
+      question: "Do I pay anything upfront when I apply?",
+      answer: "No upfront fees when you apply. We operate on No Win No Fee - just a $330 admin fee (applies regardless of outcome) and success fees only when we successfully remove items. We only get paid when you get results."
     },
     {
-      question: "What if I'm currently overseas (FIFO mining)?",
-      answer: "No problem. Everything's handled remotely - phone, email, secure online systems. Many of our Perth clients work overseas rotations. Distance doesn't affect our service quality."
+      question: "Can I apply if I've already tried fixing my credit myself?",
+      answer: "Absolutely! In fact, most of our successful clients tried DIY credit repair first. Professional legal representation is completely different from template letters and self-help approaches. We find angles and use legal strategies that aren't available to consumers attempting DIY fixes."
     },
     {
-      question: "Can you help with urgent Perth property purchases?",
-      answer: "Yes! We offer emergency processing for Perth residents with urgent property finance needs. Same-day assessment, priority handling, and regular updates."
+      question: "How urgent can the process be if I apply today?",
+      answer: "For urgent cases (pending property settlements, equipment finance deadlines, business opportunities), we offer priority processing. When you apply, make sure to mention your timeline requirements. Many urgent cases receive results within 2-4 weeks."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-repair-perth",
-    title: "Credit Repair Perth | Fix Bad Credit Fast | Mining Boom Finance Specialists",
-    description: "Remove defaults, get approved for Perth's property boom. Award-winning specialists with 98% success rate when we take your case. Same-day assessment available. Call 0489 265 737.",
+    pathname: "/apply-credit-repair",
+    title: "Apply for Credit Repair Australia | Get Your Financial Life Back",
+    description: "Ready to fix your credit and get your life back on track? Apply now with Australia's most trusted specialists. No paperwork hassles, no upfront fees, just results. 98% success rate, ASIC licensed.",
     isService: true,
-    serviceType: "Credit Repair Perth Mining Finance"
+    serviceType: "Apply Credit Repair Australia"
   });
 
   return (
@@ -83,64 +83,48 @@ export default function CreditRepairPerthPage() {
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Credit Repair Perth | Fix Bad Credit Fast
+                Apply for Credit Repair Australia | Get Your Financial Life Back
                 <span className="block mt-2 text-blue">
-                  Mining Boom Finance Specialists
+                  🇦🇺 Ready to Start?
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
+                  Ready to fix your credit and get your life back on track? Apply now with Australia&apos;s most trusted specialists.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
+                  No paperwork hassles, no upfront fees, just results. We&apos;ve helped thousands of Australians transform 
+                  their financial futures through professional credit repair.
                 </p>
 
-                <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
-                </p>
-
-                <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
-                    <div>⚡ Perth Property Boom Specialists</div>
-                    <div>🎯 Mining Industry Expertise</div>
-                    <div>🏆 Award-Winning Results (3 Years)</div>
-                    <div>💪 No Win, No Fee Confidence</div>
-                    <div>⏰ Same-day assessment available</div>
-                    <div>📞 Direct mining specialist access</div>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm font-medium">
+                  <div className="flex items-center text-green-700">
+                    <span className="mr-2">✓</span> 2-minute application
                   </div>
-                </div>
-
-                <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Australian Credit Solutions has helped over 3,000 West Australians</p>
-                  <p className="text-xs text-gray-600">Ready to join the Perth success stories? Let&apos;s fix your credit file today.</p>
+                  <div className="flex items-center text-green-700">
+                    <span className="mr-2">✓</span> No upfront fees
+                  </div>
+                  <div className="flex items-center text-green-700">
+                    <span className="mr-2">✓</span> 24-hour response
+                  </div>
+                  <div className="flex items-center text-green-700">
+                    <span className="mr-2">✓</span> 98% success rate
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded">
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  <div>
-                    <p className="text-lg font-bold text-green-600">98% SUCCESS</p>
-                    <p className="text-xs text-gray-700">When We Take Cases</p>
-                  </div>
-                  <div>
-                    <p className="text-lg font-bold text-green-600">2-8 WEEKS</p>
-                    <p className="text-xs text-gray-700">Typical Perth Results</p>
-                  </div>
-                  <div>
-                    <p className="text-lg font-bold text-green-600">3,000+</p>
-                    <p className="text-xs text-gray-700">West Australians Helped</p>
-                  </div>
-                </div>
+              <div className="mt-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded">
+                <p className="text-sm font-medium text-blue-800">
+                  <strong>🏆 Award-Winning Team Ready to Help:</strong> Industry Excellence Award Winner 3 Years Running (2022, 2023, 2024). 
+                  ASIC Licensed #532003. Trusted by thousands of Aussie families nationwide.
+                </p>
               </div>
 
               <div className="mt-4">
-                <p className="text-lg font-semibold text-center text-blue-600">
-                  Don&apos;t let bad credit lock you out of Perth&apos;s mining boom!
+                <p className="text-lg font-semibold text-blue">
+                  📞 Call 0489 265 737 to Apply | 💬 Request Callback
                 </p>
               </div>
 
@@ -155,7 +139,7 @@ export default function CreditRepairPerthPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  FIX MY CREDIT NOW 
+                  Apply Now - Start Your Application 
                 </Link>
 
                 <a
@@ -208,9 +192,9 @@ export default function CreditRepairPerthPage() {
               {/* Form Container */}
 
               <FooterForm
-                heading="Get Your Free Perth Credit Assessment"
-                subheading="Same-Day Assessment Available"
-                paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
+                heading="Apply for Credit Repair Today"
+                subheading="Free Assessment & Professional Service"
+                paragraph="Start your application now – 2 minutes to better credit and financial freedom."
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">

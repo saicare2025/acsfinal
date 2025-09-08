@@ -1,4 +1,4 @@
-// File: app/credit-repair-perth/page.jsx
+// File: app/our-story/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -23,42 +23,42 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditRepairPerthPage() {
+export default function OurStoryPage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How much does credit repair cost in Perth?",
-      answer: "Our Perth service operates on a No Win No Fee basis. There's a one-off admin fee of $330 (applies regardless of outcome), then success fees only when we remove items. Most Perth clients find the interest rate savings pay for our service within months."
+      question: "How did Australian Credit Solutions start?",
+      answer: "ACS was founded in 2018 by Principal Lawyer Elisa Rothschild after she witnessed firsthand how credit defaults were destroying the lives of everyday Australians. A single mum from Frankston, facing homelessness due to an invalid default, inspired Elisa to create a company that actually fights for clients rather than just processes paperwork."
     },
     {
-      question: "How long does credit repair take in Perth?",
-      answer: "Timeline varies by complexity, but Perth clients typically see results within 2-8 weeks. Urgent cases (property settlements, equipment finance deadlines) often get priority handling."
+      question: "What makes your company different from other credit repair services?",
+      answer: "We're built on three non-negotiables: only taking cases we can win, transparent no-nonsense pricing, and delivering real results instead of marketing promises. We're client-first, not sales-first or profit-first like many competitors."
     },
     {
-      question: "Can you guarantee my defaults will be removed?",
-      answer: "We only take cases where we're genuinely confident of success. Our 98% success rate means if we accept your Perth case, the odds are heavily in your favour."
+      question: "Who is Elisa Rothschild and what are her qualifications?",
+      answer: "Elisa Rothschild is our Principal Lawyer and Director, a Monash University Law Graduate with 15+ years consumer finance experience. She personally reviews every case and still gets fired up when credit providers try to bully Australians with invalid defaults."
     },
     {
-      question: "Do you handle Perth business credit files?",
-      answer: "Absolutely. Many Perth clients are mining contractors, trade businesses, or FIFO workers with side businesses. We repair both personal and business credit files."
+      question: "How many Australians have you helped since starting?",
+      answer: "Since 2018, ACS has helped over 5,000 Australians remove defaults, late payments, and other credit file errors. We've unlocked over $50 million in finance that banks had previously rejected, maintaining a 98% success rate for cases we accept."
     },
     {
-      question: "What if I'm currently overseas (FIFO mining)?",
-      answer: "No problem. Everything's handled remotely - phone, email, secure online systems. Many of our Perth clients work overseas rotations. Distance doesn't affect our service quality."
+      question: "Why have you won industry awards three years running?",
+      answer: "We won Industry Excellence Awards in 2022, 2023, and 2024 not because of marketing spend, but because we consistently deliver results for Australians who'd been let down by the system. Our 98% success rate and 4.9/5 star rating from 855+ clients speaks for itself."
     },
     {
-      question: "Can you help with urgent Perth property purchases?",
-      answer: "Yes! We offer emergency processing for Perth residents with urgent property finance needs. Same-day assessment, priority handling, and regular updates."
+      question: "What is your company's mission and promise to clients?",
+      answer: "Our mission remains the same as day one: give everyday Australians the financial fresh start they deserve. We promise honest assessment, transparent pricing, proven results, personal service, and Australian-focused expertise for every client."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-repair-perth",
-    title: "Credit Repair Perth | Fix Bad Credit Fast | Mining Boom Finance Specialists",
-    description: "Remove defaults, get approved for Perth's property boom. Award-winning specialists with 98% success rate when we take your case. Same-day assessment available. Call 0489 265 737.",
-    isService: true,
-    serviceType: "Credit Repair Perth Mining Finance"
+    pathname: "/our-story",
+    title: "Our Story: From Financial Rock Bottom to Australia's Most Trusted Credit Repair Specialists",
+    description: "The inspiring story of how Elisa Rothschild founded Australian Credit Solutions in 2018 to help a single mum from Frankston, and grew it into Australia's most trusted credit repair company with 98% success rate.",
+    isService: false,
+    serviceType: "Our Story Australian Credit Solutions"
   });
 
   return (
@@ -83,64 +83,70 @@ export default function CreditRepairPerthPage() {
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Credit Repair Perth | Fix Bad Credit Fast
+                Our Story: From Financial Rock Bottom
                 <span className="block mt-2 text-blue">
-                  Mining Boom Finance Specialists
+                  to Australia&apos;s Most Trusted Credit Repair Specialists
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
-                <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                  <p className="text-lg font-semibold text-blue-800 italic">
+                    &quot;The moment that changed everything happened on a Tuesday afternoon in 2018.&quot;
+                  </p>
+                </div>
+
+                <p className="text-base text-gray-600">
+                  Elisa Rothschild was sitting across from yet another client whose life had been turned upside down by bad credit. A single mum from Frankston, three kids under 10, desperately trying to secure a home loan after her ex-husband had destroyed their credit file with hidden defaults.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
+                  &quot;The banks won&apos;t even look at my application,&quot; she whispered, tears welling up. &quot;My kids think we&apos;re going to be homeless.&quot;
                 </p>
 
-                <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
+                <p className="text-base text-gray-700 font-semibold">
+                  That&apos;s when Elisa knew something had to change in Australia&apos;s credit repair industry.
                 </p>
 
-                <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
-                    <div>⚡ Perth Property Boom Specialists</div>
-                    <div>🎯 Mining Industry Expertise</div>
-                    <div>🏆 Award-Winning Results (3 Years)</div>
-                    <div>💪 No Win, No Fee Confidence</div>
-                    <div>⏰ Same-day assessment available</div>
-                    <div>📞 Direct mining specialist access</div>
+                <div className="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-4">
+                  <p className="text-sm font-bold text-yellow-800 mb-3">💡 The Problem That Started It All:</p>
+                  <div className="text-sm text-yellow-700 space-y-2">
+                    <p>Most credit repair companies were either dodgy operators making impossible promises, or legitimate businesses that treated clients like case numbers.</p>
+                    <p className="font-semibold">Nobody was actually fighting for everyday Australians who&apos;d hit financial rough patches.</p>
                   </div>
                 </div>
 
-                <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Australian Credit Solutions has helped over 3,000 West Australians</p>
-                  <p className="text-xs text-gray-600">Ready to join the Perth success stories? Let&apos;s fix your credit file today.</p>
+                <div className="text-center bg-green-100 border-2 border-green-400 rounded-lg p-4">
+                  <p className="text-xl font-bold text-green-700 mb-2">The Lightbulb Moment</p>
+                  <p className="text-sm font-medium text-gray-800">Most defaults shouldn&apos;t even be on credit files in the first place.</p>
+                  <p className="text-xs text-gray-600">Credit providers routinely break the rules when listing defaults.</p>
                 </div>
               </div>
 
-              <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded">
-                <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="mt-4 p-4 bg-purple-50 border-l-4 border-purple-400 rounded">
+                <div className="grid grid-cols-4 gap-4 text-center">
                   <div>
-                    <p className="text-lg font-bold text-green-600">98% SUCCESS</p>
-                    <p className="text-xs text-gray-700">When We Take Cases</p>
+                    <p className="text-lg font-bold text-purple-600">2018</p>
+                    <p className="text-xs text-gray-700">Company Founded</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">2-8 WEEKS</p>
-                    <p className="text-xs text-gray-700">Typical Perth Results</p>
+                    <p className="text-lg font-bold text-purple-600">5,000+</p>
+                    <p className="text-xs text-gray-700">Australians Helped</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">3,000+</p>
-                    <p className="text-xs text-gray-700">West Australians Helped</p>
+                    <p className="text-lg font-bold text-purple-600">98%</p>
+                    <p className="text-xs text-gray-700">Success Rate</p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-bold text-purple-600">3</p>
+                    <p className="text-xs text-gray-700">Industry Awards</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-center text-blue-600">
-                  Don&apos;t let bad credit lock you out of Perth&apos;s mining boom!
+                  From one single mum&apos;s story to Australia&apos;s most trusted name in credit repair
                 </p>
               </div>
 
@@ -155,7 +161,7 @@ export default function CreditRepairPerthPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  FIX MY CREDIT NOW 
+                  Get Your Free Credit Assessment 
                 </Link>
 
                 <a
@@ -208,9 +214,9 @@ export default function CreditRepairPerthPage() {
               {/* Form Container */}
 
               <FooterForm
-                heading="Get Your Free Perth Credit Assessment"
-                subheading="Same-Day Assessment Available"
-                paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
+                heading="Ready for Your Fresh Start?"
+                subheading="Get Your Free Credit Assessment"
+                paragraph="No cost. No obligation. No high-pressure sales pitch. Just honest advice from Australia's most trusted credit repair specialists. Call 0489 265 737"
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
