@@ -610,7 +610,7 @@ export default function CourtJudgmentRemovalPage() {
               className="group rounded-xl border border-blue-100 bg-white p-4 shadow-sm transition-all hover:shadow-md"
             >
               <summary className="cursor-pointer select-none font-semibold text-blue group-open:text-blue flex items-center justify-between">
-                <span>{f.q}</span>
+                <span>{f.question}</span>
                 <svg
                   className="h-5 w-5 transform group-open:rotate-180 transition-transform"
                   viewBox="0 0 20 20"
@@ -624,7 +624,7 @@ export default function CourtJudgmentRemovalPage() {
                 </svg>
               </summary>
               <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
-                {f.a}
+                {f.answer}
               </p>
             </motion.details>
           ))}

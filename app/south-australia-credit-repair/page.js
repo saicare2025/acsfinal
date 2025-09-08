@@ -1,4 +1,4 @@
-// File: app/credit-repair-perth/page.jsx
+// File: app/credit-repair-darwin-nt/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -23,42 +23,42 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditRepairPerthPage() {
+export default function CreditRepairDarwinNTPage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How much does credit repair cost in Perth?",
-      answer: "Our Perth service operates on a No Win No Fee basis. There's a one-off admin fee of $330 (applies regardless of outcome), then success fees only when we remove items. Most Perth clients find the interest rate savings pay for our service within months."
+      question: "How much does credit repair cost in Darwin?",
+      answer: "Our Darwin service operates on a transparent No Win No Fee basis. There's a one-off admin fee of $330 that applies regardless of outcome, then our success fee is only charged when we successfully remove items from your credit file. Most Darwin clients find the interest rate savings from better mining, defence, or tourism finance more than pay for our service within months."
     },
     {
-      question: "How long does credit repair take in Perth?",
-      answer: "Timeline varies by complexity, but Perth clients typically see results within 2-8 weeks. Urgent cases (property settlements, equipment finance deadlines) often get priority handling."
+      question: "Can you help FIFO workers with irregular income?",
+      answer: "Absolutely. We understand FIFO rotations, camp allowances, and the feast-or-famine nature of resource sector income. Many of our Darwin clients are mining contractors, drillers, and resource workers. We work with lenders who understand FIFO income patterns and help position your application for success."
     },
     {
-      question: "Can you guarantee my defaults will be removed?",
-      answer: "We only take cases where we're genuinely confident of success. Our 98% success rate means if we accept your Perth case, the odds are heavily in your favour."
+      question: "Do you understand defence personnel relocations?",
+      answer: "Yes! Defence relocations can disrupt banking relationships and cause administrative defaults. We specialise in helping ADF members, contractors, and defence industry workers remove defaults caused by posting changes, deployment complications, and military banking challenges."
     },
     {
-      question: "Do you handle Perth business credit files?",
-      answer: "Absolutely. Many Perth clients are mining contractors, trade businesses, or FIFO workers with side businesses. We repair both personal and business credit files."
+      question: "How long does credit repair take for Darwin residents?",
+      answer: "Timeline varies by case complexity, but Darwin clients typically see results within 2-8 weeks. Urgent cases (like pending mining equipment purchases, defence home loans, or time-sensitive tourism business expansion) often receive priority handling with faster timelines."
     },
     {
-      question: "What if I'm currently overseas (FIFO mining)?",
-      answer: "No problem. Everything's handled remotely - phone, email, secure online systems. Many of our Perth clients work overseas rotations. Distance doesn't affect our service quality."
+      question: "Can you help with seasonal tourism business credit?",
+      answer: "Definitely! Darwin's tourism industry faces unique wet/dry season challenges. We understand the cyclical nature of tourism income and work with lenders who appreciate seasonal business patterns. Many tourism operators have had defaults removed in time for high season expansion."
     },
     {
-      question: "Can you help with urgent Perth property purchases?",
-      answer: "Yes! We offer emergency processing for Perth residents with urgent property finance needs. Same-day assessment, priority handling, and regular updates."
+      question: "Can you help with remote area banking issues?",
+      answer: "Yes, we understand NT's remote area banking challenges. Limited bank branches, unreliable internet, and geographical complications can cause legitimate defaults. We challenge these aggressively and have excellent success rates with geographically-related credit issues."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-repair-perth",
-    title: "Credit Repair Perth | Fix Bad Credit Fast | Mining Boom Finance Specialists",
-    description: "Remove defaults, get approved for Perth's property boom. Award-winning specialists with 98% success rate when we take your case. Same-day assessment available. Call 0489 265 737.",
+    pathname: "/credit-repair-darwin-nt",
+    title: "Credit Repair Darwin NT | Top End Finance Specialists | 98% Success Rate",
+    description: "Remove defaults fast in Darwin - Mining, Defence & Tourism finance experts. Whether you're a mining contractor waiting for FIFO rotation, defence personnel buying first home, or tourism worker with seasonal income challenges, bad credit doesn't have to destroy your Top End dreams.",
     isService: true,
-    serviceType: "Credit Repair Perth Mining Finance"
+    serviceType: "Credit Repair Darwin NT Top End Finance"
   });
 
   return (
@@ -83,64 +83,42 @@ export default function CreditRepairPerthPage() {
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Credit Repair Perth | Fix Bad Credit Fast
+                Credit Repair Darwin NT | Top End Finance Specialists
                 <span className="block mt-2 text-blue">
-                  Mining Boom Finance Specialists
+                  98% Success Rate
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
+                  Remove Defaults Fast in Darwin - Mining, Defence & Tourism Finance Experts
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
+                  Struggling with bad credit in Darwin? You&apos;re not alone. Whether you&apos;re a mining contractor waiting
+                  for your next FIFO rotation, a defence personnel member trying to buy your first home, or a tourism
+                  worker dealing with seasonal income challenges, defaults and bad credit don&apos;t have to destroy your
+                  Top End dreams.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
+                  At Australian Credit Solutions, we&apos;re not just another credit repair company. We&apos;re Darwin&apos;s credit repair
+                  specialists who understand the unique financial challenges of living in Australia&apos;s resource capital.
+                  For three years running (2022, 2023, 2024), we&apos;ve been recognised as industry leaders with a 98%
+                  success rate when we take your case.
                 </p>
-
-                <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
-                    <div>⚡ Perth Property Boom Specialists</div>
-                    <div>🎯 Mining Industry Expertise</div>
-                    <div>🏆 Award-Winning Results (3 Years)</div>
-                    <div>💪 No Win, No Fee Confidence</div>
-                    <div>⏰ Same-day assessment available</div>
-                    <div>📞 Direct mining specialist access</div>
-                  </div>
-                </div>
-
-                <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Australian Credit Solutions has helped over 3,000 West Australians</p>
-                  <p className="text-xs text-gray-600">Ready to join the Perth success stories? Let&apos;s fix your credit file today.</p>
-                </div>
               </div>
 
-              <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded">
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  <div>
-                    <p className="text-lg font-bold text-green-600">98% SUCCESS</p>
-                    <p className="text-xs text-gray-700">When We Take Cases</p>
-                  </div>
-                  <div>
-                    <p className="text-lg font-bold text-green-600">2-8 WEEKS</p>
-                    <p className="text-xs text-gray-700">Typical Perth Results</p>
-                  </div>
-                  <div>
-                    <p className="text-lg font-bold text-green-600">3,000+</p>
-                    <p className="text-xs text-gray-700">West Australians Helped</p>
-                  </div>
-                </div>
+              <div className="mt-4 p-4 bg-orange-50 border-l-4 border-orange-400 rounded">
+                <p className="text-sm font-medium text-orange-800">
+                  <strong>Top End Advantage:</strong> We understand FIFO rotations, defence relocations, and seasonal 
+                  tourism challenges. Your Northern Territory lifestyle deserves specialized credit repair expertise.
+                </p>
               </div>
 
               <div className="mt-4">
-                <p className="text-lg font-semibold text-center text-blue-600">
-                  Don&apos;t let bad credit lock you out of Perth&apos;s mining boom!
+                <p className="text-lg font-semibold text-blue">
+                  📞 Call 0489 265 737 now for your free Darwin credit assessment.
                 </p>
               </div>
 
@@ -155,7 +133,7 @@ export default function CreditRepairPerthPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  FIX MY CREDIT NOW 
+                  Get My Free Darwin Assessment 
                 </Link>
 
                 <a
@@ -208,9 +186,9 @@ export default function CreditRepairPerthPage() {
               {/* Form Container */}
 
               <FooterForm
-                heading="Get Your Free Perth Credit Assessment"
-                subheading="Same-Day Assessment Available"
-                paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
+                heading="Get My Free Darwin Top End Credit Assessment"
+                subheading="Fast & Confidential"
+                paragraph="Find out how to leverage your FIFO, defence, or tourism career for premium finance – free, fast, and confidential."
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
@@ -235,60 +213,55 @@ export default function CreditRepairPerthPage() {
         <ReviewsWidget/>
 
       {/* Opening Section */}
-      <Section title="Sick of Being Knocked Back for Everything?">
-        <p className="text-slate-700 mb-6">
-          Yeah, we get it mate. Bad credit feels like you&apos;re stuck in a bloody nightmare. Every application gets rejected, 
-          every dream gets crushed. But here&apos;s the thing - most credit problems can actually be fixed.
-        </p>
-        
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="space-y-6">
-            <div className="border-l-4 border-red-400 bg-red-50 p-4 rounded">
-              <h4 className="font-semibold text-red-800 mb-2">🚫 &quot;Sorry, Application Declined&quot;</h4>
-              <p className="text-sm text-red-700">
-                Home loans, car finance, even mobile phone contracts. Everything gets rejected and no one tells you why or how to fix it.
-              </p>
+      <Section title="The South Australian Property Paradise (Bad Credit = Festival State Exile)">
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-purple-700 mb-4">🍷 SA LIFESTYLE INFRASTRUCTURE BOOM</h3>
+          <p className="text-slate-700 mb-4">
+            <strong>$15.8 billion in South Australian infrastructure creating unprecedented lifestyle opportunities.</strong>
+          </p>
+          
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="space-y-4">
+              <div className="border-l-4 border-blue-400 bg-blue-50 p-4 rounded">
+                <h4 className="font-semibold text-blue-800 mb-2">Game-changing developments:</h4>
+                <ul className="text-sm text-blue-700 space-y-1">
+                  <li>• <strong>Adelaide Airport expansion</strong> = international connectivity boost</li>
+                  <li>• <strong>North-South Corridor</strong> = seamless city-to-hills connectivity</li>
+                  <li>• <strong>Riverbank Precinct</strong> = cultural and entertainment hub expansion</li>
+                  <li>• <strong>Hydrogen industry</strong> = future energy employment boom</li>
+                </ul>
+              </div>
             </div>
             
-            <div className="border-l-4 border-orange-400 bg-orange-50 p-4 rounded">
-              <h4 className="font-semibold text-orange-800 mb-2">💸 Paying Through the Nose</h4>
-              <p className="text-sm text-orange-700">
-                When you do get approved, it&apos;s always the worst rates. 15% car loans, 25% credit cards, crazy high mortgages.
-              </p>
-            </div>
-            
-            <div className="border-l-4 border-gray-400 bg-gray-50 p-4 rounded">
-              <h4 className="font-semibold text-gray-800 mb-2">😤 Dreams on Hold</h4>
-              <p className="text-sm text-gray-700">
-                That house for the family, reliable car for work, business loan for your idea - all impossible because of some old default.
-              </p>
+            <div className="space-y-4">
+              <div className="border-l-4 border-red-400 bg-red-50 p-4 rounded">
+                <h4 className="font-semibold text-red-800 mb-2">🚫 With bad credit, you&apos;re locked out of this festival state transformation.</h4>
+              </div>
             </div>
           </div>
-          
-          <div className="space-y-6">
-            <div className="border-l-4 border-blue-400 bg-blue-50 p-4 rounded">
-              <h4 className="font-semibold text-blue-800 mb-2">🔍 Here&apos;s What Most People Don&apos;t Know…</h4>
-              <p className="text-sm text-blue-700">
-                A massive chunk of credit files have <strong>fixable errors</strong>. Defaults listed incorrectly, 
-                late payments that shouldn&apos;t be there, old stuff that should&apos;ve been removed ages ago.
-              </p>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-green-700 mb-4">💰 SOUTH AUSTRALIA vs OTHER CAPITALS VALUE EXPLOSION</h3>
+          <div className="grid gap-4 lg:grid-cols-2">
+            <div className="bg-green-50 p-4 rounded border-l-4 border-green-400">
+              <ul className="text-sm text-green-700 space-y-2">
+                <li><strong>Adelaide median:</strong> $620,000 (festival lifestyle + wine regions included)</li>
+                <li><strong>McLaren Vale wine country:</strong> $580,000 (vineyard views and cellar doors)</li>
+                <li><strong>Adelaide Hills lifestyle:</strong> $720,000 (city views with country feel)</li>
+              </ul>
             </div>
-            
-            <div className="border-l-4 border-green-400 bg-green-50 p-4 rounded">
-              <h4 className="font-semibold text-green-800 mb-2">💡 The Truth They Won&apos;t Tell You</h4>
-              <p className="text-sm text-green-700">
-                The credit agencies don&apos;t tell you this. The banks definitely don&apos;t. But we will. 
-                Most credit problems are actually fixable with the right approach.
-              </p>
+            <div className="bg-orange-50 p-4 rounded border-l-4 border-orange-400">
+              <ul className="text-sm text-orange-700 space-y-2">
+                <li><strong>Sydney equivalent properties:</strong> $1.4 million+ (stressful and unaffordable)</li>
+                <li><strong>Melbourne similar suburbs:</strong> $900,000+ (but no wine regions or festivals)</li>
+              </ul>
             </div>
-            
-            <div className="border-l-4 border-purple-400 bg-purple-50 p-4 rounded">
-              <h4 className="font-semibold text-purple-800 mb-2">🇦🇺 Why Aussies Choose Us</h4>
-              <p className="text-sm text-purple-700">
-                No BS approach. Real lawyers, not call center staff. ASIC licensed, not some fly-by-night operation. 
-                No Win No Fee - we only get paid when we get results.
-              </p>
-            </div>
+          </div>
+          <div className="mt-4 p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl">
+            <p className="text-lg font-semibold text-purple text-center">
+              South Australia = Most affordable capital city lifestyle with world-class wine regions. IF your credit qualifies.
+            </p>
           </div>
         </div>
       </Section>

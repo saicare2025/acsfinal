@@ -14,6 +14,7 @@ import {
   Star
 } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import testimonialImage from '../../app/assets/hero4.webp';
 
 const HelpSection = () => {
@@ -33,42 +34,48 @@ const HelpSection = () => {
       title: "Disputing Potentially Incorrect Default Listings",
       fullDesc: "We review each default, gather supporting evidence, and formally submit disputes to credit reporting agencies when information appears inaccurate.",
       color: "text-blue-600",
-      bgColor: "bg-blue-50"
+      bgColor: "bg-blue-50",
+      link: "/default-removal-services-australia"
     },
     {
       icon: <Search className="w-6 h-6" />,
       title: "Challenging Unauthorized Inquiries",
-      fullDesc: "We identify enquiries you didn’t authorise and submit formal dispute requests to have them corrected.",
+      fullDesc: "We identify enquiries you didn't authorise and submit formal dispute requests to have them corrected.",
       color: "text-emerald-600",
-      bgColor: "bg-emerald-50"
+      bgColor: "bg-emerald-50",
+      link: "/credit-enquiry-removal"
     },
     {
       icon: <Gavel className="w-6 h-6" />,
       title: "Court Judgment Reviews",
       fullDesc: "We verify whether judgments are reported accurately and, if found incorrect or outdated, request updates through official channels.",
       color: "text-purple-600",
-      bgColor: "bg-purple-50"
+      bgColor: "bg-purple-50",
+      link: "/court-judgment-removal"
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Repayment History Disputes",
       fullDesc: "We examine your records for errors and work to have inaccuracies corrected.",
       color: "text-amber-600",
-      bgColor: "bg-amber-50"
+      bgColor: "bg-amber-50",
+      link: "/worst-repayment-history-removal"
     },
     {
       icon: <FileSearch className="w-6 h-6" />,
       title: "Detailed Credit Report Analysis",
       fullDesc: "We thoroughly assess every aspect of your credit file to identify opportunities for profile improvement.",
       color: "text-indigo-600",
-      bgColor: "bg-indigo-50"
+      bgColor: "bg-indigo-50",
+      link: "/credit-score"
     },
     {
       icon: <Fingerprint className="w-6 h-6" />,
       title: "Addressing Identity Theft Impacts",
       fullDesc: "We guide you through the process of disputing fraudulent accounts, correcting inaccurate listings, and implementing preventative measures.",
       color: "text-red-600",
-      bgColor: "bg-red-50"
+      bgColor: "bg-red-50",
+      link: "/credit-repair-australia"
     }
   ];
 
@@ -116,7 +123,15 @@ const HelpSection = () => {
                       <div className={`p-3 mb-3 rounded-lg ${service.color} bg-white shadow-xs border border-gray-100`}>
                         {service.icon}
                       </div>
-                      <h3 className="text-lg font-bold text-gray-900">{service.title}</h3>
+                      <h3 className="text-lg font-bold text-gray-900">
+                        {service.link ? (
+                          <Link href={service.link} className="hover:text-blue-600 transition-colors">
+                            {service.title}
+                          </Link>
+                        ) : (
+                          service.title
+                        )}
+                      </h3>
                     </div>
             
                     <AnimatePresence>

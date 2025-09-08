@@ -1,4 +1,4 @@
-// File: app/credit-repair-perth/page.jsx
+// File: app/credit-repair-for-credit-card-applications-australia/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -23,42 +23,42 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditRepairPerthPage() {
+export default function CreditRepairCreditCardApplicationsPage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How much does credit repair cost in Perth?",
-      answer: "Our Perth service operates on a No Win No Fee basis. There's a one-off admin fee of $330 (applies regardless of outcome), then success fees only when we remove items. Most Perth clients find the interest rate savings pay for our service within months."
+      question: "How long before I can apply for credit cards again?",
+      answer: "Most removals happen within 6-12 weeks. You'll see your credit score improve within 30 days of removals. We typically recommend waiting until removals are complete before new credit card applications to avoid further rejections."
     },
     {
-      question: "How long does credit repair take in Perth?",
-      answer: "Timeline varies by complexity, but Perth clients typically see results within 2-8 weeks. Urgent cases (property settlements, equipment finance deadlines) often get priority handling."
+      question: "Which credit cards should I apply for after credit repair?",
+      answer: "This depends on your cleaned-up credit profile, income, and goals. We provide specific recommendations based on your situation. Generally, start with one premium card you really want rather than applying for multiple cards at once."
     },
     {
-      question: "Can you guarantee my defaults will be removed?",
-      answer: "We only take cases where we're genuinely confident of success. Our 98% success rate means if we accept your Perth case, the odds are heavily in your favour."
+      question: "Will removing defaults guarantee credit card approval?",
+      answer: "While we can't guarantee approvals (that's up to the banks), removing the items causing automatic rejections dramatically improves your chances. Our clients typically go from consistent rejections to approvals for cards they actually want."
     },
     {
-      question: "Do you handle Perth business credit files?",
-      answer: "Absolutely. Many Perth clients are mining contractors, trade businesses, or FIFO workers with side businesses. We repair both personal and business credit files."
+      question: "How much does credit repair cost vs the value of better credit cards?",
+      answer: "Our admin fee is $330. A premium travel rewards card can easily provide $1,000-3,000 annual value in points, benefits, and lower interest rates. The investment pays for itself quickly."
     },
     {
-      question: "What if I'm currently overseas (FIFO mining)?",
-      answer: "No problem. Everything's handled remotely - phone, email, secure online systems. Many of our Perth clients work overseas rotations. Distance doesn't affect our service quality."
+      question: "What if I've been rejected for credit cards recently?",
+      answer: "Recent rejections actually make credit repair more important. Each rejection creates another enquiry on your file, making future applications harder. Better to fix the underlying problems now than keep getting rejected."
     },
     {
-      question: "Can you help with urgent Perth property purchases?",
-      answer: "Yes! We offer emergency processing for Perth residents with urgent property finance needs. Same-day assessment, priority handling, and regular updates."
+      question: "Can you help with business credit card applications too?",
+      answer: "Absolutely. Business credit cards often have stricter credit file requirements. Cleaning up your personal credit file directly improves your chances of business credit card approval."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-repair-perth",
-    title: "Credit Repair Perth | Fix Bad Credit Fast | Mining Boom Finance Specialists",
-    description: "Remove defaults, get approved for Perth's property boom. Award-winning specialists with 98% success rate when we take your case. Same-day assessment available. Call 0489 265 737.",
+    pathname: "/credit-repair-for-credit-card-applications-australia",
+    title: "Credit Repair for Credit Card Applications Australia | Get Approved Again",
+    description: "Sick of getting knocked back for credit cards? Your credit file is probably the culprit. Let's fix it so you can get approved for the cards you actually want. We've helped thousands of Australians clean up their credit files and go from constant rejections to getting approved for premium credit cards.",
     isService: true,
-    serviceType: "Credit Repair Perth Mining Finance"
+    serviceType: "Credit Repair for Credit Card Applications"
   });
 
   return (
@@ -83,64 +83,35 @@ export default function CreditRepairPerthPage() {
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Credit Repair Perth | Fix Bad Credit Fast
+                Credit Repair for Credit Card Applications Australia
                 <span className="block mt-2 text-blue">
-                  Mining Boom Finance Specialists
+                  Get Approved Again
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
+                  Sick of getting knocked back for credit cards? Your credit file is probably the culprit. Let&apos;s fix it so
+                  you can get approved for the cards you actually want.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
+                  Getting rejected for credit cards is frustrating as hell – especially when you know you can afford the
+                  repayments. The problem isn&apos;t your income or your ability to pay. It&apos;s those black marks on your credit file
+                  that are automatically saying &quot;no&quot; before a human even looks at your application.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
+                  At Australian Credit Solutions, we&apos;ve helped thousands of Australians clean up their credit files and go
+                  from constant rejections to getting approved for premium credit cards. Our proven process removes
+                  defaults, late payments, and dodgy enquiries that are killing your credit card applications.
                 </p>
-
-                <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
-                    <div>⚡ Perth Property Boom Specialists</div>
-                    <div>🎯 Mining Industry Expertise</div>
-                    <div>🏆 Award-Winning Results (3 Years)</div>
-                    <div>💪 No Win, No Fee Confidence</div>
-                    <div>⏰ Same-day assessment available</div>
-                    <div>📞 Direct mining specialist access</div>
-                  </div>
-                </div>
-
-                <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Australian Credit Solutions has helped over 3,000 West Australians</p>
-                  <p className="text-xs text-gray-600">Ready to join the Perth success stories? Let&apos;s fix your credit file today.</p>
-                </div>
               </div>
 
-              <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded">
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  <div>
-                    <p className="text-lg font-bold text-green-600">98% SUCCESS</p>
-                    <p className="text-xs text-gray-700">When We Take Cases</p>
-                  </div>
-                  <div>
-                    <p className="text-lg font-bold text-green-600">2-8 WEEKS</p>
-                    <p className="text-xs text-gray-700">Typical Perth Results</p>
-                  </div>
-                  <div>
-                    <p className="text-lg font-bold text-green-600">3,000+</p>
-                    <p className="text-xs text-gray-700">West Australians Helped</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-4">
-                <p className="text-lg font-semibold text-center text-blue-600">
-                  Don&apos;t let bad credit lock you out of Perth&apos;s mining boom!
+              <div className="mt-4 p-4 bg-orange-50 border-l-4 border-orange-400 rounded">
+                <p className="text-sm font-medium text-orange-800">
+                  <strong>Quick Reality Check:</strong> Have you been knocked back for credit cards in the last 6 months? Every
+                  rejection makes it harder to get approved next time. Let&apos;s break that cycle.
                 </p>
               </div>
 
@@ -155,7 +126,7 @@ export default function CreditRepairPerthPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  FIX MY CREDIT NOW 
+                  Get My Credit Card Assessment 
                 </Link>
 
                 <a
@@ -208,9 +179,9 @@ export default function CreditRepairPerthPage() {
               {/* Form Container */}
 
               <FooterForm
-                heading="Get Your Free Perth Credit Assessment"
-                subheading="Same-Day Assessment Available"
-                paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
+                heading="Get My Free Credit Card"
+                subheading="Fast & Confidential"
+                paragraph="Find out why you&apos;re getting rejected for credit cards – free, fast, and confidential."
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
@@ -235,61 +206,74 @@ export default function CreditRepairPerthPage() {
         <ReviewsWidget/>
 
       {/* Opening Section */}
-      <Section title="Sick of Being Knocked Back for Everything?">
+      <Section title="Why Credit Card Applications Keep Getting Rejected">
         <p className="text-slate-700 mb-6">
-          Yeah, we get it mate. Bad credit feels like you&apos;re stuck in a bloody nightmare. Every application gets rejected, 
-          every dream gets crushed. But here&apos;s the thing - most credit problems can actually be fixed.
+          Here&apos;s the truth most banks won&apos;t tell you – credit card approvals are largely automated. A computer
+          scans your credit file in seconds, and if it sees certain red flags, you&apos;re automatically rejected before any
+          human assessment happens.
         </p>
+        
+        <h3 className="text-xl font-semibold text-blue mb-6">What&apos;s Actually Killing Your Credit Card Applications</h3>
         
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="space-y-6">
             <div className="border-l-4 border-red-400 bg-red-50 p-4 rounded">
-              <h4 className="font-semibold text-red-800 mb-2">🚫 &quot;Sorry, Application Declined&quot;</h4>
+              <h4 className="font-semibold text-red-800 mb-2">Defaults (The Big Killer)</h4>
               <p className="text-sm text-red-700">
-                Home loans, car finance, even mobile phone contracts. Everything gets rejected and no one tells you why or how to fix it.
+                Even one default can torpedo your credit card applications. Banks see a default and immediately think &quot;high risk&quot; – 
+                doesn&apos;t matter if it was a $200 phone bill from three years ago when you were between jobs.
               </p>
             </div>
             
             <div className="border-l-4 border-orange-400 bg-orange-50 p-4 rounded">
-              <h4 className="font-semibold text-orange-800 mb-2">💸 Paying Through the Nose</h4>
+              <h4 className="font-semibold text-orange-800 mb-2">Late Payment Records</h4>
               <p className="text-sm text-orange-700">
-                When you do get approved, it&apos;s always the worst rates. 15% car loans, 25% credit cards, crazy high mortgages.
+                Multiple late payments on credit cards, loans, or even your mortgage create a pattern that screams &quot;unreliable borrower&quot; 
+                to credit card companies. They&apos;d rather approve someone with perfect payment history.
               </p>
             </div>
             
-            <div className="border-l-4 border-gray-400 bg-gray-50 p-4 rounded">
-              <h4 className="font-semibold text-gray-800 mb-2">😤 Dreams on Hold</h4>
-              <p className="text-sm text-gray-700">
-                That house for the family, reliable car for work, business loan for your idea - all impossible because of some old default.
+            <div className="border-l-4 border-yellow-400 bg-yellow-50 p-4 rounded">
+              <h4 className="font-semibold text-yellow-800 mb-2">Too Many Credit Enquiries</h4>
+              <p className="text-sm text-yellow-700">
+                Every time you apply for a credit card and get rejected, it leaves an enquiry on your credit file. Too many enquiries 
+                in 12 months makes you look &quot;credit hungry&quot; – a red flag for new applications.
               </p>
             </div>
           </div>
           
           <div className="space-y-6">
-            <div className="border-l-4 border-blue-400 bg-blue-50 p-4 rounded">
-              <h4 className="font-semibold text-blue-800 mb-2">🔍 Here&apos;s What Most People Don&apos;t Know…</h4>
-              <p className="text-sm text-blue-700">
-                A massive chunk of credit files have <strong>fixable errors</strong>. Defaults listed incorrectly, 
-                late payments that shouldn&apos;t be there, old stuff that should&apos;ve been removed ages ago.
-              </p>
-            </div>
-            
-            <div className="border-l-4 border-green-400 bg-green-50 p-4 rounded">
-              <h4 className="font-semibold text-green-800 mb-2">💡 The Truth They Won&apos;t Tell You</h4>
-              <p className="text-sm text-green-700">
-                The credit agencies don&apos;t tell you this. The banks definitely don&apos;t. But we will. 
-                Most credit problems are actually fixable with the right approach.
-              </p>
-            </div>
-            
             <div className="border-l-4 border-purple-400 bg-purple-50 p-4 rounded">
-              <h4 className="font-semibold text-purple-800 mb-2">🇦🇺 Why Aussies Choose Us</h4>
+              <h4 className="font-semibold text-purple-800 mb-2">Old Court Judgments</h4>
               <p className="text-sm text-purple-700">
-                No BS approach. Real lawyers, not call center staff. ASIC licensed, not some fly-by-night operation. 
-                No Win No Fee - we only get paid when we get results.
+                That unpaid parking fine that went to court? Still showing up and blocking premium credit card approvals years later.
               </p>
+            </div>
+            
+            <div className="border-l-4 border-gray-400 bg-gray-50 p-4 rounded">
+              <h4 className="font-semibold text-gray-800 mb-2">Incorrect Information</h4>
+              <p className="text-sm text-gray-700">
+                Wrong addresses, employment details, or financial information can trigger automatic rejections even when you should be approved.
+              </p>
+            </div>
+            
+            <div className="border-l-4 border-blue-400 bg-blue-50 p-4 rounded">
+              <h4 className="font-semibold text-blue-800 mb-2">The Domino Effect of Credit Card Rejections</h4>
+              <p className="text-sm text-blue-700 mb-2">Once you get knocked back for one credit card, it becomes harder to get approved for others:</p>
+              <ul className="text-xs text-blue-700 space-y-1">
+                <li>• Each rejection creates another enquiry on your file</li>
+                <li>• Banks can see your previous rejections and become more cautious</li>
+                <li>• Your confidence drops and you start applying for lower-quality cards</li>
+                <li>• You settle for high-fee, high-interest cards instead of the rewards cards you deserve</li>
+              </ul>
             </div>
           </div>
+        </div>
+        
+        <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl">
+          <p className="text-lg font-semibold text-blue text-center">
+            Here&apos;s what most people don&apos;t realize: You might be one default removal away from going from automatic rejections to automatic approvals.
+          </p>
         </div>
       </Section>
 
@@ -504,59 +488,45 @@ export default function CreditRepairPerthPage() {
       </Section>
 
       {/* Success Stories */}
-      <Section title="South Australian Client Testimonials (100% Festival State Real)">
-        <motion.div className="grid gap-8 lg:grid-cols-2">
-          <motion.div variants={fadeIn} className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
-            <h3 className="text-lg font-semibold text-purple-700 mb-4">★★★★★ &quot;Wine country dreams beyond imagination&quot;</h3>
+      <Section title="Success Stories: From Rejections to Premium Card Approvals">
+        <motion.div className="grid gap-8 lg:grid-cols-3">
+          <motion.div variants={fadeIn} className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+            <h3 className="text-lg font-semibold text-blue mb-4">Sarah&apos;s Story – Teacher, Brisbane</h3>
             <div className="space-y-3 text-sm text-slate-700">
-              <p><strong>Challenge:</strong> Had $8,400 in defaults blocking McLaren Vale vineyard expansion.</p>
-              <p><strong>Our Solution:</strong> ACS removed everything in 6 weeks using wine industry expertise.</p>
-              <p><strong>Result:</strong> Now produce premium Shiraz with ocean views and cellar door is the most photographed in SA. Festival state perfection!</p>
+              <p><strong>Before:</strong> Rejected for 4 different credit cards in 6 months. Had one default from a Telstra bill and several late payments during divorce proceedings.</p>
+              <p><strong>Our Process:</strong> Removed the default and late payment records. Took 8 weeks to clean up her credit file completely.</p>
+              <p><strong>Result:</strong> Approved for Qantas Premier Platinum card ($20,000 limit) with 100,000 bonus points. Now earning 30,000+ Qantas points per year on everyday spending.</p>
               <div className="mt-4 p-3 bg-white rounded-lg">
-                <p className="text-xs font-medium italic text-purple-800">
-                  &quot;Had $8,400 in defaults blocking our McLaren Vale vineyard expansion. ACS removed everything in 6 weeks. We now produce premium Shiraz with ocean views!&quot; – Antonio & Maria G., McLaren Vale
-                </p>
-              </div>
-            </div>
-          </motion.div>
-          
-          <motion.div variants={fadeIn} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
-            <h3 className="text-lg font-semibold text-orange-700 mb-4">★★★★★ &quot;South Australia&apos;s premier credit service&quot;</h3>
-            <div className="space-y-3 text-sm text-slate-700">
-              <p><strong>Challenge:</strong> Tried fixing credit himself for 18 months while managing Barossa Valley operation. Complete waste of time.</p>
-              <p><strong>Our Solution:</strong> ACS removed defaults in 4 weeks with wine industry understanding.</p>
-              <p><strong>Result:</strong> Now owns vineyards in Clare Valley too. Building wine empire across SA&apos;s best regions.</p>
-              <div className="mt-4 p-3 bg-white rounded-lg">
-                <p className="text-xs font-medium italic text-orange-800">
-                  &quot;Tried fixing credit myself for 18 months. Complete waste of time. ACS removed my defaults in 4 weeks. Now I own vineyards in Clare Valley too.&quot; – Hans T., Barossa Valley
+                <p className="text-xs font-medium italic text-blue-800">
+                  &quot;I went from getting knocked back for basic credit cards to being approved for the exact card I wanted – with a massive sign-up bonus. The points have already paid for two domestic flights.&quot;
                 </p>
               </div>
             </div>
           </motion.div>
           
           <motion.div variants={fadeIn} className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
-            <h3 className="text-lg font-semibold text-green-700 mb-4">★★★★★ &quot;Professional, caring, life-changing&quot;</h3>
+            <h3 className="text-lg font-semibold text-green-700 mb-4">James&apos;s Story – Small Business Owner, Perth</h3>
             <div className="space-y-3 text-sm text-slate-700">
-              <p><strong>Challenge:</strong> Adelaide Hills accommodation provider - bad credit was crushing Festival season expansion dreams.</p>
-              <p><strong>Our Solution:</strong> ACS cleaned file in 5 weeks understanding festival season economics.</p>
-              <p><strong>Result:</strong> Commercial finance approved, new luxury retreat opened, booked solid every Adelaide Festival!</p>
+              <p><strong>Before:</strong> Multiple credit card rejections due to defaults from when his cafe struggled during COVID. Couldn&apos;t get business or personal credit cards.</p>
+              <p><strong>Our Process:</strong> Successfully removed two defaults and a court judgment. Also corrected employment information that was showing incorrectly.</p>
+              <p><strong>Result:</strong> Approved for American Express Business Gold ($35,000 limit) and personally for Westpac Altitude Black. Combined earning over 80,000 reward points annually.</p>
               <div className="mt-4 p-3 bg-white rounded-lg">
                 <p className="text-xs font-medium italic text-green-800">
-                  &quot;Bad credit was crushing Festival season expansion dreams. ACS cleaned my file in 5 weeks. New luxury retreat opened, booked solid every Adelaide Festival!&quot; – Emma L., Stirling
+                  &quot;Now I&apos;ve got proper business credit cards for expenses and cash flow, plus personal cards that actually earn decent rewards. Should have done this years ago.&quot;
                 </p>
               </div>
             </div>
           </motion.div>
           
-          <motion.div variants={fadeIn} className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
-            <h3 className="text-lg font-semibold text-blue mb-4">★★★★★ &quot;Festival state lifestyle made affordable&quot;</h3>
+          <motion.div variants={fadeIn} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
+            <h3 className="text-lg font-semibold text-orange-700 mb-4">Emma&apos;s Story – Nurse, Adelaide</h3>
             <div className="space-y-3 text-sm text-slate-700">
-              <p><strong>Challenge:</strong> Interest rate difference affecting Adelaide Hills property investment through wine tourism.</p>
-              <p><strong>Our Solution:</strong> ACS achieved dramatic rate improvement from rejection to 2.9% approval in 5 weeks.</p>
-              <p><strong>Result:</strong> Adelaide Hills property pays for itself through wine tourism. Festival state has an address, and they&apos;re living in it.</p>
+              <p><strong>Before:</strong> Stuck with a basic credit card charging $150 annual fee with no rewards. Previous applications rejected due to late payment history.</p>
+              <p><strong>Our Process:</strong> Removed pattern of late payments from credit cards and personal loan. Improved credit score by 180 points.</p>
+              <p><strong>Result:</strong> Approved for Virgin Australia High Flyer card with $15,000 limit. Bonus points paid for a family holiday to Bali.</p>
               <div className="mt-4 p-3 bg-white rounded-lg">
-                <p className="text-xs font-medium italic text-blue-800">
-                  &quot;The interest rate difference ACS achieved means our Adelaide Hills property pays for itself through wine tourism. From rejection to 2.9% approval in 5 weeks.&quot; – David & Lisa P., Mount Barker
+                <p className="text-xs font-medium italic text-orange-800">
+                  &quot;I was paying annual fees for basically nothing. Now I&apos;ve got a card that actually gives me something back – the bonus points alone were worth $1,200 in flights.&quot;
                 </p>
               </div>
             </div>

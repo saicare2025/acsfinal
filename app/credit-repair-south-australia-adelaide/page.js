@@ -1,4 +1,4 @@
-// File: app/credit-repair-perth/page.jsx
+// File: app/credit-repair-south-australia-adelaide/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -23,42 +23,42 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditRepairPerthPage() {
+export default function CreditRepairSouthAustraliaAdelaidePage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How much does credit repair cost in Perth?",
-      answer: "Our Perth service operates on a No Win No Fee basis. There's a one-off admin fee of $330 (applies regardless of outcome), then success fees only when we remove items. Most Perth clients find the interest rate savings pay for our service within months."
+      question: "How much does credit repair cost in South Australia?",
+      answer: "Our South Australian service operates on a transparent No Win No Fee basis. There's a one-off admin fee of $330 that applies regardless of outcome, then our success fee is only charged when we successfully remove items from your credit file. Most SA clients find the interest rate savings from better wine country and festival state finance more than pay for our service within months."
     },
     {
-      question: "How long does credit repair take in Perth?",
-      answer: "Timeline varies by complexity, but Perth clients typically see results within 2-8 weeks. Urgent cases (property settlements, equipment finance deadlines) often get priority handling."
+      question: "Can you help with Barossa Valley and McLaren Vale wine industry finance?",
+      answer: "Absolutely. We understand the Barossa Valley, McLaren Vale, Clare Valley, and Adelaide Hills wine regions plus wine tourism business requirements. Clean credit is essential to access premium rates for vineyard expansion, winery equipment, cellar door development, and wine tourism ventures. We help wine country residents unlock their vineyard dreams with competitive agricultural finance."
     },
     {
-      question: "Can you guarantee my defaults will be removed?",
-      answer: "We only take cases where we're genuinely confident of success. Our 98% success rate means if we accept your Perth case, the odds are heavily in your favour."
+      question: "Do you handle Adelaide Festival and tourism accommodation finance?",
+      answer: "Yes! Festival and tourism finance is a South Australian specialty. We help clients remove credit barriers for accommodation expansion, restaurant developments, festival venue investments, and cultural industry businesses. Bad credit often means 12-18% tourism rates - we help you access premium 4-8% rates instead for Adelaide Festival, Fringe, and WOMAD season opportunities."
     },
     {
-      question: "Do you handle Perth business credit files?",
-      answer: "Absolutely. Many Perth clients are mining contractors, trade businesses, or FIFO workers with side businesses. We repair both personal and business credit files."
+      question: "How long does credit repair take for South Australian clients?",
+      answer: "Timeline varies by case complexity, but South Australian clients typically see results within 2-8 weeks. Urgent cases (like pending vineyard purchases, vintage season equipment needs, or time-sensitive festival accommodation expansion) often receive priority handling with faster timelines."
     },
     {
-      question: "What if I'm currently overseas (FIFO mining)?",
-      answer: "No problem. Everything's handled remotely - phone, email, secure online systems. Many of our Perth clients work overseas rotations. Distance doesn't affect our service quality."
+      question: "Can you help with Adelaide Hills lifestyle property finance?",
+      answer: "Definitely! We offer specialized processing for Adelaide Hills lifestyle properties and tree change ventures. Same-day assessment, priority handling, and regular updates. Many Adelaide Hills clients have had defaults removed in time for their lifestyle property purchase with city views and country feel."
     },
     {
-      question: "Can you help with urgent Perth property purchases?",
-      answer: "Yes! We offer emergency processing for Perth residents with urgent property finance needs. Same-day assessment, priority handling, and regular updates."
+      question: "Do you understand seasonal wine industry and agricultural income patterns?",
+      answer: "Yes, we work extensively with South Australian wine industry operations, agricultural businesses, and festival economy ventures. We understand seasonal income from vintage harvests, wine tourism peaks, festival seasons, and agricultural cycles across Barossa Valley, McLaren Vale, Clare Valley, and regional SA operations."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-repair-perth",
-    title: "Credit Repair Perth | Fix Bad Credit Fast | Mining Boom Finance Specialists",
-    description: "Remove defaults, get approved for Perth's property boom. Award-winning specialists with 98% success rate when we take your case. Same-day assessment available. Call 0489 265 737.",
+    pathname: "/credit-repair-south-australia-adelaide",
+    title: "Credit Repair South Australia Adelaide | Wine Country Finance | Festival State Specialists",
+    description: "South Australia's award-winning credit repair specialists. Remove defaults for Barossa Valley wineries, McLaren Vale vineyards, Adelaide Hills lifestyle. 98% success rate, festival state dreams fulfilled.",
     isService: true,
-    serviceType: "Credit Repair Perth Mining Finance"
+    serviceType: "Credit Repair South Australia Wine Country Festival State"
   });
 
   return (
@@ -83,64 +83,82 @@ export default function CreditRepairPerthPage() {
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Credit Repair Perth | Fix Bad Credit Fast
+                Credit Repair South Australia:
                 <span className="block mt-2 text-blue">
-                  Mining Boom Finance Specialists
+                  Wine Country Finance | Festival State Specialists
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
-                <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
-                </p>
+                <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
+                  <p className="text-lg font-semibold text-purple-800">
+                    🍷 Missing out on Barossa Valley vineyard opportunities? Can&apos;t get McLaren Vale wine tourism finance? Adelaide Festival accommodation expansion blocked by bad credit?
+                  </p>
+                </div>
+
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                  <p className="text-lg font-semibold text-green-800">
+                    South Australia&apos;s wine country and festival economy deserves better credit solutions. We&apos;re here to unlock your festival state dreams.
+                  </p>
+                </div>
 
                 <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
-                </p>
-
-                <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
+                  Australian Credit Solutions has helped over 900 South Australian residents remove defaults and access premium finance for wine country properties, festival accommodation, and Adelaide Hills lifestyle dreams. <strong>98% success rate when we take your case. Wine industry specialists.</strong>
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
-                    <div>⚡ Perth Property Boom Specialists</div>
-                    <div>🎯 Mining Industry Expertise</div>
-                    <div>🏆 Award-Winning Results (3 Years)</div>
-                    <div>💪 No Win, No Fee Confidence</div>
-                    <div>⏰ Same-day assessment available</div>
-                    <div>📞 Direct mining specialist access</div>
+                  <p className="text-sm font-bold text-blue-800 mb-3">🍇 South Australia&apos;s Unique Opportunities We Unlock:</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-blue-700">
+                    <div>
+                      <p className="font-semibold">🍷 Barossa Valley Wine Empire</p>
+                      <p className="text-xs">Vineyard expansion, cellar door development</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">🎭 Adelaide Festival Accommodation</p>
+                      <p className="text-xs">Tourism venues, cultural business finance</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">🏔️ Adelaide Hills Lifestyle</p>
+                      <p className="text-xs">Tree change properties, country living</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">🍾 McLaren Vale Wine Tourism</p>
+                      <p className="text-xs">Ocean views, cellar door restaurants</p>
+                    </div>
                   </div>
                 </div>
 
                 <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Australian Credit Solutions has helped over 3,000 West Australians</p>
-                  <p className="text-xs text-gray-600">Ready to join the Perth success stories? Let&apos;s fix your credit file today.</p>
+                  <p className="text-xl font-bold text-blue-600 mb-2">📞 South Australia Hotline: 0489 265 737</p>
+                  <p className="text-sm font-medium text-gray-800">Wine country credit assessment - same day priority</p>
+                  <p className="text-xs text-gray-600">Festival state finance specialists understand your unique needs</p>
                 </div>
               </div>
 
-              <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded">
-                <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="mt-4 p-4 bg-purple-50 border-l-4 border-purple-400 rounded">
+                <div className="grid grid-cols-4 gap-4 text-center">
                   <div>
-                    <p className="text-lg font-bold text-green-600">98% SUCCESS</p>
-                    <p className="text-xs text-gray-700">When We Take Cases</p>
+                    <p className="text-lg font-bold text-purple-600">98%</p>
+                    <p className="text-xs text-gray-700">SA Success Rate</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">2-8 WEEKS</p>
-                    <p className="text-xs text-gray-700">Typical Perth Results</p>
+                    <p className="text-lg font-bold text-purple-600">900+</p>
+                    <p className="text-xs text-gray-700">SA Residents Helped</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">3,000+</p>
-                    <p className="text-xs text-gray-700">West Australians Helped</p>
+                    <p className="text-lg font-bold text-purple-600">WINE COUNTRY</p>
+                    <p className="text-xs text-gray-700">Specialists</p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-bold text-purple-600">FESTIVAL</p>
+                    <p className="text-xs text-gray-700">State Experts</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-center text-blue-600">
-                  Don&apos;t let bad credit lock you out of Perth&apos;s mining boom!
+                  Don&apos;t let bad credit keep you from South Australia&apos;s wine country and festival opportunities.
                 </p>
               </div>
 
@@ -155,7 +173,7 @@ export default function CreditRepairPerthPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  FIX MY CREDIT NOW 
+                  Unlock My Wine Country Dreams 
                 </Link>
 
                 <a
@@ -208,9 +226,9 @@ export default function CreditRepairPerthPage() {
               {/* Form Container */}
 
               <FooterForm
-                heading="Get Your Free Perth Credit Assessment"
-                subheading="Same-Day Assessment Available"
-                paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
+                heading="Ready to Claim Your South Australian Wine Country Life?"
+                subheading="From Barossa Valley vineyards to Adelaide Festival accommodation"
+                paragraph="Free wine country assessment, no obligation. Call 0489 265 737 or complete our 60-second form. Your festival state fresh start begins today."
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">

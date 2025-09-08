@@ -1,4 +1,4 @@
-// File: app/credit-repair-perth/page.jsx
+// File: app/credit-repair-sale-traralgon-gippsland-victoria/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -23,42 +23,42 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditRepairPerthPage() {
+export default function CreditRepairSaleTraralgonGippslandVictoriaPage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How much does credit repair cost in Perth?",
-      answer: "Our Perth service operates on a No Win No Fee basis. There's a one-off admin fee of $330 (applies regardless of outcome), then success fees only when we remove items. Most Perth clients find the interest rate savings pay for our service within months."
+      question: "Do you charge extra for remote Gippsland locations?",
+      answer: "No, our pricing is identical Australia-wide. Whether you're in central Sale or remote Mallacoota, you pay the same transparent No Win No Fee structure: $330 admin fee (applies regardless of outcome) plus success fee only when we remove items. Distance never affects service quality or pricing."
     },
     {
-      question: "How long does credit repair take in Perth?",
-      answer: "Timeline varies by complexity, but Perth clients typically see results within 2-8 weeks. Urgent cases (property settlements, equipment finance deadlines) often get priority handling."
+      question: "Can you help with energy sector transition careers?",
+      answer: "Absolutely. We understand the Latrobe Valley's economic transition, retraining challenges, and new industry opportunities. Many clients are transitioning from energy sector roles to new careers, starting businesses, or investing in property during the regional transformation."
     },
     {
-      question: "Can you guarantee my defaults will be removed?",
-      answer: "We only take cases where we're genuinely confident of success. Our 98% success rate means if we accept your Perth case, the odds are heavily in your favour."
+      question: "How do you handle remote East Gippsland locations?",
+      answer: "Everything operates remotely – phone, email, and secure online systems. From Mallacoota to Mount Hotham, all clients receive identical priority service. Many find our remote service more convenient than traveling to Melbourne, especially during busy tourism seasons."
     },
     {
-      question: "Do you handle Perth business credit files?",
-      answer: "Absolutely. Many Perth clients are mining contractors, trade businesses, or FIFO workers with side businesses. We repair both personal and business credit files."
+      question: "Do you understand seasonal tourism businesses?",
+      answer: "Yes, we work extensively with East Gippsland tourism operators, understanding seasonal income patterns, weather impacts, and equipment finance needs. We know the local tourism market dynamics and work with lenders who understand these business models."
     },
     {
-      question: "What if I'm currently overseas (FIFO mining)?",
-      answer: "No problem. Everything's handled remotely - phone, email, secure online systems. Many of our Perth clients work overseas rotations. Distance doesn't affect our service quality."
+      question: "Can you help with urgent alpine season business needs?",
+      answer: "Definitely! We offer emergency processing for Gippsland businesses with urgent seasonal finance needs. Same-day assessment, priority handling, and regular updates. Many alpine tourism clients have had defaults removed in time for ski season preparations."
     },
     {
-      question: "Can you help with urgent Perth property purchases?",
-      answer: "Yes! We offer emergency processing for Perth residents with urgent property finance needs. Same-day assessment, priority handling, and regular updates."
+      question: "What if my income is affected by natural disasters?",
+      answer: "We completely understand. Gippsland businesses often face bushfire, flood, and other natural disaster impacts. Our approach takes these factors into account when working with lenders who understand regional Victoria's environmental challenges and recovery patterns."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-repair-perth",
-    title: "Credit Repair Perth | Fix Bad Credit Fast | Mining Boom Finance Specialists",
-    description: "Remove defaults, get approved for Perth's property boom. Award-winning specialists with 98% success rate when we take your case. Same-day assessment available. Call 0489 265 737.",
+    pathname: "/credit-repair-sale-traralgon-gippsland-victoria",
+    title: "Credit Repair Sale Traralgon | Gippsland Victoria Specialists | 98% Success Rate",
+    description: "Credit repair specialists for Sale, Traralgon, Gippsland & East Victoria. Energy sector transition, Lakes District tourism, alpine business finance. 98% success rate.",
     isService: true,
-    serviceType: "Credit Repair Perth Mining Finance"
+    serviceType: "Credit Repair Gippsland Victoria Energy Tourism"
   });
 
   return (
@@ -83,64 +83,82 @@ export default function CreditRepairPerthPage() {
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Credit Repair Perth | Fix Bad Credit Fast
+                Credit Repair Sale Traralgon:
                 <span className="block mt-2 text-blue">
-                  Mining Boom Finance Specialists
+                  Gippsland Victoria Energy & Tourism Specialists
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
-                <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
-                </p>
+                <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded">
+                  <p className="text-lg font-semibold text-orange-800">
+                    ⚡ Energy sector transition affecting your career in the Latrobe Valley? Can&apos;t get Lakes District tourism finance? Alpine accommodation expansion blocked by bad credit?
+                  </p>
+                </div>
+
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                  <p className="text-lg font-semibold text-green-800">
+                    Gippsland&apos;s energy transition and tourism economy deserves better credit solutions. We&apos;re here to unlock your East Victoria opportunities.
+                  </p>
+                </div>
 
                 <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
-                </p>
-
-                <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
+                  Australian Credit Solutions has helped over 750 Gippsland Victoria residents remove defaults and access premium finance for energy sector transitions, Lakes District tourism, and alpine business opportunities. <strong>98% success rate when we take your case. Regional specialists.</strong>
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
-                    <div>⚡ Perth Property Boom Specialists</div>
-                    <div>🎯 Mining Industry Expertise</div>
-                    <div>🏆 Award-Winning Results (3 Years)</div>
-                    <div>💪 No Win, No Fee Confidence</div>
-                    <div>⏰ Same-day assessment available</div>
-                    <div>📞 Direct mining specialist access</div>
+                  <p className="text-sm font-bold text-blue-800 mb-3">🏔️ Gippsland&apos;s Unique Opportunities We Unlock:</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-blue-700">
+                    <div>
+                      <p className="font-semibold">⚡ Energy Sector Transition</p>
+                      <p className="text-xs">Retraining, new careers, business ventures</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">🚤 Lakes District Tourism</p>
+                      <p className="text-xs">Fishing charters, accommodation, marine</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">🏔️ Alpine Tourism Business</p>
+                      <p className="text-xs">Ski lodges, mountain accommodation</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">🌲 East Gippsland Properties</p>
+                      <p className="text-xs">Coastal lifestyle, forest properties</p>
+                    </div>
                   </div>
                 </div>
 
                 <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Australian Credit Solutions has helped over 3,000 West Australians</p>
-                  <p className="text-xs text-gray-600">Ready to join the Perth success stories? Let&apos;s fix your credit file today.</p>
+                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Gippsland Hotline: 0489 265 737</p>
+                  <p className="text-sm font-medium text-gray-800">Energy transition credit assessment - same day priority</p>
+                  <p className="text-xs text-gray-600">Regional Victoria specialists understand your transition needs</p>
                 </div>
               </div>
 
-              <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded">
-                <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="mt-4 p-4 bg-orange-50 border-l-4 border-orange-400 rounded">
+                <div className="grid grid-cols-4 gap-4 text-center">
                   <div>
-                    <p className="text-lg font-bold text-green-600">98% SUCCESS</p>
-                    <p className="text-xs text-gray-700">When We Take Cases</p>
+                    <p className="text-lg font-bold text-orange-600">98%</p>
+                    <p className="text-xs text-gray-700">Gippsland Success</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">2-8 WEEKS</p>
-                    <p className="text-xs text-gray-700">Typical Perth Results</p>
+                    <p className="text-lg font-bold text-orange-600">750+</p>
+                    <p className="text-xs text-gray-700">Gippsland Helped</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">3,000+</p>
-                    <p className="text-xs text-gray-700">West Australians Helped</p>
+                    <p className="text-lg font-bold text-orange-600">ENERGY</p>
+                    <p className="text-xs text-gray-700">Transition Experts</p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-bold text-orange-600">TOURISM</p>
+                    <p className="text-xs text-gray-700">Lakes & Alpine</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-center text-blue-600">
-                  Don&apos;t let bad credit lock you out of Perth&apos;s mining boom!
+                  Don&apos;t let bad credit keep you from Gippsland&apos;s energy transition and tourism opportunities.
                 </p>
               </div>
 
@@ -155,7 +173,7 @@ export default function CreditRepairPerthPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  FIX MY CREDIT NOW 
+                  Start My Energy Transition 
                 </Link>
 
                 <a
@@ -208,9 +226,9 @@ export default function CreditRepairPerthPage() {
               {/* Form Container */}
 
               <FooterForm
-                heading="Get Your Free Perth Credit Assessment"
-                subheading="Same-Day Assessment Available"
-                paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
+                heading="Ready to Unlock Your Gippsland Victoria Opportunities?"
+                subheading="From energy sector transitions to Lakes District tourism dreams"
+                paragraph="Free Gippsland assessment, no obligation. Call 0489 265 737 or complete our 60-second form. Your East Victoria fresh start begins today."
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">

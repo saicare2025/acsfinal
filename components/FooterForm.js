@@ -4,7 +4,11 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import arrowIcon from "../app/assets/arrow.png";
 
-const FooterForm = () => {
+const FooterForm = ({
+  heading = "Free Credit File Assessment",
+  subheading = "See if your negative listings can be removed – quick, confidential, and no win no fee.",
+  paragraph = "",
+}) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -138,23 +142,24 @@ const FooterForm = () => {
   };
 
   return (
-    <div className="rounded-2xl border border-blue/10 bg-white/90 p-6 shadow-lg backdrop-blur-sm md:p-8">
-      {/* Header with tagline + imported arrow image */}
-      <div className="mb-6 flex items-center justify-center gap-4">
-        <div>
-          <h2 className="text-2xl text-center font-extrabold leading-tight text-blue sm:text-3xl">
-            Free Credit File Assessment
-          </h2>
-          <p className="mt-1 text-sm text-center text-slate-600 sm:text-base">
-            See if your negative listings can be removed – quick, confidential, and{" "}
-            <span className="font-bold text-blue"><br></br>no win no fee.</span>
-          </p>
-        </div>
+    <div className="rounded-2xl border border-blue/10 bg-white/90 p-4 shadow-lg backdrop-blur-sm sm:p-6 md:p-8">
+      {/* Header with dynamic content */}
+      <div className="mb-6 text-center">
+        <h2 className="text-xl font-extrabold leading-tight text-blue sm:text-2xl lg:text-3xl">
+          {heading}
+        </h2>
+        <p className="mt-1 text-sm text-center text-slate-600 sm:text-base">
+          See if your negative listings can be removed – quick, confidential,
+          and{" "}
+          <span className="font-bold text-blue">
+            <br></br>no win no fee.
+          </span>
+        </p>
       </div>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <div className="grid grid-cols-1 gap-3">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="space-y-3">
           <input
             type="text"
             name="fullName"
@@ -162,7 +167,7 @@ const FooterForm = () => {
             value={formData.fullName}
             onChange={handleChange}
             required
-            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-2.5"
           />
 
           <input
@@ -172,7 +177,7 @@ const FooterForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-2.5"
           />
 
           <input
@@ -182,14 +187,14 @@ const FooterForm = () => {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-2.5"
           />
         </div>
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-2 w-full rounded-xl bg-blue px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-md transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
+          className="mt-4 w-full rounded-xl bg-blue px-4 py-3 text-base font-semibold uppercase tracking-wide text-white shadow-md transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 sm:px-5 sm:text-sm"
         >
           {isSubmitting ? "Processing..." : "Check My Removal Options"}
         </button>

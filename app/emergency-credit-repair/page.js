@@ -1,4 +1,4 @@
-// File: app/credit-repair-perth/page.jsx
+// File: app/emergency-credit-repair/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -23,42 +23,42 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditRepairPerthPage() {
+export default function EmergencyCreditRepairPage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How much does credit repair cost in Perth?",
-      answer: "Our Perth service operates on a No Win No Fee basis. There's a one-off admin fee of $330 (applies regardless of outcome), then success fees only when we remove items. Most Perth clients find the interest rate savings pay for our service within months."
+      question: "How fast can you fix my credit in an emergency?",
+      answer: "We provide same-day credit assessment for emergency cases. Depending on the complexity, most urgent defaults can be removed within 1-3 weeks. Some simple cases may be resolved even faster with our rush processing service."
     },
     {
-      question: "How long does credit repair take in Perth?",
-      answer: "Timeline varies by complexity, but Perth clients typically see results within 2-8 weeks. Urgent cases (property settlements, equipment finance deadlines) often get priority handling."
+      question: "What constitutes a credit emergency?",
+      answer: "Credit emergencies include: property settlements under 30 days, loan applications being processed, business finance deadlines, investment opportunities with tight deadlines, or any situation where bad credit is blocking time-sensitive finance."
     },
     {
-      question: "Can you guarantee my defaults will be removed?",
-      answer: "We only take cases where we're genuinely confident of success. Our 98% success rate means if we accept your Perth case, the odds are heavily in your favour."
+      question: "Do you charge extra for emergency credit repair?",
+      answer: "Emergency cases receive priority handling at no extra cost. We operate on the same No Win No Fee basis with a $330 admin fee (applies regardless of outcome). Your urgency doesn't mean you pay more."
     },
     {
-      question: "Do you handle Perth business credit files?",
-      answer: "Absolutely. Many Perth clients are mining contractors, trade businesses, or FIFO workers with side businesses. We repair both personal and business credit files."
+      question: "Can you guarantee results for emergency cases?",
+      answer: "We maintain our 98% success rate even for emergency cases. We only take cases where we're confident of success. If we can't help with your emergency timeline, we'll tell you upfront and won't charge you anything."
     },
     {
-      question: "What if I'm currently overseas (FIFO mining)?",
-      answer: "No problem. Everything's handled remotely - phone, email, secure online systems. Many of our Perth clients work overseas rotations. Distance doesn't affect our service quality."
+      question: "What happens during an emergency assessment?",
+      answer: "Within 0-4 hours we analyze your credit file, identify blocking issues, and create an urgent action plan. We immediately contact credit providers with priority removal requests and begin rush processing."
     },
     {
-      question: "Can you help with urgent Perth property purchases?",
-      answer: "Yes! We offer emergency processing for Perth residents with urgent property finance needs. Same-day assessment, priority handling, and regular updates."
+      question: "Do you work weekends for emergency cases?",
+      answer: "Yes! Emergency cases receive extended hours support. We're available 7 days a week for genuine emergencies including property settlements, business deadlines, and time-sensitive finance applications."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-repair-perth",
-    title: "Credit Repair Perth | Fix Bad Credit Fast | Mining Boom Finance Specialists",
-    description: "Remove defaults, get approved for Perth's property boom. Award-winning specialists with 98% success rate when we take your case. Same-day assessment available. Call 0489 265 737.",
+    pathname: "/emergency-credit-repair",
+    title: "Emergency Credit Fix Australia | Same Day Assessment | Urgent Default Removal",
+    description: "URGENT credit repair when you need it most. Same-day assessment, emergency default removal, rush processing for time-sensitive finance. 98% success rate. Don't let bad credit kill your opportunity.",
     isService: true,
-    serviceType: "Credit Repair Perth Mining Finance"
+    serviceType: "Emergency Credit Repair Service"
   });
 
   return (
@@ -82,65 +82,61 @@ export default function CreditRepairPerthPage() {
           <div className="flex flex-col items-center lg:gap-12 lg:flex-row lg:items-start">
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
-              <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Credit Repair Perth | Fix Bad Credit Fast
-                <span className="block mt-2 text-blue">
-                  Mining Boom Finance Specialists
+              <h1 className="text-3xl font-extrabold tracking-tight text-red-600 sm:text-4xl lg:text-5xl">
+                🚨 EMERGENCY CREDIT FIX 🚨
+                <span className="block mt-2 text-yellow-500">
+                  When Every Hour Counts
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
-                <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
+                <p className="text-lg leading-relaxed text-red-700 font-bold">
+                  Property settlement next week? Loan application being processed? Business deal falling through because of bad credit?
                 </p>
 
-                <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
+                <p className="text-base text-gray-900 font-semibold">
+                  We provide URGENT credit repair when deadlines matter most.
                 </p>
 
-                <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
-                </p>
-
-                <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
-                    <div>⚡ Perth Property Boom Specialists</div>
-                    <div>🎯 Mining Industry Expertise</div>
-                    <div>🏆 Award-Winning Results (3 Years)</div>
-                    <div>💪 No Win, No Fee Confidence</div>
-                    <div>⏰ Same-day assessment available</div>
-                    <div>📞 Direct mining specialist access</div>
+                <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4">
+                  <p className="text-sm font-bold text-red-800 mb-3">🚨 SAME-DAY ASSESSMENT AVAILABLE</p>
+                  <div className="grid grid-cols-2 gap-2 text-sm text-red-700">
+                    <div>⏰ Property settlements</div>
+                    <div>💼 Business finance deadlines</div>
+                    <div>🚀 Investment opportunities</div>
+                    <div>🚗 Equipment finance urgent</div>
+                    <div>📈 Loan applications processing</div>
+                    <div>⚡ Any urgent finance need</div>
                   </div>
                 </div>
 
                 <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Australian Credit Solutions has helped over 3,000 West Australians</p>
-                  <p className="text-xs text-gray-600">Ready to join the Perth success stories? Let&apos;s fix your credit file today.</p>
+                  <p className="text-xl font-bold text-red-600 mb-2">📞 EMERGENCY HOTLINE: 0489 265 737</p>
+                  <p className="text-sm font-medium text-gray-800">Operating Hours Extended for Emergencies</p>
+                  <p className="text-xs text-gray-600">Mon-Fri: 7am-10pm | Sat-Sun: 9am-6pm</p>
                 </div>
               </div>
 
-              <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded">
+              <div className="mt-4 p-4 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg">
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <p className="text-lg font-bold text-green-600">98% SUCCESS</p>
-                    <p className="text-xs text-gray-700">When We Take Cases</p>
+                    <p className="text-lg font-bold">0-4 HOURS</p>
+                    <p className="text-xs">Emergency Assessment</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">2-8 WEEKS</p>
-                    <p className="text-xs text-gray-700">Typical Perth Results</p>
+                    <p className="text-lg font-bold">1-3 DAYS</p>
+                    <p className="text-xs">Immediate Action</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">3,000+</p>
-                    <p className="text-xs text-gray-700">West Australians Helped</p>
+                    <p className="text-lg font-bold">1-3 WEEKS</p>
+                    <p className="text-xs">Results Delivered</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-4">
-                <p className="text-lg font-semibold text-center text-blue-600">
-                  Don&apos;t let bad credit lock you out of Perth&apos;s mining boom!
+                <p className="text-lg font-bold text-center text-red-600">
+                  🚨 Don&apos;t Let Bad Credit Kill Your Opportunity 🚨
                 </p>
               </div>
 
@@ -155,7 +151,7 @@ export default function CreditRepairPerthPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  FIX MY CREDIT NOW 
+                  🚨 EMERGENCY ASSESSMENT 
                 </Link>
 
                 <a
@@ -208,9 +204,9 @@ export default function CreditRepairPerthPage() {
               {/* Form Container */}
 
               <FooterForm
-                heading="Get Your Free Perth Credit Assessment"
-                subheading="Same-Day Assessment Available"
-                paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
+                heading="🚨 EMERGENCY ASSESSMENT FORM"
+                subheading="Same-Day Response • Rush Processing"
+                paragraph="Complete this form for URGENT same-day credit assessment. Emergency cases get priority handling."
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">

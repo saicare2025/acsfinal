@@ -1,4 +1,4 @@
-// File: app/credit-repair-perth/page.jsx
+// File: app/our-simple-5-step-process/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -23,42 +23,42 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditRepairPerthPage() {
+export default function OurSimple5StepProcessPage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How much does credit repair cost in Perth?",
-      answer: "Our Perth service operates on a No Win No Fee basis. There's a one-off admin fee of $330 (applies regardless of outcome), then success fees only when we remove items. Most Perth clients find the interest rate savings pay for our service within months."
+      question: "How long does the whole process take?",
+      answer: "Timeline varies by case complexity: Simple cases: 2-6 weeks for most removals, Complex cases: 6-12 weeks for multiple items, Urgent cases: Priority handling available for time-sensitive situations. We'll give you realistic timelines during your assessment – no false promises."
     },
     {
-      question: "How long does credit repair take in Perth?",
-      answer: "Timeline varies by complexity, but Perth clients typically see results within 2-8 weeks. Urgent cases (property settlements, equipment finance deadlines) often get priority handling."
+      question: "What if you can't remove everything?",
+      answer: "Our 'No Win, No Fee' policy protects you: You only pay success fees for items we actually remove. If we remove some items but not others, you only pay for successful removals. Admin fee covers our work regardless of outcome. Partial success often still dramatically improves loan approval chances."
     },
     {
-      question: "Can you guarantee my defaults will be removed?",
-      answer: "We only take cases where we're genuinely confident of success. Our 98% success rate means if we accept your Perth case, the odds are heavily in your favour."
+      question: "Can I get updates during the process?",
+      answer: "Absolutely – transparency is key: Weekly email updates on case progress, phone calls for important developments, direct access to case managers, and copies of all correspondence sent on your behalf."
     },
     {
-      question: "Do you handle Perth business credit files?",
-      answer: "Absolutely. Many Perth clients are mining contractors, trade businesses, or FIFO workers with side businesses. We repair both personal and business credit files."
+      question: "What happens if credit providers don't respond?",
+      answer: "We don't give up easily: Follow-up correspondence with strict deadlines, escalation to senior management when necessary, Privacy Commissioner complaints for non-compliance, and legal action in extreme cases (rare but available)."
     },
     {
-      question: "What if I'm currently overseas (FIFO mining)?",
-      answer: "No problem. Everything's handled remotely - phone, email, secure online systems. Many of our Perth clients work overseas rotations. Distance doesn't affect our service quality."
+      question: "Do you guarantee specific results?",
+      answer: "We guarantee honesty, not miracles: 98% success rate for cases we accept, we only take cases we're confident of winning, realistic timelines based on experience, and full refund of success fees if we fail (admin fee is non-refundable)."
     },
     {
-      question: "Can you help with urgent Perth property purchases?",
-      answer: "Yes! We offer emergency processing for Perth residents with urgent property finance needs. Same-day assessment, priority handling, and regular updates."
+      question: "What happens after my credit is repaired?",
+      answer: "Clean credit is just the beginning – we help you get approved. We've partnered exclusively with Oxcel Finance, Australia's leading specialists in helping people who've recovered from bad credit get approved for home loans, car finance, business finance, and personal finance at competitive rates."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-repair-perth",
-    title: "Credit Repair Perth | Fix Bad Credit Fast | Mining Boom Finance Specialists",
-    description: "Remove defaults, get approved for Perth's property boom. Award-winning specialists with 98% success rate when we take your case. Same-day assessment available. Call 0489 265 737.",
+    pathname: "/our-simple-5-step-process",
+    title: "Our Simple 5-Step Process: From Bad Credit to Financial Freedom",
+    description: "Life happens. We get it. Our simple 5-step process helps thousands of Australians get their financial lives back on track. From understanding your story to loan approval through Oxcel Finance.",
     isService: true,
-    serviceType: "Credit Repair Perth Mining Finance"
+    serviceType: "5-Step Credit Repair Process Australia"
   });
 
   return (
@@ -83,64 +83,89 @@ export default function CreditRepairPerthPage() {
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Credit Repair Perth | Fix Bad Credit Fast
+                Our Simple 5-Step Process:
                 <span className="block mt-2 text-blue">
-                  Mining Boom Finance Specialists
+                  From Bad Credit to Financial Freedom
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
-                <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
-                </p>
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                  <p className="text-lg font-semibold text-green-800">
+                    Life happens. We get it. That&apos;s why our process starts with understanding, not judgment.
+                  </p>
+                </div>
 
                 <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
+                  Whether it&apos;s a missed payment during a family crisis, a business that didn&apos;t work out, or simply falling behind during tough times – we&apos;ve heard every story. And we&apos;ve helped thousands of Australians just like you get their financial lives back on track.
                 </p>
 
-                <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
+                <p className="text-base text-gray-700 font-semibold">
+                  Here&apos;s exactly how we do it:
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
-                    <div>⚡ Perth Property Boom Specialists</div>
-                    <div>🎯 Mining Industry Expertise</div>
-                    <div>🏆 Award-Winning Results (3 Years)</div>
-                    <div>💪 No Win, No Fee Confidence</div>
-                    <div>⏰ Same-day assessment available</div>
-                    <div>📞 Direct mining specialist access</div>
+                  <p className="text-sm font-bold text-blue-800 mb-3">🔄 Our 5-Step Process:</p>
+                  <div className="grid grid-cols-1 md:grid-cols-5 gap-3 text-sm text-blue-700">
+                    <div className="text-center">
+                      <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2 font-bold">1</div>
+                      <p className="font-semibold">Get to Know You</p>
+                      <p className="text-xs">Without judgment</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2 font-bold">2</div>
+                      <p className="font-semibold">Free Assessment</p>
+                      <p className="text-xs">Credit file analysis</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2 font-bold">3</div>
+                      <p className="font-semibold">Honest Evaluation</p>
+                      <p className="text-xs">Only winnable cases</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2 font-bold">4</div>
+                      <p className="font-semibold">We Get to Work</p>
+                      <p className="text-xs">Professional results</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2 font-bold">5</div>
+                      <p className="font-semibold">Loan Referral</p>
+                      <p className="text-xs">Get back on track</p>
+                    </div>
                   </div>
                 </div>
 
                 <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Australian Credit Solutions has helped over 3,000 West Australians</p>
-                  <p className="text-xs text-gray-600">Ready to join the Perth success stories? Let&apos;s fix your credit file today.</p>
+                  <p className="text-xl font-bold text-blue-600 mb-2">📞 Ready to talk? Call 0489 265 737</p>
+                  <p className="text-sm font-medium text-gray-800">No pressure. Just honest advice.</p>
+                  <p className="text-xs text-gray-600">This conversation is completely free and confidential.</p>
                 </div>
               </div>
 
-              <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded">
-                <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="mt-4 p-4 bg-gray-50 border-l-4 border-gray-400 rounded">
+                <div className="grid grid-cols-4 gap-4 text-center">
                   <div>
-                    <p className="text-lg font-bold text-green-600">98% SUCCESS</p>
-                    <p className="text-xs text-gray-700">When We Take Cases</p>
+                    <p className="text-lg font-bold text-gray-600">98%</p>
+                    <p className="text-xs text-gray-700">Success Rate</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">2-8 WEEKS</p>
-                    <p className="text-xs text-gray-700">Typical Perth Results</p>
+                    <p className="text-lg font-bold text-gray-600">5,000+</p>
+                    <p className="text-xs text-gray-700">Australians Helped</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">3,000+</p>
-                    <p className="text-xs text-gray-700">West Australians Helped</p>
+                    <p className="text-lg font-bold text-gray-600">2-6 WEEKS</p>
+                    <p className="text-xs text-gray-700">Simple Cases</p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-bold text-gray-600">NO WIN</p>
+                    <p className="text-xs text-gray-700">No Fee Policy</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-center text-blue-600">
-                  Don&apos;t let bad credit lock you out of Perth&apos;s mining boom!
+                  The process is simple. The results are life-changing.
                 </p>
               </div>
 
@@ -155,7 +180,7 @@ export default function CreditRepairPerthPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  FIX MY CREDIT NOW 
+                  🔗 Get Your Free Assessment Online 
                 </Link>
 
                 <a
@@ -208,9 +233,9 @@ export default function CreditRepairPerthPage() {
               {/* Form Container */}
 
               <FooterForm
-                heading="Get Your Free Perth Credit Assessment"
-                subheading="Same-Day Assessment Available"
-                paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
+                heading="Ready to Start Your Journey to Financial Freedom?"
+                subheading="The process is simple. The results are life-changing."
+                paragraph="60-second form, same-day response, no obligation. Thousands of Australians have gone from credit rejection to loan approval using our proven 5-step process."
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">

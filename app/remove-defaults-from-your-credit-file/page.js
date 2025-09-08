@@ -1,4 +1,4 @@
-// File: app/credit-repair-perth/page.jsx
+// File: app/remove-defaults-from-your-credit-file/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -23,42 +23,42 @@ const staggerChildren = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export default function CreditRepairPerthPage() {
+export default function RemoveDefaultsFromYourCreditFilePage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How much does credit repair cost in Perth?",
-      answer: "Our Perth service operates on a No Win No Fee basis. There's a one-off admin fee of $330 (applies regardless of outcome), then success fees only when we remove items. Most Perth clients find the interest rate savings pay for our service within months."
+      question: "Can you really remove defaults from my credit file?",
+      answer: "Yes, we successfully remove defaults for 98% of cases we accept. Defaults can be removed when they're listed incorrectly, unfairly, or without proper process. We only take cases where we're genuinely confident of success - if we can't help, we'll tell you upfront."
     },
     {
-      question: "How long does credit repair take in Perth?",
-      answer: "Timeline varies by complexity, but Perth clients typically see results within 2-8 weeks. Urgent cases (property settlements, equipment finance deadlines) often get priority handling."
+      question: "How much does it cost to remove defaults?",
+      answer: "We operate on a No Win No Fee basis. There's a one-off admin fee of $330 that applies regardless of outcome, then our success fee is only charged when we successfully remove defaults. Most clients save thousands in lower interest rates within months."
     },
     {
-      question: "Can you guarantee my defaults will be removed?",
-      answer: "We only take cases where we're genuinely confident of success. Our 98% success rate means if we accept your Perth case, the odds are heavily in your favour."
+      question: "What if I've already paid the default?",
+      answer: "Paying a default doesn't remove it from your credit file - it just changes the status to 'paid.' The black mark remains for 5 years, still damaging your credit score. We can often remove paid defaults just as easily as unpaid ones."
     },
     {
-      question: "Do you handle Perth business credit files?",
-      answer: "Absolutely. Many Perth clients are mining contractors, trade businesses, or FIFO workers with side businesses. We repair both personal and business credit files."
+      question: "How long does default removal take?",
+      answer: "Timeline varies by case complexity, but most default removals are completed within 2-8 weeks. Urgent cases with pending finance applications often receive priority handling for faster results."
     },
     {
-      question: "What if I'm currently overseas (FIFO mining)?",
-      answer: "No problem. Everything's handled remotely - phone, email, secure online systems. Many of our Perth clients work overseas rotations. Distance doesn't affect our service quality."
+      question: "Will removing defaults improve my credit score?",
+      answer: "Yes, removing defaults typically improves credit scores by 50-200+ points. Clients often see immediate improvements in loan approval rates and access to premium interest rates previously unavailable."
     },
     {
-      question: "Can you help with urgent Perth property purchases?",
-      answer: "Yes! We offer emergency processing for Perth residents with urgent property finance needs. Same-day assessment, priority handling, and regular updates."
+      question: "What types of defaults can you remove?",
+      answer: "We can remove various types of defaults including phone bills, utility bills, credit cards, personal loans, medical bills, gym memberships, and other consumer defaults when they've been listed incorrectly or unfairly."
     }
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-repair-perth",
-    title: "Credit Repair Perth | Fix Bad Credit Fast | Mining Boom Finance Specialists",
-    description: "Remove defaults, get approved for Perth's property boom. Award-winning specialists with 98% success rate when we take your case. Same-day assessment available. Call 0489 265 737.",
+    pathname: "/remove-defaults-from-your-credit-file",
+    title: "Remove Defaults Australia | Get Defaults Wiped Fast | 98% Success Rate",
+    description: "Remove defaults from your credit file fast with Australia's award-winning specialists. 98% success rate, No Win No Fee guarantee, get approved for loans again. Call 0489 265 737.",
     isService: true,
-    serviceType: "Credit Repair Perth Mining Finance"
+    serviceType: "Default Removal Australia Credit File"
   });
 
   return (
@@ -83,64 +83,86 @@ export default function CreditRepairPerthPage() {
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Credit Repair Perth | Fix Bad Credit Fast
+                Remove Defaults From Your Credit File
                 <span className="block mt-2 text-blue">
-                  Mining Boom Finance Specialists
+                  98% Success Rate | No Win No Fee
                 </span>
               </h1>
 
               <div className="mt-6 space-y-4">
-                <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+                  <p className="text-lg font-bold text-red-700">
+                    ✅ 98% Success Rate When We Take Your Case<br/>
+                    ✅ Award-Winning 3 Years Running<br/>
+                    ✅ No Win No Fee Guarantee<br/>
+                    ✅ Get Approved for Loans Again
+                  </p>
+                </div>
+
+                <p className="text-base text-gray-600">
+                  Every day you wait, your chances of loan approval slip further away. Defaults are automatically destroying your financial future - but there&apos;s a proven solution.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
-                </p>
-
-                <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
+                  Banks automatically reject applications with defaults. When you do get approved, expect 8-15% rates instead of premium 3-5% rates. Defaults stay visible for 5 full years, even after you&apos;ve paid them off.
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
-                    <div>⚡ Perth Property Boom Specialists</div>
-                    <div>🎯 Mining Industry Expertise</div>
-                    <div>🏆 Award-Winning Results (3 Years)</div>
-                    <div>💪 No Win, No Fee Confidence</div>
-                    <div>⏰ Same-day assessment available</div>
-                    <div>📞 Direct mining specialist access</div>
+                  <p className="text-sm font-bold text-blue-800 mb-3">🔥 The Real Cost Example:</p>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="bg-red-100 p-3 rounded">
+                      <p className="font-bold text-red-700 mb-2">With Defaults:</p>
+                      <ul className="text-red-600 space-y-1">
+                        <li>❌ Home loan rejected</li>
+                        <li>❌ Car finance: 12.9% interest</li>
+                        <li>❌ Credit cards: $500 limit</li>
+                        <li>❌ Personal loans: Not available</li>
+                      </ul>
+                    </div>
+                    <div className="bg-green-100 p-3 rounded">
+                      <p className="font-bold text-green-700 mb-2">Defaults Removed:</p>
+                      <ul className="text-green-600 space-y-1">
+                        <li>✅ Home loan approved: 3.2%</li>
+                        <li>✅ Car finance: 4.9% interest</li>
+                        <li>✅ Credit cards: $25,000 limit</li>
+                        <li>✅ Personal loans: Premium rates</li>
+                      </ul>
+                    </div>
                   </div>
+                  <p className="text-center font-bold text-yellow-600 mt-3">Potential savings: $50,000+ over life of loans</p>
                 </div>
 
                 <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
                   <p className="text-xl font-bold text-blue-600 mb-2">📞 Call 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Australian Credit Solutions has helped over 3,000 West Australians</p>
-                  <p className="text-xs text-gray-600">Ready to join the Perth success stories? Let&apos;s fix your credit file today.</p>
+                  <p className="text-sm font-medium text-gray-800">⚡ Free Assessment - Find out if we can remove your defaults</p>
+                  <p className="text-xs text-gray-600">⭐⭐⭐⭐⭐ 4.9/5 from 855+ happy clients</p>
                 </div>
               </div>
 
               <div className="mt-4 p-4 bg-green-50 border-l-4 border-green-400 rounded">
-                <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="grid grid-cols-4 gap-4 text-center">
                   <div>
-                    <p className="text-lg font-bold text-green-600">98% SUCCESS</p>
-                    <p className="text-xs text-gray-700">When We Take Cases</p>
+                    <p className="text-lg font-bold text-green-600">98%</p>
+                    <p className="text-xs text-gray-700">Success Rate</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">2-8 WEEKS</p>
-                    <p className="text-xs text-gray-700">Typical Perth Results</p>
+                    <p className="text-lg font-bold text-green-600">855+</p>
+                    <p className="text-xs text-gray-700">Happy Clients</p>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-green-600">3,000+</p>
-                    <p className="text-xs text-gray-700">West Australians Helped</p>
+                    <p className="text-lg font-bold text-green-600">3</p>
+                    <p className="text-xs text-gray-700">Years Award Winner</p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-bold text-green-600">ASIC</p>
+                    <p className="text-xs text-gray-700">Licensed #532003</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-center text-blue-600">
-                  Don&apos;t let bad credit lock you out of Perth&apos;s mining boom!
+                  We Remove Defaults Other Companies Can&apos;t Touch
                 </p>
               </div>
 
@@ -155,7 +177,7 @@ export default function CreditRepairPerthPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  FIX MY CREDIT NOW 
+                  🚀 Remove My Defaults Now 
                 </Link>
 
                 <a
@@ -208,9 +230,9 @@ export default function CreditRepairPerthPage() {
               {/* Form Container */}
 
               <FooterForm
-                heading="Get Your Free Perth Credit Assessment"
-                subheading="Same-Day Assessment Available"
-                paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
+                heading="⚡ Free Assessment"
+                subheading="Find out if we can remove your defaults from your credit file"
+                paragraph="Join 855+ Australians who got their financial freedom back with our award-winning service. Call 0489 265 737"
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
