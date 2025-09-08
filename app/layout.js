@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Preconnects to reduce connection latency */}
+    
         <link
           rel="preconnect"
           href="https://www.googletagmanager.com"
@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
           </>
         )}
 
-        {/* TikTok (deferred without passing handlers) */}
+      
         {TIKTOK_ID && (
           <Script id="tiktok-deferred" strategy="lazyOnload">
             {`
