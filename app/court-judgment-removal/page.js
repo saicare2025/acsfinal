@@ -10,7 +10,9 @@ import ArrowIcon from "../assets/arrow.png";
 import ArrowIconM from "../assets/arrowm.png";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
+
 import Image from "next/image";
+import ReviewsWidget from "@/components/homepage/Testmonials";
 
 // Animation variants
 const fadeIn = {
@@ -195,6 +197,7 @@ export default function CourtJudgmentRemovalPage() {
 
         {/* Mobile arrow indicator (shown only on mobile) */}
       </section>
+      <ReviewsWidget/>
 
       {/* Opening Section */}
       <Section title="Court judgments are the nuclear option of credit destruction">
