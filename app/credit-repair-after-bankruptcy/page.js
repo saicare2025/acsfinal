@@ -12,6 +12,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 // Animation variants
 const fadeIn = {
@@ -216,6 +218,11 @@ export default function PostBankruptcyCreditRepairPage() {
         </p>
       </Section>
       <ReviewsWidget />
+
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/credit-repair-after-bankruptcy" />
+      </div>
 
       {/* Impact Section */}
       <Section title="How Bankruptcy and Debt Agreements Affect Your Credit">
@@ -822,6 +829,11 @@ export default function PostBankruptcyCreditRepairPage() {
           </div>
         </motion.div>
       </section>
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/credit-repair-after-bankruptcy" />
+      </div>
 
       <Footer />
     </main>

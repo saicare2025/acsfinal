@@ -12,6 +12,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 // Animation variants
 const fadeIn = {
@@ -204,6 +206,11 @@ export default function CreditRepairCreditCardApplicationsPage() {
         {/* Mobile arrow indicator (shown only on mobile) */}
       </section>
         <ReviewsWidget/>
+
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/credit-repair-for-credit-card-applications-australia" />
+      </div>
 
       {/* Opening Section */}
       <Section title="Why Credit Card Applications Keep Getting Rejected">
@@ -974,6 +981,11 @@ export default function CreditRepairCreditCardApplicationsPage() {
           </div>
         </motion.div>
       </section>
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/credit-repair-for-credit-card-applications-australia" />
+      </div>
 
       <Footer />
     </main>

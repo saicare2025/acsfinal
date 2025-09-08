@@ -2,6 +2,8 @@
 "use client";
 
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import HomePage from "../../components/homepage";
@@ -20,6 +22,12 @@ export default function Home() {
       <Header />
       <HeroSection />
       <ReviewsWidget/>
+      
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/credit-score" />
+      </div>
+      
       <VideoServicesSection />
       <HelpSection />
       <section className="bg-blue-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -2105,6 +2113,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/credit-score" />
+      </div>
 
       <Footer />
     </main>

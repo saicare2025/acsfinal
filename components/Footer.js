@@ -4,9 +4,11 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, ShieldCheck, FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { PinterestIcon, TikTokIcon } from "./Header";
+import PlusMinusIcon from "./PlusMinusIcon";
+import { stateLinks } from "../lib/stateLinks";
 
 export default function Footer() {
   const router = useRouter();
@@ -17,10 +19,42 @@ export default function Footer() {
     phone: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [openState, setOpenState] = useState(null);
+  const stateRefs = useRef({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((s) => ({ ...s, [name]: value }));
+  };
+
+  const toggleState = (stateName) => {
+    setOpenState(openState === stateName ? null : stateName);
+  };
+
+  const handleKeyDown = (e, stateName) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleState(stateName);
+    }
+  };
+
+  const handleLinkKeyDown = (e, stateName) => {
+    if (e.key === "Escape") {
+      setOpenState(null);
+      // Focus back to the toggle button
+      const button = stateRefs.current[stateName];
+      if (button) button.focus();
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      const currentIndex = Array.from(e.target.parentNode.children).indexOf(e.target);
+      const nextLink = e.target.parentNode.children[currentIndex + 1];
+      if (nextLink) nextLink.focus();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      const currentIndex = Array.from(e.target.parentNode.children).indexOf(e.target);
+      const prevLink = e.target.parentNode.children[currentIndex - 1];
+      if (prevLink) prevLink.focus();
+    }
   };
 
   const validateForm = () => {
@@ -108,7 +142,7 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <div className="bg-blue-100 p-1 rounded-full">
-                  <ShieldCheck className="w-4 h-4 text-blue-600" />
+                  <ShieldCheck className="w-4 h-4 text-blue" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">
                   Verified with AFCA and ASIC Australia
@@ -184,7 +218,7 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <div className="bg-blue-100 p-2 rounded-full">
-                  <Phone className="w-5 h-5 text-blue-600" />
+                  <Phone className="w-5 h-5 text-blue" />
                 </div>
                 <div>
                   <p className="font-medium text-gray-700">Phone</p>
@@ -199,7 +233,7 @@ export default function Footer() {
 
               <div className="flex items-start gap-3">
                 <div className="bg-blue-100 p-2 rounded-full">
-                  <Mail className="w-5 h-5 text-blue-600" />
+                  <Mail className="w-5 h-5 text-blue" />
                 </div>
                 <div>
                   <p className="font-medium text-gray-700">Email</p>
@@ -214,7 +248,7 @@ export default function Footer() {
 
               <div className="flex items-start gap-3">
                 <div className="bg-blue-100 p-2 rounded-full">
-                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <MapPin className="w-5 h-5 text-blue" />
                 </div>
                 <div>
                   <p className="font-medium text-gray-700">Address</p>
@@ -296,51 +330,57 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-4 lg:mt-12 border-t border-gray-200 pt-8"
         >
-          <h4 className="text-lg font-semibold text-gray-900 mb-3">
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">
             We provide services in all states:
           </h4>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-sm text-blue">
-            <li>
-              <Link href="/credit-repair-adelaide" className="hover:underline">
-                Credit Repair Adelaide
-              </Link>
-            </li>
-            <li>
-              <Link href="/credit-repair-brisbane" className="hover:underline">
-                Credit Repair Brisbane
-              </Link>
-            </li>
-            <li>
-              <Link href="/credit-repair-canberra" className="hover:underline">
-                Credit Repair Canberra
-              </Link>
-            </li>
-            <li>
-              <Link href="/credit-repair-darwin" className="hover:underline">
-                Credit Repair Darwin
-              </Link>
-            </li>
-            <li>
-              <Link href="/credit-repair-hobart" className="hover:underline">
-                Credit Repair Hobart
-              </Link>
-            </li>
-            <li>
-              <Link href="/credit-repair-melbourne" className="hover:underline">
-                Credit Repair Melbourne
-              </Link>
-            </li>
-            <li>
-              <Link href="/credit-repair-perth" className="hover:underline">
-                Credit Repair Perth
-              </Link>
-            </li>
-            <li>
-              <Link href="/credit_repair_sydney" className="hover:underline">
-                Credit Repair Sydney
-              </Link>
-            </li>
-          </ul>
+          
+          {/* States Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 mb-6">
+            {stateLinks.map((state) => (
+              <div key={state.name} className="space-y-2">
+                {/* State Toggle Button */}
+                <button
+                  ref={(el) => (stateRefs.current[state.name] = el)}
+                  onClick={() => toggleState(state.name)}
+                  onKeyDown={(e) => handleKeyDown(e, state.name)}
+                  aria-expanded={openState === state.name}
+                  aria-controls={`state-links-${state.name}`}
+                  className="flex items-center justify-between w-full p-2 text-left bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                >
+                  <span className="text-sm font-medium text-gray-900">
+                    {state.name} ({state.abbreviation})
+                  </span>
+                  <PlusMinusIcon isOpen={openState === state.name} />
+                </button>
+
+                {/* Collapsible Links */}
+                <motion.div
+                  id={`state-links-${state.name}`}
+                  initial={false}
+                  animate={{
+                    height: openState === state.name ? "auto" : 0,
+                    opacity: openState === state.name ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="border-t border-gray-200 pt-2 space-y-1">
+                    {state.links.map((link, index) => (
+                      <Link
+                        key={index}
+                        href={link.href}
+                        className="block px-2 py-1 text-sm text-blue hover:text-blue-800 hover:bg-blue-50 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
+                        onKeyDown={(e) => handleLinkKeyDown(e, state.name)}
+                        tabIndex={openState === state.name ? 0 : -1}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+            ))}
+          </div>
         </motion.div>
         {/* Legal & Utility Links */}
         <div className="mt-6 border-t border-gray-200 pt-4">

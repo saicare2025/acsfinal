@@ -12,6 +12,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 // Animation variants
 const fadeIn = {
@@ -183,11 +185,20 @@ export default function DefaultRemovalServicesPage() {
       </section>
       <ReviewsWidget/>
 
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/default-removal-services-australia" />
+      </div>
+
       {/* Why Defaults Are Financial Killers */}
       <Section title="Why Defaults Are Financial Killers">
         <p className="text-slate-700">
           A default on your credit file isn&apos;t just a number - it&apos;s a roadblock that forces you into the arms of dodgy
-          high-interest lenders charging double-digit rates. Here&apos;s what that default is really costing you:
+          high-interest lenders charging double-digit rates. Our{' '}
+          <Link href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 font-medium">
+            default removal process
+          </Link>{' '}
+          can eliminate these roadblocks. Here&apos;s what that default is really costing you:
         </p>
         <motion.ul
           variants={staggerChildren}
@@ -635,6 +646,11 @@ export default function DefaultRemovalServicesPage() {
           </div>
         </motion.div>
       </section>
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/default-removal-services-australia" />
+      </div>
 
       <Footer />
     </main>

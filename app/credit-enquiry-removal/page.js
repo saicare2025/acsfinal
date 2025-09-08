@@ -12,6 +12,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 // Animation variants
 const fadeIn = {
@@ -209,6 +211,11 @@ export default function CreditEnquiryRemovalPage() {
       </section>
         <ReviewsWidget/>
 
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/credit-enquiry-removal" />
+      </div>
+
       {/* Opening Section */}
       <Section title="Your credit enquiries are quietly destroying your financial future">
         <p>
@@ -223,7 +230,11 @@ export default function CreditEnquiryRemovalPage() {
           dramatically.
         </p>
         <p className="mt-4">
-          Australian Credit Solutions specialises in credit enquiry removal across Australia. We&apos;re not another
+          Australian Credit Solutions specialises in credit enquiry removal across Australia. We also help with{' '}
+          <Link href="/default-removal-services-australia" className="text-blue-600 hover:text-blue-800 font-medium">
+            default removal services
+          </Link>{' '}
+          for comprehensive credit file cleanup. We&apos;re not another
           generic credit repair company making empty promises. We&apos;re award-winning specialists with a 98%
           success rate when we accept cases, backed by three consecutive years of industry recognition.
           The difference? We only take cases where we&apos;re genuinely confident of success. If we can&apos;t help you win,
@@ -847,6 +858,11 @@ export default function CreditEnquiryRemovalPage() {
           </div>
         </motion.div>
       </section>
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/credit-enquiry-removal" />
+      </div>
 
       <Footer />
     </main>

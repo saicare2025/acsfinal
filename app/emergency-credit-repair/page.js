@@ -12,6 +12,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedServices from "@/components/RelatedServices";
 
 // Animation variants
 const fadeIn = {
@@ -229,6 +231,11 @@ export default function EmergencyCreditRepairPage() {
         {/* Mobile arrow indicator (shown only on mobile) */}
       </section>
         <ReviewsWidget/>
+
+      {/* Breadcrumb Navigation */}
+      <div className="mx-auto max-w-6xl px-4">
+        <Breadcrumb pathname="/emergency-credit-repair" />
+      </div>
 
       {/* Opening Section */}
       <Section title="Sick of Being Knocked Back for Everything?">
@@ -1000,6 +1007,11 @@ export default function EmergencyCreditRepairPage() {
           </div>
         </motion.div>
       </section>
+
+      {/* Related Services */}
+      <div className="mx-auto max-w-6xl px-4">
+        <RelatedServices pathname="/emergency-credit-repair" />
+      </div>
 
       <Footer />
     </main>
