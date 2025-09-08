@@ -11,6 +11,8 @@ import ArrowIcon from "../assets/arrow.png";
 import ArrowIconM from "../assets/arrowm.png";
 import Image from "next/image";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
+import ReviewsWidget from "@/components/homepage/Testmonials";
+
 
 // Animation variants
 const fadeIn = {
@@ -162,6 +164,7 @@ export default function CreditRepairCarFinancePage() {
           </div>
         </div>
       </section>
+      <ReviewsWidget/>
 
       {/* Opening Section */}
       <Section title="Car finance knock-backs? Let's fix the credit stopping your approval">

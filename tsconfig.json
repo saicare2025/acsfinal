@@ -24,6 +24,6 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/credit-repair-home-loan-approval/page.js"  ],
   "exclude": ["node_modules"]
 }

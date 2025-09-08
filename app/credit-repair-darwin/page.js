@@ -11,6 +11,7 @@ import VideoServicesSection from "../../components/homepage/VideoServicesSection
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
+import ReviewsWidget from "@/components/homepage/Testmonials";
 
 // ✅ SEO Metadata for Darwin Credit Repair
 
@@ -33,6 +34,7 @@ export default function Home() {
       />
       <Header />
       <HeroSection />
+      <ReviewsWidget/>
       <VideoServicesSection />
      <section className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -177,16 +179,18 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Removing Incorrect Defaults */}
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
-                Removing Incorrect Defaults
-              </h3>
-              <p className="text-gray-700">
-                Our credit specialists can help remove defaults that were
-                incorrectly recorded on your credit file. These entries can be
-                challenged legally when not properly applied or verified.
-              </p>
-            </div>
+             <Link href="/credit-enquiry-removal-australia">
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
+                  Removing Incorrect Defaults
+                </h3>
+                <p className="text-gray-700">
+                  Our credit specialists can help remove defaults that were
+                  incorrectly recorded on your credit file. These entries can be
+                  challenged legally when not properly applied or verified.
+                </p>
+              </div>
+            </Link>
 
             {/* Disputing Invalid Inquiries */}
             <div className="bg-white p-6 rounded-xl shadow-md">

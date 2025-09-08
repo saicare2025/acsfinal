@@ -11,6 +11,7 @@ import ArrowIconM from "../assets/arrowm.png";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
 import Image from "next/image";
+import ReviewsWidget from "@/components/homepage/Testmonials";
 
 // Animation variants
 const fadeIn = {
@@ -195,6 +196,7 @@ export default function CreditEnquiryRemovalPage() {
 
         {/* Mobile arrow indicator (shown only on mobile) */}
       </section>
+        <ReviewsWidget/>
 
       {/* Opening Section */}
       <Section title="Your credit enquiries are quietly destroying your financial future">

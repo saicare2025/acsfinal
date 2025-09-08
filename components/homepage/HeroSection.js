@@ -90,15 +90,7 @@ export default function HeroSection() {
       </section>
 
       {/* Pricing Disclosure Section */}
-      <section className="bg-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MotionFadeUp className="max-w-3xl mx-auto text-center">
-            <p className="text-gray-600 text-sm md:text-base">
-              *. A one-off $330 administration fee applies regardless of the result. In the past year, more than 98% of our disputes have achieved a successful resolution.
-            </p>
-          </MotionFadeUp>
-        </div>
-      </section>
+      
     </>
   );
 }

@@ -11,6 +11,7 @@ import ArrowIconM from "../assets/arrowm.png";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
 import Image from "next/image";
+import ReviewsWidget from "@/components/homepage/Testmonials";
 
 // Animation variants
 const fadeIn = {
@@ -27,33 +28,40 @@ export default function FirstHomeBuyerCreditRepairPage() {
   const faqData = [
     {
       question: "How long does first home buyer credit repair take?",
-      answer: "First home buyer credit repair typically takes 4-12 weeks depending on complexity. Simple issues like single defaults may resolve in 4-6 weeks, while complex cases with multiple problems can take 8-16 weeks. We work within your house hunting timeline where possible."
+      answer:
+        "First home buyer credit repair typically takes 4-12 weeks depending on complexity. Simple issues like single defaults may resolve in 4-6 weeks, while complex cases with multiple problems can take 8-16 weeks. We work within your house hunting timeline where possible.",
     },
     {
       question: "Will credit repair guarantee my home loan approval?",
-      answer: "Credit repair improves your chances dramatically but doesn&apos;t guarantee approval – your income, employment, and deposit matter too. However, clean credit opens access to government schemes and better rates that make approval much more likely."
+      answer:
+        "Credit repair improves your chances dramatically but doesn&apos;t guarantee approval – your income, employment, and deposit matter too. However, clean credit opens access to government schemes and better rates that make approval much more likely.",
     },
     {
       question: "Can I get a home loan with defaults on my credit file?",
-      answer: "Some non-bank lenders might approve you with defaults, but you&apos;ll pay premium rates and miss out on government assistance. Much better to remove disputable defaults first for access to better loans and grants."
+      answer:
+        "Some non-bank lenders might approve you with defaults, but you&apos;ll pay premium rates and miss out on government assistance. Much better to remove disputable defaults first for access to better loans and grants.",
     },
     {
       question: "What credit score do I need for first home buyer programs?",
-      answer: "Generally 650+ for most government schemes, 600+ for low deposit loans, 700+ for the best rates. Every 50 points improvement opens up significantly better options."
+      answer:
+        "Generally 650+ for most government schemes, 600+ for low deposit loans, 700+ for the best rates. Every 50 points improvement opens up significantly better options.",
     },
     {
       question: "Should I wait to save a bigger deposit or fix credit first?",
-      answer: "Usually fix credit first. Clean credit with 5% deposit (government scheme) is often better than bad credit with 20% deposit. You save years and access government assistance."
-    }
+      answer:
+        "Usually fix credit first. Clean credit with 5% deposit (government scheme) is often better than bad credit with 20% deposit. You save years and access government assistance.",
+    },
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-repair-first-home-buyers",
-    title: "Credit Repair for First Home Buyers Australia | Get Your Dream Home Despite Bad Credit",
-    description: "Don&apos;t let bad credit kill your first home dreams. We help first home buyers fix credit fast for government grants and home loans. Remove defaults, improve credit score, get mortgage-ready. 98% success rate, No Win No Fee.",
+    title:
+      "Credit Repair for First Home Buyers Australia | Get Your Dream Home Despite Bad Credit",
+    description:
+      "Don&apos;t let bad credit kill your first home dreams. We help first home buyers fix credit fast for government grants and home loans. Remove defaults, improve credit score, get mortgage-ready. 98% success rate, No Win No Fee.",
     isService: true,
-    serviceType: "First Home Buyer Credit Repair"
+    serviceType: "First Home Buyer Credit Repair",
   });
 
   return (
@@ -61,7 +69,7 @@ export default function FirstHomeBuyerCreditRepairPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
       <Header />
@@ -69,9 +77,12 @@ export default function FirstHomeBuyerCreditRepairPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
         {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`
-        }}></div>
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`,
+          }}
+        ></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center lg:gap-12 lg:flex-row lg:items-start">
@@ -87,20 +98,25 @@ export default function FirstHomeBuyerCreditRepairPage() {
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
                   Don&apos;t let bad credit kill your first home dreams. We help
-                  first home buyers fix credit fast for government grants and home loans.
-                  Remove defaults, improve credit score, get mortgage-ready.{" "}
+                  first home buyers fix credit fast for government grants and
+                  home loans. Remove defaults, improve credit score, get
+                  mortgage-ready.{" "}
                   <strong className="font-semibold text-blue">
                     98% success rate
-                  </strong>,{" "}
+                  </strong>
+                  ,{" "}
                   <strong className="font-semibold text-blue">
                     No Win No Fee
-                  </strong>.
+                  </strong>
+                  .
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Your first home shouldn&apos;t be impossible because of old credit mistakes. We specialise
-                  in credit repair for first home buyers - getting you ready for First Home Owner Grants, low deposit loans,
-                  and better interest rates. Turn your house dreams into reality.
+                  Your first home shouldn&apos;t be impossible because of old
+                  credit mistakes. We specialise in credit repair for first home
+                  buyers - getting you ready for First Home Owner Grants, low
+                  deposit loans, and better interest rates. Turn your house
+                  dreams into reality.
                 </p>
               </div>
 
@@ -182,29 +198,39 @@ export default function FirstHomeBuyerCreditRepairPage() {
           </div>
         </div>
       </section>
-
+      <ReviewsWidget />
       {/* Opening Section */}
-      <Section title="Don&apos;t let bad credit kill your first home dreams">
+      <Section title="Don't let bad credit kill your first home dreams">
         <p>
-          Right, let&apos;s be real here – being a first home buyer in Australia is tough enough without bad credit
-          making it bloody impossible.
+          Right, let&apos;s be real here – being a first home buyer in Australia
+          is tough enough without bad credit making it bloody impossible.
         </p>
         <p className="mt-4">
-          House prices are mental, deposits seem impossible to save, and then you discover your credit file is
-          stuffed from some mistake you made years ago when you were young and stupid.
+          House prices are mental, deposits seem impossible to save, and then
+          you discover your credit file is stuffed from some mistake you made
+          years ago when you were young and stupid.
         </p>
         <p className="mt-4">
-          Maybe it&apos;s a default from a phone bill you forgot about at uni. Maybe it&apos;s late payment marks from when
-          you were casual and money was tight. Or maybe it&apos;s credit enquiries from when you were desperately
-          trying to get approved for anything and didn&apos;t know how much it was hurting your score.
+          Maybe it&apos;s a default from a phone bill you forgot about at uni.
+          Maybe it&apos;s late payment marks from when you were casual and money
+          was tight. Or maybe it&apos;s credit enquiries from when you were
+          desperately trying to get approved for anything and didn&apos;t know
+          how much it was hurting your score.
         </p>
         <p className="mt-4">
-          <strong>Here&apos;s what really gets us fired up: most first home buyers don&apos;t even know their credit is holding
-          them back until it&apos;s too late.</strong> You&apos;ve saved the deposit, sorted your paperwork, found the perfect place, then WHAM – mortgage
-          rejection because of something stupid from your past.
+          <strong>
+            Here&apos;s what really gets us fired up: most first home buyers
+            don&apos;t even know their credit is holding them back until
+            it&apos;s too late.
+          </strong>{" "}
+          You&apos;ve saved the deposit, sorted your paperwork, found the
+          perfect place, then WHAM – mortgage rejection because of something
+          stupid from your past.
         </p>
         <p className="mt-4">
-          Australian Credit Solutions specialises in credit repair for first home buyers across Australia. Three years of industry awards, 98% success rate when we take cases, and we work specifically with first
+          Australian Credit Solutions specialises in credit repair for first
+          home buyers across Australia. Three years of industry awards, 98%
+          success rate when we take cases, and we work specifically with first
           time buyers to make home ownership achievable.
         </p>
       </Section>
@@ -263,8 +289,10 @@ export default function FirstHomeBuyerCreditRepairPage() {
       {/* What We Fix */}
       <Section title="What Credit Issues We Fix for First Home Buyers">
         <p className="text-slate-700">
-          <strong>Important Note:</strong> We can only dispute incorrect, unfair, or improperly applied credit listings. 
-          We help first home buyers challenge credit problems where there are genuine grounds under Australian credit law.
+          <strong>Important Note:</strong> We can only dispute incorrect,
+          unfair, or improperly applied credit listings. We help first home
+          buyers challenge credit problems where there are genuine grounds under
+          Australian credit law.
         </p>
         <motion.div
           variants={staggerChildren}
@@ -392,16 +420,47 @@ export default function FirstHomeBuyerCreditRepairPage() {
           viewport={{ once: true }}
         >
           <Testimonial name="Jake and Emma from Western Sydney – Young Teachers">
-            &quot;Had been saving for 4 years but kept getting knocked back for home loans because of Jake&apos;s $1,200 default from a gym membership he&apos;d cancelled properly. Every bank said no to the First Home Loan Deposit Scheme because of the default. ACS removed the default in 6 weeks by proving the gym never sent proper cancellation confirmations. Got approved for 5% deposit loan the next month, accessed $25,000 First Home Owner Grant, bought a lovely 3-bedroom place in Penrith. Now our mortgage payments are less than rent would&apos;ve been.&quot;
+            &quot;Had been saving for 4 years but kept getting knocked back for
+            home loans because of Jake&apos;s $1,200 default from a gym
+            membership he&apos;d cancelled properly. Every bank said no to the
+            First Home Loan Deposit Scheme because of the default. ACS removed
+            the default in 6 weeks by proving the gym never sent proper
+            cancellation confirmations. Got approved for 5% deposit loan the
+            next month, accessed $25,000 First Home Owner Grant, bought a lovely
+            3-bedroom place in Penrith. Now our mortgage payments are less than
+            rent would&apos;ve been.&quot;
           </Testimonial>
           <Testimonial name="Sam from Melbourne – IT Graduate">
-            &quot;Fresh out of uni, had a phone bill default for $380 from when I moved out of student accommodation and Telstra kept billing the old address. Couldn&apos;t get approved anywhere despite having a good job and deposit saved. ACS proved the billing address was wrong after I&apos;d properly updated my details. Default removed in 5 weeks, credit score jumped 89 points. Got approved for low deposit loan, kept the $20,000 government grant, bought a unit in Brunswick. It&apos;s already worth $50,000 more than I paid.&quot;
+            &quot;Fresh out of uni, had a phone bill default for $380 from when
+            I moved out of student accommodation and Telstra kept billing the
+            old address. Couldn&apos;t get approved anywhere despite having a
+            good job and deposit saved. ACS proved the billing address was wrong
+            after I&apos;d properly updated my details. Default removed in 5
+            weeks, credit score jumped 89 points. Got approved for low deposit
+            loan, kept the $20,000 government grant, bought a unit in Brunswick.
+            It&apos;s already worth $50,000 more than I paid.&quot;
           </Testimonial>
           <Testimonial name="Chloe from Brisbane – Nurse Saving Solo">
-            &quot;Single first home buyer trying to get into the market on a nurse&apos;s salary. Had 4 late payment marks on my credit card from when I was working casual shifts and direct debits kept bouncing on weird pay cycles. Banks wouldn&apos;t touch me for low deposit loans. ACS proved the late payments were due to my employer&apos;s irregular pay schedule, not financial irresponsibility. Got all 4 marks removed, score improved by 67 points. Approved for First Home Loan Deposit Scheme with 5% deposit, bought a townhouse in Logan.&quot;
+            &quot;Single first home buyer trying to get into the market on a
+            nurse&apos;s salary. Had 4 late payment marks on my credit card from
+            when I was working casual shifts and direct debits kept bouncing on
+            weird pay cycles. Banks wouldn&apos;t touch me for low deposit
+            loans. ACS proved the late payments were due to my employer&apos;s
+            irregular pay schedule, not financial irresponsibility. Got all 4
+            marks removed, score improved by 67 points. Approved for First Home
+            Loan Deposit Scheme with 5% deposit, bought a townhouse in
+            Logan.&quot;
           </Testimonial>
           <Testimonial name="Tom and Sarah from Adelaide – Young Tradies">
-            &quot;Both apprentices when we first applied, had credit enquiries from multiple car loan attempts when we needed work vehicles. Looked desperate to lenders even though we both had secure jobs. ACS removed 8 unauthorised enquiries from dodgy car dealers who&apos;d run credit without proper permission. Credit scores improved enough to access first home buyer rates. Got approved for shared equity scheme, government put in 25%, we put in 15%, bought a great place in Elizabeth. Building equity instead of paying someone else&apos;s mortgage.&quot;
+            &quot;Both apprentices when we first applied, had credit enquiries
+            from multiple car loan attempts when we needed work vehicles. Looked
+            desperate to lenders even though we both had secure jobs. ACS
+            removed 8 unauthorised enquiries from dodgy car dealers who&apos;d
+            run credit without proper permission. Credit scores improved enough
+            to access first home buyer rates. Got approved for shared equity
+            scheme, government put in 25%, we put in 15%, bought a great place
+            in Elizabeth. Building equity instead of paying someone else&apos;s
+            mortgage.&quot;
           </Testimonial>
         </motion.div>
       </Section>
@@ -500,11 +559,10 @@ export default function FirstHomeBuyerCreditRepairPage() {
           />
         </motion.div>
         <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
-          <strong>
-            All services include our No Win No Fee guarantee:
-          </strong>{" "}
-          If we don&apos;t successfully improve your credit for first home buying, you don&apos;t pay success fees. 
-          Pricing is customised based on your specific situation and first home buyer goals.
+          <strong>All services include our No Win No Fee guarantee:</strong> If
+          we don&apos;t successfully improve your credit for first home buying,
+          you don&apos;t pay success fees. Pricing is customised based on your
+          specific situation and first home buyer goals.
         </div>
       </Section>
 
@@ -558,13 +616,19 @@ export default function FirstHomeBuyerCreditRepairPage() {
           />
         </motion.div>
         <div className="mt-6 rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-lg">
-          <h3 className="text-lg font-semibold text-blue">The Brutal Reality</h3>
+          <h3 className="text-lg font-semibold text-blue">
+            The Brutal Reality
+          </h3>
           <p className="mt-3 text-slate-700">
-            Bad credit doesn&apos;t just affect loan approval – it can cost you $10,000-45,000+ in government assistance you&apos;re entitled to as a first home buyer.
+            Bad credit doesn&apos;t just affect loan approval – it can cost you
+            $10,000-45,000+ in government assistance you&apos;re entitled to as
+            a first home buyer.
           </p>
           <p className="mt-3 text-slate-700">
-            On a $500,000 first home: 5% deposit = $25,000 needed upfront vs 20% deposit = $100,000 needed upfront. 
-            For most young Aussies, that extra $75,000 is the difference between buying now and waiting 5-7 more years.
+            On a $500,000 first home: 5% deposit = $25,000 needed upfront vs 20%
+            deposit = $100,000 needed upfront. For most young Aussies, that
+            extra $75,000 is the difference between buying now and waiting 5-7
+            more years.
           </p>
         </div>
       </Section>
@@ -578,7 +642,9 @@ export default function FirstHomeBuyerCreditRepairPage() {
           viewport={{ once: true }}
           className="mt-2 space-y-4 text-slate-700"
         >
-          <h3 className="font-semibold text-blue">University Era Disasters That Haunt You</h3>
+          <h3 className="font-semibold text-blue">
+            University Era Disasters That Haunt You
+          </h3>
           {[
             "The classic phone bill default: Moving out of student accommodation but Telstra/Optus keeps billing the old address. You don&apos;t receive final bills, default gets applied, ruins your credit for 5 years.",
             "Share house utility nightmares: Joint utility accounts where one housemate stops paying their share. Everyone on the account cops the default, even if you paid your portion properly.",
@@ -691,10 +757,14 @@ export default function FirstHomeBuyerCreditRepairPage() {
               Don&apos;t Let Bad Credit Kill Your First Home Dreams
             </h3>
             <p className="mt-3 text-slate-700">
-              Every month you delay fixing your credit is another month of missing out on your own home while house prices keep climbing.
+              Every month you delay fixing your credit is another month of
+              missing out on your own home while house prices keep climbing.
             </p>
             <p className="mt-3 text-slate-700">
-              You&apos;re competing against investors with unlimited budgets and other first home buyers with clean credit. Professional credit repair can get you into the market years earlier, saving hundreds of thousands in house price growth.
+              You&apos;re competing against investors with unlimited budgets and
+              other first home buyers with clean credit. Professional credit
+              repair can get you into the market years earlier, saving hundreds
+              of thousands in house price growth.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
@@ -833,13 +903,7 @@ function Card({ title, bullets = [] }) {
   );
 }
 
-function PriceCard({
-  name,
-  timeline,
-  perfectFor,
-  includes,
-  featured = false,
-}) {
+function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
   return (
     <motion.div
       variants={fadeIn}
@@ -878,7 +942,6 @@ function PriceCard({
         ))}
       </ul>
       <div className="mt-4 flex items-end justify-between">
-        
         <Link
           href="/free-credit-assessment"
           className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"

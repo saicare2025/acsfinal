@@ -10,6 +10,7 @@ import VideoServicesSection from "../../components/homepage/VideoServicesSection
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
+import ReviewsWidget from "@/components/homepage/Testmonials";
 
 // ✅ SEO Metadata for Adelaide Credit Repair
 
@@ -18,20 +19,22 @@ export default function Home() {
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-repair-adelaide",
     title: "Adelaide Credit Repair Experts | Australian Credit Solutions",
-    description: "Professional credit repair services in Adelaide. Remove defaults, correct credit reports, and improve your credit score with Adelaide's trusted credit repair experts.",
+    description:
+      "Professional credit repair services in Adelaide. Remove defaults, correct credit reports, and improve your credit score with Adelaide's trusted credit repair experts.",
     isService: true,
-    serviceType: "Credit Repair Services Adelaide"
+    serviceType: "Credit Repair Services Adelaide",
   });
   return (
     <main className="flex min-h-screen flex-col">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
       <Header />
       <HeroSection />
+      <ReviewsWidget />
       <VideoServicesSection />
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white text-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,9 +81,9 @@ export default function Home() {
               </h3>
               <p className="mb-4">
                 A good credit score can unlock lower interest rates, better
-                insurance premiums, and easier loan approvals. It shows you&apos;re
-                financially trustworthy, which matters whether you&apos;re applying
-                for a mortgage or renting an apartment.
+                insurance premiums, and easier loan approvals. It shows
+                you&apos;re financially trustworthy, which matters whether
+                you&apos;re applying for a mortgage or renting an apartment.
               </p>
               <p className="mb-4">
                 Experts recommend aiming for a score between{" "}
@@ -163,16 +166,18 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Removing Incorrect Defaults */}
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
-                Removing Incorrect Defaults
-              </h3>
-              <p className="text-gray-700">
-                Our credit specialists can help remove defaults that were
-                incorrectly recorded on your credit file. These entries can be
-                challenged legally when not properly applied or verified.
-              </p>
-            </div>
+            <Link href="/credit-enquiry-removal-australia">
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
+                  Removing Incorrect Defaults
+                </h3>
+                <p className="text-gray-700">
+                  Our credit specialists can help remove defaults that were
+                  incorrectly recorded on your credit file. These entries can be
+                  challenged legally when not properly applied or verified.
+                </p>
+              </div>
+            </Link>
 
             {/* Disputing Invalid Inquiries */}
             <div className="bg-white p-6 rounded-xl shadow-md">
@@ -236,130 +241,202 @@ export default function Home() {
           </div>
 
           {/* CTA */}
-         
         </div>
       </section>
-      <TestimonialSection/>
-      <CompanyCarousel/>
-       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-10">
-        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-white"></div>
-        <div className="absolute bottom-10 right-10 w-64 h-64 rounded-full bg-white"></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Why Choose Australian Credit Solutions?
-          </h2>
-          <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
+      <TestimonialSection />
+      <CompanyCarousel />
+      <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-white"></div>
+          <div className="absolute bottom-10 right-10 w-64 h-64 rounded-full bg-white"></div>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 max-w-4xl mx-auto">
-          <div className="flex items-center justify-center mb-6">
-            <div className="bg-[#0668a5] text-white text-xl font-bold py-2 px-6 rounded-full inline-block">
-              #1 in Adelaide
-            </div>
-          </div>
-          
-          <p className="text-gray-700 text-lg mb-6">
-            Australian Credit Solutions is the premier credit repair service in Adelaide because we deliver exceptional results. 
-            Our team specializes in removing judgments, bankruptcies, bad debts, defaults, and other negative listings to 
-            help you qualify for loans and financial services again.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="flex items-start">
-              <div className="bg-blue-100 p-2 rounded-full mr-4">
-                <svg className="w-6 h-6 text-[#0668a5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <p className="text-gray-700">
-                Years of expertise handling all types of credit cases
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="bg-blue-100 p-2 rounded-full mr-4">
-                <svg className="w-6 h-6 text-[#0668a5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <p className="text-gray-700">
-                Nationwide service - we help clients across Australia
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="bg-blue-100 p-2 rounded-full mr-4">
-                <svg className="w-6 h-6 text-[#0668a5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <p className="text-gray-700">
-                Proven track record of successful credit repairs
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="bg-blue-100 p-2 rounded-full mr-4">
-                <svg className="w-6 h-6 text-[#0668a5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <p className="text-gray-700">
-                Outstanding customer service as our top priority
-              </p>
-            </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Why Choose Australian Credit Solutions?
+            </h2>
+            <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
           </div>
 
-          <p className="text-gray-700 hidden lg:block text-lg font-medium mb-8">
-            Above all else, your satisfaction means everything to us! You won&apos;t regret choosing Australian Credit Solutions 
-            for fast, effective results that get you back on track financially.
-          </p>
+          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center mb-6">
+              <div className="bg-[#0668a5] text-white text-xl font-bold py-2 px-6 rounded-full inline-block">
+                #1 in Adelaide
+              </div>
+            </div>
+
+            <p className="text-gray-700 text-lg mb-6">
+              Australian Credit Solutions is the premier credit repair service
+              in Adelaide because we deliver exceptional results. Our team
+              specializes in removing judgments, bankruptcies, bad debts,
+              defaults, and other negative listings to help you qualify for
+              loans and financial services again.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="flex items-start">
+                <div className="bg-blue-100 p-2 rounded-full mr-4">
+                  <svg
+                    className="w-6 h-6 text-[#0668a5]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <p className="text-gray-700">
+                  Years of expertise handling all types of credit cases
+                </p>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-100 p-2 rounded-full mr-4">
+                  <svg
+                    className="w-6 h-6 text-[#0668a5]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <p className="text-gray-700">
+                  Nationwide service - we help clients across Australia
+                </p>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-100 p-2 rounded-full mr-4">
+                  <svg
+                    className="w-6 h-6 text-[#0668a5]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <p className="text-gray-700">
+                  Proven track record of successful credit repairs
+                </p>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-100 p-2 rounded-full mr-4">
+                  <svg
+                    className="w-6 h-6 text-[#0668a5]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <p className="text-gray-700">
+                  Outstanding customer service as our top priority
+                </p>
+              </div>
+            </div>
+
+            <p className="text-gray-700 hidden lg:block text-lg font-medium mb-8">
+              Above all else, your satisfaction means everything to us! You
+              won&apos;t regret choosing Australian Credit Solutions for fast,
+              effective results that get you back on track financially.
+            </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-            {/* Call Button 1 */}
-            <a 
-              href="tel:0489265737" 
-              className="bg-white border-2 border-[#0668a5] text-[#0668a5] hover:bg-blue-50 font-bold py-3 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <div className="text-center">
-                <div className="font-bold">0489 265 737</div>
-                <div className="text-xs">Credit Repair Helpline</div>
-              </div>
-            </a>
+              {/* Call Button 1 */}
+              <a
+                href="tel:0489265737"
+                className="bg-white border-2 border-[#0668a5] text-[#0668a5] hover:bg-blue-50 font-bold py-3 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <div className="text-center">
+                  <div className="font-bold">0489 265 737</div>
+                  <div className="text-xs">Credit Repair Helpline</div>
+                </div>
+              </a>
 
-            {/* Call Button 2 */}
-            <a 
-              href="tel:0489265737" 
-              className="bg-white border-2 border-[#0668a5] text-[#0668a5] hover:bg-blue-50 font-bold py-3 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <div className="text-center">
-                <div className="font-bold">0489 265 737</div>
-                <div className="text-xs">Direct Support</div>
-              </div>
-            </a>
+              {/* Call Button 2 */}
+              <a
+                href="tel:0489265737"
+                className="bg-white border-2 border-[#0668a5] text-[#0668a5] hover:bg-blue-50 font-bold py-3 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <div className="text-center">
+                  <div className="font-bold">0489 265 737</div>
+                  <div className="text-xs">Direct Support</div>
+                </div>
+              </a>
 
-            {/* Consultation Button */}
-            <Link 
-              href="/meeting-schedule" 
-              className="bg-[#0668a5] hover:bg-[#05578a] text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Get Free Consultation
-            </Link>
+              {/* Consultation Button */}
+              <Link
+                href="/meeting-schedule"
+                className="bg-[#0668a5] hover:bg-[#05578a] text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+                Get Free Consultation
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
       <Footer />
     </main>
   );

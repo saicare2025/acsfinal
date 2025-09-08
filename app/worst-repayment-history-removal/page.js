@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import FooterForm from "@/components/FooterForm";
 import Footer from "@/components/Footer";
+import ReviewsWidget from "@/components/homepage/Testmonials";
 
 // Animation variants
 const fadeIn = {
@@ -124,7 +125,7 @@ export default function RHIRemovalPage() {
 
                 <p className="text-base text-gray-600">
                   Repayment History Information (RHI) shows 24 months of payment
-                  patterns that can make or break your credit score. When it's
+                  patterns that can make or break your credit score. When it&apos;s
                   wrong or unfair, we know exactly how to get it removed under
                   the Privacy Act 1988.
                 </p>
@@ -188,18 +189,19 @@ export default function RHIRemovalPage() {
           </div>
         </div>
       </section>
+      <ReviewsWidget/>
 
       {/* Opening Section */}
       <Section title="Look, let's be straight about this – Repayment History Information (RHI) on your credit file can be an absolute killer">
         <p>
-          Most Aussies don't even know what RHI is until it's too late. It's
+          Most Aussies don&apos;t even know what RHI is until it&apos;s too late. It&apos;s
           basically a detailed month-by-month record of your payment behaviour
           going back 24 months. Every late payment, every missed payment, every
-          "current" status – it's all there for lenders to see.
+          &quot;current&quot; status – it&apos;s all there for lenders to see.
         </p>
         <p className="mt-4">
-          But here's what really gets us fired up: heaps of repayment history
-          information is just plain wrong. We're talking about payments marked
+          But here&apos;s what really gets us fired up: heaps of repayment history
+          information is just plain wrong. We&apos;re talking about payments marked
           late when you paid on time, system glitches that created false marks,
           payments during hardship arrangements that got recorded incorrectly,
           or repayment history mistakes across Equifax, Experian, and Illion
@@ -214,7 +216,7 @@ export default function RHIRemovalPage() {
         <p className="mt-4">
           <strong>Important note:</strong> Accurate late payments cannot be
           removed, but errors and misreporting can often be corrected – and
-          that's where we come in.
+          that&apos;s where we come in.
         </p>
         <p className="mt-4">
           Australian Credit Solutions specialises in repayment history removal
@@ -223,15 +225,15 @@ export default function RHIRemovalPage() {
           we can win.
         </p>
         <p className="mt-4">
-          If your repayment history is stuffed but accurate, we'll tell you
-          straight. If it's stuffed and incorrect, we'll fix it.
+          If your repayment history is stuffed but accurate, we&apos;ll tell you
+          straight. If it&apos;s stuffed and incorrect, we&apos;ll fix it.
         </p>
       </Section>
 
       {/* Impact Section */}
       <Section title="How Bad Repayment History Is Absolutely Smashing Your Credit">
         <p>
-          Let's talk about what incorrect repayment history entries are actually
+          Let&apos;s talk about what incorrect repayment history entries are actually
           costing you:
         </p>
         <motion.ul
@@ -285,7 +287,7 @@ export default function RHIRemovalPage() {
           <strong>Important Legal Note:</strong> We can only dispute and remove
           incorrect, unfair, or non-compliant repayment history entries.
           Accurate late payments that were properly applied cannot be removed –
-          but you'd be surprised how many RHI entries shouldn't actually be
+          but you&apos;d be surprised how many RHI entries shouldn&apos;t actually be
           there.
         </p>
         <motion.div
@@ -409,44 +411,44 @@ export default function RHIRemovalPage() {
           viewport={{ once: true }}
         >
           <Testimonial name="Karen from Newcastle – Teacher Screwed by System Upgrade">
-            "My bank did a massive system upgrade and somehow my 18 months of
+            &quot;My bank did a massive system upgrade and somehow my 18 months of
             perfect direct debit payments got recorded as late in their new
             system. Every single month showed late payment history even though I
-            never missed a payment. Couldn't get a car loan, couldn't refinance
+            never missed a payment. Couldn&apos;t get a car loan, couldn&apos;t refinance
             my mortgage. Spent 6 months arguing with the bank – they kept saying
-            'computer says no.' ACS came in with legal letters and got the whole
+            &apos;computer says no.&apos; ACS came in with legal letters and got the whole
             18 months of incorrect repayment history removed in 5 weeks. Credit
             score jumped 156 points. Got my mortgage refinance approved and
-            saved $400 per month."
+            saved $400 per month.&quot;
           </Testimonial>
           <Testimonial name="Brett from Cairns – Tradie Hit by COVID Hardship">
-            "During COVID lockdowns, my equipment finance company agreed to
+            &quot;During COVID lockdowns, my equipment finance company agreed to
             reduced payments for 6 months while work was slow. Signed all the
             paperwork, everything was official. But their system kept marking my
-            payments as late because I wasn't paying the full amount. Ruined my
+            payments as late because I wasn&apos;t paying the full amount. Ruined my
             repayment history even though I was following their own hardship
             arrangement. ACS used the hardship paperwork to prove every single
             late mark was wrong. Got 6 months of incorrect RHI removed. Finally
-            got the business loan I needed to expand when work picked up."
+            got the business loan I needed to expand when work picked up.&quot;
           </Testimonial>
           <Testimonial name="Sandra from Hobart – Mum Who Moved House">
-            "Updated my address with my credit card company when we moved house,
+            &quot;Updated my address with my credit card company when we moved house,
             but their payments kept going to the old address somehow. Three
-            months of 'missed payments' because their system was posting
-            statements to the wrong address and I had no idea payments weren't
+            months of &apos;missed payments&apos; because their system was posting
+            statements to the wrong address and I had no idea payments weren&apos;t
             going through. By the time I found out, I had 3 months of terrible
             repayment history. ACS proved the address change was their stuff-up,
             not mine. Got all 3 months corrected and my credit score back to
-            where it should be."
+            where it should be.&quot;
           </Testimonial>
           <Testimonial name="Jim from Gold Coast – Small Business Owner">
-            "Had a personal loan that I always paid early – usually 3-4 days
+            &quot;Had a personal loan that I always paid early – usually 3-4 days
             before the due date. Bank upgraded their payment system and suddenly
             all my early payments were showing as late in the new system. Made
-            no sense but they wouldn't fix it. 12 months of perfect payments
+            no sense but they wouldn&apos;t fix it. 12 months of perfect payments
             showing as late payment history. ACS got bank statements proving
             every payment was early, challenged the lot, got the entire 12
-            months corrected. Saved my business credit applications."
+            months corrected. Saved my business credit applications.&quot;
           </Testimonial>
         </motion.div>
       </Section>
@@ -550,8 +552,8 @@ export default function RHIRemovalPage() {
         </motion.div>
         <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
           <strong>Remember:</strong> All services include our No Win No Fee
-          guarantee – if we don't remove the targeted incorrect repayment
-          history entries, you don't pay success fees.
+          guarantee – if we don&apos;t remove the targeted incorrect repayment
+          history entries, you don&apos;t pay success fees.
         </div>
       </Section>
 
@@ -674,7 +676,7 @@ export default function RHIRemovalPage() {
             <h3 className="font-semibold text-blue">
               Home Loan Impact Is Massive
             </h3>
-            <p>Let's talk real numbers on what incorrect RHI is costing you:</p>
+            <p>Let&apos;s talk real numbers on what incorrect RHI is costing you:</p>
             {[
               "Clean repayment history: Access to best rates (around 6.2% variable)",
               "Recent late payment marks: Premium rates (7.5%+ variable)",
@@ -806,16 +808,16 @@ export default function RHIRemovalPage() {
             repayment history and what we can do to fix it.
           </p>
           <p className="mt-2 text-sm text-slate-600">
-            Or complete our quick RHI assessment – takes 90 seconds and we'll
+            Or complete our quick RHI assessment – takes 90 seconds and we&apos;ll
             contact you within 24 hours with your options.
           </p>
           <p className="mt-4 text-sm font-semibold text-blue">
-            We're Australian Credit Solutions: three consecutive years of
+            We&apos;re Australian Credit Solutions: three consecutive years of
             industry awards, licensed under ASIC ACL 532003, helping Aussies fix
             their credit since 2019.
           </p>
           <p className="mt-2 text-sm font-semibold text-blue">
-            Your repayment history is fixable when it's wrong. Let's get it
+            Your repayment history is fixable when it&apos;s wrong. Let&apos;s get it
             sorted today.
           </p>
         </div>

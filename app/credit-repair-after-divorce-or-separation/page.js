@@ -11,6 +11,7 @@ import ArrowIconM from "../assets/arrowm.png";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
 import Image from "next/image";
+import ReviewsWidget from "@/components/homepage/Testmonials";
 
 // Animation variants
 const fadeIn = {
@@ -27,33 +28,41 @@ export default function DivorceCreditRepairPage() {
   const faqData = [
     {
       question: "Can I remove my ex&apos;s debts from my credit file?",
-      answer: "Only if there are genuine grounds – like unauthorised use of your details, billing errors, or debts that became their legal responsibility post-separation. Valid joint debts you were legitimately liable for can&apos;t be removed just because of divorce."
+      answer:
+        "Only if there are genuine grounds – like unauthorised use of your details, billing errors, or debts that became their legal responsibility post-separation. Valid joint debts you were legitimately liable for can&apos;t be removed just because of divorce.",
     },
     {
       question: "What if my ex won&apos;t cooperate with account closures?",
-      answer: "You can close accounts unilaterally in most cases, but you may remain liable for existing balances. Document your closure requests and pay your agreed share to protect your credit."
+      answer:
+        "You can close accounts unilaterally in most cases, but you may remain liable for existing balances. Document your closure requests and pay your agreed share to protect your credit.",
     },
     {
       question: "How long does divorce credit repair take?",
-      answer: "Depends on complexity and evidence available. Simple cases with clear documentation can resolve in 4-6 weeks. Complex cases with multiple disputes may take 8-12 weeks."
+      answer:
+        "Depends on complexity and evidence available. Simple cases with clear documentation can resolve in 4-6 weeks. Complex cases with multiple disputes may take 8-12 weeks.",
     },
     {
-      question: "What if Family Court ordered my ex to pay but they defaulted anyway?",
-      answer: "Court orders help prove who should be responsible, but credit bureaus don&apos;t automatically honor them. We use court orders as evidence in disputes, but it still requires a formal challenge process."
+      question:
+        "What if Family Court ordered my ex to pay but they defaulted anyway?",
+      answer:
+        "Court orders help prove who should be responsible, but credit bureaus don&apos;t automatically honor them. We use court orders as evidence in disputes, but it still requires a formal challenge process.",
     },
     {
       question: "Can domestic violence be grounds for credit repair?",
-      answer: "Yes, if the abuse included financial control, identity theft, or unauthorised use of your credit. Police reports, AVO documents, and other evidence can support disputes of fraudulent credit activity."
-    }
+      answer:
+        "Yes, if the abuse included financial control, identity theft, or unauthorised use of your credit. Police reports, AVO documents, and other evidence can support disputes of fraudulent credit activity.",
+    },
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-repair-after-divorce",
-    title: "Credit Repair After Divorce or Separation Australia | Fix Credit Ruined by Ex-Partner",
-    description: "Divorce or separation ruined your credit? We help Australians dispute unfair listings caused by relationship breakdown. Remove defaults from ex-partner bills, fix joint account issues, repair credit score after separation. 98% success rate, No Win No Fee.",
+    title:
+      "Credit Repair After Divorce or Separation Australia | Fix Credit Ruined by Ex-Partner",
+    description:
+      "Divorce or separation ruined your credit? We help Australians dispute unfair listings caused by relationship breakdown. Remove defaults from ex-partner bills, fix joint account issues, repair credit score after separation. 98% success rate, No Win No Fee.",
     isService: true,
-    serviceType: "Divorce Credit Repair"
+    serviceType: "Divorce Credit Repair",
   });
 
   return (
@@ -61,7 +70,7 @@ export default function DivorceCreditRepairPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
       <Header />
@@ -69,9 +78,12 @@ export default function DivorceCreditRepairPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
         {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`
-        }}></div>
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`,
+          }}
+        ></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center lg:gap-12 lg:flex-row lg:items-start">
@@ -86,22 +98,26 @@ export default function DivorceCreditRepairPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Divorce or separation ruined your credit? We help
-                  Australians dispute unfair listings caused by relationship breakdown.
-                  Remove defaults from ex-partner bills, fix joint account issues,
-                  repair credit score after separation.{" "}
+                  Divorce or separation ruined your credit? We help Australians
+                  dispute unfair listings caused by relationship breakdown.
+                  Remove defaults from ex-partner bills, fix joint account
+                  issues, repair credit score after separation.{" "}
                   <strong className="font-semibold text-blue">
                     98% success rate
-                  </strong>,{" "}
+                  </strong>
+                  ,{" "}
                   <strong className="font-semibold text-blue">
                     No Win No Fee
-                  </strong>.
+                  </strong>
+                  .
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Don&apos;t let a messy breakup destroy your financial future. When relationships end badly,
-                  credit files often get trashed. We specialise in credit repair after divorce - helping you dispute incorrect
-                  defaults, unauthorised debts, and joint account disasters your ex left behind.
+                  Don&apos;t let a messy breakup destroy your financial future.
+                  When relationships end badly, credit files often get trashed.
+                  We specialise in credit repair after divorce - helping you
+                  dispute incorrect defaults, unauthorised debts, and joint
+                  account disasters your ex left behind.
                 </p>
               </div>
 
@@ -183,30 +199,42 @@ export default function DivorceCreditRepairPage() {
           </div>
         </div>
       </section>
+      <ReviewsWidget />
 
       {/* Opening Section */}
-      <Section title="Don&apos;t let unfair credit listings keep your ex controlling your financial life">
+      <Section title="Don't let unfair credit listings keep your ex controlling your financial life">
         <p>
-          Right, let&apos;s be brutally honest here – divorce and separation can absolutely destroy your credit file,
-          and it&apos;s happening to more Aussies than ever.
+          Right, let&apos;s be brutally honest here – divorce and separation can
+          absolutely destroy your credit file, and it&apos;s happening to more
+          Aussies than ever.
         </p>
         <p className="mt-4">
-          The stats don&apos;t lie: nearly 1 in 2 Australian marriages end in divorce, and unfortunately, many of those
-          don&apos;t end on good terms. When relationships go toxic, your credit often becomes collateral damage.
+          The stats don&apos;t lie: nearly 1 in 2 Australian marriages end in
+          divorce, and unfortunately, many of those don&apos;t end on good
+          terms. When relationships go toxic, your credit often becomes
+          collateral damage.
         </p>
         <p className="mt-4">
-          Maybe your ex stopped paying their half of joint bills out of spite. Maybe they forged your signature on
-          accounts you never knew existed. Maybe they left you with defaults on utilities, phone bills, or credit
+          Maybe your ex stopped paying their half of joint bills out of spite.
+          Maybe they forged your signature on accounts you never knew existed.
+          Maybe they left you with defaults on utilities, phone bills, or credit
           cards that were supposed to be their responsibility.
         </p>
         <p className="mt-4">
-          <strong>Here&apos;s what most people don&apos;t realise: loads of credit problems from divorce and separation can
-          actually be disputed and removed.</strong> We&apos;re talking about defaults wrongly applied to your name, bills from joint accounts your ex was
-          supposed to handle, unauthorised debts you never agreed to, or listings applied after separation dates.
+          <strong>
+            Here&apos;s what most people don&apos;t realise: loads of credit
+            problems from divorce and separation can actually be disputed and
+            removed.
+          </strong>{" "}
+          We&apos;re talking about defaults wrongly applied to your name, bills
+          from joint accounts your ex was supposed to handle, unauthorised debts
+          you never agreed to, or listings applied after separation dates.
         </p>
         <p className="mt-4">
-          Australian Credit Solutions specialises in credit repair after divorce or separation across Australia. Three years of industry awards, 98% success rate when we take cases, and we only work on cases where
-          there are genuine grounds to dispute unfair credit listings.
+          Australian Credit Solutions specialises in credit repair after divorce
+          or separation across Australia. Three years of industry awards, 98%
+          success rate when we take cases, and we only work on cases where there
+          are genuine grounds to dispute unfair credit listings.
         </p>
       </Section>
 
@@ -264,8 +292,10 @@ export default function DivorceCreditRepairPage() {
       {/* What We Can Dispute */}
       <Section title="What Credit Issues We Can Dispute After Divorce">
         <p className="text-slate-700">
-          <strong>Important Note:</strong> We can only dispute incorrect, unfair, or fraudulent listings. 
-          We help Australians challenge credit problems where there are genuine legal grounds, not just because divorce made things difficult.
+          <strong>Important Note:</strong> We can only dispute incorrect,
+          unfair, or fraudulent listings. We help Australians challenge credit
+          problems where there are genuine legal grounds, not just because
+          divorce made things difficult.
         </p>
         <motion.div
           variants={staggerChildren}
@@ -393,16 +423,47 @@ export default function DivorceCreditRepairPage() {
           viewport={{ once: true }}
         >
           <Testimonial name="Michelle from Penrith – Teacher Escaping Financial Abuse">
-            &quot;My ex was financially controlling and when I finally left him, I discovered he&apos;d been putting bills in my name that I never knew about. Had $4,200 in defaults from utility accounts at his new place, phone bills I&apos;d never used, even a credit card I didn&apos;t know existed. ACS gathered all the evidence – bank statements showing I never lived at those addresses, separation agreement showing he took responsibility for utilities, proof the credit card applications had forged signatures. Got all defaults removed in 8 weeks. Credit score went from 340 to 680. Finally got approved for a car loan and could get my life back together.&quot;
+            &quot;My ex was financially controlling and when I finally left him,
+            I discovered he&apos;d been putting bills in my name that I never
+            knew about. Had $4,200 in defaults from utility accounts at his new
+            place, phone bills I&apos;d never used, even a credit card I
+            didn&apos;t know existed. ACS gathered all the evidence – bank
+            statements showing I never lived at those addresses, separation
+            agreement showing he took responsibility for utilities, proof the
+            credit card applications had forged signatures. Got all defaults
+            removed in 8 weeks. Credit score went from 340 to 680. Finally got
+            approved for a car loan and could get my life back together.&quot;
           </Testimonial>
           <Testimonial name="Dave from Cairns – Dad Fighting for His Kids">
-            &quot;Messy divorce, ex-wife kept the house but stopped paying the joint utilities out of spite. Got defaults on electricity, gas, water, and phone bills she was supposed to handle according to our property settlement. Couldn&apos;t get home loan approval to buy a new place near the kids. ACS used the Family Court orders to prove the utilities were her responsibility after the settlement date. Removed all 6 defaults, got home loan approved, now I&apos;ve got a place 5 minutes from my kids&apos; school instead of an hour away.&quot;
+            &quot;Messy divorce, ex-wife kept the house but stopped paying the
+            joint utilities out of spite. Got defaults on electricity, gas,
+            water, and phone bills she was supposed to handle according to our
+            property settlement. Couldn&apos;t get home loan approval to buy a
+            new place near the kids. ACS used the Family Court orders to prove
+            the utilities were her responsibility after the settlement date.
+            Removed all 6 defaults, got home loan approved, now I&apos;ve got a
+            place 5 minutes from my kids&apos; school instead of an hour
+            away.&quot;
           </Testimonial>
           <Testimonial name="Sarah from Adelaide – Nurse Rebuilding After Abuse">
-            &quot;Left an abusive relationship and discovered my ex had been using my details to sign up for services all over town. Had defaults appearing for addresses I&apos;d never lived at, internet and phone services I&apos;d never used, even gym memberships in my name. ACS helped me prove identity fraud with address records, bank statements, and police reports from the domestic violence case. Got 9 defaults removed as fraudulent. Took 3 months but got my credit back and my independence.&quot;
+            &quot;Left an abusive relationship and discovered my ex had been
+            using my details to sign up for services all over town. Had defaults
+            appearing for addresses I&apos;d never lived at, internet and phone
+            services I&apos;d never used, even gym memberships in my name. ACS
+            helped me prove identity fraud with address records, bank
+            statements, and police reports from the domestic violence case. Got
+            9 defaults removed as fraudulent. Took 3 months but got my credit
+            back and my independence.&quot;
           </Testimonial>
           <Testimonial name="Mark from Geelong – Tradie Starting Over">
-            &quot;Ex-partner left me with defaults on our joint phone plan, joint credit card, and utilities. She&apos;d agreed to pay certain bills in our separation agreement but just ignored them. When I tried to get finance for a work ute, got knocked back everywhere because of her defaults. ACS used our separation agreement and bank records to prove I was paying my agreed share but she wasn&apos;t paying hers. Got 4 out of 5 defaults removed, credit score improved by 120 points, got ute finance approved at decent rates.&quot;
+            &quot;Ex-partner left me with defaults on our joint phone plan,
+            joint credit card, and utilities. She&apos;d agreed to pay certain
+            bills in our separation agreement but just ignored them. When I
+            tried to get finance for a work ute, got knocked back everywhere
+            because of her defaults. ACS used our separation agreement and bank
+            records to prove I was paying my agreed share but she wasn&apos;t
+            paying hers. Got 4 out of 5 defaults removed, credit score improved
+            by 120 points, got ute finance approved at decent rates.&quot;
           </Testimonial>
         </motion.div>
       </Section>
@@ -483,7 +544,7 @@ export default function DivorceCreditRepairPage() {
           <PriceCard
             name="Post-Settlement Credit Repair"
             timeline="4-8 weeks typically"
-            perfectFor="When legal agreements specify debt responsibility but credit files don&apos;t reflect it"
+            perfectFor="When legal agreements specify debt responsibility but credit files don't reflect it"
             includes={[
               "Legal document analysis",
               "Creditor communication",
@@ -502,11 +563,10 @@ export default function DivorceCreditRepairPage() {
           />
         </motion.div>
         <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
-          <strong>
-            All services include our No Win No Fee guarantee:
-          </strong>{" "}
-          If we don&apos;t successfully dispute your targeted unfair listings, you don&apos;t pay success fees. 
-          Pricing is customised based on your specific situation and case complexity.
+          <strong>All services include our No Win No Fee guarantee:</strong> If
+          we don&apos;t successfully dispute your targeted unfair listings, you
+          don&apos;t pay success fees. Pricing is customised based on your
+          specific situation and case complexity.
         </div>
       </Section>
 
@@ -567,7 +627,9 @@ export default function DivorceCreditRepairPage() {
           viewport={{ once: true }}
           className="mt-2 space-y-4 text-slate-700"
         >
-          <h3 className="font-semibold text-blue">Document Everything From the Relationship</h3>
+          <h3 className="font-semibold text-blue">
+            Document Everything From the Relationship
+          </h3>
           <p>The key to successful divorce credit repair is evidence:</p>
           {[
             "Separation timeline documentation: Official separation date, when you moved out of shared properties, address change records with banks and government agencies, lease agreements showing when you started living separately.",
@@ -680,10 +742,14 @@ export default function DivorceCreditRepairPage() {
               Don&apos;t Let Your Ex Keep Destroying Your Credit
             </h3>
             <p className="mt-3 text-slate-700">
-              Every day you leave unfair credit listings from your divorce sitting there is another day your ex is still controlling your financial life.
+              Every day you leave unfair credit listings from your divorce
+              sitting there is another day your ex is still controlling your
+              financial life.
             </p>
             <p className="mt-3 text-slate-700">
-              You&apos;ve already been through the hell of relationship breakdown. You deserve a fresh start that reflects YOUR financial behavior, not the mess your ex left behind.
+              You&apos;ve already been through the hell of relationship
+              breakdown. You deserve a fresh start that reflects YOUR financial
+              behavior, not the mess your ex left behind.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
@@ -822,13 +888,7 @@ function Card({ title, bullets = [] }) {
   );
 }
 
-function PriceCard({
-  name,
-  timeline,
-  perfectFor,
-  includes,
-  featured = false,
-}) {
+function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
   return (
     <motion.div
       variants={fadeIn}
@@ -867,7 +927,6 @@ function PriceCard({
         ))}
       </ul>
       <div className="mt-4 flex items-end justify-between">
-        
         <Link
           href="/free-credit-assessment"
           className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"

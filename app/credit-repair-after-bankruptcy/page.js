@@ -11,6 +11,7 @@ import ArrowIconM from "../assets/arrowm.png";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
 import Image from "next/image";
+import ReviewsWidget from "@/components/homepage/Testmonials";
 
 // Animation variants
 const fadeIn = {
@@ -214,6 +215,7 @@ export default function PostBankruptcyCreditRepairPage() {
           bankruptcy cases where there are genuine legal grounds to challenge incorrect credit information.
         </p>
       </Section>
+      <ReviewsWidget />
 
       {/* Impact Section */}
       <Section title="How Bankruptcy and Debt Agreements Affect Your Credit">

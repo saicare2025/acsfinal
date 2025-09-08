@@ -11,6 +11,8 @@ import ArrowIcon from "../assets/arrow.png";
 import ArrowIconM from "../assets/arrowm.png";
 import Image from "next/image";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
+import ReviewsWidget from "@/components/homepage/Testmonials";
+
 
 // Animation variants
 const fadeIn = {
@@ -157,6 +159,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
           </div>
         </div>
       </section>
+      <ReviewsWidget/>
 
       {/* Opening Section */}
       <Section title="Why your credit is blocking home loan approval">

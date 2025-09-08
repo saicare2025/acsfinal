@@ -10,6 +10,7 @@ import VideoServicesSection from "../../components/homepage/VideoServicesSection
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
+import ReviewsWidget from "@/components/homepage/Testmonials";
 
 // ✅ SEO Metadata for Sydney Credit Repair
 
@@ -18,29 +19,34 @@ export default function Home() {
   const faqData = [
     {
       question: "How does credit repair work in Sydney?",
-      answer: "Credit repair in Sydney involves reviewing your credit report for errors or unfair listings, then working with credit bureaus and creditors to have them corrected or removed. Australian Credit Solutions specializes in challenging inaccurate information using your rights under Australian law."
+      answer:
+        "Credit repair in Sydney involves reviewing your credit report for errors or unfair listings, then working with credit bureaus and creditors to have them corrected or removed. Australian Credit Solutions specializes in challenging inaccurate information using your rights under Australian law.",
     },
     {
-      question: "How long does credit repair take in Sydney?", 
-      answer: "Credit repair timeframes vary by case complexity. Simple corrections typically take 2-4 weeks, while complex cases involving defaults or judgments may take 6-12 weeks. We provide realistic expectations during your free consultation."
+      question: "How long does credit repair take in Sydney?",
+      answer:
+        "Credit repair timeframes vary by case complexity. Simple corrections typically take 2-4 weeks, while complex cases involving defaults or judgments may take 6-12 weeks. We provide realistic expectations during your free consultation.",
     },
     {
       question: "Can you help remove defaults in Sydney?",
-      answer: "Yes, we can help remove defaults that were incorrectly recorded, unfairly applied, or don't comply with credit reporting guidelines in Sydney and across Australia. We have expertise in challenging various types of negative listings."
+      answer:
+        "Yes, we can help remove defaults that were incorrectly recorded, unfairly applied, or don't comply with credit reporting guidelines in Sydney and across Australia. We have expertise in challenging various types of negative listings.",
     },
     {
       question: "Is credit repair legal in Sydney?",
-      answer: "Absolutely. Credit repair is completely legal in Sydney and throughout Australia. We operate under Australian Credit Licence (ACL 532003) and use your legal rights to dispute incorrect or unfair credit listings."
-    }
+      answer:
+        "Absolutely. Credit repair is completely legal in Sydney and throughout Australia. We operate under Australian Credit Licence (ACL 532003) and use your legal rights to dispute incorrect or unfair credit listings.",
+    },
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit_repair_sydney",
     title: "Credit Repair Sydney | Australian Credit Solutions",
-    description: "Professional credit repair services in Sydney. Remove defaults, correct credit reports, and improve your credit score with Sydney's trusted credit repair experts.",
+    description:
+      "Professional credit repair services in Sydney. Remove defaults, correct credit reports, and improve your credit score with Sydney's trusted credit repair experts.",
     isService: true,
-    serviceType: "Credit Repair Services Sydney"
+    serviceType: "Credit Repair Services Sydney",
   });
 
   return (
@@ -48,7 +54,7 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
       <Header />
@@ -67,21 +73,22 @@ export default function Home() {
           {/* Credit Repair Definition */}
           <div className="mb-8 space-y-4 text-gray-700">
             <p>
-              A credit score (&apos;credit rating&apos;) is a number that influences
-              whether or not a person can get a loan, an apartment, insurance,
-              phone service - regardless of who they are and what their income
-              might be. Essentially it&apos;s based on your statistical probability
-              of meeting your debt obligations in the past by making on-time
-              payments and not defaulting on loans. In other words, it&apos;s an
-              expression of how risky it is to lend to you, given our knowledge
-              of you over the years.
+              A credit score (&apos;credit rating&apos;) is a number that
+              influences whether or not a person can get a loan, an apartment,
+              insurance, phone service - regardless of who they are and what
+              their income might be. Essentially it&apos;s based on your
+              statistical probability of meeting your debt obligations in the
+              past by making on-time payments and not defaulting on loans. In
+              other words, it&apos;s an expression of how risky it is to lend to
+              you, given our knowledge of you over the years.
             </p>
             <p>
               Credit Repair is a process by which you can correct any errors on
-              your credit report, also known as a &apos;credit file.&apos; It is designed
-              to remove negative items such as late payments and debt from a
-              credit report. The reasoning is that consumers with clean bills of
-              credit need a more favorable interest rate when they buy things.
+              your credit report, also known as a &apos;credit file.&apos; It is
+              designed to remove negative items such as late payments and debt
+              from a credit report. The reasoning is that consumers with clean
+              bills of credit need a more favorable interest rate when they buy
+              things.
             </p>
             <p>
               One way of increasing your credit score may be through one or more
@@ -96,7 +103,8 @@ export default function Home() {
               What Is The Formula For Calculating A Credit Score?
             </h3>
             <p className="mb-4">
-              Five criteria are used in calculating a person&apos;s credit score:
+              Five criteria are used in calculating a person&apos;s credit
+              score:
             </p>
             <ul className="space-y-3 list-disc pl-5">
               <li>Payment history (35%)</li>
@@ -124,8 +132,8 @@ export default function Home() {
                 theft when accounts were opened when you were not aware, when
                 old mistakes (e.g., late payments) show up on your report
                 inappropriately (and may still be somewhat correctable), or in
-                some cases if &apos;the other person&apos; pays off an old delinquent
-                account that belongs to you.
+                some cases if &apos;the other person&apos; pays off an old
+                delinquent account that belongs to you.
               </p>
               <p>
                 If you&apos;re looking to get a loan, lease a vehicle, rent an
@@ -135,18 +143,19 @@ export default function Home() {
               </p>
               <p>
                 You may also need to fix a credit score in Sydney when you have
-                been blacklisted by a company that won&apos;t let you extend a line
-                of credit when your filled-out applications are denied by banks
-                and brokers with &apos;poor credit&apos; in the reason field, or even when
-                websites refuse to process your card for payments.
+                been blacklisted by a company that won&apos;t let you extend a
+                line of credit when your filled-out applications are denied by
+                banks and brokers with &apos;poor credit&apos; in the reason
+                field, or even when websites refuse to process your card for
+                payments.
               </p>
               <p>
-                If that&apos;s not enough, high-interest rates also usually ensue if
-                you have bad credit. This is why most people with bad credit say
-                they would do anything they could to fix it! Nobody wants the
-                feeling of being rejected from something or having their work go
-                unseen - but unfortunately, rejection can happen so easily with
-                bad credit health.
+                If that&apos;s not enough, high-interest rates also usually
+                ensue if you have bad credit. This is why most people with bad
+                credit say they would do anything they could to fix it! Nobody
+                wants the feeling of being rejected from something or having
+                their work go unseen - but unfortunately, rejection can happen
+                so easily with bad credit health.
               </p>
             </div>
           </div>
@@ -162,8 +171,8 @@ export default function Home() {
                 removing or suppressing negative information and income
                 defaults, helping you dispute inaccurate information with the
                 three main credit bureaus, and create a new credit history. Plus
-                they all offer money-back guarantees--if they don&apos;t help, ask
-                for your money back.
+                they all offer money-back guarantees--if they don&apos;t help,
+                ask for your money back.
               </p>
             </div>
           </div>
@@ -211,9 +220,9 @@ export default function Home() {
                 The benefits of improving your credit are that the reports will
                 be accurate again. Once we repair your credit score fast in
                 Sydney, your credit report will be more accessible to all three
-                credit bureaus. If you&apos;re looking for a loan, establish a line
-                of credit, or do anything else that involves borrowing money,
-                having an accurate report on hand will make the procedure
+                credit bureaus. If you&apos;re looking for a loan, establish a
+                line of credit, or do anything else that involves borrowing
+                money, having an accurate report on hand will make the procedure
                 simpler than before.
               </p>
               <p>
@@ -228,6 +237,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <ReviewsWidget />
       <HowWorks />
       <section className="py-16 bg-gradient-to-b from-white to-blue-50 text-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -248,16 +258,18 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Removing Incorrect Defaults */}
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
-                Removing Incorrect Defaults
-              </h3>
-              <p className="text-gray-700">
-                Our credit specialists can help remove defaults that were
-                incorrectly recorded on your credit file. These entries can be
-                challenged legally when not properly applied or verified.
-              </p>
-            </div>
+             <Link href="/credit-enquiry-removal-australia">
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
+                  Removing Incorrect Defaults
+                </h3>
+                <p className="text-gray-700">
+                  Our credit specialists can help remove defaults that were
+                  incorrectly recorded on your credit file. These entries can be
+                  challenged legally when not properly applied or verified.
+                </p>
+              </div>
+            </Link>
 
             {/* Disputing Invalid Inquiries */}
             <div className="bg-white p-6 rounded-xl shadow-md">
