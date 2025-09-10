@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -94,7 +96,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
                   Rejected for a home loan in Geelong? Can&apos;t get car finance in Warrnambool? Default listings ruining your
-                  credit score along the Great Ocean Road? Western Victoria&apos;s booming coastal and regional economy
+                  credit <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> score along the Great Ocean Road? Western Victoria&apos;s booming coastal and regional economy
                   deserves better – and there&apos;s a proven solution.
                 </p>
 
@@ -114,7 +116,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-blue">
-                  📞 Western Victoria Hotline: 0489 265 737
+                  📞 Western <Link href="/blog-details/how-a-good-credit-score-can-save-you-money-on-loans-more" className="text-blue-600 hover:text-blue-800 underline">How A Good Credit Score Can Save You Money On Loans More</Link> Victoria Hotline: 0489 265 737
                 </p>
               </div>
 
@@ -181,7 +183,8 @@ export default function CreditRepairGeelongWarrnamboolPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/credit-repair-geelong-warrnambool-western-victoria" heading="Related services & guides" />
+        <FooterForm
                 heading="Get My Free Western Victoria Credit Assessment"
                 subheading="Fast & Confidential"
                 paragraph="Find out if your credit can be fixed – free, fast, and confidential for western Victoria residents."
@@ -253,11 +256,11 @@ export default function CreditRepairGeelongWarrnamboolPage() {
             <h3 className="text-xl font-semibold text-blue mb-4">Default Removal - Geelong, Warrnambool & Coastal Victoria</h3>
             <p className="text-slate-700 mb-4">
               Got defaults on your credit file from western Victorian lenders? Whether it&apos;s from a Telstra account in
-              Geelong, an unpaid utility in Warrnambool, or a credit card default in Portland – defaults can be removed
+              Geelong, <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> an unpaid utility in Warrnambool, or a credit card default in Portland – defaults can be removed
               with the right approach.
             </p>
             <div className="bg-blue-50 rounded-xl p-4">
-              <p className="font-semibold text-blue mb-2">Western Victoria Default Success Stories:</p>
+              <p className="font-semibold text-blue mb-2">Western Victoria <Link href="/fix-credit-after-job-loss-hardship-australia" className="text-blue-600 hover:text-blue-800 underline">Fix Credit After Job Loss Hardship Australia</Link> Default Success Stories:</p>
               <ul className="text-sm text-slate-700 space-y-1">
                 <li>• Geelong client: $3,200 Vodafone default removed in 3 weeks</li>
                 <li>• Warrnambool resident: Multiple utility defaults cleared in 6 weeks</li>

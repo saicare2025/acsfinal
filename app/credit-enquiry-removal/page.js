@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -116,7 +118,7 @@ export default function CreditEnquiryRemovalPage() {
 
                 <p className="text-base text-gray-600">
                   Multiple credit enquiries can slash your credit score by 100+ points, making loan
-                  approval nearly impossible. Our award-winning specialists remove unauthorised, duplicate, and incorrect
+                  approval nearly impossible. <a href="/credit-enquiry-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal Australia</a> Our award-winning specialists remove unauthorised, duplicate, and incorrect
                   enquiries from your credit file – often within weeks, not years.
                 </p>
               </div>
@@ -184,7 +186,7 @@ export default function CreditEnquiryRemovalPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+        <FooterForm
                 heading="Get My Free Enquiry Assessment"
                 subheading="Fast & Confidential"
                 paragraph="Find out if your credit enquiries can be removed – free, fast, and confidential."
@@ -220,12 +222,12 @@ export default function CreditEnquiryRemovalPage() {
       <Section title="Your credit enquiries are quietly destroying your financial future">
         <p>
           Every time someone checks your credit – whether you applied or not – it gets recorded on your file. Too
-          many enquiries signal &quot;credit hungry&quot; behaviour to lenders, making them instantly reject your
+      <a href="/credit-repair-for-car-finance" className="text-blue-600 hover:text-blue-800 underline">Credit Repair For Car Finance</a>     many enquiries signal &quot;credit hungry&quot; behaviour to lenders, making them instantly reject your
           applications.
         </p>
         <p className="mt-4">
           But here&apos;s what most Australians don&apos;t know: many credit enquiries shouldn&apos;t be on your file at all.
-          Unauthorised enquiries. Duplicate enquiries. Enquiries made without proper consent. Enquiries that
+          Unauthorised enquiries. Duplicate enquiries. Enquiries made without proper consent. <a href="/credit-repair-for-centrelink-recipients-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Repair For Centrelink Recipients Australia</a> Enquiries that
           violate privacy laws. These can all be removed – and removing them can boost your credit score
           dramatically.
         </p>
@@ -245,7 +247,7 @@ export default function CreditEnquiryRemovalPage() {
       {/* Impact Section */}
       <Section title="How Credit Enquiries Destroy Your Credit Score">
         <p className="mb-6 text-slate-700">
-          Before diving into how we remove enquiries, let&apos;s understand exactly how they&apos;re damaging your
+          Before diving into how we remove enquiries, let&apos;s understand exactly how <a href="/credit-repair-for-credit-card-applications-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Repair For Credit Card Applications Australia</a> they&apos;re damaging your
           financial life:
         </p>
         <motion.ul
@@ -441,6 +443,8 @@ export default function CreditEnquiryRemovalPage() {
           </Testimonial>
         </motion.div>
       </Section>
+
+      <RelatedBlock currentSlug="/credit-enquiry-removal" heading="Related services & guides" />
 
       {/* Why Choose Us */}
       <Section title="Why Choose Australian Credit Solutions for Enquiry Removal">

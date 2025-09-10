@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -93,15 +95,15 @@ export default function EmergencyCreditRepairPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-red-700 font-bold">
-                  Property settlement next week? Loan application being processed? Business deal falling through because of bad credit?
+                  Property settlement next week? Loan application being <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> processed? Business deal falling through because of bad credit?
                 </p>
 
                 <p className="text-base text-gray-900 font-semibold">
-                  We provide URGENT credit repair when deadlines matter most.
+                  We provide URGENT <a href="/repair-your-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">Repair Your Credit Score Australia</a> credit repair when deadlines matter most.
                 </p>
 
                 <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-red-800 mb-3">🚨 SAME-DAY ASSESSMENT AVAILABLE</p>
+                  <p className="text-sm font-bold text-red-800 mb-3">🚨 SAME-DAY <a href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</a> ASSESSMENT AVAILABLE</p>
                   <div className="grid grid-cols-2 gap-2 text-sm text-red-700">
                     <div>⏰ Property settlements</div>
                     <div>💼 Business finance deadlines</div>
@@ -113,7 +115,7 @@ export default function EmergencyCreditRepairPage() {
                 </div>
 
                 <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-red-600 mb-2">📞 EMERGENCY HOTLINE: 0489 265 737</p>
+                  <p className="text-xl font-bold text-red-600 mb-2">📞 EMERGENCY HOTLINE: <a href="/credit-enquiry-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal Australia</a> 0489 265 737</p>
                   <p className="text-sm font-medium text-gray-800">Operating Hours Extended for Emergencies</p>
                   <p className="text-xs text-gray-600">Mon-Fri: 7am-10pm | Sat-Sun: 9am-6pm</p>
                 </div>
@@ -205,7 +207,8 @@ export default function EmergencyCreditRepairPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/emergency-credit-repair" heading="Related services & guides" />
+        <FooterForm
                 heading="🚨 EMERGENCY ASSESSMENT FORM"
                 subheading="Same-Day Response • Rush Processing"
                 paragraph="Complete this form for URGENT same-day credit assessment. Emergency cases get priority handling."

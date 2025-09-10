@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -93,12 +95,12 @@ export default function ApplyCreditRepairPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Ready to fix your credit and get your life back on track? Apply now with Australia&apos;s most trusted specialists.
+                  Ready to fix your credit and get your <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> life back on track? Apply now with Australia&apos;s most trusted specialists.
                 </p>
 
                 <p className="text-base text-gray-600">
                   No paperwork hassles, no upfront fees, just results. We&apos;ve helped thousands of Australians transform 
-                  their financial futures through professional credit repair.
+    <a href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</a>               their financial futures through professional credit repair.
                 </p>
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm font-medium">
@@ -126,7 +128,7 @@ export default function ApplyCreditRepairPage() {
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-blue">
-                  📞 Call 0489 265 737 to Apply | 💬 Request Callback
+                  📞 Call 0489 265 <a href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</a> 737 to Apply | 💬 Request Callback
                 </p>
               </div>
 
@@ -193,7 +195,8 @@ export default function ApplyCreditRepairPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/apply-credit-repair" heading="Related services & guides" />
+        <FooterForm
                 heading="Apply for Credit Repair Today"
                 subheading="Free Assessment & Professional Service"
                 paragraph="Start your application now – 2 minutes to better credit and financial freedom."
@@ -229,7 +232,7 @@ export default function ApplyCreditRepairPage() {
       <Section title="Sick of Being Knocked Back for Everything?">
         <p className="text-slate-700 mb-6">
           Yeah, we get it mate. Bad credit feels like you&apos;re stuck in a bloody nightmare. Every application gets rejected, 
-          every dream gets crushed. But here&apos;s the thing - most credit problems can actually be fixed.
+  <a href="/default-removal-services-australia" className="text-blue-600 hover:text-blue-800 underline">Default Removal Services Australia</a>         every dream gets crushed. But here&apos;s the thing - most credit problems can actually be fixed.
         </p>
         
         <div className="grid gap-6 lg:grid-cols-2">

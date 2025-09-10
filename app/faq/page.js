@@ -2,9 +2,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import MainLayout from "../MainLayout";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
+
+import RelatedBlock from "@/app/_seo/RelatedBlock";
 
 export default function FAQPage() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -194,7 +197,7 @@ export default function FAQPage() {
             </h1>
             <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
               At Australian Credit Solutions, we know that credit issues can be
-              stressful, confusing, and overwhelming. Here are answers to the
+              stressful, <Link href="/blog-details/what-is-the-best-way" className="text-blue-600 hover:text-blue-800 underline">What Is The Best Way</Link> confusing, and overwhelming. Here are answers to the
               most common questions about our services.
             </p>
           </div>

@@ -53,7 +53,7 @@ export function PinterestIcon(props) {
 /* Store icon COMPONENTS here; instantiate them during render */
 const SERVICE_LINKS = [
   { name: "Credit Enquiry Removal", href: "/credit-enquiry-removal" },
-  { name: "Court Judgment Removal", href: "/court-judgment-removal" },
+  // { name: "Court Judgment Removal", href: "/court-judgment-removal" },
   { name: "Worst Repayment History Removal", href: "/worst-repayment-history-removal" },
   { name: "Credit Repair — Home Loan Approval", href: "/credit-repair-home-loan-approval" },
   { name: "Credit Repair for Car Finance", href: "/credit-repair-for-car-finance" },

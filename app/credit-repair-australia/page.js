@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -174,7 +176,7 @@ export default function CreditRepairAustraliaPage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterForm
+        <FooterForm
                 heading="Get My Free Credit Assessment"
                 subheading="Award-Winning Specialists"
                 paragraph="Find out if your credit file can be fixed – free assessment with Australia's top-rated credit repair experts."
@@ -208,18 +210,18 @@ export default function CreditRepairAustraliaPage() {
       <Section title="Your credit score shouldn't define your future">
         <p>
           Yet right now, it might feel like every financial door is slamming
-          shut. Home loan rejected. Car finance declined. Even mobile phone
+          <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> shut. Home loan rejected. Car finance declined. Even mobile phone
           applications getting knocked back.
         </p>
         <p className="mt-4">
           We get it. Bad credit feels like carrying a financial death sentence –
-          but it doesn&apos;t have to stay that way.
+  <a href="/repair-your-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">Repair Your Credit Score Australia</a>         but it doesn&apos;t have to stay that way.
         </p>
         <p className="mt-4">
           Australian Credit Solutions specialises in removing unfair, incorrect,
           and outdated listings from Australian credit files. We&apos;re not
           another generic credit repair company making empty promises.
-          We&apos;re award-winning specialists with a 98% success rate when we
+  <a href="/equifax-default-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Equifax Default Removal Australia</a>         We&apos;re award-winning specialists with a 98% success rate when we
           accept cases, backed by three consecutive years of industry
           recognition.
         </p>
@@ -237,7 +239,7 @@ export default function CreditRepairAustraliaPage() {
       <Section title="The Real Cost of Bad Credit in Australia">
         <p className="text-slate-700">
           Before we dive into how we fix credit files, let&apos;s talk about
-          what bad credit is actually costing you:
+  <a href="/credit-enquiry-removal" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal</a>         what bad credit is actually costing you:
         </p>
         <motion.ul
           variants={staggerChildren}
@@ -494,6 +496,8 @@ export default function CreditRepairAustraliaPage() {
           </Testimonial>
         </motion.div>
       </Section>
+
+      <RelatedBlock currentSlug="/credit-repair-australia" heading="Related services & guides" />
 
       {/* Why Choose Us */}
       <Section title="Why Choose Australian Credit Solutions">

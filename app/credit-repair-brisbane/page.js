@@ -12,6 +12,8 @@ import Link from "next/link";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // ✅ SEO Metadata for Brisbane Credit Repair
 
 export default function Home() {
@@ -44,7 +46,7 @@ export default function Home() {
             <div className="w-24 h-1 bg-[#0668a5] mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               A healthy credit score opens doors to financial opportunities - we
-              help Brisbane residents unlock theirs
+   <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>            help Brisbane residents unlock theirs
             </p>
           </div>
 
@@ -110,7 +112,7 @@ export default function Home() {
               <div className=" bg-blue rounded-lg backdrop-blur-sm border border-white  bg-opacity-30 p-6 g">
                 <p className="mb-4">
                   Australian Credit Solutions has helped over 2,500 Brisbane
-                  residents improve their credit scores by an average of 187
+                  <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link> residents improve their credit scores by an average of 187
                   points.
                 </p>
               
@@ -128,7 +130,7 @@ export default function Home() {
                   </div>
                   <p className="text-white text-opacity-90">
                     We audit your credit file from all three bureaus,
-                    challenging inaccurate defaults, court judgments, and
+                    challenging <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> inaccurate defaults, court judgments, and
                     incorrect late payments to legally remove damaging entries.
                   </p>
                 </div>
@@ -144,7 +146,7 @@ export default function Home() {
                   </div>
                   <p className="text-white text-opacity-90">
                     Our specialists provide personalized strategies to rebuild
-                    your credit through responsible credit card use, optimal
+                    your credit <Link href="/credit-enquiry-removal" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal</Link> through responsible credit card use, optimal
                     repayment patterns, and debt management.
                   </p>
                 </div>
@@ -265,6 +267,9 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
+      
+      <RelatedBlock currentSlug="/credit-repair-brisbane" heading="Related services & guides" />
+      
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -459,7 +464,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
+        <Footer />
     </main>
   );
 }

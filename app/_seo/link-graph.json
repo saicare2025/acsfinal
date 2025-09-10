@@ -1,0 +1,5309 @@
+{
+  "/": [
+    {
+      "target": "/about",
+      "type": "down-link",
+      "anchor": "About"
+    },
+    {
+      "target": "/our-story",
+      "type": "down-link",
+      "anchor": "Our Story"
+    },
+    {
+      "target": "/contact-us",
+      "type": "down-link",
+      "anchor": "Contact Us"
+    },
+    {
+      "target": "/testimonial",
+      "type": "down-link",
+      "anchor": "Testimonial"
+    },
+    {
+      "target": "/privacy-policy",
+      "type": "down-link",
+      "anchor": "Privacy Policy"
+    },
+    {
+      "target": "/meeting-schedule",
+      "type": "down-link",
+      "anchor": "Meeting Schedule"
+    }
+  ],
+  "/about": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/affordable-credit-repair-australia",
+      "type": "orphan-fix",
+      "anchor": "Affordable Credit Repair Australia"
+    },
+    {
+      "target": "/attorneys-for-credit-repair-australia",
+      "type": "orphan-fix",
+      "anchor": "Attorneys For Credit Repair Australia"
+    },
+    {
+      "target": "/australian-credit-lawyers-now-australian-credit-solutions",
+      "type": "orphan-fix",
+      "anchor": "Australian Credit Lawyers Now Australian Credit Solutions"
+    }
+  ],
+  "/affordable-credit-repair-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/best-credit-cleanup-company-australia",
+      "type": "orphan-fix",
+      "anchor": "Best Credit Cleanup Company Australia"
+    }
+  ],
+  "/apply-credit-repair": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/default-removal-services-australia",
+      "type": "boost-scarce",
+      "anchor": "Default Removal Services Australia"
+    }
+  ],
+  "/attorneys-for-credit-repair-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/credit-repair-strategies-for-a-quick-boost-to-your-score",
+      "type": "cross-category",
+      "anchor": "Credit Repair Strategies For A Quick Boost To Your Score"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/booking-confirmation",
+      "type": "orphan-fix",
+      "anchor": "Booking Confirmation"
+    }
+  ],
+  "/australian-credit-lawyers-now-australian-credit-solutions": [
+    {
+      "target": "/complaints-handling-policy",
+      "type": "orphan-fix",
+      "anchor": "Complaints Handling Policy"
+    },
+    {
+      "target": "/credit-australia-repair",
+      "type": "orphan-fix",
+      "anchor": "Credit Australia Repair"
+    },
+    {
+      "target": "/credit-repair-after-bankruptcy",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair After Bankruptcy"
+    },
+    {
+      "target": "/credit-repair-after-debt-agreement-part-9",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair After Debt Agreement Part 9"
+    }
+  ],
+  "/best-credit-cleanup-company-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/what-s-an-excellent-credit-score-understanding-credit-ratings",
+      "type": "cross-category",
+      "anchor": "What S An Excellent Credit Score Understanding Credit Ratings"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-repair-after-divorce-or-separation",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair After Divorce Or Separation"
+    }
+  ],
+  "/blogs": [
+    {
+      "target": "/blog-details/get-loans-with-bad-credit",
+      "type": "down-link",
+      "anchor": "Get Loans With Bad Credit"
+    },
+    {
+      "target": "/blog-details/bad-credit-can-cost-you-money-here-s-why",
+      "type": "down-link",
+      "anchor": "Bad Credit Can Cost You Money Here S Why"
+    },
+    {
+      "target": "/blog-details/will-credit-fixing-improve-your-finances",
+      "type": "down-link",
+      "anchor": "Will Credit Fixing Improve Your Finances"
+    },
+    {
+      "target": "/blog-details/fix-bad-credit-without-facing-any-problems",
+      "type": "down-link",
+      "anchor": "Fix Bad Credit Without Facing Any Problems"
+    },
+    {
+      "target": "/blog-details/having-bad-credits-why-you-ll-never-succeed",
+      "type": "down-link",
+      "anchor": "Having Bad Credits Why You Ll Never Succeed"
+    },
+    {
+      "target": "/blog-details/the-best-way-for-young-adults-to-build-credit",
+      "type": "down-link",
+      "anchor": "The Best Way For Young Adults To Build Credit"
+    }
+  ],
+  "/booking-confirmation": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/credit-repair-after-identity-theft-australia",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair After Identity Theft Australia"
+    },
+    {
+      "target": "/credit-repair-assistance-australia",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Assistance Australia"
+    },
+    {
+      "target": "/credit-repair-australia",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Australia"
+    }
+  ],
+  "/complaints-handling-policy": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/credit-repair-bendigo-ballarat-regional-victoria",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Bendigo Ballarat Regional Victoria"
+    },
+    {
+      "target": "/credit-repair-brisbane",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Brisbane"
+    },
+    {
+      "target": "/credit-repair-canberra",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Canberra"
+    }
+  ],
+  "/contact-us": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/credit-repair-canberra-act",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Canberra Act"
+    },
+    {
+      "target": "/credit-repair-credit-card-applications",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Credit Card Applications"
+    },
+    {
+      "target": "/credit-repair-darwin-nt",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Darwin Nt"
+    }
+  ],
+  "/credit-australia-repair": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/repair-your-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "Repair Your Credit Score Australia"
+    },
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/credit-enquiry-removal",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal"
+    }
+  ],
+  "/credit-enquiry-removal": [
+    {
+      "target": "/credit-enquiry-removal-australia",
+      "type": "down-link",
+      "anchor": "Credit Enquiry Removal Australia"
+    },
+    {
+      "target": "/credit-repair-for-car-finance",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair For Car Finance"
+    },
+    {
+      "target": "/credit-repair-for-centrelink-recipients-australia",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair For Centrelink Recipients Australia"
+    },
+    {
+      "target": "/credit-repair-for-credit-card-applications-australia",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair For Credit Card Applications Australia"
+    }
+  ],
+  "/credit-enquiry-removal-australia": [
+    {
+      "target": "/credit-enquiry-removal",
+      "type": "up-link",
+      "anchor": "Credit Enquiry Removal"
+    },
+    {
+      "target": "/credit-repair-for-first-home-buyers",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair For First Home Buyers"
+    },
+    {
+      "target": "/credit-repair-geelong-warrnambool-western-victoria",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Geelong Warrnambool Western Victoria"
+    },
+    {
+      "target": "/credit-repair-gold-coast-queensland",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Gold Coast Queensland"
+    }
+  ],
+  "/credit-repair-adelaide": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/credit-enquiry-removal",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal"
+    }
+  ],
+  "/credit-repair-after-bankruptcy": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-enquiry-removal-australia",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal Australia"
+    }
+  ],
+  "/credit-repair-after-debt-agreement-part-9": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/credit-repair-home-loan-approval",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Home Loan Approval"
+    }
+  ],
+  "/credit-repair-after-divorce-or-separation": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-repair-melbourne",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Melbourne"
+    }
+  ],
+  "/credit-repair-after-identity-theft-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/fix-a-bad-credit-score-the-quickest-and-easiest-way",
+      "type": "cross-category",
+      "anchor": "Fix A Bad Credit Score The Quickest And Easiest Way"
+    },
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/credit-repair-melbourne-victoria",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Melbourne Victoria"
+    }
+  ],
+  "/credit-repair-assistance-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-repair-regional-nsw",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Regional Nsw"
+    }
+  ],
+  "/credit-repair-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/repair-your-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "Repair Your Credit Score Australia"
+    },
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/credit-enquiry-removal",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal"
+    }
+  ],
+  "/credit-repair-bendigo-ballarat-regional-victoria": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-repair-sale-traralgon-gippsland-victoria",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Sale Traralgon Gippsland Victoria"
+    }
+  ],
+  "/credit-repair-brisbane": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-enquiry-removal",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal"
+    }
+  ],
+  "/credit-repair-canberra": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-enquiry-removal",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal"
+    }
+  ],
+  "/credit-repair-canberra-act": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-enquiry-removal-australia",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal Australia"
+    }
+  ],
+  "/credit-repair-credit-card-applications": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-repair-south-australia-adelaide",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair South Australia Adelaide"
+    }
+  ],
+  "/credit-repair-darwin": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/default-removal-services-australia",
+      "type": "boost-scarce",
+      "anchor": "Default Removal Services Australia"
+    }
+  ],
+  "/credit-repair-darwin-nt": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/credit-enquiry-removal",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal"
+    }
+  ],
+  "/credit-repair-for-car-finance": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/credit-repair-strategies-for-a-quick-boost-to-your-score",
+      "type": "cross-category",
+      "anchor": "Credit Repair Strategies For A Quick Boost To Your Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-enquiry-removal-australia",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal Australia"
+    }
+  ],
+  "/credit-repair-for-centrelink-recipients-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/does-late-rent-payment-affect-credit-score-australia",
+      "type": "orphan-fix",
+      "anchor": "Does Late Rent Payment Affect Credit Score Australia"
+    }
+  ],
+  "/credit-repair-for-credit-card-applications-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/credit-repair-strategies-for-a-quick-boost-to-your-score",
+      "type": "cross-category",
+      "anchor": "Credit Repair Strategies For A Quick Boost To Your Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/emergency-credit-repair",
+      "type": "orphan-fix",
+      "anchor": "Emergency Credit Repair"
+    }
+  ],
+  "/credit-repair-for-first-home-buyers": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/fix-bad-credit-australia",
+      "type": "orphan-fix",
+      "anchor": "Fix Bad Credit Australia"
+    }
+  ],
+  "/credit-repair-geelong-warrnambool-western-victoria": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-a-good-credit-score-can-save-you-money-on-loans-more",
+      "type": "cross-category",
+      "anchor": "How A Good Credit Score Can Save You Money On Loans More"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/fix-credit-after-job-loss-hardship-australia",
+      "type": "orphan-fix",
+      "anchor": "Fix Credit After Job Loss Hardship Australia"
+    }
+  ],
+  "/credit-repair-gold-coast-queensland": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/fix-my-credit-now",
+      "type": "orphan-fix",
+      "anchor": "Fix My Credit Now"
+    }
+  ],
+  "/credit-repair-hobart": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/default-removal-services-australia",
+      "type": "boost-scarce",
+      "anchor": "Default Removal Services Australia"
+    }
+  ],
+  "/credit-repair-home-loan-approval": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/the-benefits-of-good-credit-score-when-buying-a-home",
+      "type": "cross-category",
+      "anchor": "The Benefits Of Good Credit Score When Buying A Home"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/free-credit-assessment",
+      "type": "orphan-fix",
+      "anchor": "Free Credit Assessment"
+    }
+  ],
+  "/credit-repair-melbourne": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/repair-your-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "Repair Your Credit Score Australia"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/credit-enquiry-removal",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal"
+    }
+  ],
+  "/credit-repair-melbourne-victoria": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/how-many-points-hard-inquiry-affect-credit-score",
+      "type": "orphan-fix",
+      "anchor": "How Many Points Hard Inquiry Affect Credit Score"
+    }
+  ],
+  "/credit-repair-perth": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/repair-your-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "Repair Your Credit Score Australia"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/default-removal-services-australia",
+      "type": "boost-scarce",
+      "anchor": "Default Removal Services Australia"
+    }
+  ],
+  "/credit-repair-regional-nsw": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/credit-enquiry-removal-australia",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal Australia"
+    }
+  ],
+  "/credit-repair-sale-traralgon-gippsland-victoria": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/licensed-credit-repair-australia",
+      "type": "orphan-fix",
+      "anchor": "Licensed Credit Repair Australia"
+    }
+  ],
+  "/credit-repair-south-australia-adelaide": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/no-win-no-fee-credit-repair",
+      "type": "orphan-fix",
+      "anchor": "No Win No Fee Credit Repair"
+    }
+  ],
+  "/credit_repair_sydney": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/default-removal-services-australia",
+      "type": "boost-scarce",
+      "anchor": "Default Removal Services Australia"
+    }
+  ],
+  "/credit-score": [
+    {
+      "target": "/repair-your-credit-score-australia",
+      "type": "down-link",
+      "anchor": "Repair Your Credit Score Australia"
+    },
+    {
+      "target": "/how-to-fix-my-credit-score-australia",
+      "type": "down-link",
+      "anchor": "How To Fix My Credit Score Australia"
+    },
+    {
+      "target": "/what-is-a-good-credit-score-australia",
+      "type": "down-link",
+      "anchor": "What Is A Good Credit Score Australia"
+    },
+    {
+      "target": "/blog-details/what-damages-credit-score",
+      "type": "down-link",
+      "anchor": "What Damages Credit Score"
+    },
+    {
+      "target": "/blog-details/how-does-credit-score-work",
+      "type": "down-link",
+      "anchor": "How Does Credit Score Work"
+    },
+    {
+      "target": "/blog-details/what-is-a-good-credit-score",
+      "type": "down-link",
+      "anchor": "What Is A Good Credit Score"
+    }
+  ],
+  "/default-removal-services-australia": [
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "up-link",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/our-responsibility",
+      "type": "orphan-fix",
+      "anchor": "Our Responsibility"
+    },
+    {
+      "target": "/our-simple-5-step-process",
+      "type": "orphan-fix",
+      "anchor": "Our Simple 5 Step Process"
+    },
+    {
+      "target": "/pay-for-credit-repair-help-australia",
+      "type": "orphan-fix",
+      "anchor": "Pay For Credit Repair Help Australia"
+    }
+  ],
+  "/does-late-rent-payment-affect-credit-score-australia": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/professional-credit-repair-services-australia",
+      "type": "orphan-fix",
+      "anchor": "Professional Credit Repair Services Australia"
+    }
+  ],
+  "/emergency-credit-repair": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/repair-your-credit-score-australia",
+      "type": "cross-category",
+      "anchor": "Repair Your Credit Score Australia"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/credit-enquiry-removal-australia",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal Australia"
+    }
+  ],
+  "/equifax-default-removal-australia": [
+    {
+      "target": "/default-removal-services-australia",
+      "type": "down-link",
+      "anchor": "Default Removal Services Australia"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "down-link",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "down-link",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "down-link",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/faq": [
+    {
+      "target": "/blog-details/what-is-the-best-way",
+      "type": "down-link",
+      "anchor": "What Is The Best Way"
+    },
+    {
+      "target": "/blog-details/how-to-use-a-credit-card-responsibly",
+      "type": "down-link",
+      "anchor": "How To Use A Credit Card Responsibly"
+    },
+    {
+      "target": "/blog-details/how-to-identify-errors-in-your-credit-report",
+      "type": "down-link",
+      "anchor": "How To Identify Errors In Your Credit Report"
+    },
+    {
+      "target": "/blog-details/fix-bad-credit-in-perth-a-comprehensive-guide",
+      "type": "down-link",
+      "anchor": "Fix Bad Credit In Perth A Comprehensive Guide"
+    },
+    {
+      "target": "/blog-details/how-to-correct-an-error-on-your-credit-report",
+      "type": "down-link",
+      "anchor": "How To Correct An Error On Your Credit Report"
+    },
+    {
+      "target": "/blog-details/start-fixing-your-credit-a-step-by-step-guide",
+      "type": "down-link",
+      "anchor": "Start Fixing Your Credit A Step By Step Guide"
+    }
+  ],
+  "/fix-bad-credit-australia": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/south-australia-credit-repair",
+      "type": "orphan-fix",
+      "anchor": "South Australia Credit Repair"
+    },
+    {
+      "target": "/terms-conditions",
+      "type": "orphan-fix",
+      "anchor": "Terms Conditions"
+    },
+    {
+      "target": "/worst-repayment-history-removal",
+      "type": "orphan-fix",
+      "anchor": "Worst Repayment History Removal"
+    }
+  ],
+  "/fix-credit-after-job-loss-hardship-australia": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/blog-details/10-good-credit-history-habits-for-financial-success",
+      "type": "orphan-fix",
+      "anchor": "10 Good Credit History Habits For Financial Success"
+    },
+    {
+      "target": "/blog-details/620-credit-score-in-australia-steps-to-boost-your-rating-to-830",
+      "type": "orphan-fix",
+      "anchor": "620 Credit Score In Australia Steps To Boost Your Rating To 830"
+    },
+    {
+      "target": "/blog-details/bad-credit-6-surprising-facts-you-need-to-know",
+      "type": "orphan-fix",
+      "anchor": "Bad Credit 6 Surprising Facts You Need To Know"
+    }
+  ],
+  "/fix-my-credit-now": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/blog-details/bad-credit-borrowers-5-things-you-should-never-do",
+      "type": "orphan-fix",
+      "anchor": "Bad Credit Borrowers 5 Things You Should Never Do"
+    },
+    {
+      "target": "/blog-details/bad-credit-car-buying-tips-how-to-secure-a-loan",
+      "type": "orphan-fix",
+      "anchor": "Bad Credit Car Buying Tips How To Secure A Loan"
+    },
+    {
+      "target": "/blog-details/bad-credit-how-long-does-it-stay-on-record-in-australia",
+      "type": "orphan-fix",
+      "anchor": "Bad Credit How Long Does It Stay On Record In Australia"
+    }
+  ],
+  "/free-credit-assessment": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/blog-details/bankruptcy-on-your-credit-report-should-you-remove-it",
+      "type": "orphan-fix",
+      "anchor": "Bankruptcy On Your Credit Report Should You Remove It"
+    },
+    {
+      "target": "/blog-details/best-credit-card-to-build-credit-score-in-australia-for-2024",
+      "type": "orphan-fix",
+      "anchor": "Best Credit Card To Build Credit Score In Australia For 2024"
+    },
+    {
+      "target": "/blog-details/best-credit-cards-for-poor-credit-score-in-2024",
+      "type": "orphan-fix",
+      "anchor": "Best Credit Cards For Poor Credit Score In 2024"
+    }
+  ],
+  "/get-credit-repair": [
+    {
+      "target": "/apply-credit-repair",
+      "type": "down-link",
+      "anchor": "Apply Credit Repair"
+    },
+    {
+      "target": "/credit-repair-perth",
+      "type": "down-link",
+      "anchor": "Credit Repair Perth"
+    },
+    {
+      "target": "/credit_repair_sydney",
+      "type": "down-link",
+      "anchor": "Credit_repair_sydney"
+    },
+    {
+      "target": "/credit-repair-darwin",
+      "type": "down-link",
+      "anchor": "Credit Repair Darwin"
+    },
+    {
+      "target": "/credit-repair-hobart",
+      "type": "down-link",
+      "anchor": "Credit Repair Hobart"
+    },
+    {
+      "target": "/credit-repair-adelaide",
+      "type": "down-link",
+      "anchor": "Credit Repair Adelaide"
+    }
+  ],
+  "/how-many-points-hard-inquiry-affect-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/best-credit-cards-to-build-credit-for-young-adults",
+      "type": "orphan-fix",
+      "anchor": "Best Credit Cards To Build Credit For Young Adults"
+    }
+  ],
+  "/how-to-fix-my-credit-score-australia": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/best-credit-repair-australia-how-it-works",
+      "type": "orphan-fix",
+      "anchor": "Best Credit Repair Australia How It Works"
+    }
+  ],
+  "/licensed-credit-repair-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/blog-details/best-credit-repair-australia-how-to-choose-the-right-firm",
+      "type": "orphan-fix",
+      "anchor": "Best Credit Repair Australia How To Choose The Right Firm"
+    }
+  ],
+  "/meeting-schedule": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/blog-details/best-practices-for-managing-credit-card-debt-effectively",
+      "type": "orphan-fix",
+      "anchor": "Best Practices For Managing Credit Card Debt Effectively"
+    },
+    {
+      "target": "/blog-details/boost-your-credit-score-a-comprehensive-guide",
+      "type": "orphan-fix",
+      "anchor": "Boost Your Credit Score A Comprehensive Guide"
+    },
+    {
+      "target": "/blog-details/buy-now-pay-later-your-credit-rating-what-you-need-to-know",
+      "type": "orphan-fix",
+      "anchor": "Buy Now Pay Later Your Credit Rating What You Need To Know"
+    }
+  ],
+  "/no-win-no-fee-credit-repair": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/remove-defaults-from-your-credit-file",
+      "type": "cross-category",
+      "anchor": "Remove Defaults From Your Credit File"
+    },
+    {
+      "target": "/credit-enquiry-removal-australia",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal Australia"
+    }
+  ],
+  "/our-responsibility": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/blog-details/can-a-credit-repair-company-helps-create-a-decent-credit-report",
+      "type": "orphan-fix",
+      "anchor": "Can A Credit Repair Company Helps Create A Decent Credit Report"
+    },
+    {
+      "target": "/blog-details/can-credit-repair-in-australia-help-you-reclaim-your-financial-future",
+      "type": "orphan-fix",
+      "anchor": "Can Credit Repair In Australia Help You Reclaim Your Financial Future"
+    },
+    {
+      "target": "/blog-details/can-you-get-a-car-loan-with-bad-credit-in-australia",
+      "type": "orphan-fix",
+      "anchor": "Can You Get A Car Loan With Bad Credit In Australia"
+    }
+  ],
+  "/our-services": [
+    {
+      "target": "/blog-details/cheapest-way-to-fix-my-credit-affordable-solutions",
+      "type": "orphan-fix",
+      "anchor": "Cheapest Way To Fix My Credit Affordable Solutions"
+    },
+    {
+      "target": "/blog-details/check-how-credit-repair-is-essential-for-small-business-owners",
+      "type": "orphan-fix",
+      "anchor": "Check How Credit Repair Is Essential For Small Business Owners"
+    },
+    {
+      "target": "/blog-details/common-credit-score-myths-debunked-what-you-need-to-know",
+      "type": "orphan-fix",
+      "anchor": "Common Credit Score Myths Debunked What You Need To Know"
+    },
+    {
+      "target": "/blog-details/connection-between-your-credit-score-employment-opportunities",
+      "type": "orphan-fix",
+      "anchor": "Connection Between Your Credit Score Employment Opportunities"
+    }
+  ],
+  "/our-simple-5-step-process": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/blog-details/credit-file-errors-how-to-repair-them-effectively",
+      "type": "orphan-fix",
+      "anchor": "Credit File Errors How To Repair Them Effectively"
+    },
+    {
+      "target": "/blog-details/credit-file-fix-think-no-one-can-help-think-again",
+      "type": "orphan-fix",
+      "anchor": "Credit File Fix Think No One Can Help Think Again"
+    },
+    {
+      "target": "/blog-details/credit-file-repair-reasons-to-dispute-items-on-credit-report",
+      "type": "orphan-fix",
+      "anchor": "Credit File Repair Reasons To Dispute Items On Credit Report"
+    }
+  ],
+  "/our-story": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/blog-details/credit-fix-6-key-reasons-you-should-discuss-your-credit",
+      "type": "orphan-fix",
+      "anchor": "Credit Fix 6 Key Reasons You Should Discuss Your Credit"
+    },
+    {
+      "target": "/blog-details/credit-repair-darwin",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Darwin"
+    },
+    {
+      "target": "/blog-details/credit-repair-do-you-really-need-it",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Do You Really Need It"
+    }
+  ],
+  "/pay-for-credit-repair-help-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/credit-repair-strategies-for-a-quick-boost-to-your-score",
+      "type": "cross-category",
+      "anchor": "Credit Repair Strategies For A Quick Boost To Your Score"
+    },
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/blog-details/credit-repair-expertise-guide-to-australian-credit-solutions",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Expertise Guide To Australian Credit Solutions"
+    }
+  ],
+  "/privacy-policy": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/blog-details/credit-repair-for-millennials-the-guide-to-boost-your-score",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair For Millennials The Guide To Boost Your Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-hobart",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Hobart"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-separating-myths-from-facts",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair In Australia Separating Myths From Facts"
+    }
+  ],
+  "/professional-credit-repair-services-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/default-removal-services-australia",
+      "type": "cross-category",
+      "anchor": "Default Removal Services Australia"
+    },
+    {
+      "target": "/blog-details/credit-repair-melbourne-getting-the-road-to-better-credit",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Melbourne Getting The Road To Better Credit"
+    }
+  ],
+  "/remove-defaults-from-your-credit-file": [
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "up-link",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/blog-details/credit-repair-perth",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Perth"
+    },
+    {
+      "target": "/blog-details/credit-repair-process-how-credit-repair-lawyers-can-help",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Process How Credit Repair Lawyers Can Help"
+    },
+    {
+      "target": "/blog-details/credit-repair-vs-credit-counselling-get-the-key-differences",
+      "type": "orphan-fix",
+      "anchor": "Credit Repair Vs Credit Counselling Get The Key Differences"
+    }
+  ],
+  "/repair-your-credit-score-australia": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/credit-report-check-how-to-find-out-if-someone-accessed-it",
+      "type": "orphan-fix",
+      "anchor": "Credit Report Check How To Find Out If Someone Accessed It"
+    }
+  ],
+  "/south-australia-credit-repair": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/credit-enquiry-removal-australia",
+      "type": "boost-scarce",
+      "anchor": "Credit Enquiry Removal Australia"
+    }
+  ],
+  "/terms-conditions": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/blog-details/credit-report-problems-quick-solutions-to-fix-errors-fast",
+      "type": "orphan-fix",
+      "anchor": "Credit Report Problems Quick Solutions To Fix Errors Fast"
+    },
+    {
+      "target": "/blog-details/credit-report-red-flags-that-can-terrify-lenders",
+      "type": "orphan-fix",
+      "anchor": "Credit Report Red Flags That Can Terrify Lenders"
+    },
+    {
+      "target": "/blog-details/debunking-credit-repair-scams-how-to-spot-and-avoid-fraud",
+      "type": "orphan-fix",
+      "anchor": "Debunking Credit Repair Scams How To Spot And Avoid Fraud"
+    }
+  ],
+  "/testimonial": [
+    {
+      "target": "/",
+      "type": "up-link",
+      "anchor": ""
+    },
+    {
+      "target": "/blog-details/divorce-and-your-credit-score-key-things-you-should-know",
+      "type": "orphan-fix",
+      "anchor": "Divorce And Your Credit Score Key Things You Should Know"
+    },
+    {
+      "target": "/blog-details/does-being-late-on-rent-affect-credit-score",
+      "type": "orphan-fix",
+      "anchor": "Does Being Late On Rent Affect Credit Score"
+    },
+    {
+      "target": "/blog-details/does-betting-affect-your-credit-score",
+      "type": "orphan-fix",
+      "anchor": "Does Betting Affect Your Credit Score"
+    }
+  ],
+  "/what-is-a-good-credit-score-australia": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/debt-consolidation-vs-credit-repair-what-s-the-difference",
+      "type": "cross-category",
+      "anchor": "Debt Consolidation Vs Credit Repair What S The Difference"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/does-consolidating-debt-hurt-credit-score-in-australia",
+      "type": "orphan-fix",
+      "anchor": "Does Consolidating Debt Hurt Credit Score In Australia"
+    }
+  ],
+  "/worst-repayment-history-removal": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/does-making-minimum-payments-hurt-your-credit-score",
+      "type": "orphan-fix",
+      "anchor": "Does Making Minimum Payments Hurt Your Credit Score"
+    }
+  ],
+  "/blog-details/10-good-credit-history-habits-for-financial-success": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-use-a-credit-card-responsibly",
+      "type": "cross-category",
+      "anchor": "How To Use A Credit Card Responsibly"
+    },
+    {
+      "target": "/blog-details/does-novated-lease-affect-credit-score",
+      "type": "orphan-fix",
+      "anchor": "Does Novated Lease Affect Credit Score"
+    }
+  ],
+  "/blog-details/620-credit-score-in-australia-steps-to-boost-your-rating-to-830": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/does-online-shopping-affect-credit-score",
+      "type": "orphan-fix",
+      "anchor": "Does Online Shopping Affect Credit Score"
+    }
+  ],
+  "/blog-details/bad-credit-6-surprising-facts-you-need-to-know": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-get-a-credit-check-in-australia-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "How To Get A Credit Check In Australia A Step By Step Guide"
+    },
+    {
+      "target": "/blog-details/duration-of-a-bad-credit-rating-in-australia-recovery-steps",
+      "type": "orphan-fix",
+      "anchor": "Duration Of A Bad Credit Rating In Australia Recovery Steps"
+    }
+  ],
+  "/blog-details/bad-credit-borrowers-5-things-you-should-never-do": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-does-a-young-person-build-credit-in-australia-a-comprehensive-guide",
+      "type": "cross-category",
+      "anchor": "How Does A Young Person Build Credit In Australia A Comprehensive Guide"
+    },
+    {
+      "target": "/blog-details/easy-credit-repair-with-this-leading-aussie-company",
+      "type": "orphan-fix",
+      "anchor": "Easy Credit Repair With This Leading Aussie Company"
+    }
+  ],
+  "/blog-details/bad-credit-can-cost-you-money-here-s-why": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-correct-an-error-on-your-credit-report",
+      "type": "cross-category",
+      "anchor": "How To Correct An Error On Your Credit Report"
+    },
+    {
+      "target": "/blog-details/enhance-credit-report-5-steps-to-repair-your-credit-file",
+      "type": "orphan-fix",
+      "anchor": "Enhance Credit Report 5 Steps To Repair Your Credit File"
+    }
+  ],
+  "/blog-details/bad-credit-car-buying-tips-how-to-secure-a-loan": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/establish-good-credit-habits-for-long-term-financial-success",
+      "type": "orphan-fix",
+      "anchor": "Establish Good Credit Habits For Long Term Financial Success"
+    }
+  ],
+  "/blog-details/bad-credit-fix-secret-how-to-achieve-a-750-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/fix-credit-file-fast-bad-credit-repair-tips",
+      "type": "orphan-fix",
+      "anchor": "Fix Credit File Fast Bad Credit Repair Tips"
+    }
+  ],
+  "/blog-details/bad-credit-how-long-does-it-stay-on-record-in-australia": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-does-a-young-person-build-credit-in-australia-a-comprehensive-guide",
+      "type": "cross-category",
+      "anchor": "How Does A Young Person Build Credit In Australia A Comprehensive Guide"
+    },
+    {
+      "target": "/blog-details/fix-credit-quickly-top-strategies-for-fast-credit-repair",
+      "type": "orphan-fix",
+      "anchor": "Fix Credit Quickly Top Strategies For Fast Credit Repair"
+    }
+  ],
+  "/blog-details/bad-credit-loans-how-to-get-a-loan-with-bad-credit": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/fix-my-credit-common-mistakes-to-avoid-for-good-credit-repair",
+      "type": "orphan-fix",
+      "anchor": "Fix My Credit Common Mistakes To Avoid For Good Credit Repair"
+    }
+  ],
+  "/blog-details/bad-credit-repair-loans-how-to-improve-your-credit-and-secure-financing-in-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/fix-my-credit-diy-vs-professional-help-for-credit-repair",
+      "type": "orphan-fix",
+      "anchor": "Fix My Credit Diy Vs Professional Help For Credit Repair"
+    }
+  ],
+  "/blog-details/bankruptcy-on-your-credit-report-should-you-remove-it": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/checking-your-credit-score-14-things-you-shouldn-t-overlook",
+      "type": "cross-category",
+      "anchor": "Checking Your Credit Score 14 Things You Shouldn T Overlook"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/fix-my-credit-how-long-does-it-take-to-improve-credit-score",
+      "type": "orphan-fix",
+      "anchor": "Fix My Credit How Long Does It Take To Improve Credit Score"
+    }
+  ],
+  "/blog-details/best-credit-card-to-build-credit-score-in-australia-for-2024": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/fix-my-credit-score-top-credit-repair-services-in-australia",
+      "type": "orphan-fix",
+      "anchor": "Fix My Credit Score Top Credit Repair Services In Australia"
+    }
+  ],
+  "/blog-details/best-credit-cards-for-poor-credit-score-in-2024": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/fix-my-credit-what-are-the-top-credit-repair-services-to-fix-my-credit-fast",
+      "type": "orphan-fix",
+      "anchor": "Fix My Credit What Are The Top Credit Repair Services To Fix My Credit Fast"
+    }
+  ],
+  "/blog-details/best-credit-cards-to-build-credit-for-young-adults": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/what-is-the-best-way-for-young-adults-to-build-credit",
+      "type": "cross-category",
+      "anchor": "What Is The Best Way For Young Adults To Build Credit"
+    },
+    {
+      "target": "/blog-details/fix-your-bad-credit-and-change-your-financial-future",
+      "type": "orphan-fix",
+      "anchor": "Fix Your Bad Credit And Change Your Financial Future"
+    }
+  ],
+  "/blog-details/best-credit-repair-australia-how-it-works": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/fix-your-credit-history-and-get-ready-for-the-holidays",
+      "type": "orphan-fix",
+      "anchor": "Fix Your Credit History And Get Ready For The Holidays"
+    }
+  ],
+  "/blog-details/best-credit-repair-australia-how-to-choose-the-right-firm": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/fix-your-credit-score-easy-steps-to-improve-your-credit",
+      "type": "orphan-fix",
+      "anchor": "Fix Your Credit Score Easy Steps To Improve Your Credit"
+    }
+  ],
+  "/blog-details/best-practices-for-managing-credit-card-debt-effectively": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-use-a-credit-card-responsibly",
+      "type": "cross-category",
+      "anchor": "How To Use A Credit Card Responsibly"
+    },
+    {
+      "target": "/blog-details/fixing-bad-credit-and-building-good-credit-essential-steps",
+      "type": "orphan-fix",
+      "anchor": "Fixing Bad Credit And Building Good Credit Essential Steps"
+    }
+  ],
+  "/blog-details/boost-your-credit-score-a-comprehensive-guide": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/fixing-credit-after-a-divorce-steps-to-financial-recovery",
+      "type": "orphan-fix",
+      "anchor": "Fixing Credit After A Divorce Steps To Financial Recovery"
+    }
+  ],
+  "/blog-details/buy-now-pay-later-your-credit-rating-what-you-need-to-know": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/start-fixing-your-credit-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "Start Fixing Your Credit A Step By Step Guide"
+    },
+    {
+      "target": "/blog-details/fixing-your-credit-file-to-own-your-life-again",
+      "type": "orphan-fix",
+      "anchor": "Fixing Your Credit File To Own Your Life Again"
+    }
+  ],
+  "/blog-details/can-a-credit-repair-company-helps-create-a-decent-credit-report": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/the-benefits-of-a-good-credit-report-why-your-score-matters",
+      "type": "cross-category",
+      "anchor": "The Benefits Of A Good Credit Report Why Your Score Matters"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/fixing-your-credit-score-before-an-emergency-what-to-know",
+      "type": "orphan-fix",
+      "anchor": "Fixing Your Credit Score Before An Emergency What To Know"
+    }
+  ],
+  "/blog-details/can-credit-repair-in-australia-help-you-reclaim-your-financial-future": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/does-canceling-a-credit-card-affect-your-credit-score",
+      "type": "cross-category",
+      "anchor": "Does Canceling A Credit Card Affect Your Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/guide-to-credit-repair-without-fuss-steps-to-boost-score",
+      "type": "orphan-fix",
+      "anchor": "Guide To Credit Repair Without Fuss Steps To Boost Score"
+    }
+  ],
+  "/blog-details/can-you-get-a-car-loan-with-bad-credit-in-australia": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/start-fixing-your-credit-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "Start Fixing Your Credit A Step By Step Guide"
+    },
+    {
+      "target": "/blog-details/have-bad-credit-get-credit-repair-help-identity-protection",
+      "type": "orphan-fix",
+      "anchor": "Have Bad Credit Get Credit Repair Help Identity Protection"
+    }
+  ],
+  "/blog-details/cheapest-way-to-fix-my-credit-affordable-solutions": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-use-a-credit-card-responsibly",
+      "type": "cross-category",
+      "anchor": "How To Use A Credit Card Responsibly"
+    },
+    {
+      "target": "/blog-details/hidden-connection-between-credit-score-insurance-premiums",
+      "type": "orphan-fix",
+      "anchor": "Hidden Connection Between Credit Score Insurance Premiums"
+    }
+  ],
+  "/blog-details/check-how-credit-repair-is-essential-for-small-business-owners": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/how-can-i-fix-my-credit-score-in-australia",
+      "type": "orphan-fix",
+      "anchor": "How Can I Fix My Credit Score In Australia"
+    }
+  ],
+  "/blog-details/checking-your-credit-score-14-things-you-shouldn-t-overlook": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/how-do-credit-repairs-in-australia-work",
+      "type": "orphan-fix",
+      "anchor": "How Do Credit Repairs In Australia Work"
+    }
+  ],
+  "/blog-details/common-credit-score-myths-debunked-what-you-need-to-know": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/how-is-your-credit-score-calculated",
+      "type": "orphan-fix",
+      "anchor": "How Is Your Credit Score Calculated"
+    }
+  ],
+  "/blog-details/connection-between-your-credit-score-employment-opportunities": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/how-medical-bills-can-affect-your-credit-score-what-to-do",
+      "type": "orphan-fix",
+      "anchor": "How Medical Bills Can Affect Your Credit Score What To Do"
+    }
+  ],
+  "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report": [
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "up-link",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/blog-details/how-public-records-affect-your-credit-score-financial-health",
+      "type": "orphan-fix",
+      "anchor": "How Public Records Affect Your Credit Score Financial Health"
+    },
+    {
+      "target": "/blog-details/how-serious-is-a-credit-infringement-on-your-financial-health",
+      "type": "orphan-fix",
+      "anchor": "How Serious Is A Credit Infringement On Your Financial Health"
+    },
+    {
+      "target": "/blog-details/how-shopping-impacts-your-credit-score-what-you-need-to-know",
+      "type": "orphan-fix",
+      "anchor": "How Shopping Impacts Your Credit Score What You Need To Know"
+    }
+  ],
+  "/blog-details/credit-file-errors-how-to-repair-them-effectively": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/how-to-avoid-debt-trap-practical-tips-for-financial-stability",
+      "type": "orphan-fix",
+      "anchor": "How To Avoid Debt Trap Practical Tips For Financial Stability"
+    }
+  ],
+  "/blog-details/credit-file-fix-think-no-one-can-help-think-again": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/fix-bad-credit-in-perth-a-comprehensive-guide",
+      "type": "cross-category",
+      "anchor": "Fix Bad Credit In Perth A Comprehensive Guide"
+    },
+    {
+      "target": "/blog-details/how-to-build-a-good-credit-score-from-scratch",
+      "type": "orphan-fix",
+      "anchor": "How To Build A Good Credit Score From Scratch"
+    }
+  ],
+  "/blog-details/credit-file-repair-reasons-to-dispute-items-on-credit-report": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/how-to-deal-with-bad-credit-steps-to-improve-your-score",
+      "type": "orphan-fix",
+      "anchor": "How To Deal With Bad Credit Steps To Improve Your Score"
+    }
+  ],
+  "/blog-details/credit-fix-6-key-reasons-you-should-discuss-your-credit": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/start-fixing-your-credit-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "Start Fixing Your Credit A Step By Step Guide"
+    },
+    {
+      "target": "/blog-details/how-to-dispute-inaccuracies-on-your-credit-report-best-guide",
+      "type": "orphan-fix",
+      "anchor": "How To Dispute Inaccuracies On Your Credit Report Best Guide"
+    }
+  ],
+  "/blog-details/credit-repair-darwin": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/what-is-a-good-credit-score",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/how-to-establish-a-credit-score",
+      "type": "orphan-fix",
+      "anchor": "How To Establish A Credit Score"
+    }
+  ],
+  "/blog-details/credit-repair-do-you-really-need-it": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/does-canceling-a-credit-card-affect-your-credit-score",
+      "type": "cross-category",
+      "anchor": "Does Canceling A Credit Card Affect Your Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/how-to-fix-my-bad-credit-score-of-530",
+      "type": "orphan-fix",
+      "anchor": "How To Fix My Bad Credit Score Of 530"
+    }
+  ],
+  "/blog-details/credit-repair-expertise-guide-to-australian-credit-solutions": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/how-to-fix-the-wordpress-white-screen-of-death-wsod",
+      "type": "orphan-fix",
+      "anchor": "How To Fix The Wordpress White Screen Of Death Wsod"
+    }
+  ],
+  "/blog-details/credit-repair-for-millennials-the-guide-to-boost-your-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/how-to-fix-your-credit-rating-in-15-simple-steps",
+      "type": "orphan-fix",
+      "anchor": "How To Fix Your Credit Rating In 15 Simple Steps"
+    }
+  ],
+  "/blog-details/credit-repair-hobart": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/what-is-a-good-credit-score",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/how-to-fix-your-credit-report-and-pay-off-credit-cards",
+      "type": "orphan-fix",
+      "anchor": "How To Fix Your Credit Report And Pay Off Credit Cards"
+    }
+  ],
+  "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/the-benefits-of-good-credit-score-when-buying-a-home",
+      "type": "cross-category",
+      "anchor": "The Benefits Of Good Credit Score When Buying A Home"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/how-to-fix-your-credit-report-learn-with-our-free-guide",
+      "type": "orphan-fix",
+      "anchor": "How To Fix Your Credit Report Learn With Our Free Guide"
+    }
+  ],
+  "/blog-details/credit-repair-in-australia-separating-myths-from-facts": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/how-to-increase-upload-size-in-wordpress-4-easy-methods",
+      "type": "orphan-fix",
+      "anchor": "How To Increase Upload Size In Wordpress 4 Easy Methods"
+    }
+  ],
+  "/blog-details/credit-repair-melbourne-getting-the-road-to-better-credit": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/fix-bad-credit-score-how-to-get-a-card-after-bankruptcy",
+      "type": "cross-category",
+      "anchor": "Fix Bad Credit Score How To Get A Card After Bankruptcy"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/how-to-increase-your-credit-score-in-one-month",
+      "type": "orphan-fix",
+      "anchor": "How To Increase Your Credit Score In One Month"
+    }
+  ],
+  "/blog-details/credit-repair-perth": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/what-is-a-good-credit-score",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/how-to-remove-a-negative-mark-on-your-credit-report-in-australia-a-comprehensive-guide",
+      "type": "orphan-fix",
+      "anchor": "How To Remove A Negative Mark On Your Credit Report In Australia A Comprehensive Guide"
+    }
+  ],
+  "/blog-details/credit-repair-process-how-credit-repair-lawyers-can-help": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/how-to-remove-negative-items-from-your-credit-report-legally",
+      "type": "orphan-fix",
+      "anchor": "How To Remove Negative Items From Your Credit Report Legally"
+    }
+  ],
+  "/blog-details/credit-repair-strategies-for-a-quick-boost-to-your-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/how-to-use-rich-snippets-in-wordpress-a-beginners-guide",
+      "type": "orphan-fix",
+      "anchor": "How To Use Rich Snippets In Wordpress A Beginners Guide"
+    }
+  ],
+  "/blog-details/credit-repair-vs-credit-counselling-get-the-key-differences": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/how-you-may-be-damaging-your-credit-without-realizing-it",
+      "type": "orphan-fix",
+      "anchor": "How You May Be Damaging Your Credit Without Realizing It"
+    }
+  ],
+  "/blog-details/credit-report-check-how-to-find-out-if-someone-accessed-it": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-your-credit-score-affects-car-loan-approval-in-australia",
+      "type": "orphan-fix",
+      "anchor": "How Your Credit Score Affects Car Loan Approval In Australia"
+    }
+  ],
+  "/blog-details/credit-report-problems-quick-solutions-to-fix-errors-fast": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-use-rich-snippets-in-wordpress-a-beginner-s-guide",
+      "type": "cross-category",
+      "anchor": "How To Use Rich Snippets In Wordpress A Beginner S Guide"
+    },
+    {
+      "target": "/blog-details/impact-of-identity-theft-on-your-credit-score-how-to-protect-it",
+      "type": "orphan-fix",
+      "anchor": "Impact Of Identity Theft On Your Credit Score How To Protect It"
+    }
+  ],
+  "/blog-details/credit-report-red-flags-that-can-terrify-lenders": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-use-a-credit-card-responsibly",
+      "type": "cross-category",
+      "anchor": "How To Use A Credit Card Responsibly"
+    },
+    {
+      "target": "/blog-details/impact-of-late-payments-on-your-credit-score-things-to-know",
+      "type": "orphan-fix",
+      "anchor": "Impact Of Late Payments On Your Credit Score Things To Know"
+    }
+  ],
+  "/blog-details/debt-consolidation-vs-credit-repair-what-s-the-difference": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/is-there-really-a-free-credit-score-check-online",
+      "type": "cross-category",
+      "anchor": "Is There Really A Free Credit Score Check Online"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/important-credit-repair-tips-to-teach-our-kids",
+      "type": "orphan-fix",
+      "anchor": "Important Credit Repair Tips To Teach Our Kids"
+    }
+  ],
+  "/blog-details/debunking-credit-repair-scams-how-to-spot-and-avoid-fraud": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/improving-your-credit-score-without-taking-on-new-debt",
+      "type": "orphan-fix",
+      "anchor": "Improving Your Credit Score Without Taking On New Debt"
+    }
+  ],
+  "/blog-details/divorce-and-your-credit-score-key-things-you-should-know": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/is-your-credit-report-accurate-common-credit-errors-to-avoid",
+      "type": "orphan-fix",
+      "anchor": "Is Your Credit Report Accurate Common Credit Errors To Avoid"
+    }
+  ],
+  "/blog-details/does-being-late-on-rent-affect-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/is-your-credit-score-affecting-your-life-fix-it-today",
+      "type": "orphan-fix",
+      "anchor": "Is Your Credit Score Affecting Your Life Fix It Today"
+    }
+  ],
+  "/blog-details/does-betting-affect-your-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/is-your-credit-score-good-3-reasons-to-check-it-now",
+      "type": "orphan-fix",
+      "anchor": "Is Your Credit Score Good 3 Reasons To Check It Now"
+    }
+  ],
+  "/blog-details/does-canceling-a-credit-card-affect-your-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/is-your-credit-score-holding-you-back-discover-how-we-can-help-with-default-removal",
+      "type": "orphan-fix",
+      "anchor": "Is Your Credit Score Holding You Back Discover How We Can Help With Default Removal"
+    }
+  ],
+  "/blog-details/does-consolidating-debt-hurt-credit-score-in-australia": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/legal-credit-repair-advice-for-australians-improve-score",
+      "type": "orphan-fix",
+      "anchor": "Legal Credit Repair Advice For Australians Improve Score"
+    }
+  ],
+  "/blog-details/does-making-minimum-payments-hurt-your-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/loans-for-bad-credit-best-options-to-choose-rebuild-score",
+      "type": "orphan-fix",
+      "anchor": "Loans For Bad Credit Best Options To Choose Rebuild Score"
+    }
+  ],
+  "/blog-details/does-novated-lease-affect-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/loans-for-bad-credit-how-to-get-approved-with-low-credit-score",
+      "type": "orphan-fix",
+      "anchor": "Loans For Bad Credit How To Get Approved With Low Credit Score"
+    }
+  ],
+  "/blog-details/does-online-shopping-affect-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/mastering-financial-freedom-how-to-improve-your-credit-score",
+      "type": "orphan-fix",
+      "anchor": "Mastering Financial Freedom How To Improve Your Credit Score"
+    }
+  ],
+  "/blog-details/duration-of-a-bad-credit-rating-in-australia-recovery-steps": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/start-fixing-your-credit-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "Start Fixing Your Credit A Step By Step Guide"
+    },
+    {
+      "target": "/blog-details/mistakes-that-can-hurt-your-credit-score-how-to-avoid-them",
+      "type": "orphan-fix",
+      "anchor": "Mistakes That Can Hurt Your Credit Score How To Avoid Them"
+    }
+  ],
+  "/blog-details/easy-credit-repair-with-this-leading-aussie-company": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/need-credit-repair-how-to-increase-your-credit-score-fast",
+      "type": "orphan-fix",
+      "anchor": "Need Credit Repair How To Increase Your Credit Score Fast"
+    }
+  ],
+  "/blog-details/enhance-credit-report-5-steps-to-repair-your-credit-file": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/checking-your-credit-score-14-things-you-shouldn-t-overlook",
+      "type": "cross-category",
+      "anchor": "Checking Your Credit Score 14 Things You Shouldn T Overlook"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/no-credit-check-car-loans-understanding-your-options-with-bad-credit",
+      "type": "orphan-fix",
+      "anchor": "No Credit Check Car Loans Understanding Your Options With Bad Credit"
+    }
+  ],
+  "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report": [
+    {
+      "target": "/equifax-default-removal-australia",
+      "type": "up-link",
+      "anchor": "Equifax Default Removal Australia"
+    },
+    {
+      "target": "/blog-details/number-1-credit-repair-service-find-the-best-solution",
+      "type": "orphan-fix",
+      "anchor": "Number 1 Credit Repair Service Find The Best Solution"
+    },
+    {
+      "target": "/blog-details/protect-credit-score-expert-tips-from-australian-credit-lawyers",
+      "type": "orphan-fix",
+      "anchor": "Protect Credit Score Expert Tips From Australian Credit Lawyers"
+    },
+    {
+      "target": "/blog-details/rebuilding-bad-credit-6-best-practices-for-improvement",
+      "type": "orphan-fix",
+      "anchor": "Rebuilding Bad Credit 6 Best Practices For Improvement"
+    }
+  ],
+  "/blog-details/establish-good-credit-habits-for-long-term-financial-success": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-use-a-credit-card-responsibly",
+      "type": "cross-category",
+      "anchor": "How To Use A Credit Card Responsibly"
+    },
+    {
+      "target": "/blog-details/rebuilding-financial-health-repair-credit-score-with-us",
+      "type": "orphan-fix",
+      "anchor": "Rebuilding Financial Health Repair Credit Score With Us"
+    }
+  ],
+  "/blog-details/fix-a-bad-credit-score-the-quickest-and-easiest-way": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/understanding-the-basics-of-credit-repair-a-beginner-s-guide",
+      "type": "cross-category",
+      "anchor": "Understanding The Basics Of Credit Repair A Beginner S Guide"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/relationship-between-income-credit-score-check-now",
+      "type": "orphan-fix",
+      "anchor": "Relationship Between Income Credit Score Check Now"
+    }
+  ],
+  "/blog-details/fix-bad-credit-in-perth-a-comprehensive-guide": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/remove-negative-credit-items-australia-2025",
+      "type": "orphan-fix",
+      "anchor": "Remove Negative Credit Items Australia 2025"
+    }
+  ],
+  "/blog-details/fix-bad-credit-score-how-to-get-a-card-after-bankruptcy": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/how-to-repair-credit-and-get-a-loan-free-credit-repair-tips",
+      "type": "cross-category",
+      "anchor": "How To Repair Credit And Get A Loan Free Credit Repair Tips"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/repair-your-credit-with-australian-credit-solutions-check-now",
+      "type": "orphan-fix",
+      "anchor": "Repair Your Credit With Australian Credit Solutions Check Now"
+    }
+  ],
+  "/blog-details/fix-bad-credit-without-facing-any-problems": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/bad-credit-loans-how-to-get-a-loan-with-bad-credit",
+      "type": "cross-category",
+      "anchor": "Bad Credit Loans How To Get A Loan With Bad Credit"
+    },
+    {
+      "target": "/blog-details/repairing-credit-the-first-step-to-debt-relief",
+      "type": "orphan-fix",
+      "anchor": "Repairing Credit The First Step To Debt Relief"
+    }
+  ],
+  "/blog-details/fix-credit-file-fast-bad-credit-repair-tips": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/role-of-interest-rates-in-credit-repair-financial-recovery",
+      "type": "orphan-fix",
+      "anchor": "Role Of Interest Rates In Credit Repair Financial Recovery"
+    }
+  ],
+  "/blog-details/fix-credit-quickly-top-strategies-for-fast-credit-repair": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/credit-repair-strategies-for-a-quick-boost-to-your-score",
+      "type": "cross-category",
+      "anchor": "Credit Repair Strategies For A Quick Boost To Your Score"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/secured-loan-vs-unsecured-loan-a-comprehensive-guide",
+      "type": "orphan-fix",
+      "anchor": "Secured Loan Vs Unsecured Loan A Comprehensive Guide"
+    }
+  ],
+  "/blog-details/fix-my-credit-common-mistakes-to-avoid-for-good-credit-repair": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-fix-my-credit-score-a-complete-guide-for-starters",
+      "type": "cross-category",
+      "anchor": "How To Fix My Credit Score A Complete Guide For Starters"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/shopify-vs-woocommerce-which-ecommerce-platform-is-best",
+      "type": "orphan-fix",
+      "anchor": "Shopify Vs Woocommerce Which Ecommerce Platform Is Best"
+    }
+  ],
+  "/blog-details/fix-my-credit-diy-vs-professional-help-for-credit-repair": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/the-basics-of-credit-scores-what-you-need-to-know",
+      "type": "orphan-fix",
+      "anchor": "The Basics Of Credit Scores What You Need To Know"
+    }
+  ],
+  "/blog-details/fix-my-credit-how-long-does-it-take-to-improve-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/the-connection-between-debt-consolidation-and-credit-repair",
+      "type": "orphan-fix",
+      "anchor": "The Connection Between Debt Consolidation And Credit Repair"
+    }
+  ],
+  "/blog-details/fix-my-credit-score-top-credit-repair-services-in-australia": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/the-fastest-way-to-fix-your-credit-score-expert-tips-here",
+      "type": "orphan-fix",
+      "anchor": "The Fastest Way To Fix Your Credit Score Expert Tips Here"
+    }
+  ],
+  "/blog-details/fix-my-credit-what-are-the-top-credit-repair-services-to-fix-my-credit-fast": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-fix-my-credit-score-a-complete-guide-for-starters",
+      "type": "cross-category",
+      "anchor": "How To Fix My Credit Score A Complete Guide For Starters"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/the-impact-of-student-loans-on-credit-score-financial-health",
+      "type": "orphan-fix",
+      "anchor": "The Impact Of Student Loans On Credit Score Financial Health"
+    }
+  ],
+  "/blog-details/fix-your-bad-credit-and-change-your-financial-future": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/start-fixing-your-credit-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "Start Fixing Your Credit A Step By Step Guide"
+    },
+    {
+      "target": "/blog-details/the-importance-of-monitoring-your-credit-score-regularly",
+      "type": "orphan-fix",
+      "anchor": "The Importance Of Monitoring Your Credit Score Regularly"
+    }
+  ],
+  "/blog-details/fix-your-credit-history-and-get-ready-for-the-holidays": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/bad-credit-loans-how-to-get-a-loan-with-bad-credit",
+      "type": "cross-category",
+      "anchor": "Bad Credit Loans How To Get A Loan With Bad Credit"
+    },
+    {
+      "target": "/blog-details/the-new-way-to-rebuild-your-credit-report-boost-your-score",
+      "type": "orphan-fix",
+      "anchor": "The New Way To Rebuild Your Credit Report Boost Your Score"
+    }
+  ],
+  "/blog-details/fix-your-credit-score-easy-steps-to-improve-your-credit": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/the-pros-cons-of-credit-repair-companies-is-it-worth-it",
+      "type": "orphan-fix",
+      "anchor": "The Pros Cons Of Credit Repair Companies Is It Worth It"
+    }
+  ],
+  "/blog-details/fixing-bad-credit-and-building-good-credit-essential-steps": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-get-a-credit-check-in-australia-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "How To Get A Credit Check In Australia A Step By Step Guide"
+    },
+    {
+      "target": "/blog-details/the-truth-about-credit-repair-hype-or-help",
+      "type": "orphan-fix",
+      "anchor": "The Truth About Credit Repair Hype Or Help"
+    }
+  ],
+  "/blog-details/fixing-credit-after-a-divorce-steps-to-financial-recovery": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-get-a-credit-check-in-australia-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "How To Get A Credit Check In Australia A Step By Step Guide"
+    },
+    {
+      "target": "/blog-details/tips-for-rebuilding-your-credit-score-after-bankruptcy",
+      "type": "orphan-fix",
+      "anchor": "Tips For Rebuilding Your Credit Score After Bankruptcy"
+    }
+  ],
+  "/blog-details/fixing-your-credit-file-to-own-your-life-again": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-identify-errors-in-your-credit-report",
+      "type": "cross-category",
+      "anchor": "How To Identify Errors In Your Credit Report"
+    },
+    {
+      "target": "/blog-details/top-5-credit-repair-companies-in-australia-comprehensive-reviews-comparisons",
+      "type": "orphan-fix",
+      "anchor": "Top 5 Credit Repair Companies In Australia Comprehensive Reviews Comparisons"
+    }
+  ],
+  "/blog-details/fixing-your-credit-score-before-an-emergency-what-to-know": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/top-companies-to-help-fix-your-credit-credit-repair-services",
+      "type": "orphan-fix",
+      "anchor": "Top Companies To Help Fix Your Credit Credit Repair Services"
+    }
+  ],
+  "/blog-details/get-loans-with-bad-credit": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/bad-credit-loans-how-to-get-a-loan-with-bad-credit",
+      "type": "cross-category",
+      "anchor": "Bad Credit Loans How To Get A Loan With Bad Credit"
+    },
+    {
+      "target": "/blog-details/understanding-hard-inquiries-their-effect-on-your-credit-score",
+      "type": "orphan-fix",
+      "anchor": "Understanding Hard Inquiries Their Effect On Your Credit Score"
+    }
+  ],
+  "/blog-details/guide-to-credit-repair-without-fuss-steps-to-boost-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/unlock-financial-freedom-repair-your-credit-score-now",
+      "type": "orphan-fix",
+      "anchor": "Unlock Financial Freedom Repair Your Credit Score Now"
+    }
+  ],
+  "/blog-details/have-bad-credit-get-credit-repair-help-identity-protection": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    },
+    {
+      "target": "/blog-details/what-are-the-current-fees-for-credit-repair-services-in-australia",
+      "type": "orphan-fix",
+      "anchor": "What Are The Current Fees For Credit Repair Services In Australia"
+    }
+  ],
+  "/blog-details/having-bad-credits-why-you-ll-never-succeed": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/start-fixing-your-credit-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "Start Fixing Your Credit A Step By Step Guide"
+    },
+    {
+      "target": "/blog-details/what-does-your-credit-score-start-at",
+      "type": "orphan-fix",
+      "anchor": "What Does Your Credit Score Start At"
+    }
+  ],
+  "/blog-details/hidden-connection-between-credit-score-insurance-premiums": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/what-is-the-highest-credit-score-in-australia",
+      "type": "orphan-fix",
+      "anchor": "What Is The Highest Credit Score In Australia"
+    }
+  ],
+  "/blog-details/how-a-good-credit-score-can-save-you-money-on-loans-more": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/what-is-the-purpose-of-credit-repair",
+      "type": "orphan-fix",
+      "anchor": "What Is The Purpose Of Credit Repair"
+    }
+  ],
+  "/blog-details/how-can-i-fix-my-credit-score-in-australia": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/what-to-do-after-declaring-bankruptcy-a-fresh-start-awaits",
+      "type": "orphan-fix",
+      "anchor": "What To Do After Declaring Bankruptcy A Fresh Start Awaits"
+    }
+  ],
+  "/blog-details/how-can-i-increase-my-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/why-did-my-credit-score-go-down-understanding-the-factors",
+      "type": "orphan-fix",
+      "anchor": "Why Did My Credit Score Go Down Understanding The Factors"
+    }
+  ],
+  "/blog-details/how-do-credit-repairs-in-australia-work": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/does-canceling-a-credit-card-affect-your-credit-score",
+      "type": "cross-category",
+      "anchor": "Does Canceling A Credit Card Affect Your Credit Score"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    },
+    {
+      "target": "/blog-details/why-repairing-credit-score-is-crucial-for-financial-wellness",
+      "type": "orphan-fix",
+      "anchor": "Why Repairing Credit Score Is Crucial For Financial Wellness"
+    }
+  ],
+  "/blog-details/how-does-a-young-person-build-credit-in-australia-a-comprehensive-guide": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/will-paying-off-credit-cards-increase-credit-score",
+      "type": "orphan-fix",
+      "anchor": "Will Paying Off Credit Cards Increase Credit Score"
+    }
+  ],
+  "/blog-details/how-does-credit-score-work": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/blog-details/your-credit-score-is-530-why-not-start-fixing-it-today",
+      "type": "orphan-fix",
+      "anchor": "Your Credit Score Is 530 Why Not Start Fixing It Today"
+    }
+  ],
+  "/blog-details/how-is-your-credit-score-calculated": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/how-medical-bills-can-affect-your-credit-score-what-to-do": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/how-public-records-affect-your-credit-score-financial-health": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/how-serious-is-a-credit-infringement-on-your-financial-health": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-use-rich-snippets-in-wordpress-a-beginner-s-guide",
+      "type": "cross-category",
+      "anchor": "How To Use Rich Snippets In Wordpress A Beginner S Guide"
+    }
+  ],
+  "/blog-details/how-shopping-impacts-your-credit-score-what-you-need-to-know": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/how-to-avoid-debt-trap-practical-tips-for-financial-stability": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-build-a-good-credit-score-from-scratch": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/how-to-correct-an-error-on-your-credit-report": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-deal-with-bad-credit-steps-to-improve-your-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-your-credit-history-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "Repair Your Credit History A Step By Step Guide"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/how-to-dispute-inaccuracies-on-your-credit-report-best-guide": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-establish-a-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/how-to-fix-my-bad-credit-score-of-530": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/how-to-fix-my-credit-score-a-complete-guide-for-starters": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/how-to-fix-the-wordpress-white-screen-of-death-wsod": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-fix-your-credit-rating-in-15-simple-steps": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-fix-your-credit-report-and-pay-off-credit-cards": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-fix-your-credit-report-learn-with-our-free-guide": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-get-a-credit-check-in-australia-a-step-by-step-guide": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-identify-errors-in-your-credit-report": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-increase-upload-size-in-wordpress-4-easy-methods": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-increase-your-credit-score-in-one-month": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/how-to-remove-a-negative-mark-on-your-credit-report-in-australia-a-comprehensive-guide": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/blog-details/how-to-remove-negative-items-from-your-credit-report-legally": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/blog-details/how-to-repair-credit-and-get-a-loan-free-credit-repair-tips": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/fix-bad-credit-score-how-to-get-a-card-after-bankruptcy",
+      "type": "cross-category",
+      "anchor": "Fix Bad Credit Score How To Get A Card After Bankruptcy"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/how-to-repair-your-credit-report-as-a-student": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/blog-details/how-to-use-a-credit-card-responsibly": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-use-rich-snippets-in-wordpress-a-beginner-s-guide": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-to-use-rich-snippets-in-wordpress-a-beginners-guide": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/how-you-may-be-damaging-your-credit-without-realizing-it": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/start-fixing-your-credit-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "Start Fixing Your Credit A Step By Step Guide"
+    }
+  ],
+  "/blog-details/how-your-credit-score-affects-car-loan-approval-in-australia": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/impact-of-identity-theft-on-your-credit-score-how-to-protect-it": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/impact-of-late-payments-on-your-credit-score-things-to-know": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/important-credit-repair-tips-to-teach-our-kids": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/improving-your-credit-score-without-taking-on-new-debt": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/is-there-really-a-free-credit-score-check-online": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/is-your-credit-report-accurate-common-credit-errors-to-avoid": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-correct-an-error-on-your-credit-report",
+      "type": "cross-category",
+      "anchor": "How To Correct An Error On Your Credit Report"
+    }
+  ],
+  "/blog-details/is-your-credit-score-affecting-your-life-fix-it-today": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/is-your-credit-score-good-3-reasons-to-check-it-now": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/is-your-credit-score-holding-you-back-discover-how-we-can-help-with-default-removal": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/legal-credit-repair-advice-for-australians-improve-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/loans-for-bad-credit-best-options-to-choose-rebuild-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/loans-for-bad-credit-how-to-get-approved-with-low-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/mastering-financial-freedom-how-to-improve-your-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/bad-credit-repair-loans-how-to-improve-your-credit-and-secure-financing-in-australia",
+      "type": "cross-category",
+      "anchor": "Bad Credit Repair Loans How To Improve Your Credit And Secure Financing In Australia"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/mistakes-that-can-hurt-your-credit-score-how-to-avoid-them": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/how-to-repair-your-credit-report-as-a-student",
+      "type": "cross-category",
+      "anchor": "How To Repair Your Credit Report As A Student"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/need-credit-repair-how-to-increase-your-credit-score-fast": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/how-to-repair-your-credit-report-as-a-student",
+      "type": "cross-category",
+      "anchor": "How To Repair Your Credit Report As A Student"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/no-credit-check-car-loans-understanding-your-options-with-bad-credit": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/start-fixing-your-credit-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "Start Fixing Your Credit A Step By Step Guide"
+    }
+  ],
+  "/blog-details/number-1-credit-repair-service-find-the-best-solution": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/protect-credit-score-expert-tips-from-australian-credit-lawyers": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/rebuilding-bad-credit-6-best-practices-for-improvement": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-use-a-credit-card-responsibly",
+      "type": "cross-category",
+      "anchor": "How To Use A Credit Card Responsibly"
+    }
+  ],
+  "/blog-details/rebuilding-financial-health-repair-credit-score-with-us": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/relationship-between-income-credit-score-check-now": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/remove-negative-credit-items-australia-2025": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/bad-credit-fix-secret-how-to-achieve-a-750-credit-score",
+      "type": "cross-category",
+      "anchor": "Bad Credit Fix Secret How To Achieve A 750 Credit Score"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/blog-details/repair-your-credit-history-a-step-by-step-guide": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/steps-to-take-after-a-credit-score-drop-a-quick-guide",
+      "type": "cross-category",
+      "anchor": "Steps To Take After A Credit Score Drop A Quick Guide"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/blog-details/repair-your-credit-with-australian-credit-solutions-check-now": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/checking-your-credit-score-14-things-you-shouldn-t-overlook",
+      "type": "cross-category",
+      "anchor": "Checking Your Credit Score 14 Things You Shouldn T Overlook"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/repairing-credit-the-first-step-to-debt-relief": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/checking-your-credit-score-14-things-you-shouldn-t-overlook",
+      "type": "cross-category",
+      "anchor": "Checking Your Credit Score 14 Things You Shouldn T Overlook"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/blog-details/role-of-interest-rates-in-credit-repair-financial-recovery": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/the-benefits-of-good-credit-score-when-buying-a-home",
+      "type": "cross-category",
+      "anchor": "The Benefits Of Good Credit Score When Buying A Home"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/secured-loan-vs-unsecured-loan-a-comprehensive-guide": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/shopify-vs-woocommerce-which-ecommerce-platform-is-best": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-use-rich-snippets-in-wordpress-a-beginner-s-guide",
+      "type": "cross-category",
+      "anchor": "How To Use Rich Snippets In Wordpress A Beginner S Guide"
+    }
+  ],
+  "/blog-details/start-fixing-your-credit-a-step-by-step-guide": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/steps-to-take-after-a-credit-score-drop-a-quick-guide": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/what-covers-a-credit-repair-a-quick-guide",
+      "type": "cross-category",
+      "anchor": "What Covers A Credit Repair A Quick Guide"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/the-basics-of-credit-scores-what-you-need-to-know": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/the-legal-side-of-credit-repair-key-laws-what-you-need-to-know",
+      "type": "cross-category",
+      "anchor": "The Legal Side Of Credit Repair Key Laws What You Need To Know"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/the-benefits-of-a-good-credit-report-why-your-score-matters": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/the-benefits-of-good-credit-score-when-buying-a-home": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/the-best-way-for-young-adults-to-build-credit": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/what-is-the-best-way-for-young-adults-to-build-credit",
+      "type": "cross-category",
+      "anchor": "What Is The Best Way For Young Adults To Build Credit"
+    }
+  ],
+  "/blog-details/the-connection-between-debt-consolidation-and-credit-repair": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-a-good-credit-score-can-save-you-money-on-loans-more",
+      "type": "cross-category",
+      "anchor": "How A Good Credit Score Can Save You Money On Loans More"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/the-fastest-way-to-fix-your-credit-score-expert-tips-here": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/the-impact-of-student-loans-on-credit-score-financial-health": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/understanding-the-basics-of-credit-repair-a-beginner-s-guide",
+      "type": "cross-category",
+      "anchor": "Understanding The Basics Of Credit Repair A Beginner S Guide"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/the-importance-of-monitoring-your-credit-score-regularly": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/the-legal-side-of-credit-repair-key-laws-what-you-need-to-know": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/blog-details/the-new-way-to-rebuild-your-credit-report-boost-your-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/the-pros-cons-of-credit-repair-companies-is-it-worth-it": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/the-truth-about-credit-repair-hype-or-help": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/what-is-a-good-credit-score",
+      "type": "cross-category",
+      "anchor": "What Is A Good Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/tips-for-rebuilding-your-credit-score-after-bankruptcy": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/top-5-credit-repair-companies-in-australia-comprehensive-reviews-comparisons": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/top-companies-to-help-fix-your-credit-credit-repair-services": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report",
+      "type": "cross-category",
+      "anchor": "Equifax Default Removal How To Remove Defaults From Your Credit Report"
+    }
+  ],
+  "/blog-details/understanding-hard-inquiries-their-effect-on-your-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/understanding-the-basics-of-credit-repair-a-beginner-s-guide": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/unlock-financial-freedom-repair-your-credit-score-now": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/what-are-the-current-fees-for-credit-repair-services-in-australia": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward",
+      "type": "cross-category",
+      "anchor": "Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward"
+    },
+    {
+      "target": "/default-removal-services-australia",
+      "type": "cross-category",
+      "anchor": "Default Removal Services Australia"
+    }
+  ],
+  "/blog-details/what-covers-a-credit-repair-a-quick-guide": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-can-i-increase-my-credit-score",
+      "type": "cross-category",
+      "anchor": "How Can I Increase My Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/what-damages-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/what-does-your-credit-score-start-at": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/what-is-a-good-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/debt-consolidation-vs-credit-repair-what-s-the-difference",
+      "type": "cross-category",
+      "anchor": "Debt Consolidation Vs Credit Repair What S The Difference"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/what-is-the-best-way": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/what-is-the-best-way-for-young-adults-to-build-credit": [
+    {
+      "target": "/faq",
+      "type": "up-link",
+      "anchor": "Faq"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    }
+  ],
+  "/blog-details/what-is-the-highest-credit-score-in-australia": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/what-is-the-purpose-of-credit-repair": [
+    {
+      "target": "/get-credit-repair",
+      "type": "up-link",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/is-there-really-a-free-credit-score-check-online",
+      "type": "cross-category",
+      "anchor": "Is There Really A Free Credit Score Check Online"
+    },
+    {
+      "target": "/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report",
+      "type": "cross-category",
+      "anchor": "Credit File Defaults Can An Unreceived Bill Appear On Your Report"
+    }
+  ],
+  "/blog-details/what-s-an-excellent-credit-score-understanding-credit-ratings": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/credit-repair-in-australia-can-help-you-buy-a-home-or-car",
+      "type": "cross-category",
+      "anchor": "Credit Repair In Australia Can Help You Buy A Home Or Car"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/what-to-do-after-declaring-bankruptcy-a-fresh-start-awaits": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/how-to-use-rich-snippets-in-wordpress-a-beginner-s-guide",
+      "type": "cross-category",
+      "anchor": "How To Use Rich Snippets In Wordpress A Beginner S Guide"
+    }
+  ],
+  "/blog-details/why-did-my-credit-score-go-down-understanding-the-factors": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repairing-your-credit-isn-t-working-here-s-what-to-do-next",
+      "type": "cross-category",
+      "anchor": "Repairing Your Credit Isn T Working Here S What To Do Next"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/why-repairing-credit-score-is-crucial-for-financial-wellness": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/understanding-the-basics-of-credit-repair-a-beginner-s-guide",
+      "type": "cross-category",
+      "anchor": "Understanding The Basics Of Credit Repair A Beginner S Guide"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/will-credit-fixing-improve-your-finances": [
+    {
+      "target": "/blogs",
+      "type": "up-link",
+      "anchor": "Blogs"
+    },
+    {
+      "target": "/get-credit-repair",
+      "type": "cross-category",
+      "anchor": "Get Credit Repair"
+    },
+    {
+      "target": "/blog-details/start-fixing-your-credit-a-step-by-step-guide",
+      "type": "cross-category",
+      "anchor": "Start Fixing Your Credit A Step By Step Guide"
+    }
+  ],
+  "/blog-details/will-paying-off-credit-cards-increase-credit-score": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/understanding-the-basics-of-credit-repair-a-beginner-s-guide",
+      "type": "cross-category",
+      "anchor": "Understanding The Basics Of Credit Repair A Beginner S Guide"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ],
+  "/blog-details/your-credit-score-is-530-why-not-start-fixing-it-today": [
+    {
+      "target": "/credit-score",
+      "type": "up-link",
+      "anchor": "Credit Score"
+    },
+    {
+      "target": "/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad",
+      "type": "cross-category",
+      "anchor": "Repair Or Not To Repair Fixing Credit Report When It S Bad"
+    },
+    {
+      "target": "/our-services",
+      "type": "cross-category",
+      "anchor": "Our Services"
+    }
+  ]
+}

@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -117,7 +119,7 @@ export default function DivorceCreditRepairPage() {
                 <p className="text-base text-gray-600">
                   Don&apos;t let a messy breakup destroy your financial future.
                   When relationships end badly, credit files often get trashed.
-                  We specialise in credit repair after divorce - helping you
+                  We <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> specialise in credit repair after divorce - helping you
                   dispute incorrect defaults, unauthorised debts, and joint
                   account disasters your ex left behind.
                 </p>
@@ -178,7 +180,7 @@ export default function DivorceCreditRepairPage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterForm
+        <FooterForm
                 heading="Get My Free Divorce Credit Assessment"
                 subheading="Confidential & Sensitive"
                 paragraph="Find out if unfair credit listings from your relationship breakdown can be disputed – free, fast, and completely confidential."
@@ -212,19 +214,19 @@ export default function DivorceCreditRepairPage() {
       <Section title="Don't let unfair credit listings keep your ex controlling your financial life">
         <p>
           Right, let&apos;s be brutally honest here – divorce and separation can
-          absolutely destroy your credit file, and it&apos;s happening to more
+          <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link> absolutely destroy your credit file, and it&apos;s happening to more
           Aussies than ever.
         </p>
         <p className="mt-4">
           The stats don&apos;t lie: nearly 1 in 2 Australian marriages end in
-          divorce, and unfortunately, many of those don&apos;t end on good
+          divorce, and unfortunately, many of those don&apos;t end <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> on good
           terms. When relationships go toxic, your credit often becomes
           collateral damage.
         </p>
         <p className="mt-4">
           Maybe your ex stopped paying their half of joint bills out of spite.
           Maybe they forged your signature on accounts you never knew existed.
-          Maybe they left you with defaults on utilities, phone bills, or credit
+  <Link href="/credit-repair-melbourne" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Melbourne</Link>         Maybe they left you with defaults on utilities, phone bills, or credit
           cards that were supposed to be their responsibility.
         </p>
         <p className="mt-4">
@@ -474,6 +476,8 @@ export default function DivorceCreditRepairPage() {
           </Testimonial>
         </motion.div>
       </Section>
+
+      <RelatedBlock currentSlug="/credit-repair-after-divorce-or-separation" heading="Related services & guides" />
 
       {/* Why Choose Us */}
       <Section title="Why Choose Us for Credit Repair After Divorce">

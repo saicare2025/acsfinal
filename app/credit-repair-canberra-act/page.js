@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -91,20 +93,20 @@ export default function CreditRepairCanberraACTPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Fix Bad Credit Canberra - Public Service, Parliament & Professional Finance Experts
+                  Fix Bad Credit Canberra - <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> Public Service, Parliament & Professional Finance Experts
                 </p>
 
                 <p className="text-base text-gray-600">
                   Struggling with bad credit in Australia&apos;s capital? Your government career deserves premium
                   finance. Whether you&apos;re a public servant in Barton, a contractor at Parliament House, a diplomat in
-                  Yarralumla, or a professional in the Canberra Centre, bad credit shouldn&apos;t limit your capital city
+  <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link>                 Yarralumla, or a professional in the Canberra Centre, bad credit shouldn&apos;t limit your capital city
                   dreams.
                 </p>
 
                 <p className="text-base text-gray-600">
                   At Australian Credit Solutions, we&apos;re not just another credit repair ACT company. We&apos;re Canberra&apos;s
                   credit repair specialists who understand the unique advantages of capital city living. Our credit repair
-                  services Canberra ACT have helped hundreds of government workers, contractors, and professionals
+  <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link>                 services Canberra ACT have helped hundreds of government workers, contractors, and professionals
                   improve credit score Canberra outcomes.
                 </p>
               </div>
@@ -118,7 +120,7 @@ export default function CreditRepairCanberraACTPage() {
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-blue">
-                  📞 Call 0489 265 737 now for your free Canberra credit assessment.
+                  📞 Call 0489 265 737 <Link href="/credit-enquiry-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal Australia</Link> now for your free Canberra credit assessment.
                 </p>
               </div>
 
@@ -185,7 +187,8 @@ export default function CreditRepairCanberraACTPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/credit-repair-canberra-act" heading="Related services & guides" />
+        <FooterForm
                 heading="Get My Free Canberra Government Credit Assessment"
                 subheading="Fast & Confidential"
                 paragraph="Find out how to leverage your government career for premium finance – free, fast, and confidential."

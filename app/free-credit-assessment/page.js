@@ -5,6 +5,8 @@ import PremiumTestimonialCarousel from '../../components/homepage/Testmonials'
 import CTASection from '../../components/homepage/CTA'
 import { generateMinimalStructuredData } from '../../utils/generateMinimalStructuredData'
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 const page = () => {
   // Generate structured data for this page
   const structuredData = generateMinimalStructuredData({

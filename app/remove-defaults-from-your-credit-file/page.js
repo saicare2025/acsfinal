@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -96,21 +98,21 @@ export default function RemoveDefaultsFromYourCreditFilePage() {
                   <p className="text-lg font-bold text-red-700">
                     ✅ 98% Success Rate When We Take Your Case<br/>
                     ✅ Award-Winning 3 Years Running<br/>
-                    ✅ No Win No Fee Guarantee<br/>
+        <Link href="/equifax-default-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Equifax Default Removal Australia</Link>             ✅ No Win No Fee Guarantee<br/>
                     ✅ Get Approved for Loans Again
                   </p>
                 </div>
 
                 <p className="text-base text-gray-600">
-                  Every day you wait, your chances of loan approval slip further away. Defaults are automatically destroying your financial future - but there&apos;s a proven solution.
+                  Every day you wait, your chances of loan approval slip further <Link href="/blog-details/credit-repair-perth" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Perth</Link> away. Defaults are automatically destroying your financial future - but there&apos;s a proven solution.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Banks automatically reject applications with defaults. When you do get approved, expect 8-15% rates instead of premium 3-5% rates. Defaults stay visible for 5 full years, even after you&apos;ve paid them off.
+                  Banks automatically reject applications with defaults. When you do get approved, expect 8-15% rates instead <Link href="/blog-details/credit-repair-process-how-credit-repair-lawyers-can-help" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Process How Credit Repair Lawyers Can Help</Link> of premium 3-5% rates. Defaults stay visible for 5 full years, even after you&apos;ve paid them off.
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🔥 The Real Cost Example:</p>
+                  <p className="text-sm font-bold text-blue-800 mb-3">🔥 The <Link href="/blog-details/credit-repair-vs-credit-counselling-get-the-key-differences" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Vs Credit Counselling Get The Key Differences</Link> Real Cost Example:</p>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="bg-red-100 p-3 rounded">
                       <p className="font-bold text-red-700 mb-2">With Defaults:</p>
@@ -231,7 +233,8 @@ export default function RemoveDefaultsFromYourCreditFilePage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/remove-defaults-from-your-credit-file" heading="Related services & guides" />
+        <FooterForm
                 heading="⚡ Free Assessment"
                 subheading="Find out if we can remove your defaults from your credit file"
                 paragraph="Join 855+ Australians who got their financial freedom back with our award-winning service. Call 0489 265 737"

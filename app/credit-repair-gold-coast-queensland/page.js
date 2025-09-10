@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -97,7 +99,7 @@ export default function CreditRepairGoldCoastPage() {
                 </p>
 
                 <p className="text-base text-blue font-semibold">
-                  📞 Gold Coast Credit Emergency Line: 0489 265 737
+                  📞 Gold Coast <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> Credit Emergency Line: 0489 265 737
                 </p>
 
                 
@@ -158,7 +160,8 @@ export default function CreditRepairGoldCoastPage() {
 
             {/* Right Form with Arrow */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterForm
+                      <RelatedBlock currentSlug="/credit-repair-gold-coast-queensland" heading="Related services & guides" />
+        <FooterForm
                 heading="Get My Free Gold Coast Credit Assessment"
                 subheading="Fast & Confidential"
                 paragraph="Find out how we can unlock your Gold Coast lifestyle – free, fast, and confidential."
@@ -186,7 +189,7 @@ export default function CreditRepairGoldCoastPage() {
       {/* Opening Section */}
       <Section title="The Gold Coast Credit Crisis (Your Ticket to Paradise)">
         <p>
-          Gold Coast median house price: $780,000 and climbing like a high-rise.
+          Gold Coast median house <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link> price: $780,000 and climbing like a high-rise.
         </p>
         <p className="mt-4">
           With perfect credit (750+ score): 2.9% home loan = $3,260/month
@@ -196,7 +199,7 @@ export default function CreditRepairGoldCoastPage() {
           <strong className="text-red-600">THE DIFFERENCE: $1,960 MORE every single month = $705,600 extra over 30 years</strong>
         </p>
         <p className="mt-4">
-          That&apos;s not just money. That&apos;s your beachside retirement. Your kids&apos; coastal childhood. Your financial paradise.
+          That&apos;s not just money. That&apos;s your <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> beachside retirement. Your kids&apos; coastal childhood. Your financial paradise.
         </p>
         <p className="mt-4">
           <strong>Why Gold Coast Residents Are Racing to Fix Their Credit:</strong>
@@ -262,7 +265,7 @@ export default function CreditRepairGoldCoastPage() {
       {/* What We Remove */}
       <Section title="Gold Coast Credit Problems We Demolish">
         <p className="text-slate-700">
-          From Surfers Paradise to Currumbin, we&apos;ve removed defaults that beachside dreams are made of.
+          From Surfers Paradise to Currumbin, we&apos;ve <Link href="/fix-my-credit-now" className="text-blue-600 hover:text-blue-800 underline">Fix My Credit Now</Link> removed defaults that beachside dreams are made of.
         </p>
         <motion.div
           variants={staggerChildren}

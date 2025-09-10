@@ -16,6 +16,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -83,7 +85,7 @@ export default function CreditRepairCarFinancePage() {
                 </p>
                 <p className="text-base text-gray-600">
                   We remove defaults, fix payment history errors, and clean
-                  credit files across Equifax, Experian and Illion so you can
+                  credit <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> files across Equifax, Experian and Illion so you can
                   shop with confidence.
                 </p>
               </div>
@@ -143,7 +145,7 @@ export default function CreditRepairCarFinancePage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterForm
+        <FooterForm
                 heading="Get My Free Car Finance Assessment"
                 subheading="Fast & Confidential"
                 paragraph="Find out what we can fix for your car finance approval – free, fast, and confidential."
@@ -178,20 +180,20 @@ export default function CreditRepairCarFinancePage() {
         <p>
           Right mate, let's talk straight – getting your car finance knocked
           back because of bad credit is a bloody nightmare. You need wheels –
-          for work, family, and life. But every time you apply for decent car
+   <a href="/blog-details/credit-repair-strategies-for-a-quick-boost-to-your-score" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Strategies For A Quick Boost To Your Score</a>        for work, family, and life. But every time you apply for decent car
           finance, you get the dreaded “computer says no”.
         </p>
         <p className="mt-4">
           Here's what most Aussies don't know: heaps of the credit problems that
           kill car finance applications can actually be fixed. We're talking
-          defaults applied without proper notice, system stuff-ups creating late
+        <a href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</a>   defaults applied without proper notice, system stuff-ups creating late
           marks, dodgy dealer enquiries, and payment histories that are just
           plain wrong.
         </p>
         <p className="mt-4">
           Australian Credit Solutions specialises in credit repair for car
           finance approvals across Australia. Three years of industry awards and
-          a 98% success rate when we take cases. We only work on files where we
+         <a href="/credit-enquiry-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal Australia</a>  a 98% success rate when we take cases. We only work on files where we
           genuinely reckon we can help you get that car loan sorted – fast.
         </p>
       </Section>
@@ -393,6 +395,8 @@ export default function CreditRepairCarFinancePage() {
           </Testimonial>
         </motion.div>
       </Section>
+
+      <RelatedBlock currentSlug="/credit-repair-for-car-finance" heading="Related services & guides" />
 
       {/* Why Choose Us */}
       <Section title="Why choose us for car‑finance credit repair">

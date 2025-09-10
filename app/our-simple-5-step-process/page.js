@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -92,20 +94,20 @@ export default function OurSimple5StepProcessPage() {
               <div className="mt-6 space-y-4">
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                   <p className="text-lg font-semibold text-green-800">
-                    Life happens. We get it. That&apos;s why our process starts with understanding, not judgment.
+                    Life happens. We get it. That&apos;s <Link href="/" className="text-blue-600 hover:text-blue-800 underline"></Link> why our process starts with understanding, not judgment.
                   </p>
                 </div>
 
                 <p className="text-base text-gray-600">
-                  Whether it&apos;s a missed payment during a family crisis, a business that didn&apos;t work out, or simply falling behind during tough times – we&apos;ve heard every story. And we&apos;ve helped thousands of Australians just like you get their financial lives back on track.
+                  Whether it&apos;s a missed payment during a family crisis, a business that didn&apos;t work out, or simply falling behind during <Link href="/blog-details/credit-file-errors-how-to-repair-them-effectively" className="text-blue-600 hover:text-blue-800 underline">Credit File Errors How To Repair Them Effectively</Link> tough times – we&apos;ve heard every story. And we&apos;ve helped thousands of Australians just like you get their financial lives back on track.
                 </p>
 
                 <p className="text-base text-gray-700 font-semibold">
-                  Here&apos;s exactly how we do it:
+                  Here&apos;s exactly <Link href="/blog-details/credit-file-fix-think-no-one-can-help-think-again" className="text-blue-600 hover:text-blue-800 underline">Credit File Fix Think No One Can Help Think Again</Link> how we do it:
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🔄 Our 5-Step Process:</p>
+                  <p className="text-sm font-bold text-blue-800 mb-3">🔄 Our <Link href="/blog-details/credit-file-repair-reasons-to-dispute-items-on-credit-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Repair Reasons To Dispute Items On Credit Report</Link> 5-Step Process:</p>
                   <div className="grid grid-cols-1 md:grid-cols-5 gap-3 text-sm text-blue-700">
                     <div className="text-center">
                       <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2 font-bold">1</div>
@@ -232,7 +234,8 @@ export default function OurSimple5StepProcessPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/our-simple-5-step-process" heading="Related services & guides" />
+        <FooterForm
                 heading="Ready to Start Your Journey to Financial Freedom?"
                 subheading="The process is simple. The results are life-changing."
                 paragraph="60-second form, same-day response, no obligation. Thousands of Australians have gone from credit rejection to loan approval using our proven 5-step process."

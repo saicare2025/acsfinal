@@ -14,6 +14,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 
 
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 export default function Home() {
   // FAQ data for structured data (common credit repair questions)
   const faqData = [
@@ -75,20 +77,20 @@ export default function Home() {
           <div className="mb-8 space-y-4 text-gray-700">
             <p>
               Theoretically, the higher the credit rating you have, the better
-              it is to be. However, there&apos;s more to your credit rating than just
+              it is to be. However, there&apos;s <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> more to your credit rating than just
               a number-and this can be difficult for some people to understand.
             </p>
             <p>
               Your credit rating is a number that measures how reliable you are
               when it comes repayment or not being late on repayments in
-              comparison with other people who take out similar type of loans
+              comparison with <a href="/repair-your-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">Repair Your Credit Score Australia</a> other people who take out similar type of loans
               and financial products. This score will then determine what
               interest rate they charge you when borrowing money from them.
             </p>
             <p>
               To fix bad credit in Melbourne, you should first understand what&apos;s
               in your credit file. After all, if you don&apos;t know what&apos;s impacting
-              your credit rating, there&apos;s no way for you to identify the
+   <a href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</a>            your credit rating, there&apos;s no way for you to identify the
               problems and work toward a solution.
             </p>
           </div>
@@ -105,7 +107,7 @@ export default function Home() {
             </ul>
             <p className="mt-4">
               These three things constitute up to 95% of your rating! If these
-              areas are less than ideal where they should be good, it might take
+              areas are less <a href="/credit-enquiry-removal" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal</a> than ideal where they should be good, it might take
               some time and patience to repair them.
             </p>
           </div>
@@ -347,6 +349,9 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
+      
+      <RelatedBlock currentSlug="/credit-repair-melbourne" heading="Related services & guides" />
+      
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -541,7 +546,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
+        <Footer />
     </main>
   );
 }

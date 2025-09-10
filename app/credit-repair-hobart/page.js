@@ -12,6 +12,8 @@ import Link from "next/link";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // ✅ SEO Metadata for Hobart Credit Repair
 
 export default function Home() {
@@ -24,7 +26,7 @@ export default function Home() {
     serviceType: "Credit Repair Services Hobart"
   });
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex max-w-7xl mx-auto min-h-screen flex-col">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -36,7 +38,7 @@ export default function Home() {
       <ReviewsWidget/>
       <VideoServicesSection />
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className=" px-4 sm:px-6">
           {/* Question 1 */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-[#0668a5] mb-4">
@@ -47,7 +49,7 @@ export default function Home() {
                 Your credit score is calculated differently by different credit
                 scoring agencies. If your credit report reveals scores out of
                 1,200, a score of 853 or higher is considered exceptional, while
-                a score of 661 or higher is deemed decent. If your credit report
+                <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> a score of 661 or higher is deemed decent. If your credit report
                 shows scores on a scale of 1,000, anything above 690 is
                 considered exceptional, and anything above 540 is considered
                 good.
@@ -72,7 +74,7 @@ export default function Home() {
                     </h3>
                     <p>
                       Annualcreditreport.com is an excellent resource. Examine
-                      it for mistakes to file a challenge or dispute with the
+                      it for <a href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</a> mistakes to file a challenge or dispute with the
                       reporting agencies:
                     </p>
                     <ul className="pl-5 mt-2 space-y-1 list-disc">
@@ -82,7 +84,7 @@ export default function Home() {
                     </ul>
                     <p className="mt-2">
                       If you spot any, it&apos;s a relatively simple process to
-                      dispute those errors and have them removed.
+         <a href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</a>              dispute those errors and have them removed.
                     </p>
                   </div>
                 </div>
@@ -98,7 +100,7 @@ export default function Home() {
                     <p>
                       A history of late payments might hurt your credit score,
                       which can affect how much you pay for loans and how often
-                      you&apos;re approved. When things go wrong, instead of giving
+                    <a href="/default-removal-services-australia" className="text-blue-600 hover:text-blue-800 underline">Default Removal Services Australia</a>   you&apos;re approved. When things go wrong, instead of giving
                       up, keep an eye on things and make appropriate changes as
                       needed.
                     </p>
@@ -311,6 +313,9 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
+      
+      <RelatedBlock currentSlug="/credit-repair-hobart" heading="Related services & guides" />
+      
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -505,7 +510,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
+        <Footer />
     </main>
   );
 }

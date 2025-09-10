@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -92,13 +94,13 @@ export default function CreditRepairRegionalNSWPage() {
               <div className="mt-6 space-y-4">
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                   <p className="text-lg font-semibold text-green-800">
-                    🍷 Missing out on Orange wine region opportunities? Can&apos;t get Wagga Wagga agricultural finance? Tamworth Country Music Festival business blocked by bad credit?
+                    🍷 Missing out on Orange wine region opportunities? Can&apos;t get <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> Wagga Wagga agricultural finance? Tamworth Country Music Festival business blocked by bad credit?
                   </p>
                 </div>
 
                 <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
                   <p className="text-lg font-semibold text-yellow-800">
-                    Regional NSW&apos;s wine country, agriculture, and country music economy deserves better credit solutions. We&apos;re here to unlock your country dreams.
+                    Regional NSW&apos;s wine country, agriculture, and country music economy <Link href="/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward" className="text-blue-600 hover:text-blue-800 underline">Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward</Link> deserves better credit solutions. We&apos;re here to unlock your country dreams.
                   </p>
                 </div>
 
@@ -107,10 +109,10 @@ export default function CreditRepairRegionalNSWPage() {
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🌾 Regional NSW&apos;s Unique Opportunities We Unlock:</p>
+                  <p className="text-sm font-bold text-blue-800 mb-3">🌾 Regional NSW&apos;s <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> Unique Opportunities We Unlock:</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-blue-700">
                     <div>
-                      <p className="font-semibold">🍷 Orange Wine Region</p>
+                      <p className="font-semibold">🍷 Orange <Link href="/credit-enquiry-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal Australia</Link> Wine Region</p>
                       <p className="text-xs">Vineyard expansion, cellar door tourism</p>
                     </div>
                     <div>
@@ -225,7 +227,8 @@ export default function CreditRepairRegionalNSWPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/credit-repair-regional-nsw" heading="Related services & guides" />
+        <FooterForm
                 heading="Ready to Claim Your Regional NSW Country Life?"
                 subheading="From Orange wine regions to Wagga Wagga agricultural dreams"
                 paragraph="Free Regional NSW assessment, no obligation. Call 0489 265 737 or complete our 60-second form. Your country lifestyle fresh start begins today."

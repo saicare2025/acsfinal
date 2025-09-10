@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -91,20 +93,20 @@ export default function CreditRepairDarwinNTPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Remove Defaults Fast in Darwin - Mining, Defence & Tourism Finance Experts
+                  Remove Defaults Fast in Darwin <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> - Mining, Defence & Tourism Finance Experts
                 </p>
 
                 <p className="text-base text-gray-600">
                   Struggling with bad credit in Darwin? You&apos;re not alone. Whether you&apos;re a mining contractor waiting
                   for your next FIFO rotation, a defence personnel member trying to buy your first home, or a tourism
-                  worker dealing with seasonal income challenges, defaults and bad credit don&apos;t have to destroy your
+ <Link href="/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward" className="text-blue-600 hover:text-blue-800 underline">Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward</Link>                  worker dealing with seasonal income challenges, defaults and bad credit don&apos;t have to destroy your
                   Top End dreams.
                 </p>
 
                 <p className="text-base text-gray-600">
                   At Australian Credit Solutions, we&apos;re not just another credit repair company. We&apos;re Darwin&apos;s credit repair
                   specialists who understand the unique financial challenges of living in Australia&apos;s resource capital.
-                  For three years running (2022, 2023, 2024), we&apos;ve been recognised as industry leaders with a 98%
+      <Link href="/equifax-default-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Equifax Default Removal Australia</Link>             For three years running (2022, 2023, 2024), we&apos;ve been recognised as industry leaders with a 98%
                   success rate when we take your case.
                 </p>
               </div>
@@ -118,7 +120,7 @@ export default function CreditRepairDarwinNTPage() {
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-blue">
-                  📞 Call 0489 265 737 now for your free Darwin credit assessment.
+                  📞 Call 0489 265 737 <Link href="/credit-enquiry-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal Australia</Link> now for your free Darwin credit assessment.
                 </p>
               </div>
 
@@ -185,7 +187,8 @@ export default function CreditRepairDarwinNTPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/south-australia-credit-repair" heading="Related services & guides" />
+        <FooterForm
                 heading="Get My Free Darwin Top End Credit Assessment"
                 subheading="Fast & Confidential"
                 paragraph="Find out how to leverage your FIFO, defence, or tourism career for premium finance – free, fast, and confidential."

@@ -1,0 +1,1105 @@
+﻿<!DOCTYPE html>
+
+
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+```
+<!-- Primary Meta Tags -->
+<title>No Win No Fee Credit Repair Australia | 100% Risk-Free Guarantee | Pay Only If We Win</title>
+<meta name="description" content="Australia's only genuine No Win No Fee credit repair service. Pay nothing unless we remove your defaults and fix your bad credit. 98% success rate, transparent pricing, zero risk. Call 0489 265 737.">
+<meta name="keywords" content="no win no fee credit repair, risk free credit repair, no win no fee australia, credit repair guarantee, pay only if we win, risk free default removal">
+
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.australiancreditsolutions.com.au/no-win-no-fee-credit-repair">
+
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.australiancreditsolutions.com.au/no-win-no-fee-credit-repair">
+<meta property="og:title" content="No Win No Fee Credit Repair | 100% Risk-Free | Pay Only If We Win">
+<meta property="og:description" content="Australia's only genuine No Win No Fee credit repair. Pay nothing unless we remove your defaults. 98% success rate, transparent pricing, zero risk guarantee.">
+<meta property="og:image" content="https://www.australiancreditsolutions.com.au/images/no-win-no-fee-og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Australian Credit Solutions">
+<meta property="og:locale" content="en_AU">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.australiancreditsolutions.com.au/no-win-no-fee-credit-repair">
+<meta name="twitter:title" content="No Win No Fee Credit Repair | 100% Risk-Free | Australia's Trusted Guarantee">
+<meta name="twitter:description" content="Pay nothing unless we remove your defaults. Australia's only genuine No Win No Fee credit repair with 98% success rate.">
+<meta name="twitter:image" content="https://www.australiancreditsolutions.com.au/images/no-win-no-fee-twitter-card.jpg">
+
+
+<!-- Additional Meta -->
+<meta name="author" content="Australian Credit Solutions">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="30 days">
+<meta name="geo.region" content="AU">
+<meta name="geo.placename" content="Australia">
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .guarantee-banner {
+        background: linear-gradient(45deg, #28a745, #20c997);
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-weight: bold;
+        font-size: 18px;
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .hero {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f8f9fa" width="1200" height="600"/><text x="600" y="280" text-anchor="middle" fill="%23666" font-size="28" font-family="Arial">No Win No Fee Guarantee</text><text x="600" y="320" text-anchor="middle" fill="%23666" font-size="18" font-family="Arial">Pay Only If We Successfully Remove Your Defaults</text></svg>');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        font-weight: 900;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        line-height: 1.1;
+    }
+    
+    .hero .guarantee-highlight {
+        background: linear-gradient(45deg, #FFD700, #FFA500);
+        color: #333;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        font-weight: 800;
+        display: inline-block;
+        margin-bottom: 30px;
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    .hero .subtitle {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        margin-bottom: 40px;
+        color: #E8F5E8;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .risk-free-box {
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        border-radius: 20px;
+        padding: 40px;
+        margin: 40px auto;
+        max-width: 700px;
+        border: 3px solid #28a745;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+    
+    .risk-free-box h2 {
+        color: #28a745;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .risk-free-box .big-text {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .phone-cta {
+        display: inline-block;
+        background: linear-gradient(45deg, #28a745, #20c997);
+        color: white;
+        padding: 20px 40px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 50px;
+        margin: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    }
+    
+    .phone-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(40, 167, 69, 0.6);
+    }
+    
+    .form-cta {
+        display: inline-block;
+        background: linear-gradient(45deg, #007bff, #0056b3);
+        color: white;
+        padding: 20px 40px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 50px;
+        margin: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+    }
+    
+    .form-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 123, 255, 0.6);
+    }
+    
+    .guarantee-breakdown {
+        background: white;
+        padding: 80px 0;
+    }
+    
+    .guarantee-breakdown h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 50px;
+        color: #333;
+    }
+    
+    .breakdown-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 50px;
+    }
+    
+    .breakdown-item {
+        text-align: center;
+        padding: 40px 30px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        border: 3px solid transparent;
+    }
+    
+    .breakdown-item:hover {
+        transform: translateY(-10px);
+        border-color: #28a745;
+    }
+    
+    .breakdown-item .icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(45deg, #28a745, #20c997);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    .breakdown-item h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .breakdown-item p {
+        color: #666;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    .pricing-transparency {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 80px 0;
+    }
+    
+    .pricing-transparency h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 50px;
+    }
+    
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .pricing-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease;
+    }
+    
+    .pricing-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .pricing-card h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #FFD700;
+    }
+    
+    .pricing-card .amount {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: white;
+    }
+    
+    .pricing-card .description {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        opacity: 0.9;
+    }
+    
+    .pricing-card .features {
+        list-style: none;
+        text-align: left;
+    }
+    
+    .pricing-card .features li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        padding-left: 30px;
+    }
+    
+    .pricing-card .features li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #28a745;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+    .trust-section {
+        background: #f8f9fa;
+        padding: 80px 0;
+    }
+    
+    .trust-section h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .trust-subtitle {
+        text-align: center;
+        font-size: 1.3rem;
+        color: #666;
+        margin-bottom: 50px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+    
+    .trust-item {
+        text-align: center;
+        padding: 30px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-top: 5px solid #28a745;
+    }
+    
+    .trust-item .number {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: #28a745;
+        margin-bottom: 15px;
+        display: block;
+    }
+    
+    .trust-item h4 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .trust-item p {
+        color: #666;
+        font-size: 1rem;
+    }
+    
+    .comparison-section {
+        background: white;
+        padding: 80px 0;
+    }
+    
+    .comparison-section h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 50px;
+        color: #333;
+    }
+    
+    .comparison-table {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+    
+    .comparison-table table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .comparison-table th {
+        background: linear-gradient(45deg, #28a745, #20c997);
+        color: white;
+        padding: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    
+    .comparison-table td {
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        font-size: 1.1rem;
+    }
+    
+    .comparison-table .us {
+        background: #f8fff8;
+        font-weight: bold;
+        color: #28a745;
+    }
+    
+    .comparison-table .them {
+        background: #fff8f8;
+        color: #dc3545;
+    }
+    
+    .guarantee-form {
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+        padding: 80px 0;
+    }
+    
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 50px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .form-container h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .form-container .form-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        opacity: 0.9;
+    }
+    
+    .form-group {
+        margin-bottom: 25px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: white;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        background: white;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+    
+    .submit-btn {
+        width: 100%;
+        background: linear-gradient(45deg, #FFD700, #FFA500);
+        color: #333;
+        padding: 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+    }
+    
+    .testimonials {
+        background: #f8f9fa;
+        padding: 80px 0;
+    }
+    
+    .testimonials h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 50px;
+        color: #333;
+    }
+    
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+    }
+    
+    .testimonial {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-left: 5px solid #28a745;
+        position: relative;
+    }
+    
+    .testimonial .quote-mark {
+        position: absolute;
+        top: -10px;
+        left: 30px;
+        font-size: 4rem;
+        color: #28a745;
+        opacity: 0.3;
+    }
+    
+    .testimonial .quote {
+        font-size: 1.2rem;
+        font-style: italic;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: #333;
+    }
+    
+    .testimonial .author {
+        font-weight: bold;
+        color: #28a745;
+        font-size: 1.1rem;
+    }
+    
+    .testimonial .outcome {
+        margin-top: 15px;
+        padding: 15px;
+        background: #f8fff8;
+        border-radius: 10px;
+        color: #28a745;
+        font-weight: bold;
+    }
+    
+    .final-guarantee {
+        background: linear-gradient(45deg, #28a745, #20c997);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .final-guarantee h2 {
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .final-guarantee .guarantee-text {
+        font-size: 1.4rem;
+        margin-bottom: 40px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.7;
+    }
+    
+    .guarantee-badge {
+        background: #FFD700;
+        color: #333;
+        padding: 30px;
+        border-radius: 20px;
+        display: inline-block;
+        margin: 20px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2rem;
+        }
+        
+        .guarantee-highlight {
+            font-size: 1.2rem !important;
+            padding: 10px 20px !important;
+        }
+        
+        .phone-cta,
+        .form-cta {
+            display: block;
+            margin: 10px 0;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+        }
+        
+        .risk-free-box {
+            padding: 30px 20px;
+        }
+        
+        .breakdown-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .pricing-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .comparison-table {
+            overflow-x: auto;
+        }
+        
+        .testimonial-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .floating-guarantee {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: linear-gradient(45deg, #FFD700, #FFA500);
+        color: #333;
+        padding: 15px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        z-index: 1000;
+        animation: pulse 2s infinite;
+        font-size: 0.9rem;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    .schema-scripts {
+        display: none;
+    }
+</style>
+```
+
+
+</head>
+<body>
+    <!-- Guarantee Banner -->
+    <div class="guarantee-banner">
+        ✅ 100% NO WIN NO FEE GUARANTEE ✅ Pay Nothing Unless We Remove Your Defaults - Zero Risk to You
+    </div>
+
+
+```
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>NO WIN NO FEE<br>CREDIT REPAIR</h1>
+        <div class="guarantee-highlight">100% RISK-FREE GUARANTEE</div>
+        <div class="subtitle">
+            Pay absolutely nothing unless we successfully remove your defaults and fix your bad credit. If we don't win, you don't pay. It's that simple.
+        </div>
+        
+        <div class="risk-free-box">
+            <h2>Zero Risk Promise</h2>
+            <div class="big-text">
+                We're so confident in our ability to fix your credit that we'll take all the risk. You only pay our success fee AFTER we remove your defaults.
+            </div>
+            <a href="tel:0489265737" class="phone-cta">📞 CALL NOW: 0489 265 737</a>
+            <a href="#guarantee-form" class="form-cta">✅ START RISK-FREE</a>
+            
+            <div style="margin-top: 25px; font-size: 1.1rem; color: #28a745; font-weight: bold;">
+                ✓ No Upfront Costs ✓ No Hidden Fees ✓ No Risk to You
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Guarantee Breakdown -->
+<section class="guarantee-breakdown">
+    <div class="container">
+        <h2>How Our No Win No Fee Guarantee Works</h2>
+        <div class="breakdown-grid">
+            <div class="breakdown-item">
+                <div class="icon">1</div>
+                <h3>Free Assessment</h3>
+                <p>We analyse your credit file completely free. No charge, no obligation. We identify exactly what's damaging your credit and how we can fix it.</p>
+            </div>
+            
+            <div class="breakdown-item">
+                <div class="icon">2</div>
+                <h3>Admin Fee Only</h3>
+                <p>If we take your case, there's only a one-off admin fee of $330. This covers our costs regardless of outcome. No other upfront charges.</p>
+            </div>
+            
+            <div class="breakdown-item">
+                <div class="icon">3</div>
+                <h3>We Do The Work</h3>
+                <p>Our team works on removing your defaults, late payments, and credit issues. You relax while we handle everything with credit providers.</p>
+            </div>
+            
+            <div class="breakdown-item">
+                <div class="icon">✓</div>
+                <h3>Success Fee When We Win</h3>
+                <p>ONLY when we successfully remove items from your credit file do you pay our success fee. No removal = no success fee. You're protected.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Pricing Transparency -->
+<section class="pricing-transparency">
+    <div class="container">
+        <h2>Transparent Pricing - No Surprises</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Admin Fee</h3>
+                <div class="amount">$330</div>
+                <div class="description">One-off administration fee (applies regardless of outcome)</div>
+                <ul class="features">
+                    <li>Complete credit file analysis</li>
+                    <li>Legal document preparation</li>
+                    <li>Credit provider correspondence</li>
+                    <li>Case management system setup</li>
+                    <li>Progress reports and updates</li>
+                </ul>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Success Fee</h3>
+                <div class="amount">ONLY<br>IF WE WIN</div>
+                <div class="description">Success fee charged only when we remove defaults/items</div>
+                <ul class="features">
+                    <li>Per item successfully removed</li>
+                    <li>No removal = no success fee</li>
+                    <li>Transparent pricing structure</li>
+                    <li>Discussed upfront before we start</li>
+                    <li>Protected by our guarantee</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+            <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; max-width: 600px; margin: 0 auto;">
+                <h3 style="color: #FFD700; font-size: 1.8rem; margin-bottom: 15px;">Our Promise to You</h3>
+                <p style="font-size: 1.2rem;">If we don't remove any defaults or improve your credit file, you pay nothing beyond the small admin fee. We take all the risk so you don't have to.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Trust Indicators -->
+<section class="trust-section">
+    <div class="container">
+        <h2>Why Our Guarantee Is Genuine</h2>
+        <div class="trust-subtitle">
+            We can offer this guarantee because we consistently deliver results. Our track record speaks for itself.
+        </div>
+        
+        <div class="trust-grid">
+            <div class="trust-item">
+                <span class="number">98%</span>
+                <h4>Success Rate</h4>
+                <p>When we take your case, we win 98% of the time</p>
+            </div>
+            
+            <div class="trust-item">
+                <span class="number">855+</span>
+                <h4>Happy Clients</h4>
+                <p>4.9/5 star rating from real clients</p>
+            </div>
+            
+            <div class="trust-item">
+                <span class="number">3</span>
+                <h4>Award Years</h4>
+                <p>Industry excellence 2022, 2023, 2024</p>
+            </div>
+            
+            <div class="trust-item">
+                <span class="number">ASIC</span>
+                <h4>Licensed</h4>
+                <p>Australian Credit License 532003</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Comparison Table -->
+<section class="comparison-section">
+    <div class="container">
+        <h2>Compare Our No Win No Fee Guarantee</h2>
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Australian Credit Solutions</th>
+                        <th>Other Credit Repair Companies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Upfront Fees</strong></td>
+                        <td class="us">Only $330 admin fee</td>
+                        <td class="them">$1,500 - $5,000+ upfront</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Payment if No Results</strong></td>
+                        <td class="us">Pay nothing (beyond admin)</td>
+                        <td class="them">Keep all fees regardless</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Success Rate</strong></td>
+                        <td class="us">98% when we take cases</td>
+                        <td class="them">Often don't disclose</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Guarantee</strong></td>
+                        <td class="us">Genuine No Win No Fee</td>
+                        <td class="them">Money back "guarantees" with conditions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ASIC Licensed</strong></td>
+                        <td class="us">Yes - ACL 532003</td>
+                        <td class="them">Many not licensed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Industry Awards</strong></td>
+                        <td class="us">3 years running (2022-2024)</td>
+                        <td class="them">Rarely awarded</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<!-- Risk-Free Form -->
+<section class="guarantee-form" id="guarantee-form">
+    <div class="container">
+        <div class="form-container">
+            <h2>✅ Start Risk-Free Today</h2>
+            <div class="form-subtitle">
+                Get your free credit assessment with our No Win No Fee guarantee
+            </div>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="credit-issues">What Credit Issues Do You Have?</label>
+                    <select id="credit-issues" name="credit-issues">
+                        <option value="">Select your main concern...</option>
+                        <option value="defaults">Defaults on my credit file</option>
+                        <option value="late-payments">Late payment history</option>
+                        <option value="credit-enquiries">Too many credit enquiries</option>
+                        <option value="low-score">Low credit score</option>
+                        <option value="loan-rejected">Loan applications rejected</option>
+                        <option value="multiple-issues">Multiple credit problems</option>
+                        <option value="not-sure">Not sure - need assessment</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="goals">What's Your Goal?</label>
+                    <select id="goals" name="goals">
+                        <option value="">What do you want to achieve?</option>
+                        <option value="home-loan">Get approved for a home loan</option>
+                        <option value="car-finance">Get car finance</option>
+                        <option value="business-loan">Business loan approval</option>
+                        <option value="credit-cards">Credit card applications</option>
+                        <option value="better-rates">Get better interest rates</option>
+                        <option value="investment">Investment property finance</option>
+                        <option value="clean-credit">Just want clean credit</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="details">Additional Details (Optional)</label>
+                    <textarea id="details" name="details" rows="4" placeholder="Tell us more about your situation or any specific concerns..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">✅ GET RISK-FREE ASSESSMENT</button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 25px; font-size: 0.9rem;">
+                <strong>100% No Win No Fee Guarantee</strong><br>
+                Only $330 admin fee if we take your case. No success = no additional fees.
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Success Stories -->
+<section class="testimonials">
+    <div class="container">
+        <h2>No Win No Fee Success Stories</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <div class="quote-mark">"</div>
+                <div class="quote">
+                    I was skeptical about the No Win No Fee promise, but it's completely genuine. They removed my $3,200 default and I only paid the success fee after it was gone from my credit file. No risk at all.
+                </div>
+                <div class="author">- Emma K, Melbourne</div>
+                <div class="outcome">✅ Result: $3,200 default removed, home loan approved at 3.1%</div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="quote-mark">"</div>
+                <div class="quote">
+                    The $330 admin fee was all I paid upfront. When they couldn't remove one of my defaults, I didn't pay anything extra. But they did remove two others, so I got great value with zero risk.
+                </div>
+                <div class="author">- James R, Brisbane</div>
+                <div class="outcome">✅ Result: 2 out of 3 defaults removed, car finance approved</div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="quote-mark">"</div>
+                <div class="quote">
+                    Best decision I ever made. The No Win No Fee guarantee meant I had nothing to lose. They cleaned my entire credit file and now I'm a property investor. True to their word on every promise.
+                </div>
+                <div class="author">- Sarah T, Perth</div>
+                <div class="outcome">✅ Result: Complete credit file cleanup, 3 investment properties purchased</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Final Guarantee -->
+<section class="final-guarantee">
+    <div class="container">
+        <h2>Our Iron-Clad Guarantee</h2>
+        <div class="guarantee-text">
+            We're the only credit repair company in Australia that offers a genuine No Win No Fee guarantee because we're confident in our ability to deliver results. You have absolutely nothing to lose and everything to gain.
+        </div>
+        
+        <div class="guarantee-badge">
+            100% NO WIN NO FEE
+        </div>
+        
+        <div style="margin-top: 40px;">
+            <a href="tel:0489265737" class="phone-cta">📞 CALL RISK-FREE: 0489 265 737</a>
+        </div>
+        
+        <div style="margin-top: 30px; font-size: 1.1rem;">
+            <strong>Ready to fix your credit with zero risk?</strong><br>
+            Join 855+ Australians who trusted our No Win No Fee guarantee
+        </div>
+    </div>
+</section>
+
+
+<!-- Floating Guarantee Button -->
+<a href="#guarantee-form" class="floating-guarantee">
+    ✅ NO RISK
+</a>
+
+
+<!-- Schema JSON-LD -->
+<div class="schema-scripts">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "No Win No Fee Credit Repair Australia",
+      "description": "Australia's only genuine No Win No Fee credit repair service. Pay nothing unless we remove your defaults and fix your bad credit. 98% success rate, transparent pricing, zero risk.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Australian Credit Solutions",
+        "telephone": "0489265737",
+        "email": "help@australiancreditsolutions.com.au",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "ASIC Australian Credit License",
+          "identifier": "532003"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "serviceType": "No Win No Fee Credit Repair",
+      "category": "Financial Services",
+      "offers": {
+        "@type": "Offer",
+        "name": "No Win No Fee Credit Repair Guarantee",
+        "description": "Pay only $330 admin fee upfront. Success fee only charged when we successfully remove defaults from your credit file.",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "330",
+          "priceCurrency": "AUD",
+          "description": "Administration fee applies regardless of outcome. Success fee only if we win."
+        }
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Guarantee Type",
+          "value": "No Win No Fee"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Success Rate",
+          "value": "98% when we take cases"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "License Number",
+          "value": "ASIC ACL 532003"
+        }
+      ]
+    }
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does No Win No Fee credit repair work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You pay only a $330 admin fee upfront to cover our costs. We then work to remove your defaults and credit issues. Our success fee is only charged AFTER we successfully remove items from your credit file. If we don't remove anything, you pay no success fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if you can't remove my defaults?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If we cannot remove any defaults or improve your credit file, you pay nothing beyond the initial $330 admin fee. This covers our administrative costs but protects you from large fees with no results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the No Win No Fee guarantee genuine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely. We can offer this guarantee because of our 98% success rate when we take cases. We only accept cases where we're confident of success, which protects both you and us."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much is the success fee if you win?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Success fees are discussed transparently upfront before we start work. The amount depends on the complexity and number of items we remove. You'll know exactly what you'll pay if we're successful before agreeing to proceed."
+          }
+        }
+      ]
+    }
+    </script>
+</div>
+```
+
+
+</body>
+</html>

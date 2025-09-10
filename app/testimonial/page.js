@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import MainLayout from "../MainLayout";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 /** Shimmer grid loader while ROMW initializes */
 function RomwGridLoader({ count = 6 }) {
   const items = Array.from({ length: count });

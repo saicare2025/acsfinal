@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -93,15 +95,15 @@ export default function FixMyCreditNowPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-red-700 font-bold">
-                  Tired of waiting? Need results TODAY? Australia&apos;s fastest credit repair specialists fix urgent cases in 1-4 weeks.
+                  Tired of waiting? Need results TODAY? Australia&apos;s <Link href="/" className="text-blue-600 hover:text-blue-800 underline"></Link> fastest credit repair specialists fix urgent cases in 1-4 weeks.
                 </p>
 
                 <p className="text-base text-gray-900 font-semibold">
-                  Don&apos;t let bad credit ruin your opportunities any longer.
+                  Don&apos;t let bad <Link href="/blog-details/bad-credit-borrowers-5-things-you-should-never-do" className="text-blue-600 hover:text-blue-800 underline">Bad Credit Borrowers 5 Things You Should Never Do</Link> credit ruin your opportunities any longer.
                 </p>
 
                 <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-red-800 mb-2">⚡ URGENT SITUATIONS WE HANDLE:</p>
+                  <p className="text-sm font-bold text-red-800 mb-2">⚡ URGENT <Link href="/blog-details/bad-credit-car-buying-tips-how-to-secure-a-loan" className="text-blue-600 hover:text-blue-800 underline">Bad Credit Car Buying Tips How To Secure A Loan</Link> SITUATIONS WE HANDLE:</p>
                   <div className="grid grid-cols-2 gap-2 text-sm text-red-700">
                     <div>🏠 Property settlement deadline</div>
                     <div>🚗 Equipment finance urgent</div>
@@ -113,7 +115,7 @@ export default function FixMyCreditNowPage() {
                 </div>
 
                 <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
-                  <p className="text-xl font-bold text-red-600 mb-2">📞 CALL 0489 265 737</p>
+                  <p className="text-xl font-bold text-red-600 mb-2">📞 CALL <Link href="/blog-details/bad-credit-how-long-does-it-stay-on-record-in-australia" className="text-blue-600 hover:text-blue-800 underline">Bad Credit How Long Does It Stay On Record In Australia</Link> 0489 265 737</p>
                   <p className="text-sm font-medium text-gray-800">✅ Same-Day Assessment • ✅ Priority Processing • ✅ No Extra Urgent Fees</p>
                 </div>
               </div>
@@ -204,7 +206,8 @@ export default function FixMyCreditNowPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/fix-my-credit-now" heading="Related services & guides" />
+        <FooterForm
                 heading="🚨 URGENT CREDIT REPAIR HOTLINE"
                 subheading="Same-Day Assessment • Priority Processing"
                 paragraph="Don’t let another day pass with broken credit. Emergency cases assessed within hours."

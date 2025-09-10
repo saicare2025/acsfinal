@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -116,7 +118,7 @@ export default function FirstHomeBuyerCreditRepairPage() {
                 <p className="text-base text-gray-600">
                   Your first home shouldn&apos;t be impossible because of old
                   credit mistakes. We specialise in credit repair for first home
-                  buyers - getting you ready for First Home Owner Grants, low
+                  buyers <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> - getting you ready for First Home Owner Grants, low
                   deposit loans, and better interest rates. Turn your house
                   dreams into reality.
                 </p>
@@ -177,7 +179,7 @@ export default function FirstHomeBuyerCreditRepairPage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterFormWithSuspense
+        <FooterFormWithSuspense
                 heading="Get My Free First Home Buyer Credit Assessment"
                 subheading="Fast & Confidential"
                 paragraph="Find out if your credit can be fixed for first home ownership – free, fast, and confidential."
@@ -211,7 +213,7 @@ export default function FirstHomeBuyerCreditRepairPage() {
       <Section title="Don't let bad credit kill your first home dreams">
         <p>
           Right, let&apos;s be real here – being a first home buyer in Australia
-          is tough enough without bad credit making it bloody impossible.
+   <Link href="/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward" className="text-blue-600 hover:text-blue-800 underline">Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward</Link>        is tough enough without bad credit making it bloody impossible.
         </p>
         <p className="mt-4">
           House prices are mental, deposits seem impossible to save, and then
@@ -225,7 +227,7 @@ export default function FirstHomeBuyerCreditRepairPage() {
         <p className="mt-4">
           Maybe it&apos;s a default from a phone bill you forgot about at uni.
           Maybe it&apos;s late payment marks from when you were casual and money
-          was tight. Or maybe it&apos;s credit enquiries from when you were
+          <Link href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</Link> was tight. Or maybe it&apos;s credit enquiries from when you were
           desperately trying to get approved for anything and didn&apos;t know
           how much it was hurting your score.
         </p>
@@ -242,7 +244,7 @@ export default function FirstHomeBuyerCreditRepairPage() {
         <p className="mt-4">
           Australian Credit Solutions specialises in credit repair for first
           home buyers across Australia. Three years of industry awards, 98%
-          success rate when we take cases, and we work specifically with first
+    <Link href="/fix-bad-credit-australia" className="text-blue-600 hover:text-blue-800 underline">Fix Bad Credit Australia</Link>       success rate when we take cases, and we work specifically with first
           time buyers to make home ownership achievable.
         </p>
       </Section>
@@ -476,6 +478,8 @@ export default function FirstHomeBuyerCreditRepairPage() {
           </Testimonial>
         </motion.div>
       </Section>
+
+      <RelatedBlock currentSlug="/credit-repair-for-first-home-buyers" heading="Related services & guides" />
 
       {/* Why Choose Us */}
       <Section title="Why Choose Us for First Home Buyer Credit Repair">

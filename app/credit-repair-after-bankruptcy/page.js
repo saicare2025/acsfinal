@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -104,7 +106,7 @@ export default function PostBankruptcyCreditRepairPage() {
 
                 <p className="text-base text-gray-600">
                   Your bankruptcy or debt agreement gave you a fresh start legally - now get your
-                  credit file to match. We specialise in post-bankruptcy credit repair, helping you dispute incorrect listings,
+                  credit file to match. <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> We specialise in post-bankruptcy credit repair, helping you dispute incorrect listings,
                   remove outdated information, and rebuild credit faster than waiting it out.
                 </p>
               </div>
@@ -164,7 +166,7 @@ export default function PostBankruptcyCreditRepairPage() {
 
             {/* Right Form with Arrow */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterForm
+        <FooterForm
                 heading="Get My Free Post-Bankruptcy Assessment"
                 subheading="Fast & Confidential"
                 paragraph="Find out if your credit file can be fixed after bankruptcy – free, fast, and confidential."
@@ -192,16 +194,16 @@ export default function PostBankruptcyCreditRepairPage() {
       <Section title="Don&apos;t let administrative errors rob you of your legal fresh start">
         <p>
           Right, let&apos;s be straight up about this – getting through bankruptcy or a debt agreement takes guts,
-          but rebuilding your credit afterwards feels like an uphill battle.
+ <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link>          but rebuilding your credit afterwards feels like an uphill battle.
         </p>
         <p className="mt-4">
           You&apos;ve done the hard yards. You&apos;ve been through the legal process, dealt with trustees, paid what you
-          could, and got your discharge. The law says you deserve a fresh start, but your credit file is still a bloody
+          could, <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> and got your discharge. The law says you deserve a fresh start, but your credit file is still a bloody
           mess.
         </p>
         <p className="mt-4">
           Maybe there are old debts still showing that should have been cleared by your bankruptcy. Maybe
-          creditors haven&apos;t updated their records properly. Maybe there are defaults and judgments from before
+          creditors haven&apos;t <Link href="/credit-enquiry-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal Australia</Link> updated their records properly. Maybe there are defaults and judgments from before
           your bankruptcy that should be marked differently now.
         </p>
         <p className="mt-4">
@@ -420,6 +422,8 @@ export default function PostBankruptcyCreditRepairPage() {
           </Testimonial>
         </motion.div>
       </Section>
+
+      <RelatedBlock currentSlug="/credit-repair-after-bankruptcy" heading="Related services & guides" />
 
       {/* Why Choose Us */}
       <Section title="Why Choose Us for Post-Bankruptcy Credit Repair">

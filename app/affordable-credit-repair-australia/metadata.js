@@ -1,0 +1,30 @@
+export const metadata = {
+  title: "Affordable Credit Repair Australia | No Win No Fee | Award Winners | 98% Success Rate",
+  description: "Australia's most affordable credit repair service. No Win No Fee guarantee, award winning results. Remove defaults fast, fix bad credit for less. 98% success rate, payment plans available. Call 0489 265 737.",
+  keywords: "affordable credit repair australia, cheap credit repair, low cost default removal, budget credit repair, payment plans credit repair, no win no fee credit repair",
+  canonical: "https://www.australiancreditsolutions.com.au/affordable-credit-repair-australia",
+  openGraph: {
+    type: "website",
+    url: "https://www.australiancreditsolutions.com.au/affordable-credit-repair-australia",
+    title: "Affordable Credit Repair Australia | No Win No Fee | Award Winners Save You Money",
+    description: "Australia's most affordable credit repair service. No Win No Fee guarantee, award winning results. Remove defaults fast, fix bad credit for less. Payment plans available.",
+    image: "https://www.australiancreditsolutions.com.au/images/affordable-credit-repair-australia-og-image.jpg",
+    imageWidth: 1200,
+    imageHeight: 630,
+    siteName: "Australian Credit Solutions",
+    locale: "en_AU",
+  },
+  twitter: {
+    card: "summary_large_image",
+    url: "https://www.australiancreditsolutions.com.au/affordable-credit-repair-australia",
+    title: "Affordable Credit Repair Australia | Cheap Default Removal | No Win No Fee",
+    description: "Australia's most affordable credit repair. Award winners delivering results for less. Payment plans available.",
+    image: "https://www.australiancreditsolutions.com.au/images/affordable-credit-repair-australia-twitter-card.jpg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "revisit-after": "30 days",
+  },
+  author: "Australian Credit Solutions",
+};
