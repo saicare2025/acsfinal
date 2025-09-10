@@ -1,8 +1,12 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+export default {
   siteUrl: 'https://www.australiancreditsolutions.com.au',
   generateRobotsTxt: true,
   changefreq: 'weekly',
@@ -30,7 +34,7 @@ module.exports = {
     ];
 
     // 2. Load blog posts from local JSON
-    const blogFilePath = path.join(process.cwd(), 'data', 'blogs_data.json');
+    const blogFilePath = path.join(__dirname, 'data', 'blogs_data.json');
     const blogData = JSON.parse(fs.readFileSync(blogFilePath, 'utf-8'));
 
     const blogPaths = blogData.map((blog) => ({

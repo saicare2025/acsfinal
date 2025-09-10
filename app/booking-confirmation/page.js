@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -9,6 +10,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import MainLayout from "../MainLayout";
 import PremiumTestimonialCarousel from "../../components/homepage/Testmonials";
+
+import RelatedBlock from "@/app/_seo/RelatedBlock";
 
 const YOUTUBE_VIDEOS = [
   {
@@ -83,7 +86,7 @@ export default function BookingConfirmation() {
                   efficiently.
                 </p>
                 <p className="mt-4 font-medium text-blue-600">
-                  While you wait, explore verified client experiences below.
+                  While you wait, <Link href="/" className="text-blue-600 hover:text-blue-800 underline"></Link> explore verified client experiences below.
                 </p>
               </div>
             </div>
@@ -101,7 +104,7 @@ export default function BookingConfirmation() {
             </h2>
 
             <p className="mx-auto mt-2 max-w-2xl text-center text-gray-600">
-              Watch real clients share their credit repair journeys
+              Watch real clients <Link href="/credit-repair-after-identity-theft-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Repair After Identity Theft Australia</Link> share their credit repair journeys
             </p>
 
             <div className="mt-10 px-2 sm:px-4">
@@ -153,7 +156,7 @@ export default function BookingConfirmation() {
                           {video.title}
                         </h3>
                         <p className="mt-2 text-gray-600">
-                          {video.description}
+                         <Link href="/credit-repair-assistance-australia" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Assistance Australia</Link>  {video.description}
                         </p>
                         <div className="mt-4 flex-1">
                           <a

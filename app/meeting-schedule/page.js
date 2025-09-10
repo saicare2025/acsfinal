@@ -3,6 +3,8 @@
 import Script from "next/script";
 import MainLayout from "../MainLayout";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 export default function MeetingScheduled() {
   return (
     <MainLayout>

@@ -12,6 +12,8 @@ import Link from "next/link";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // ✅ SEO Metadata for Canberra Credit Repair
 
 export default function Home() {
@@ -48,7 +50,7 @@ export default function Home() {
                 whether or not a person can get a loan, an apartment, insurance,
                 phone service - regardless of who they are and what their income
                 might be. Essentially it&apos;s based on your statistical probability
-                of meeting your debt obligations in the past by making on-time
+      <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>           of meeting your debt obligations in the past by making on-time
                 payments and not defaulting on loans. In other words, it&apos;s an
                 expression of how risky it is to lend to you, given our
                 knowledge of you over the years.
@@ -58,7 +60,7 @@ export default function Home() {
                 businesses to use their own funds for investment so that they
                 can create more wealth in the future. And when used responsibly,
                 credit can be an excellent tool for building one&apos;s
-                creditworthiness; our society relies on it also because people
+       <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link>          creditworthiness; our society relies on it also because people
                 need to borrow money to do things such as buy homes or
                 businesses, start new projects, pay off debts; however, just
                 like any other tool, if abused, it can do severe damage!
@@ -77,7 +79,7 @@ export default function Home() {
                 are a high-risk borrower instead of the other way around. Once
                 you fix your credit score in Canberra and get a legitimate,
                 clean credit history, you will have more negotiating leverage in
-                loan agreements and lower interest rates on loans or better
+               <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link>  loan agreements and lower interest rates on loans or better
                 offers from airlines and landlords. And if you continue to keep
                 good standing by paying your bills on time and managing your
                 debt effectively, then securing favorable terms on future
@@ -96,7 +98,7 @@ export default function Home() {
               <p>
                 What you need to know about our service is that it&apos;s a law firm
                 with a team of credit lawyers who specialize in Australian debts
-                and bankruptcy. We understand the intimations of financial
+              <Link href="/credit-enquiry-removal" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal</Link>   and bankruptcy. We understand the intimations of financial
                 difficulties, and we work diligently to protect what you hold
                 dear by upholding your legal rights.
               </p>
@@ -208,6 +210,9 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
+      
+      <RelatedBlock currentSlug="/credit-repair-canberra" heading="Related services & guides" />
+      
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -402,7 +407,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
+        <Footer />
     </main>
   );
 }

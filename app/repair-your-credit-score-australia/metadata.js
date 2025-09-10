@@ -1,0 +1,30 @@
+export const metadata = {
+  title: "Repair Your Credit Score Australia | From Damaged to Excellent | Score Recovery Specialists",
+  description: "Repair your damaged credit score with Australia's specialists. From broken credit to excellent scores. 98% success rate, proven repair methods. Transform your financial future - call 0489 265 737.",
+  keywords: "repair your credit score, credit score repair australia, fix damaged credit score, rebuild credit score, credit score recovery, improve bad credit score australia",
+  canonical: "https://www.australiancreditsolutions.com.au/repair-your-credit-score-australia",
+  openGraph: {
+    type: "website",
+    url: "https://www.australiancreditsolutions.com.au/repair-your-credit-score-australia",
+    title: "Repair Your Credit Score | From Damaged to Excellent | Australia's Specialists",
+    description: "Repair your damaged credit score with Australia's proven specialists. Broken credit to excellent scores. 98% success rate, score recovery experts.",
+    image: "https://www.australiancreditsolutions.com.au/images/repair-credit-score-og-image.jpg",
+    imageWidth: 1200,
+    imageHeight: 630,
+    siteName: "Australian Credit Solutions",
+    locale: "en_AU",
+  },
+  twitter: {
+    card: "summary_large_image",
+    url: "https://www.australiancreditsolutions.com.au/repair-your-credit-score-australia",
+    title: "Repair Your Credit Score | Damaged to Excellent | Recovery Specialists",
+    description: "Repair your damaged credit score with Australia's specialists. Proven repair methods, 98% success rate. Transform broken credit into excellent scores.",
+    image: "https://www.australiancreditsolutions.com.au/images/repair-credit-score-twitter-card.jpg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "revisit-after": "30 days",
+  },
+  author: "Australian Credit Solutions",
+};

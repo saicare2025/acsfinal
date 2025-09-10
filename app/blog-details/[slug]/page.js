@@ -3,6 +3,7 @@ import path from 'path';
 import { JSDOM } from 'jsdom';
 import MainLayout from '../../MainLayout';
 import HeroSection from '../../../components/homepage/HeroSection4';
+import AuthorBio from '../../../components/AuthorBio';
 import Link from 'next/link';
 import BlogStructuredDataClient from '../../../components/BlogStructuredDataClient';
 
@@ -53,6 +54,7 @@ export default async function BlogPostPage({ params }) {
               <span className="text-blue-300">/</span>
               <span className="text-blue-700 font-medium truncate max-w-[60%]">{post.title}</span>
             </nav>
+            <AuthorBio />
 
             <h1 className="text-3xl lg:text-4xl font-bold text-[#035071] mb-6 leading-tight">
               {post.title || 'Untitled'}

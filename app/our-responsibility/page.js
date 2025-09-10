@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -91,11 +93,11 @@ export default function OurResponsibilityPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-red-700 font-semibold">
-                  The system isn&apos;t fair. One stuff-up shouldn&apos;t wreck your life for 5 years.
+                  The system isn&apos;t fair. One <Link href="/" className="text-blue-600 hover:text-blue-800 underline"></Link> stuff-up shouldn&apos;t wreck your life for 5 years.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  We know you&apos;re frustrated. We know you&apos;re cranky. And we know you have every right to feel that way.
+                  We know you&apos;re frustrated. We know you&apos;re cranky. <Link href="/blog-details/can-a-credit-repair-company-helps-create-a-decent-credit-report" className="text-blue-600 hover:text-blue-800 underline">Can A Credit Repair Company Helps Create A Decent Credit Report</Link> And we know you have every right to feel that way.
                 </p>
 
                 <p className="text-base text-gray-600">
@@ -105,7 +107,7 @@ export default function OurResponsibilityPage() {
                 </p>
 
                 <p className="text-lg font-semibold text-gray-900">
-                  It&apos;s not fair. It&apos;s not right. And we&apos;re here to fix it.
+                  It&apos;s not fair. It&apos;s not <Link href="/blog-details/can-credit-repair-in-australia-help-you-reclaim-your-financial-future" className="text-blue-600 hover:text-blue-800 underline">Can Credit Repair In Australia Help You Reclaim Your Financial Future</Link> right. And we&apos;re here to fix it.
                 </p>
               </div>
 
@@ -118,7 +120,7 @@ export default function OurResponsibilityPage() {
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-blue">
-                  📞 Call 0489 265 737 - We genuinely care and we&apos;re here to help
+                  📞 Call 0489 265 737 - <Link href="/blog-details/can-you-get-a-car-loan-with-bad-credit-in-australia" className="text-blue-600 hover:text-blue-800 underline">Can You Get A Car Loan With Bad Credit In Australia</Link> We genuinely care and we&apos;re here to help
                 </p>
               </div>
 
@@ -185,7 +187,8 @@ export default function OurResponsibilityPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/our-responsibility" heading="Related services & guides" />
+        <FooterForm
                 heading="We’re Here to Help You"
                 subheading="Free Assessment & Genuine Care"
                 paragraph="No judgment, no pressure, just honest advice and genuine support for your situation."

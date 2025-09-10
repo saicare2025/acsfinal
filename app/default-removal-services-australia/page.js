@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -100,7 +102,7 @@ export default function DefaultRemovalServicesPage() {
 
                 <p className="text-base text-gray-600">
                   At Australian Credit Solutions, we&apos;ve been removing unfair defaults for Australians since day one. 
-                  We&apos;re not just another credit repair company - we&apos;re the award-winning specialists who&apos;ve earned recognition
+                  We&apos;re not just another credit <a href="/equifax-default-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Equifax Default Removal Australia</a> repair company - we&apos;re the award-winning specialists who&apos;ve earned recognition
                   three years running (2022, 2023, 2024) for getting results when others can&apos;t.
                 </p>
               </div>
@@ -160,7 +162,7 @@ export default function DefaultRemovalServicesPage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterForm
+        <FooterForm
                 heading="Get My Free Default Assessment"
                 subheading="Lightning-Fast Results"
                 paragraph="Find out if your default can be removed – free assessment with same-day response guaranteed."
@@ -318,7 +320,7 @@ export default function DefaultRemovalServicesPage() {
       {/* Types Of Defaults We Remove */}
       <Section title="Types Of Defaults We Remove Daily">
         <p className="text-slate-700">
-          We&apos;ve successfully removed defaults from every major Australian lender and service provider:
+          We&apos;ve successfully removed defaults from <a href="/our-responsibility" className="text-blue-600 hover:text-blue-800 underline">Our Responsibility</a> every major Australian lender and service provider:
         </p>
         <motion.div
           variants={staggerChildren}
@@ -365,7 +367,7 @@ export default function DefaultRemovalServicesPage() {
       {/* What Makes A Default Removable */}
       <Section title="What Makes A Default Removable?">
         <p className="text-slate-700">
-          Not every default can be removed - but you&apos;d be surprised how many can be. We look for:
+          Not every default can be removed - but <a href="/our-simple-5-step-process" className="text-blue-600 hover:text-blue-800 underline">Our Simple 5 Step Process</a> you&apos;d be surprised how many can be. We look for:
         </p>
         <motion.div
           variants={staggerChildren}
@@ -434,6 +436,8 @@ export default function DefaultRemovalServicesPage() {
         </motion.div>
       </Section>
 
+      <RelatedBlock currentSlug="/default-removal-services-australia" heading="Related services & guides" />
+
       {/* Service Options */}
       <Section title="Your Default Removal Options">
         <motion.div
@@ -487,7 +491,7 @@ export default function DefaultRemovalServicesPage() {
       {/* Lightning-Fast Approach */}
       <Section title="Our Lightning-Fast Approach">
         <p className="text-slate-700">
-          While other companies promise results in &quot;4-8 weeks,&quot; we&apos;ve built our reputation on express service. Here&apos;s proof:
+          While other companies promise results in &quot;4-8 <a href="/pay-for-credit-repair-help-australia" className="text-blue-600 hover:text-blue-800 underline">Pay For Credit Repair Help Australia</a> weeks,&quot; we&apos;ve built our reputation on express service. Here&apos;s proof:
         </p>
         <motion.div
           variants={staggerChildren}

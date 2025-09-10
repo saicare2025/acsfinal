@@ -2,6 +2,9 @@
 
 import MainLayout from "../MainLayout";
 
+import Link from "next/link";
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 export default function PrivacyPolicyPage() {
   return (
     <MainLayout>
@@ -18,7 +21,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
                 {sectionContent[idx].map((para, pIdx) => (
                   <p key={pIdx} className="mb-2">
-                    {para}
+                   <Link href="/" className="text-blue-600 hover:text-blue-800 underline"></Link>  {para}
                   </p>
                 ))}
               </section>

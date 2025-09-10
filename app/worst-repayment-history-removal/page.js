@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import FooterForm from "@/components/FooterForm";
@@ -8,6 +9,8 @@ import Footer from "@/components/Footer";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
+
+import RelatedBlock from "@/app/_seo/RelatedBlock";
 
 // Animation variants
 const fadeIn = {
@@ -128,7 +131,7 @@ export default function RHIRemovalPage() {
                 <p className="text-base text-gray-600">
                   Repayment History Information (RHI) shows 24 months of payment
                   patterns that can make or break your credit score. When it&apos;s
-                  wrong or unfair, we know exactly how to get it removed under
+      <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>             wrong or unfair, we know exactly how to get it removed under
                   the Privacy Act 1988.
                 </p>
               </div>
@@ -172,7 +175,7 @@ export default function RHIRemovalPage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterForm />
+        <FooterForm />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
@@ -203,13 +206,13 @@ export default function RHIRemovalPage() {
         <p>
           Most Aussies don&apos;t even know what RHI is until it&apos;s too late. It&apos;s
           basically a detailed month-by-month record of your payment behaviour
-          going back 24 months. Every late payment, every missed payment, every
+    <Link href="/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward" className="text-blue-600 hover:text-blue-800 underline">Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward</Link>       going back 24 months. Every late payment, every missed payment, every
           &quot;current&quot; status – it&apos;s all there for lenders to see.
         </p>
         <p className="mt-4">
           But here&apos;s what really gets us fired up: heaps of repayment history
           information is just plain wrong. We&apos;re talking about payments marked
-          late when you paid on time, system glitches that created false marks,
+          late when you paid on time, system glitches that <Link href="/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report" className="text-blue-600 hover:text-blue-800 underline">Equifax Default Removal How To Remove Defaults From Your Credit Report</Link> created false marks,
           payments during hardship arrangements that got recorded incorrectly,
           or repayment history mistakes across Equifax, Experian, and Illion
           that nobody bothered to fix.
@@ -217,7 +220,7 @@ export default function RHIRemovalPage() {
         <p className="mt-4">
           The good news? Under Australian law, we can dispute and remove
           incorrect or unfair repayment history entries. We help Australians
-          clean up their repayment history under the Privacy Act 1988 and Credit
+ <Link href="/blog-details/does-making-minimum-payments-hurt-your-credit-score" className="text-blue-600 hover:text-blue-800 underline">Does Making Minimum Payments Hurt Your Credit Score</Link>          clean up their repayment history under the Privacy Act 1988 and Credit
           Reporting Code.
         </p>
         <p className="mt-4">
@@ -459,6 +462,8 @@ export default function RHIRemovalPage() {
           </Testimonial>
         </motion.div>
       </Section>
+
+      <RelatedBlock currentSlug="/worst-repayment-history-removal" heading="Related services & guides" />
 
       {/* Why Choose Us */}
       <Section title="Why Choose Us for Repayment History Removal">

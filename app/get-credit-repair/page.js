@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -93,12 +95,12 @@ export default function GetCreditRepairPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Tired of being knocked back for loans? Fair dinkum credit repair specialists who get results, not excuses.
+                  Tired of being knocked back for loans? <a href="/apply-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Apply Credit Repair</a> Fair dinkum credit repair specialists who get results, not excuses.
                 </p>
 
                 <p className="text-base text-gray-600">
                   We&apos;ve helped 855+ Aussies get their financial lives back on track. Home loans, car finance, even mobile 
-                  phone contracts - if you&apos;re getting rejected for everything, we can probably fix it.
+      <a href="/credit-repair-perth" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Perth</a>             phone contracts - if you&apos;re getting rejected for everything, we can probably fix it.
                 </p>
 
                 <p className="text-base text-gray-600">
@@ -116,7 +118,7 @@ export default function GetCreditRepairPage() {
 
               <div className="mt-4">
                 <p className="text-lg font-semibold text-blue">
-                  📞 Call 0489 265 737 - Get your credit sorted, mate!
+                  📞 Call 0489 265 <a href="/credit_repair_sydney" className="text-blue-600 hover:text-blue-800 underline">Credit_repair_sydney</a> 737 - Get your credit sorted, mate!
                 </p>
               </div>
 
@@ -183,7 +185,8 @@ export default function GetCreditRepairPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/get-credit-repair" heading="Related services & guides" />
+        <FooterForm
                 heading="Get Your Credit Sorted Today"
                 subheading="Free Review & Fair Dinkum Advice"
                 paragraph="Find out what we can fix on your credit file – free, fast, and no BS."
@@ -219,7 +222,7 @@ export default function GetCreditRepairPage() {
       <Section title="Sick of Being Knocked Back for Everything?">
         <p className="text-slate-700 mb-6">
           Yeah, we get it mate. Bad credit feels like you&apos;re stuck in a bloody nightmare. Every application gets rejected, 
-          every dream gets crushed. But here&apos;s the thing - most credit problems can actually be fixed.
+  <a href="/credit-repair-darwin" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Darwin</a>         every dream gets crushed. But here&apos;s the thing - most credit problems can actually be fixed.
         </p>
         
         <div className="grid gap-6 lg:grid-cols-2">

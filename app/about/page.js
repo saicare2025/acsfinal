@@ -1,7 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import MainLayout from "../MainLayout";
+
+import RelatedBlock from "@/app/_seo/RelatedBlock";
 
 const aboutPageStructuredData = {
   "@context": "https://schema.org",
@@ -197,12 +200,12 @@ const AboutPage = () => {
                   <p>
                     Australian Credit Solutions is a leading credit repair company dedicated to 
                     helping Australians rebuild their financial future. With expertise in credit 
-                    law and consumer finance, we provide comprehensive solutions to improve credit 
+      <Link href="/" className="text-blue-600 hover:text-blue-800 underline"></Link>               law and consumer finance, we provide comprehensive solutions to improve credit 
                     scores and unlock financial opportunities.
                   </p>
                   <p>
                     Led by Principal Lawyer & Director Elisa Rothschild, our team combines legal 
-                    expertise with practical experience to deliver results for our clients across 
+                   <Link href="/affordable-credit-repair-australia" className="text-blue-600 hover:text-blue-800 underline">Affordable Credit Repair Australia</Link>  expertise with practical experience to deliver results for our clients across 
                     Australia.
                   </p>
                 </div>
@@ -216,8 +219,8 @@ const AboutPage = () => {
                 <div className="space-y-3 text-gray-700">
                   <div>
                     <p className="font-semibold text-gray-800">Elisa Rothschild</p>
-                    <p className="text-sm">Principal Lawyer & Director</p>
-                    <p className="text-sm">Monash University Graduate</p>
+                    <p className="text-sm">Principal Lawyer <Link href="/attorneys-for-credit-repair-australia" className="text-blue-600 hover:text-blue-800 underline">Attorneys For Credit Repair Australia</Link> & Director</p>
+                    <p className="text-sm">Monash <Link href="/australian-credit-lawyers-now-australian-credit-solutions" className="text-blue-600 hover:text-blue-800 underline">Australian Credit Lawyers Now Australian Credit Solutions</Link> University Graduate</p>
                   </div>
                   <p className="text-sm">
                     Specializing in Credit Law, Family Law, Debt Negotiation, and Consumer Finance

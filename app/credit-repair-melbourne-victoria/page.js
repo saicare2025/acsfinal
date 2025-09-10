@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -91,19 +93,19 @@ export default function CreditRepairMelbourneVictoriaPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700 font-semibold">
-                  Get Your Credit Fixed in Melbourne – 98% Success Rate When We Take Your Case
+                  Get Your Credit Fixed in Melbourne <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> – 98% Success Rate When We Take Your Case
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Rejected for a home loan in Melbourne&apos;s competitive property market? Can&apos;t get car finance in Frankston or Dandenong? Default listings destroying your credit score across Melbourne Metro? You&apos;re not alone – and there&apos;s a proven solution.
+                  Rejected for a home loan in Melbourne&apos;s competitive property market? Can&apos;t get car finance in Frankston or <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link> Dandenong? Default listings destroying your credit score across Melbourne Metro? You&apos;re not alone – and there&apos;s a proven solution.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Australian Credit Solutions has helped over 3,000 Melbourne residents remove defaults, fix bad credit, and get approved for finance again. Award-winning specialists. No Win No Fee policy. Licensed professionals.
+                  Australian Credit Solutions has helped over 3,000 Melbourne residents remove defaults, fix bad <Link href="/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report" className="text-blue-600 hover:text-blue-800 underline">Equifax Default Removal How To Remove Defaults From Your Credit Report</Link> credit, and get approved for finance again. Award-winning specialists. No Win No Fee policy. Licensed professionals.
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">✅ Why Melbourne Residents Choose Us:</p>
+                  <p className="text-sm font-bold text-blue-800 mb-3">✅ Why Melbourne <Link href="/how-many-points-hard-inquiry-affect-credit-score" className="text-blue-600 hover:text-blue-800 underline">How Many Points Hard Inquiry Affect Credit Score</Link> Residents Choose Us:</p>
                   <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
                     <div>🏆 3 consecutive industry awards</div>
                     <div>⚡ 98% success rate when we accept cases</div>
@@ -207,7 +209,8 @@ export default function CreditRepairMelbourneVictoriaPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/credit-repair-melbourne-victoria" heading="Related services & guides" />
+        <FooterForm
                 heading="Start My Free Credit Assessment"
                 subheading="Same-Day Assessment for Melbourne Residents"
                 paragraph="Ready to fix your Melbourne credit file? Join over 3,000 Melbourne residents who've unlocked better finance rates. Call Melbourne Direct: 0489 265 737"

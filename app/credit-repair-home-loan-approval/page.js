@@ -16,6 +16,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -68,7 +70,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
                 <p className="text-lg leading-relaxed text-gray-700">
                   Don&amp;apos;t let bad credit kill your home ownership dreams.
                   Our credit repair specialists for home loans know exactly what
-                  mortgage lenders look for. We clean up your credit file fast
+          <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>         mortgage lenders look for. We clean up your credit file fast
                   so you can get approved for the home loan you deserve.
                 </p>
                 <p className="text-base text-gray-600">
@@ -142,7 +144,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
 
             {/* Right Form with Arrow */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterForm />
+        <FooterForm />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>98%
@@ -173,7 +175,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
         <p>
           Right, let&amp;apos;s cut to the chase \u2014 getting knocked back for
           a home loan because of bad credit is absolutely gut-wrenching.
-          You&amp;apos;ve found the perfect house, you&amp;apos;ve got the
+          <Link href="/blog-details/the-benefits-of-good-credit-score-when-buying-a-home" className="text-blue-600 hover:text-blue-800 underline">The Benefits Of Good Credit Score When Buying A Home</Link> You&amp;apos;ve found the perfect house, you&amp;apos;ve got the
           deposit saved, you&amp;apos;re earning good money \u2014 but your
           credit file is letting you down.
         </p>
@@ -181,14 +183,14 @@ export default function CreditRepairHomeLoanApprovalPage() {
           Here&amp;apos;s the thing that\u2019ll probably surprise you: most
           credit problems that kill home loan applications can actually be
           fixed. We\u2019re talking about defaults applied incorrectly, late
-          payment marks from bank processing stuff-ups, credit enquiries that
+  <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link>         payment marks from bank processing stuff-ups, credit enquiries that
           shouldn\u2019t be there, and repayment history that doesn\u2019t
           reflect what actually happened.
         </p>
         <p className="mt-4">
           Australian Credit Solutions specialises in credit repair for home loan
           approval across Australia. We\u2019re not some generic \u201ccredit
-          repair\u201d mob. We\u2019re specialists who understand exactly what
+          <Link href="/free-credit-assessment" className="text-blue-600 hover:text-blue-800 underline">Free Credit Assessment</Link> repair\u201d mob. We\u2019re specialists who understand exactly what
           mortgage lenders look for and how to get your credit file
           home-loan-ready.
         </p>
@@ -391,6 +393,8 @@ export default function CreditRepairHomeLoanApprovalPage() {
           </Testimonial>
         </motion.div>
       </Section>
+
+      <RelatedBlock currentSlug="/credit-repair-home-loan-approval" heading="Related services & guides" />
 
       {/* Why Choose Us */}
       <Section title="Why choose us for home loan credit repair">

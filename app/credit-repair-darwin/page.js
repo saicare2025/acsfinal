@@ -13,6 +13,8 @@ import Link from "next/link";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // ✅ SEO Metadata for Darwin Credit Repair
 
 export default function Home() {
@@ -45,10 +47,10 @@ export default function Home() {
       </h2>
       <div className="space-y-4 text-gray-700">
         <p>
-          The majority of individuals ask this question. When do you know it&apos;s time to get your credit file fixed? The best time to fix your credit file is when you are in the process of applying for a loan.
+          The majority of individuals ask this question. When do you know it&apos;s time to get your credit file <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> fixed? The best time to fix your credit file is when you are in the process of applying for a loan.
         </p>
         <p>
-          Another good time to get started is after any significant life event that affects your finances or if you&apos;re looking to change some behaviors and habits as part of a financial plan, such as making substantial investments or getting married. There are times when individuals require help dealing with aggressive debt collectors. Still, such situations should be evaluated individually by experts who can better analyze the situation and advise on what actions would be beneficial and suitable for these kinds of creditors/debtors. However, to repair it, you must first determine what is wrong with it.
+          Another good time to get started is after any significant life event that affects your finances or if you&apos;re looking to change some behaviors and habits as part of a financial plan, such as making substantial investments or getting married. There are times when individuals require <a href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</a> help dealing with aggressive debt collectors. Still, such situations should be evaluated individually by experts who can better analyze the situation and advise on what actions would be beneficial and suitable for these kinds of creditors/debtors. However, to repair it, you must first determine what is wrong with it.
         </p>
       </div>
     </div>
@@ -60,7 +62,7 @@ export default function Home() {
       </h2>
       <div className="space-y-4 text-gray-700">
         <p>
-          Bad credit might have prevented you from renting an apartment, buying a car, getting a loan for college tuition, or finding a bank to offer you reasonable interest rates. It might have made it hard for you to get your gas furnace serviced, or if the power goes out, it may make it difficult for them to cut your electricity until they are sure that payment will be made on their end. So what are the benefits of fixing bad credit?
+          Bad credit might have prevented you from renting an apartment, buying a car, getting a loan for college tuition, or finding a bank to offer you reasonable interest rates. It might have made it hard for you to get <a href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</a> your gas furnace serviced, or if the power goes out, it may make it difficult for them to cut your electricity until they are sure that payment will be made on their end. So what are the benefits of fixing bad credit?
         </p>
         
         <h3 className="font-semibold mt-6 mb-3">
@@ -83,7 +85,7 @@ export default function Home() {
       </h2>
       <div className="space-y-4 text-gray-700">
         <p>
-          Consistently making small payments on your debts will quickly increase the amount of money you owe. This is not good for your credit score because it will show a high debt-to-income ratio. And that&apos;s what you should never do in a desperate attempt to fix a credit score fast in Darwin.
+          Consistently making small payments on your debts will quickly increase the amount of money you owe. This is not good for your credit score <a href="/default-removal-services-australia" className="text-blue-600 hover:text-blue-800 underline">Default Removal Services Australia</a> because it will show a high debt-to-income ratio. And that&apos;s what you should never do in a desperate attempt to fix a credit score fast in Darwin.
         </p>
         <p>
           If you&apos;re behind on payments, there are options like debt consolidation or refinancing that might help get things back in order. A new credit card with a reduced interest rate may also be beneficial. If that&apos;s what has caused the problem, paying off balances on other cards (you only need one) and no more overspending will be all it takes to get out of trouble. The best way, of course, is to stay away from always spending beyond your means, no matter how tempting, but this doesn&apos;t mean cutting yourself off thoroughly - think twice.
@@ -256,6 +258,9 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
+      
+      <RelatedBlock currentSlug="/credit-repair-darwin" heading="Related services & guides" />
+      
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -450,7 +455,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
+        <Footer />
     </main>
   );
 }

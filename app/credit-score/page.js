@@ -16,6 +16,8 @@ import HowWorks from "../../components/HowWork";
 import Link from "next/link";
 
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
@@ -39,12 +41,12 @@ export default function Home() {
             </h2>
             <p className="text-gray-700 mb-4">
               A credit score is a numerical representation of your
-              creditworthiness. Lenders use it to assess your risk level when
+              creditworthiness. Lenders use it <Link href="/repair-your-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">Repair Your Credit Score Australia</Link> to assess your risk level when
               you apply for loans, credit cards, or other financial products.
             </p>
             <p className="text-gray-700">
               The higher your credit score, the better your chances of getting
-              approved for credit with favourable terms.
+    <Link href="/how-to-fix-my-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">How To Fix My Credit Score Australia</Link>           approved for credit with favourable terms.
             </p>
           </div>
 
@@ -54,7 +56,7 @@ export default function Home() {
               Why is Your Credit Score Important?
             </h2>
             <p className="text-gray-700 mb-6">
-              Your credit score affects various aspects of your financial life:
+              Your credit score affects <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link> various aspects of your financial life:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -65,7 +67,7 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-700">
                   Lenders review your credit score to determine your loan
-                  eligibility.
+    <Link href="/blog-details/what-damages-credit-score" className="text-blue-600 hover:text-blue-800 underline">What Damages Credit Score</Link>               eligibility.
                 </p>
               </div>
 
@@ -1945,6 +1947,7 @@ export default function Home() {
 
       </div>
     </section>
+            <RelatedBlock currentSlug="/credit-score" heading="Related services & guides" />
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -2119,7 +2122,8 @@ export default function Home() {
         <RelatedServices pathname="/credit-score" />
       </div>
 
-      <Footer />
+              <RelatedBlock currentSlug="/credit-score" heading="Related services & guides" />
+        <Footer />
     </main>
   );
 }

@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -94,18 +96,18 @@ export default function CreditRepairCreditCardApplicationsPage() {
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
                   Sick of getting knocked back for credit cards? Your credit file is probably the culprit. Let&apos;s fix it so
-                  you can get approved for the cards you actually want.
+    <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>               you can get approved for the cards you actually want.
                 </p>
 
                 <p className="text-base text-gray-600">
                   Getting rejected for credit cards is frustrating as hell – especially when you know you can afford the
-                  repayments. The problem isn&apos;t your income or your ability to pay. It&apos;s those black marks on your credit file
+                  repayments. The problem isn&apos;t your income <Link href="/blog-details/credit-repair-strategies-for-a-quick-boost-to-your-score" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Strategies For A Quick Boost To Your Score</Link> or your ability to pay. It&apos;s those black marks on your credit file
                   that are automatically saying &quot;no&quot; before a human even looks at your application.
                 </p>
 
                 <p className="text-base text-gray-600">
                   At Australian Credit Solutions, we&apos;ve helped thousands of Australians clean up their credit files and go
-                  from constant rejections to getting approved for premium credit cards. Our proven process removes
+                  from constant rejections to <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> getting approved for premium credit cards. Our proven process removes
                   defaults, late payments, and dodgy enquiries that are killing your credit card applications.
                 </p>
               </div>
@@ -180,7 +182,8 @@ export default function CreditRepairCreditCardApplicationsPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/credit-repair-for-credit-card-applications-australia" heading="Related services & guides" />
+        <FooterForm
                 heading="Get My Free Credit Card"
                 subheading="Fast & Confidential"
                 paragraph="Find out why you&apos;re getting rejected for credit cards – free, fast, and confidential."
@@ -216,7 +219,7 @@ export default function CreditRepairCreditCardApplicationsPage() {
       <Section title="Why Credit Card Applications Keep Getting Rejected">
         <p className="text-slate-700 mb-6">
           Here&apos;s the truth most banks won&apos;t tell you – credit card approvals are largely automated. A computer
-          scans your credit file in seconds, and if it sees certain red flags, you&apos;re automatically rejected before any
+          scans <Link href="/emergency-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Emergency Credit Repair</Link> your credit file in seconds, and if it sees certain red flags, you&apos;re automatically rejected before any
           human assessment happens.
         </p>
         

@@ -1,0 +1,30 @@
+export const metadata = {
+  title: "Professional Credit Repair Services Australia | Licensed Specialists | ASIC Regulated",
+  description: "Professional credit repair services Australia. ASIC licensed specialists, lawyer-drafted disputes, 98% success rate. Don't trust amateurs with your financial future - call 0489 265 737.",
+  keywords: "professional credit repair services, professional credit repair australia, licensed credit repair specialists, asic credit repair, lawyer credit repair, credit repair professionals",
+  canonical: "https://www.australiancreditsolutions.com.au/professional-credit-repair-services-australia",
+  openGraph: {
+    type: "website",
+    url: "https://www.australiancreditsolutions.com.au/professional-credit-repair-services-australia",
+    title: "Professional Credit Repair Services Australia | Licensed ASIC Specialists",
+    description: "Don't trust amateurs. Professional credit repair services with ASIC licensing, lawyer-drafted disputes, industry awards. 98% success rate, licensed professionals only.",
+    image: "https://www.australiancreditsolutions.com.au/images/professional-credit-repair-og-image.jpg",
+    imageWidth: 1200,
+    imageHeight: 630,
+    siteName: "Australian Credit Solutions",
+    locale: "en_AU",
+  },
+  twitter: {
+    card: "summary_large_image",
+    url: "https://www.australiancreditsolutions.com.au/professional-credit-repair-services-australia",
+    title: "Professional Credit Repair Services | Licensed Australian Specialists",
+    description: "Professional credit repair services Australia. ASIC licensed, lawyer-drafted, award-winning. Don't trust amateurs with your financial future.",
+    image: "https://www.australiancreditsolutions.com.au/images/professional-credit-repair-twitter-card.jpg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "revisit-after": "30 days",
+  },
+  author: "Australian Credit Solutions",
+};

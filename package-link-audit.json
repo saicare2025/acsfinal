@@ -1,0 +1,30 @@
+{
+  "name": "link-audit-script",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Production-ready link audit script for blogs_data.json",
+  "main": "link-audit.js",
+  "scripts": {
+    "audit": "node link-audit.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "fast-xml-parser": "^4.3.2",
+    "papaparse": "^5.4.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "link-audit",
+    "seo",
+    "blog",
+    "validation",
+    "http"
+  ],
+  "author": "Australian Credit Solutions",
+  "license": "MIT"
+}
+

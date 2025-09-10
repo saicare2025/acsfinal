@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -94,13 +96,13 @@ export default function FixBadCreditAustraliaPage() {
               <div className="mt-6 space-y-4">
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
                   <p className="text-lg font-semibold text-red-800">
-                    Bad credit ruining your life? You&apos;re not alone. Every day, thousands of Australians are rejected for home loans, car finance, and even mobile phone contracts.
+                    Bad credit ruining your life? You&apos;re not alone. Every day, thousands <Link href="/" className="text-blue-600 hover:text-blue-800 underline"></Link> of Australians are rejected for home loans, car finance, and even mobile phone contracts.
                   </p>
                 </div>
 
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                   <p className="text-lg font-semibold text-green-800">
-                    Here&apos;s the good news: Bad credit can often be fixed. Legally. Permanently. Fast.
+                    Here&apos;s the good news: Bad <Link href="/south-australia-credit-repair" className="text-blue-600 hover:text-blue-800 underline">South Australia Credit Repair</Link> credit can often be fixed. Legally. Permanently. Fast.
                   </p>
                 </div>
 
@@ -109,10 +111,10 @@ export default function FixBadCreditAustraliaPage() {
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">💡 Why Bad Credit is Destroying Your Financial Future:</p>
+                  <p className="text-sm font-bold text-blue-800 mb-3">💡 Why Bad Credit <Link href="/terms-conditions" className="text-blue-600 hover:text-blue-800 underline">Terms Conditions</Link> is Destroying Your Financial Future:</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-blue-700">
                     <div>
-                      <p className="font-semibold">❌ Loan Rejections That Crush Dreams</p>
+                      <p className="font-semibold">❌ Loan Rejections <Link href="/worst-repayment-history-removal" className="text-blue-600 hover:text-blue-800 underline">Worst Repayment History Removal</Link> That Crush Dreams</p>
                       <p className="text-xs">Home loans, car finance, business loans denied</p>
                     </div>
                     <div>
@@ -227,7 +229,8 @@ export default function FixBadCreditAustraliaPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/fix-bad-credit-australia" heading="Related services & guides" />
+        <FooterForm
                 heading="Ready to Fix Your Bad Credit Today?"
                 subheading="Don&apos;t let bad credit control your life for another day"
                 paragraph="Free assessment, no obligation, honest advice. Call 0489 265 737 or complete our 60-second form. Your financial fresh start begins today."

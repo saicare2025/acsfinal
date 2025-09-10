@@ -3,6 +3,8 @@ import MainLayout from "../MainLayout";
 import HeroSection from "@/components/homepage/HeroSection3";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 const ContactPage = () => {
   // Generate structured data for this page
   const structuredData = generateMinimalStructuredData({

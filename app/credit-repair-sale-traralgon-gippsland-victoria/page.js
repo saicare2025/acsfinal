@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -92,13 +94,13 @@ export default function CreditRepairSaleTraralgonGippslandVictoriaPage() {
               <div className="mt-6 space-y-4">
                 <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded">
                   <p className="text-lg font-semibold text-orange-800">
-                    ⚡ Energy sector transition affecting your career in the Latrobe Valley? Can&apos;t get Lakes District tourism finance? Alpine accommodation expansion blocked by bad credit?
+                    ⚡ Energy sector transition affecting your career in the Latrobe Valley? <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> Can&apos;t get Lakes District tourism finance? Alpine accommodation expansion blocked by bad credit?
                   </p>
                 </div>
 
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                   <p className="text-lg font-semibold text-green-800">
-                    Gippsland&apos;s energy transition and tourism economy deserves better credit solutions. We&apos;re here to unlock your East Victoria opportunities.
+                    Gippsland&apos;s energy transition and tourism economy deserves better <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link> credit solutions. We&apos;re here to unlock your East Victoria opportunities.
                   </p>
                 </div>
 
@@ -107,10 +109,10 @@ export default function CreditRepairSaleTraralgonGippslandVictoriaPage() {
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏔️ Gippsland&apos;s Unique Opportunities We Unlock:</p>
+                  <p className="text-sm font-bold text-blue-800 mb-3">🏔️ Gippsland&apos;s Unique <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> Opportunities We Unlock:</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-blue-700">
                     <div>
-                      <p className="font-semibold">⚡ Energy Sector Transition</p>
+                      <p className="font-semibold">⚡ Energy <Link href="/licensed-credit-repair-australia" className="text-blue-600 hover:text-blue-800 underline">Licensed Credit Repair Australia</Link> Sector Transition</p>
                       <p className="text-xs">Retraining, new careers, business ventures</p>
                     </div>
                     <div>
@@ -225,7 +227,8 @@ export default function CreditRepairSaleTraralgonGippslandVictoriaPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/credit-repair-sale-traralgon-gippsland-victoria" heading="Related services & guides" />
+        <FooterForm
                 heading="Ready to Unlock Your Gippsland Victoria Opportunities?"
                 subheading="From energy sector transitions to Lakes District tourism dreams"
                 paragraph="Free Gippsland assessment, no obligation. Call 0489 265 737 or complete our 60-second form. Your East Victoria fresh start begins today."

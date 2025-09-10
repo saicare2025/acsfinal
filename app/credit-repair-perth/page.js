@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -91,19 +93,19 @@ export default function CreditRepairPerthPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Remove defaults, get approved for Perth&apos;s property boom. Award-winning specialists with 98% success rate when we take your case.
+                  Remove defaults, get approved for Perth&apos;s property boom. <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> Award-winning specialists with 98% success rate when we take your case.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Fed up with loan rejections? Sick of paying sky-high interest rates while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
+                  Fed up with loan rejections? Sick of paying sky-high interest rates <a href="/repair-your-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">Repair Your Credit Score Australia</a> while watching Perth&apos;s property market boom pass you by? You&apos;re not alone, mate.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
+                  Bad credit in Perth means missing out on everything - from that dream home in Cottesloe to <a href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</a> the business loan for your mining services company. But here&apos;s the thing: it doesn&apos;t have to stay that way.
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth Residents Choose ACS:</p>
+                  <p className="text-sm font-bold text-blue-800 mb-3">🏆 Why Perth <a href="/default-removal-services-australia" className="text-blue-600 hover:text-blue-800 underline">Default Removal Services Australia</a> Residents Choose ACS:</p>
                   <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
                     <div>⚡ Perth Property Boom Specialists</div>
                     <div>🎯 Mining Industry Expertise</div>
@@ -207,7 +209,7 @@ export default function CreditRepairPerthPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+        <FooterForm
                 heading="Get Your Free Perth Credit Assessment"
                 subheading="Same-Day Assessment Available"
                 paragraph="Ready to fix your Perth credit file? Start your free assessment now and join over 3,000 West Australians who've unlocked better finance rates."
@@ -563,6 +565,8 @@ export default function CreditRepairPerthPage() {
           </motion.div>
         </motion.div>
       </Section>
+
+      <RelatedBlock currentSlug="/credit-repair-perth" heading="Related services & guides" />
 
       {/* Why Choose Us */}
       <Section title="Great Ocean Road Tourism Finance Solutions">

@@ -15,6 +15,8 @@ import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -96,7 +98,7 @@ export default function CentrelinkCreditRepairPage() {
                 <p className="text-lg leading-relaxed text-gray-700">
                   Life&apos;s thrown you some curveballs, and now you&apos;re on
                   Centrelink. We get it – and we&apos;re here to help fix your
-                  credit without breaking the bank. Being on Centrelink
+     <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>              credit without breaking the bank. Being on Centrelink
                   doesn&apos;t mean you deserve bad credit forever.
                 </p>
 
@@ -167,7 +169,8 @@ export default function CentrelinkCreditRepairPage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-              <FooterForm
+                      <RelatedBlock currentSlug="/credit-repair-for-centrelink-recipients-australia" heading="Related services & guides" />
+        <FooterForm
                 heading="Get My Free Centrelink-Friendly Assessment"
                 subheading="Affordable & Understanding"
                 paragraph="Quick credit check: Are you being knocked back for basic things like mobile phone plans or rental applications? We can help fix it."
@@ -201,7 +204,7 @@ export default function CentrelinkCreditRepairPage() {
       <Section title="Why Centrelink Recipients Struggle with Credit Repair">
         <p className="text-slate-700">
           Let&apos;s be honest – most credit repair companies either don&apos;t
-          understand your situation or want upfront fees you simply can&apos;t
+          understand your <Link href="/blog-details/how-can-i-increase-my-credit-score" className="text-blue-600 hover:text-blue-800 underline">How Can I Increase My Credit Score</Link> situation or want upfront fees you simply can&apos;t
           afford. Here&apos;s what makes your situation different:
         </p>
         <motion.div
@@ -233,7 +236,7 @@ export default function CentrelinkCreditRepairPage() {
         </motion.div>
         <p className="mt-6 text-slate-700 font-semibold">
           The truth? None of this is permanent. We&apos;ve seen people go from
-          Centrelink with multiple defaults to getting approved for car loans
+          Centrelink with <Link href="/equifax-default-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Equifax Default Removal Australia</Link> multiple defaults to getting approved for car loans
           within months of cleaning up their credit file.
         </p>
       </Section>
@@ -242,7 +245,7 @@ export default function CentrelinkCreditRepairPage() {
       <Section title="Our Centrelink-Friendly Approach: No Win No Fee That Actually Works">
         <p className="text-slate-700">
           Here&apos;s what makes us different from other credit repair companies
-          when it comes to helping Centrelink recipients:
+   <Link href="/does-late-rent-payment-affect-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">Does Late Rent Payment Affect Credit Score Australia</Link>        when it comes to helping Centrelink recipients:
         </p>
         <motion.div
           variants={staggerChildren}

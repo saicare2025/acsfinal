@@ -8,6 +8,8 @@ import blogData from "../../data/blogs_data.json";
 import HeroSection from "../../components/homepage/HeroSection";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Constants
 const LIMIT = 9;
 
@@ -81,7 +83,7 @@ export default function BlogsPage() {
               Latest <span className="text-blue">Credit Insights</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Expert articles to help you understand and improve your financial health
+              Expert articles to help <Link href="/blog-details/get-loans-with-bad-credit" className="text-blue-600 hover:text-blue-800 underline">Get Loans With Bad Credit</Link> you understand and improve your financial health
             </p>
           </div>
 
@@ -118,7 +120,7 @@ export default function BlogsPage() {
           {/* Empty State */}
           {!loading && blogs.length === 0 && !error && (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">No articles found</p>
+              <p className="text-gray-500 text-lg">No <Link href="/blog-details/bad-credit-can-cost-you-money-here-s-why" className="text-blue-600 hover:text-blue-800 underline">Bad Credit Can Cost You Money Here S Why</Link> articles found</p>
             </div>
           )}
 
@@ -170,8 +172,7 @@ function BlogCard({ post }) {
         </h2>
 
         <p className="text-gray-600 mb-4 flex-grow">
-          {excerpt}
-          {needsEllipsis && "..."}
+          {excerpt}{needsEllipsis && "..."}
         </p>
 
         <div className="mt-auto pt-3 border-t border-gray-100">

@@ -13,6 +13,8 @@ import { generateMinimalStructuredData } from "../../utils/generateMinimalStruct
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -92,20 +94,20 @@ export default function OurStoryPage() {
               <div className="mt-6 space-y-4">
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
                   <p className="text-lg font-semibold text-blue-800 italic">
-                    &quot;The moment that changed everything happened on a Tuesday afternoon in 2018.&quot;
+                    &quot;The moment that changed everything <Link href="/" className="text-blue-600 hover:text-blue-800 underline"></Link> happened on a Tuesday afternoon in 2018.&quot;
                   </p>
                 </div>
 
                 <p className="text-base text-gray-600">
-                  Elisa Rothschild was sitting across from yet another client whose life had been turned upside down by bad credit. A single mum from Frankston, three kids under 10, desperately trying to secure a home loan after her ex-husband had destroyed their credit file with hidden defaults.
+                  Elisa Rothschild was sitting across from yet another client whose life had been turned upside down by bad credit. A single mum <Link href="/blog-details/credit-fix-6-key-reasons-you-should-discuss-your-credit" className="text-blue-600 hover:text-blue-800 underline">Credit Fix 6 Key Reasons You Should Discuss Your Credit</Link> from Frankston, three kids under 10, desperately trying to secure a home loan after her ex-husband had destroyed their credit file with hidden defaults.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  &quot;The banks won&apos;t even look at my application,&quot; she whispered, tears welling up. &quot;My kids think we&apos;re going to be homeless.&quot;
+                  &quot;The banks won&apos;t even look at my application,&quot; she <Link href="/blog-details/credit-repair-darwin" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Darwin</Link> whispered, tears welling up. &quot;My kids think we&apos;re going to be homeless.&quot;
                 </p>
 
                 <p className="text-base text-gray-700 font-semibold">
-                  That&apos;s when Elisa knew something had to change in Australia&apos;s credit repair industry.
+                  That&apos;s when Elisa knew something <Link href="/blog-details/credit-repair-do-you-really-need-it" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Do You Really Need It</Link> had to change in Australia&apos;s credit repair industry.
                 </p>
 
                 <div className="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-4">
@@ -213,7 +215,8 @@ export default function OurStoryPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-              <FooterForm
+                      <RelatedBlock currentSlug="/our-story" heading="Related services & guides" />
+        <FooterForm
                 heading="Ready for Your Fresh Start?"
                 subheading="Get Your Free Credit Assessment"
                 paragraph="No cost. No obligation. No high-pressure sales pitch. Just honest advice from Australia's most trusted credit repair specialists. Call 0489 265 737"

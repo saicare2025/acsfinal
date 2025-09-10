@@ -7,6 +7,8 @@ import MainLayout from "../MainLayout";
 import CreditRepairProcess from "../../components/homepage/CreditRepairProcess";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 
+import RelatedBlock from "@/app/_seo/RelatedBlock";
+
 export default function HomePage() {
   // Generate structured data for services overview page
   const structuredData = generateMinimalStructuredData({
