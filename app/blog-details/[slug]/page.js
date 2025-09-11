@@ -1,3 +1,4 @@
+// app/blog-details/[slug]/page.jsx
 import fs from 'fs';
 import path from 'path';
 import { JSDOM } from 'jsdom';
@@ -7,15 +8,41 @@ import AuthorBio from '../../../components/AuthorBio';
 import Link from 'next/link';
 import BlogStructuredDataClient from '../../../components/BlogStructuredDataClient';
 
-// ✅ This is now a server component by default
-export default async function BlogPostPage({ params }) {
-  const { slug } = await params;
-
+// Helper to fetch blog post
+async function getPost(slug) {
   const filePath = path.join(process.cwd(), 'data', 'blogs_data.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   const blogData = JSON.parse(jsonData);
+  return blogData.find((b) => b.slug === slug) || null;
+}
 
-  const post = blogData.find((blog) => blog.slug === slug);
+// ✅ Use metaTitle + metaDescription from JSON for SEO
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const post = await getPost(slug);
+
+  const baseUrl = 'https://www.australiancreditsolutions.com.au';
+  const url = `${baseUrl}/blog-details/${slug}`;
+
+  return {
+    title: post?.metaTitle ?? post?.title ?? 'Blog',
+    description: post?.metaDescription ?? post?.excerpt ?? undefined,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      url,
+      title: post?.metaTitle ?? post?.title ?? 'Blog',
+      description: post?.metaDescription ?? post?.excerpt ?? undefined,
+      type: 'article',
+    },
+    robots: { index: true, follow: true },
+  };
+}
+
+export default async function BlogPostPage({ params }) {
+  const { slug } = await params;
+  const post = await getPost(slug);
 
   if (!post) {
     return (
@@ -25,7 +52,7 @@ export default async function BlogPostPage({ params }) {
     );
   }
 
-  // ✅ Process HTML content: remove first h2
+  // ✅ Clean up first <h2> if present
   let processedContent = post.content;
   if (typeof processedContent === 'string') {
     const tempDiv = new JSDOM(`<div>${processedContent}</div>`).window.document.querySelector('div');
@@ -34,13 +61,12 @@ export default async function BlogPostPage({ params }) {
     processedContent = tempDiv.innerHTML;
   }
 
-
   return (
     <MainLayout>
-      <BlogStructuredDataClient 
+      <BlogStructuredDataClient
         blogData={{
-          datePublished: '2024-01-01', // You can extract this from post data if available
-          dateModified: new Date().toISOString().split('T')[0]
+          datePublished: post.datePublished ?? '2024-01-01',
+          dateModified: new Date().toISOString().split('T')[0],
         }}
       />
       <HeroSection />
@@ -54,6 +80,7 @@ export default async function BlogPostPage({ params }) {
               <span className="text-blue-300">/</span>
               <span className="text-blue-700 font-medium truncate max-w-[60%]">{post.title}</span>
             </nav>
+
             <AuthorBio />
 
             <h1 className="text-3xl lg:text-4xl font-bold text-[#035071] mb-6 leading-tight">
