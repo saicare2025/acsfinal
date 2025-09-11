@@ -28,7 +28,7 @@ export default function HeroSection() {
     <>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-white to-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col-reverse lg:flex-row items-center relative z-10 gap-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col-reverse lg:flex-row items-center relative z-10 gap-8">
           {/* Left Side - Content */}
           <div className="w-full lg:w-3/5 flex flex-col">
             <MotionFadeUp className="mb-8">

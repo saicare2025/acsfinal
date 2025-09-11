@@ -1,9 +1,19 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /_next/
+Disallow: /static/
+Disallow: /assets/*
+Disallow: /api/*
+Disallow: /server-sitemap.xml
+Disallow: /404
+Disallow: /500
+Disallow: /*?*
+Disallow: /64dae32494cf5d49dc6a6c49/
 
 # Host
 Host: https://www.australiancreditsolutions.com.au
 
 # Sitemaps
 Sitemap: https://www.australiancreditsolutions.com.au/sitemap.xml
+Sitemap: https://www.australiancreditsolutions.com.au/server-sitemap.xml
