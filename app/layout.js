@@ -136,7 +136,7 @@ export default function RootLayout({ children }) {
         </Script>
         {children}
         <ExitIntentPopupWithSuspense />
-      
+      <TawkDesktopOnly />
       </body>
     </html>
   );
