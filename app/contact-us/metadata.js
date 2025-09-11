@@ -16,7 +16,7 @@ export const metadata = {
     title: "Contact Us | Get in Touch with Australian Credit Solutions",
     description:
       "Reach out to our team for personalized credit repair help, debt support, or to ask about our services. We're here to help you regain financial confidence.",
-    url: "https://www.australiancreditsolutions.com.au/contact",
+    url: "https://www.australiancreditsolutions.com.au/contact-us",
     siteName: "Australian Credit Solutions",
     images: [
       {

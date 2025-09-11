@@ -52,7 +52,7 @@ export default function CTASection() {
         </div>
 
         <p className="text-blue-100 mt-12 text-base">
-          Prefer to message? <Link href="/contact" className="underline hover:text-white font-medium">Contact us online</Link>
+          Prefer to message? <Link href="/contact-us" className="underline hover:text-white font-medium">Contact us online</Link>
         </p>
       </div>
     </section>
