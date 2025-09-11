@@ -75,23 +75,22 @@ function categorizeUrl(href) {
 // Canonical items mapping
 const canonicalItems = {
   services: [
-    { label: 'Default Removal', href: '/default-removal' },
+    { label: 'Default Removal', href: '/default-removal-services-australia' },
     { label: 'Credit Enquiry Removal', href: '/credit-enquiry-removal' },
     { label: 'Court Judgment Removal', href: '/court-judgment-removal' },
-    { label: 'Repayment History Disputes', href: '/repayment-history-disputes' },
-    { label: 'Identity Theft (Credit File Fix)', href: '/identity-theft-credit-file-fix' },
-    { label: 'Credit Report Analysis', href: '/credit-report-analysis' },
-    { label: 'View All Services', href: '/services' }
+    { label: 'Repayment History Disputes', href: '/worst-repayment-history-removal' },
+    { label: 'Identity Theft (Credit File Fix)', href: '/fix-my-credit-file-australia' },
+    { label: 'Credit Report Analysis', href: '/credit-repair-australia' },
+   
   ],
   'credit-help': [
-    { label: 'How It Works', href: '/how-it-works' },
-    { label: 'What We Can & Can\'t Remove', href: '/what-we-can-remove' },
-    { label: 'Pricing', href: '/pricing' },
-    { label: 'Credit Score Guide', href: '/credit-score-guide' },
+    { label: 'How It Works', href: '/how-to-fix-my-credit-score-australia' },
+    { label: 'What We Can & Can\'t Remove', href: '/default-removal-services-australia' },
+    { label: 'Credit Score Guide', href: '/credit-score' },
     { label: 'Blog', href: '/blogs' }
   ],
   locations: [
-    { label: 'Sydney', href: '/credit-repair-sydney' },
+    { label: 'Sydney', href: '/credit_repair_sydney' },
     { label: 'Melbourne', href: '/credit-repair-melbourne' },
     { label: 'Brisbane', href: '/credit-repair-brisbane' },
     { label: 'Perth', href: '/credit-repair-perth' },
@@ -105,7 +104,7 @@ const canonicalItems = {
     { label: 'About Us', href: '/about' },
     { label: 'Testimonials', href: '/testimonial' },
     { label: 'Complaints Handling Policy', href: '/complaints-handling-policy' },
-    { label: 'Contact', href: '/contact' }
+    { label: 'Contact', href: '/contact-us' }
   ],
   'legal-trust': [
     { label: 'Privacy Policy', href: '/privacy-policy' },
@@ -264,12 +263,11 @@ function ExpandableLink({ item, similarLinks, isActive, onToggle }) {
 }
 
 export default function Footer({ 
-  qualificationLink = "/credit-assessment", 
+  qualificationLink = "/free-credit-assessment", 
   showCareers = false, 
   abn = "80 650 730 699",
   maxSimilarPerItem = 8,
-  afcaLink = "https://www.afca.org.au/members/83546",
-  asicLink = "https://connectonline.asic.gov.au/RegistrySearch/faces/landing/ProfessionalRegisters.jspx?searchText=650730699",
+
   googleReviewsLink = "https://www.google.com/search?q=Australian+Credit+Solutions+reviews",
   trustpilotLink = "https://www.trustpilot.com/review/australiancreditsolutions.com.au"
 }) {
@@ -300,8 +298,8 @@ export default function Footer({
   // Add external trust links to legal-trust items
   const legalTrustItems = [
     ...canonicalItems['legal-trust'],
-    { label: 'AFCA Membership (83546)', href: afcaLink },
-    { label: 'ASIC Info', href: asicLink },
+    // { label: 'AFCA Membership (83546)', href: afcaLink },
+    // { label: 'ASIC Info', href: asicLink },
     { label: 'External Reviews', href: googleReviewsLink }
   ];
   
