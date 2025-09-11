@@ -268,8 +268,7 @@ export default function Footer({
   showCareers = false, 
   abn = "80 650 730 699",
   maxSimilarPerItem = 8,
-  afcaLink = "https://www.afca.org.au/members/83546",
-  asicLink = "https://connectonline.asic.gov.au/RegistrySearch/faces/landing/ProfessionalRegisters.jspx?searchText=650730699",
+
   googleReviewsLink = "https://www.google.com/search?q=Australian+Credit+Solutions+reviews",
   trustpilotLink = "https://www.trustpilot.com/review/australiancreditsolutions.com.au"
 }) {
@@ -300,8 +299,8 @@ export default function Footer({
   // Add external trust links to legal-trust items
   const legalTrustItems = [
     ...canonicalItems['legal-trust'],
-    { label: 'AFCA Membership (83546)', href: afcaLink },
-    { label: 'ASIC Info', href: asicLink },
+    // { label: 'AFCA Membership (83546)', href: afcaLink },
+    // { label: 'ASIC Info', href: asicLink },
     { label: 'External Reviews', href: googleReviewsLink }
   ];
   
