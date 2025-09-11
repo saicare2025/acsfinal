@@ -126,13 +126,13 @@ export default function ReviewsWidget() {
       if (observerRef.current) observerRef.current.disconnect();
       clearTimeout(timeoutId);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, []);
 
   // Re-initialize the widget whenever the route changes (client navigation)
   useEffect(() => {
     reinitReviews();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, [pathname]);
 
   return (

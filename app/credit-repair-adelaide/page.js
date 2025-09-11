@@ -36,9 +36,9 @@ export default function Home() {
       />
       <Header />
       <HeroSection />
-      <ReviewsWidget />
       <VideoServicesSection />
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white text-gray-800">
+        <ReviewsWidget />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-start mb-12">
@@ -50,7 +50,13 @@ export default function Home() {
             </h2>
             <p className="text-lg text-gray-600">
               We apply our expertise to help you understand and manage your
-  <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a>             credit profile.
+              <a
+                href="/get-credit-repair"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Get Credit Repair
+              </a>{" "}
+              credit profile.
             </p>
           </div>
 
@@ -62,8 +68,15 @@ export default function Home() {
               </h3>
               <p className="mb-4">
                 A credit score influences whether you can get approved for a
-                loan, a rental, <a href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</a> or even a phone plan. It’s calculated based on
-                your repayment history, defaults, and overall debt behavior.
+                loan, a rental,{" "}
+                <a
+                  href="/what-is-a-good-credit-score-australia"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  What Is A Good Credit Score Australia
+                </a>{" "}
+                or even a phone plan. It’s calculated based on your repayment
+                history, defaults, and overall debt behavior.
               </p>
               <p className="mb-4">
                 In Adelaide, a score of <strong>853+</strong> (out of 1,200) or{" "}
@@ -72,7 +85,13 @@ export default function Home() {
               </p>
               <p className="mb-4">
                 Lenders and landlords use your score to gauge your financial
-    <a href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</a>             reliability and risk.
+                <a
+                  href="/remove-defaults-from-your-credit-file"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  Remove Defaults From Your Credit File
+                </a>{" "}
+                reliability and risk.
               </p>
             </div>
 
@@ -84,7 +103,13 @@ export default function Home() {
               <p className="mb-4">
                 A good credit score can unlock lower interest rates, better
                 insurance premiums, and easier loan approvals. It shows
-      <a href="/credit-enquiry-removal" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal</a>           you&apos;re financially trustworthy, which matters whether
+                <a
+                  href="/credit-enquiry-removal"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  Credit Enquiry Removal
+                </a>{" "}
+                you&apos;re financially trustworthy, which matters whether
                 you&apos;re applying for a mortgage or renting an apartment.
               </p>
               <p className="mb-4">
@@ -245,9 +270,12 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
-      
-      <RelatedBlock currentSlug="/credit-repair-adelaide" heading="Related services & guides" />
-      
+
+      <RelatedBlock
+        currentSlug="/credit-repair-adelaide"
+        heading="Related services & guides"
+      />
+
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -442,7 +470,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }

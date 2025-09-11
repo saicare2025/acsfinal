@@ -53,7 +53,7 @@ export function PinterestIcon(props) {
 /* Store icon COMPONENTS here; instantiate them during render */
 const SERVICE_LINKS = [
   { name: "Credit Enquiry Removal", href: "/credit-enquiry-removal" },
-  // { name: "Court Judgment Removal", href: "/court-judgment-removal" },
+  { name: "Court Judgment Removal", href: "/court-judgment-removal" },
   { name: "Worst Repayment History Removal", href: "/worst-repayment-history-removal" },
   { name: "Credit Repair — Home Loan Approval", href: "/credit-repair-home-loan-approval" },
   { name: "Credit Repair for Car Finance", href: "/credit-repair-for-car-finance" },
@@ -104,7 +104,7 @@ function MobileMenu({ isOpen, navLinks, onClose }) {
                   <div className="ml-8 mt-1 space-y-1">
                     <Link
                       href={link.href}
-                      className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50 rounded-md"
+                      className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50 rounded-md"
                       onClick={onClose}
                     >
                       View All Services
@@ -113,7 +113,7 @@ function MobileMenu({ isOpen, navLinks, onClose }) {
                       <Link
                         key={serviceLink.href}
                         href={serviceLink.href}
-                        className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50 rounded-md"
+                        className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50 rounded-md"
                         onClick={onClose}
                       >
                         {serviceLink.name}
@@ -328,7 +328,7 @@ export default function Header() {
                         <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-blue-100 py-3 z-50">
                           {/* Header */}
                           <div className="px-4 py-2 border-b border-blue-100">
-                            <h3 className="text-sm font-semibold text-blue-800 uppercase tracking-wide flex items-center">
+                            <h3 className="text-base font-semibold text-blue-800 uppercase tracking-wide flex items-center">
                               <CogIcon className="w-4 h-4 mr-2" />
                               Our Services
                             </h3>
@@ -337,7 +337,7 @@ export default function Header() {
                           {/* View All Link */}
                           <Link
                             href={link.href}
-                            className="flex items-center justify-between px-4 py-3 text-sm font-medium text-blue hover:bg-blue-50 transition-colors focus:outline-none focus:bg-blue-50 border-b border-dashed border-blue-100"
+                            className="flex items-center justify-between px-4 py-3 text-base font-medium text-blue hover:bg-blue-50 transition-colors focus:outline-none focus:bg-blue-50 border-b border-dashed border-blue-100"
                             onClick={() => setIsDropdownOpen(false)}
                             onKeyDown={(e) => handleDropdownKeyDown(e, 0, SERVICE_LINKS.length + 1)}
                           >
@@ -351,7 +351,7 @@ export default function Header() {
                               <Link
                                 key={serviceLink.href}
                                 href={serviceLink.href}
-                                className="block px-4 py-3 text-sm text-gray-700 hover:text-blue hover:bg-blue-50 transition-colors focus:outline-none focus:bg-blue-50 border-b border-dashed border-gray-100 last:border-0"
+                                className="block px-4 py-3 text-base text-gray-700 hover:text-blue hover:bg-blue-50 transition-colors focus:outline-none focus:bg-blue-50 border-b border-dashed border-gray-100 last:border-0"
                                 onClick={() => setIsDropdownOpen(false)}
                                 onKeyDown={(e) => handleDropdownKeyDown(e, index + 1, SERVICE_LINKS.length + 1)}
                               >
@@ -371,7 +371,7 @@ export default function Header() {
                           <div className="px-4 py-3 bg-blue-50 rounded-b-lg border-t border-blue-100">
                             <Link
                               href="/free-credit-assessment"
-                              className="block text-center bg-blue hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-md transition-colors"
+                              className="block text-center bg-blue hover:bg-blue-700 text-white text-base font-medium py-2 px-4 rounded-md transition-colors"
                               onClick={() => setIsDropdownOpen(false)}
                             >
                               Free Assessment
@@ -400,7 +400,7 @@ export default function Header() {
                 <button
                   className="bg-gradient-to-r from-blue-500 via-blue to-blue-700
                              hover:from-blue hover:via-blue-700 hover:to-blue-800
-                             text-white px-4 py-2 rounded-md text-sm font-medium
+                             text-white px-4 py-2 rounded-md text-base font-medium
                              transition-all duration-200 shadow-md"
                 >
                   Free Credit Assessment

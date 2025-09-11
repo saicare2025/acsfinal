@@ -15,24 +15,21 @@ import VideoServicesSection from "../../components/homepage/VideoServicesSection
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
 
-
 import RelatedBlock from "@/app/_seo/RelatedBlock";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex max-w-7xl mx-auto min-h-screen flex-col">
       <Header />
       <HeroSection />
-      <ReviewsWidget/>
-      
+
       {/* Breadcrumb Navigation */}
-      <div className="mx-auto max-w-6xl px-4">
-        <Breadcrumb pathname="/credit-score" />
-      </div>
-      
-      <VideoServicesSection />
-      <HelpSection />
-      <section className="bg-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+
+      <section className=" py-12 px-4 sm:px-6 lg:px-8">
+        <ReviewsWidget />
+        <div className="mx-auto max-w-6xl px-4">
+          <Breadcrumb pathname="/credit-score" />
+        </div>
         <div className="max-w-7xl mx-auto">
           {/* What is a Credit Score */}
           <div className="bg-white rounded-lg shadow-md p-6 mb-8 border-l-4 border-blue-500">
@@ -41,12 +38,25 @@ export default function Home() {
             </h2>
             <p className="text-gray-700 mb-4">
               A credit score is a numerical representation of your
-              creditworthiness. Lenders use it <Link href="/repair-your-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">Repair Your Credit Score Australia</Link> to assess your risk level when
-              you apply for loans, credit cards, or other financial products.
+              creditworthiness. Lenders use it{" "}
+              <Link
+                href="/repair-your-credit-score-australia"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Repair Your Credit Score Australia
+              </Link>{" "}
+              to assess your risk level when you apply for loans, credit cards,
+              or other financial products.
             </p>
             <p className="text-gray-700">
               The higher your credit score, the better your chances of getting
-    <Link href="/how-to-fix-my-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">How To Fix My Credit Score Australia</Link>           approved for credit with favourable terms.
+              <Link
+                href="/how-to-fix-my-credit-score-australia"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                How To Fix My Credit Score Australia
+              </Link>{" "}
+              approved for credit with favourable terms.
             </p>
           </div>
 
@@ -56,7 +66,14 @@ export default function Home() {
               Why is Your Credit Score Important?
             </h2>
             <p className="text-gray-700 mb-6">
-              Your credit score affects <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link> various aspects of your financial life:
+              Your credit score affects{" "}
+              <Link
+                href="/what-is-a-good-credit-score-australia"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                What Is A Good Credit Score Australia
+              </Link>{" "}
+              various aspects of your financial life:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -67,7 +84,13 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-700">
                   Lenders review your credit score to determine your loan
-    <Link href="/blog-details/what-damages-credit-score" className="text-blue-600 hover:text-blue-800 underline">What Damages Credit Score</Link>               eligibility.
+                  <Link
+                    href="/blog-details/what-damages-credit-score"
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    What Damages Credit Score
+                  </Link>{" "}
+                  eligibility.
                 </p>
               </div>
 
@@ -476,8 +499,8 @@ export default function Home() {
               Common Credit Score Myths
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              There are many misconceptions about credit scores. Let&apos;s debunk
-              some common myths:
+              There are many misconceptions about credit scores. Let&apos;s
+              debunk some common myths:
             </p>
           </div>
 
@@ -928,6 +951,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <VideoServicesSection />
+      <HelpSection />
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -1352,7 +1377,7 @@ export default function Home() {
                     <h4 className="font-medium text-gray-800 mb-2">
                       Prevention:
                     </h4>
-                    <ul className="space-y-2 text-sm">
+                    <ul className="space-y-2 text-base">
                       <li className="flex items-start">
                         <svg
                           className="w-4 h-4 text-blue-500 mr-1.5 mt-0.5 flex-shrink-0"
@@ -1423,7 +1448,7 @@ export default function Home() {
                     <h4 className="font-medium text-gray-800 mb-2">
                       If Victimized:
                     </h4>
-                    <ul className="space-y-2 text-sm">
+                    <ul className="space-y-2 text-base">
                       <li className="flex items-start">
                         <svg
                           className="w-4 h-4 text-red-500 mr-1.5 mt-0.5 flex-shrink-0"
@@ -1503,7 +1528,7 @@ export default function Home() {
                     <h4 className="font-medium text-gray-800 mb-2">
                       From Scratch:
                     </h4>
-                    <ul className="space-y-2 text-sm">
+                    <ul className="space-y-2 text-base">
                       <li className="flex items-start">
                         <div className="bg-blue-100 text-blue text-xs font-bold px-1.5 py-0.5 rounded mr-2">
                           1
@@ -1534,7 +1559,7 @@ export default function Home() {
                     <h4 className="font-medium text-gray-800 mb-2">
                       After Hardship:
                     </h4>
-                    <ul className="space-y-2 text-sm">
+                    <ul className="space-y-2 text-base">
                       <li className="flex items-start">
                         <div className="bg-purple-100 text-purple-800 text-xs font-bold px-1.5 py-0.5 rounded mr-2">
                           1
@@ -1611,7 +1636,7 @@ export default function Home() {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="bg-blue px-4 py-2 rounded-full text-sm"
+                      className="bg-blue px-4 py-2 rounded-full text-base"
                     >
                       {item}
                     </div>
@@ -1767,187 +1792,248 @@ export default function Home() {
           </div>
         </div>
       </section>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Community Support for Credit Score Improvement</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Building a support network can be beneficial as you work to improve your credit score
-          </p>
-        </div>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Community Support for Credit Score Improvement
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Building a support network can be beneficial as you work to
+              improve your credit score
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {/* Support Network */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-            <h3 className="text-2xl font-semibold text-blue mb-6 pb-2 border-b-2 border-blue-200">Build Your Support Network</h3>
-            <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {/* Support Network */}
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+              <h3 className="text-2xl font-semibold text-blue mb-6 pb-2 border-b-2 border-blue-200">
+                Build Your Support Network
+              </h3>
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Join Financial Forums",
+                    description:
+                      "Online communities provide valuable advice and support from others",
+                    icon: "💻",
+                  },
+                  {
+                    title: "Seek Professional Guidance",
+                    description:
+                      "Financial advisors offer personalised strategies",
+                    icon: "👔",
+                  },
+                  {
+                    title: "Family and Friends",
+                    description:
+                      "Share goals with trusted people for encouragement",
+                    icon: "👨‍👩‍👧‍👦",
+                  },
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <span className="text-2xl mr-4">{item.icon}</span>
+                    <div>
+                      <h4 className="text-lg font-medium text-gray-800 mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-600">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Government Resources */}
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+              <h3 className="text-2xl font-semibold text-blue mb-6 pb-2 border-b-2 border-blue-200">
+                Government & Non-Profit Resources
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Australian Government&apos;s MoneySmart - Free tools and calculators",
+                  "National Debt Helpline - Free confidential debt advice",
+                  "Community Financial Counselling - Low-cost financial counselling",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <svg
+                      className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Financial Planning */}
+          <div className="bg-white p-8 rounded-xl shadow-md border border-blue-100 mb-16">
+            <h3 className="text-2xl font-semibold text-blue mb-6 text-center">
+              Credit Score and Financial Planning
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
-                  title: "Join Financial Forums",
-                  description: "Online communities provide valuable advice and support from others",
-                  icon: "💻"
+                  title: "Short-Term Goals",
+                  items: [
+                    "Qualify for better loans",
+                    "Reduce interest rates",
+                    "Improve credit utilization",
+                  ],
                 },
                 {
-                  title: "Seek Professional Guidance",
-                  description: "Financial advisors offer personalised strategies",
-                  icon: "👔"
+                  title: "Long-Term Goals",
+                  items: [
+                    "Financial stability",
+                    "Maintain credit access",
+                    "Build wealth",
+                  ],
                 },
                 {
-                  title: "Family and Friends",
-                  description: "Share goals with trusted people for encouragement",
-                  icon: "👨‍👩‍👧‍👦"
-                }
+                  title: "Retirement Planning",
+                  items: [
+                    "Financial flexibility",
+                    "Manage expenses",
+                    "Access credit if needed",
+                  ],
+                },
               ].map((item, index) => (
-                <div key={index} className="flex items-start">
-                  <span className="text-2xl mr-4">{item.icon}</span>
-                  <div>
-                    <h4 className="text-lg font-medium text-gray-800 mb-1">{item.title}</h4>
-                    <p className="text-gray-600">{item.description}</p>
-                  </div>
+                <div key={index} className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-bold text-blue mb-3">{item.title}</h4>
+                  <ul className="space-y-2">
+                    {item.items.map((point, i) => (
+                      <li key={i} className="flex items-start">
+                        <div className="bg-blue-100 text-blue text-xs font-bold px-2 py-0.5 rounded-full mr-2">
+                          ✓
+                        </div>
+                        <span className="text-gray-700">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Government Resources */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-            <h3 className="text-2xl font-semibold text-blue mb-6 pb-2 border-b-2 border-blue-200">Government & Non-Profit Resources</h3>
-            <ul className="space-y-4">
-              {[
-                "Australian Government&apos;s MoneySmart - Free tools and calculators",
-                "National Debt Helpline - Free confidential debt advice",
-                "Community Financial Counselling - Low-cost financial counselling"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Financial Planning */}
-        <div className="bg-white p-8 rounded-xl shadow-md border border-blue-100 mb-16">
-          <h3 className="text-2xl font-semibold text-blue mb-6 text-center">Credit Score and Financial Planning</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Short-Term Goals",
-                items: ["Qualify for better loans", "Reduce interest rates", "Improve credit utilization"]
-              },
-              {
-                title: "Long-Term Goals",
-                items: ["Financial stability", "Maintain credit access", "Build wealth"]
-              },
-              {
-                title: "Retirement Planning",
-                items: ["Financial flexibility", "Manage expenses", "Access credit if needed"]
-              }
-            ].map((item, index) => (
-              <div key={index} className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-bold text-blue mb-3">{item.title}</h4>
-                <ul className="space-y-2">
-                  {item.items.map((point, i) => (
-                    <li key={i} className="flex items-start">
-                      <div className="bg-blue-100 text-blue text-xs font-bold px-2 py-0.5 rounded-full mr-2">✓</div>
-                      <span className="text-gray-700">{point}</span>
-                    </li>
-                  ))}
-                </ul>
+          {/* Education & Pitfalls */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            {/* Education */}
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+              <h3 className="text-2xl font-semibold text-blue mb-6 pb-2 border-b-2 border-blue-200">
+                Education Resources
+              </h3>
+              <div className="space-y-4">
+                {[
+                  "Online courses on personal finance",
+                  "Local workshops and webinars",
+                  "Books and financial blogs",
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="bg-blue-100 text-blue text-xs font-bold px-2 py-1 rounded mr-3">
+                      {index + 1}
+                    </div>
+                    <p className="text-gray-700">{item}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
-        {/* Education & Pitfalls */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Education */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-            <h3 className="text-2xl font-semibold text-blue mb-6 pb-2 border-b-2 border-blue-200">Education Resources</h3>
-            <div className="space-y-4">
+            {/* Pitfalls */}
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+              <h3 className="text-2xl font-semibold text-blue mb-6 pb-2 border-b-2 border-blue-200">
+                Avoid Common Pitfalls
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "Late payments - Set up automatic payments",
+                  "High credit utilization - Keep balances low",
+                  "Ignoring reports - Check credit regularly",
+                  "Too many applications - Space out credit requests",
+                  "Old debts - Pay off collections accounts",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <svg
+                      className="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Financial Independence */}
+          <div className="bg-blue text-white p-8 rounded-xl mb-16">
+            <h3 className="text-2xl font-bold mb-6 text-center">
+              Credit Scores and Financial Independence
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                "Online courses on personal finance",
-                "Local workshops and webinars",
-                "Books and financial blogs"
+                {
+                  title: "Emergency Funds",
+                  description: "Good credit provides a safety net",
+                },
+                {
+                  title: "Investment Opportunities",
+                  description:
+                    "Better financing for real estate and other investments",
+                },
+                {
+                  title: "Financial Security",
+                  description: "Peace of mind through good credit management",
+                },
               ].map((item, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="bg-blue-100 text-blue text-xs font-bold px-2 py-1 rounded mr-3">{index + 1}</div>
+                <div key={index} className="bg-blue p-4 rounded-lg">
+                  <h4 className="font-bold text-white mb-2">{item.title}</h4>
+                  <p className="text-blue-100">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Lifestyle Tips */}
+          <div className="bg-white p-8 rounded-xl shadow-md border border-blue-100 mb-16">
+            <h3 className="text-2xl font-semibold text-blue mb-6 text-center">
+              Building a Credit-Friendly Lifestyle
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                "Live within your means - Budget and save",
+                "Prioritise debt repayment - Reduce utilization",
+                "Practice good habits - Regular financial reviews",
+              ].map((item, index) => (
+                <div key={index} className="border-l-4 border-blue-400 pl-4">
                   <p className="text-gray-700">{item}</p>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Pitfalls */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-            <h3 className="text-2xl font-semibold text-blue mb-6 pb-2 border-b-2 border-blue-200">Avoid Common Pitfalls</h3>
-            <ul className="space-y-3">
-              {[
-                "Late payments - Set up automatic payments",
-                "High credit utilization - Keep balances low",
-                "Ignoring reports - Check credit regularly",
-                "Too many applications - Space out credit requests",
-                "Old debts - Pay off collections accounts"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <svg className="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
-
-        {/* Financial Independence */}
-        <div className="bg-blue text-white p-8 rounded-xl mb-16">
-          <h3 className="text-2xl font-bold mb-6 text-center">Credit Scores and Financial Independence</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Emergency Funds",
-                description: "Good credit provides a safety net"
-              },
-              {
-                title: "Investment Opportunities",
-                description: "Better financing for real estate and other investments"
-              },
-              {
-                title: "Financial Security",
-                description: "Peace of mind through good credit management"
-              }
-            ].map((item, index) => (
-              <div key={index} className="bg-blue p-4 rounded-lg">
-                <h4 className="font-bold text-white mb-2">{item.title}</h4>
-                <p className="text-blue-100">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Lifestyle Tips */}
-        <div className="bg-white p-8 rounded-xl shadow-md border border-blue-100 mb-16">
-          <h3 className="text-2xl font-semibold text-blue mb-6 text-center">Building a Credit-Friendly Lifestyle</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              "Live within your means - Budget and save",
-              "Prioritise debt repayment - Reduce utilization",
-              "Practice good habits - Regular financial reviews"
-            ].map((item, index) => (
-              <div key={index} className="border-l-4 border-blue-400 pl-4">
-                <p className="text-gray-700">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-      </div>
-    </section>
-            <RelatedBlock currentSlug="/credit-score" heading="Related services & guides" />
+      </section>
+      <RelatedBlock
+        currentSlug="/credit-score"
+        heading="Related services & guides"
+      />
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -2122,8 +2208,11 @@ export default function Home() {
         <RelatedServices pathname="/credit-score" />
       </div>
 
-              <RelatedBlock currentSlug="/credit-score" heading="Related services & guides" />
-        <Footer />
+      <RelatedBlock
+        currentSlug="/credit-score"
+        heading="Related services & guides"
+      />
+      <Footer />
     </main>
   );
 }

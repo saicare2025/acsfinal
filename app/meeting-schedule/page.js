@@ -18,7 +18,7 @@ export default function MeetingScheduled() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
             {/* Step Label */}
-            <div className="inline-block bg-blue-100 text-blue text-sm font-semibold px-4 py-1 rounded-full mb-2 shadow-sm">
+            <div className="inline-block bg-blue-100 text-blue text-base font-semibold px-4 py-1 rounded-full mb-2 shadow-sm">
               Final Step
             </div>
 

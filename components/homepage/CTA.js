@@ -21,7 +21,7 @@ export default function CTASection() {
                 <DocumentTextIcon className="w-8 h-8 text-blue" />
               </div>
               <h3 className="text-lg font-bold text-gray-800 mb-2">Free Credit Assessment</h3>
-              <p className="text-gray-600 text-sm mb-4">Get your personalized credit evaluation</p>
+              <p className="text-gray-600 text-base mb-4">Get your personalized credit evaluation</p>
               <Link 
                 href="/free-credit-assessment" 
                 className="mt-auto w-full bg-blue hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
@@ -38,7 +38,7 @@ export default function CTASection() {
                 <PhoneIcon className="w-8 h-8 text-blue" />
               </div>
               <h3 className="text-lg font-bold text-gray-800 mb-2">Call Our Experts</h3>
-              <p className="text-gray-600 text-sm mb-4">Speak directly with a credit specialist</p>
+              <p className="text-gray-600 text-base mb-4">Speak directly with a credit specialist</p>
               <a
                 href="tel:0489265737"
                 className="mt-auto w-full bg-blue hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
@@ -51,7 +51,7 @@ export default function CTASection() {
           
         </div>
 
-        <p className="text-blue-100 mt-12 text-sm">
+        <p className="text-blue-100 mt-12 text-base">
           Prefer to message? <Link href="/contact" className="underline hover:text-white font-medium">Contact us online</Link>
         </p>
       </div>

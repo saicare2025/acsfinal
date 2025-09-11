@@ -74,7 +74,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-12">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`
@@ -105,8 +105,8 @@ export default function CreditRepairMelbourneVictoriaPage() {
                 </p>
 
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <p className="text-sm font-bold text-blue-800 mb-3">✅ Why Melbourne <Link href="/how-many-points-hard-inquiry-affect-credit-score" className="text-blue-600 hover:text-blue-800 underline">How Many Points Hard Inquiry Affect Credit Score</Link> Residents Choose Us:</p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-blue-700">
+                  <p className="text-base font-bold text-blue-800 mb-3">✅ Why Melbourne <Link href="/how-many-points-hard-inquiry-affect-credit-score" className="text-blue-600 hover:text-blue-800 underline">How Many Points Hard Inquiry Affect Credit Score</Link> Residents Choose Us:</p>
+                  <div className="grid grid-cols-2 gap-2 text-base text-blue-700">
                     <div>🏆 3 consecutive industry awards</div>
                     <div>⚡ 98% success rate when we accept cases</div>
                     <div>🔒 ASIC Licensed (ACL 532003)</div>
@@ -118,7 +118,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
 
                 <div className="text-center bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
                   <p className="text-xl font-bold text-blue-600 mb-2">📞 Melbourne Hotline: 0489 265 737</p>
-                  <p className="text-sm font-medium text-gray-800">Priority service for urgent home loan applications</p>
+                  <p className="text-base font-medium text-gray-800">Priority service for urgent home loan applications</p>
                   <p className="text-xs text-gray-600">Same-day assessments for Melbourne residents</p>
                 </div>
               </div>
@@ -209,13 +209,13 @@ export default function CreditRepairMelbourneVictoriaPage() {
             <div className="w-full lg:w-1/3 relative">
               {/* Form Container */}
 
-                      <RelatedBlock currentSlug="/credit-repair-melbourne-victoria" heading="Related services & guides" />
+                     
         <FooterForm
                 heading="Start My Free Credit Assessment"
                 subheading="Same-Day Assessment for Melbourne Residents"
                 paragraph="Ready to fix your Melbourne credit file? Join over 3,000 Melbourne residents who've unlocked better finance rates. Call Melbourne Direct: 0489 265 737"
               />
-              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
+              <ul className="mt-8 flex flex-col justify-center gap-3 text-base text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
                   98% success rate
@@ -248,21 +248,21 @@ export default function CreditRepairMelbourneVictoriaPage() {
           <div className="space-y-6">
             <div className="border-l-4 border-red-400 bg-red-50 p-4 rounded">
               <h4 className="font-semibold text-red-800 mb-2">🚫 &quot;Sorry, Application Declined&quot;</h4>
-              <p className="text-sm text-red-700">
+              <p className="text-base text-red-700">
                 Home loans, car finance, even mobile phone contracts. Everything gets rejected and no one tells you why or how to fix it.
               </p>
             </div>
             
             <div className="border-l-4 border-orange-400 bg-orange-50 p-4 rounded">
               <h4 className="font-semibold text-orange-800 mb-2">💸 Paying Through the Nose</h4>
-              <p className="text-sm text-orange-700">
+              <p className="text-base text-orange-700">
                 When you do get approved, it&apos;s always the worst rates. 15% car loans, 25% credit cards, crazy high mortgages.
               </p>
             </div>
             
             <div className="border-l-4 border-gray-400 bg-gray-50 p-4 rounded">
               <h4 className="font-semibold text-gray-800 mb-2">😤 Dreams on Hold</h4>
-              <p className="text-sm text-gray-700">
+              <p className="text-base text-gray-700">
                 That house for the family, reliable car for work, business loan for your idea - all impossible because of some old default.
               </p>
             </div>
@@ -271,7 +271,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
           <div className="space-y-6">
             <div className="border-l-4 border-blue-400 bg-blue-50 p-4 rounded">
               <h4 className="font-semibold text-blue-800 mb-2">🔍 Here&apos;s What Most People Don&apos;t Know…</h4>
-              <p className="text-sm text-blue-700">
+              <p className="text-base text-blue-700">
                 A massive chunk of credit files have <strong>fixable errors</strong>. Defaults listed incorrectly, 
                 late payments that shouldn&apos;t be there, old stuff that should&apos;ve been removed ages ago.
               </p>
@@ -279,7 +279,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
             
             <div className="border-l-4 border-green-400 bg-green-50 p-4 rounded">
               <h4 className="font-semibold text-green-800 mb-2">💡 The Truth They Won&apos;t Tell You</h4>
-              <p className="text-sm text-green-700">
+              <p className="text-base text-green-700">
                 The credit agencies don&apos;t tell you this. The banks definitely don&apos;t. But we will. 
                 Most credit problems are actually fixable with the right approach.
               </p>
@@ -287,7 +287,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
             
             <div className="border-l-4 border-purple-400 bg-purple-50 p-4 rounded">
               <h4 className="font-semibold text-purple-800 mb-2">🇦🇺 Why Aussies Choose Us</h4>
-              <p className="text-sm text-purple-700">
+              <p className="text-base text-purple-700">
                 No BS approach. Real lawyers, not call center staff. ASIC licensed, not some fly-by-night operation. 
                 No Win No Fee - we only get paid when we get results.
               </p>
@@ -309,7 +309,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
           <div className="space-y-6">
             <div className="bg-blue-50 rounded-xl p-6">
               <h4 className="font-semibold text-blue mb-3">Step 1: Credit Card Application Analysis</h4>
-              <p className="text-sm text-slate-700">
+              <p className="text-base text-slate-700">
                 We look at your recent credit card rejections and identify exactly why you&apos;re being knocked back. Different banks 
                 have different criteria – what gets you rejected at CommBank might be fine at ANZ.
               </p>
@@ -317,7 +317,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
             
             <div className="bg-green-50 rounded-xl p-6">
               <h4 className="font-semibold text-green-700 mb-3">Step 2: Strategic Credit File Cleanup</h4>
-              <p className="text-sm text-slate-700 mb-3">We target the specific items hurting your credit card applications:</p>
+              <p className="text-base text-slate-700 mb-3">We target the specific items hurting your credit card applications:</p>
               <ul className="text-xs text-slate-700 space-y-1">
                 <li>• Remove defaults that are automatic deal-breakers</li>
                 <li>• Clear late payment patterns that show payment stress</li>
@@ -330,7 +330,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
           <div className="space-y-6">
             <div className="bg-orange-50 rounded-xl p-6">
               <h4 className="font-semibold text-orange-700 mb-3">Step 3: Credit Card Application Timing</h4>
-              <p className="text-sm text-slate-700">
+              <p className="text-base text-slate-700">
                 We advise when to apply and which cards to target based on your cleaned-up credit file. No point applying 
                 for a premium rewards card if your credit score isn&apos;t quite there yet.
               </p>
@@ -338,7 +338,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
             
             <div className="bg-purple-50 rounded-xl p-6">
               <h4 className="font-semibold text-purple-700 mb-3">Step 4: Application Strategy</h4>
-              <p className="text-sm text-slate-700">
+              <p className="text-base text-slate-700">
                 We help you understand which credit cards you&apos;re most likely to get approved for based on your improved 
                 credit profile, so you&apos;re not wasting applications on cards you won&apos;t qualify for.
               </p>
@@ -419,6 +419,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
           </div>
         </div>
       </Section>
+       <RelatedBlock currentSlug="/credit-repair-melbourne-victoria" heading="Related services & guides" />
 
       {/* Process */}
       <Section title="The Hidden Cost of Bad Credit Card Options">
@@ -434,7 +435,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
             <div className="space-y-4">
               <div className="border-l-4 border-red-400 bg-red-50 p-4 rounded">
                 <h4 className="font-semibold text-red-800 mb-2">High Interest Rates</h4>
-                <ul className="text-sm text-red-700 space-y-1">
+                <ul className="text-base text-red-700 space-y-1">
                   <li>• Secured credit cards: Often 19-24% interest rates</li>
                   <li>• Bad credit cards: Higher rates than premium cards (18-22% vs 12-16%)</li>
                   <li>• No introductory offers: Miss out on 0% balance transfer periods</li>
@@ -443,7 +444,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
               
               <div className="border-l-4 border-orange-400 bg-orange-50 p-4 rounded">
                 <h4 className="font-semibold text-orange-800 mb-2">Poor Rewards Programs</h4>
-                <ul className="text-sm text-orange-700 space-y-1">
+                <ul className="text-base text-orange-700 space-y-1">
                   <li>• No points earning: Basic cards earn zero reward points</li>
                   <li>• No travel benefits: Miss out on airport lounge access, travel insurance</li>
                   <li>• No sign-up bonuses: Premium cards offer 50,000-100,000+ bonus points</li>
@@ -452,7 +453,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
               
               <div className="border-l-4 border-yellow-400 bg-yellow-50 p-4 rounded">
                 <h4 className="font-semibold text-yellow-800 mb-2">High Fees Structure</h4>
-                <ul className="text-sm text-yellow-700 space-y-1">
+                <ul className="text-base text-yellow-700 space-y-1">
                   <li>• Annual fees: Bad credit cards often charge $99-199 with poor benefits</li>
                   <li>• Cash advance fees: Higher fees and immediate interest charges</li>
                   <li>• Foreign transaction fees: 3%+ on overseas purchases vs 0% on premium cards</li>
@@ -467,7 +468,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
             <div className="space-y-4">
               <div className="border-l-4 border-green-400 bg-green-50 p-4 rounded">
                 <h4 className="font-semibold text-green-800 mb-2">Travel Rewards and Benefits</h4>
-                <ul className="text-sm text-green-700 space-y-1">
+                <ul className="text-base text-green-700 space-y-1">
                   <li>• Frequent flyer points: Earn 1-2 points per dollar on everyday spending</li>
                   <li>• Airport lounge access: Qantas, Virgin, international lounges included</li>
                   <li>• Travel insurance: Comprehensive cover for overseas trips</li>
@@ -477,7 +478,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
               
               <div className="border-l-4 border-blue-400 bg-blue-50 p-4 rounded">
                 <h4 className="font-semibold text-blue-800 mb-2">Financial Benefits</h4>
-                <ul className="text-sm text-blue-700 space-y-1">
+                <ul className="text-base text-blue-700 space-y-1">
                   <li>• 0% balance transfers: Move debt from high-interest cards</li>
                   <li>• No foreign transaction fees: Save 3%+ on overseas spending</li>
                   <li>• Purchase protection: Insurance on items bought with the card</li>
@@ -487,7 +488,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
               
               <div className="border-l-4 border-purple-400 bg-purple-50 p-4 rounded">
                 <h4 className="font-semibold text-purple-800 mb-2">Lifestyle Perks</h4>
-                <ul className="text-sm text-purple-700 space-y-1">
+                <ul className="text-base text-purple-700 space-y-1">
                   <li>• Dining credits: $200-400 annual restaurant credits</li>
                   <li>• Shopping benefits: Access to exclusive sales and events</li>
                   <li>• Entertainment perks: Ticket pre-sales, exclusive experiences</li>
@@ -511,7 +512,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
         <motion.div className="grid gap-8 lg:grid-cols-2">
           <motion.div variants={fadeIn} className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
             <h3 className="text-lg font-semibold text-purple-700 mb-4">★★★★★ &quot;Wine country dreams beyond imagination&quot;</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <p><strong>Challenge:</strong> Had $8,400 in defaults blocking McLaren Vale vineyard expansion.</p>
               <p><strong>Our Solution:</strong> ACS removed everything in 6 weeks using wine industry expertise.</p>
               <p><strong>Result:</strong> Now produce premium Shiraz with ocean views and cellar door is the most photographed in SA. Festival state perfection!</p>
@@ -525,7 +526,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
           
           <motion.div variants={fadeIn} className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
             <h3 className="text-lg font-semibold text-orange-700 mb-4">★★★★★ &quot;South Australia&apos;s premier credit service&quot;</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <p><strong>Challenge:</strong> Tried fixing credit himself for 18 months while managing Barossa Valley operation. Complete waste of time.</p>
               <p><strong>Our Solution:</strong> ACS removed defaults in 4 weeks with wine industry understanding.</p>
               <p><strong>Result:</strong> Now owns vineyards in Clare Valley too. Building wine empire across SA&apos;s best regions.</p>
@@ -539,7 +540,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
           
           <motion.div variants={fadeIn} className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
             <h3 className="text-lg font-semibold text-green-700 mb-4">★★★★★ &quot;Professional, caring, life-changing&quot;</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <p><strong>Challenge:</strong> Adelaide Hills accommodation provider - bad credit was crushing Festival season expansion dreams.</p>
               <p><strong>Our Solution:</strong> ACS cleaned file in 5 weeks understanding festival season economics.</p>
               <p><strong>Result:</strong> Commercial finance approved, new luxury retreat opened, booked solid every Adelaide Festival!</p>
@@ -553,7 +554,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
           
           <motion.div variants={fadeIn} className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
             <h3 className="text-lg font-semibold text-blue mb-4">★★★★★ &quot;Festival state lifestyle made affordable&quot;</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <p><strong>Challenge:</strong> Interest rate difference affecting Adelaide Hills property investment through wine tourism.</p>
               <p><strong>Our Solution:</strong> ACS achieved dramatic rate improvement from rejection to 2.9% approval in 5 weeks.</p>
               <p><strong>Result:</strong> Adelaide Hills property pays for itself through wine tourism. Festival state has an address, and they&apos;re living in it.</p>
@@ -576,7 +577,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">Why Tourism Finance Gets Rejected</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-orange-500 font-bold">•</span>
                 <span><strong>Seasonal income patterns:</strong> Peak summer/holiday periods</span>
@@ -600,19 +601,19 @@ export default function CreditRepairMelbourneVictoriaPage() {
             <h3 className="text-lg font-semibold text-blue mb-4">Great Ocean Road Business Success Stories</h3>
             <div className="space-y-4">
               <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm text-slate-700">
+                <p className="text-base text-slate-700">
                   <strong>Apollo Bay Accommodation Success:</strong> &quot;Wanted to expand our B&B but a $4,500 default was blocking all finance applications. ACS removed it in 6 weeks. Now we&apos;ve got 4 more rooms and bookings are solid through 2025.&quot; – David & Linda K.
                 </p>
               </div>
               
               <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm text-slate-700">
+                <p className="text-base text-slate-700">
                   <strong>Port Campbell Tour Business Victory:</strong> &quot;My helicopter tour business needed finance for a second aircraft, but late payments from COVID were killing applications. ACS cleaned my file in 7 weeks. Now I&apos;ve got two choppers and the Great Ocean Road views are paying off big time!&quot; – Marcus T.
                 </p>
               </div>
               
               <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm text-slate-700">
+                <p className="text-base text-slate-700">
                   <strong>Port Fairy Restaurant Expansion:</strong> &quot;Heritage restaurant needed kitchen upgrade but credit issues blocked equipment finance. ACS removed multiple entries in 8 weeks. New kitchen installed, reviews are amazing, profits up 40%.&quot; – Giuseppe & Maria C.
                 </p>
               </div>
@@ -626,7 +627,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">Award-Winning Coastal Service</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-blue font-bold">✓</span>
                 <span>Industry Excellence Awards 2022, 2023, 2024</span>
@@ -646,8 +647,8 @@ export default function CreditRepairMelbourneVictoriaPage() {
             </div>
             
             <h3 className="text-lg font-semibold text-blue mb-4 mt-6">Western Victoria Expertise</h3>
-            <p className="text-sm text-slate-700 mb-3">Deep understanding of western Victoria&apos;s economic landscape:</p>
-            <div className="space-y-2 text-sm text-slate-700">
+            <p className="text-base text-slate-700 mb-3">Deep understanding of western Victoria&apos;s economic landscape:</p>
+            <div className="space-y-2 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-blue font-bold">•</span>
                 <span>Tourism and hospitality seasonal finance requirements</span>
@@ -669,8 +670,8 @@ export default function CreditRepairMelbourneVictoriaPage() {
           
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">No Win No Fee Promise</h3>
-            <p className="text-sm text-slate-700 mb-3">We only get paid when you get results:</p>
-            <div className="space-y-2 text-sm text-slate-700 mb-6">
+            <p className="text-base text-slate-700 mb-3">We only get paid when you get results:</p>
+            <div className="space-y-2 text-base text-slate-700 mb-6">
               <div className="flex items-start gap-2">
                 <span className="text-green-600 font-bold">✓</span>
                 <span>One-off admin fee: $330 (applies regardless of outcome)</span>
@@ -728,10 +729,10 @@ export default function CreditRepairMelbourneVictoriaPage() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-blue mb-3">Greater Geelong & Bellarine Peninsula</h3>
-              <p className="text-sm text-slate-600 mb-2">Victoria&apos;s second-largest city and gateway to coastal lifestyle</p>
-              <p className="text-sm font-medium mb-2">Geelong | Torquay | Anglesea | Drysdale | Portarlington | Queenscliff | Ocean Grove</p>
+              <p className="text-base text-slate-600 mb-2">Victoria&apos;s second-largest city and gateway to coastal lifestyle</p>
+              <p className="text-base font-medium mb-2">Geelong | Torquay | Anglesea | Drysdale | Portarlington | Queenscliff | Ocean Grove</p>
               <div className="bg-blue-50 rounded-lg p-3">
-                <p className="text-sm font-medium text-blue mb-2">Geelong region expertise:</p>
+                <p className="text-base font-medium text-blue mb-2">Geelong region expertise:</p>
                 <ul className="text-xs space-y-1">
                   <li>• Waterfront property investments</li>
                   <li>• Manufacturing transition opportunities</li>
@@ -743,10 +744,10 @@ export default function CreditRepairMelbourneVictoriaPage() {
             
             <div>
               <h3 className="text-lg font-semibold text-blue mb-3">Surf Coast & Great Ocean Road</h3>
-              <p className="text-sm text-slate-600 mb-2">Australia&apos;s most iconic coastal tourism destination</p>
-              <p className="text-sm font-medium mb-2">Torquay | Anglesea | Lorne | Apollo Bay | Port Campbell | Warrnambool</p>
+              <p className="text-base text-slate-600 mb-2">Australia&apos;s most iconic coastal tourism destination</p>
+              <p className="text-base font-medium mb-2">Torquay | Anglesea | Lorne | Apollo Bay | Port Campbell | Warrnambool</p>
               <div className="bg-blue-50 rounded-lg p-3">
-                <p className="text-sm font-medium text-blue mb-2">Coastal specialisation:</p>
+                <p className="text-base font-medium text-blue mb-2">Coastal specialisation:</p>
                 <ul className="text-xs space-y-1">
                   <li>• Tourism accommodation and hospitality</li>
                   <li>• Marine equipment and boat finance</li>
@@ -760,10 +761,10 @@ export default function CreditRepairMelbourneVictoriaPage() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-blue mb-3">Western Districts & Agricultural Region</h3>
-              <p className="text-sm text-slate-600 mb-2">Victoria&apos;s premier agricultural and livestock region</p>
-              <p className="text-sm font-medium mb-2">Hamilton | Horsham | Ararat | Stawell | Colac | Camperdown</p>
+              <p className="text-base text-slate-600 mb-2">Victoria&apos;s premier agricultural and livestock region</p>
+              <p className="text-base font-medium mb-2">Hamilton | Horsham | Ararat | Stawell | Colac | Camperdown</p>
               <div className="bg-blue-50 rounded-lg p-3">
-                <p className="text-sm font-medium text-blue mb-2">Agricultural focus:</p>
+                <p className="text-base font-medium text-blue mb-2">Agricultural focus:</p>
                 <ul className="text-xs space-y-1">
                   <li>• Livestock and wool industry finance</li>
                   <li>• Agricultural equipment and machinery</li>
@@ -775,10 +776,10 @@ export default function CreditRepairMelbourneVictoriaPage() {
             
             <div>
               <h3 className="text-lg font-semibold text-blue mb-3">Portland & South West Coast</h3>
-              <p className="text-sm text-slate-600 mb-2">Industrial port and pristine coastal communities</p>
-              <p className="text-sm font-medium mb-2">Portland | Port Fairy | Nelson | Casterton | Heywood</p>
+              <p className="text-base text-slate-600 mb-2">Industrial port and pristine coastal communities</p>
+              <p className="text-base font-medium mb-2">Portland | Port Fairy | Nelson | Casterton | Heywood</p>
               <div className="bg-blue-50 rounded-lg p-3">
-                <p className="text-sm font-medium text-blue mb-2">South west expertise:</p>
+                <p className="text-base font-medium text-blue mb-2">South west expertise:</p>
                 <ul className="text-xs space-y-1">
                   <li>• Industrial and port-related businesses</li>
                   <li>• Fishing and aquaculture industry</li>
@@ -798,7 +799,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
             Don&apos;t let bad credit hold you back from western Victoria&apos;s opportunities. Every month you wait:
           </p>
           <div className="grid gap-4 md:grid-cols-2">
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-red-500 font-bold">✗</span>
                 <span>Coastal property prices continue rising rapidly</span>
@@ -812,7 +813,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
                 <span>Interest rates may increase, costing thousands more</span>
               </div>
             </div>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-red-500 font-bold">✗</span>
                 <span>Other buyers with better credit get the properties you want</span>
@@ -830,7 +831,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
           <div className="grid gap-4 md:grid-cols-2">
             <div>
               <p className="text-lg font-semibold text-blue mb-2">📞 Call Western Victoria Direct: 0489 265 737</p>
-              <div className="space-y-2 text-sm text-slate-700">
+              <div className="space-y-2 text-base text-slate-700">
                 <div className="flex items-start gap-2">
                   <span className="text-green-600 font-bold">✓</span>
                   <span>Same-day assessment for Geelong, Warrnambool, Great Ocean Road residents</span>
@@ -897,7 +898,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
                   />
                 </svg>
               </summary>
-              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
+              <p className="mt-3 text-base text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
                 {f.answer}
               </p>
             </motion.details>
@@ -922,7 +923,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">Our Western Victoria Commitment:</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-blue font-bold">✓</span>
                 <span>Same premium service from Geelong to Portland</span>
@@ -948,7 +949,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
           
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">Contact Our Western Victoria Team Today:</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-blue font-bold">📞</span>
                 <span><strong>Phone:</strong> 0489 265 737</span>
@@ -968,7 +969,7 @@ export default function CreditRepairMelbourneVictoriaPage() {
             </div>
             
             <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-              <p className="text-sm font-medium text-blue mb-2">ASIC Licensed ACL 532003 | Industry Excellence Awards 2022, 2023, 2024</p>
+              <p className="text-base font-medium text-blue mb-2">ASIC Licensed ACL 532003 | Industry Excellence Awards 2022, 2023, 2024</p>
               <p className="text-xs text-slate-700">
                 Don&apos;t let bad credit stop you from living the western Victoria lifestyle you deserve. From Geelong&apos;s waterfront opportunities to Great Ocean Road tourism success, we&apos;re here to help you achieve your financial goals.
               </p>
@@ -990,17 +991,17 @@ export default function CreditRepairMelbourneVictoriaPage() {
         >
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 98% success rate when we take cases
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 No Win No Fee — $330 admin fee
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 Licensed & regulated — ASIC ACL 532003
               </p>
             </div>
@@ -1039,7 +1040,7 @@ function Card({ title, bullets = [] }) {
       className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
     >
       <h3 className="text-lg font-semibold text-blue">{title}</h3>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700">
+      <ul className="mt-3 space-y-2 text-base text-slate-700">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2">
             <svg
@@ -1085,9 +1086,9 @@ function PriceCard({
         </span>
       )}
       <h3 className="text-lg font-semibold text-blue">{name}</h3>
-      <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
-      <p className="mt-1 text-sm text-slate-600">Perfect for: {perfectFor}</p>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
+      <p className="mt-1 text-base text-slate-600">Timeline: {timeline}</p>
+      <p className="mt-1 text-base text-slate-600">Perfect for: {perfectFor}</p>
+      <ul className="mt-3 space-y-2 text-base text-slate-700 flex-grow">
         {includes.map((i) => (
           <li key={i} className="flex items-start gap-2">
             <svg
@@ -1111,7 +1112,7 @@ function PriceCard({
        
         <Link
           href="/free-credit-assessment"
-          className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"
+          className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-base"
         >
           Start Now
         </Link>
@@ -1134,7 +1135,7 @@ function Testimonial({ name, children }) {
         ))}
       </div>
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">
+      <figcaption className="mt-3 text-base font-semibold text-blue">
         {name}
       </figcaption>
     </motion.figure>

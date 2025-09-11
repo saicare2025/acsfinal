@@ -219,10 +219,10 @@ const AboutPage = () => {
                 <div className="space-y-3 text-gray-700">
                   <div>
                     <p className="font-semibold text-gray-800">Elisa Rothschild</p>
-                    <p className="text-sm">Principal Lawyer <Link href="/attorneys-for-credit-repair-australia" className="text-blue-600 hover:text-blue-800 underline">Attorneys For Credit Repair Australia</Link> & Director</p>
-                    <p className="text-sm">Monash <Link href="/australian-credit-lawyers-now-australian-credit-solutions" className="text-blue-600 hover:text-blue-800 underline">Australian Credit Lawyers Now Australian Credit Solutions</Link> University Graduate</p>
+                    <p className="text-base">Principal Lawyer <Link href="/attorneys-for-credit-repair-australia" className="text-blue-600 hover:text-blue-800 underline">Attorneys For Credit Repair Australia</Link> & Director</p>
+                    <p className="text-base">Monash <Link href="/australian-credit-lawyers-now-australian-credit-solutions" className="text-blue-600 hover:text-blue-800 underline">Australian Credit Lawyers Now Australian Credit Solutions</Link> University Graduate</p>
                   </div>
-                  <p className="text-sm">
+                  <p className="text-base">
                     Specializing in Credit Law, Family Law, Debt Negotiation, and Consumer Finance
                   </p>
                 </div>

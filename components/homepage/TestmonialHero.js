@@ -69,7 +69,7 @@ export default function FloatingTestimonials({
         aria-expanded={open}
         aria-controls="floating-testimonials-panel"
         onClick={() => setOpen((v) => !v)}
-        className="fixed z-40 bottom-0 translate-y-[-50%] rounded-full shadow-lg border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-800 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 flex items-center gap-2"
+        className="fixed z-40 bottom-0 translate-y-[-50%] rounded-full shadow-lg border border-gray-200 bg-white px-4 py-2 text-base font-semibold text-gray-800 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 flex items-center gap-2"
         style={{ bottom: `${offsetY}px`, ...sideOffset }}
       >
         <span aria-hidden>⭐</span>
@@ -117,7 +117,7 @@ export default function FloatingTestimonials({
               )}
 
               <noscript>
-                <p className="text-center text-sm text-gray-500 mt-4">
+                <p className="text-center text-base text-gray-500 mt-4">
                   Enable JavaScript to view our latest client reviews.
                 </p>
               </noscript>

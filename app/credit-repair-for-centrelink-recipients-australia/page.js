@@ -79,7 +79,7 @@ export default function CentrelinkCreditRepairPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-12">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
 
@@ -98,7 +98,13 @@ export default function CentrelinkCreditRepairPage() {
                 <p className="text-lg leading-relaxed text-gray-700">
                   Life&apos;s thrown you some curveballs, and now you&apos;re on
                   Centrelink. We get it – and we&apos;re here to help fix your
-     <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>              credit without breaking the bank. Being on Centrelink
+                  <Link
+                    href="/get-credit-repair"
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Get Credit Repair
+                  </Link>{" "}
+                  credit without breaking the bank. Being on Centrelink
                   doesn&apos;t mean you deserve bad credit forever.
                 </p>
 
@@ -169,13 +175,12 @@ export default function CentrelinkCreditRepairPage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-                      <RelatedBlock currentSlug="/credit-repair-for-centrelink-recipients-australia" heading="Related services & guides" />
-        <FooterForm
+              <FooterForm
                 heading="Get My Free Centrelink-Friendly Assessment"
                 subheading="Affordable & Understanding"
                 paragraph="Quick credit check: Are you being knocked back for basic things like mobile phone plans or rental applications? We can help fix it."
               />
-              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
+              <ul className="mt-8 flex flex-col justify-center gap-3 text-base text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
                   No Win No Fee
@@ -204,8 +209,15 @@ export default function CentrelinkCreditRepairPage() {
       <Section title="Why Centrelink Recipients Struggle with Credit Repair">
         <p className="text-slate-700">
           Let&apos;s be honest – most credit repair companies either don&apos;t
-          understand your <Link href="/blog-details/how-can-i-increase-my-credit-score" className="text-blue-600 hover:text-blue-800 underline">How Can I Increase My Credit Score</Link> situation or want upfront fees you simply can&apos;t
-          afford. Here&apos;s what makes your situation different:
+          understand your{" "}
+          <Link
+            href="/blog-details/how-can-i-increase-my-credit-score"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            How Can I Increase My Credit Score
+          </Link>{" "}
+          situation or want upfront fees you simply can&apos;t afford.
+          Here&apos;s what makes your situation different:
         </p>
         <motion.div
           variants={staggerChildren}
@@ -236,8 +248,15 @@ export default function CentrelinkCreditRepairPage() {
         </motion.div>
         <p className="mt-6 text-slate-700 font-semibold">
           The truth? None of this is permanent. We&apos;ve seen people go from
-          Centrelink with <Link href="/equifax-default-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Equifax Default Removal Australia</Link> multiple defaults to getting approved for car loans
-          within months of cleaning up their credit file.
+          Centrelink with{" "}
+          <Link
+            href="/equifax-default-removal-australia"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Equifax Default Removal Australia
+          </Link>{" "}
+          multiple defaults to getting approved for car loans within months of
+          cleaning up their credit file.
         </p>
       </Section>
 
@@ -245,7 +264,13 @@ export default function CentrelinkCreditRepairPage() {
       <Section title="Our Centrelink-Friendly Approach: No Win No Fee That Actually Works">
         <p className="text-slate-700">
           Here&apos;s what makes us different from other credit repair companies
-   <Link href="/does-late-rent-payment-affect-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">Does Late Rent Payment Affect Credit Score Australia</Link>        when it comes to helping Centrelink recipients:
+          <Link
+            href="/does-late-rent-payment-affect-credit-score-australia"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Does Late Rent Payment Affect Credit Score Australia
+          </Link>{" "}
+          when it comes to helping Centrelink recipients:
         </p>
         <motion.div
           variants={staggerChildren}
@@ -540,7 +565,7 @@ export default function CentrelinkCreditRepairPage() {
             ]}
           />
         </motion.div>
-        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
+        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-base text-slate-600">
           <strong>Special Centrelink Policy:</strong> $330 admin fee (payment
           plans available). No success fees for Centrelink recipients. No hidden
           costs. We understand your situation and work within your means.
@@ -576,13 +601,17 @@ export default function CentrelinkCreditRepairPage() {
                   />
                 </svg>
               </summary>
-              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
+              <p className="mt-3 text-base text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
                 {f.answer}
               </p>
             </motion.details>
           ))}
         </motion.div>
       </Section>
+      <RelatedBlock
+        currentSlug="/credit-repair-for-centrelink-recipients-australia"
+        heading="Related services & guides"
+      />
 
       {/* Next Steps */}
       <Section title="Next Steps: Get Your Free Credit Assessment">
@@ -718,17 +747,17 @@ export default function CentrelinkCreditRepairPage() {
         >
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 Award-winning specialists (2022, 2023, 2024)
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 No Win No Fee — Payment plans available
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 Licensed & regulated — ASIC ACL 532003
               </p>
             </div>
@@ -772,7 +801,7 @@ function Card({ title, bullets = [] }) {
       className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
     >
       <h3 className="text-lg font-semibold text-blue">{title}</h3>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700">
+      <ul className="mt-3 space-y-2 text-base text-slate-700">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2">
             <svg
@@ -812,9 +841,9 @@ function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
         </span>
       )}
       <h3 className="text-lg font-semibold text-blue">{name}</h3>
-      <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
-      <p className="mt-1 text-sm text-slate-600">Perfect for: {perfectFor}</p>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
+      <p className="mt-1 text-base text-slate-600">Timeline: {timeline}</p>
+      <p className="mt-1 text-base text-slate-600">Perfect for: {perfectFor}</p>
+      <ul className="mt-3 space-y-2 text-base text-slate-700 flex-grow">
         {includes.map((i) => (
           <li key={i} className="flex items-start gap-2">
             <svg
@@ -837,7 +866,7 @@ function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
       <div className="mt-4">
         <Link
           href="/free-credit-assessment"
-          className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm text-center block"
+          className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-base text-center block"
         >
           Start Now
         </Link>
@@ -860,7 +889,7 @@ function Testimonial({ name, children }) {
         ))}
       </div>
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">
+      <figcaption className="mt-3 text-base font-semibold text-blue">
         {name}
       </figcaption>
     </motion.figure>

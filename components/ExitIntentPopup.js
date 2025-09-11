@@ -1,11 +1,9 @@
 "use client";
-import React, { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { X } from "lucide-react";
 
-const SCROLL_INACTIVITY_MS = 30_000; // 30s after last scroll
-const FULL_INACTIVITY_MS = 60_000;   // 60s after any activity
-const INACTIVITY_POLL_MS = 1_000;    // check every second
+const SHOW_AFTER_MS = 30_000; // 30s after landing
 
 const ExitIntentPopup = () => {
   const router = useRouter();
@@ -13,10 +11,7 @@ const ExitIntentPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasShown, setHasShown] = useState(false);
-
-  const scrollTimeoutRef = useRef(null);
-  const inactivityIntervalRef = useRef(null);
-  const lastActivityTimeRef = useRef(Date.now());
+  const timerRef = useRef(null);
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -24,6 +19,7 @@ const ExitIntentPopup = () => {
     phone: "",
   });
 
+  // ---- UTM helpers (unchanged) ----
   const utm = useMemo(() => {
     const keys = [
       "utm_source",
@@ -40,7 +36,9 @@ const ExitIntentPopup = () => {
     const o = {};
     keys.forEach((k) => {
       const v = searchParams.get(k);
-      if (v) o[k.replace(/^utm_/, "")] = v;
+      if (v) o[k].startsWith?.("utm_")
+        ? (o[k.replace(/^utm_/, "")] = v)
+        : (o[k] = v);
     });
     return o;
   }, [searchParams]);
@@ -56,98 +54,26 @@ const ExitIntentPopup = () => {
     return `src:${src || "site"}`;
   };
 
+  // ---- Only show once per session, after 30s on page ----
   useEffect(() => {
     const shown = sessionStorage.getItem("exitPopupShown");
-    if (shown) setHasShown(true);
-  }, []);
+    if (shown) {
+      setHasShown(true);
+      return;
+    }
 
-  const showPopup = () => {
-    if (!hasShown && !isVisible) {
+    timerRef.current = setTimeout(() => {
       setIsVisible(true);
       setHasShown(true);
       sessionStorage.setItem("exitPopupShown", "true");
-    }
-  };
-
-  const closePopup = () => setIsVisible(false);
-
-  // Any user activity refreshes the "last activity" clock
-  const trackActivity = () => {
-    lastActivityTimeRef.current = Date.now();
-  };
-
-  // Start/refresh a 30s timer after any scroll, then show
-  const trackScroll = () => {
-    if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
-    // If it's already shown or permanently suppressed, don't arm the timer
-    if (hasShown || isVisible) return;
-    scrollTimeoutRef.current = setTimeout(() => {
-      showPopup();
-    }, SCROLL_INACTIVITY_MS);
-  };
-
-  useEffect(() => {
-    if (hasShown) return;
-
-    const handleMouseLeave = (e) => {
-      // Keep your exit-intent behavior as-is (instant), or comment out to delay everything
-      if (e.clientY <= 0) showPopup();
-    };
-
-    const handlePopState = () => {
-      const isMobile =
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        ) || window.innerWidth <= 768;
-      if (isMobile) showPopup();
-    };
-
-    const activityEvents = [
-      "mousedown",
-      "mousemove",
-      "keypress",
-      "scroll",
-      "touchstart",
-      "click",
-    ];
-    activityEvents.forEach((event) =>
-      document.addEventListener(event, trackActivity, true)
-    );
-
-    // Scroll inactivity (30s)
-    document.addEventListener("scroll", trackScroll, true);
-
-    // Full inactivity (60s since ANY activity)
-    inactivityIntervalRef.current = setInterval(() => {
-      if (hasShown || isVisible) return;
-      const now = Date.now();
-      const timeSinceActivity = now - lastActivityTimeRef.current;
-      if (timeSinceActivity >= FULL_INACTIVITY_MS) {
-        showPopup();
-        if (inactivityIntervalRef.current) {
-          clearInterval(inactivityIntervalRef.current);
-          inactivityIntervalRef.current = null;
-        }
-      }
-    }, INACTIVITY_POLL_MS);
-
-    document.addEventListener("mouseleave", handleMouseLeave);
-    window.addEventListener("popstate", handlePopState);
+    }, SHOW_AFTER_MS);
 
     return () => {
-      document.removeEventListener("mouseleave", handleMouseLeave);
-      window.removeEventListener("popstate", handlePopState);
-      activityEvents.forEach((event) =>
-        document.removeEventListener(event, trackActivity, true)
-      );
-      document.removeEventListener("scroll", trackScroll, true);
-      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
-      if (inactivityIntervalRef.current) {
-        clearInterval(inactivityIntervalRef.current);
-        inactivityIntervalRef.current = null;
-      }
+      if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, [hasShown, isVisible]);
+  }, []);
+
+  const closePopup = () => setIsVisible(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -156,18 +82,10 @@ const ExitIntentPopup = () => {
 
   const validateForm = () => {
     const { fullName, email, phone } = formData;
-    if (!fullName.trim()) {
-      alert("Please enter your full name.");
-      return false;
-    }
-    if (!email.trim() || !/^\S+@\S+\.\S+$/.test(email)) {
-      alert("Please enter a valid email address.");
-      return false;
-    }
-    if (!phone.trim()) {
-      alert("Please enter your phone number.");
-      return false;
-    }
+    if (!fullName.trim()) return alert("Please enter your full name."), false;
+    if (!email.trim() || !/^\S+@\S+\.\S+$/.test(email))
+      return alert("Please enter a valid email address."), false;
+    if (!phone.trim()) return alert("Please enter your phone number."), false;
     return true;
   };
 
@@ -176,7 +94,7 @@ const ExitIntentPopup = () => {
     if (ct.includes("application/json")) return await res.json();
     const text = await res.text();
     return { ok: false, error: text };
-  };
+    };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -249,11 +167,11 @@ const ExitIntentPopup = () => {
           <h2 className="text-xl font-bold text-blue-800 mb-2">
             ⚠️ Don’t Let Bad Credit Hold You Back
           </h2>
-          <ul className="text-sm text-left text-blue-800  mb-4">
+          <ul className="text-base text-left text-blue-800 mb-4">
             <li>✅ Clear defaults & improve your credit</li>
             <li>✅ Get back on track for loans & peace of mind</li>
           </ul>
-          <p className="text-sm font-semibold text-blue-800 mb-3">
+          <p className="text-base font-semibold text-blue-800 mb-3">
             Free confidential consultation — no obligation
           </p>
         </div>
@@ -268,7 +186,6 @@ const ExitIntentPopup = () => {
             required
             className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
           />
-
           <input
             type="email"
             name="email"
@@ -278,7 +195,6 @@ const ExitIntentPopup = () => {
             required
             className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
           />
-
           <input
             type="tel"
             name="phone"
@@ -288,7 +204,6 @@ const ExitIntentPopup = () => {
             required
             className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
           />
-
           <button
             type="submit"
             disabled={isSubmitting}

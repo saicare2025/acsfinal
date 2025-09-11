@@ -97,10 +97,10 @@ const CreditScoreTransformation = () => {
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                   <div className="flex justify-between items-end text-white">
                     <div>
-                      <span className="text-sm font-light">CREDIT SCORE INCREASE</span>
+                      <span className="text-base font-light">CREDIT SCORE INCREASE</span>
                       <h3 className="text-2xl font-bold">{story.afterScore - story.beforeScore} Points</h3>
                     </div>
-                    <span className="text-sm">Resolved in {story.duration}</span>
+                    <span className="text-base">Resolved in {story.duration}</span>
                   </div>
                 </div>
               </div>
@@ -108,8 +108,8 @@ const CreditScoreTransformation = () => {
               {/* Credit Score Meter */}
               <div className="p-6 border-b border-blue-50">
                 <div className="flex justify-between mb-2">
-                  <span className="text-sm text-gray-500">Before: {story.beforeScore}</span>
-                  <span className="text-sm text-gray-500">After: {story.afterScore}</span>
+                  <span className="text-base text-gray-500">Before: {story.beforeScore}</span>
+                  <span className="text-base text-gray-500">After: {story.afterScore}</span>
                 </div>
                 <div className="relative h-3 bg-gray-100 rounded-full overflow-hidden">
                   <div 

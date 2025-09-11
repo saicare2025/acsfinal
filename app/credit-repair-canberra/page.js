@@ -21,23 +21,24 @@ export default function Home() {
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-repair-canberra",
     title: "Canberra Credit Repair Experts | Australian Credit Solutions",
-    description: "Professional credit repair services in Canberra. Remove defaults, correct credit reports, and improve your credit score with Canberra's trusted credit repair experts.",
+    description:
+      "Professional credit repair services in Canberra. Remove defaults, correct credit reports, and improve your credit score with Canberra's trusted credit repair experts.",
     isService: true,
-    serviceType: "Credit Repair Services Canberra"
+    serviceType: "Credit Repair Services Canberra",
   });
   return (
     <main className="flex min-h-screen flex-col">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
       <Header />
       <HeroSection />
-      <ReviewsWidget/>
       <VideoServicesSection />
       <section className="py-8 bg-white">
+        <ReviewsWidget />
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Section 1: What Is A Credit Score */}
           <div className="mb-12">
@@ -46,13 +47,20 @@ export default function Home() {
             </h2>
             <div className="space-y-4 text-gray-700">
               <p>
-                A credit score (&apos;credit rating&apos;) is a number that influences
-                whether or not a person can get a loan, an apartment, insurance,
-                phone service - regardless of who they are and what their income
-                might be. Essentially it&apos;s based on your statistical probability
-      <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>           of meeting your debt obligations in the past by making on-time
-                payments and not defaulting on loans. In other words, it&apos;s an
-                expression of how risky it is to lend to you, given our
+                A credit score (&apos;credit rating&apos;) is a number that
+                influences whether or not a person can get a loan, an apartment,
+                insurance, phone service - regardless of who they are and what
+                their income might be. Essentially it&apos;s based on your
+                statistical probability
+                <Link
+                  href="/get-credit-repair"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  Get Credit Repair
+                </Link>{" "}
+                of meeting your debt obligations in the past by making on-time
+                payments and not defaulting on loans. In other words, it&apos;s
+                an expression of how risky it is to lend to you, given our
                 knowledge of you over the years.
               </p>
               <p>
@@ -60,7 +68,13 @@ export default function Home() {
                 businesses to use their own funds for investment so that they
                 can create more wealth in the future. And when used responsibly,
                 credit can be an excellent tool for building one&apos;s
-       <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link>          creditworthiness; our society relies on it also because people
+                <Link
+                  href="/what-is-a-good-credit-score-australia"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  What Is A Good Credit Score Australia
+                </Link>{" "}
+                creditworthiness; our society relies on it also because people
                 need to borrow money to do things such as buy homes or
                 businesses, start new projects, pay off debts; however, just
                 like any other tool, if abused, it can do severe damage!
@@ -79,7 +93,14 @@ export default function Home() {
                 are a high-risk borrower instead of the other way around. Once
                 you fix your credit score in Canberra and get a legitimate,
                 clean credit history, you will have more negotiating leverage in
-               <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link>  loan agreements and lower interest rates on loans or better
+                <Link
+                  href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  Credit File Defaults Can An Unreceived Bill Appear On Your
+                  Report
+                </Link>{" "}
+                loan agreements and lower interest rates on loans or better
                 offers from airlines and landlords. And if you continue to keep
                 good standing by paying your bills on time and managing your
                 debt effectively, then securing favorable terms on future
@@ -96,9 +117,16 @@ export default function Home() {
             </h2>
             <div className="space-y-4 text-gray-700 mb-6">
               <p>
-                What you need to know about our service is that it&apos;s a law firm
-                with a team of credit lawyers who specialize in Australian debts
-              <Link href="/credit-enquiry-removal" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal</Link>   and bankruptcy. We understand the intimations of financial
+                What you need to know about our service is that it&apos;s a law
+                firm with a team of credit lawyers who specialize in Australian
+                debts
+                <Link
+                  href="/credit-enquiry-removal"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  Credit Enquiry Removal
+                </Link>{" "}
+                and bankruptcy. We understand the intimations of financial
                 difficulties, and we work diligently to protect what you hold
                 dear by upholding your legal rights.
               </p>
@@ -109,8 +137,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-
-         
         </div>
       </section>
       <HowWorks />
@@ -133,7 +159,7 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Removing Incorrect Defaults */}
-             <Link href="/credit-enquiry-removal-australia">
+            <Link href="/credit-enquiry-removal-australia">
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
                   Removing Incorrect Defaults
@@ -210,9 +236,12 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
-      
-      <RelatedBlock currentSlug="/credit-repair-canberra" heading="Related services & guides" />
-      
+
+      <RelatedBlock
+        currentSlug="/credit-repair-canberra"
+        heading="Related services & guides"
+      />
+
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -407,7 +436,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }

@@ -54,7 +54,7 @@ const HowWorks = () => {
 
               <form className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-blue-700 mb-1">
+                  <label className="block text-base font-medium text-blue-700 mb-1">
                     Full Name
                   </label>
                   <input
@@ -64,7 +64,7 @@ const HowWorks = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-blue-700 mb-1">
+                  <label className="block text-base font-medium text-blue-700 mb-1">
                     Phone
                   </label>
                   <input
@@ -74,7 +74,7 @@ const HowWorks = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-blue-700 mb-1">
+                  <label className="block text-base font-medium text-blue-700 mb-1">
                     Email Address
                   </label>
                   <input

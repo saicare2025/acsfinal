@@ -49,7 +49,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-12">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`
@@ -145,7 +145,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
             {/* Right Form with Arrow */}
             <div className="w-full lg:w-1/3 relative">
         <FooterForm />
-              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
+              <ul className="mt-8 flex flex-col justify-center gap-3 text-base text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>98%
                   success rate
@@ -243,7 +243,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
               className="rounded-xl border border-blue-100 bg-white p-5 shadow-sm transition-all hover:shadow-md"
             >
               <h3 className="font-semibold text-blue">{item.h}</h3>
-              <p className="mt-2 text-sm text-slate-700">{item.p}</p>
+              <p className="mt-2 text-base text-slate-700">{item.p}</p>
             </motion.li>
           ))}
         </motion.ul>
@@ -416,7 +416,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
             <motion.li
               key={t}
               variants={fadeIn}
-              className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-sm text-slate-700"
+              className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-base text-slate-700"
             >
               <svg
                 className="h-5 w-5 shrink-0 text-blue mt-0.5"
@@ -481,7 +481,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
            
           />
         </motion.div>
-        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
+        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-base text-slate-600">
           <strong>First Home Buyer Package \u2014 Getting Started:</strong>{" "}
           4\u20138 weeks typically. Includes credit education, monitoring, and
           grant guidance. <em>Custom quote.</em>
@@ -508,7 +508,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
             <motion.li
               key={t}
               variants={fadeIn}
-              className="rounded-xl border border-blue-100 bg-white p-4 text-sm text-slate-700 shadow-sm transition-all hover:shadow-md"
+              className="rounded-xl border border-blue-100 bg-white p-4 text-base text-slate-700 shadow-sm transition-all hover:shadow-md"
             >
               {t}
             </motion.li>
@@ -528,7 +528,7 @@ export default function CreditRepairHomeLoanApprovalPage() {
             "Mortgage-ready documentation for your broker or bank.",
           ].map((step, index) => (
             <li key={index} className="flex items-start gap-3">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-base">
                 {index + 1}
               </span>
               {step}
@@ -562,17 +562,17 @@ export default function CreditRepairHomeLoanApprovalPage() {
         >
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 98% success rate when we take cases
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 No Win No Fee \u2014 $330 admin fee
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 Licensed &amp; regulated \u2014 ASIC ACL 532003
               </p>
             </div>
@@ -616,7 +616,7 @@ function Card({ title, bullets = [] }) {
       className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
     >
       <h3 className="text-lg font-semibold text-blue">{title}</h3>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700">
+      <ul className="mt-3 space-y-2 text-base text-slate-700">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2">
             <svg
@@ -663,9 +663,9 @@ function PriceCard({
         </span>
       )}
       <h3 className="text-lg font-semibold text-blue">{name}</h3>
-      <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
-      <p className="mt-1 text-sm text-slate-600">Perfect for: {perfectFor}</p>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
+      <p className="mt-1 text-base text-slate-600">Timeline: {timeline}</p>
+      <p className="mt-1 text-base text-slate-600">Perfect for: {perfectFor}</p>
+      <ul className="mt-3 space-y-2 text-base text-slate-700 flex-grow">
         {includes.map((i) => (
           <li key={i} className="flex items-start gap-2">
             <svg
@@ -689,7 +689,7 @@ function PriceCard({
        
         <Link
           href="/free-credit-assessment"
-          className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"
+          className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-base"
         >
           Start Now
         </Link>
@@ -712,7 +712,7 @@ function Testimonial({ name, children }) {
         ))}
       </div>
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">
+      <figcaption className="mt-3 text-base font-semibold text-blue">
         {name}
       </figcaption>
     </motion.figure>

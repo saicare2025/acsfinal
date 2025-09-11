@@ -38,7 +38,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-                className="w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+                className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
               >
                 <CreditAssessmentForm />
               </motion.div>
@@ -85,7 +85,7 @@ export default function HeroSection() {
                     <h4 className="font-semibold text-gray-800">
                       Free Credit Report Review
                     </h4>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-base">
                       Comprehensive analysis at no cost
                     </p>
                   </div>
@@ -99,7 +99,7 @@ export default function HeroSection() {
                     <h4 className="font-semibold text-gray-800">
                       No Win, No Fee * Terms Apply
                     </h4>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-base">
                       A one-off $330 admin fee applies regardless of outcome.
                     </p>
                   </div>
@@ -113,7 +113,7 @@ export default function HeroSection() {
                     <h4 className="font-semibold text-gray-800">
                       100% Confidential & Secure
                     </h4>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-base">
                       Your data is protected with bank-level security
                     </p>
                   </div>

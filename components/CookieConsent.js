@@ -58,13 +58,13 @@ export function CookieConsent() {
           <div className="flex justify-between items-start">
             <div className="flex-1 mr-4">
               <h3 className="text-lg font-medium text-gray-900 mb-2">We value your privacy</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-base text-gray-600">
                 We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
                 By clicking &quot;Accept All&quot;, you consent to our use of cookies.
               </p>
 
               {showDetails && (
-                <div className="mt-4 text-sm text-gray-600 space-y-2">
+                <div className="mt-4 text-base text-gray-600 space-y-2">
                   <div className="flex items-start">
                     <CheckIcon className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
                     <span>
@@ -88,7 +88,7 @@ export function CookieConsent() {
 
               <button
                 onClick={() => setShowDetails(!showDetails)}
-                className="mt-3 text-sm font-medium text-blue hover:text-blue-500"
+                className="mt-3 text-base font-medium text-blue hover:text-blue-500"
               >
                 {showDetails ? "Hide details" : "Show details"}
                 <ArrowPathIcon
@@ -111,13 +111,13 @@ export function CookieConsent() {
           <div className="mt-4 flex flex-col sm:flex-row flex-wrap gap-3">
             <button
               onClick={acceptCookies}
-              className="flex-1 px-4 py-2 bg-blue text-white text-sm font-medium rounded-md hover:bg-orange-700 transition-colors"
+              className="flex-1 px-4 py-2 bg-blue text-white text-base font-medium rounded-md hover:bg-orange-700 transition-colors"
             >
               Accept All
             </button>
             <button
               onClick={rejectCookies}
-              className="flex-1 px-4 py-2 bg-white text-gray-700 text-sm font-medium rounded-md border border-gray-300 hover:bg-blue-50 transition-colors"
+              className="flex-1 px-4 py-2 bg-white text-gray-700 text-base font-medium rounded-md border border-gray-300 hover:bg-blue-50 transition-colors"
             >
               Reject All
             </button>

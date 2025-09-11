@@ -21,23 +21,24 @@ export default function Home() {
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-repair-brisbane",
     title: "Brisbane Credit Repair Experts | Australian Credit Solutions",
-    description: "Professional credit repair services in Brisbane. Remove defaults, correct credit reports, and improve your credit score with Brisbane's trusted credit repair experts.",
+    description:
+      "Professional credit repair services in Brisbane. Remove defaults, correct credit reports, and improve your credit score with Brisbane's trusted credit repair experts.",
     isService: true,
-    serviceType: "Credit Repair Services Brisbane"
+    serviceType: "Credit Repair Services Brisbane",
   });
   return (
     <main className="flex min-h-screen flex-col">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
       <Header />
       <HeroSection />
-      <ReviewsWidget/>
       <VideoServicesSection />
       <section className="py-8 lg:py-16">
+        <ReviewsWidget />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -46,7 +47,13 @@ export default function Home() {
             <div className="w-24 h-1 bg-[#0668a5] mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               A healthy credit score opens doors to financial opportunities - we
-   <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>            help Brisbane residents unlock theirs
+              <Link
+                href="/get-credit-repair"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Get Credit Repair
+              </Link>{" "}
+              help Brisbane residents unlock theirs
             </p>
           </div>
 
@@ -87,7 +94,7 @@ export default function Home() {
                   <li key={index} className="flex items-start">
                     <div className="flex-shrink-0 mt-1">
                       <div className="w-6 h-6 rounded-full bg-[#0668a5] flex items-center justify-center">
-                        <span className="text-white text-sm font-bold">
+                        <span className="text-white text-base font-bold">
                           {index + 1}
                         </span>
                       </div>
@@ -112,10 +119,15 @@ export default function Home() {
               <div className=" bg-blue rounded-lg backdrop-blur-sm border border-white  bg-opacity-30 p-6 g">
                 <p className="mb-4">
                   Australian Credit Solutions has helped over 2,500 Brisbane
-                  <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link> residents improve their credit scores by an average of 187
+                  <Link
+                    href="/what-is-a-good-credit-score-australia"
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    What Is A Good Credit Score Australia
+                  </Link>{" "}
+                  residents improve their credit scores by an average of 187
                   points.
                 </p>
-              
               </div>
 
               <div className="mb-8">
@@ -130,8 +142,16 @@ export default function Home() {
                   </div>
                   <p className="text-white text-opacity-90">
                     We audit your credit file from all three bureaus,
-                    challenging <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> inaccurate defaults, court judgments, and
-                    incorrect late payments to legally remove damaging entries.
+                    challenging{" "}
+                    <Link
+                      href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Credit File Defaults Can An Unreceived Bill Appear On Your
+                      Report
+                    </Link>{" "}
+                    inaccurate defaults, court judgments, and incorrect late
+                    payments to legally remove damaging entries.
                   </p>
                 </div>
 
@@ -146,8 +166,15 @@ export default function Home() {
                   </div>
                   <p className="text-white text-opacity-90">
                     Our specialists provide personalized strategies to rebuild
-                    your credit <Link href="/credit-enquiry-removal" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal</Link> through responsible credit card use, optimal
-                    repayment patterns, and debt management.
+                    your credit{" "}
+                    <Link
+                      href="/credit-enquiry-removal"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Credit Enquiry Removal
+                    </Link>{" "}
+                    through responsible credit card use, optimal repayment
+                    patterns, and debt management.
                   </p>
                 </div>
               </div>
@@ -190,7 +217,7 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Removing Incorrect Defaults */}
-             <Link href="/credit-enquiry-removal-australia">
+            <Link href="/credit-enquiry-removal-australia">
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
                   Removing Incorrect Defaults
@@ -267,9 +294,12 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
-      
-      <RelatedBlock currentSlug="/credit-repair-brisbane" heading="Related services & guides" />
-      
+
+      <RelatedBlock
+        currentSlug="/credit-repair-brisbane"
+        heading="Related services & guides"
+      />
+
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -464,7 +494,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }

@@ -8,6 +8,7 @@ import {
   LockClosedIcon,
 } from '@heroicons/react/24/solid';
 import { MotionFadeUp, MotionScaleIn } from './MotionWrapper';
+import FooterForm from './HeroForm';
 
 const FeatureItem = ({ Icon, title, description }) => (
   <li className="flex items-start gap-3">
@@ -16,7 +17,7 @@ const FeatureItem = ({ Icon, title, description }) => (
     </div>
     <div>
       <h3 className="font-semibold text-gray-800">{title}</h3>
-      <p className="text-gray-600 text-sm">{description}</p>
+      <p className="text-gray-600 text-base">{description}</p>
     </div>
   </li>
 );
@@ -40,8 +41,8 @@ export default function HeroSection() {
               </h4>
 
               <MotionFadeUp delay={0.05}>
-                <div className="w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                  <CreditAssessmentForm />
+                <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                <FooterForm/>
                 </div>
               </MotionFadeUp>
             </MotionFadeUp>

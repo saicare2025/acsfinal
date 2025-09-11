@@ -78,7 +78,7 @@ export default function RegionalVictoriaCreditRepairPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-12">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
 
@@ -95,10 +95,11 @@ export default function RegionalVictoriaCreditRepairPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Rejected for a home loan in Bendigo? Can&apos;t get car finance in
-                  Ballarat? Default listings destroying your credit score in
-                  Shepparton? Regional Victoria deserves the same financial
-                  opportunities as Melbourne – and there&apos;s a proven solution.{" "}
+                  Rejected for a home loan in Bendigo? Can&apos;t get car
+                  finance in Ballarat? Default listings destroying your credit
+                  score in Shepparton? Regional Victoria deserves the same
+                  financial opportunities as Melbourne – and there&apos;s a
+                  proven solution.{" "}
                   <strong className="font-semibold text-blue">
                     98% success rate
                   </strong>{" "}
@@ -171,13 +172,12 @@ export default function RegionalVictoriaCreditRepairPage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-                      <RelatedBlock currentSlug="/credit-repair-bendigo-ballarat-regional-victoria" heading="Related services & guides" />
-        <FooterForm
+              <FooterForm
                 heading="Get Your Regional Victoria Credit Assessment"
                 subheading="Bendigo to Mildura Coverage"
                 paragraph="Find out if your credit can be fixed across Regional Victoria – from goldfields to Murray River. Free, fast, and confidential."
               />
-              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
+              <ul className="mt-8 flex flex-col justify-center gap-3 text-base text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
                   98% success rate
@@ -387,27 +387,28 @@ export default function RegionalVictoriaCreditRepairPage() {
           viewport={{ once: true }}
         >
           <Testimonial name="Bendigo Family - Goldfields Heritage Home">
-            &quot;We wanted to buy a character home in Bendigo&apos;s historic precinct
-            but had a $4,200 default from 2020. ACS removed it in 5 weeks, and
-            we got approved at 3.3%. Now we&apos;re living our dream in the
-            goldfields.&quot; – Mark & Jenny S.
+            &quot;We wanted to buy a character home in Bendigo&apos;s historic
+            precinct but had a $4,200 default from 2020. ACS removed it in 5
+            weeks, and we got approved at 3.3%. Now we&apos;re living our dream
+            in the goldfields.&quot; – Mark & Jenny S.
           </Testimonial>
           <Testimonial name="Ballarat Entrepreneur - Earthmoving Business">
-            &quot;I needed equipment finance for my earthmoving business in Ballarat
-            but had multiple late payments. ACS cleaned my file in 6 weeks – now
-            I&apos;ve got three new machines and contracts are pouring in.&quot; – Steve
-            T.
+            &quot;I needed equipment finance for my earthmoving business in
+            Ballarat but had multiple late payments. ACS cleaned my file in 6
+            weeks – now I&apos;ve got three new machines and contracts are
+            pouring in.&quot; – Steve T.
           </Testimonial>
           <Testimonial name="Echuca Farmer - Irrigation Upgrade">
-            &quot;Seasonal income made getting finance tough, and an old default made
-            it impossible. ACS removed the default in 7 weeks – now I&apos;ve
-            upgraded my irrigation system and yields are up 40%.&quot; – David M.
+            &quot;Seasonal income made getting finance tough, and an old default
+            made it impossible. ACS removed the default in 7 weeks – now
+            I&apos;ve upgraded my irrigation system and yields are up 40%.&quot;
+            – David M.
           </Testimonial>
           <Testimonial name="Shepparton Dairy Farm - Equipment Success">
-            &quot;Needed to upgrade milking equipment but couldn&apos;t get finance due to
-            late payments from the drought years. ACS cleaned my file in 8
-            weeks. The new equipment has increased productivity 25%.&quot; – Michael
-            & Sue L.
+            &quot;Needed to upgrade milking equipment but couldn&apos;t get
+            finance due to late payments from the drought years. ACS cleaned my
+            file in 8 weeks. The new equipment has increased productivity
+            25%.&quot; – Michael & Sue L.
           </Testimonial>
         </motion.div>
       </Section>
@@ -416,7 +417,13 @@ export default function RegionalVictoriaCreditRepairPage() {
       <Section title="Regional Victoria's Property Challenge – How We Help">
         <p className="text-slate-700">
           Regional Victoria offers affordable property compared to Melbourne,
-     <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>      but bad credit can lock you out of these opportunities.
+          <Link
+            href="/get-credit-repair"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Get Credit Repair
+          </Link>{" "}
+          but bad credit can lock you out of these opportunities.
         </p>
         <motion.div
           variants={staggerChildren}
@@ -458,8 +465,15 @@ export default function RegionalVictoriaCreditRepairPage() {
       {/* Agricultural & Business Finance */}
       <Section title="Agricultural & Business Finance Solutions">
         <p className="text-slate-700">
-          Regional Victoria&apos;s economy depends on agriculture, small business,
-          <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link> and rural industry. Bad credit shouldn&apos;t hold back regional
+          Regional Victoria&apos;s economy depends on agriculture, small
+          business,
+          <Link
+            href="/what-is-a-good-credit-score-australia"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            What Is A Good Credit Score Australia
+          </Link>{" "}
+          and rural industry. Bad credit shouldn&apos;t hold back regional
           prosperity.
         </p>
         <motion.div
@@ -493,7 +507,7 @@ export default function RegionalVictoriaCreditRepairPage() {
               className="rounded-xl border border-blue-100 bg-white p-5 shadow-sm transition-all hover:shadow-md"
             >
               <h3 className="font-semibold text-blue">{item.h}</h3>
-              <p className="mt-2 text-sm text-slate-700">{item.p}</p>
+              <p className="mt-2 text-base text-slate-700">{item.p}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -520,7 +534,7 @@ export default function RegionalVictoriaCreditRepairPage() {
             <motion.li
               key={t}
               variants={fadeIn}
-              className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-sm text-slate-700"
+              className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-base text-slate-700"
             >
               <svg
                 className="h-5 w-5 shrink-0 text-blue mt-0.5"
@@ -592,11 +606,11 @@ export default function RegionalVictoriaCreditRepairPage() {
             ]}
           />
         </motion.div>
-        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
+        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-base text-slate-600">
           <strong>No Win No Fee Promise:</strong> $330 admin fee applies
           regardless of outcome. Success fee only charged when defaults are
-          removed. Same pricing Australia-wide – distance doesn&apos;t affect our
-          service quality or cost.
+          removed. Same pricing Australia-wide – distance doesn&apos;t affect
+          our service quality or cost.
         </div>
       </Section>
 
@@ -629,8 +643,15 @@ export default function RegionalVictoriaCreditRepairPage() {
                   />
                 </svg>
               </summary>
-              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
-               <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link>  {f.answer}
+              <p className="mt-3 text-base text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
+                <Link
+                  href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  Credit File Defaults Can An Unreceived Bill Appear On Your
+                  Report
+                </Link>{" "}
+                {f.answer}
               </p>
             </motion.details>
           ))}
@@ -642,9 +663,19 @@ export default function RegionalVictoriaCreditRepairPage() {
         <div className="mt-2 grid gap-6 lg:grid-cols-2">
           <div className="space-y-4 text-slate-700">
             <h3 className="font-semibold text-blue">
-              Don&apos;t let bad credit limit your opportunities in regional Victoria
+              Don&apos;t let bad credit limit your opportunities in regional
+              Victoria
             </h3>
-            <p>Every month <Link href="/credit-repair-sale-traralgon-gippsland-victoria" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Sale Traralgon Gippsland Victoria</Link> you wait:</p>
+            <p>
+              Every month{" "}
+              <Link
+                href="/credit-repair-sale-traralgon-gippsland-victoria"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Credit Repair Sale Traralgon Gippsland Victoria
+              </Link>{" "}
+              you wait:
+            </p>
             {[
               "Property prices continue rising even in regional areas",
               "Interest rates may increase, costing thousands more",
@@ -680,7 +711,7 @@ export default function RegionalVictoriaCreditRepairPage() {
             <h3 className="text-lg font-semibold text-blue">
               Take Action Now - Free Assessment for Regional Victoria
             </h3>
-            <ul className="mt-3 space-y-2 text-slate-700 text-sm">
+            <ul className="mt-3 space-y-2 text-slate-700 text-base">
               <li className="flex items-start gap-2">
                 <svg
                   className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
@@ -747,7 +778,10 @@ export default function RegionalVictoriaCreditRepairPage() {
           </motion.div>
         </div>
       </Section>
-
+      <RelatedBlock
+        currentSlug="/credit-repair-bendigo-ballarat-regional-victoria"
+        heading="Related services & guides"
+      />
       {/* Footer trust bar */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <motion.div
@@ -759,17 +793,17 @@ export default function RegionalVictoriaCreditRepairPage() {
         >
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 98% success rate when we take cases
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 No Win No Fee — $330 admin fee
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 Licensed & regulated — ASIC ACL 532003
               </p>
             </div>
@@ -809,9 +843,9 @@ function Card({ title, subtitle, bullets = [] }) {
     >
       <h3 className="text-lg font-semibold text-blue">{title}</h3>
       {subtitle && (
-        <p className="text-sm text-slate-600 mt-1 font-medium">{subtitle}</p>
+        <p className="text-base text-slate-600 mt-1 font-medium">{subtitle}</p>
       )}
-      <ul className="mt-3 space-y-2 text-sm text-slate-700">
+      <ul className="mt-3 space-y-2 text-base text-slate-700">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2">
             <svg
@@ -851,9 +885,9 @@ function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
         </span>
       )}
       <h3 className="text-lg font-semibold text-blue">{name}</h3>
-      <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
-      <p className="mt-1 text-sm text-slate-600">Perfect for: {perfectFor}</p>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
+      <p className="mt-1 text-base text-slate-600">Timeline: {timeline}</p>
+      <p className="mt-1 text-base text-slate-600">Perfect for: {perfectFor}</p>
+      <ul className="mt-3 space-y-2 text-base text-slate-700 flex-grow">
         {includes.map((i) => (
           <li key={i} className="flex items-start gap-2">
             <svg
@@ -876,7 +910,7 @@ function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
       <div className="mt-4">
         <Link
           href="/free-credit-assessment"
-          className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm text-center block"
+          className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-base text-center block"
         >
           Start Now
         </Link>
@@ -899,7 +933,7 @@ function Testimonial({ name, children }) {
         ))}
       </div>
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">
+      <figcaption className="mt-3 text-base font-semibold text-blue">
         {name}
       </figcaption>
     </motion.figure>

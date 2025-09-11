@@ -21,23 +21,24 @@ export default function Home() {
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-repair-hobart",
     title: "Hobart Credit Repair Experts | Australian Credit Solutions",
-    description: "Professional credit repair services in Hobart. Remove defaults, correct credit reports, and improve your credit score with Hobart's trusted credit repair experts.",
+    description:
+      "Professional credit repair services in Hobart. Remove defaults, correct credit reports, and improve your credit score with Hobart's trusted credit repair experts.",
     isService: true,
-    serviceType: "Credit Repair Services Hobart"
+    serviceType: "Credit Repair Services Hobart",
   });
   return (
     <main className="flex max-w-7xl mx-auto min-h-screen flex-col">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
       <Header />
       <HeroSection />
-      <ReviewsWidget/>
       <VideoServicesSection />
       <section className="py-16 bg-white">
+        <ReviewsWidget />
         <div className=" px-4 sm:px-6">
           {/* Question 1 */}
           <div className="mb-12">
@@ -49,7 +50,13 @@ export default function Home() {
                 Your credit score is calculated differently by different credit
                 scoring agencies. If your credit report reveals scores out of
                 1,200, a score of 853 or higher is considered exceptional, while
-                <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> a score of 661 or higher is deemed decent. If your credit report
+                <a
+                  href="/get-credit-repair"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  Get Credit Repair
+                </a>{" "}
+                a score of 661 or higher is deemed decent. If your credit report
                 shows scores on a scale of 1,000, anything above 690 is
                 considered exceptional, and anything above 540 is considered
                 good.
@@ -74,8 +81,15 @@ export default function Home() {
                     </h3>
                     <p>
                       Annualcreditreport.com is an excellent resource. Examine
-                      it for <a href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</a> mistakes to file a challenge or dispute with the
-                      reporting agencies:
+                      it for{" "}
+                      <a
+                        href="/what-is-a-good-credit-score-australia"
+                        className="text-blue-600 hover:text-blue-800 underline"
+                      >
+                        What Is A Good Credit Score Australia
+                      </a>{" "}
+                      mistakes to file a challenge or dispute with the reporting
+                      agencies:
                     </p>
                     <ul className="pl-5 mt-2 space-y-1 list-disc">
                       <li>Equifax</li>
@@ -84,7 +98,13 @@ export default function Home() {
                     </ul>
                     <p className="mt-2">
                       If you spot any, it&apos;s a relatively simple process to
-         <a href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</a>              dispute those errors and have them removed.
+                      <a
+                        href="/remove-defaults-from-your-credit-file"
+                        className="text-blue-600 hover:text-blue-800 underline"
+                      >
+                        Remove Defaults From Your Credit File
+                      </a>{" "}
+                      dispute those errors and have them removed.
                     </p>
                   </div>
                 </div>
@@ -100,9 +120,15 @@ export default function Home() {
                     <p>
                       A history of late payments might hurt your credit score,
                       which can affect how much you pay for loans and how often
-                    <a href="/default-removal-services-australia" className="text-blue-600 hover:text-blue-800 underline">Default Removal Services Australia</a>   you&apos;re approved. When things go wrong, instead of giving
-                      up, keep an eye on things and make appropriate changes as
-                      needed.
+                      <a
+                        href="/default-removal-services-australia"
+                        className="text-blue-600 hover:text-blue-800 underline"
+                      >
+                        Default Removal Services Australia
+                      </a>{" "}
+                      you&apos;re approved. When things go wrong, instead of
+                      giving up, keep an eye on things and make appropriate
+                      changes as needed.
                     </p>
                   </div>
                 </div>
@@ -142,8 +168,8 @@ export default function Home() {
                       owe. versus the amount of credit you have access to. So,
                       if you have a total debt of $10,000 on all of your credit
                       cards and you&apos;ve used up $3000 of your maximum credit
-                      limit (equal to 30%), you&apos;re at 60%. That is to say, an
-                      increase in income from $300 to $600 per month will not
+                      limit (equal to 30%), you&apos;re at 60%. That is to say,
+                      an increase in income from $300 to $600 per month will not
                       affect or prevent late payments IF and ONLY IF they do not
                       exceed this ceiling of 60%.
                     </p>
@@ -181,13 +207,14 @@ export default function Home() {
                       Keep your old credit cards active.
                     </h3>
                     <p>
-                      If you&apos;re still keeping up with your old cards, keeping
-                      them active is a smart idea. It&apos;s also the most effective
-                      approach to keep your credit score in good standing. Long
-                      credit history can help you establish credit, which
-                      accounts for 15% of your credit score. Many people don&apos;t
-                      realize they don&apos;t have a credit score because they don&apos;t
-                      understand what it signifies or how to keep it active.
+                      If you&apos;re still keeping up with your old cards,
+                      keeping them active is a smart idea. It&apos;s also the
+                      most effective approach to keep your credit score in good
+                      standing. Long credit history can help you establish
+                      credit, which accounts for 15% of your credit score. Many
+                      people don&apos;t realize they don&apos;t have a credit
+                      score because they don&apos;t understand what it signifies
+                      or how to keep it active.
                     </p>
                     <p className="mt-2">
                       However, there are a couple of cautions. After a set
@@ -236,7 +263,7 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Removing Incorrect Defaults */}
-             <Link href="/credit-enquiry-removal-australia">
+            <Link href="/credit-enquiry-removal-australia">
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
                   Removing Incorrect Defaults
@@ -313,9 +340,12 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
-      
-      <RelatedBlock currentSlug="/credit-repair-hobart" heading="Related services & guides" />
-      
+
+      <RelatedBlock
+        currentSlug="/credit-repair-hobart"
+        heading="Related services & guides"
+      />
+
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -510,7 +540,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }

@@ -17,13 +17,13 @@ const RelatedServices = ({ pathname }) => {
             href={route.path}
             className="block p-3 bg-white rounded-md border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all group"
           >
-            <span className="text-blue-600 group-hover:text-blue-800 font-medium text-sm">
+            <span className="text-blue-600 group-hover:text-blue-800 font-medium text-base">
               {route.title}
             </span>
           </Link>
         ))}
       </div>
-      <p className="text-sm text-gray-600">
+      <p className="text-base text-gray-600">
         Not sure which service is right for you? Start with our{' '}
         <Link 
           href="/free-credit-assessment" 

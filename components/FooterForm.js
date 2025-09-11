@@ -148,7 +148,7 @@ const FooterForm = ({
         <h2 className="text-xl font-extrabold leading-tight text-blue sm:text-2xl lg:text-3xl">
           {heading}
         </h2>
-        <p className="mt-1 text-sm text-center text-slate-600 sm:text-base">
+        <p className="mt-1 text-base text-center text-slate-600 sm:text-base">
           See if your negative listings can be removed – quick, confidential,
           and{" "}
           <span className="font-bold text-blue">
@@ -194,7 +194,7 @@ const FooterForm = ({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-4 w-full rounded-xl bg-blue px-4 py-3 text-base font-semibold uppercase tracking-wide text-white shadow-md transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 sm:px-5 sm:text-sm"
+          className="mt-4 w-full rounded-xl bg-blue px-4 py-3 text-base font-semibold uppercase tracking-wide text-white shadow-md transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 sm:px-5 sm:text-base"
         >
           {isSubmitting ? "Processing..." : "Check My Removal Options"}
         </button>

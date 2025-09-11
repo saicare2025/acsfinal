@@ -126,7 +126,7 @@ export function FloatingTestimonial() {
                         />
                       ))}
                     </div>
-                    <p className="text-sm text-gray-800 font-medium leading-tight mb-1 line-clamp-2">
+                    <p className="text-base text-gray-800 font-medium leading-tight mb-1 line-clamp-2">
                       &quot;{t.quote}&quot;
                     </p>
                     <div className="text-xs text-gray-500">
