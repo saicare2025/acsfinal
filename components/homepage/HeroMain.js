@@ -11,6 +11,7 @@ import {
   CurrencyDollarIcon,
 
 } from "@heroicons/react/24/solid";
+import FooterForm from "../FooterForm";
 
 export default function HeroSection() {
   return (
@@ -19,7 +20,7 @@ export default function HeroSection() {
       <section className="relative bg-gradient-to-br from-white to-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-8 flex flex-col-reverse lg:flex-row items-center relative z-10 gap-8">
           {/* Left Side - Content (60% on desktop) */}
-          <div className="w-full lg:w-3/5 flex flex-col">
+          <div className="w-full lg:w-1/2 flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -38,15 +39,15 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-                className="w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+                className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
               >
-                <CreditAssessmentForm />
+                <FooterForm />
               </motion.div>
             </motion.div>
           </div>
 
           {/* Right Side - Image and Features (40% on desktop) */}
-          <div className="w-full lg:w-2/5 flex flex-col">
+          <div className="w-full lg:w-1/2 flex flex-col">
             {/* Image Container */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -85,7 +86,7 @@ export default function HeroSection() {
                     <h4 className="font-semibold text-gray-800">
                       Free Credit Report Review
                     </h4>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-base">
                       Comprehensive analysis at no cost
                     </p>
                   </div>
@@ -99,7 +100,7 @@ export default function HeroSection() {
                     <h4 className="font-semibold text-gray-800">
                       No Win, No Fee * Terms Apply
                     </h4>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-base">
                       A one-off $330 admin fee applies regardless of outcome.
                     </p>
                   </div>
@@ -113,7 +114,7 @@ export default function HeroSection() {
                     <h4 className="font-semibold text-gray-800">
                       100% Confidential & Secure
                     </h4>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-base">
                       Your data is protected with bank-level security
                     </p>
                   </div>

@@ -85,7 +85,7 @@ const LoanCalculator = () => {
                 <div>
                   <label
                     htmlFor={idLoanType}
-                    className="block text-sm font-medium text-blue-900 mb-1"
+                    className="block text-base font-medium text-blue-900 mb-1"
                   >
                     Loan Type
                   </label>
@@ -105,7 +105,7 @@ const LoanCalculator = () => {
                 <div>
                   <label
                     htmlFor={idLoanAmount}
-                    className="block text-sm font-medium text-blue-900 mb-1"
+                    className="block text-base font-medium text-blue-900 mb-1"
                   >
                     Loan Amount ($)
                   </label>
@@ -133,7 +133,7 @@ const LoanCalculator = () => {
                 <div>
                   <label
                     htmlFor={idLoanTerm}
-                    className="block text-sm font-medium text-blue-900 mb-1"
+                    className="block text-base font-medium text-blue-900 mb-1"
                   >
                     Loan Term (years)
                   </label>
@@ -154,14 +154,14 @@ const LoanCalculator = () => {
 
                 {/* Rates */}
                 <fieldset>
-                  <legend className="block text-sm font-medium text-blue-900 mb-2">
+                  <legend className="block text-base font-medium text-blue-900 mb-2">
                     Interest rates (%)
                   </legend>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label
                         htmlFor={idRateClean}
-                        className="block text-sm text-blue-900 mb-1"
+                        className="block text-base text-blue-900 mb-1"
                       >
                         Clean Credit Rate
                       </label>
@@ -182,7 +182,7 @@ const LoanCalculator = () => {
                     <div>
                       <label
                         htmlFor={idRateDefault}
-                        className="block text-sm text-blue-900 mb-1"
+                        className="block text-base text-blue-900 mb-1"
                       >
                         Default Credit Rate
                       </label>
@@ -214,7 +214,7 @@ const LoanCalculator = () => {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-sm font-semibold text-blue">
+                    <div className="text-base font-semibold text-blue">
                       Clean Credit
                     </div>
                     <div className="text-base text-blue-900">Interest</div>
@@ -225,7 +225,7 @@ const LoanCalculator = () => {
                 </div>
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-sm font-semibold text-blue-800">
+                    <div className="text-base font-semibold text-blue-800">
                       Default Credit
                     </div>
                     <div className="text-base text-blue-900">Interest</div>
@@ -235,13 +235,13 @@ const LoanCalculator = () => {
                   </div>
                 </div>
                 <div className="flex items-center justify-between mt-2">
-                  <div className="text-sm text-blue">Clean Monthly</div>
+                  <div className="text-base text-blue">Clean Monthly</div>
                   <div className="text-lg text-blue font-semibold">
                     ${cleanCreditMonthly.toFixed(2)}
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
-                  <div className="text-sm text-blue-800">Default Monthly</div>
+                  <div className="text-base text-blue-800">Default Monthly</div>
                   <div className="text-lg text-blue-800 font-semibold">
                     ${defaultCreditMonthly.toFixed(2)}
                   </div>
@@ -253,7 +253,7 @@ const LoanCalculator = () => {
                   <div className="text-xl font-bold">
                     ${(defaultCreditInterest - cleanCreditInterest).toFixed(2)}
                   </div>
-                  <div className="text-sm font-semibold">
+                  <div className="text-base font-semibold">
                     {defaultCreditInterest > 0
                       ? `${(
                           ((defaultCreditInterest - cleanCreditInterest) /
@@ -278,7 +278,7 @@ const LoanCalculator = () => {
             viewport={{ once: true, margin: "-50px" }}
             className="max-w-3xl mx-auto text-center"
           >
-            <p className="text-gray-600 text-sm md:text-base">
+            <p className="text-gray-600 text-base md:text-base">
               *. A one-off $330 administration fee applies regardless of the
               result. In the past year, more than 98% of our disputes have
               achieved a successful resolution.

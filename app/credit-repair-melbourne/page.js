@@ -12,8 +12,6 @@ import Link from "next/link";
 import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 
-
-
 import RelatedBlock from "@/app/_seo/RelatedBlock";
 
 export default function Home() {
@@ -21,33 +19,39 @@ export default function Home() {
   const faqData = [
     {
       question: "How does credit repair work in Melbourne?",
-      answer: "Credit repair in Melbourne involves reviewing your credit report, identifying errors or unfair listings, and working with credit bureaus and creditors to have them corrected or removed. Australian Credit Solutions uses legal expertise to challenge inaccurate information on your credit file."
+      answer:
+        "Credit repair in Melbourne involves reviewing your credit report, identifying errors or unfair listings, and working with credit bureaus and creditors to have them corrected or removed. Australian Credit Solutions uses legal expertise to challenge inaccurate information on your credit file.",
     },
     {
       question: "How long does credit repair take in Melbourne?",
-      answer: "Credit repair timeframes vary depending on the complexity of your case. Simple corrections can take 2-4 weeks, while more complex cases involving defaults or judgments may take 6-12 weeks. We provide clear expectations during your free assessment."
+      answer:
+        "Credit repair timeframes vary depending on the complexity of your case. Simple corrections can take 2-4 weeks, while more complex cases involving defaults or judgments may take 6-12 weeks. We provide clear expectations during your free assessment.",
     },
     {
       question: "Can you remove defaults from my credit file in Melbourne?",
-      answer: "We can help remove defaults that were incorrectly recorded, unfairly applied, or don't comply with credit reporting guidelines. Valid defaults that were properly applied may need to remain for their statutory period."
+      answer:
+        "We can help remove defaults that were incorrectly recorded, unfairly applied, or don't comply with credit reporting guidelines. Valid defaults that were properly applied may need to remain for their statutory period.",
     },
     {
       question: "Is credit repair legal in Melbourne?",
-      answer: "Yes, credit repair is completely legal in Melbourne and across Australia. We use your rights under Australian law to dispute incorrect or unfair listings. Our work is fully compliant and regulated under our Australian Credit Licence (ACL 532003)."
+      answer:
+        "Yes, credit repair is completely legal in Melbourne and across Australia. We use your rights under Australian law to dispute incorrect or unfair listings. Our work is fully compliant and regulated under our Australian Credit Licence (ACL 532003).",
     },
     {
       question: "How much does credit repair cost in Melbourne?",
-      answer: "Our fees are transparent and fixed based on your specific situation. We offer a free assessment, no upfront fees, and flexible payment plans. Contact us for a personalized quote based on your credit repair needs."
-    }
+      answer:
+        "Our fees are transparent and fixed based on your specific situation. We offer a free assessment, no upfront fees, and flexible payment plans. Contact us for a personalized quote based on your credit repair needs.",
+    },
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-repair-melbourne",
     title: "Melbourne Credit Repair Experts | Australian Credit Solutions",
-    description: "Improve your credit score with Melbourne's leading credit repair specialists. Australian Credit Solutions removes defaults, corrects credit report errors, and helps you secure better financial opportunities.",
+    description:
+      "Improve your credit score with Melbourne's leading credit repair specialists. Australian Credit Solutions removes defaults, corrects credit report errors, and helps you secure better financial opportunities.",
     isService: true,
-    serviceType: "Credit Repair Services Melbourne"
+    serviceType: "Credit Repair Services Melbourne",
   });
 
   return (
@@ -55,14 +59,14 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
       <Header />
       <HeroSection />
-      <ReviewsWidget/>
       <VideoServicesSection />
       <section className="py-16 bg-white">
+        <ReviewsWidget />
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Main Heading */}
           <div className="mb-12">
@@ -77,20 +81,41 @@ export default function Home() {
           <div className="mb-8 space-y-4 text-gray-700">
             <p>
               Theoretically, the higher the credit rating you have, the better
-              it is to be. However, there&apos;s <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> more to your credit rating than just
-              a number-and this can be difficult for some people to understand.
+              it is to be. However, there&apos;s{" "}
+              <a
+                href="/get-credit-repair"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Get Credit Repair
+              </a>{" "}
+              more to your credit rating than just a number-and this can be
+              difficult for some people to understand.
             </p>
             <p>
               Your credit rating is a number that measures how reliable you are
               when it comes repayment or not being late on repayments in
-              comparison with <a href="/repair-your-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">Repair Your Credit Score Australia</a> other people who take out similar type of loans
-              and financial products. This score will then determine what
-              interest rate they charge you when borrowing money from them.
+              comparison with{" "}
+              <a
+                href="/repair-your-credit-score-australia"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Repair Your Credit Score Australia
+              </a>{" "}
+              other people who take out similar type of loans and financial
+              products. This score will then determine what interest rate they
+              charge you when borrowing money from them.
             </p>
             <p>
-              To fix bad credit in Melbourne, you should first understand what&apos;s
-              in your credit file. After all, if you don&apos;t know what&apos;s impacting
-   <a href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</a>            your credit rating, there&apos;s no way for you to identify the
+              To fix bad credit in Melbourne, you should first understand
+              what&apos;s in your credit file. After all, if you don&apos;t know
+              what&apos;s impacting
+              <a
+                href="/remove-defaults-from-your-credit-file"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Remove Defaults From Your Credit File
+              </a>{" "}
+              your credit rating, there&apos;s no way for you to identify the
               problems and work toward a solution.
             </p>
           </div>
@@ -98,7 +123,8 @@ export default function Home() {
           {/* Credit Score Factors */}
           <div className="mb-8 bg-blue-50 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-[#0668a5] mb-4">
-              There are three important factors that make up a person&apos;s score:
+              There are three important factors that make up a person&apos;s
+              score:
             </h3>
             <ul className="space-y-3 list-disc pl-5">
               <li>payment history,</li>
@@ -107,8 +133,15 @@ export default function Home() {
             </ul>
             <p className="mt-4">
               These three things constitute up to 95% of your rating! If these
-              areas are less <a href="/credit-enquiry-removal" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal</a> than ideal where they should be good, it might take
-              some time and patience to repair them.
+              areas are less{" "}
+              <a
+                href="/credit-enquiry-removal"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Credit Enquiry Removal
+              </a>{" "}
+              than ideal where they should be good, it might take some time and
+              patience to repair them.
             </p>
           </div>
 
@@ -128,10 +161,11 @@ export default function Home() {
               If you have unpaid debts, then you may be interested in knowing
               that there are options that can help. One option is to pay off the
               debts through your earnings. This option often takes a long time
-              and may not work for people who don&apos;t earn enough money. Another
-              step is for you to file bankruptcy, which will discharge some or
-              all of your debt but has serious consequences such as being unable
-              to file for certain types of credit for 10 years afterward.
+              and may not work for people who don&apos;t earn enough money.
+              Another step is for you to file bankruptcy, which will discharge
+              some or all of your debt but has serious consequences such as
+              being unable to file for certain types of credit for 10 years
+              afterward.
             </p>
           </div>
 
@@ -205,8 +239,8 @@ export default function Home() {
                 compensation cases from those who have been injured or
                 negatively affected by a defective product or its use. They are
                 experts at consumer credit repair and will help you take back
-                control over your finances without breaking the bank. If you&apos;re
-                looking for a free consultation, call them today on{" "}
+                control over your finances without breaking the bank. If
+                you&apos;re looking for a free consultation, call them today on{" "}
                 <a href="tel:1300178773" className="font-bold underline">
                   1300 178 773
                 </a>
@@ -244,9 +278,9 @@ export default function Home() {
                 We also provide quick and easy solutions to clients who need
                 them. They offer service packages according to the individual
                 needs of the client at an affordable price while their team of
-                professionals keeps a close watch on all of Australia&apos;s main
-                credit providers and data rates in order to ensure potential
-                problems.
+                professionals keeps a close watch on all of Australia&apos;s
+                main credit providers and data rates in order to ensure
+                potential problems.
               </p>
             </div>
           </div>
@@ -272,7 +306,7 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Removing Incorrect Defaults */}
-             <Link href="/credit-enquiry-removal-australia">
+            <Link href="/credit-enquiry-removal-australia">
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
                   Removing Incorrect Defaults
@@ -349,9 +383,12 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
-      
-      <RelatedBlock currentSlug="/credit-repair-melbourne" heading="Related services & guides" />
-      
+
+      <RelatedBlock
+        currentSlug="/credit-repair-melbourne"
+        heading="Related services & guides"
+      />
+
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -546,7 +583,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }

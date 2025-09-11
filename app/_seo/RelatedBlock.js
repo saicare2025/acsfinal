@@ -46,7 +46,7 @@ export default function RelatedBlock({ currentSlug, heading = "Related services 
                   <h3 className="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                     {link.anchor}
                   </h3>
-                  <p className="mt-2 text-sm text-gray-600">
+                  <p className="mt-2 text-base text-gray-600">
                     {getDescriptionForLink(link)}
                   </p>
                 </div>

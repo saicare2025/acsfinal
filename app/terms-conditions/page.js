@@ -13,7 +13,7 @@ export default function TermsAndConditionsPage() {
           <h1 className="text-3xl font-bold mb-6 text-blue">
             Terms and Conditions of Use
           </h1>
-          <div className="space-y-8 text-sm leading-relaxed">
+          <div className="space-y-8 text-base leading-relaxed">
             {sectionTitles.map((title, idx) => (
               <section key={idx}>
                 <h2 className="text-xl font-semibold text-blue mb-2">

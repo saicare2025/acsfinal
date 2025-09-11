@@ -46,7 +46,7 @@ export default function ScheduleModal({ onClose, onSubmit }) {
         {/* Modal Content */}
         {currentStep === "form" ? (
           <form onSubmit={handleSubmit} className="space-y-4 p-4">
-            <label className="block text-sm font-medium text-blue-900">
+            <label className="block text-base font-medium text-blue-900">
               Select Time Slot
               <input
                 type="datetime-local"
@@ -79,7 +79,7 @@ export default function ScheduleModal({ onClose, onSubmit }) {
               <CheckCircle className="h-8 w-8 text-green-600" />
             </div>
             <h4 className="text-base font-semibold text-blue-900">Thank You!</h4>
-            <p className="mt-1 text-sm text-blue-800">
+            <p className="mt-1 text-base text-blue-800">
               Your assessment has been successfully scheduled.
             </p>
             <button
@@ -87,7 +87,7 @@ export default function ScheduleModal({ onClose, onSubmit }) {
                 onClose();
                 router.push("/booking-confirmation");
               }}
-              className="mt-4 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+              className="mt-4 rounded-lg bg-blue-600 px-4 py-2 text-base font-medium text-white hover:bg-blue-700"
             >
               View Confirmation
             </button>

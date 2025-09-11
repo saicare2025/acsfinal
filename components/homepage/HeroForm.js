@@ -1,288 +1,79 @@
 "use client";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import {
-  User,
-  Mail,
-  Phone,
-  MapPin,
-  ClipboardList,
-  BriefcaseBusiness,
-  ChevronDown,
-} from "lucide-react";
+import React, { useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
-// Constants
-const AUSTRALIAN_STATES = ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"];
-
-// Reusable Inputs
-const TextInput = ({
-  label,
-  name,
-  type = "text",
-  value,
-  onChange,
-  placeholder,
-  Icon,
-  error,
-  inputMode,
-  maxLength,
-  className = "",
-}) => (
-  <div className="space-y-1">
-    <label className="block text-xs font-semibold uppercase tracking-wider text-blue-900">
-      {label}
-    </label>
-    <div className="relative">
-      {Icon && (
-        <Icon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-blue-700" />
-      )}
-      <input
-        name={name}
-        type={type}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        inputMode={inputMode}
-        maxLength={maxLength}
-        className={`w-full rounded-lg border bg-white py-2 pl-10 pr-4 text-sm placeholder:text-blue-900 transition-all duration-200 ${
-          error
-            ? "border-red-300 focus:border-red-500 focus:ring-red-500"
-            : "border-blue-100 focus:border-blue-500 focus:ring-blue-500"
-        } ${className}`}
-        aria-invalid={Boolean(error)}
-        aria-describedby={error ? `${name}-error` : undefined}
-      />
-    </div>
-    {error && (
-      <p id={`${name}-error`} className="text-xs text-red-500">
-        {error}
-      </p>
-    )}
-  </div>
-);
-
-const SelectInput = ({
-  label,
-  name,
-  value,
-  onChange,
-  options,
-  Icon,
-  error,
-  placeholder,
-}) => (
-  <div className="space-y-1">
-    <label className="block text-xs font-semibold uppercase tracking-wider text-blue-900">
-      {label}
-    </label>
-    <div className="relative">
-      {Icon && (
-        <Icon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-blue-700" />
-      )}
-      <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-blue-700" />
-      <select
-        name={name}
-        value={value}
-        onChange={onChange}
-        className={`w-full appearance-none rounded-lg border bg-white py-2 pl-10 pr-8 text-sm ${
-          error
-            ? "border-red-300 focus:border-red-500 focus:ring-red-500"
-            : "border-blue-100 focus:border-blue-500 focus:ring-blue-500"
-        } ${!value ? "text-blue-900" : "text-blue-900"}`}
-        aria-invalid={Boolean(error)}
-        aria-describedby={error ? `${name}-error` : undefined}
-      >
-        {placeholder && (
-          <option value="" disabled hidden>
-            {placeholder}
-          </option>
-        )}
-        {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-    </div>
-    {error && (
-      <p id={`${name}-error`} className="text-xs text-red-500">
-        {error}
-      </p>
-    )}
-  </div>
-);
-
-const TextAreaInput = ({
-  label,
-  name,
-  value,
-  onChange,
-  placeholder,
-  Icon,
-  error,
-  rows = 4,
-  className = "",
-}) => (
-  <div className="space-y-1">
-    <label className="block text-xs font-semibold uppercase tracking-wider text-blue-900">
-      {label}
-    </label>
-    <div className="relative">
-      {Icon && <Icon className="absolute left-3 top-3 h-4 w-4 text-blue-700" />}
-      <textarea
-        name={name}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        rows={rows}
-        className={`w-full rounded-lg border bg-white py-2 pl-10 pr-4 text-sm placeholder:text-blue-900 transition-all duration-200 ${
-          error
-            ? "border-red-300 focus:border-red-500 focus:ring-red-500"
-            : "border-blue-100 focus:border-blue-500 focus:ring-blue-500"
-        } ${className}`}
-        aria-invalid={Boolean(error)}
-        aria-describedby={error ? `${name}-error` : undefined}
-      />
-    </div>
-    {error && (
-      <p id={`${name}-error`} className="text-xs text-red-500">
-        {error}
-      </p>
-    )}
-  </div>
-);
-
-export default function CreditAssessmentForm() {
+const FooterForm = ({
+  heading = "Free Credit File Assessment",
+  subheading = "See if your negative listings can be removed – quick, confidential, and no win no fee.",
+  paragraph = "",
+}) => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // ---- Parse UTM params from URL (normalized to: source, medium, campaign, term, content)
+  const utm = useMemo(() => {
+    const keys = [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "source",
+      "medium",
+      "campaign",
+      "term",
+      "content",
+    ];
+    const o = {};
+    keys.forEach((k) => {
+      const v = searchParams.get(k);
+      if (v) o[k.replace(/^utm_/, "")] = v;
+    });
+    return o;
+  }, [searchParams]);
+
+  // ---- Build a primary source tag from UTM
+  const pickSourceTag = (u = {}) => {
+    const src = (u.source || "site").toLowerCase();
+    if (["google", "adwords", "ads"].includes(src)) return "src:google";
+    if (["facebook", "fb", "meta"].includes(src)) return "src:facebook";
+    if (["instagram", "ig"].includes(src)) return "src:instagram";
+    if (["tiktok", "tt"].includes(src)) return "src:tiktok";
+    if (["bing", "microsoft"].includes(src)) return "src:bing";
+    if (["referral", "partner"].includes(src)) return "src:referral";
+    return `src:${src || "site"}`;
+  };
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    phone: "",
+    fullName: "",
     email: "",
-    state: "",
-    isEmployed: "",
-    description: "",
+    phone: "",
   });
-
-  const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Handlers
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (formErrors[name]) setFormErrors((prev) => ({ ...prev, [name]: "" }));
+    setFormData((s) => ({ ...s, [name]: value }));
   };
+
   const validateForm = () => {
-    const errors = {};
-
-    // Required field validations
-    if (!formData.firstName.trim()) errors.firstName = "Required field";
-    if (!formData.lastName.trim()) errors.lastName = "Required field";
-
-    // Email validation (required + format check)
-    if (!formData.email.trim()) {
-      errors.email = "Required field";
-    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-      errors.email = "Invalid email format";
+    const { fullName, email, phone } = formData;
+    if (!fullName.trim()) {
+      alert("Please enter your full name.");
+      return false;
     }
-
-    // Dropdown validations
-    if (!formData.state) errors.state = "Please select a state";
-    if (!formData.isEmployed) errors.isEmployed = "Please choose Yes or No";
-
-    // Phone field exists check (no validation)
-    if (!formData.phone) errors.phone = "Required field"; // Just checking existence
-
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
+    if (!email.trim() || !/^\S+@\S+\.\S+$/.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+    if (!phone.trim()) {
+      alert("Please enter your phone number.");
+      return false;
+    }
+    return true;
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   if (!validateForm()) return;
-
-  //   setIsSubmitting(true);
-  //   try {
-  //     const response = await fetch("/api/ghl", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(formData),
-  //     });
-
-  //     const result = await response.json();
-
-  //     if (result?.success) {
-  //       alert(result.message || "Submitted successfully.");
-  //       setShowScheduleModal(true);
-  //     } else {
-  //       if (result?.errors) {
-  //         setFormErrors(result.errors);
-  //       } else {
-  //         alert(result?.message || "An error occurred. Please try again.");
-  //       }
-  //     }
-  //   } catch (err) {
-  //     console.error("Submission error:", err);
-  //     alert("An error occurred while submitting the form. Please try again.");
-  //   } finally {
-  //     setIsSubmitting(false);
-  //   }
-  // };
-  // somewhere near component init
-  const [utm, setUtm] = useState({
-    source: null,
-    medium: null,
-    campaign: null,
-    term: null,
-    content: null,
-    gclid: null,
-    fbclid: null,
-    msclkid: null,
-  });
-
-  useEffect(() => {
-    const p = new URLSearchParams(window.location.search);
-    const read = (k) => (p.get(k) || "").trim();
-    setUtm({
-      source: read("utm_source").toLowerCase() || null,
-      medium: read("utm_medium").toLowerCase() || null,
-      campaign: read("utm_campaign") || null,
-      term: read("utm_term") || null,
-      content: read("utm_content") || null,
-      gclid: read("gclid") || null,
-      fbclid: read("fbclid") || null,
-      msclkid: read("msclkid") || null,
-    });
-  }, []);
-  const capitalize = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
-
-  const pickSourceTag = (u) => {
-    if (
-      u?.fbclid ||
-      ["facebook", "fb", "meta", "instagram"].includes(u?.source)
-    )
-      return "FB Campaign";
-    if (
-      u?.gclid ||
-      ["google", "googleads", "adwords"].includes(u?.source) ||
-      ["cpc", "ppc", "sem"].includes(u?.medium)
-    )
-      return "Google";
-    if (u?.msclkid || ["bing", "microsoft"].includes(u?.source)) return "Bing";
-    if (["tiktok", "tt"].includes(u?.source)) return "TikTok";
-    if (["linkedin", "li"].includes(u?.source)) return "LinkedIn";
-    if (["youtube"].includes(u?.source)) return "YouTube";
-    if (u?.source) return capitalize(u.source);
-    return "Direct";
-  };
-
-  const handleSubmit = async (e) => {
-  e.preventDefault();
-  if (!validateForm()) return;
-  setIsSubmitting(true);
-
+  // ---- Robust reader for JSON or text error payloads
   const safeRead = async (res) => {
     const ct = res.headers.get("content-type") || "";
     if (ct.includes("application/json")) return await res.json();
@@ -290,160 +81,124 @@ export default function CreditAssessmentForm() {
     return { ok: false, error: text };
   };
 
-  try {
-    // Build tags from UTM
-    const primary = pickSourceTag(utm);
-    const tags = [primary];
-    if (utm.campaign) tags.push(`cmp:${utm.campaign}`);
-    if (utm.medium)   tags.push(`med:${utm.medium}`);
-    if (utm.term)     tags.push(`term:${utm.term}`);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+    setIsSubmitting(true);
 
-    const payload = {
-      firstName: (formData.firstName || "").trim(),
-      lastName:  (formData.lastName  || "").trim(),
-      email:     (formData.email     || "").trim(),
-      phone: formData.phone,
-      state: formData.state,
-      tags, // 👈 send tags to the API
-      customFields: [
-        { id: "B1YRYSDJYrX78SFAdFlY", value: formData.isEmployed }, // Yes/No
-        { id: "U4bVkotSBQxyrQSo4ZE9", value: formData.description || "" },
-      ],
-      // Optional: also store raw UTM values as custom fields if you have IDs
-      // utm_source: utm.source, utm_campaign: utm.campaign, etc.
-    };
+    try {
+      // Tags from UTM
+      const primary = pickSourceTag(utm);
+      const tags = [primary];
+      if (utm.campaign) tags.push(`cmp:${utm.campaign}`);
+      if (utm.medium) tags.push(`med:${utm.medium}`);
+      if (utm.term) tags.push(`term:${utm.term}`);
 
-    const res = await fetch("/api/ghl/contacts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+      // Split full name into first/last (best-effort)
+      const parts = formData.fullName.trim().split(/\s+/);
+      const firstName = parts.shift() || "";
+      const lastName = parts.join(" ");
 
-    const result = await safeRead(res);
-    console.log("Full API Response:", result);
+      const payload = {
+        firstName,
+        lastName,
+        email: (formData.email || "").trim(),
+        phone: formData.phone,
+        tags,
+        // Add customFields here if you later collect them in this same form.
+      };
 
-    if (!res.ok || result?.ok === false) {
-      const msg = result?.details || result?.error || result?.message || `Request failed (${res.status})`;
-      throw new Error(msg);
+      const res = await fetch("/api/ghl/contacts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await safeRead(res);
+      console.log("Full API Response:", result);
+
+      if (!res.ok || result?.ok === false) {
+        const msg =
+          result?.details ||
+          result?.error ||
+          result?.message ||
+          `Request failed (${res.status})`;
+        throw new Error(msg);
+      }
+
+      const contactId = result?.contact?.id || result?.id || result?.data?.id;
+      if (!contactId)
+        throw new Error("No contact ID received. Check console for details.");
+
+      router.push("/meeting-schedule");
+    } catch (error) {
+      console.error("Submission failed:", error);
+      alert(`Error: ${error?.message || "Submission failed"}`);
+    } finally {
+      setIsSubmitting(false);
     }
-
-    const contactId = result?.contact?.id || result?.id || result?.data?.id;
-    if (!contactId) throw new Error("No contact ID received. Check console for details.");
-
-    router.push("/meeting-schedule");
-  } catch (err) {
-    console.error("Submission failed:", err);
-    alert(`Error: ${err?.message || "Submission failed"}`);
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+  };
 
   return (
-    <>
-      <form
-        id="credit-assesment"
-        onSubmit={handleSubmit}
-        className="mx-auto max-w-2xl space-y-3 rounded-xl bg-white p-4 shadow-lg"
-        noValidate
-      >
-        {/* Name */}
-        <div className="grid gap-3 grid-cols-2">
-          <TextInput
-            label="First Name"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            placeholder="John"
-            Icon={User}
-            error={formErrors.firstName}
-            className="text-blue-900"
-          />
-          <TextInput
-            label="Last Name"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            placeholder="Doe"
-            Icon={User}
-            error={formErrors.lastName}
-            className="text-blue-900"
-          />
-        </div>
+    <div className="rounded-2xl border border-blue/10 bg-white/90 p-4 shadow-lg backdrop-blur-sm sm:p-6 md:p-8">
+      {/* Header with dynamic content */}
+      <div className="mb-6 text-center">
+        <h2 className="text-xl font-extrabold leading-tight text-blue sm:text-2xl lg:text-3xl">
+          {heading}
+        </h2>
+        <p className="mt-1 text-base text-center text-slate-600 sm:text-base">
+          See if your negative listings can be removed – quick, confidential,
+          and{" "}
+          <span className="font-bold text-blue">
+            <br></br>no win no fee.
+          </span>
+        </p>
+      </div>
 
-        {/* Contact */}
-        <div className="grid grid-cols-2 gap-3 ">
-          <TextInput
-            label="Phone"
-            name="phone"
-            type="tel"
-            value={formData.phone}
+      {/* Form */}
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="space-y-3">
+          <input
+            type="text"
+            name="fullName"
+            placeholder="Full Name"
+            value={formData.fullName}
             onChange={handleChange}
-            placeholder="04XX XXX XXX"
-            Icon={Phone}
-            error={formErrors.phone}
-            inputMode="tel"
-            className="text-blue-900"
+            required
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-2.5"
           />
-          <TextInput
-            label="Email"
-            name="email"
+
+          <input
             type="email"
+            name="email"
+            placeholder="Email Address"
             value={formData.email}
             onChange={handleChange}
-            placeholder="your@email.com"
-            Icon={Mail}
-            error={formErrors.email}
-            inputMode="email"
-            className="text-blue-900"
+            required
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-2.5"
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-2.5"
           />
         </div>
 
-        {/* State + Employment (Yes/No) */}
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-          <SelectInput
-            label="State"
-            name="state"
-            value={formData.state}
-            onChange={handleChange}
-            options={AUSTRALIAN_STATES}
-            Icon={MapPin}
-            error={formErrors.state}
-            placeholder="Select your state"
-          />
-
-          <SelectInput
-            label="Are you employed at the moment?"
-            name="isEmployed"
-            value={formData.isEmployed}
-            onChange={handleChange}
-            options={["Yes", "No"]}
-            Icon={BriefcaseBusiness}
-            error={formErrors.isEmployed}
-            placeholder="Select an option"
-          />
-        </div>
-
-        {/* Description */}
-        <TextAreaInput
-          label="Message"
-          name="description"
-          value={formData.description}
-          onChange={handleChange}
-          placeholder="Add any details you'd like us to know…"
-          Icon={ClipboardList}
-          className="text-blue-900"
-        />
-
-        {/* Submit */}
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-1 w-full rounded-lg bg-blue px-5 py-3 text-sm font-medium uppercase tracking-wider text-white shadow-md transition-all hover:from-blue-700 hover:to-blue-900 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+          className="mt-4 w-full rounded-xl bg-blue px-4 py-3 text-base font-semibold uppercase tracking-wide text-white shadow-md transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 sm:px-5 sm:text-base"
         >
-          {isSubmitting ? "Processing..." : "Apply Now"}
+          {isSubmitting ? "Processing..." : "Check My Removal Options"}
         </button>
       </form>
-    </>
+    </div>
   );
-}
+};
+
+export default FooterForm;

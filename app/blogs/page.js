@@ -133,7 +133,7 @@ export default function BlogsPage() {
                 disabled={page === 1}
               />
 
-              <span className="text-sm font-medium text-blue-700 px-4 py-2 bg-blue-100 rounded-md">
+              <span className="text-base font-medium text-blue-700 px-4 py-2 bg-blue-100 rounded-md">
                 Page {page} of {totalPages}
               </span>
 
@@ -162,7 +162,7 @@ function BlogCard({ post }) {
       className="group bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full"
     >
       <div className="p-6 flex flex-col flex-grow">
-        <div className="mb-3 flex items-center text-sm text-blue">
+        <div className="mb-3 flex items-center text-base text-blue">
           <Clock className="w-4 h-4 mr-1.5" />
           <span>{post.readTime} min read</span>
         </div>
@@ -194,7 +194,7 @@ function PaginationButton({ direction, onClick, disabled }) {
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`flex items-center px-4 py-2 text-sm font-medium ${
+      className={`flex items-center px-4 py-2 text-base font-medium ${
         disabled
           ? "text-gray-400 bg-gray-100 cursor-not-allowed"
           : "text-blue bg-white hover:bg-blue-50"

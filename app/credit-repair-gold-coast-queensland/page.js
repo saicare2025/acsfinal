@@ -29,34 +29,44 @@ export default function CreditRepairGoldCoastPage() {
   // FAQ data for structured data
   const faqData = [
     {
-      question: "How quickly can credit repair improve my Gold Coast home loan chances?",
-      answer: "Most Gold Coast clients see significant improvements in 6-12 weeks. We've had beachfront apartment approvals within 3 weeks of completing credit repair."
+      question:
+        "How quickly can credit repair improve my Gold Coast home loan chances?",
+      answer:
+        "Most Gold Coast clients see significant improvements in 6-12 weeks. We've had beachfront apartment approvals within 3 weeks of completing credit repair.",
     },
     {
-      question: "What's the difference between Gold Coast property rates with good vs bad credit?",
-      answer: "Clean credit can get 2.9-3.2% home loans. Bad credit often means 7-9% or outright rejection. On a $780,000 Gold Coast median property, that's $1,960+ extra monthly."
+      question:
+        "What's the difference between Gold Coast property rates with good vs bad credit?",
+      answer:
+        "Clean credit can get 2.9-3.2% home loans. Bad credit often means 7-9% or outright rejection. On a $780,000 Gold Coast median property, that's $1,960+ extra monthly.",
     },
     {
-      question: "Can you help with Gold Coast business finance after credit repair?",
-      answer: "Absolutely. We've helped Gold Coast restaurant owners, tourism operators, and marine businesses secure equipment finance and working capital after credit repair."
+      question:
+        "Can you help with Gold Coast business finance after credit repair?",
+      answer:
+        "Absolutely. We've helped Gold Coast restaurant owners, tourism operators, and marine businesses secure equipment finance and working capital after credit repair.",
     },
     {
       question: "Do you guarantee results for Gold Coast credit repair?",
-      answer: "We have a 98% success rate when we accept cases. Our No Win No Fee policy means you only pay success fees when we achieve results."
+      answer:
+        "We have a 98% success rate when we accept cases. Our No Win No Fee policy means you only pay success fees when we achieve results.",
     },
     {
       question: "How much does Gold Coast credit repair cost?",
-      answer: "$330 admin fee upfront, then success fees only when we remove items. No ongoing monthly charges. The average client saves far more in reduced interest rates."
-    }
+      answer:
+        "$330 admin fee upfront, then success fees only when we remove items. No ongoing monthly charges. The average client saves far more in reduced interest rates.",
+    },
   ];
 
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-repair-gold-coast-queensland",
-    title: "Credit Repair Gold Coast Queensland | Beach Lifestyle Finance | Australian Credit Solutions",
-    description: "Unlock your Gold Coast dream lifestyle with 98% success rate credit repair. Remove defaults, improve scores, access beachside property finance. No Win No Fee. Call 0489 265 737.",
+    title:
+      "Credit Repair Gold Coast Queensland | Beach Lifestyle Finance | Australian Credit Solutions",
+    description:
+      "Unlock your Gold Coast dream lifestyle with 98% success rate credit repair. Remove defaults, improve scores, access beachside property finance. No Win No Fee. Call 0489 265 737.",
     isService: true,
-    serviceType: "Credit Repair Gold Coast Queensland"
+    serviceType: "Credit Repair Gold Coast Queensland",
   });
 
   return (
@@ -64,17 +74,20 @@ export default function CreditRepairGoldCoastPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-12">
         {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`
-        }}></div>
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`,
+          }}
+        ></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center lg:gap-12 lg:flex-row lg:items-start">
@@ -89,20 +102,34 @@ export default function CreditRepairGoldCoastPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  <strong className="font-semibold text-red-600">STOP</strong> letting defaults destroy your beachside paradise dreams. The Gold Coast&apos;s booming property market isn&apos;t waiting. While you&apos;re getting rejected for beachfront apartments, others are securing their slice of coastal heaven at record-low rates.
+                  <strong className="font-semibold text-red-600">STOP</strong>{" "}
+                  letting defaults destroy your beachside paradise dreams. The
+                  Gold Coast&apos;s booming property market isn&apos;t waiting.
+                  While you&apos;re getting rejected for beachfront apartments,
+                  others are securing their slice of coastal heaven at
+                  record-low rates.
                 </p>
 
-               
-
                 <p className="text-base text-gray-700">
-                  <strong className="font-semibold text-green-600">BUT HERE&apos;S YOUR GOLD COAST TRANSFORMATION:</strong> ✅ Beachside home loan approved in weeks, not years ✅ Interest rates PLUMMET by 3-6% instantly ✅ Investment property doors swing open ✅ Premium car finance for your coastal cruiser ✅ Business loans for your Gold Coast venture
+                  <strong className="font-semibold text-green-600">
+                    BUT HERE&apos;S YOUR GOLD COAST TRANSFORMATION:
+                  </strong>{" "}
+                  ✅ Beachside home loan approved in weeks, not years ✅
+                  Interest rates PLUMMET by 3-6% instantly ✅ Investment
+                  property doors swing open ✅ Premium car finance for your
+                  coastal cruiser ✅ Business loans for your Gold Coast venture
                 </p>
 
                 <p className="text-base text-blue font-semibold">
-                  📞 Gold Coast <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link> Credit Emergency Line: 0489 265 737
+                  📞 Gold Coast{" "}
+                  <Link
+                    href="/get-credit-repair"
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Get Credit Repair
+                  </Link>{" "}
+                  Credit Emergency Line: 0489 265 737
                 </p>
-
-                
               </div>
 
               {/* CTAs */}
@@ -160,13 +187,12 @@ export default function CreditRepairGoldCoastPage() {
 
             {/* Right Form with Arrow */}
             <div className="w-full lg:w-1/3 relative">
-                      <RelatedBlock currentSlug="/credit-repair-gold-coast-queensland" heading="Related services & guides" />
-        <FooterForm
+              <FooterForm
                 heading="Get My Free Gold Coast Credit Assessment"
                 subheading="Fast & Confidential"
                 paragraph="Find out how we can unlock your Gold Coast lifestyle – free, fast, and confidential."
               />
-              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
+              <ul className="mt-8 flex flex-col justify-center gap-3 text-base text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
                   98% success rate
@@ -184,34 +210,60 @@ export default function CreditRepairGoldCoastPage() {
           </div>
         </div>
       </section>
-      <ReviewsWidget/>
+      <ReviewsWidget />
 
       {/* Opening Section */}
       <Section title="The Gold Coast Credit Crisis (Your Ticket to Paradise)">
         <p>
-          Gold Coast median house <Link href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</Link> price: $780,000 and climbing like a high-rise.
+          Gold Coast median house{" "}
+          <Link
+            href="/what-is-a-good-credit-score-australia"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            What Is A Good Credit Score Australia
+          </Link>{" "}
+          price: $780,000 and climbing like a high-rise.
         </p>
         <p className="mt-4">
           With perfect credit (750+ score): 2.9% home loan = $3,260/month
           <br />
           With bad credit (below 650): 7.2% home loan = $5,220/month
           <br />
-          <strong className="text-red-600">THE DIFFERENCE: $1,960 MORE every single month = $705,600 extra over 30 years</strong>
+          <strong className="text-red-600">
+            THE DIFFERENCE: $1,960 MORE every single month = $705,600 extra over
+            30 years
+          </strong>
         </p>
         <p className="mt-4">
-          That&apos;s not just money. That&apos;s your <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> beachside retirement. Your kids&apos; coastal childhood. Your financial paradise.
+          That&apos;s not just money. That&apos;s your{" "}
+          <Link
+            href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Credit File Defaults Can An Unreceived Bill Appear On Your Report
+          </Link>{" "}
+          beachside retirement. Your kids&apos; coastal childhood. Your
+          financial paradise.
         </p>
         <p className="mt-4">
-          <strong>Why Gold Coast Residents Are Racing to Fix Their Credit:</strong>
+          <strong>
+            Why Gold Coast Residents Are Racing to Fix Their Credit:
+          </strong>
         </p>
         <p className="mt-2">
-          🏖️ <strong>GOLD COAST LIFESTYLE PREMIUM</strong> Beach access 365 days a year. World-class entertainment precincts. No winter misery. Clean credit unlocks the coastal lifestyle millions dream about.
+          🏖️ <strong>GOLD COAST LIFESTYLE PREMIUM</strong> Beach access 365 days
+          a year. World-class entertainment precincts. No winter misery. Clean
+          credit unlocks the coastal lifestyle millions dream about.
         </p>
         <p className="mt-2">
-          🚧 <strong>INFRASTRUCTURE BOOM BONANZA</strong> Light Rail expansion. New hospital. Entertainment precinct upgrades. Property values exploding - but only accessible with clean credit.
+          🚧 <strong>INFRASTRUCTURE BOOM BONANZA</strong> Light Rail expansion.
+          New hospital. Entertainment precinct upgrades. Property values
+          exploding - but only accessible with clean credit.
         </p>
         <p className="mt-2">
-          🌊 <strong>TOURISM & BUSINESS GOLDMINE</strong> 6 million annual visitors. Booming hospitality sector. Endless business opportunities. Bad credit = locked out of the action.
+          🌊 <strong>TOURISM & BUSINESS GOLDMINE</strong> 6 million annual
+          visitors. Booming hospitality sector. Endless business opportunities.
+          Bad credit = locked out of the action.
         </p>
       </Section>
 
@@ -256,7 +308,7 @@ export default function CreditRepairGoldCoastPage() {
               className="rounded-xl border border-blue-100 bg-white p-5 shadow-sm transition-all hover:shadow-md"
             >
               <h3 className="font-semibold text-blue">{item.h}</h3>
-              <p className="mt-2 text-sm text-slate-700">{item.p}</p>
+              <p className="mt-2 text-base text-slate-700">{item.p}</p>
             </motion.li>
           ))}
         </motion.ul>
@@ -265,7 +317,14 @@ export default function CreditRepairGoldCoastPage() {
       {/* What We Remove */}
       <Section title="Gold Coast Credit Problems We Demolish">
         <p className="text-slate-700">
-          From Surfers Paradise to Currumbin, we&apos;ve <Link href="/fix-my-credit-now" className="text-blue-600 hover:text-blue-800 underline">Fix My Credit Now</Link> removed defaults that beachside dreams are made of.
+          From Surfers Paradise to Currumbin, we&apos;ve{" "}
+          <Link
+            href="/fix-my-credit-now"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Fix My Credit Now
+          </Link>{" "}
+          removed defaults that beachside dreams are made of.
         </p>
         <motion.div
           variants={staggerChildren}
@@ -360,13 +419,25 @@ export default function CreditRepairGoldCoastPage() {
           viewport={{ once: true }}
         >
           <Testimonial name="THE BROADBEACH BEACHFRONT MIRACLE - Marcus & Kelly T.">
-            &quot;$5,200 Vodafone default blocking $850,000 beachfront apartment at Broadbeach luxury high-rise with ocean views. ACS obliterated the default in 19 days using compliance hammer. Apartment approved at 3.1% saving $89,000 over loan term. We&apos;re living 50 meters from the beach with million-dollar morning coffee views.&quot;
+            &quot;$5,200 Vodafone default blocking $850,000 beachfront apartment
+            at Broadbeach luxury high-rise with ocean views. ACS obliterated the
+            default in 19 days using compliance hammer. Apartment approved at
+            3.1% saving $89,000 over loan term. We&apos;re living 50 meters from
+            the beach with million-dollar morning coffee views.&quot;
           </Testimonial>
           <Testimonial name="THE BURLEIGH HEADS FAMILY PARADISE - Sarah & Jake M. (3 young kids)">
-            &quot;Multiple utility defaults from business closure blocking our dream family home walking distance to Burleigh beach. ACS completed credit file reconstruction in 4 weeks. Home loan approved at 2.9% and our children are now playing on the beach daily, growing up in paradise. Priceless.&quot;
+            &quot;Multiple utility defaults from business closure blocking our
+            dream family home walking distance to Burleigh beach. ACS completed
+            credit file reconstruction in 4 weeks. Home loan approved at 2.9%
+            and our children are now playing on the beach daily, growing up in
+            paradise. Priceless.&quot;
           </Testimonial>
           <Testimonial name="THE SOUTHPORT INVESTMENT EMPIRE - Lisa K. (Property maven)">
-            &quot;Credit card default blocking beachside investment expansion and my goal to build Gold Coast rental portfolio. ACS eliminated the default using data accuracy destruction. $1.4M investment property approved SAME DAY. One default was costing me millions in coastal real estate. ACS unlocked my empire.&quot;
+            &quot;Credit card default blocking beachside investment expansion
+            and my goal to build Gold Coast rental portfolio. ACS eliminated the
+            default using data accuracy destruction. $1.4M investment property
+            approved SAME DAY. One default was costing me millions in coastal
+            real estate. ACS unlocked my empire.&quot;
           </Testimonial>
         </motion.div>
       </Section>
@@ -392,7 +463,7 @@ export default function CreditRepairGoldCoastPage() {
             <motion.li
               key={t}
               variants={fadeIn}
-              className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-sm text-slate-700"
+              className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-base text-slate-700"
             >
               <svg
                 className="h-5 w-5 shrink-0 text-blue mt-0.5"
@@ -455,11 +526,10 @@ export default function CreditRepairGoldCoastPage() {
             ]}
           />
         </motion.div>
-        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
-          <strong>
-            🌊 GOLD COAST EXCLUSIVE COASTAL OFFER 🌊
-          </strong>{" "}
-          Call in the next 24 hours for FREE 60-second beachside credit analysis, same-day coastal assessment, and direct access to award-winning specialists.
+        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-base text-slate-600">
+          <strong>🌊 GOLD COAST EXCLUSIVE COASTAL OFFER 🌊</strong> Call in the
+          next 24 hours for FREE 60-second beachside credit analysis, same-day
+          coastal assessment, and direct access to award-winning specialists.
           <br />
           <em>All services include our No Win No Fee guarantee.</em>
         </div>
@@ -487,7 +557,7 @@ export default function CreditRepairGoldCoastPage() {
             <motion.li
               key={t}
               variants={fadeIn}
-              className="rounded-xl border border-blue-100 bg-white p-4 text-sm text-slate-700 shadow-sm transition-all hover:shadow-md"
+              className="rounded-xl border border-blue-100 bg-white p-4 text-base text-slate-700 shadow-sm transition-all hover:shadow-md"
             >
               {t}
             </motion.li>
@@ -534,6 +604,10 @@ export default function CreditRepairGoldCoastPage() {
           ))}
         </motion.div>
       </Section>
+      <RelatedBlock
+        currentSlug="/credit-repair-gold-coast-queensland"
+        heading="Related services & guides"
+      />
 
       {/* FAQs */}
       <Section title="Gold Coast Credit Repair Questions">
@@ -564,7 +638,7 @@ export default function CreditRepairGoldCoastPage() {
                   />
                 </svg>
               </summary>
-              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
+              <p className="mt-3 text-base text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
                 {f.answer}
               </p>
             </motion.details>
@@ -629,7 +703,8 @@ export default function CreditRepairGoldCoastPage() {
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
-                Stay landlocked while Gold Coast property prices climb beyond reach
+                Stay landlocked while Gold Coast property prices climb beyond
+                reach
               </li>
               <li className="flex items-start gap-2">
                 <svg
@@ -670,12 +745,16 @@ export default function CreditRepairGoldCoastPage() {
       <Section title="Ready to Unlock Your Gold Coast Paradise?">
         <div className="mt-4 space-y-6">
           <div className="text-center">
-            <h3 className="text-xl font-semibold text-blue mb-4">THE PARADISE CLOCK IS TICKING</h3>
+            <h3 className="text-xl font-semibold text-blue mb-4">
+              THE PARADISE CLOCK IS TICKING
+            </h3>
             <p className="text-slate-700">
-              Every day you delay costs you $158 in extra interest payments and beachside property appreciation you could be capturing. Paradise lifestyle that could be yours right now.
+              Every day you delay costs you $158 in extra interest payments and
+              beachside property appreciation you could be capturing. Paradise
+              lifestyle that could be yours right now.
             </p>
           </div>
-          
+
           <ol className="space-y-3 text-slate-700">
             {[
               "🌊 FREE 60-second beachside credit analysis - call 0489 265 737",
@@ -685,20 +764,24 @@ export default function CreditRepairGoldCoastPage() {
               "🏆 Award-winning specialists unlock your paradise",
             ].map((step, index) => (
               <li key={index} className="flex items-start gap-3">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-base">
                   {index + 1}
                 </span>
                 {step}
               </li>
             ))}
           </ol>
-          
+
           <div className="text-center bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl">
             <p className="text-blue font-semibold mb-4">
               🌊 GOLD COAST EXCLUSIVE COASTAL OFFER 🌊
             </p>
-            <p className="text-sm text-slate-700 mb-6">
-              When you call in the next 24 hours, you unlock: ✅ FREE 60-second beachside credit analysis ✅ Same-day coastal assessment ✅ No obligation paradise consultation ✅ Emergency processing for urgent beachside purchases ✅ Direct access to award-winning coastal specialists
+            <p className="text-base text-slate-700 mb-6">
+              When you call in the next 24 hours, you unlock: ✅ FREE 60-second
+              beachside credit analysis ✅ Same-day coastal assessment ✅ No
+              obligation paradise consultation ✅ Emergency processing for
+              urgent beachside purchases ✅ Direct access to award-winning
+              coastal specialists
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <a
@@ -728,32 +811,46 @@ export default function CreditRepairGoldCoastPage() {
           className="rounded-2xl bg-gradient-to-r from-blue to-blue p-6 text-white shadow-lg"
         >
           <div className="text-center mb-4">
-            <h3 className="text-lg font-semibold">About Australian Credit Solutions - Gold Coast</h3>
-            <p className="text-sm mt-2">
-              We&apos;ve been unlocking Gold Coast dreams since 2018. Living on the Gold Coast isn&apos;t just about location - it&apos;s about lifestyle, freedom, and waking up in paradise every single day.
+            <h3 className="text-lg font-semibold">
+              About Australian Credit Solutions - Gold Coast
+            </h3>
+            <p className="text-base mt-2">
+              We&apos;ve been unlocking Gold Coast dreams since 2018. Living on
+              the Gold Coast isn&apos;t just about location - it&apos;s about
+              lifestyle, freedom, and waking up in paradise every single day.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 98% success rate when we take cases
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 No Win No Fee — $330 admin fee
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 Licensed & regulated — ASIC ACL 532003
               </p>
             </div>
           </div>
-          <div className="text-center mt-4 text-sm">
-            <p>📞 Gold Coast Direct: 0489 265 737 | 📧 help@australiancreditsolutions.com.au</p>
-            <p>🌐 australiancreditsolutions.com.au/goldcoast | ⭐ 4.9/5 stars from 855+ paradise transformations</p>
-            <p className="mt-2 font-semibold">Stop letting bad credit keep you from your Gold Coast paradise. The beaches are calling, opportunities are everywhere, and your coastal lifestyle is just one phone call away. 🌊🏄‍♂️⚡</p>
+          <div className="text-center mt-4 text-base">
+            <p>
+              📞 Gold Coast Direct: 0489 265 737 | 📧
+              help@australiancreditsolutions.com.au
+            </p>
+            <p>
+              🌐 australiancreditsolutions.com.au/goldcoast | ⭐ 4.9/5 stars
+              from 855+ paradise transformations
+            </p>
+            <p className="mt-2 font-semibold">
+              Stop letting bad credit keep you from your Gold Coast paradise.
+              The beaches are calling, opportunities are everywhere, and your
+              coastal lifestyle is just one phone call away. 🌊🏄‍♂️⚡
+            </p>
           </div>
         </motion.div>
       </section>
@@ -789,7 +886,7 @@ function Card({ title, bullets = [] }) {
       className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
     >
       <h3 className="text-lg font-semibold text-blue">{title}</h3>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700">
+      <ul className="mt-3 space-y-2 text-base text-slate-700">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2">
             <svg
@@ -813,13 +910,7 @@ function Card({ title, bullets = [] }) {
   );
 }
 
-function PriceCard({
-  name,
-  timeline,
-  perfectFor,
-  includes,
-  featured = false,
-}) {
+function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
   return (
     <motion.div
       variants={fadeIn}
@@ -835,9 +926,9 @@ function PriceCard({
         </span>
       )}
       <h3 className="text-lg font-semibold text-blue">{name}</h3>
-      <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
-      <p className="mt-1 text-sm text-slate-600">Perfect for: {perfectFor}</p>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
+      <p className="mt-1 text-base text-slate-600">Timeline: {timeline}</p>
+      <p className="mt-1 text-base text-slate-600">Perfect for: {perfectFor}</p>
+      <ul className="mt-3 space-y-2 text-base text-slate-700 flex-grow">
         {includes.map((i) => (
           <li key={i} className="flex items-start gap-2">
             <svg
@@ -860,7 +951,7 @@ function PriceCard({
       <div className="mt-4 flex items-end justify-between">
         <Link
           href="/free-credit-assessment"
-          className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"
+          className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-base"
         >
           Start Now
         </Link>
@@ -883,10 +974,9 @@ function Testimonial({ name, children }) {
         ))}
       </div>
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">
+      <figcaption className="mt-3 text-base font-semibold text-blue">
         {name}
       </figcaption>
     </motion.figure>
   );
 }
-

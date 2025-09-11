@@ -61,8 +61,9 @@ export default function Home() {
       />
       <Header />
       <HeroSection />
-      <VideoServicesSection />
+
       <section className="py-16 bg-white">
+          <ReviewsWidget />
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Main Heading */}
           <div className="mb-12">
@@ -79,7 +80,13 @@ export default function Home() {
               influences whether or not a person can get a loan, an apartment,
               insurance, phone service - regardless of who they are and what
               their income might be. Essentially it&apos;s based on your
-       <Link href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</Link>        statistical probability of meeting your debt obligations in the
+              <Link
+                href="/get-credit-repair"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Get Credit Repair
+              </Link>{" "}
+              statistical probability of meeting your debt obligations in the
               past by making on-time payments and not defaulting on loans. In
               other words, it&apos;s an expression of how risky it is to lend to
               you, given our knowledge of you over the years.
@@ -88,14 +95,28 @@ export default function Home() {
               Credit Repair is a process by which you can correct any errors on
               your credit report, also known as a &apos;credit file.&apos; It is
               designed to remove negative items such as late payments and debt
- <Link href="/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward" className="text-blue-600 hover:text-blue-800 underline">Struggling With A Low Credit Score Here S How To Fix Your Credit Score And Move Forward</Link>              from a credit report. The reasoning is that consumers with clean
+              <Link
+                href="/blog-details/struggling-with-a-low-credit-score-here-s-how-to-fix-your-credit-score-and-move-forward"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Struggling With A Low Credit Score Here S How To Fix Your Credit
+                Score And Move Forward
+              </Link>{" "}
+              from a credit report. The reasoning is that consumers with clean
               bills of credit need a more favorable interest rate when they buy
               things.
             </p>
             <p>
               One way of increasing your credit score may be through one or more
-              types <Link href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</Link> of credit fixes in Sydney, which rely on the fact that not
-              all debt-related reports are accurate.
+              types{" "}
+              <Link
+                href="/remove-defaults-from-your-credit-file"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Remove Defaults From Your Credit File
+              </Link>{" "}
+              of credit fixes in Sydney, which rely on the fact that not all
+              debt-related reports are accurate.
             </p>
           </div>
 
@@ -106,7 +127,13 @@ export default function Home() {
             </h3>
             <p className="mb-4">
               Five criteria are used in calculating a person&apos;s credit
-  <Link href="/default-removal-services-australia" className="text-blue-600 hover:text-blue-800 underline">Default Removal Services Australia</Link>             score:
+              <Link
+                href="/default-removal-services-australia"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                Default Removal Services Australia
+              </Link>{" "}
+              score:
             </p>
             <ul className="space-y-3 list-disc pl-5">
               <li>Payment history (35%)</li>
@@ -238,8 +265,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+      
       </section>
-      <ReviewsWidget />
       <HowWorks />
       <section className="py-16 bg-gradient-to-b from-white to-blue-50 text-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,7 +287,7 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Removing Incorrect Defaults */}
-             <Link href="/credit-enquiry-removal-australia">
+            <Link href="/credit-enquiry-removal-australia">
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
                   Removing Incorrect Defaults
@@ -337,9 +364,12 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
-      
-      <RelatedBlock currentSlug="/credit_repair_sydney" heading="Related services & guides" />
-      
+
+      <RelatedBlock
+        currentSlug="/credit_repair_sydney"
+        heading="Related services & guides"
+      />
+
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -534,7 +564,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }

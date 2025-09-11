@@ -9,7 +9,7 @@ import BlogStructuredDataClient from '../../../components/BlogStructuredDataClie
 
 // ✅ This is now a server component by default
 export default async function BlogPostPage({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const filePath = path.join(process.cwd(), 'data', 'blogs_data.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');

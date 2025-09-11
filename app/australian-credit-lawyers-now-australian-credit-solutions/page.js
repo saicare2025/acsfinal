@@ -1,4 +1,4 @@
-// File: app/australian-credit-lawyers-now-australian-credit-solutions/page.jsx
+// File: app/australian-credit-lawyers-now-acs/page.jsx
 "use client";
 
 import Footer from "@/components/Footer";
@@ -14,730 +14,217 @@ import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
-
 import RelatedBlock from "@/app/_seo/RelatedBlock";
 
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
 
 const staggerChildren = {
-  visible: { transition: { staggerChildren: 0.1 } },
+  visible: { transition: { staggerChildren: 0.1 } }
 };
 
-export default function AustralianCreditLawyersNowPage() {
-  // FAQ data for structured data
+export default function AustralianCreditLawyersNowACSPage() {
   const faqData = [
     {
       question: "Are you still the same company I worked with as Australian Credit Lawyers?",
-      answer:
-        "Yes, exactly the same company, same team, same ownership. Just evolved our name and services to help more Australians. Same legal expertise, same award-winning results, now with broader solutions.",
+      answer: "Yes, exactly the same company, same team, same ownership. Just evolved our name and services to help more Australians."
     },
     {
       question: "Will my existing case be affected by the name change?",
-      answer:
-        "Not at all. Same case managers, same processes, same commitment to your success. Nothing changes except our expanded ability to help with comprehensive financial solutions.",
+      answer: "Not at all. Same case managers, same processes, same commitment to your success. Nothing changes except our expanded ability to help."
     },
     {
-      question: "Are you still lawyer-led after becoming &apos;Solutions&apos;?",
-      answer:
-        "Absolutely. Elisa Rothschild still leads our legal strategy, qualified lawyers still draft all disputes. We just made our services more accessible while maintaining the same legal expertise.",
+      question: "Are you still lawyer-led after becoming 'Solutions'?",
+      answer: "Absolutely. Elisa Rothschild still leads legal strategy, qualified lawyers still draft all disputes. We just made our services more accessible."
     },
     {
       question: "Why did you change from such a strong legal brand?",
-      answer:
-        "Client feedback showed many Australians needed our help but felt intimidated by approaching &apos;lawyers.&apos; We wanted to remove that barrier while keeping our legal expertise and professional standards.",
+      answer: "Client feedback showed many Australians needed our help but felt intimidated by 'lawyers.' We removed that barrier while keeping our expertise."
     },
     {
       question: "Do you still charge like lawyers (expensive hourly rates)?",
-      answer:
-        "No, we never charged like traditional lawyers. Same No Win, No Fee structure we&apos;ve always used – admin fee plus success fees only when we get results. More accessible pricing for all Australians.",
+      answer: "No, we never charged like traditional lawyers. Same No Win, No Fee structure: admin fee plus success fees only when we get results."
     },
     {
       question: "Can I still get the same lawyer-quality service?",
-      answer:
-        "Yes, the legal quality is identical. Same lawyers, same legal processes, same professional standards. Just wrapped in a more accessible service delivery model with broader solutions.",
-    },
+      answer: "Yes, the legal quality is identical. Same lawyers, same legal processes, same standards. Just wrapped in a more accessible model."
+    }
   ];
 
-  // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
-    pathname: "/australian-credit-lawyers-now-australian-credit-solutions",
-    title:
-      "Australian Credit Lawyers | Now Australian Credit Solutions | Same Expert Team",
+    pathname: "/australian-credit-lawyers-now-acs",
+    title: "Australian Credit Lawyers is Now Australian Credit Solutions",
     description:
-      "Australian Credit Lawyers is now Australian Credit Solutions - same award winning team, expanded services. Still lawyer-led credit repair with broader financial solutions.",
+      "Looking for Australian Credit Lawyers? We've evolved into Australian Credit Solutions: same award-winning lawyer-led team, expanded services, more accessibility.",
     isService: true,
-    serviceType: "Brand Evolution Information",
+    serviceType: "Credit Repair & Legal Solutions"
   });
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-slate-900">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
-        {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
-
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-12">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,...')] opacity-20"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center lg:gap-12 lg:flex-row lg:items-start">
-            {/* Left Content */}
+          <div className="flex flex-col items-center lg:flex-row lg:gap-12 lg:items-start">
             <div className="w-full lg:w-2/3">
-              <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+              <h1 className="text-3xl font-extrabold sm:text-4xl lg:text-5xl text-gray-900">
                 Australian Credit Lawyers is Now Australian Credit Solutions
-                <span className="block mt-2 text-blue">
-                  Same Expert Team, Expanded Services
-                </span>
+                <span className="block mt-2 text-blue">Same Legal Expertise. Expanded Services.</span>
               </h1>
-
               <div className="mt-6 space-y-4">
-                <p className="text-lg leading-relaxed text-gray-700">
-                  Looking for Australian Credit Lawyers? You&apos;ve found us – we&apos;re now Australian Credit Solutions. <a href="/complaints-handling-policy" className="text-blue-600 hover:text-blue-800 underline">Complaints Handling Policy</a> Same award-winning team, same legal expertise, expanded services to help more Australians rebuild their financial lives.
-                </p>
-
-                <p className="text-base text-gray-600">
-                  Our Evolution: From Lawyers to Solutions. When we launched as Australian Credit Lawyers, we established ourselves as Australia&apos;s premier legal focused credit repair service. Our legal foundation remains unchanged – it&apos;s still at the heart of everything we do. Client feedback taught us something important: While our legal expertise was unmatched, many Australians felt intimidated by approaching{" "}
-                  <strong className="font-semibold text-blue">
-                  &quot;lawyers&quot; for help with their credit problems
-                  </strong>{" "}
-                  . We realized our name was creating a barrier between us and the people we wanted to help most.
+                <p className="text-lg text-gray-700">
+                  Looking for Australian Credit Lawyers? You've found us – we're now Australian Credit Solutions. Same award-winning team, same legal expertise, expanded mission to help more Australians rebuild their financial lives.
                 </p>
               </div>
-
-              {/* CTAs */}
-              <div
-                className="mt-8 relative flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center"
-                role="group"
-                aria-label="Primary actions"
-              >
-                <Link
-                  href="/free-credit-assessment"
-                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                >
-                  Get My Free Credit Assessment
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link href="/free-credit-assessment" className="rounded-lg bg-blue px-6 py-3 text-white font-semibold hover:bg-blue-700">
+                  Get Started Today
                 </Link>
-
-                <a
-                  href="tel:+61489265737"
-                  aria-label="Call Australian Credit Solutions on 0489 265 737"
-                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border-2 border-blue px-6 py-3 text-base font-semibold text-blue transition hover:bg-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                >
+                <a href="tel:+61489265737" className="rounded-lg border-2 border-blue px-6 py-3 font-semibold text-blue hover:bg-blue hover:text-white">
                   Call 0489 265 737
                 </a>
-
-                {/* Decorative arrow (desktop/tablet only) */}
-                <div
-                  className="pointer-events-none hidden lg:block"
-                  aria-hidden="true"
-                >
-                  <Image
-                    src={ArrowIcon}
-                    alt=""
-                    width={220}
-                    height={70}
-                    loading="lazy"
-                    className="select-none"
-                    priority={false}
-                  />
-                </div>
-                <div
-                  className="pointer-events-none lg:hidden flex justify-center"
-                  aria-hidden="true"
-                >
-                  <Image
-                    src={ArrowIconM}
-                    alt=""
-                    width={200}
-                    height={120}
-                    loading="lazy"
-                    className="select-none"
-                    priority={false}
-                  />
-                </div>
               </div>
             </div>
-
-            {/* Right Form */}
-            <div className="w-full lg:w-1/3 relative">
-                      <RelatedBlock currentSlug="/australian-credit-lawyers-now-australian-credit-solutions" heading="Related services & guides" />
-        <FooterForm
-                heading="Get My Free Assessment"
-                subheading="Same Expert Team, Enhanced Service"
-                paragraph="Quick credit check: Whether you knew us as Australian Credit Lawyers or you're meeting Australian Credit Solutions for the first time – welcome to the next chapter of Australia's most trusted credit specialists."
+            <div className="w-full lg:w-1/3">
+              <FooterForm
+                heading="Same Team, Expanded Mission"
+                subheading="From Lawyers to Solutions"
+                paragraph="Speak to the same trusted team under our new name – Australian Credit Solutions."
               />
-              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
-                  No Win No Fee
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
-                  Payment plans available
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
-                  Licensed ASIC ACL 532003
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </section>
-      <ReviewsWidget />
 
-      {/* Breadcrumb Navigation */}
+      <ReviewsWidget />
       <div className="mx-auto max-w-6xl px-4">
-        <Breadcrumb pathname="/australian-credit-lawyers-now-australian-credit-solutions" />
+        <Breadcrumb pathname="/australian-credit-lawyers-now-acs" />
       </div>
 
-      {/* Why Centrelink Recipients Struggle */}
-      <Section title="Why Centrelink Recipients Struggle with Credit Repair">
-        <p className="text-slate-700">
-          Let&apos;s be honest – most credit repair companies either don&apos;t
-          understand your <a href="/credit-australia-repair" className="text-blue-600 hover:text-blue-800 underline">Credit Australia Repair</a> situation or want upfront fees you simply can&apos;t
-          afford. Here&apos;s what makes your situation different:
-        </p>
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2"
-        >
-          <Card
-            title="The Catch-22 Cycle"
-            bullets={[
-              "Limited income: You're already stretching every dollar on Centrelink payments",
-              "Previous financial stress: The circumstances that led to Centrelink often created credit problems",
-              "High-cost services: Most credit repair companies charge thousands upfront",
-              "Ongoing impact: Bad credit makes everything more expensive",
-            ]}
-          />
-          <Card
-            title="What This Really Means for Your Daily Life"
-            bullets={[
-              "Rental applications: Landlords see defaults and move to the next applicant",
-              "Phone & internet plans: Telcos want massive bonds or refuse service altogether",
-              "Small loans: Can't get approved for anything, even a $500 emergency loan",
-              "Car finance: Public transport becomes your only option",
-              "Utility connections: Energy companies demand huge deposits upfront",
-            ]}
-          />
-        </motion.div>
-        <p className="mt-6 text-slate-700 font-semibold">
-          The truth? None of this is permanent. We&apos;ve seen people go from
-          Centrelink with <a href="/credit-repair-after-bankruptcy" className="text-blue-600 hover:text-blue-800 underline">Credit Repair After Bankruptcy</a> multiple defaults to getting approved for car loans
-          within months of cleaning up their credit file.
+      <Section title="Our Evolution: From Lawyers to Solutions">
+        <p className="text-slate-700 font-semibold">Our Legal Heritage (Australian Credit Lawyers 2018–2023)</p>
+        <ul className="list-disc pl-6 text-slate-700 mt-2 space-y-1">
+          <li>Lawyer-led approach to credit disputes</li>
+          <li>Consumer credit law expertise</li>
+          <li>Professional standards from day one</li>
+          <li>Award-winning results through legal precision</li>
+          <li>Trusted reputation built on integrity</li>
+        </ul>
+        <p className="mt-4 text-slate-700 font-semibold">Why We Became Australian Credit Solutions (2024+)</p>
+        <p className="text-slate-700 mt-2">
+          Client feedback showed our name created barriers – people feared high legal costs or judgment. We kept the legal foundation but made our services more approachable.
         </p>
       </Section>
 
-      {/* Our Centrelink-Friendly Approach */}
-      <Section title="Our Centrelink-Friendly Approach: No Win No Fee That Actually Works">
-        <p className="text-slate-700">
-          Here&apos;s what makes us different from other credit repair companies
-   <a href="/credit-repair-after-debt-agreement-part-9" className="text-blue-600 hover:text-blue-800 underline">Credit Repair After Debt Agreement Part 9</a>        when it comes to helping Centrelink recipients:
-        </p>
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2"
-        >
-          <Card
-            title="Affordable Admin Fee Structure"
-            bullets={[
-              "Just $330 admin fee – paid upfront (we offer payment plans)",
-              "No success fees if you&apos;re on Centrelink payments",
-              "No hidden costs – what you see is what you pay",
-              "Payment plan available – spread the $330 over several weeks if needed",
-            ]}
-          />
-          <Card
-            title="We Actually Understand Your Situation"
-            bullets={[
-              "Job loss or illness created temporary financial hardship",
-              "Family breakdown affected your income and expenses",
-              "Business closure wasn't your fault but affected your credit",
-              "Economic circumstances beyond your control",
-            ]}
-          />
-          <Card
-            title="Realistic Timeline Expectations"
-            bullets={[
-              "Week 1-2: Full credit file analysis and case assessment",
-              "Week 3-6: Formal disputes lodged with credit providers",
-              "Week 6-12: Follow-up and escalation where needed",
-              "Week 12+: Final negotiations and removals",
-            ]}
-          />
-          <Card
-            title="Empathetic Support"
-            bullets={[
-              "Our team knows being on Centrelink doesn't make you a 'bad risk'",
-              "No judgment consultation process",
-              "Understanding of financial hardship circumstances",
-              "Focus on your future financial independence",
-            ]}
-          />
-        </motion.div>
-      </Section>
-
-      {/* What We Can Remove */}
-      <Section title="What We Can Remove from Your Credit File">
-        <p className="text-slate-700">
-          Being on Centrelink doesn&apos;t limit what we can challenge. We
-          regularly remove:
-        </p>
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2"
-        >
-          <Card
-            title="Defaults ($150+ unpaid debts listed on your file)"
-            bullets={[
-              "Utility defaults: Gas, electricity, water bills from tough times",
-              "Telco defaults: Mobile phone bills, internet accounts",
-              "Credit card defaults: From when income dropped suddenly",
-              "Personal loan defaults: Small loans that went bad during hardship",
-              "Buy now, pay later defaults: Afterpay, Zip Pay, humm accounts",
-            ]}
-          />
-          <Card
-            title="Late Payment Records"
-            bullets={[
-              "Credit card late payments: When minimum payments became impossible",
-              "Loan repayment delays: Car loans, personal loans affected by income loss",
-              "Mortgage late payments: Home loan stress before Centrelink",
-            ]}
-          />
-          <Card
-            title="Credit Enquiries (Applications that got rejected)"
-            bullets={[
-              "Multiple loan applications: When you were desperately seeking finance",
-              "Credit card applications: Rejected applications still show up",
-              "Phone plan enquiries: Even unsuccessful phone applications count",
-            ]}
-          />
-          <Card
-            title="Court Judgments & Writs"
-            bullets={[
-              "Small debt court actions: Usually under $10,000",
-              "Unpaid fines: That escalated while you were struggling financially",
-              "Commercial disputes: From business or employment situations",
-            ]}
-          />
-        </motion.div>
-        <div className="mt-6 rounded-xl border border-green-200 bg-green-50 p-6 shadow-lg">
-          <h3 className="text-lg font-semibold text-green-800">
-            Real Example:
-          </h3>
-          <p className="mt-2 text-green-700">
-            Sarah from Brisbane was on JobSeeker with three defaults totalling
-            $2,400. Within 8 weeks, we had all three removed. She&apos;s now
-            working part-time and got approved for a $15,000 car loan at 9.9%
-            interest instead of the 24% she was being offered before.
-          </p>
+      <Section title="Same Team, Expanded Mission">
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card title="Your Trusted Team Remains" bullets={["Elisa Rothschild – Principal Lawyer & Director","Qualified legal team drafting every dispute","Experienced case managers","Australian-based support team"]} />
+          <Card title="What's Changed: Our Approach" bullets={["Holistic financial solutions","Accessible and friendly","Plain English communication","Client partnership model"]} />
         </div>
       </Section>
 
-      {/* The Process */}
-      <Section title="The Process: Simple, Stress-Free, Designed for Your Situation">
-        <motion.ol
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-4 space-y-4 text-slate-700"
-        >
-          {[
-            {
-              title: "Free Assessment (No Obligation)",
-              description:
-                "Get your free credit report – we'll walk you through ordering it. Phone consultation to explain your situation without judgment. Case evaluation with honest assessment of what we can achieve. Clear pricing with upfront costs, no surprises.",
-            },
-            {
-              title: "Affordable Setup",
-              description:
-                "$330 admin fee with payment plan available if needed. Paperwork handled – we do all the complex legal stuff. Authority forms signed once, we handle everything else. Regular updates via SMS and email.",
-            },
-            {
-              title: "We Fight for Removals",
-              description:
-                "Professional disputes with formal legal challenges to credit providers. Negotiation expertise – we know what arguments work. Persistent follow-up as credit providers often ignore first requests. Escalation process – we don&apos;t give up after one attempt.",
-            },
-            {
-              title: "Your Fresh Start",
-              description:
-                "Clean credit file with defaults and late payments removed. Better borrowing power – approved for loans you need. Lower interest rates – good credit equals cheaper finance. Rental approval – landlords see clean credit history.",
-            },
-          ].map((step, index) => (
-            <motion.li key={index} variants={fadeIn} className="flex gap-4">
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold">
-                {index + 1}
-              </div>
-              <div>
-                <strong>{step.title}:</strong> {step.description}
-              </div>
-            </motion.li>
-          ))}
-        </motion.ol>
-      </Section>
-
-      {/* Why Bad Credit Costs More */}
-      <Section title="Why Bad Credit Costs You More (And Why Fixing It Saves Money)">
-        <p className="text-slate-700">
-          When you&apos;re on Centrelink, every dollar counts. Here&apos;s how
-          bad credit is costing you money right now:
-        </p>
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2"
-        >
-          <Card
-            title="Higher Costs for Basic Services"
-            bullets={[
-              "Rental bonds: Bad credit can mean 6-8 weeks bond instead of 4 weeks",
-              "Utility deposits: Energy companies charge $200-500 deposits upfront",
-              "Phone plan bonds: $500-1000 deposits for basic mobile plans",
-              "Insurance premiums: Some insurers charge more for bad credit",
-            ]}
-          />
-          <Card
-            title="Limited Finance Options"
-            bullets={[
-              "Payday loans: 400%+ interest rates because banks won&apos;t lend to you",
-              "Rent-to-buy: Paying double the retail price for furniture and appliances",
-              "No emergency options: Can't get approved for even small personal loans",
-            ]}
-          />
-          <Card
-            title="Opportunity Costs"
-            bullets={[
-              "Employment: Some employers check credit for financial roles",
-              "Housing: Missing out on better rental properties",
-              "Transport: Stuck with unreliable cars because finance is unavailable",
-            ]}
-          />
-          <Card
-            title="The Real Math"
-            bullets={[
-              "Clean up your credit now, and within 6 months you could save thousands",
-              "Reduced deposits, bonds, and access to normal-rate finance",
-              "Our $330 fee pays for itself quickly",
-              "Better financial options when returning to work",
-            ]}
-          />
-        </motion.div>
-      </Section>
-
-      {/* Success Stories */}
-      <Section title="Success Stories: Real Centrelink Recipients We've Helped">
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Testimonial name="Maria's Story – Single Mum, JobSeeker">
-            &quot;I was on JobSeeker after my partner left. Had defaults from
-            when I couldn&apos;t pay the bills during the separation.
-            Couldn&apos;t get approved for rental properties – estate agents
-            would take one look at my credit report and move on to the next
-            applicant. ACS removed two defaults and a judgment. Within 3 months
-            I was approved for a rental in a better school zone for my kids. The
-            relief was incredible. Result: 2 defaults and 1 judgment removed,
-            approved for rental property, now working part-time.&quot;
-          </Testimonial>
-          <Testimonial name="David's Story – Disability Support Pension">
-            &quot;After my accident, I went on DSP and my bills piled up. Credit
-            cards went into default, car loan too. Felt like my life was over at
-            45. ACS was honest about what they could do and what they
-            couldn&apos;t. They got the credit card default removed, and I
-            qualified for a disability car loan. Having transport back changed
-            everything. Result: 1 major default removed, qualified for
-            specialized vehicle finance.&quot;
-          </Testimonial>
-          <Testimonial name="Jenny's Story – Age Pension">
-            &quot;Retired but had a default from an old Telstra bill. Sounds
-            small but it was blocking me from getting a seniors&apos; credit
-            card for online shopping. The grandkids were teaching me to use the
-            internet but I couldn&apos;t buy anything! ACS sorted it out quickly
-            and now I&apos;m shopping online like a pro. Result: Telco default
-            removed, approved for senior citizens&apos; credit card.&quot;
-          </Testimonial>
-        </motion.div>
-      </Section>
-
-      {/* Service Options */}
-      <Section title="Our Centrelink-Friendly Service Options">
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-2"
-        >
-          <PriceCard
-            name="Standard Centrelink Service"
-            timeline="6-12 weeks typically"
-            perfectFor="Most Centrelink recipients with 1-3 credit issues"
-            includes={[
-              "Payment plan available for admin fee",
-              "No success fees for Centrelink recipients",
-              "Regular progress updates",
-              "Empathetic support throughout",
-            ]}
-            featured
-          />
-          <PriceCard
-            name="Complex Case Support"
-            timeline="8-16 weeks typically"
-            perfectFor="Multiple defaults, court judgments, complex situations"
-            includes={[
-              "Comprehensive case management",
-              "Multiple dispute coordination",
-              "Ongoing monitoring and support",
-              "Transition planning for return to work",
-            ]}
-          />
-          <PriceCard
-            name="Emergency Rental Support"
-            timeline="4-8 weeks typically"
-            perfectFor="Urgent rental applications, housing needs"
-            includes={[
-              "Priority processing for housing urgency",
-              "Focus on rental-blocking defaults",
-              "Fast-track communication",
-              "Housing application support",
-            ]}
-          />
-          <PriceCard
-            name="Return-to-Work Preparation"
-            timeline="6-10 weeks typically"
-            perfectFor="Preparing for employment transition, rebuilding credit"
-            includes={[
-              "Employment-focused credit improvement",
-              "Transport finance preparation",
-              "Credit building guidance",
-              "Long-term financial planning",
-            ]}
-          />
-        </motion.div>
-        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
-          <strong>Special Centrelink Policy:</strong> $330 admin fee (payment
-          plans available). No success fees for Centrelink recipients. No hidden
-          costs. We understand your situation and work within your means.
+      <Section title="Why This Evolution Benefits You">
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card title="Broader Range of Solutions" bullets={["Credit improvement strategies","Financial rehabilitation planning","Lender relationship support","Credit monitoring & protection","Financial education"]} />
+          <Card title="More Accessible Service" bullets={["Friendly consultations","Client-focused support","Easy documentation","Outcome-focused solutions"]} />
+          <Card title="Inclusive Brand Identity" bullets={["Solutions = positive & hopeful","Approachable delivery","Focus on fresh starts","Clear communication"]} />
         </div>
       </Section>
 
-      {/* FAQs */}
+      <Section title="Our Legal Expertise Remains Your Advantage">
+        <ul className="list-disc pl-6 space-y-1 text-slate-700">
+          <li>Elisa Rothschild still directs legal strategy</li>
+          <li>Lawyers draft every dispute</li>
+          <li>Legal precision drives success rates</li>
+          <li>ASIC licensing ensures compliance</li>
+        </ul>
+        <p className="mt-4 text-slate-700">
+          Our legal foundation delivers higher success rates, faster resolutions, stronger negotiations, and professional credibility.
+        </p>
+      </Section>
+
+      <Section title="Client Testimonials: Before and After the Evolution">
+        <Testimonial name="Michael R – Sydney (2022)">
+          "I was nervous about contacting lawyers, but Australian Credit Lawyers made it comfortable. Their legal approach got results I couldn't get myself."
+        </Testimonial>
+        <Testimonial name="Sarah T – Melbourne (2024)">
+          "Australian Credit Solutions made the whole process easier than I expected. Same great results, but felt more supportive."
+        </Testimonial>
+        <Testimonial name="David L – Brisbane">
+          "I worked with them as Australian Credit Lawyers and now ACS. Same amazing team, but more accessible and supportive."
+        </Testimonial>
+      </Section>
+
+      <Section title="Finding Us After the Name Change">
+        <p className="text-slate-700">Searching for "Australian Credit Lawyers" or "Credit repair lawyers Australia"? You'll still find us. Same number, same email, same team.</p>
+        <p className="mt-2 text-slate-700">Phone: 0489 265 737 | Email: help@australiancreditsolutions.com.au | ASIC ACL 532003</p>
+      </Section>
+
+      <Section title="The Evolution Benefits: What You Gain">
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card title="Old Model (Australian Credit Lawyers)" bullets={["Legal analysis","Lawyer-drafted disputes","Legal negotiations","Case closed at resolution"]} />
+          <Card title="New Model (Australian Credit Solutions)" bullets={["Holistic assessment","Legal + improvement planning","Ongoing support","Long-term partnership"]} />
+        </div>
+      </Section>
+
+      <Section title="Why The Legal Foundation Still Matters">
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card title="Non-Legal Credit Repair" bullets={["Generic templates","No legal understanding","Aggressive tactics","Limited success"]} />
+          <Card title="Australian Credit Solutions" bullets={["Custom legal arguments","Deep legal knowledge","Professional escalation","Complex case expertise"]} />
+        </div>
+      </Section>
+
+      <RelatedBlock currentSlug="/australian-credit-lawyers-now-acs" heading="Related services & guides" />
+
       <Section title="Frequently Asked Questions">
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-4 space-y-4"
-        >
-          {faqData.map((f, index) => (
-            <motion.details
-              key={`faq-${index}`}
-              variants={fadeIn}
-              className="group rounded-xl border border-blue-100 bg-white p-4 shadow-sm transition-all hover:shadow-md"
-            >
-              <summary className="cursor-pointer select-none font-semibold text-blue group-open:text-blue flex items-center justify-between">
+        <motion.div variants={staggerChildren} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-4 space-y-4">
+          {faqData.map((f, i) => (
+            <motion.details key={i} variants={fadeIn} className="group border rounded-xl p-4 bg-white shadow-sm">
+              <summary className="font-semibold text-blue cursor-pointer flex justify-between items-center">
                 <span>{f.question}</span>
-                <svg
-                  className="h-5 w-5 transform group-open:rotate-180 transition-transform"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <svg className="h-5 w-5 transform group-open:rotate-180 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
               </summary>
-              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
-                {f.answer}
-              </p>
+              <p className="mt-2 text-slate-700 text-base">{f.answer}</p>
             </motion.details>
           ))}
         </motion.div>
       </Section>
 
-      {/* Next Steps */}
-      <Section title="Next Steps: Get Your Free Credit Assessment">
-        <div className="mt-2 grid gap-6 lg:grid-cols-2">
-          <div className="space-y-4 text-slate-700">
-            <h3 className="font-semibold text-blue">
-              Being on Centrelink is temporary – but bad credit can follow you
-              long after you&apos;re back on your feet
-            </h3>
-            <p>Let&apos;s fix it now while you have time to focus on it.</p>
-            <div className="space-y-3">
-              <h4 className="font-semibold text-slate-800">
-                Your Free Assessment Includes:
-              </h4>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <svg
-                    className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Credit report review – we&apos;ll help you understand
-                  what&apos;s actually on your file
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg
-                    className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Removal assessment – honest evaluation of what we can achieve
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg
-                    className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Action plan – clear strategy for improving your credit
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg
-                    className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Cost breakdown – transparent pricing with payment plan options
-                </li>
-              </ul>
-            </div>
-          </div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeIn}
-            viewport={{ once: true }}
-            className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-lg"
-          >
-            <h3 className="text-lg font-semibold text-blue">
-              Don&apos;t Let Bad Credit Define Your Future
-            </h3>
-            <p className="mt-3 text-slate-700">
-              Your current circumstances don&apos;t define your future
-              potential. We&apos;ve helped hundreds of Centrelink recipients
-              clean up their credit and move forward with confidence.
-            </p>
-            <p className="mt-3 text-slate-700">
-              Whether you&apos;re planning to return to work, start a small
-              business, or just want normal access to basic financial services –
-              it all starts with fixing your credit file.
-            </p>
-            <p className="mt-3 text-slate-700 font-semibold">
-              The cost of doing nothing is higher than the cost of fixing it.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/free-credit-assessment"
-                className="rounded-lg bg-blue px-5 py-3 font-semibold text-white hover:bg-blue transition-colors"
-              >
-                Start My Assessment
-              </Link>
-              <a
-                href="tel:+61489265737"
-                className="rounded-lg border-2 border-blue px-5 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
-              >
-                Call 0489 265 737
-              </a>
-            </div>
-          </motion.div>
+      <Section title="Moving Forward Together">
+        <p className="text-slate-700">What will never change: quality, legal expertise, success rates, standards, and client-first focus.</p>
+        <p className="mt-2 text-slate-700">What's improved: accessibility, clearer communication, broader solutions, long-term support, innovation.</p>
+      </Section>
+
+      <Section title="Ready to Experience Our Evolution?">
+        <div className="flex flex-wrap gap-4">
+          <a href="tel:+61489265737" className="rounded-lg bg-blue px-6 py-3 text-white font-semibold">Call 0489 265 737</a>
+          <a href="mailto:help@australiancreditsolutions.com.au" className="rounded-lg border-2 border-blue px-6 py-3 text-blue font-semibold hover:bg-blue hover:text-white">Email Us</a>
+          <Link href="/free-credit-assessment" className="rounded-lg bg-orange px-6 py-3 text-white font-semibold">Online Consultation</Link>
         </div>
       </Section>
 
-      {/* Footer trust bar */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          variants={fadeIn}
-          viewport={{ once: true }}
-          className="rounded-2xl bg-gradient-to-r from-blue to-blue p-6 text-white shadow-lg"
-        >
-          <div className="grid gap-4 sm:grid-cols-3">
-            <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
-                Award-winning specialists (2022, 2023, 2024)
-              </p>
-            </div>
-            <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
-                No Win No Fee — Payment plans available
-              </p>
-            </div>
-            <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
-                Licensed & regulated — ASIC ACL 532003
-              </p>
-            </div>
+        <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }} className="rounded-2xl bg-gradient-to-r from-blue to-blue p-6 text-white">
+          <div className="grid sm:grid-cols-3 gap-4">
+            <div className="bg-white/10 p-4 rounded-xl text-center"><p>Legal expertise + precision</p></div>
+            <div className="bg-white/10 p-4 rounded-xl text-center"><p>Accessible & friendly service</p></div>
+            <div className="bg-white/10 p-4 rounded-xl text-center"><p>Award-winning results</p></div>
           </div>
         </motion.div>
       </section>
 
-      {/* Related Services */}
       <div className="mx-auto max-w-6xl px-4">
-        <RelatedServices pathname="/credit-repair-for-centrelink-recipients-australia" />
+        <RelatedServices pathname="/australian-credit-lawyers-now-acs" />
       </div>
 
       <Footer />
@@ -747,46 +234,21 @@ export default function AustralianCreditLawyersNowPage() {
 
 function Section({ title, children }) {
   return (
-    <motion.section
-      initial="hidden"
-      whileInView="visible"
-      variants={fadeIn}
-      viewport={{ once: true, margin: "-100px" }}
-      className="mx-auto max-w-6xl px-4 py-12"
-    >
-      <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-        {title}
-      </h2>
-      <div className="mt-4 text-base leading-relaxed text-slate-800">
-        {children}
-      </div>
+    <motion.section initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true, margin: "-100px" }} className="mx-auto max-w-6xl px-4 py-12">
+      <h2 className="text-2xl font-bold text-blue sm:text-3xl">{title}</h2>
+      <div className="mt-4 text-slate-800">{children}</div>
     </motion.section>
   );
 }
 
 function Card({ title, bullets = [] }) {
   return (
-    <motion.div
-      variants={fadeIn}
-      className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
-    >
+    <motion.div variants={fadeIn} className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm">
       <h3 className="text-lg font-semibold text-blue">{title}</h3>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700">
-        {bullets.map((b) => (
-          <li key={b} className="flex items-start gap-2">
-            <svg
-              className="h-5 w-5 shrink-0 text-orange-500 mt-0.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
+      <ul className="mt-3 text-base space-y-1 text-slate-700">
+        {bullets.map((b, i) => (
+          <li key={i} className="flex gap-2 items-start">
+            <svg className="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             {b}
           </li>
         ))}
@@ -795,73 +257,11 @@ function Card({ title, bullets = [] }) {
   );
 }
 
-function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
-  return (
-    <motion.div
-      variants={fadeIn}
-      className={`relative rounded-xl border p-6 h-full flex flex-col ${
-        featured
-          ? "border-blue-300 bg-gradient-to-b from-blue-50 to-white shadow-lg"
-          : "border-blue-100 bg-white shadow-sm"
-      }`}
-    >
-      {featured && (
-        <span className="absolute -top-3 left-6 inline-block rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white shadow">
-          Most Popular
-        </span>
-      )}
-      <h3 className="text-lg font-semibold text-blue">{name}</h3>
-      <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
-      <p className="mt-1 text-sm text-slate-600">Perfect for: {perfectFor}</p>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
-        {includes.map((i) => (
-          <li key={i} className="flex items-start gap-2">
-            <svg
-              className="h-5 w-5 shrink-0 text-blue-500 mt-0.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-            {i}
-          </li>
-        ))}
-      </ul>
-      <div className="mt-4">
-        <Link
-          href="/free-credit-assessment"
-          className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm text-center block"
-        >
-          Start Now
-        </Link>
-      </div>
-    </motion.div>
-  );
-}
-
 function Testimonial({ name, children }) {
   return (
-    <motion.figure
-      variants={fadeIn}
-      className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md mb-4"
-    >
-      <div className="flex text-orange-500 mb-2">
-        {[...Array(5)].map((_, i) => (
-          <svg key={i} className="h-5 w-5 fill-current" viewBox="0 0 20 20">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-        ))}
-      </div>
+    <motion.figure variants={fadeIn} className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm mb-4">
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">
-        {name}
-      </figcaption>
+      <figcaption className="mt-3 text-base font-semibold text-blue">{name}</figcaption>
     </motion.figure>
   );
 }

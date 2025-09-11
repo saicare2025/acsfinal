@@ -61,22 +61,26 @@ export default function CreditAustraliaRepairPage() {
         "Nah mate, we help Aussies everywhere - from Sydney harbour to the red dirt of WA. Everything&apos;s done remotely through phone, email, and secure online systems. Regional clients get the same priority service as city folks. Distance doesn&apos;t matter when you need your credit fixed.",
     },
     {
-      question: "What&apos;s the difference between you and cheap online credit repair?",
+      question:
+        "What&apos;s the difference between you and cheap online credit repair?",
       answer:
         "Massive difference. We&apos;re ASIC licensed with qualified lawyers on staff, three consecutive industry awards, and a 98% success rate. Cheap online services are usually unlicensed cowboys with template letters that don&apos;t work. You get what you pay for - and with credit, quality matters.",
     },
     {
-      question: "Can you help if I&apos;m currently bankrupt or in a Part IX agreement?",
+      question:
+        "Can you help if I&apos;m currently bankrupt or in a Part IX agreement?",
       answer:
         "We can definitely help with credit repair after bankruptcy discharge or completion of Part IX agreements. These processes often leave ongoing credit damage that prevents you from rebuilding. Once your formal arrangements are complete, we can clean up your file and get you back on track.",
     },
     {
-      question: "Will my bank or lender know I&apos;m using credit repair services?",
+      question:
+        "Will my bank or lender know I&apos;m using credit repair services?",
       answer:
         "Credit repair is completely legal and legitimate. Banks don&apos;t get notified that you&apos;re using professional services. All communications go through us as your representatives. Many of our clients go on to get approved with the same banks that previously rejected them.",
     },
     {
-      question: "How do I know you&apos;re not a scam like some other credit repair companies?",
+      question:
+        "How do I know you&apos;re not a scam like some other credit repair companies?",
       answer:
         "Fair question - there are definitely dodgy operators out there. Here&apos;s what sets us apart: ASIC license ACL 532003 (check it yourself), three consecutive industry awards, 855+ verified reviews on ProductReview.com.au, qualified lawyers on staff, and transparent pricing with No Win No Fee guarantee. Cowboys can&apos;t fake this kind of track record.",
     },
@@ -85,8 +89,7 @@ export default function CreditAustraliaRepairPage() {
   // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-australia-repair",
-    title:
-      "Credit Australia Repair | #1 Award Winners | Fix Bad Credit Fast",
+    title: "Credit Australia Repair | #1 Award Winners | Fix Bad Credit Fast",
     description:
       "Australia&apos;s #1 credit repair specialists. Remove defaults, fix bad credit, improve credit scores fast. 3-year award winners, 98% success rate, No Win No Fee. Licensed professionals helping Aussies nationwide.",
     isService: true,
@@ -104,7 +107,7 @@ export default function CreditAustraliaRepairPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-12">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
 
@@ -121,11 +124,27 @@ export default function CreditAustraliaRepairPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  G&apos;day mate! Sick of being knocked back for loans because of dodgy credit? You&apos;ve found Australia&apos;s #1 credit repair specialists. <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> We&apos;re not some fly-by-night outfit – we&apos;re the award-winning legends who&apos;ve helped over 10,000 Aussies get their financial lives back on track.
+                  G&apos;day mate! Sick of being knocked back for loans because
+                  of dodgy credit? You&apos;ve found Australia&apos;s #1 credit
+                  repair specialists.{" "}
+                  <a
+                    href="/get-credit-repair"
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Get Credit Repair
+                  </a>{" "}
+                  We&apos;re not some fly-by-night outfit – we&apos;re the
+                  award-winning legends who&apos;ve helped over 10,000 Aussies
+                  get their financial lives back on track.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Here&apos;s the deal: Bad credit is costing you a fortune every single day. While you&apos;re getting slugged with shocking interest rates and loan rejections, we&apos;re removing defaults and fixing credit files faster than you can say &quot;she&apos;ll be right.&quot; At Australian Credit Solutions, we&apos;re the{" "}
+                  Here&apos;s the deal: Bad credit is costing you a fortune
+                  every single day. While you&apos;re getting slugged with
+                  shocking interest rates and loan rejections, we&apos;re
+                  removing defaults and fixing credit files faster than you can
+                  say &quot;she&apos;ll be right.&quot; At Australian Credit
+                  Solutions, we&apos;re the{" "}
                   <strong className="font-semibold text-blue">
                     award-winning specialists
                   </strong>{" "}
@@ -188,13 +207,12 @@ export default function CreditAustraliaRepairPage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-                      <RelatedBlock currentSlug="/credit-australia-repair" heading="Related services & guides" />
-        <FooterForm
+              <FooterForm
                 heading="Get My Free Credit Check"
                 subheading="Award-Winning Service"
                 paragraph="Complete analysis of your credit file, identification of all removable items, realistic timeline for your situation, transparent pricing with no surprises."
               />
-              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
+              <ul className="mt-8 flex flex-col justify-center gap-3 text-base text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
                   No Win No Fee
@@ -222,7 +240,14 @@ export default function CreditAustraliaRepairPage() {
       {/* Why Aussies Choose Us Over Everyone Else */}
       <Section title="Why Aussies Choose Us Over Everyone Else">
         <p className="text-slate-700">
-          Here&apos;s what <a href="/repair-your-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">Repair Your Credit Score Australia</a> separates us from the rest:
+          Here&apos;s what{" "}
+          <a
+            href="/repair-your-credit-score-australia"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Repair Your Credit Score Australia
+          </a>{" "}
+          separates us from the rest:
         </p>
         <motion.div
           variants={staggerChildren}
@@ -261,7 +286,14 @@ export default function CreditAustraliaRepairPage() {
           />
         </motion.div>
         <p className="mt-6 text-slate-700 font-semibold">
-          Fair dinkum <a href="/equifax-default-removal-australia" className="text-blue-600 hover:text-blue-800 underline">Equifax Default Removal Australia</a> credit repair that actually works.
+          Fair dinkum{" "}
+          <a
+            href="/equifax-default-removal-australia"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Equifax Default Removal Australia
+          </a>{" "}
+          credit repair that actually works.
         </p>
       </Section>
 
@@ -269,7 +301,13 @@ export default function CreditAustraliaRepairPage() {
       <Section title="Our Centrelink-Friendly Approach: No Win No Fee That Actually Works">
         <p className="text-slate-700">
           Here&apos;s what makes us different from other credit repair companies
-   <a href="/credit-enquiry-removal" className="text-blue-600 hover:text-blue-800 underline">Credit Enquiry Removal</a>        when it comes to helping Centrelink recipients:
+          <a
+            href="/credit-enquiry-removal"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Credit Enquiry Removal
+          </a>{" "}
+          when it comes to helping Centrelink recipients:
         </p>
         <motion.div
           variants={staggerChildren}
@@ -377,6 +415,10 @@ export default function CreditAustraliaRepairPage() {
           </p>
         </div>
       </Section>
+      <RelatedBlock
+        currentSlug="/credit-australia-repair"
+        heading="Related services & guides"
+      />
 
       {/* The Process */}
       <Section title="The Process: Simple, Stress-Free, Designed for Your Situation">
@@ -564,7 +606,7 @@ export default function CreditAustraliaRepairPage() {
             ]}
           />
         </motion.div>
-        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
+        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-base text-slate-600">
           <strong>Special Centrelink Policy:</strong> $330 admin fee (payment
           plans available). No success fees for Centrelink recipients. No hidden
           costs. We understand your situation and work within your means.
@@ -600,7 +642,7 @@ export default function CreditAustraliaRepairPage() {
                   />
                 </svg>
               </summary>
-              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
+              <p className="mt-3 text-base text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
                 {f.answer}
               </p>
             </motion.details>
@@ -742,17 +784,17 @@ export default function CreditAustraliaRepairPage() {
         >
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 Award-winning specialists (2022, 2023, 2024)
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 No Win No Fee — Payment plans available
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 Licensed & regulated — ASIC ACL 532003
               </p>
             </div>
@@ -796,7 +838,7 @@ function Card({ title, bullets = [] }) {
       className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
     >
       <h3 className="text-lg font-semibold text-blue">{title}</h3>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700">
+      <ul className="mt-3 space-y-2 text-base text-slate-700">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2">
             <svg
@@ -836,9 +878,9 @@ function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
         </span>
       )}
       <h3 className="text-lg font-semibold text-blue">{name}</h3>
-      <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
-      <p className="mt-1 text-sm text-slate-600">Perfect for: {perfectFor}</p>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
+      <p className="mt-1 text-base text-slate-600">Timeline: {timeline}</p>
+      <p className="mt-1 text-base text-slate-600">Perfect for: {perfectFor}</p>
+      <ul className="mt-3 space-y-2 text-base text-slate-700 flex-grow">
         {includes.map((i) => (
           <li key={i} className="flex items-start gap-2">
             <svg
@@ -861,7 +903,7 @@ function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
       <div className="mt-4">
         <Link
           href="/free-credit-assessment"
-          className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm text-center block"
+          className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-base text-center block"
         >
           Start Now
         </Link>
@@ -884,7 +926,7 @@ function Testimonial({ name, children }) {
         ))}
       </div>
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">
+      <figcaption className="mt-3 text-base font-semibold text-blue">
         {name}
       </figcaption>
     </motion.figure>

@@ -163,7 +163,7 @@ export default function BookingConfirmation() {
                             href={`https://youtu.be/${video.embedId}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800"
+                            className="inline-flex items-center text-base font-medium text-blue-600 hover:text-blue-800"
                           >
                             Watch full story
                             <svg
@@ -187,8 +187,8 @@ export default function BookingConfirmation() {
                 ))}
 
                 {/* Navigation buttons */}
-                <div className="swiper-button-prev !-left-1 !h-10 !w-10 rounded-full bg-white/80 !text-blue-600 shadow-md after:!text-sm"></div>
-                <div className="swiper-button-next !-right-1 !h-10 !w-10 rounded-full bg-white/80 !text-blue-600 shadow-md after:!text-sm"></div>
+                <div className="swiper-button-prev !-left-1 !h-10 !w-10 rounded-full bg-white/80 !text-blue-600 shadow-md after:!text-base"></div>
+                <div className="swiper-button-next !-right-1 !h-10 !w-10 rounded-full bg-white/80 !text-blue-600 shadow-md after:!text-base"></div>
 
                 {/* Pagination */}
                 <div className="swiper-pagination !bottom-0"></div>

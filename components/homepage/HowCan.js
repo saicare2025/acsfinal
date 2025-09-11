@@ -143,7 +143,7 @@ const HelpSection = () => {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <p className="text-gray-600 text-sm text-center">
+                          <p className="text-gray-600 text-base text-center">
                             {service.fullDesc}
                           </p>
                         </motion.div>
@@ -156,7 +156,7 @@ const HelpSection = () => {
                           e.stopPropagation();
                           toggleCard(index);
                         }}
-                        className={`text-sm font-medium ${service.color} flex items-center  hover:underline`}
+                        className={`text-base font-medium ${service.color} flex items-center  hover:underline`}
                       >
                         {isExpanded ? (
                           <>

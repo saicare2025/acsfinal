@@ -5,7 +5,6 @@ import Script from "next/script";
 import AnalyticsRouteTracker from "@/components/AnalyticsRouteTracker";
 import ExitIntentPopupWithSuspense from "@/components/ExitIntentPopupWithSuspense";
 
-
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: true });
 
 export const metadata = {
@@ -126,6 +125,15 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
           async
         />
+        <Script id="ms-clarity" strategy="lazyOnload">
+          {`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "t83jm3uahm");
+          `}
+        </Script>
         {children}
         <ExitIntentPopupWithSuspense />
         <TawkDesktopOnly />

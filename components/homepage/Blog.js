@@ -108,7 +108,7 @@ const BlogSection = () => {
                       <div className="p-1.5 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-md">
                         {post.icon}
                       </div>
-                      <span className="text-sm font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue to-blue-500">
+                      <span className="text-base font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue to-blue-500">
                         {post.category}
                       </span>
                     </div>
@@ -122,11 +122,11 @@ const BlogSection = () => {
                     </p>
 
                     <div className="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
-                      <span className="text-sm text-gray-500 flex items-center gap-1">
+                      <span className="text-base text-gray-500 flex items-center gap-1">
                         <Clock className="w-4 h-4" />
                         {post.readTime}
                       </span>
-                      <span className="text-sm text-gray-500">{post.date}</span>
+                      <span className="text-base text-gray-500">{post.date}</span>
                     </div>
                   </div>
                 </motion.div>

@@ -28,58 +28,54 @@ const staggerChildren = {
 };
 
 export default function EquifaxDefaultRemovalPage() {
-  // FAQ data for structured data
+  // FAQ data
   const faqData = [
     {
       question: "How long do defaults stay on Equifax?",
       answer:
-        "Defaults remain on your Equifax file for 5 years from the date they were first listed, unless successfully removed through our process.",
+        "Defaults remain on your Equifax file for 5 years from the date first listed unless successfully removed.",
     },
     {
       question: "Can you remove paid defaults from Equifax?",
       answer:
-        "Yes. Paying a default doesn&apos;t remove it from Equifax - it just changes the status to &quot;paid.&quot; We can often remove paid defaults just as easily as unpaid ones.",
+        "Yes. Paying a default doesn't remove it — it only changes the status to 'paid'. We can often remove paid defaults too.",
     },
     {
       question: "Will removing Equifax defaults improve my credit score?",
       answer:
-        "Yes. Equifax defaults typically reduce credit scores by 100-300 points. Removing them usually results in immediate score improvement.",
+        "Usually, yes. Equifax defaults can reduce scores by 100–300 points; removing them often triggers immediate score recovery.",
     },
     {
       question: "How quickly can you remove Equifax defaults?",
       answer:
-        "Most Equifax defaults are removed within 3-7 weeks. Urgent cases can sometimes be resolved faster with priority processing.",
+        "Most cases are resolved within 3–7 weeks. Urgent cases may be prioritised and completed faster.",
     },
     {
       question: "What if Equifax rejects the dispute?",
       answer:
-        "We have advanced strategies including direct creditor negotiation, regulatory complaints, and legal escalation options.",
+        "We escalate with advanced legal arguments, regulatory complaints (OAIC), direct creditor negotiations, and alternative strategies.",
     },
     {
       question: "Do you guarantee Equifax default removal?",
       answer:
-        "We only accept cases where we&apos;re confident of success. Our 98% success rate for Equifax removals reflects careful case selection.",
+        "We accept cases we're confident in. Our track record reflects careful case selection and a 98% success rate when we accept cases.",
     },
   ];
 
-  // Generate structured data for this service page
   const structuredData = generateMinimalStructuredData({
     pathname: "/equifax-default-removal-australia",
-    title:
-      "Equifax Default Removal Australia | Remove Defaults Fast | 98% Success Rate",
+    title: "Equifax Default Removal Australia | Wipe Your Slate Clean",
     description:
-      "Remove defaults from your Equifax credit file with Australia&apos;s specialists. 98% success rate, lawyer-drafted disputes, ASIC licensed. Get Equifax defaults wiped.",
+      "Got defaults on your Equifax credit file destroying your finance applications? Our specialists have removed over 12,000 defaults with a 98% success rate.",
     isService: true,
-    serviceType: "Equifax Default Removal",
+    serviceType: "Credit repair service",
   });
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-slate-900">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <Header />
 
@@ -94,22 +90,22 @@ export default function EquifaxDefaultRemovalPage() {
             <div className="w-full lg:w-2/3">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
                 Equifax Default Removal Australia
-                <span className="block mt-2 text-blue">
-                  Wipe Your Slate Clean
-                </span>
+                <span className="block mt-2 text-blue">Wipe Your Slate Clean</span>
               </h1>
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Got defaults on your Equifax credit file destroying your finance applications? Our Equifax specialists <Link href="/default-removal-services-australia" className="text-blue-600 hover:text-blue-800 underline">Default Removal Services Australia</Link> have removed over 12,000 defaults with a 98% success rate. Time to get your life back.
+                  Got defaults on your Equifax credit file destroying your finance applications? Our Equifax specialists have removed over <strong>12,000</strong> defaults with a <strong>98% success rate</strong>. Time to get your life back.
                 </p>
-
+                <ul className="text-base text-gray-700 list-disc pl-5">
+                  <li>Home loans: "We can see defaults on your Equifax file"</li>
+                  <li>Car finance: "Equifax shows payment defaults — application declined"</li>
+                  <li>Credit cards: "Your Equifax credit history doesn't meet our criteria"</li>
+                  <li>Personal loans: "Multiple Equifax defaults — too risky"</li>
+                  <li>Business finance: "Personal defaults affect business applications"</li>
+                </ul>
                 <p className="text-base text-gray-600">
-                  If you&apos;ve checked your Equifax credit file and found defaults, you already know the damage they&apos;re causing: Home loan applications declined, car finance rejected, credit cards denied. Here&apos;s the brutal truth: One default on Equifax can destroy your financial life for 5 years. But{" "}
-                  <strong className="font-semibold text-blue">
-                    our specialists can remove them
-                  </strong>{" "}
-                  with a 98% success rate.
+                  Brutal truth: <strong>one</strong> Equifax default can destroy your financial life for <strong>5 years</strong> — unless you remove it.
                 </p>
               </div>
 
@@ -123,7 +119,7 @@ export default function EquifaxDefaultRemovalPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Get My Free Credit Assessment
+                  Start My Equifax Assessment
                 </Link>
 
                 <a
@@ -134,78 +130,42 @@ export default function EquifaxDefaultRemovalPage() {
                   Call 0489 265 737
                 </a>
 
-                {/* Decorative arrow (desktop/tablet only) */}
-                <div
-                  className="pointer-events-none hidden lg:block"
-                  aria-hidden="true"
-                >
-                  <Image
-                    src={ArrowIcon}
-                    alt=""
-                    width={220}
-                    height={70}
-                    loading="lazy"
-                    className="select-none"
-                    priority={false}
-                  />
+                {/* Decorative arrows */}
+                <div className="pointer-events-none hidden lg:block" aria-hidden="true">
+                  <Image src={ArrowIcon} alt="" width={220} height={70} loading="lazy" className="select-none" />
                 </div>
-                <div
-                  className="pointer-events-none lg:hidden flex justify-center"
-                  aria-hidden="true"
-                >
-                  <Image
-                    src={ArrowIconM}
-                    alt=""
-                    width={200}
-                    height={120}
-                    loading="lazy"
-                    className="select-none"
-                    priority={false}
-                  />
+                <div className="pointer-events-none lg:hidden flex justify-center" aria-hidden="true">
+                  <Image src={ArrowIconM} alt="" width={200} height={120} loading="lazy" className="select-none" />
                 </div>
               </div>
             </div>
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-                      <RelatedBlock currentSlug="/equifax-default-removal-australia" heading="Related services & guides" />
-        <FooterForm
-                heading="Get My Free Equifax Assessment"
-                subheading="Remove Defaults Fast"
-                paragraph="Quick credit check: Got defaults on your Equifax credit file? Our specialists can remove them with a 98% success rate. Get your financial life back."
+              <FooterForm
+                heading="Equifax Default Removal Experts"
+                subheading="Fast, discreet help"
+                paragraph="We analyse your Equifax file, identify defaults, and map a removal strategy with lawyer‑drafted disputes."
               />
               <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
-                  No Win No Fee
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
-                  Payment plans available
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
-                  Licensed ASIC ACL 532003
-                </li>
+                <li className="flex items-center"><span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>98% success on accepted cases</li>
+                <li className="flex items-center"><span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>12,247 defaults removed since 2018</li>
+                <li className="flex items-center"><span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>ASIC ACL 532003</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
+
       <ReviewsWidget />
 
-      {/* Breadcrumb Navigation */}
+      {/* Breadcrumb */}
       <div className="mx-auto max-w-6xl px-4">
         <Breadcrumb pathname="/equifax-default-removal-australia" />
       </div>
 
-      {/* Why Centrelink Recipients Struggle */}
-      <Section title="Why Centrelink Recipients Struggle with Credit Repair">
-        <p className="text-slate-700">
-          Let&apos;s be honest – most credit repair companies either don&apos;t
-          understand your <Link href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</Link> situation or want upfront fees you simply can&apos;t
-          afford. Here&apos;s what makes your situation different:
-        </p>
+      {/* Understanding Your Equifax Default */}
+      <Section title="Understanding Your Equifax Default">
         <motion.div
           variants={staggerChildren}
           initial="hidden"
@@ -214,147 +174,85 @@ export default function EquifaxDefaultRemovalPage() {
           className="mt-6 grid gap-6 md:grid-cols-2"
         >
           <Card
-            title="The Catch-22 Cycle"
+            title="📊 What Equifax Defaults Look Like"
             bullets={[
-              "Limited income: You're already stretching every dollar on Centrelink payments",
-              "Previous financial stress: The circumstances that led to Centrelink often created credit problems",
-              "High-cost services: Most credit repair companies charge thousands upfront",
-              "Ongoing impact: Bad credit makes everything more expensive",
+              "Creditor, amount, date listed, status, and comments",
+              "Stay visible for 5 years from listing date",
+              "Can drop scores by 200+ points and trigger automatic rejections",
             ]}
           />
           <Card
-            title="What This Really Means for Your Daily Life"
+            title="🎯 Why Equifax Defaults Hit Harder"
             bullets={[
-              "Rental applications: Landlords see defaults and move to the next applicant",
-              "Phone & internet plans: Telcos want massive bonds or refuse service altogether",
-              "Small loans: Can't get approved for anything, even a $500 emergency loan",
-              "Car finance: Public transport becomes your only option",
-              "Utility connections: Energy companies demand huge deposits upfront",
+              "Equifax is Australia's largest bureau",
+              "Used by major banks, finance companies, card providers, and business lenders",
+              "If it's on Equifax, almost every lender will see it",
             ]}
           />
         </motion.div>
-        <p className="mt-6 text-slate-700 font-semibold">
-          The truth? None of this is permanent. We&apos;ve seen people go from
-          Centrelink with <Link href="/blog-details/credit-file-defaults-can-an-unreceived-bill-appear-on-your-report" className="text-blue-600 hover:text-blue-800 underline">Credit File Defaults Can An Unreceived Bill Appear On Your Report</Link> multiple defaults to getting approved for car loans
-          within months of cleaning up their credit file.
-        </p>
-      </Section>
 
-      {/* Our Centrelink-Friendly Approach */}
-      <Section title="Our Centrelink-Friendly Approach: No Win No Fee That Actually Works">
-        <p className="text-slate-700">
-          Here&apos;s what makes us different from other credit repair companies
-   <Link href="/blog-details/equifax-default-removal-how-to-remove-defaults-from-your-credit-report" className="text-blue-600 hover:text-blue-800 underline">Equifax Default Removal How To Remove Defaults From Your Credit Report</Link>        when it comes to helping Centrelink recipients:
-        </p>
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2"
-        >
-          <Card
-            title="Affordable Admin Fee Structure"
-            bullets={[
-              "Just $330 admin fee – paid upfront (we offer payment plans)",
-              "No success fees if you&apos;re on Centrelink payments",
-              "No hidden costs – what you see is what you pay",
-              "Payment plan available – spread the $330 over several weeks if needed",
-            ]}
-          />
-          <Card
-            title="We Actually Understand Your Situation"
-            bullets={[
-              "Job loss or illness created temporary financial hardship",
-              "Family breakdown affected your income and expenses",
-              "Business closure wasn't your fault but affected your credit",
-              "Economic circumstances beyond your control",
-            ]}
-          />
-          <Card
-            title="Realistic Timeline Expectations"
-            bullets={[
-              "Week 1-2: Full credit file analysis and case assessment",
-              "Week 3-6: Formal disputes lodged with credit providers",
-              "Week 6-12: Follow-up and escalation where needed",
-              "Week 12+: Final negotiations and removals",
-            ]}
-          />
-          <Card
-            title="Empathetic Support"
-            bullets={[
-              "Our team knows being on Centrelink doesn't make you a 'bad risk'",
-              "No judgment consultation process",
-              "Understanding of financial hardship circumstances",
-              "Focus on your future financial independence",
-            ]}
-          />
-        </motion.div>
-      </Section>
-
-      {/* What We Can Remove */}
-      <Section title="What We Can Remove from Your Credit File">
-        <p className="text-slate-700">
-          Being on Centrelink doesn&apos;t limit what we can challenge. We
-          regularly remove:
-        </p>
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2"
-        >
-          <Card
-            title="Defaults ($150+ unpaid debts listed on your file)"
-            bullets={[
-              "Utility defaults: Gas, electricity, water bills from tough times",
-              "Telco defaults: Mobile phone bills, internet accounts",
-              "Credit card defaults: From when income dropped suddenly",
-              "Personal loan defaults: Small loans that went bad during hardship",
-              "Buy now, pay later defaults: Afterpay, Zip Pay, humm accounts",
-            ]}
-          />
-          <Card
-            title="Late Payment Records"
-            bullets={[
-              "Credit card late payments: When minimum payments became impossible",
-              "Loan repayment delays: Car loans, personal loans affected by income loss",
-              "Mortgage late payments: Home loan stress before Centrelink",
-            ]}
-          />
-          <Card
-            title="Credit Enquiries (Applications that got rejected)"
-            bullets={[
-              "Multiple loan applications: When you were desperately seeking finance",
-              "Credit card applications: Rejected applications still show up",
-              "Phone plan enquiries: Even unsuccessful phone applications count",
-            ]}
-          />
-          <Card
-            title="Court Judgments & Writs"
-            bullets={[
-              "Small debt court actions: Usually under $10,000",
-              "Unpaid fines: That escalated while you were struggling financially",
-              "Commercial disputes: From business or employment situations",
-            ]}
-          />
-        </motion.div>
-        <div className="mt-6 rounded-xl border border-green-200 bg-green-50 p-6 shadow-lg">
-          <h3 className="text-lg font-semibold text-green-800">
-            Real Example:
-          </h3>
-          <p className="mt-2 text-green-700">
-            Sarah from Brisbane was on JobSeeker with three defaults totalling
-            $2,400. Within 8 weeks, we had all three removed. She&apos;s now
-            working part-time and got approved for a $15,000 car loan at 9.9%
-            interest instead of the 24% she was being offered before.
-          </p>
+        <div className="mt-6 rounded-xl border border-blue-100 bg-white p-6">
+          <h3 className="text-lg font-semibold text-blue">Default Listing Example</h3>
+          <div className="mt-3 grid gap-2 text-sm text-slate-700 md:grid-cols-2">
+            <ul className="space-y-1">
+              <li><strong>Creditor:</strong> Telstra Corporation Ltd</li>
+              <li><strong>Amount:</strong> $847</li>
+              <li><strong>Date Listed:</strong> 15/03/2019</li>
+              <li><strong>Status:</strong> Unpaid Default</li>
+            </ul>
+            <p className="md:pl-6"><strong>Comment:</strong> "Payment default — account closed"</p>
+          </div>
         </div>
       </Section>
 
-      {/* The Process */}
-      <Section title="The Process: Simple, Stress-Free, Designed for Your Situation">
+      {/* Our Equifax Default Removal Expertise */}
+      <Section title="Our Equifax Default Removal Expertise">
+        <motion.div variants={staggerChildren} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-6 grid gap-6 md:grid-cols-2">
+          <Card title="🏆 Australia's Equifax Specialists" bullets={[
+            "12,247 defaults removed since 2018",
+            "98% success rate on accepted cases",
+            "Average removal time: 3–7 weeks",
+            "Largest default removed: $47,000",
+            "Fastest removal: 8 days",
+          ]} />
+          <Card title="⚖️ Why Our Approach Works" bullets={[
+            "Equifax‑specific dispute processes and timelines",
+            "Direct relationships with Equifax compliance",
+            "Knowledge of Equifax listing criteria and system limitations",
+            "Lawyer‑drafted disputes and Privacy Act compliance",
+            "Regulatory pressure via ASIC and OAIC when required",
+          ]} />
+        </motion.div>
+      </Section>
+
+      {/* Common Equifax Defaults We Remove */}
+      <Section title="Common Equifax Defaults We Remove">
+        <motion.div variants={staggerChildren} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-6 grid gap-6 md:grid-cols-2">
+          <Card title="💸 Telecommunication Defaults" bullets={[
+            "Telstra, Optus, Vodafone, TPG",
+            "Plan cancellations, disputed charges, unreturned devices",
+            "Success rate ~97% (frequent technical errors)",
+          ]} />
+          <Card title="💡 Utility Defaults" bullets={[
+            "Electricity, gas, water, council rates",
+            "Transfer issues, meter errors, notification failures",
+            "Success rate ~95% (procedural flaws)",
+          ]} />
+          <Card title="💳 Credit Card & BNPL Defaults" bullets={[
+            "CBA, ANZ, Westpac, NAB; store cards; Afterpay/Zip",
+            "Personal loan defaults",
+            "Success rate ~92% (complex legal arguments)",
+          ]} />
+          <Card title="🏠 Property‑Related Defaults" bullets={[
+            "Rental bond, real estate commission, property management fees, strata levies",
+            "Often involve contract interpretation issues",
+            "Success rate ~89%",
+          ]} />
+        </motion.div>
+      </Section>
+
+      {/* Process */}
+      <Section title="Our Equifax Default Removal Process">
         <motion.ol
           variants={staggerChildren}
           initial="hidden"
@@ -364,30 +262,28 @@ export default function EquifaxDefaultRemovalPage() {
         >
           {[
             {
-              title: "Free Assessment (No Obligation)",
+              title: "PHASE 1: Equifax File Analysis (Days 1–2)",
               description:
-                "Get your free credit report – we'll walk you through ordering it. Phone consultation to explain your situation without judgment. Case evaluation with honest assessment of what we can achieve. Clear pricing with upfront costs, no surprises.",
+                "Request/obtain your Equifax file, analyse each default, identify technical errors, research creditor obligations, and build a custom strategy.",
             },
             {
-              title: "Affordable Setup",
+              title: "PHASE 2: Strategic Dispute Preparation (Days 3–5)",
               description:
-                "$330 admin fee with payment plan available if needed. Paperwork handled – we do all the complex legal stuff. Authority forms signed once, we handle everything else. Regular updates via SMS and email.",
+                "Lawyer‑drafted disputes for each default: Privacy Act challenges, procedural and calculation disputes, and full evidence packages.",
             },
             {
-              title: "We Fight for Removals",
+              title: "PHASE 3: Equifax Dispute Processing (Weeks 1–4)",
               description:
-                "Professional disputes with formal legal challenges to credit providers. Negotiation expertise – we know what arguments work. Persistent follow-up as credit providers often ignore first requests. Escalation process – we don&apos;t give up after one attempt.",
+                "Equifax investigates within ~30 days; we monitor weekly, follow up, submit additional evidence, and escalate if needed.",
             },
             {
-              title: "Your Fresh Start",
+              title: "PHASE 4: Resolution & Verification (Weeks 4–6)",
               description:
-                "Clean credit file with defaults and late payments removed. Better borrowing power – approved for loans you need. Lower interest rates – good credit equals cheaper finance. Rental approval – landlords see clean credit history.",
+                "On success: default removed, report updated, confirmation provided; if not, we escalate (OAIC, creditor negotiation, alternative strategies).",
             },
-          ].map((step, index) => (
-            <motion.li key={index} variants={fadeIn} className="flex gap-4">
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold">
-                {index + 1}
-              </div>
+          ].map((step, i) => (
+            <motion.li key={i} variants={fadeIn} className="flex gap-4">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold">{i + 1}</div>
               <div>
                 <strong>{step.title}:</strong> {step.description}
               </div>
@@ -396,273 +292,238 @@ export default function EquifaxDefaultRemovalPage() {
         </motion.ol>
       </Section>
 
-      {/* Why Bad Credit Costs More */}
-      <Section title="Why Bad Credit Costs You More (And Why Fixing It Saves Money)">
-        <p className="text-slate-700">
-          When you&apos;re on Centrelink, every dollar counts. Here&apos;s how
-          bad credit is costing you money right now:
-        </p>
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2"
-        >
-          <Card
-            title="Higher Costs for Basic Services"
-            bullets={[
-              "Rental bonds: Bad credit can mean 6-8 weeks bond instead of 4 weeks",
-              "Utility deposits: Energy companies charge $200-500 deposits upfront",
-              "Phone plan bonds: $500-1000 deposits for basic mobile plans",
-              "Insurance premiums: Some insurers charge more for bad credit",
-            ]}
-          />
-          <Card
-            title="Limited Finance Options"
-            bullets={[
-              "Payday loans: 400%+ interest rates because banks won&apos;t lend to you",
-              "Rent-to-buy: Paying double the retail price for furniture and appliances",
-              "No emergency options: Can't get approved for even small personal loans",
-            ]}
-          />
-          <Card
-            title="Opportunity Costs"
-            bullets={[
-              "Employment: Some employers check credit for financial roles",
-              "Housing: Missing out on better rental properties",
-              "Transport: Stuck with unreliable cars because finance is unavailable",
-            ]}
-          />
-          <Card
-            title="The Real Math"
-            bullets={[
-              "Clean up your credit now, and within 6 months you could save thousands",
-              "Reduced deposits, bonds, and access to normal-rate finance",
-              "Our $330 fee pays for itself quickly",
-              "Better financial options when returning to work",
-            ]}
-          />
-        </motion.div>
-      </Section>
-
-      {/* Success Stories */}
-      <Section title="Success Stories: Real Centrelink Recipients We've Helped">
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Testimonial name="Maria's Story – Single Mum, JobSeeker">
-            &quot;I was on JobSeeker after my partner left. Had defaults from
-            when I couldn&apos;t pay the bills during the separation.
-            Couldn&apos;t get approved for rental properties – estate agents
-            would take one look at my credit report and move on to the next
-            applicant. ACS removed two defaults and a judgment. Within 3 months
-            I was approved for a rental in a better school zone for my kids. The
-            relief was incredible. Result: 2 defaults and 1 judgment removed,
-            approved for rental property, now working part-time.&quot;
+      {/* Real Results */}
+      <Section title="Real Equifax Default Removals">
+        <motion.div variants={staggerChildren} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <Testimonial name="Michael R — Sydney Business Owner ($23,000 Telstra)">
+            "Had a $23,000 Telstra default on Equifax from a business account dispute. Three other companies failed to remove it. ACS removed it in 4 weeks using legal arguments the others didn't know. Home loan approved the next month."
           </Testimonial>
-          <Testimonial name="David's Story – Disability Support Pension">
-            &quot;After my accident, I went on DSP and my bills piled up. Credit
-            cards went into default, car loan too. Felt like my life was over at
-            45. ACS was honest about what they could do and what they
-            couldn&apos;t. They got the credit card default removed, and I
-            qualified for a disability car loan. Having transport back changed
-            everything. Result: 1 major default removed, qualified for
-            specialized vehicle finance.&quot;
+          <Testimonial name="Sarah T — Melbourne (Multiple Utilities)">
+            "Divorce left me with 6 utility defaults on my Equifax file totalling $4,200. Couldn't get rental applications approved. ACS removed all 6 defaults in 6 weeks. Now I own my place instead of renting."
           </Testimonial>
-          <Testimonial name="Jenny's Story – Age Pension">
-            &quot;Retired but had a default from an old Telstra bill. Sounds
-            small but it was blocking me from getting a seniors&apos; credit
-            card for online shopping. The grandkids were teaching me to use the
-            internet but I couldn&apos;t buy anything! ACS sorted it out quickly
-            and now I&apos;m shopping online like a pro. Result: Telco default
-            removed, approved for senior citizens&apos; credit card.&quot;
+          <Testimonial name="David L — Brisbane Tradie (Credit Card)">
+            "$8,400 NAB credit card default on Equifax killed my car finance applications. ACS removed it in 5 weeks. Driving a new ute and business is booming."
+          </Testimonial>
+          <Testimonial name="Jennifer K — Perth (Store Card)">
+            "Harvey Norman default of $2,100 on Equifax for furniture I returned. They wouldn't listen to me. ACS lawyers got it removed in 3 weeks. Credit score jumped 180 points immediately."
           </Testimonial>
         </motion.div>
       </Section>
 
-      {/* Service Options */}
-      <Section title="Our Centrelink-Friendly Service Options">
+      {/* Why Often Removable */}
+      <Section title="Why Equifax Defaults Are Often Removable">
         <motion.div
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-2"
+          className="mt-4 grid gap-6 md:grid-cols-2"
         >
+          <Card title="🔍 Common Equifax Default Errors" bullets={[
+            "Procedural failures (wrong address, insufficient time, missing dispute steps)",
+            "Amount discrepancies (incorrect calculations, unauthorised fees, missed payments)",
+            "Technical violations (listed before authority, internal process failures)",
+            "Documentation issues (missing records, lost paperwork, inadequate proof)",
+          ]} />
+          <Card title="⚖️ Legal Grounds for Removal" bullets={[
+            "Privacy Act 1988 — accuracy, correction rights, prescribed procedures",
+            "National Credit Code — notices, timing, dispute resolution",
+            "ASIC guidance — reporting standards and investigation duties",
+          ]} />
+        </motion.div>
+      </Section>
+
+      {/* Pricing */}
+      <Section title="Equifax Default Removal Investment">
+        <div className="mt-4 grid gap-6 md:grid-cols-3">
           <PriceCard
-            name="Standard Centrelink Service"
-            timeline="6-12 weeks typically"
-            perfectFor="Most Centrelink recipients with 1-3 credit issues"
+            name="Single Equifax Default"
+            timeline="3–7 weeks typical"
+            perfectFor="One listing blocking finance"
             includes={[
-              "Payment plan available for admin fee",
-              "No success fees for Centrelink recipients",
-              "Regular progress updates",
-              "Empathetic support throughout",
+              "Assessment $330",
+              "Success fee $990 if removed",
+              "Total $1,320 on success",
+              "No removal → no success fee",
             ]}
             featured
           />
           <PriceCard
-            name="Complex Case Support"
-            timeline="8-16 weeks typically"
-            perfectFor="Multiple defaults, court judgments, complex situations"
+            name="Two Equifax Defaults"
+            timeline="3–7 weeks typical"
+            perfectFor="Two listings across lenders"
             includes={[
-              "Comprehensive case management",
-              "Multiple dispute coordination",
-              "Ongoing monitoring and support",
-              "Transition planning for return to work",
+              "Assessment $330",
+              "1st success fee $990",
+              "2nd success fee $841.50 (15% off)",
+              "Total $2,161.50 if both removed",
             ]}
           />
           <PriceCard
-            name="Emergency Rental Support"
-            timeline="4-8 weeks typically"
-            perfectFor="Urgent rental applications, housing needs"
+            name="Three+ Equifax Defaults"
+            timeline="4–8 weeks typical"
+            perfectFor="Multiple listings and complex disputes"
             includes={[
-              "Priority processing for housing urgency",
-              "Focus on rental-blocking defaults",
-              "Fast-track communication",
-              "Housing application support",
+              "Assessment $330",
+              "First success fee $990",
+              "Additional defaults $841.50 each",
+              "Significant multi‑default savings",
             ]}
           />
-          <PriceCard
-            name="Return-to-Work Preparation"
-            timeline="6-10 weeks typically"
-            perfectFor="Preparing for employment transition, rebuilding credit"
-            includes={[
-              "Employment-focused credit improvement",
-              "Transport finance preparation",
-              "Credit building guidance",
-              "Long-term financial planning",
-            ]}
-          />
+        </div>
+
+        <div className="mt-6 rounded-xl border border-blue-200 bg-blue-50 p-6">
+          <h3 className="text-lg font-semibold text-blue">📊 Return on Investment</h3>
+          <div className="grid gap-4 md:grid-cols-2 mt-2 text-slate-700">
+            <div>
+              <h4 className="font-semibold">Home Loan Example ($500k)</h4>
+              <ul className="list-disc pl-5">
+                <li>Bad credit rate 7.5% ≈ $3,496/mo</li>
+                <li>Good credit rate 3.5% ≈ $2,245/mo</li>
+                <li><strong>Monthly saving: ≈ $1,251</strong></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold">Car Finance Example ($40k)</h4>
+              <ul className="list-disc pl-5">
+                <li>Bad credit rate 18% ≈ $1,012/mo</li>
+                <li>Good credit rate 5% ≈ $754/mo</li>
+                <li><strong>Monthly saving: ≈ $258</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Why Choose Us */}
+      <Section title="Why Choose Our Equifax Specialists">
+        <motion.div variants={staggerChildren} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-6 grid gap-6 md:grid-cols-2">
+          <Card title="🏆 Equifax‑Specific Advantages" bullets={[
+            "Established channels with Equifax compliance",
+            "Deep knowledge of internal processes and timelines",
+            "Experience with escalation procedures and system limits",
+          ]} />
+          <Card title="⚙️ Technical Equifax Expertise" bullets={[
+            "Dispute format and submission requirements",
+            "Investigation procedures and standards",
+            "Data correction and deletion processes",
+            "Reporting timelines and update cycles",
+          ]} />
+          <Card title="⚖️ Legal Advantage" bullets={[
+            "Lawyer‑drafted disputes taken seriously",
+            "Technical arguments Equifax must investigate",
+            "Regulatory compliance enforcement",
+          ]} />
+          <Card title="✅ Our Equifax Guarantee" bullets={[
+            "No removal, no success fees (assessment covers investigation)",
+            "Money‑back guarantee if we can't help at all",
+            "Weekly updates and direct escalation if needed",
+          ]} />
         </motion.div>
-        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
-          <strong>Special Centrelink Policy:</strong> $330 admin fee (payment
-          plans available). No success fees for Centrelink recipients. No hidden
-          costs. We understand your situation and work within your means.
+      </Section>
+
+      {/* Getting Started */}
+      <Section title="Getting Started with Equifax Default Removal">
+        <div className="mt-2 grid gap-6 lg:grid-cols-2">
+          <div className="space-y-4 text-slate-700">
+            <h3 className="font-semibold text-blue">📋 Information We Need</h3>
+            <ul className="space-y-2 list-disc pl-5">
+              {[
+                "Your current Equifax credit file (we can obtain if needed)",
+                "Details of each default you want removed",
+                "Correspondence with original creditors",
+                "Payment history and account information",
+                "Circumstances around each default",
+              ].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-blue">Supporting Documentation (if available)</h4>
+            <ul className="space-y-2 list-disc pl-5">
+              {[
+                "Default notices and communications",
+                "Account statements and payment records",
+                "Dispute correspondence and responses",
+                "Relevant contracts and agreements",
+                "Evidence of payments or settlements",
+              ].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeIn}
+            viewport={{ once: true }}
+            className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-lg"
+          >
+            <h3 className="text-lg font-semibold text-blue">🚀 Free Equifax Assessment Process</h3>
+            <ol className="list-decimal pl-5 mt-3 space-y-2">
+              <li><strong>Step 1: Contact Us</strong> — Call 0489 265 737, email <a href="mailto:help@australiancreditsolutions.com.au" className="underline text-blue-600">help@australiancreditsolutions.com.au</a>, or complete our online assessment form.</li>
+              <li><strong>Step 2: File Review</strong> — We obtain/review your Equifax file, analyse each default, and assess removal probability.</li>
+              <li><strong>Step 3: Strategy Discussion</strong> — We explain opportunities, timelines, and transparent pricing. Your decision — no pressure.</li>
+            </ol>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/free-credit-assessment" className="rounded-lg bg-blue px-5 py-3 font-semibold text-white hover:bg-blue transition-colors">Start Your Equifax Removal</Link>
+              <a href="tel:+61489265737" className="rounded-lg border-2 border-blue px-5 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors">Call 0489 265 737</a>
+            </div>
+            <div className="mt-4 text-sm text-slate-600">
+              <p>Email: <a href="mailto:help@australiancreditsolutions.com.au" className="underline text-blue-600">help@australiancreditsolutions.com.au</a></p>
+            </div>
+          </motion.div>
         </div>
       </Section>
 
       {/* FAQs */}
-      <Section title="Frequently Asked Questions">
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-4 space-y-4"
-        >
+      <Section title="Frequently Asked Questions — Equifax Defaults">
+        <motion.div variants={staggerChildren} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-4 space-y-4">
           {faqData.map((f, index) => (
-            <motion.details
-              key={`faq-${index}`}
-              variants={fadeIn}
-              className="group rounded-xl border border-blue-100 bg-white p-4 shadow-sm transition-all hover:shadow-md"
-            >
+            <motion.details key={`faq-${index}`} variants={fadeIn} className="group rounded-xl border border-blue-100 bg-white p-4 shadow-sm transition-all hover:shadow-md">
               <summary className="cursor-pointer select-none font-semibold text-blue group-open:text-blue flex items-center justify-between">
                 <span>{f.question}</span>
-                <svg
-                  className="h-5 w-5 transform group-open:rotate-180 transition-transform"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
+                <svg className="h-5 w-5 transform group-open:rotate-180 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </summary>
-              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
-                {f.answer}
-              </p>
+              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">{f.answer}</p>
             </motion.details>
           ))}
         </motion.div>
       </Section>
 
+      <RelatedBlock
+        currentSlug="/equifax-default-removal-australia"
+        heading="Related services & guides"
+      />
+
       {/* Next Steps */}
-      <Section title="Next Steps: Get Your Free Credit Assessment">
+      <Section title="Ready to Remove Your Equifax Defaults?">
         <div className="mt-2 grid gap-6 lg:grid-cols-2">
           <div className="space-y-4 text-slate-700">
-            <h3 className="font-semibold text-blue">
-              Being on Centrelink is temporary – but bad credit can follow you
-              long after you&apos;re back on your feet
-            </h3>
-            <p>Let&apos;s fix it now while you have time to focus on it.</p>
+            <h3 className="font-semibold text-blue">Don't let Equifax defaults control your financial future.</h3>
+            <p>Get them removed by Australia's specialists — fast, discreet, and compliant.</p>
             <div className="space-y-3">
-              <h4 className="font-semibold text-slate-800">
-                Your Free Assessment Includes:
-              </h4>
+              <h4 className="font-semibold text-slate-800">What Happens Next</h4>
               <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <svg
-                    className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Credit report review – we&apos;ll help you understand
-                  what&apos;s actually on your file
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg
-                    className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Removal assessment – honest evaluation of what we can achieve
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg
-                    className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Action plan – clear strategy for improving your credit
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg
-                    className="h-5 w-5 shrink-0 text-green-500 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Cost breakdown – transparent pricing with payment plan options
-                </li>
+                {[
+                  "Free analysis of your Equifax defaults",
+                  "Honest assessment of removal chances",
+                  "Custom strategy and clear timeline",
+                  "Transparent pricing — no surprises",
+                  "Your choice to proceed — no obligations",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    {item}
+                  </li>
+                ))}
               </ul>
+              <h4 className="font-semibold text-slate-800 mt-4">Don't Wait</h4>
+              <p>Defaults can get harder to remove over time — act while options are strongest.</p>
             </div>
           </div>
           <motion.div
@@ -672,35 +533,14 @@ export default function EquifaxDefaultRemovalPage() {
             viewport={{ once: true }}
             className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-lg"
           >
-            <h3 className="text-lg font-semibold text-blue">
-              Don&apos;t Let Bad Credit Define Your Future
-            </h3>
-            <p className="mt-3 text-slate-700">
-              Your current circumstances don&apos;t define your future
-              potential. We&apos;ve helped hundreds of Centrelink recipients
-              clean up their credit and move forward with confidence.
-            </p>
-            <p className="mt-3 text-slate-700">
-              Whether you&apos;re planning to return to work, start a small
-              business, or just want normal access to basic financial services –
-              it all starts with fixing your credit file.
-            </p>
-            <p className="mt-3 text-slate-700 font-semibold">
-              The cost of doing nothing is higher than the cost of fixing it.
-            </p>
+            <h3 className="text-lg font-semibold text-blue">Start Your Equifax Default Removal Today</h3>
+            <p className="mt-3 text-slate-700">Free consultation with Equifax specialists. Confidential and judgement‑free.</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/free-credit-assessment"
-                className="rounded-lg bg-blue px-5 py-3 font-semibold text-white hover:bg-blue transition-colors"
-              >
-                Start My Assessment
-              </Link>
-              <a
-                href="tel:+61489265737"
-                className="rounded-lg border-2 border-blue px-5 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors"
-              >
-                Call 0489 265 737
-              </a>
+              <Link href="/free-credit-assessment" className="rounded-lg bg-blue px-5 py-3 font-semibold text-white hover:bg-blue transition-colors">Start Now</Link>
+              <a href="tel:+61489265737" className="rounded-lg border-2 border-blue px-5 py-3 font-semibold text-blue hover:bg-blue hover:text-white transition-colors">Call 0489 265 737</a>
+            </div>
+            <div className="mt-4 text-sm text-slate-600">
+              <p>Australian Credit Solutions Pty Ltd | ASIC ACL 532003</p>
             </div>
           </motion.div>
         </div>
@@ -716,28 +556,16 @@ export default function EquifaxDefaultRemovalPage() {
           className="rounded-2xl bg-gradient-to-r from-blue to-blue p-6 text-white shadow-lg"
         >
           <div className="grid gap-4 sm:grid-cols-3">
-            <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
-                Award-winning specialists (2022, 2023, 2024)
-              </p>
-            </div>
-            <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
-                No Win No Fee — Payment plans available
-              </p>
-            </div>
-            <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
-                Licensed & regulated — ASIC ACL 532003
-              </p>
-            </div>
+            <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm"><p className="text-sm font-medium">98% success on accepted Equifax cases</p></div>
+            <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm"><p className="text-sm font-medium">No Win No Fee — Success‑based pricing</p></div>
+            <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm"><p className="text-sm font-medium">Licensed & regulated — ASIC ACL 532003</p></div>
           </div>
         </motion.div>
       </section>
 
       {/* Related Services */}
       <div className="mx-auto max-w-6xl px-4">
-        <RelatedServices pathname="/credit-repair-for-centrelink-recipients-australia" />
+        <RelatedServices pathname="/equifax-default-removal-australia" />
       </div>
 
       <Footer />
@@ -754,12 +582,8 @@ function Section({ title, children }) {
       viewport={{ once: true, margin: "-100px" }}
       className="mx-auto max-w-6xl px-4 py-12"
     >
-      <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">
-        {title}
-      </h2>
-      <div className="mt-4 text-base leading-relaxed text-slate-800">
-        {children}
-      </div>
+      <h2 className="text-2xl font-bold tracking-tight text-blue sm:text-3xl">{title}</h2>
+      <div className="mt-4 text-base leading-relaxed text-slate-800">{children}</div>
     </motion.section>
   );
 }
@@ -774,18 +598,8 @@ function Card({ title, bullets = [] }) {
       <ul className="mt-3 space-y-2 text-sm text-slate-700">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2">
-            <svg
-              className="h-5 w-5 shrink-0 text-orange-500 mt-0.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
+            <svg className="h-5 w-5 shrink-0 text-orange-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             {b}
           </li>
@@ -800,15 +614,11 @@ function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
     <motion.div
       variants={fadeIn}
       className={`relative rounded-xl border p-6 h-full flex flex-col ${
-        featured
-          ? "border-blue-300 bg-gradient-to-b from-blue-50 to-white shadow-lg"
-          : "border-blue-100 bg-white shadow-sm"
+        featured ? "border-blue-300 bg-gradient-to-b from-blue-50 to-white shadow-lg" : "border-blue-100 bg-white shadow-sm"
       }`}
     >
       {featured && (
-        <span className="absolute -top-3 left-6 inline-block rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white shadow">
-          Most Popular
-        </span>
+        <span className="absolute -top-3 left-6 inline-block rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white shadow">Most Popular</span>
       )}
       <h3 className="text-lg font-semibold text-blue">{name}</h3>
       <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
@@ -816,30 +626,15 @@ function PriceCard({ name, timeline, perfectFor, includes, featured = false }) {
       <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
         {includes.map((i) => (
           <li key={i} className="flex items-start gap-2">
-            <svg
-              className="h-5 w-5 shrink-0 text-blue-500 mt-0.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
+            <svg className="h-5 w-5 shrink-0 text-blue-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
             {i}
           </li>
         ))}
       </ul>
       <div className="mt-4">
-        <Link
-          href="/free-credit-assessment"
-          className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm text-center block"
-        >
-          Start Now
-        </Link>
+        <Link href="/free-credit-assessment" className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm text-center block">Start Now</Link>
       </div>
     </motion.div>
   );
@@ -859,9 +654,7 @@ function Testimonial({ name, children }) {
         ))}
       </div>
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">
-        {name}
-      </figcaption>
+      <figcaption className="mt-3 text-sm font-semibold text-blue">{name}</figcaption>
     </motion.figure>
   );
 }

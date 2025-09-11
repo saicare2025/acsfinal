@@ -72,7 +72,7 @@ export default function DefaultRemovalServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-12">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`
@@ -125,7 +125,7 @@ export default function DefaultRemovalServicesPage() {
                   aria-label="Call Default Hotline on 0489 265 737"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border-2 border-blue px-6 py-3 text-base font-semibold text-blue transition hover:bg-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Call Default Hotline: 0489 265 737
+                  Call: 0489 265 737
                 </a>
 
                 {/* Decorative arrow (desktop/tablet only) */}
@@ -167,7 +167,7 @@ export default function DefaultRemovalServicesPage() {
                 subheading="Lightning-Fast Results"
                 paragraph="Find out if your default can be removed – free assessment with same-day response guaranteed."
               />
-              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
+              <ul className="mt-8 flex flex-col justify-center gap-3 text-base text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
                   98% success rate
@@ -233,7 +233,7 @@ export default function DefaultRemovalServicesPage() {
               className="rounded-xl border border-blue-100 bg-white p-5 shadow-sm transition-all hover:shadow-md"
             >
               <h3 className="font-semibold text-blue">{item.h}</h3>
-              <p className="mt-2 text-sm text-slate-700">{item.p}</p>
+              <p className="mt-2 text-base text-slate-700">{item.p}</p>
             </motion.li>
           ))}
         </motion.ul>
@@ -296,7 +296,7 @@ export default function DefaultRemovalServicesPage() {
             <motion.li
               key={t}
               variants={fadeIn}
-              className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-sm text-slate-700"
+              className="flex items-start gap-2 rounded-xl bg-blue-50 p-4 text-base text-slate-700"
             >
               <svg
                 className="h-5 w-5 shrink-0 text-blue mt-0.5"
@@ -479,7 +479,7 @@ export default function DefaultRemovalServicesPage() {
             ]}
           />
         </motion.div>
-        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-sm text-slate-600">
+        <div className="mt-6 rounded-xl border border-dashed border-blue-300 bg-blue-50 p-4 text-base text-slate-600">
           <strong>
             No Win No Fee Promise:
           </strong>{" "}
@@ -502,7 +502,7 @@ export default function DefaultRemovalServicesPage() {
         >
           <div className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm">
             <h3 className="font-semibold text-blue">Jordan&apos;s Same-Day Success</h3>
-            <p className="mt-2 text-sm text-slate-700">
+            <p className="mt-2 text-base text-slate-700">
               Came to us desperate - a major bank default was blocking his mortgage application. 
               We started work at 8am and had the default removed before 10am the same day. 
               Jordan got his mortgage approved that week.
@@ -510,7 +510,7 @@ export default function DefaultRemovalServicesPage() {
           </div>
           <div className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm">
             <h3 className="font-semibold text-blue">James&apos;s 48-Hour Result</h3>
-            <p className="mt-2 text-sm text-slate-700">
+            <p className="mt-2 text-base text-slate-700">
               A &quot;small&quot; $300 default was keeping him from decent car finance. 
               We had it wiped in 48 hours flat. He saved thousands on interest rates.
             </p>
@@ -547,7 +547,7 @@ export default function DefaultRemovalServicesPage() {
                   />
                 </svg>
               </summary>
-              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
+              <p className="mt-3 text-base text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
                 {f.answer}
               </p>
             </motion.details>
@@ -562,7 +562,7 @@ export default function DefaultRemovalServicesPage() {
             <h3 className="font-semibold text-blue">Three Easy Options</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-base">
                   1
                 </span>
                 <div>
@@ -570,7 +570,7 @@ export default function DefaultRemovalServicesPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-base">
                   2
                 </span>
                 <div>
@@ -578,7 +578,7 @@ export default function DefaultRemovalServicesPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-sm">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue font-bold text-base">
                   3
                 </span>
                 <div>
@@ -597,7 +597,7 @@ export default function DefaultRemovalServicesPage() {
             <h3 className="text-lg font-semibold text-blue">
               What Happens Next?
             </h3>
-            <ol className="mt-3 space-y-2 text-slate-700 text-sm">
+            <ol className="mt-3 space-y-2 text-slate-700 text-base">
               <li>1. <strong>Free Assessment Call:</strong> We review your defaults and give you honest feedback on removal chances</li>
               <li>2. <strong>Strategy Discussion:</strong> If we can help, we&apos;ll explain our approach and timeline</li>
               <li>3. <strong>Agreement & Action:</strong> You decide to proceed, we get to work immediately</li>
@@ -633,17 +633,17 @@ export default function DefaultRemovalServicesPage() {
         >
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 98% success rate when we take cases
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 No Win No Fee — $330 admin fee
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 Licensed & regulated — ASIC ACL 532003
               </p>
             </div>
@@ -687,7 +687,7 @@ function Card({ title, bullets = [] }) {
       className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
     >
       <h3 className="text-lg font-semibold text-blue">{title}</h3>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700">
+      <ul className="mt-3 space-y-2 text-base text-slate-700">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2">
             <svg
@@ -733,9 +733,9 @@ function PriceCard({
         </span>
       )}
       <h3 className="text-lg font-semibold text-blue">{name}</h3>
-      <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
-      <p className="mt-1 text-sm text-slate-600">Perfect for: {perfectFor}</p>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
+      <p className="mt-1 text-base text-slate-600">Timeline: {timeline}</p>
+      <p className="mt-1 text-base text-slate-600">Perfect for: {perfectFor}</p>
+      <ul className="mt-3 space-y-2 text-base text-slate-700 flex-grow">
         {includes.map((i) => (
           <li key={i} className="flex items-start gap-2">
             <svg
@@ -758,7 +758,7 @@ function PriceCard({
       <div className="mt-4">
         <Link
           href="/free-credit-assessment"
-          className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm text-center block"
+          className="w-full rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-base text-center block"
         >
           Start Now
         </Link>
@@ -781,7 +781,7 @@ function Testimonial({ name, children }) {
         ))}
       </div>
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">
+      <figcaption className="mt-3 text-base font-semibold text-blue">
         {name}
       </figcaption>
     </motion.figure>

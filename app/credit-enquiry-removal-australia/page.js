@@ -74,7 +74,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 py-8 lg:py-12">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=")`
@@ -125,7 +125,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
                   href="/free-credit-assessment"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Fix My Credit Now - Free Assessment
+                  Fix My Credit Now 
                 </Link>
 
                 <a
@@ -182,7 +182,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
                 subheading="Fast & Confidential"
                 paragraph="Find out if your credit can be fixed – free, fast, and confidential for western Victoria residents."
               />
-              <ul className="mt-8 flex flex-col justify-center gap-3 text-sm text-gray-600 sm:flex-row sm:flex-wrap">
+              <ul className="mt-8 flex flex-col justify-center gap-3 text-base text-gray-600 sm:flex-row sm:flex-wrap">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-blue"></span>
                   98% success rate
@@ -209,7 +209,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm">
             <h3 className="text-lg font-semibold text-blue">✅ Western Victoria&apos;s Most Trusted Credit Repair Specialists</h3>
-            <ul className="mt-3 space-y-2 text-sm text-slate-700">
+            <ul className="mt-3 space-y-2 text-base text-slate-700">
               <li>3 consecutive industry awards (2022, 2023, 2024)</li>
               <li>98% success rate when we accept cases</li>
               <li>ASIC Licensed (ACL 532003)</li>
@@ -218,7 +218,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
           </div>
           <div className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm">
             <h3 className="text-lg font-semibold text-blue">✅ We Understand Western Victoria&apos;s Unique Opportunities</h3>
-            <ul className="mt-3 space-y-2 text-sm text-slate-700">
+            <ul className="mt-3 space-y-2 text-base text-slate-700">
               <li>Booming Geelong economy with Ford transition success</li>
               <li>Great Ocean Road tourism and hospitality boom</li>
               <li>Western districts agricultural prosperity</li>
@@ -227,7 +227,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
           </div>
           <div className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm">
             <h3 className="text-lg font-semibold text-blue">✅ Fast Results for Western Victoria</h3>
-            <ul className="mt-3 space-y-2 text-sm text-slate-700">
+            <ul className="mt-3 space-y-2 text-base text-slate-700">
               <li>Priority service for urgent coastal property purchases</li>
               <li>Same-day assessments for Geelong, Warrnambool, Portland residents</li>
               <li>Express handling for tourism business finance</li>
@@ -249,7 +249,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
             </p>
             <div className="bg-blue-50 rounded-xl p-4">
               <p className="font-semibold text-blue mb-2">Western Victoria <a href="/credit-repair-gold-coast-queensland" className="text-blue-600 hover:text-blue-800 underline">Credit Repair Gold Coast Queensland</a> Default Success Stories:</p>
-              <ul className="text-sm text-slate-700 space-y-1">
+              <ul className="text-base text-slate-700 space-y-1">
                 <li>• Geelong client: $3,200 Vodafone default removed in 3 weeks</li>
                 <li>• Warrnambool resident: Multiple utility defaults cleared in 6 weeks</li>
                 <li>• Torquay family: Car finance default wiped, approved for beachside home loan</li>
@@ -313,7 +313,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
               </p>
               <div className="mt-3 bg-blue-50 rounded-lg p-3">
                 <p className="font-medium text-blue mb-2">Our western Victoria team reviews:</p>
-                <ul className="text-sm space-y-1">
+                <ul className="text-base space-y-1">
                   <li>• Defaults from Geelong and regional western companies</li>
                   <li>• Late payments from coastal and rural banks</li>
                   <li>• Credit enquiries from western Victoria lenders</li>
@@ -335,7 +335,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
               </p>
               <div className="mt-3 bg-blue-50 rounded-lg p-3">
                 <p className="font-medium text-blue mb-2">Western Victoria-focused approach:</p>
-                <ul className="text-sm space-y-1">
+                <ul className="text-base space-y-1">
                   <li>• Targeted strategies for tourism and hospitality businesses</li>
                   <li>• Understanding of coastal property market dynamics</li>
                   <li>• Relationships with western Victoria credit providers</li>
@@ -357,7 +357,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
               </p>
               <div className="mt-3 bg-blue-50 rounded-lg p-3">
                 <p className="font-medium text-blue mb-2">Western Victoria success metrics:</p>
-                <ul className="text-sm space-y-1">
+                <ul className="text-base space-y-1">
                   <li>• 98% success rate for western Victoria cases we accept</li>
                   <li>• Average 2-6 week removal timeframes</li>
                   <li>• Typical credit score improvements: 150-300 points</li>
@@ -374,10 +374,10 @@ export default function CreditRepairGeelongWarrnamboolPage() {
         <div className="grid gap-8 lg:grid-cols-3">
           <div className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm">
             <h3 className="text-lg font-semibold text-blue mb-3">Geelong & Surf Coast</h3>
-            <p className="text-sm text-slate-600 mb-3">Premium service for Victoria&apos;s fastest-growing regional economy</p>
-            <p className="text-sm font-medium mb-2">Geelong | Torquay | Anglesea | Lorne | Colac | Winchelsea | Drysdale | Portarlington</p>
+            <p className="text-base text-slate-600 mb-3">Premium service for Victoria&apos;s fastest-growing regional economy</p>
+            <p className="text-base font-medium mb-2">Geelong | Torquay | Anglesea | Lorne | Colac | Winchelsea | Drysdale | Portarlington</p>
             <div className="bg-blue-50 rounded-lg p-3 mt-3">
-              <p className="text-sm font-medium text-blue mb-2">We help Surf Coast residents overcome credit challenges for:</p>
+              <p className="text-base font-medium text-blue mb-2">We help Surf Coast residents overcome credit challenges for:</p>
               <ul className="text-xs space-y-1">
                 <li>• Beachside property purchases and sea change investments</li>
                 <li>• Tourism and hospitality business expansion</li>
@@ -389,10 +389,10 @@ export default function CreditRepairGeelongWarrnamboolPage() {
 
           <div className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm">
             <h3 className="text-lg font-semibold text-blue mb-3">Great Ocean Road & Coastal Communities</h3>
-            <p className="text-sm text-slate-600 mb-3">Specialist service for Australia&apos;s most iconic coastal region</p>
-            <p className="text-sm font-medium mb-2">Apollo Bay | Port Campbell | Warrnambool | Port Fairy | Portland | Nelson</p>
+            <p className="text-base text-slate-600 mb-3">Specialist service for Australia&apos;s most iconic coastal region</p>
+            <p className="text-base font-medium mb-2">Apollo Bay | Port Campbell | Warrnambool | Port Fairy | Portland | Nelson</p>
             <div className="bg-blue-50 rounded-lg p-3 mt-3">
-              <p className="text-sm font-medium text-blue mb-2">Great Ocean Road challenges we solve:</p>
+              <p className="text-base font-medium text-blue mb-2">Great Ocean Road challenges we solve:</p>
               <ul className="text-xs space-y-1">
                 <li>• Tourism accommodation and restaurant finance</li>
                 <li>• Coastal property and holiday rental investments</li>
@@ -404,10 +404,10 @@ export default function CreditRepairGeelongWarrnamboolPage() {
 
           <div className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm">
             <h3 className="text-lg font-semibold text-blue mb-3">Western Districts & Grampians</h3>
-            <p className="text-sm text-slate-600 mb-3">Targeted solutions for Victoria&apos;s agricultural heartland</p>
-            <p className="text-sm font-medium mb-2">Hamilton | Horsham | Stawell | Ararat | Halls Gap | Dunkeld</p>
+            <p className="text-base text-slate-600 mb-3">Targeted solutions for Victoria&apos;s agricultural heartland</p>
+            <p className="text-base font-medium mb-2">Hamilton | Horsham | Stawell | Ararat | Halls Gap | Dunkeld</p>
             <div className="bg-blue-50 rounded-lg p-3 mt-3">
-              <p className="text-sm font-medium text-blue mb-2">Western districts expertise:</p>
+              <p className="text-base font-medium text-blue mb-2">Western districts expertise:</p>
               <ul className="text-xs space-y-1">
                 <li>• Agricultural property and livestock finance</li>
                 <li>• Farm machinery and equipment loans</li>
@@ -429,7 +429,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">Geelong Growth Opportunities vs Credit Reality</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-green-600 font-bold">✓</span>
                 <span>NDIS headquarters creating 1,000+ jobs</span>
@@ -457,7 +457,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
             <h3 className="text-lg font-semibold text-blue mb-4">Geelong Success Stories</h3>
             <div className="space-y-4">
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue text-sm">Case Study: Geelong Waterfront Apartment</h4>
+                <h4 className="font-semibold text-blue text-base">Case Study: Geelong Waterfront Apartment</h4>
                 <ul className="text-xs text-slate-700 mt-2 space-y-1">
                   <li><strong>Problem:</strong> $2,800 credit card default blocking $580,000 apartment loan</li>
                   <li><strong>Location:</strong> Premium waterfront development near Steampacket Gardens</li>
@@ -467,7 +467,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
               </div>
               
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue text-sm">Case Study: North Geelong Business Expansion</h4>
+                <h4 className="font-semibold text-blue text-base">Case Study: North Geelong Business Expansion</h4>
                 <ul className="text-xs text-slate-700 mt-2 space-y-1">
                   <li><strong>Problem:</strong> Multiple late payments affecting equipment finance</li>
                   <li><strong>Business:</strong> Food processing startup near Avalon Airport</li>
@@ -477,7 +477,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
               </div>
               
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue text-sm">Case Study: Surf Coast Investment Property</h4>
+                <h4 className="font-semibold text-blue text-base">Case Study: Surf Coast Investment Property</h4>
                 <ul className="text-xs text-slate-700 mt-2 space-y-1">
                   <li><strong>Problem:</strong> Car finance enquiries triggering home loan rejections</li>
                   <li><strong>Situation:</strong> Melbourne professional buying Torquay investment</li>
@@ -513,7 +513,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">Why Tourism Finance Gets Rejected</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-orange-500 font-bold">•</span>
                 <span><strong>Seasonal income patterns:</strong> Peak summer/holiday periods</span>
@@ -537,19 +537,19 @@ export default function CreditRepairGeelongWarrnamboolPage() {
             <h3 className="text-lg font-semibold text-blue mb-4">Great Ocean Road Business Success Stories</h3>
             <div className="space-y-4">
               <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm text-slate-700">
+                <p className="text-base text-slate-700">
                   <strong>Apollo Bay Accommodation Success:</strong> &quot;Wanted to expand our B&B but a $4,500 default was blocking all finance applications. ACS removed it in 6 weeks. Now we&apos;ve got 4 more rooms and bookings are solid through 2025.&quot; – David & Linda K.
                 </p>
               </div>
               
               <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm text-slate-700">
+                <p className="text-base text-slate-700">
                   <strong>Port Campbell Tour Business Victory:</strong> &quot;My helicopter tour business needed finance for a second aircraft, but late payments from COVID were killing applications. ACS cleaned my file in 7 weeks. Now I&apos;ve got two choppers and the Great Ocean Road views are paying off big time!&quot; – Marcus T.
                 </p>
               </div>
               
               <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm text-slate-700">
+                <p className="text-base text-slate-700">
                   <strong>Port Fairy Restaurant Expansion:</strong> &quot;Heritage restaurant needed kitchen upgrade but credit issues blocked equipment finance. ACS removed multiple entries in 8 weeks. New kitchen installed, reviews are amazing, profits up 40%.&quot; – Giuseppe & Maria C.
                 </p>
               </div>
@@ -563,7 +563,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">Award-Winning Coastal Service</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-blue font-bold">✓</span>
                 <span>Industry Excellence Awards 2022, 2023, 2024</span>
@@ -583,8 +583,8 @@ export default function CreditRepairGeelongWarrnamboolPage() {
             </div>
             
             <h3 className="text-lg font-semibold text-blue mb-4 mt-6">Western Victoria Expertise</h3>
-            <p className="text-sm text-slate-700 mb-3">Deep understanding of western Victoria&apos;s economic landscape:</p>
-            <div className="space-y-2 text-sm text-slate-700">
+            <p className="text-base text-slate-700 mb-3">Deep understanding of western Victoria&apos;s economic landscape:</p>
+            <div className="space-y-2 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-blue font-bold">•</span>
                 <span>Tourism and hospitality seasonal finance requirements</span>
@@ -606,8 +606,8 @@ export default function CreditRepairGeelongWarrnamboolPage() {
           
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">No Win No Fee Promise</h3>
-            <p className="text-sm text-slate-700 mb-3">We only get paid when you get results:</p>
-            <div className="space-y-2 text-sm text-slate-700 mb-6">
+            <p className="text-base text-slate-700 mb-3">We only get paid when you get results:</p>
+            <div className="space-y-2 text-base text-slate-700 mb-6">
               <div className="flex items-start gap-2">
                 <span className="text-green-600 font-bold">✓</span>
                 <span>One-off admin fee: $330 (applies regardless of outcome)</span>
@@ -665,10 +665,10 @@ export default function CreditRepairGeelongWarrnamboolPage() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-blue mb-3">Greater Geelong & Bellarine Peninsula</h3>
-              <p className="text-sm text-slate-600 mb-2">Victoria&apos;s second-largest city and gateway to coastal lifestyle</p>
-              <p className="text-sm font-medium mb-2">Geelong | Torquay | Anglesea | Drysdale | Portarlington | Queenscliff | Ocean Grove</p>
+              <p className="text-base text-slate-600 mb-2">Victoria&apos;s second-largest city and gateway to coastal lifestyle</p>
+              <p className="text-base font-medium mb-2">Geelong | Torquay | Anglesea | Drysdale | Portarlington | Queenscliff | Ocean Grove</p>
               <div className="bg-blue-50 rounded-lg p-3">
-                <p className="text-sm font-medium text-blue mb-2">Geelong region expertise:</p>
+                <p className="text-base font-medium text-blue mb-2">Geelong region expertise:</p>
                 <ul className="text-xs space-y-1">
                   <li>• Waterfront property investments</li>
                   <li>• Manufacturing transition opportunities</li>
@@ -680,10 +680,10 @@ export default function CreditRepairGeelongWarrnamboolPage() {
             
             <div>
               <h3 className="text-lg font-semibold text-blue mb-3">Surf Coast & Great Ocean Road</h3>
-              <p className="text-sm text-slate-600 mb-2">Australia&apos;s most iconic coastal tourism destination</p>
-              <p className="text-sm font-medium mb-2">Torquay | Anglesea | Lorne | Apollo Bay | Port Campbell | Warrnambool</p>
+              <p className="text-base text-slate-600 mb-2">Australia&apos;s most iconic coastal tourism destination</p>
+              <p className="text-base font-medium mb-2">Torquay | Anglesea | Lorne | Apollo Bay | Port Campbell | Warrnambool</p>
               <div className="bg-blue-50 rounded-lg p-3">
-                <p className="text-sm font-medium text-blue mb-2">Coastal specialisation:</p>
+                <p className="text-base font-medium text-blue mb-2">Coastal specialisation:</p>
                 <ul className="text-xs space-y-1">
                   <li>• Tourism accommodation and hospitality</li>
                   <li>• Marine equipment and boat finance</li>
@@ -697,10 +697,10 @@ export default function CreditRepairGeelongWarrnamboolPage() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-blue mb-3">Western Districts & Agricultural Region</h3>
-              <p className="text-sm text-slate-600 mb-2">Victoria&apos;s premier agricultural and livestock region</p>
-              <p className="text-sm font-medium mb-2">Hamilton | Horsham | Ararat | Stawell | Colac | Camperdown</p>
+              <p className="text-base text-slate-600 mb-2">Victoria&apos;s premier agricultural and livestock region</p>
+              <p className="text-base font-medium mb-2">Hamilton | Horsham | Ararat | Stawell | Colac | Camperdown</p>
               <div className="bg-blue-50 rounded-lg p-3">
-                <p className="text-sm font-medium text-blue mb-2">Agricultural focus:</p>
+                <p className="text-base font-medium text-blue mb-2">Agricultural focus:</p>
                 <ul className="text-xs space-y-1">
                   <li>• Livestock and wool industry finance</li>
                   <li>• Agricultural equipment and machinery</li>
@@ -712,10 +712,10 @@ export default function CreditRepairGeelongWarrnamboolPage() {
             
             <div>
               <h3 className="text-lg font-semibold text-blue mb-3">Portland & South West Coast</h3>
-              <p className="text-sm text-slate-600 mb-2">Industrial port and pristine coastal communities</p>
-              <p className="text-sm font-medium mb-2">Portland | Port Fairy | Nelson | Casterton | Heywood</p>
+              <p className="text-base text-slate-600 mb-2">Industrial port and pristine coastal communities</p>
+              <p className="text-base font-medium mb-2">Portland | Port Fairy | Nelson | Casterton | Heywood</p>
               <div className="bg-blue-50 rounded-lg p-3">
-                <p className="text-sm font-medium text-blue mb-2">South west expertise:</p>
+                <p className="text-base font-medium text-blue mb-2">South west expertise:</p>
                 <ul className="text-xs space-y-1">
                   <li>• Industrial and port-related businesses</li>
                   <li>• Fishing and aquaculture industry</li>
@@ -735,7 +735,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
             Don&apos;t let bad credit hold you back from western Victoria&apos;s opportunities. Every month you wait:
           </p>
           <div className="grid gap-4 md:grid-cols-2">
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-red-500 font-bold">✗</span>
                 <span>Coastal property prices continue rising rapidly</span>
@@ -749,7 +749,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
                 <span>Interest rates may increase, costing thousands more</span>
               </div>
             </div>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-red-500 font-bold">✗</span>
                 <span>Other buyers with better credit get the properties you want</span>
@@ -767,7 +767,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
           <div className="grid gap-4 md:grid-cols-2">
             <div>
               <p className="text-lg font-semibold text-blue mb-2">📞 Call Western Victoria Direct: 0489 265 737</p>
-              <div className="space-y-2 text-sm text-slate-700">
+              <div className="space-y-2 text-base text-slate-700">
                 <div className="flex items-start gap-2">
                   <span className="text-green-600 font-bold">✓</span>
                   <span>Same-day assessment for Geelong, Warrnambool, Great Ocean Road residents</span>
@@ -836,7 +836,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
                   />
                 </svg>
               </summary>
-              <p className="mt-3 text-sm text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
+              <p className="mt-3 text-base text-slate-700 pl-2 border-l-2 border-blue-200 ml-1">
                 {f.answer}
               </p>
             </motion.details>
@@ -861,7 +861,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">Our Western Victoria Commitment:</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-blue font-bold">✓</span>
                 <span>Same premium service from Geelong to Portland</span>
@@ -887,7 +887,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
           
           <div>
             <h3 className="text-lg font-semibold text-blue mb-4">Contact Our Western Victoria Team Today:</h3>
-            <div className="space-y-3 text-sm text-slate-700">
+            <div className="space-y-3 text-base text-slate-700">
               <div className="flex items-start gap-2">
                 <span className="text-blue font-bold">📞</span>
                 <span><strong>Phone:</strong> 0489 265 737</span>
@@ -907,7 +907,7 @@ export default function CreditRepairGeelongWarrnamboolPage() {
             </div>
             
             <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-              <p className="text-sm font-medium text-blue mb-2">ASIC Licensed ACL 532003 | Industry Excellence Awards 2022, 2023, 2024</p>
+              <p className="text-base font-medium text-blue mb-2">ASIC Licensed ACL 532003 | Industry Excellence Awards 2022, 2023, 2024</p>
               <p className="text-xs text-slate-700">
                 Don&apos;t let bad credit stop you from living the western Victoria lifestyle you deserve. From Geelong&apos;s waterfront opportunities to Great Ocean Road tourism success, we&apos;re here to help you achieve your financial goals.
               </p>
@@ -929,17 +929,17 @@ export default function CreditRepairGeelongWarrnamboolPage() {
         >
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 98% success rate when we take cases
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 No Win No Fee — $330 admin fee
               </p>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm">
-              <p className="text-sm font-medium">
+              <p className="text-base font-medium">
                 Licensed & regulated — ASIC ACL 532003
               </p>
             </div>
@@ -978,7 +978,7 @@ function Card({ title, bullets = [] }) {
       className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
     >
       <h3 className="text-lg font-semibold text-blue">{title}</h3>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700">
+      <ul className="mt-3 space-y-2 text-base text-slate-700">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2">
             <svg
@@ -1024,9 +1024,9 @@ function PriceCard({
         </span>
       )}
       <h3 className="text-lg font-semibold text-blue">{name}</h3>
-      <p className="mt-1 text-sm text-slate-600">Timeline: {timeline}</p>
-      <p className="mt-1 text-sm text-slate-600">Perfect for: {perfectFor}</p>
-      <ul className="mt-3 space-y-2 text-sm text-slate-700 flex-grow">
+      <p className="mt-1 text-base text-slate-600">Timeline: {timeline}</p>
+      <p className="mt-1 text-base text-slate-600">Perfect for: {perfectFor}</p>
+      <ul className="mt-3 space-y-2 text-base text-slate-700 flex-grow">
         {includes.map((i) => (
           <li key={i} className="flex items-start gap-2">
             <svg
@@ -1050,7 +1050,7 @@ function PriceCard({
        
         <Link
           href="/free-credit-assessment"
-          className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-sm"
+          className="rounded-lg bg-blue px-4 py-2 font-semibold text-white hover:bg-blue transition-colors text-base"
         >
           Start Now
         </Link>
@@ -1073,7 +1073,7 @@ function Testimonial({ name, children }) {
         ))}
       </div>
       <blockquote className="text-slate-700">{children}</blockquote>
-      <figcaption className="mt-3 text-sm font-semibold text-blue">
+      <figcaption className="mt-3 text-base font-semibold text-blue">
         {name}
       </figcaption>
     </motion.figure>

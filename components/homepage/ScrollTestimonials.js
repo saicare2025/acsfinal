@@ -101,7 +101,7 @@ const ReviewCard = ({ review }) => {
         </div>
         <div className="flex justify-between items-center">
           <div>
-            <p className="text-sm font-medium text-gray-900">{review.author}</p>
+            <p className="text-base font-medium text-gray-900">{review.author}</p>
             <p className="text-xs text-gray-500">{review.position}</p>
           </div>
           <span className="text-xs text-gray-400">{review.date}</span>

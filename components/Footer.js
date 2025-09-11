@@ -1,439 +1,572 @@
 "use client";
 
 import Link from "next/link";
-import Logo from "./Logo";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, ShieldCheck, FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { PinterestIcon, TikTokIcon } from "./Header";
-import PlusMinusIcon from "./PlusMinusIcon";
-import { stateLinks } from "../lib/stateLinks";
+import { FacebookIcon, LinkedinIcon, PlusIcon } from "lucide-react";
+import { useState, useEffect } from "react";
+import urlData from "../url.json";
 
-export default function Footer() {
-  const router = useRouter();
+// Helper functions
+function isInternal(href) {
+  return !href.startsWith('http') || href.includes('australiancreditsolutions.com.au');
+}
 
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [openState, setOpenState] = useState(null);
-  const stateRefs = useRef({});
+function cleanPathname(href) {
+  try {
+    const url = new URL(href, 'https://www.australiancreditsolutions.com.au');
+    return url.pathname;
+  } catch {
+    return href.replace(/[?#].*$/, '');
+  }
+}
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((s) => ({ ...s, [name]: value }));
-  };
+function deriveLabel(slug) {
+  return slug
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
 
-  const toggleState = (stateName) => {
-    setOpenState(openState === stateName ? null : stateName);
-  };
+// Normalize URL data
+const normalizedUrls = urlData.urls.map(item => ({
+  href: cleanPathname(item.pathname),
+  label: deriveLabel(item.pathname.replace(/^\//, ''))
+}));
 
-  const handleKeyDown = (e, stateName) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      toggleState(stateName);
+// Categorization function
+function categorizeUrl(href) {
+  const slug = href.replace(/^\//, '').toLowerCase();
+  
+  // Services patterns
+  if (slug.includes('default') || slug.includes('credit-enquiry') || 
+      slug.includes('judgment') || slug.includes('repayment-history') || 
+      slug.includes('identity-theft') || slug.includes('credit-report') || 
+      slug.includes('equifax')) {
+    return 'services';
+  }
+  
+  // Credit Help patterns
+  if (slug.includes('how-') || slug.includes('guide') || slug.includes('credit-score') || 
+      slug.includes('blog') || slug.includes('what-we-can') || slug.includes('pricing') || 
+      slug.includes('process') || slug.includes('faq')) {
+    return 'credit-help';
+  }
+  
+  // Locations patterns
+  if (slug.includes('credit-repair-') || slug.includes('credit_repair_')) {
+    return 'locations';
+  }
+  
+  // Company patterns
+  if (slug.includes('about') || slug.includes('testimonial') || 
+      slug.includes('complaints-handling-policy') || slug.includes('contact') || 
+      slug.includes('careers')) {
+    return 'company';
+  }
+  
+  // Legal & Trust patterns
+  if (slug.includes('privacy-policy') || slug.includes('terms-conditions')) {
+    return 'legal-trust';
+  }
+  
+  return 'services'; // default fallback
+}
+
+// Canonical items mapping
+const canonicalItems = {
+  services: [
+    { label: 'Default Removal', href: '/default-removal' },
+    { label: 'Credit Enquiry Removal', href: '/credit-enquiry-removal' },
+    { label: 'Court Judgment Removal', href: '/court-judgment-removal' },
+    { label: 'Repayment History Disputes', href: '/repayment-history-disputes' },
+    { label: 'Identity Theft (Credit File Fix)', href: '/identity-theft-credit-file-fix' },
+    { label: 'Credit Report Analysis', href: '/credit-report-analysis' },
+    { label: 'View All Services', href: '/services' }
+  ],
+  'credit-help': [
+    { label: 'How It Works', href: '/how-it-works' },
+    { label: 'What We Can & Can\'t Remove', href: '/what-we-can-remove' },
+    { label: 'Pricing', href: '/pricing' },
+    { label: 'Credit Score Guide', href: '/credit-score-guide' },
+    { label: 'Blog', href: '/blogs' }
+  ],
+  locations: [
+    { label: 'Sydney', href: '/credit-repair-sydney' },
+    { label: 'Melbourne', href: '/credit-repair-melbourne' },
+    { label: 'Brisbane', href: '/credit-repair-brisbane' },
+    { label: 'Perth', href: '/credit-repair-perth' },
+    { label: 'Adelaide', href: '/credit-repair-adelaide' },
+    { label: 'Canberra', href: '/credit-repair-canberra' },
+    { label: 'Hobart', href: '/credit-repair-hobart' },
+    { label: 'Darwin', href: '/credit-repair-darwin' },
+   
+  ],
+  company: [
+    { label: 'About Us', href: '/about' },
+    { label: 'Testimonials', href: '/testimonial' },
+    { label: 'Complaints Handling Policy', href: '/complaints-handling-policy' },
+    { label: 'Contact', href: '/contact' }
+  ],
+  'legal-trust': [
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms & Conditions', href: '/terms-conditions' }
+  ]
+};
+
+// State mapping for locations
+const STATE_GROUPS = {
+  NSW: ['sydney', 'regional-nsw'],
+  VIC: ['melbourne', 'geelong', 'warrnambool', 'bendigo', 'ballarat', 'sale', 'traralgon', 'gippsland', 'geelong-warrnambool', 'sale-traralgon'],
+  QLD: ['brisbane', 'gold-coast', 'sunshine-coast', 'cairns', 'townsville'],
+  WA:  ['perth'],
+  SA:  ['adelaide'],
+  TAS: ['hobart'],
+  NT:  ['darwin'],
+  ACT: ['canberra'],
+};
+
+// Helper to determine state from city slug
+function getStateFromSlug(slug) {
+  const cityName = slug.replace('credit-repair-', '').replace('credit_repair_', '');
+  for (const [state, cities] of Object.entries(STATE_GROUPS)) {
+    if (cities.some(city => cityName.includes(city) || city.includes(cityName))) {
+      return state;
     }
+  }
+  return null;
+}
+
+// Build similar links index
+function buildSimilarIndex(maxSimilarPerItem = 8) {
+  const similarIndex = {};
+  
+  // Group URLs by category
+  const categorizedUrls = {
+    services: normalizedUrls.filter(url => categorizeUrl(url.href) === 'services'),
+    'credit-help': normalizedUrls.filter(url => categorizeUrl(url.href) === 'credit-help'),
+    locations: normalizedUrls.filter(url => categorizeUrl(url.href) === 'locations'),
+    company: normalizedUrls.filter(url => categorizeUrl(url.href) === 'company'),
+    'legal-trust': normalizedUrls.filter(url => categorizeUrl(url.href) === 'legal-trust')
   };
-
-  const handleLinkKeyDown = (e, stateName) => {
-    if (e.key === "Escape") {
-      setOpenState(null);
-      // Focus back to the toggle button
-      const button = stateRefs.current[stateName];
-      if (button) button.focus();
-    } else if (e.key === "ArrowDown") {
-      e.preventDefault();
-      const currentIndex = Array.from(e.target.parentNode.children).indexOf(e.target);
-      const nextLink = e.target.parentNode.children[currentIndex + 1];
-      if (nextLink) nextLink.focus();
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      const currentIndex = Array.from(e.target.parentNode.children).indexOf(e.target);
-      const prevLink = e.target.parentNode.children[currentIndex - 1];
-      if (prevLink) prevLink.focus();
-    }
-  };
-
-  const validateForm = () => {
-    const { fullName, email, phone } = formData;
-    if (!fullName.trim()) {
-      alert("Please enter your full name.");
-      return false;
-    }
-    if (!email.trim() || !/^\S+@\S+\.\S+$/.test(email)) {
-      alert("Please enter a valid email address.");
-      return false;
-    }
-    if (!phone.trim()) {
-      alert("Please enter your phone number.");
-      return false;
-    }
-    return true;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!validateForm()) return;
-
-    setIsSubmitting(true);
-
-    try {
-      const payload = {
-        name: formData.fullName.trim(),
-        email: formData.email.trim(),
-        phone: formData.phone, // raw format
-      };
-
-      const response = await fetch(
-        "https://rest.gohighlevel.com/v1/contacts/",
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_GHL_API_KEY}`,
-            Version: "2021-07-28",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
+  
+  // Build similar links for each canonical item
+  Object.entries(canonicalItems).forEach(([category, items]) => {
+    items.forEach(item => {
+      const similar = [];
+      const itemSlug = item.href.replace(/^\//, '').toLowerCase();
+      
+      if (category === 'locations') {
+        // Special handling for locations - group by state
+        const itemState = getStateFromSlug(itemSlug);
+        if (itemState) {
+          const stateCities = STATE_GROUPS[itemState];
+          
+          categorizedUrls.locations.forEach(url => {
+            const urlSlug = url.href.replace(/^\//, '').toLowerCase();
+            const urlState = getStateFromSlug(urlSlug);
+            
+            // Only include URLs from the same state
+            if (urlState === itemState && urlSlug !== itemSlug) {
+              similar.push({
+                label: url.label,
+                href: url.href
+              });
+            }
+          });
         }
+      } else {
+        // Standard token-based matching for other categories
+        categorizedUrls[category].forEach(url => {
+          const urlSlug = url.href.replace(/^\//, '').toLowerCase();
+          
+          // Skip if it's the same as the canonical item
+          if (urlSlug === itemSlug) return;
+          
+          // Check for shared tokens
+          const itemTokens = itemSlug.split('-');
+          const urlTokens = urlSlug.split('-');
+          const sharedTokens = itemTokens.filter(token => 
+            urlTokens.some(urlToken => urlToken.includes(token) || token.includes(urlToken))
+          );
+          
+          if (sharedTokens.length > 0) {
+            similar.push({
+              label: url.label,
+              href: url.href
+            });
+          }
+        });
+      }
+      
+      // Dedupe and limit
+      const uniqueSimilar = similar.filter((item, index, self) => 
+        index === self.findIndex(t => t.href === item.href)
       );
-
-      const result = await response.json();
-      console.log("Full API Response:", result);
-
-      if (!response.ok) {
-        throw new Error(result.message || "GHL API error");
+      
+      if (uniqueSimilar.length > 0) {
+        const limitedSimilar = uniqueSimilar.slice(0, maxSimilarPerItem);
+        
+        // Add "View more..." link if there are more items
+        if (uniqueSimilar.length > maxSimilarPerItem) {
+          const categoryIndexUrl = category === 'locations' ? '/locations' : 
+                                  category === 'services' ? '/services' : 
+                                  category === 'credit-help' ? '/blogs' : 
+                                  category === 'company' ? '/about' : '/privacy-policy';
+          
+          limitedSimilar.push({
+            label: 'View more...',
+            href: categoryIndexUrl
+          });
+        }
+        
+        similarIndex[item.label] = limitedSimilar;
       }
+    });
+  });
+  
+  return similarIndex;
+}
 
-      const contactId = result.id || result.contact?.id || result.data?.id;
-      if (!contactId) {
-        console.error("Unexpected API response format:", result);
-        throw new Error("No contact ID received. Check console for details.");
-      }
+// Expandable Link Component
+function ExpandableLink({ item, similarLinks, isActive, onToggle }) {
+  const LinkComponent = isInternal(item.href) ? Link : 'a';
+  const linkProps = isInternal(item.href) 
+    ? { href: item.href }
+    : { href: item.href, target: '_blank', rel: 'noopener noreferrer' };
+  
+  return (
+    <li className="flex items-center">
+      <LinkComponent
+        {...linkProps}
+        className="text-base leading-6 text-gray-600 hover:text-blue-600 transition-colors hover:underline hover:underline-offset-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 rounded"
+      >
+        {item.label}
+      </LinkComponent>
+      {similarLinks && similarLinks.length > 0 && (
+        <button
+          onClick={onToggle}
+          aria-label={`Show similar links for ${item.label}`}
+          aria-expanded={isActive}
+          aria-controls="footer-disclosure"
+          className="ml-2 inline-flex h-7 w-7 items-center justify-center rounded-full border hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              onToggle();
+            }
+          }}
+        >
+          <PlusIcon className={`w-4 h-4 transition-transform ${isActive ? 'rotate-45' : ''}`} />
+        </button>
+      )}
+    </li>
+  );
+}
 
-      router.push("/booking-confirmation");
-    } catch (error) {
-      console.error("Submission failed:", error);
-      alert(`Error: ${error.message}`);
-    } finally {
-      setIsSubmitting(false);
+export default function Footer({ 
+  qualificationLink = "/credit-assessment", 
+  showCareers = false, 
+  abn = "80 650 730 699",
+  maxSimilarPerItem = 8,
+  afcaLink = "https://www.afca.org.au/members/83546",
+  asicLink = "https://connectonline.asic.gov.au/RegistrySearch/faces/landing/ProfessionalRegisters.jspx?searchText=650730699",
+  googleReviewsLink = "https://www.google.com/search?q=Australian+Credit+Solutions+reviews",
+  trustpilotLink = "https://www.trustpilot.com/review/australiancreditsolutions.com.au"
+}) {
+  const currentYear = new Date().getFullYear();
+  const [activeDisclosure, setActiveDisclosure] = useState(null);
+  const similarIndex = buildSimilarIndex(maxSimilarPerItem);
+  
+  const toggleDisclosure = (item) => {
+    if (activeDisclosure && activeDisclosure.label === item.label) {
+      setActiveDisclosure(null);
+    } else {
+      setActiveDisclosure({
+        ...item,
+        similarLinks: similarIndex[item.label] || []
+      });
     }
   };
+  
+  const closeDisclosure = () => {
+    setActiveDisclosure(null);
+  };
+  
+  // Add careers to company items if showCareers is true
+  const companyItems = showCareers 
+    ? [...canonicalItems.company, { label: 'Careers', href: '/careers' }]
+    : canonicalItems.company;
+  
+  // Add external trust links to legal-trust items
+  const legalTrustItems = [
+    ...canonicalItems['legal-trust'],
+    { label: 'AFCA Membership (83546)', href: afcaLink },
+    { label: 'ASIC Info', href: asicLink },
+    { label: 'External Reviews', href: googleReviewsLink }
+  ];
+  
+  // Handle escape key and outside clicks
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && activeDisclosure) {
+        closeDisclosure();
+      }
+    };
+    
+    const handleClickOutside = (e) => {
+      if (activeDisclosure && !e.target.closest('#footer-disclosure') && !e.target.closest('button[aria-controls="footer-disclosure"]')) {
+        closeDisclosure();
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscape);
+    document.addEventListener('click', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [activeDisclosure]);
 
   return (
     <footer className="bg-gradient-to-b from-blue-50 to-white text-gray-800 border-t border-gray-200">
+      {/* CTA Strip */}
+      <div className="bg-blue text-white">
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="text-center sm:text-left">
+              <h2 className="text-xl sm:text-2xl font-bold mb-2">
+                Find out if we can remove negative listings from your credit report—fast and confidential.
+              </h2>
+            </div>
+            <div className="text-center sm:text-right">
+              <Link
+                href={qualificationLink}
+                className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2"
+              >
+                Check if you qualify
+              </Link>
+              <p className="text-base text-blue-100 mt-2">
+                Takes 60 seconds. No obligation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Five Columns */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Company Info */}
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-8 gap-y-10 xl:grid-cols-[2fr_2fr_1fr_1fr_1fr]">
+          
+          {/* Column A - Services */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-5"
+            className="space-y-4"
           >
-            <Logo className="h-10 w-auto text-blue-900" />
-            <p className="text-gray-600">
-              Australian Credit Solutions helps individuals and businesses
-              manage their credit profiles and financial opportunities.
-            </p>
-
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <div className="bg-blue-100 p-1 rounded-full">
-                  <ShieldCheck className="w-4 h-4 text-blue" />
-                </div>
-                <span className="text-sm font-medium text-gray-700">
-                  Verified with AFCA and ASIC Australia
-                </span>
-              </div>
-              <p className="text-xs text-gray-500">
-                ABN: 80 650 730 699 | ACN: 650 730 699
-                <br />
-                AFCA membership: 83546
-              </p>
-            </div>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://www.facebook.com/australiancreditsolutions"
-                className="hover:text-blue-200"
-                aria-label="Facebook"
-              >
-                <FacebookIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://x.com/credits_aussie"
-                className="hover:text-blue-200"
-                aria-label="Twitter"
-              >
-                <TwitterIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.instagram.com/australian_credit_solution/"
-                className="hover:text-blue-200"
-                aria-label="Instagram"
-              >
-                <InstagramIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/australian-credit-solutions/"
-                className="hover:text-blue-200"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://ph.pinterest.com/australiancreditsolutions/"
-                className="hover:text-blue-200 hidden lg:block"
-                aria-label="Pinterest"
-              >
-                <PinterestIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.youtube.com/@australiancreditsolutions3719"
-                className="hover:text-blue-200 hidden lg:block"
-                aria-label="YouTube"
-              >
-                <YoutubeIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.tiktok.com/@australiancreditrepair"
-                className="hover:text-blue-200 hidden lg:block"
-                aria-label="TikTok"
-              >
-                <TikTokIcon className="w-4 h-4" />
-              </a>
-            </div>
+            <h3 className="text-base font-semibold uppercase tracking-wide text-gray-900">Services</h3>
+            <ul className="space-y-2">
+              {canonicalItems.services.map((item, index) => (
+                <ExpandableLink
+                  key={index}
+                  item={item}
+                  similarLinks={similarIndex[item.label]}
+                  isActive={activeDisclosure?.label === item.label}
+                  onToggle={() => toggleDisclosure(item)}
+                />
+              ))}
+            </ul>
           </motion.div>
 
-          {/* Contact Info */}
+          {/* Column B - Credit Help */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="space-y-5"
+            className="space-y-4"
           >
-            <h3 className="text-xl font-bold text-gray-900">Contact Us</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <Phone className="w-5 h-5 text-blue" />
-                </div>
-                <div>
-                  <p className="font-medium text-gray-700">Phone</p>
-                  <a
-                    href="tel:0489265737"
-                    className="text-gray-600 hover:text-blue-600 transition-colors"
-                  >
-                    0489 265 737
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <Mail className="w-5 h-5 text-blue" />
-                </div>
-                <div>
-                  <p className="font-medium text-gray-700">Email</p>
-                  <a
-                    href="mailto:help@australiancreditsolutions.com.au"
-                    className="text-gray-600 hover:text-blue-600 transition-colors"
-                  >
-                    help@australiancreditsolutions.com.au
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <MapPin className="w-5 h-5 text-blue" />
-                </div>
-                <div>
-                  <p className="font-medium text-gray-700">Address</p>
-                  <address className="text-gray-600 not-italic">
-                    Level 8, 805/220 Collins Street
-                    <br />
-                    Melbourne VIC 3000
-                  </address>
-                </div>
-              </div>
-            </div>
+            <h3 className="text-base font-semibold uppercase tracking-wide text-gray-900">Credit Help</h3>
+            <ul className="space-y-2">
+              {canonicalItems['credit-help'].map((item, index) => (
+                <ExpandableLink
+                  key={index}
+                  item={item}
+                  similarLinks={similarIndex[item.label]}
+                  isActive={activeDisclosure?.label === item.label}
+                  onToggle={() => toggleDisclosure(item)}
+                />
+              ))}
+            </ul>
           </motion.div>
 
-          {/* CTA Form */}
+          {/* Column C - Locations */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-3"
+            className="space-y-4"
           >
-            <h3 className="text-xl font-bold text-gray-900">
-              Free Credit Assessment
-            </h3>
-            <p className="text-gray-600">
-              Start rebuilding your credit today with our no-obligation
-              assessment.
-            </p>
+            <h3 className="text-base font-semibold uppercase tracking-wide text-gray-900">Locations</h3>
+            <ul className="space-y-2">
+              {canonicalItems.locations.map((item, index) => (
+                <ExpandableLink
+                  key={index}
+                  item={item}
+                  similarLinks={similarIndex[item.label]}
+                  isActive={activeDisclosure?.label === item.label}
+                  onToggle={() => toggleDisclosure(item)}
+                />
+              ))}
+            </ul>
+          </motion.div>
 
-            <form onSubmit={handleSubmit} className="space-y-2">
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={formData.fullName}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-1 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-              />
+          {/* Column D - Company */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="space-y-4"
+          >
+            <h3 className="text-base font-semibold uppercase tracking-wide text-gray-900">Company</h3>
+            <ul className="space-y-2">
+              {companyItems.map((item, index) => (
+                <ExpandableLink
+                  key={index}
+                  item={item}
+                  similarLinks={similarIndex[item.label]}
+                  isActive={activeDisclosure?.label === item.label}
+                  onToggle={() => toggleDisclosure(item)}
+                />
+              ))}
+            </ul>
+          </motion.div>
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-1 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-              />
-
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-1 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-              />
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="mt-1 w-full rounded-lg bg-blue px-5 py-2 text-sm font-medium uppercase tracking-wider text-white shadow-md transition-all hover:from-blue hover:to-blue-900 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
-              >
-                {isSubmitting ? "Processing..." : "Get Free Assesment"}
-              </button>
-
-              {/* Admin fee text */}
-              <p className="text-xs text-gray-500 text-center mt-2">
-                A one-off $330 admin fee applies regardless of outcome.
-              </p>
-            </form>
+          {/* Column E - Legal & Trust */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="space-y-4"
+          >
+            <h3 className="text-base font-semibold uppercase tracking-wide text-gray-900">Legal & Trust</h3>
+            <ul className="space-y-2">
+              {legalTrustItems.map((item, index) => (
+                <ExpandableLink
+                  key={index}
+                  item={item}
+                  similarLinks={similarIndex[item.label]}
+                  isActive={activeDisclosure?.label === item.label}
+                  onToggle={() => toggleDisclosure(item)}
+                />
+              ))}
+            </ul>
           </motion.div>
         </div>
-        {/* Services by State */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-4 lg:mt-12 border-t border-gray-200 pt-8"
+         {/* Global Disclosure Row */}
+      <div className="pt-6 relative z-10">
+        <section 
+          id="footer-disclosure"
+          aria-live="polite"
+          className="relative w-full"
         >
-          <h4 className="text-lg font-semibold text-gray-900 mb-4">
-            We provide services in all states:
-          </h4>
-          
-          {/* States Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 mb-6">
-            {stateLinks.map((state) => (
-              <div key={state.name} className="space-y-2">
-                {/* State Toggle Button */}
-                <button
-                  ref={(el) => (stateRefs.current[state.name] = el)}
-                  onClick={() => toggleState(state.name)}
-                  onKeyDown={(e) => handleKeyDown(e, state.name)}
-                  aria-expanded={openState === state.name}
-                  aria-controls={`state-links-${state.name}`}
-                  className="flex items-center justify-between w-full p-2 text-left bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          {activeDisclosure && (
+            <div className="mx-auto max-w-[1200px] px-4">
+              <div className="rounded-xl bg-white/70 shadow-sm ring-1 ring-black/5 backdrop-blur-sm px-4 py-3 flex flex-wrap gap-3 items-center">
+                <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  Related to: {activeDisclosure.label}
+                </span>
+                <ul className="flex flex-wrap gap-2">
+                  {activeDisclosure.similarLinks.map((link, index) => {
+                    const LinkComponent = isInternal(link.href) ? Link : 'a';
+                    const linkProps = isInternal(link.href) 
+                      ? { href: link.href }
+                      : { href: link.href, target: '_blank', rel: 'noopener noreferrer' };
+                    
+                    return (
+                      <li key={index}>
+                        <LinkComponent
+                          {...linkProps}
+                          className="inline-flex items-center rounded-full border px-3 py-1 text-base hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        >
+                          {link.label}
+                        </LinkComponent>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <button 
+                  aria-label="Close related links" 
+                  className="ml-auto text-base underline underline-offset-4"
+                  onClick={closeDisclosure}
                 >
-                  <span className="text-sm font-medium text-gray-900">
-                    {state.name} ({state.abbreviation})
-                  </span>
-                  <PlusMinusIcon isOpen={openState === state.name} />
+                  Close
                 </button>
-
-                {/* Collapsible Links */}
-                <motion.div
-                  id={`state-links-${state.name}`}
-                  initial={false}
-                  animate={{
-                    height: openState === state.name ? "auto" : 0,
-                    opacity: openState === state.name ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden"
-                >
-                  <div className="border-t border-gray-200 pt-2 space-y-1">
-                    {state.links.map((link, index) => (
-                      <Link
-                        key={index}
-                        href={link.href}
-                        className="block px-2 py-1 text-sm text-blue hover:text-blue-800 hover:bg-blue-50 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
-                        onKeyDown={(e) => handleLinkKeyDown(e, state.name)}
-                        tabIndex={openState === state.name ? 0 : -1}
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                </motion.div>
               </div>
-            ))}
+            </div>
+          )}
+        </section>
+      </div>
+      </div>
+
+     
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-200 bg-white relative z-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="text-center sm:text-left">
+              <p className="text-base text-gray-600">
+                © Australian Credit Solutions, {currentYear}
+                {abn && ` • ABN ${abn}`}
+              </p>
+            </div>
+            <div className="flex items-center justify-center sm:justify-end gap-4">
+              <a
+                href="https://www.linkedin.com/company/australian-credit-solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.facebook.com/australiancreditsolutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+                aria-label="Facebook"
+              >
+                <FacebookIcon className="w-5 h-5" />
+              </a>
+              <a
+                href={googleReviewsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+                aria-label="Google"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+              </a>
+              <a
+                href={trustpilotLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+                aria-label="Trustpilot"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </a>
+            </div>
           </div>
-        </motion.div>
-        {/* Legal & Utility Links */}
-        <div className="mt-6 border-t border-gray-200 pt-4">
-          <nav
-            className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-gray-600"
-            aria-label="Footer links"
-          >
-            <Link
-              href="/terms-conditions"
-              className="hover:text-blue hover:underline"
-            >
-              Terms and Conditions
-            </Link>
-            <span aria-hidden="true" className="text-gray-300">
-              |
-            </span>
-            <Link
-              href="/privacy-policy"
-              className="hover:text-blue hover:underline"
-            >
-              Privacy Policy
-            </Link>
-            <span aria-hidden="true" className="text-gray-300">
-              |
-            </span>
-            <Link
-              href="/testimonial"
-              className="hover:text-blue hover:underline"
-            >
-              Testimonials
-            </Link>
-            <span aria-hidden="true" className="text-gray-300">
-              |
-            </span>
-            <Link
-              href="/complaints-handling-policy"
-              className="hover:text-blue hover:underline"
-            >
-              Complaints Handling Policy
-            </Link>
-            <span aria-hidden="true" className="text-gray-300">
-              |
-            </span>
-            <Link href="/blogs" className="hover:text-blue hover:underline">
-              Blogs
-            </Link>
-            <span aria-hidden="true" className="text-gray-300">
-              |
-            </span>
-            <Link href="/faq" className="hover:text-blue hover:underline">
-              FAQ
-            </Link>
-          </nav>
         </div>
       </div>
     </footer>

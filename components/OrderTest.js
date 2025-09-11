@@ -97,7 +97,7 @@ export default function OrderTest() {
         {/* Customer Information */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-base font-medium text-gray-700 mb-2">
               Customer Name *
             </label>
             <input
@@ -111,7 +111,7 @@ export default function OrderTest() {
           </div>
           
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-base font-medium text-gray-700 mb-2">
               Customer Email *
             </label>
             <input
@@ -128,7 +128,7 @@ export default function OrderTest() {
         {/* Order Details */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-base font-medium text-gray-700 mb-2">
               Total Amount *
             </label>
             <input
@@ -143,7 +143,7 @@ export default function OrderTest() {
           </div>
           
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-base font-medium text-gray-700 mb-2">
               Currency
             </label>
             <select
@@ -161,7 +161,7 @@ export default function OrderTest() {
 
         {/* Items */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-base font-medium text-gray-700 mb-2">
             Order Items *
           </label>
           {orderData.items.map((item, index) => (
@@ -221,7 +221,7 @@ export default function OrderTest() {
 
         {/* Notes */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-base font-medium text-gray-700 mb-2">
             Notes
           </label>
           <textarea

@@ -32,7 +32,7 @@ export default function AuthorBio() {
 
           {/* Paragraph only when expanded */}
           {isExpanded && (
-            <p className="text-gray-700 text-sm leading-relaxed mt-1">
+            <p className="text-gray-700 text-base leading-relaxed mt-1">
               Elisa Rothschild is the Principal Lawyer & Director of Australian
               Credit Solutions. A Monash University graduate, Elisa specialises
               in Credit Repair, Credit Law, Family Law, Debt Negotiation, and
@@ -57,17 +57,7 @@ export default function AuthorBio() {
               />
             </button>
 
-            <div className="flex items-center gap-2">
-              <a
-                href="https://www.linkedin.com/in/elisa-rothschild"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-6 h-6 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-200"
-                aria-label="Connect with Elisa Rothschild on LinkedIn"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-            </div>
+           
           </div>
         </div>
       </div>

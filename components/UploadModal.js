@@ -93,7 +93,7 @@ export default function UploadModal({ order, type, onClose }) {
               <h3 className="text-lg font-semibold text-gray-900">
                 Upload {type === 'id' ? 'ID Verification' : 'Payment Receipt'}
               </h3>
-              <p className="text-sm text-gray-500 mt-1">Order #{order.id}</p>
+              <p className="text-base text-gray-500 mt-1">Order #{order.id}</p>
             </div>
             <button 
               onClick={handleCancel}
@@ -107,7 +107,7 @@ export default function UploadModal({ order, type, onClose }) {
         
           <form onSubmit={handleSubmit} className="p-5">
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-base font-medium text-gray-700 mb-2">
                 {type === 'id' ? 'ID Document' : 'Payment Proof'}
               </label>
               
@@ -143,7 +143,7 @@ export default function UploadModal({ order, type, onClose }) {
                         e.stopPropagation();
                         setFile(null);
                       }}
-                      className="text-orange hover:text-orange-dark text-sm mt-3"
+                      className="text-orange hover:text-orange-dark text-base mt-3"
                     >
                       Change file
                     </button>
@@ -154,7 +154,7 @@ export default function UploadModal({ order, type, onClose }) {
                       <ArrowUpTrayIcon className="h-6 w-6 text-gray-400" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-gray-700">
+                      <p className="text-base font-medium text-gray-700">
                         Drag and drop file here
                       </p>
                       <p className="text-xs text-gray-500 mt-1">
@@ -174,7 +174,7 @@ export default function UploadModal({ order, type, onClose }) {
               <button
                 type="button"
                 onClick={handleCancel}
-                className="px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gray-900 rounded-lg hover:bg-blue-50 transition-colors"
+                className="px-4 py-2.5 text-base font-medium text-gray-700 hover:text-gray-900 rounded-lg hover:bg-blue-50 transition-colors"
                 disabled={isLoading}
               >
                 Cancel
@@ -182,7 +182,7 @@ export default function UploadModal({ order, type, onClose }) {
               <button
                 type="submit"
                 disabled={isLoading || !file}
-                className={`px-4 py-2.5 text-sm font-medium text-white rounded-lg transition-colors ${isLoading || !file ? 'bg-orange-300 cursor-not-allowed' : 'bg-orange hover:bg-orange-dark'}`}
+                className={`px-4 py-2.5 text-base font-medium text-white rounded-lg transition-colors ${isLoading || !file ? 'bg-orange-300 cursor-not-allowed' : 'bg-orange hover:bg-orange-dark'}`}
               >
                 {isLoading ? (
                   <span className="flex items-center justify-center">

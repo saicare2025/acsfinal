@@ -22,145 +22,262 @@ export default function Home() {
   const structuredData = generateMinimalStructuredData({
     pathname: "/credit-repair-darwin",
     title: "Darwin Credit Repair Experts | Australian Credit Solutions",
-    description: "Professional credit repair services in Darwin. Remove defaults, correct credit reports, and improve your credit score with Darwin's trusted credit repair experts.",
+    description:
+      "Professional credit repair services in Darwin. Remove defaults, correct credit reports, and improve your credit score with Darwin's trusted credit repair experts.",
     isService: true,
-    serviceType: "Credit Repair Services Darwin"
+    serviceType: "Credit Repair Services Darwin",
   });
   return (
     <main className="flex min-h-screen flex-col">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
       <Header />
       <HeroSection />
-      <ReviewsWidget/>
       <VideoServicesSection />
-     <section className="py-16 bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6">
-    {/* Question 1 */}
-    <div className="mb-12">
-      <h2 className="text-2xl font-bold text-[#0668a5] mb-4">
-        Question #1: When is the best time to leverage a credit fixing service in Darwin?
-      </h2>
-      <div className="space-y-4 text-gray-700">
-        <p>
-          The majority of individuals ask this question. When do you know it&apos;s time to get your credit file <a href="/get-credit-repair" className="text-blue-600 hover:text-blue-800 underline">Get Credit Repair</a> fixed? The best time to fix your credit file is when you are in the process of applying for a loan.
-        </p>
-        <p>
-          Another good time to get started is after any significant life event that affects your finances or if you&apos;re looking to change some behaviors and habits as part of a financial plan, such as making substantial investments or getting married. There are times when individuals require <a href="/what-is-a-good-credit-score-australia" className="text-blue-600 hover:text-blue-800 underline">What Is A Good Credit Score Australia</a> help dealing with aggressive debt collectors. Still, such situations should be evaluated individually by experts who can better analyze the situation and advise on what actions would be beneficial and suitable for these kinds of creditors/debtors. However, to repair it, you must first determine what is wrong with it.
-        </p>
-      </div>
-    </div>
-
-    {/* Question 2 */}
-    <div className="mb-12">
-      <h2 className="text-2xl font-bold text-[#0668a5] mb-4">
-        Question #2: What are some of the benefits of fixing a credit score fast in Darwin?
-      </h2>
-      <div className="space-y-4 text-gray-700">
-        <p>
-          Bad credit might have prevented you from renting an apartment, buying a car, getting a loan for college tuition, or finding a bank to offer you reasonable interest rates. It might have made it hard for you to get <a href="/remove-defaults-from-your-credit-file" className="text-blue-600 hover:text-blue-800 underline">Remove Defaults From Your Credit File</a> your gas furnace serviced, or if the power goes out, it may make it difficult for them to cut your electricity until they are sure that payment will be made on their end. So what are the benefits of fixing bad credit?
-        </p>
-        
-        <h3 className="font-semibold mt-6 mb-3">
-          Some of the benefits of fixing your credit fast in Darwin:
-        </h3>
-        <ul className="space-y-3 pl-5 list-disc">
-          <li>You can upgrade car insurance rates to lower levels.</li>
-          <li>Save money on interest rates with loans and mortgages after six months.</li>
-          <li>Prices make big drops in numerous areas for your everyday needs, from groceries to cars.</li>
-          <li>Get a rental ASAP, so you have a place to live while you work towards long-term solutions.</li>
-          <li>Higher Scores Mean Saving Time - When you have higher credit scores, things will be easier for you in terms of getting loans, securing apartments or car loans, etc. Having these things will save time to jump through hoops to proceed with particular projects in life.</li>
-        </ul>
-      </div>
-    </div>
-
-    {/* Question 3 */}
-    <div className="mb-12">
-      <h2 className="text-2xl font-bold text-[#0668a5] mb-4">
-        Question #3: How do you fix a bad credit rating?
-      </h2>
-      <div className="space-y-4 text-gray-700">
-        <p>
-          Consistently making small payments on your debts will quickly increase the amount of money you owe. This is not good for your credit score <a href="/default-removal-services-australia" className="text-blue-600 hover:text-blue-800 underline">Default Removal Services Australia</a> because it will show a high debt-to-income ratio. And that&apos;s what you should never do in a desperate attempt to fix a credit score fast in Darwin.
-        </p>
-        <p>
-          If you&apos;re behind on payments, there are options like debt consolidation or refinancing that might help get things back in order. A new credit card with a reduced interest rate may also be beneficial. If that&apos;s what has caused the problem, paying off balances on other cards (you only need one) and no more overspending will be all it takes to get out of trouble. The best way, of course, is to stay away from always spending beyond your means, no matter how tempting, but this doesn&apos;t mean cutting yourself off thoroughly - think twice.
-        </p>
-        
-        <h3 className="font-semibold mt-6 mb-3">
-          More tips for fixing your credit history and improving your financial situation:
-        </h3>
-        
-        <div className="space-y-6">
-          <div className="flex items-start">
-            <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">1</span>
-            <p>
-              Take a look at your credit report and note any mistakes and notify the credit bureau to correct those mistakes as those will negatively affect your credit score. Be aware of any bills not being reported -- account numbers, due date, etc.
-            </p>
+      <section className="py-16 bg-white">
+        <ReviewsWidget />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          {/* Question 1 */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-[#0668a5] mb-4">
+              Question #1: When is the best time to leverage a credit fixing
+              service in Darwin?
+            </h2>
+            <div className="space-y-4 text-gray-700">
+              <p>
+                The majority of individuals ask this question. When do you know
+                it&apos;s time to get your credit file{" "}
+                <a
+                  href="/get-credit-repair"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  Get Credit Repair
+                </a>{" "}
+                fixed? The best time to fix your credit file is when you are in
+                the process of applying for a loan.
+              </p>
+              <p>
+                Another good time to get started is after any significant life
+                event that affects your finances or if you&apos;re looking to
+                change some behaviors and habits as part of a financial plan,
+                such as making substantial investments or getting married. There
+                are times when individuals require{" "}
+                <a
+                  href="/what-is-a-good-credit-score-australia"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  What Is A Good Credit Score Australia
+                </a>{" "}
+                help dealing with aggressive debt collectors. Still, such
+                situations should be evaluated individually by experts who can
+                better analyze the situation and advise on what actions would be
+                beneficial and suitable for these kinds of creditors/debtors.
+                However, to repair it, you must first determine what is wrong
+                with it.
+              </p>
+            </div>
           </div>
-          
-          <div className="flex items-start">
-            <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">2</span>
-            <p>
-              Reviewing late payments and unpaid accounts to set up payment plans for those accounts as, according to FICO models, they will be reflected as &apos;bad debts.&apos; Credit card companies may offer debt settlement or work out arrangements; however, these options should only be considered for extreme cases where carrying the debt burden is unmanageable. Consumers are subject to collections calls with no end in sight.
-            </p>
-          </div>
-          
-          <div className="flex items-start">
-            <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">3</span>
-            <div>
-              <p>Practicing good financial habits such as:</p>
-              <ul className="pl-5 mt-2 space-y-2 list-disc">
-                <li>Paying your bills on time</li>
-                <li>Avoiding credit card debt and,</li>
-                <li>Having a savings account</li>
+
+          {/* Question 2 */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-[#0668a5] mb-4">
+              Question #2: What are some of the benefits of fixing a credit
+              score fast in Darwin?
+            </h2>
+            <div className="space-y-4 text-gray-700">
+              <p>
+                Bad credit might have prevented you from renting an apartment,
+                buying a car, getting a loan for college tuition, or finding a
+                bank to offer you reasonable interest rates. It might have made
+                it hard for you to get{" "}
+                <a
+                  href="/remove-defaults-from-your-credit-file"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  Remove Defaults From Your Credit File
+                </a>{" "}
+                your gas furnace serviced, or if the power goes out, it may make
+                it difficult for them to cut your electricity until they are
+                sure that payment will be made on their end. So what are the
+                benefits of fixing bad credit?
+              </p>
+
+              <h3 className="font-semibold mt-6 mb-3">
+                Some of the benefits of fixing your credit fast in Darwin:
+              </h3>
+              <ul className="space-y-3 pl-5 list-disc">
+                <li>You can upgrade car insurance rates to lower levels.</li>
+                <li>
+                  Save money on interest rates with loans and mortgages after
+                  six months.
+                </li>
+                <li>
+                  Prices make big drops in numerous areas for your everyday
+                  needs, from groceries to cars.
+                </li>
+                <li>
+                  Get a rental ASAP, so you have a place to live while you work
+                  towards long-term solutions.
+                </li>
+                <li>
+                  Higher Scores Mean Saving Time - When you have higher credit
+                  scores, things will be easier for you in terms of getting
+                  loans, securing apartments or car loans, etc. Having these
+                  things will save time to jump through hoops to proceed with
+                  particular projects in life.
+                </li>
               </ul>
             </div>
           </div>
-          
-          <div className="flex items-start">
-            <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">4</span>
-            <p>
-              Find a reputable debt negotiation company to help you out. Debt negotiation companies work with creditors to create a payment plan that&apos;s affordable and fair, and they negotiate on your behalf for favorable terms, so you don&apos;t have to take the hit yourself.
-            </p>
+
+          {/* Question 3 */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-[#0668a5] mb-4">
+              Question #3: How do you fix a bad credit rating?
+            </h2>
+            <div className="space-y-4 text-gray-700">
+              <p>
+                Consistently making small payments on your debts will quickly
+                increase the amount of money you owe. This is not good for your
+                credit score{" "}
+                <a
+                  href="/default-removal-services-australia"
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
+                  Default Removal Services Australia
+                </a>{" "}
+                because it will show a high debt-to-income ratio. And
+                that&apos;s what you should never do in a desperate attempt to
+                fix a credit score fast in Darwin.
+              </p>
+              <p>
+                If you&apos;re behind on payments, there are options like debt
+                consolidation or refinancing that might help get things back in
+                order. A new credit card with a reduced interest rate may also
+                be beneficial. If that&apos;s what has caused the problem,
+                paying off balances on other cards (you only need one) and no
+                more overspending will be all it takes to get out of trouble.
+                The best way, of course, is to stay away from always spending
+                beyond your means, no matter how tempting, but this doesn&apos;t
+                mean cutting yourself off thoroughly - think twice.
+              </p>
+
+              <h3 className="font-semibold mt-6 mb-3">
+                More tips for fixing your credit history and improving your
+                financial situation:
+              </h3>
+
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                    1
+                  </span>
+                  <p>
+                    Take a look at your credit report and note any mistakes and
+                    notify the credit bureau to correct those mistakes as those
+                    will negatively affect your credit score. Be aware of any
+                    bills not being reported -- account numbers, due date, etc.
+                  </p>
+                </div>
+
+                <div className="flex items-start">
+                  <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                    2
+                  </span>
+                  <p>
+                    Reviewing late payments and unpaid accounts to set up
+                    payment plans for those accounts as, according to FICO
+                    models, they will be reflected as &apos;bad debts.&apos;
+                    Credit card companies may offer debt settlement or work out
+                    arrangements; however, these options should only be
+                    considered for extreme cases where carrying the debt burden
+                    is unmanageable. Consumers are subject to collections calls
+                    with no end in sight.
+                  </p>
+                </div>
+
+                <div className="flex items-start">
+                  <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                    3
+                  </span>
+                  <div>
+                    <p>Practicing good financial habits such as:</p>
+                    <ul className="pl-5 mt-2 space-y-2 list-disc">
+                      <li>Paying your bills on time</li>
+                      <li>Avoiding credit card debt and,</li>
+                      <li>Having a savings account</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <span className="bg-[#0668a5] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                    4
+                  </span>
+                  <p>
+                    Find a reputable debt negotiation company to help you out.
+                    Debt negotiation companies work with creditors to create a
+                    payment plan that&apos;s affordable and fair, and they
+                    negotiate on your behalf for favorable terms, so you
+                    don&apos;t have to take the hit yourself.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Question 4 */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-[#0668a5] mb-4">
+              Question #4: What should I know before I ask a company to help fix
+              my credit in Darwin?
+            </h2>
+            <div className="space-y-4 text-gray-700">
+              <p>
+                Make sure you know how to fix your credit report before you
+                contact the company. If they ask questions about what&apos;s
+                wrong, discuss your former debts and why those items were paid
+                late or not at all. If they seem unclear, don&apos;t be afraid
+                to walk them through what needs to be fixed with a credit report
+                using an example from their online database as a guide.
+              </p>
+              <p>
+                If they tell you that it will cost money for a consultation, see
+                if the price is already shown on their website. This quote
+                should be free because it helps future clients decide whether or
+                not it is worth their time and money to hear the advice. Never
+                spend anything until you talk with someone first.
+              </p>
+
+              <h3 className="font-semibold mt-6 mb-3">
+                What makes our service stand out for your needs?
+              </h3>
+              <p>
+                Australian Credit Solutions are considered the best credit
+                fixing service in Darwin because they specialize in repairing
+                credit, which other legal firms often overlook.
+              </p>
+              <p>
+                While many law firms understand your situation, they may not
+                have the knowledge or experience to offer a full-service
+                recovery for you.
+              </p>
+              <p>
+                Australian Credit Solutions have both knowledge and experience
+                dealing with severe cases of credit abuse that other legal firms
+                shy away from. This will give you the security that your
+                particular case will receive maximum attention and
+                individualized representation - no two cases are alike after
+                all!
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    {/* Question 4 */}
-    <div className="mb-12">
-      <h2 className="text-2xl font-bold text-[#0668a5] mb-4">
-        Question #4: What should I know before I ask a company to help fix my credit in Darwin?
-      </h2>
-      <div className="space-y-4 text-gray-700">
-        <p>
-          Make sure you know how to fix your credit report before you contact the company. If they ask questions about what&apos;s wrong, discuss your former debts and why those items were paid late or not at all. If they seem unclear, don&apos;t be afraid to walk them through what needs to be fixed with a credit report using an example from their online database as a guide.
-        </p>
-        <p>
-          If they tell you that it will cost money for a consultation, see if the price is already shown on their website. This quote should be free because it helps future clients decide whether or not it is worth their time and money to hear the advice. Never spend anything until you talk with someone first.
-        </p>
-        
-        <h3 className="font-semibold mt-6 mb-3">
-          What makes our service stand out for your needs?
-        </h3>
-        <p>
-          Australian Credit Solutions are considered the best credit fixing service in Darwin because they specialize in repairing credit, which other legal firms often overlook.
-        </p>
-        <p>
-          While many law firms understand your situation, they may not have the knowledge or experience to offer a full-service recovery for you.
-        </p>
-        <p>
-          Australian Credit Solutions have both knowledge and experience dealing with severe cases of credit abuse that other legal firms shy away from. This will give you the security that your particular case will receive maximum attention and individualized representation - no two cases are alike after all!
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
       <HowWorks />
       <section className="py-16 bg-gradient-to-b from-white to-blue-50 text-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,7 +298,7 @@ export default function Home() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Removing Incorrect Defaults */}
-             <Link href="/credit-enquiry-removal-australia">
+            <Link href="/credit-enquiry-removal-australia">
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-xl font-semibold text-[#0668a5] mb-3">
                   Removing Incorrect Defaults
@@ -258,9 +375,12 @@ export default function Home() {
           {/* CTA */}
         </div>
       </section>
-      
-      <RelatedBlock currentSlug="/credit-repair-darwin" heading="Related services & guides" />
-      
+
+      <RelatedBlock
+        currentSlug="/credit-repair-darwin"
+        heading="Related services & guides"
+      />
+
       <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
@@ -455,7 +575,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }
