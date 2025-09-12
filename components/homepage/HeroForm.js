@@ -3,7 +3,7 @@ import React, { useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const FooterForm = ({
-  heading = "Free Credit File Assessment",
+  heading = "FREE CREDIT CHECK FORM",
   subheading = "See if your negative listings can be removed – quick, confidential, and no win no fee.",
   paragraph = "",
 }) => {
@@ -144,14 +144,12 @@ const FooterForm = ({
       {/* Header with dynamic content */}
       <div className="mb-6 text-center">
         <h2 className="text-xl font-extrabold leading-tight text-blue sm:text-2xl lg:text-3xl">
-          {heading}
+        FREE CREDIT CHECK FORM
         </h2>
         <p className="mt-1 text-base text-center text-slate-600 sm:text-base">
           See if your negative listings can be removed – quick, confidential,
           and{" "}
-          <span className="font-bold text-blue">
-            <br></br>no win no fee.
-          </span>
+          
         </p>
       </div>
 

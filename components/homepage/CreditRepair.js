@@ -17,37 +17,37 @@ const CreditRepairSection = () => {
   const services = [
     {
       icon: <ShieldCheck className="w-6 h-6" />,
-      title: "Removing Incorrect Defaults",
+      title: "Default Removal",
       description: "We'll help fix any false defaults affecting your score.",
-      href: "/credit-enquiry-removal-australia",
+      href: "/default-removal-services-australia",
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "Late Payment Removal",
+      description:
+        "We'll help dispute and correct late payment history inaccuracies.",
+      href: "/worst-repayment-history-removal",
     },
     {
       icon: <Search className="w-6 h-6" />,
-      title: "Disputing Invalid Inquiries",
+      title: "Credit Inquiry Removal",
       description:
         "Any unwarranted credit inquiries? We'll challenge them for you.",
       href: "/credit-enquiry-removal",
     },
     {
       icon: <Gavel className="w-6 h-6" />,
-      title: "Court Judgments",
+      title: "Court Judgment Removal",
       description:
         "Assistance with addressing and resolving any court judgments.",
       href: "/court-judgment-removal",
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Worst Repayment History Disputes",
-      description:
-        "We'll help dispute and correct repayment history inaccuracies.",
-      href: "/worst-repayment-history-removal",
     },
     {
       icon: <FileText className="w-6 h-6" />,
       title: "Detailed Credit Report Analysis",
       description:
         "Comprehensive breakdown to understand and improve your score.",
-      href: "/default-removal-services-australia",
+      href: "/credit-enquiry-removal-australia",
     },
     {
       icon: <Fingerprint className="w-6 h-6" />,
@@ -67,12 +67,8 @@ const CreditRepairSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Are You Facing{" "}
-            <span className="text-blue">Credit Score Issues</span>?
+            Credit Repair Services in Australia
           </h2>
-          <p className="text-xl text-blue font-medium mb-6">
-            Fix your Credit with the #1 Credit Repair Solution
-          </p>
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-600">
               At Australian Credit Solutions, we help you take control of your

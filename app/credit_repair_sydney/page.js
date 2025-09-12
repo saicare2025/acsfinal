@@ -5,7 +5,6 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import CompanyCarousel from "../../components/homepage/CompanySection";
 import HeroSection from "../../components/homepage/HeroSection4";
-import TestimonialSection from "../../components/homepage/ScrollTestimonials";
 import VideoServicesSection from "../../components/homepage/VideoServicesSection";
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
@@ -370,7 +369,6 @@ export default function Home() {
         heading="Related services & guides"
       />
 
-      <TestimonialSection />
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
         {/* Decorative elements */}

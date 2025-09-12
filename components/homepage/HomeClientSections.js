@@ -2,10 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-// Dynamic imports – these components are too heavy for SSR
-const ScrollTestimonials = dynamic(() => import("./ScrollTestimonials"), {
-  loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-lg" />
-});
+
 
 const Testimonials3DCarousel = dynamic(() => import("./Testmonials"), {
   loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-lg" />
@@ -28,7 +25,7 @@ export default function HomeClientSections() {
     <>
       
       <TransformationalJourney />
-      <ScrollTestimonials />
+     
       <CTASection />
       <LoanCalculator />
     </>
