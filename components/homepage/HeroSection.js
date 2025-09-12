@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import heroImage from '../../app/assets/hero.webp';
-import CreditAssessmentForm from './HeroForm';
 import {
   CurrencyDollarIcon,
   ShieldCheckIcon,
@@ -17,11 +16,10 @@ const FeatureItem = ({ Icon, title, description }) => (
     </div>
     <div>
       <h3 className="font-semibold text-gray-800">{title}</h3>
-      <p className="text-gray-600 text-base">{description}</p>
+      {description && <p className="text-gray-600 text-base">{description}</p>}
     </div>
   </li>
 );
-
 
 export default function HeroSection() {
   return (
@@ -36,13 +34,17 @@ export default function HeroSection() {
                 Get Your <span className="text-blue">Free Credit</span> Assessment Today
               </h3>
 
-              <h4 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-4">
-                No Win, No Fee - Terms Apply*
+              <h4 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-1">
+                No Win, No Fee
+                <sup className="text-[10px] align-super ml-0.5">*</sup>
               </h4>
+              <p className="text-[11px] text-gray-500 text-center lg:text-left mb-4">
+                *Terms &amp; conditions apply.
+              </p>
 
               <MotionFadeUp delay={0.05}>
                 <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                <FooterForm/>
+                  <FooterForm />
                 </div>
               </MotionFadeUp>
             </MotionFadeUp>
@@ -75,8 +77,12 @@ export default function HeroSection() {
                   />
                   <FeatureItem
                     Icon={ShieldCheckIcon}
-                    title="No Win, No Fee * Terms Apply"
-                    description="A one-off $330 admin fee applies regardless of outcome."
+                    title={
+                      <>
+                        No Win, No Fee
+                        <sup className="text-[10px] align-super ml-0.5">*</sup>
+                      </>
+                    }
                   />
                   <FeatureItem
                     Icon={LockClosedIcon}
@@ -84,14 +90,14 @@ export default function HeroSection() {
                     description="Your data is protected with bank-level security"
                   />
                 </ul>
+                <p className="mt-3 text-[11px] text-gray-500">
+                  *Terms &amp; conditions apply.
+                </p>
               </div>
             </MotionFadeUp>
           </div>
         </div>
       </section>
-
-      {/* Pricing Disclosure Section */}
-      
     </>
   );
 }

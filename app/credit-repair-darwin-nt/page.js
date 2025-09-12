@@ -346,7 +346,7 @@ export default function CreditRepairDarwinPage() {
             <h4 className="font-semibold text-blue">Rural & Remote NT</h4>
             <p className="text-slate-700 mt-1">Katherine, Tennant Creek, Alice Springs, Gove Peninsula, McArthur River, Nhulunbuy, Jabiru</p>
             <div className="mt-4">
-              <Link href="/regional-nt-credit-repair" className="text-blue-600 underline hover:text-blue-800">Regional NT Credit Repair Services →</Link>
+              <Link href="/credit-repair-darwin-nt" className="text-blue-600 underline hover:text-blue-800">Regional NT Credit Repair Services →</Link>
             </div>
           </div>
         </div>
