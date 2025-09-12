@@ -25,10 +25,14 @@ export default function HeroSection() {
               className="mb-8"
             >
               <h1 className="text-3xl text-center lg:text-start md:text-4xl font-bold leading-tight mb-4 text-gray-700">
-                 Credit Repair Australia<span className="text-blue"> : Quick Solutions to Fix Bad Credit</span> with Australian Credit Solutions
+
+                Credit Repair Australia – Fix Defaults &amp; Improve Your Score Fast
               </h1>
 
-           
+              <h2 id="free-credit-check" className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-2">
+                Free Credit Check &amp; Fast Assessment
+              </h2>
+
 
               {/* Form */}
               <motion.div

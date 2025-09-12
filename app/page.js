@@ -83,7 +83,7 @@ const homepageStructuredData = {
       "@type": "WebPage",
       "@id": "https://www.australiancreditsolutions.com.au#homepage",
       "url": "https://www.australiancreditsolutions.com.au",
-      "name": "Australian Credit Solutions | Credit Repair Experts",
+      "name": "Credit Repair Australia – Fix Defaults & Improve Your Score Fast",
       "about": {
         "@id": "https://www.australiancreditsolutions.com.au#org"
       },
@@ -99,17 +99,21 @@ const homepageStructuredData = {
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(homepageStructuredData)
-        }}
-      />
-      <Header />
-      <HomePage/>
-      <Footer/>
-      <CookieConsent />
-    </main>
+    <>
+      <title>Credit Repair Australia – Fix Defaults & Improve Your Score Fast | Australian Credit Solutions</title>
+      <meta name="description" content="Professional credit repair services in Australia. Fix defaults, remove negative listings, and improve your credit score fast. No win, no fee guarantee. Licensed experts." />
+      <main className="flex min-h-screen flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(homepageStructuredData)
+          }}
+        />
+        <Header />
+        <HomePage/>
+        <Footer/>
+        <CookieConsent />
+      </main>
+    </>
   );
 }

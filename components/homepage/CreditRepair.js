@@ -43,11 +43,11 @@ const CreditRepairSection = () => {
       href: "/court-judgment-removal",
     },
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Detailed Credit Report Analysis",
+      icon: <Clock className="w-6 h-6" />,
+      title: "Repayment History Disputes",
       description:
-        "Comprehensive breakdown to understand and improve your score.",
-      href: "/credit-enquiry-removal-australia",
+        "We'll help dispute and correct repayment history inaccuracies.",
+      href: "/worst-repayment-history-removal",
     },
     {
       icon: <Fingerprint className="w-6 h-6" />,
@@ -55,10 +55,17 @@ const CreditRepairSection = () => {
       description: "We'll resolve identity theft issues affecting your credit.",
       href: "/credit-repair-australia",
     },
+    {
+      icon: <FileText className="w-6 h-6" />,
+      title: "Detailed Credit Report Analysis",
+      description:
+        "Comprehensive breakdown to understand and improve your score.",
+      href: "/credit-enquiry-removal-australia",
+    },
   ];
 
   return (
-    <section className="py-16 ">
+    <section id="credit-repair-services" className="py-16 ">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

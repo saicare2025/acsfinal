@@ -59,7 +59,7 @@ const CreditScoreTransformation = () => {
   };
 
   return (
-    <section className="pt-12 lg:py-16 bg-gradient-to-br from-white to-blue-100">
+    <section id="results" className="pt-12 lg:py-16 bg-gradient-to-br from-white to-blue-100">
       <div className="container max-w-7xl  mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,11 +68,16 @@ const CreditScoreTransformation = () => {
           className="text-start mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            Real <span className="text-blue">Credit Score</span> Transformations
+            Real Client Success Stories
           </h2>
           <p className="text-lg text-blue ">
             See actual results we&apos;ve achieved for our clients
           </p>
+          {/* <div className="mt-4 space-y-2">
+            <h3 className="text-xl font-semibold text-gray-800">Defaults Removed – Case Studies</h3>
+            <h3 className="text-xl font-semibold text-gray-800">Credit Score Improvements</h3>
+            <h3 className="text-xl font-semibold text-gray-800">Client Video Testimonial</h3>
+          </div> */}
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">

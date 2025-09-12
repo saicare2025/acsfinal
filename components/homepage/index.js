@@ -6,7 +6,9 @@ import CompanyCarousel from "./CompanySection";
 import HomeClientSections from "./HomeClientSections";
 import CreditRepairSection from "./CreditRepair";
 import CreditRepairProcess from "./CreditRepairProcess.js";
-import ReviewWidget from "../../components/homepage/TestmonialProduct"
+import ReviewWidget from "../../components/homepage/TestmonialProduct";
+import LoanApprovals from "./LoanApprovals";
+import FAQ from "./FAQ";
 
 export default function HomePage() {
   return (
@@ -20,6 +22,8 @@ export default function HomePage() {
       <CreditRepairSection />
       <CreditRepairProcess />
       <HomeClientSections />
+      <LoanApprovals />
+      <FAQ />
     </main>
   );
 }

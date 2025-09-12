@@ -1,144 +1,103 @@
 "use client";
 
-import { useState } from "react";
-import {
-  InformationCircleIcon,
-  CurrencyDollarIcon,
-  TruckIcon,
-  ShieldCheckIcon,
-  ChevronDownIcon,
-} from "@heroicons/react/24/outline";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
-const AccordionItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const FAQ = () => {
+  const [expandedItems, setExpandedItems] = useState([]);
+
+  const toggleItem = (index) => {
+    setExpandedItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index) 
+        : [...prev, index]
+    );
+  };
+
+  const faqs = [
+    {
+      question: "How long does credit repair take in Australia?",
+      answer: "Credit repair timelines vary depending on the complexity of your case. Most disputes are resolved within 30-60 days, but some may take up to 90 days. We work efficiently to get results as quickly as possible while ensuring accuracy."
+    },
+    {
+      question: "Can you remove defaults and hard inquiries?",
+      answer: "Yes, we can help remove inaccurate defaults and unauthorized hard inquiries from your credit file. We dispute these listings with the credit bureaus and creditors, following Australian credit reporting laws to ensure proper removal."
+    },
+    {
+      question: "What proof do you need to dispute a listing?",
+      answer: "We need documentation that supports your dispute, such as bank statements, correspondence with creditors, payment records, or other relevant evidence. Our team will guide you on what specific documents are needed for your case."
+    }
+  ];
 
   return (
-    <div className="border-b border-gray-200">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center py-4 text-left"
-      >
-        <span className="font-semibold text-gray-800">{question}</span>
-        <ChevronDownIcon
-          className={`w-5 h-5 text-gray-500 transition-transform ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
-      </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? "max-h-screen" : "max-h-0"
-        }`}
-      >
-        <div className="text-gray-600 pb-4">{answer}</div>
-      </div>
-    </div>
-  );
-};
-
-export default function FaqSection() {
-  return (
-    <section className="bg-gradient-to-r from-blue-100 to-orange-100">
-      <div
-        id="faq"
-        className="max-w-4xl bg-gradient-to-r bg-orange-50 from-blue-100 to-orange-100  mx-auto py-12 px-4 sm:px-6 lg:px-8"
-      >
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">
-          Frequently Asked Questions
-        </h2>
-
-        <div className="space-y-6">
-          {/* General Questions */}
-          <div className=" p-6 rounded-lg bg-orange-50 shadow-sm border border-gray-200">
-            <h3 className="text-xl font-bold text-orange-600 mb-4 flex items-center gap-2">
-              <InformationCircleIcon className="w-6 h-6" />
-              General Questions
-            </h3>
-            <AccordionItem
-              question="What is the Iraqi Dinar (IQD)?"
-              answer="The Iraqi Dinar is the official currency of Iraq. Many investors purchase IQD anticipating potential appreciation due to Iraq's economic recovery and oil reserves."
-            />
-            <AccordionItem
-              question="Is Dinar Exchange a registered business?"
-              answer="Yes! We are a fully registered currency exchange service operating in New Zealand and Australia, providing authentic dinars with certificates of authenticity."
-            />
-          </div>
-
-          {/* Pricing & Payment */}
-          <div className="bg-orange-50 p-6 rounded-lg shadow-sm border border-gray-200">
-            <h3 className="text-xl font-bold text-orange-600 mb-4 flex items-center gap-2">
-              <CurrencyDollarIcon className="w-6 h-6" />
-              Pricing & Payment
-            </h3>
-            <AccordionItem
-              question="What exchange rates do you offer?"
-              answer="Our rates are competitive and updated regularly. Check our live rates page or contact us for current pricing."
-            />
-            <AccordionItem
-              question="What payment methods do you accept?"
-              answer="We only accept bank transfers for security and compliance reasons. Cash payments are not available."
-            />
-          </div>
-
-          {/* Order & Delivery */}
-          <div className="bg-orange-50 p-6 rounded-lg shadow-sm border border-gray-200">
-            <h3 className="text-xl font-bold text-orange-600 mb-4 flex items-center gap-2">
-              <TruckIcon className="w-6 h-6" />
-              Order & Delivery
-            </h3>
-            <AccordionItem
-              question="How do I place an order?"
-              answer={
-                <ol className="list-decimal list-inside space-y-1">
-                  <li>Select your desired IQD amount</li>
-                  <li>Complete the order form with your details</li>
-                  <li>Make a bank transfer</li>
-                  <li>Receive tracking details once shipped</li>
-                </ol>
-              }
-            />
-            <AccordionItem
-              question="How long does delivery take?"
-              answer="Orders are dispatched within 1–2 business days via secure registered mail, with delivery typically in 3–5 business days."
-            />
-          </div>
-
-          {/* Authenticity & Security */}
-          <div className="bg-orange-50 p-6 rounded-lg shadow-sm border border-gray-200">
-            <h3 className="text-xl font-bold text-orange-600 mb-4 flex items-center gap-2">
-              <ShieldCheckIcon className="w-6 h-6" />
-              Authenticity & Security
-            </h3>
-            <AccordionItem
-              question="How do I know the dinars are real?"
-              answer="Every order includes a Certificate of Authenticity. Our notes are sourced directly from Iraq's Central Bank."
-            />
-            <AccordionItem
-              question="Can I sell my dinars back to you?"
-              answer="Currently, we only facilitate purchases. For selling, we recommend checking with local currency dealers."
-            />
-          </div>
-        </div>
-
-        <div className="mt-8 text-center">
-          <p className="text-gray-600">
-            Still have questions? Contact us at{" "}
-            <a
-              href="mailto:dinars@dinarexchange.com.au"
-              className="text-orange-600 hover:underline"
-            >
-              dinars@dinarexchange.com.au
-            </a>{" "}
-            or call{" "}
-            <a
-              href="tel:0417460236"
-              className="text-orange-600 hover:underline"
-            >
-              0417 460 236
-            </a>
+    <section id="faqs" className="py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-lg text-gray-600">
+            Get answers to common questions about our credit repair services
           </p>
+        </motion.div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, index) => {
+            const isExpanded = expandedItems.includes(index);
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              >
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                  aria-expanded={isExpanded}
+                  aria-controls={`faq-answer-${index}`}
+                >
+                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                    {faq.question}
+                  </h3>
+                  {isExpanded ? (
+                    <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  )}
+                </button>
+                
+                {isExpanded && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    id={`faq-answer-${index}`}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-4">
+                      <p className="text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default FAQ;
