@@ -91,6 +91,7 @@ const globalSchema = {
       "reviewCount": "612",
       "bestRating": "5",
       "worstRating": "1",
+      "itemReviewed": { "@id": "https://www.australiancreditsolutions.com.au#org" },
       "url": "https://www.productreview.com.au/listings/australian-credit-solutions"
     }
   ]
