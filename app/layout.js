@@ -8,7 +8,7 @@ import ExitIntentPopupWithSuspense from "@/components/ExitIntentPopupWithSuspens
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: true });
 
 export const metadata = {
-  title: "Improve Your Credit Score with Australian Credit Solutions",
+  title: "Credit Repair Australia – Improve Your Score | Australian Credit Solutions",
   description:
     "Struggling with bad credit? We’ll help repair your score, restore confidence, and increase loan approval chances so you can move forward.",
   keywords: [
@@ -30,6 +30,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="canonical" href="https://www.australiancreditsolutions.com.au/" />
+
         {/* Preconnects to reduce connection latency */}
         <link
           rel="preconnect"
