@@ -3,11 +3,15 @@ import { PhoneIcon, EnvelopeIcon, DocumentTextIcon } from "@heroicons/react/24/o
 
 export default function CTASection() {
   return (
-    <section className="w-full bg-blue py-16 px-4">
+    <section id="start-today" className="w-full bg-blue py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-          Take Control of Your Credit Today
+          Start Your Credit Repair Today
         </h2>
+        <div className="mb-6 space-y-2">
+          <h3 className="text-xl font-semibold text-white">Book a Free Credit Assessment</h3>
+          <h3 className="text-xl font-semibold text-white">Speak with a Credit Repair Specialist</h3>
+        </div>
         <p className="text-blue-100 text-lg sm:text-xl mb-10 max-w-2xl mx-auto">
           Whether you need a free assessment, expert advice, or immediate help with credit repair, 
           we&apos;re ready to assist you every step of the way.

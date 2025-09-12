@@ -8,9 +8,14 @@ import ExitIntentPopupWithSuspense from "@/components/ExitIntentPopupWithSuspens
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: true });
 
 export const metadata = {
-  title: "Credit Repair Australia – Improve Your Score | Australian Credit Solutions",
+  metadataBase: new URL("https://www.australiancreditsolutions.com.au"),
+  title: {
+    default:
+      "Credit Repair Australia: Quick Solutions to Fix Bad Credit",
+    template: "%s | Australian Credit Solutions",
+  },
   description:
-    "Struggling with bad credit? We’ll help repair your score, restore confidence, and increase loan approval chances so you can move forward.",
+    "Get defaults removed and improve your credit score with expert credit repair services in Australia. Fast, confidential, and effective",
   keywords: [
     "improve your credit score",
     "Australian Credit Solutions",
@@ -20,7 +25,48 @@ export const metadata = {
     "fix bad credit",
     "financial recovery services",
   ],
+  openGraph: {
+    title:
+      "Credit Repair Australia: Quick Solutions to Fix Bad Credit",
+    description:
+      "Get defaults removed and improve your credit score with expert credit repair services in Australia. Fast, confidential, and effective",
+    url: "/",
+    siteName: "Australian Credit Solutions",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Australian Credit Solutions – Credit Repair Australia",
+      },
+    ],
+    locale: "en_AU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@credits_aussie",
+    title:
+      "Credit Repair Australia: Quick Solutions to Fix Bad Credit",
+    description:
+      "Get defaults removed and improve your credit score with expert credit repair services in Australia. Fast, confidential, and effective",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "/",
+    languages: { "en-AU": "/" },
+  },
+  robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
 };
+
 
 export default function RootLayout({ children }) {
   const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-MVMW025XRV";
@@ -30,11 +76,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-
-        <link rel="canonical" href="https://www.australiancreditsolutions.com.au/" />
-
-        <link rel="alternate" hreflang="en-au" href="https://www.australiancreditsolutions.com.au/" />
-
         {/* Preconnects to reduce connection latency */}
 
         <link

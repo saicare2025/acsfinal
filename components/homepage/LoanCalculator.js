@@ -55,7 +55,7 @@ const LoanCalculator = () => {
 
   return (
     <section
-      id="loancalculator"
+      id="tools"
       className="py-14 bg-gradient-to-br from-blue-50 to-blue-100"
     >
       <div className="container mx-auto px-4 max-w-4xl">
@@ -66,11 +66,12 @@ const LoanCalculator = () => {
           className="text-center mb-8"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            Loan Comparison{" "}
-            <span className="text-transparent bg-clip-text bg-blue">
-              Calculator
-            </span>
+            Tools to Help You
           </h2>
+          <div className="mt-4 space-y-2">
+            <h3 className="text-xl font-semibold text-gray-800">Loan Comparison Calculator</h3>
+            <h3 className="text-xl font-semibold text-gray-800">Credit Report Generator</h3>
+          </div>
           <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto">
             See how much you could save with clean credit versus default credit.
           </p>
@@ -269,23 +270,7 @@ const LoanCalculator = () => {
         </div>
       </div>
 
-      <section className="bg-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <p className="text-gray-600 text-base md:text-base">
-              *. A one-off $330 administration fee applies regardless of the
-              result. In the past year, more than 98% of our disputes have
-              achieved a successful resolution.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      
     </section>
   );
 };

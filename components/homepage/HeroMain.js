@@ -25,10 +25,12 @@ export default function HeroSection() {
               className="mb-8"
             >
               <h1 className="text-3xl text-center lg:text-start md:text-4xl font-bold leading-tight mb-4 text-gray-700">
-                Credit Repair in Australia –<span className="text-blue">Fix Your Credit Score</span> with Australian Credit Solutions
+                Credit Repair Australia – Fix Defaults &amp; Improve Your Score Fast
               </h1>
 
-             
+              <h2 id="free-credit-check" className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-2">
+                Free Credit Check &amp; Fast Assessment
+              </h2>
 
               {/* Form */}
               <motion.div
@@ -79,9 +81,9 @@ export default function HeroSection() {
                     <CurrencyDollarIcon className="h-5 w-5 text-green-700" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">
+                    <h3 className="font-semibold text-gray-800">
                       Free Credit Report Review
-                    </h4>
+                    </h3>
                     <p className="text-gray-600 text-base">
                       Comprehensive analysis at no cost
                     </p>
@@ -93,10 +95,10 @@ export default function HeroSection() {
                     <ShieldCheckIcon className="h-5 w-5 text-green-700" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">
+                    <h3 className="font-semibold text-gray-800">
                       No Win, No Fee
                       <sup className="text-[10px] align-super ml-0.5">*</sup>
-                    </h4>
+                    </h3>
                     {/* Removed the admin fee line as requested */}
                   </div>
                 </li>
@@ -106,9 +108,9 @@ export default function HeroSection() {
                     <LockClosedIcon className="h-5 w-5 text-green-700" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">
+                    <h3 className="font-semibold text-gray-800">
                       100% Confidential &amp; Secure
-                    </h4>
+                    </h3>
                     <p className="text-gray-600 text-base">
                       Your data is protected with bank-level security
                     </p>
