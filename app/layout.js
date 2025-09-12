@@ -8,9 +8,9 @@ import ExitIntentPopupWithSuspense from "@/components/ExitIntentPopupWithSuspens
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: true });
 
 export const metadata = {
-  title: "Credit Repair Australia – Improve Your Score | Australian Credit Solutions",
+  title: "Credit Repair Australia – Fix My Credit Fast",
   description:
-    "Struggling with bad credit? We’ll help repair your score, restore confidence, and increase loan approval chances so you can move forward.",
+    "Get defaults removed and improve your credit score with expert credit repair services in Australia. Fast, confidential, and effective.",
   keywords: [
     "improve your credit score",
     "Australian Credit Solutions",
