@@ -30,9 +30,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+
         <link rel="canonical" href="https://www.australiancreditsolutions.com.au/" />
         <link rel="alternate" hreflang="en-au" href="https://www.australiancreditsolutions.com.au/" />
         {/* Preconnects to reduce connection latency */}
+
         <link
           rel="preconnect"
           href="https://www.googletagmanager.com"
@@ -73,7 +75,7 @@ export default function RootLayout({ children }) {
           </>
         )}
 
-        {/* TikTok (deferred without passing handlers) */}
+      
         {TIKTOK_ID && (
           <Script id="tiktok-deferred" strategy="lazyOnload">
             {`
@@ -138,7 +140,9 @@ export default function RootLayout({ children }) {
         </Script>
         {children}
         <ExitIntentPopupWithSuspense />
-       
+
+      <TawkDesktopOnly />
+
       </body>
     </html>
   );
