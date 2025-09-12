@@ -40,9 +40,8 @@ export default {
   changefreq: 'weekly',
   priority: 0.7,
 
-  additionalSitemaps: [`${SITE_URL}/server-sitemap.xml`],
-
-  exclude: ['/server-sitemap.xml', '/404', '/500', '/_error'],
+  // Exclude only error pages
+  exclude: ['/404', '/500', '/_error'],
 
   transform: async (config, pathUrl) => {
     let priority = 0.7;
@@ -69,7 +68,7 @@ export default {
 
   additionalPaths: async () => {
     const staticPaths = [
-      { loc: '/', changefreq: 'daily', priority: 1.0, lastmod: iso(new Date()) },
+      { loc: '/', changefreq: 'daily',  priority: 1.0, lastmod: iso(new Date()) },
       { loc: '/credit-repair-adelaide',    changefreq: 'monthly', priority: 0.8 },
       { loc: '/credit-repair-brisbane',    changefreq: 'monthly', priority: 0.8 },
       { loc: '/credit-repair-canberra',    changefreq: 'monthly', priority: 0.8 },
@@ -87,6 +86,7 @@ export default {
       { loc: '/blogs',                     changefreq: 'weekly',  priority: 0.6 },
     ].map((p) => ({ ...p, lastmod: p.lastmod ?? tryGetLastmodForRoute(p.loc) }));
 
+    // Blog detail pages from JSON
     const blogFilePath = path.join(__dirname, 'data', 'blogs_data.json');
     let blogData = [];
     try {
@@ -103,21 +103,21 @@ export default {
     return [...staticPaths, ...blogPaths];
   },
 
+  // Robots.txt EXACTLY as you requested
   robotsTxtOptions: {
     policies: [
       {
         userAgent: '*',
         allow: '/',
         disallow: [
-          '/_next/', '/static/', '/assets/*',
-          '/api/*',
-          '/server-sitemap.xml',
-          '/404', '/500',
-          '/*?*',
-          '/64dae32494cf5d49dc6a6c49/',
+          '/api/',
+          '/404$',
+          '/500$',
         ],
       },
     ],
-    additionalSitemaps: [`${SITE_URL}/sitemap.xml`, `${SITE_URL}/server-sitemap.xml`],
+    additionalSitemaps: [
+      `${SITE_URL}/sitemap.xml`,
+    ],
   },
 };
