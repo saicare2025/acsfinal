@@ -2,14 +2,11 @@
 
 import { motion } from "framer-motion";
 import heroImage from "../../app/assets/hero2.webp";
-import CreditAssessmentForm from "./HeroForm";
 import Image from "next/image";
 import {
-  CheckBadgeIcon,
   ShieldCheckIcon,
   LockClosedIcon,
   CurrencyDollarIcon,
-
 } from "@heroicons/react/24/solid";
 import FooterForm from "../FooterForm";
 
@@ -30,9 +27,16 @@ export default function HeroSection() {
               <h1 className="text-3xl text-center lg:text-start sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-gray-700">
                 Get Your <span className="text-blue">Free Credit</span> Assessment Today
               </h1>
-              <h2 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-4">
-                No Win, No Fee - Terms Apply*
+
+              <h2 className="text-xl sm:text-3xl text-center lg:text-start font-semibold text-blue/90 mb-2">
+                No Win, No Fee
+                <sup className="text-[10px] align-super ml-0.5">*</sup>
               </h2>
+
+              {/* Tiny T&C note */}
+              <p className="text-[11px] text-gray-500 text-center lg:text-left mb-4">
+                *Terms &amp; conditions apply.
+              </p>
 
               {/* Form */}
               <motion.div
@@ -98,11 +102,10 @@ export default function HeroSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">
-                      No Win, No Fee * Terms Apply
+                      No Win, No Fee
+                      <sup className="text-[10px] align-super ml-0.5">*</sup>
                     </h4>
-                    <p className="text-gray-600 text-base">
-                      A one-off $330 admin fee applies regardless of outcome.
-                    </p>
+                    {/* Removed the admin fee line as requested */}
                   </div>
                 </li>
 
@@ -112,7 +115,7 @@ export default function HeroSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">
-                      100% Confidential & Secure
+                      100% Confidential &amp; Secure
                     </h4>
                     <p className="text-gray-600 text-base">
                       Your data is protected with bank-level security
@@ -120,12 +123,15 @@ export default function HeroSection() {
                   </div>
                 </li>
               </ul>
+
+              {/* Tiny T&C note under features too (optional; remove if you only want it once) */}
+              <p className="mt-3 text-[11px] text-gray-500">
+                *Terms &amp; conditions apply.
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
-
-      
     </>
   );
 }

@@ -8,9 +8,9 @@ import ExitIntentPopupWithSuspense from "@/components/ExitIntentPopupWithSuspens
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: true });
 
 export const metadata = {
-  title: "Improve Your Credit Score with Australian Credit Solutions",
+  title: "Credit Repair Australia – Improve Your Score | Australian Credit Solutions",
   description:
-    "Take control of your financial future. Australian Credit Solutions offers expert credit repair and tailored strategies to help you improve your credit score quickly and effectively.",
+    "Struggling with bad credit? We’ll help repair your score, restore confidence, and increase loan approval chances so you can move forward.",
   keywords: [
     "improve your credit score",
     "Australian Credit Solutions",
@@ -30,7 +30,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-    
+
+        <link rel="canonical" href="https://www.australiancreditsolutions.com.au/" />
+
+        {/* Preconnects to reduce connection latency */}
+
         <link
           rel="preconnect"
           href="https://www.googletagmanager.com"
@@ -136,7 +140,9 @@ export default function RootLayout({ children }) {
         </Script>
         {children}
         <ExitIntentPopupWithSuspense />
+
       <TawkDesktopOnly />
+
       </body>
     </html>
   );

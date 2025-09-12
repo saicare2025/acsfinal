@@ -5,7 +5,6 @@ import heroImage from "../../app/assets/hero3.webp";
 import CreditAssessmentForm from "./HeroForm";
 import Image from "next/image";
 import {
-  CheckBadgeIcon,
   ShieldCheckIcon,
   LockClosedIcon,
   CurrencyDollarIcon,
@@ -18,7 +17,7 @@ export default function HeroSection() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-white to-blue-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-8 flex flex-col-reverse lg:flex-row items-center relative z-10 gap-8">
-          {/* Left Side - Content (60% on desktop) */}
+          {/* Left Side - Content */}
           <div className="w-full lg:w-3/5 flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -29,9 +28,14 @@ export default function HeroSection() {
               <h3 className="text-3xl text-center lg:text-start sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-gray-700">
                 Get Your <span className="text-blue">Free Credit</span> Assessment Today
               </h3>
-              <h4 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-4">
-                No Win, No Fee - Terms Apply*
+
+              <h4 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-1">
+                No Win, No Fee
+                <sup className="text-[10px] align-super ml-0.5">*</sup>
               </h4>
+              <p className="text-[11px] text-gray-500 text-center lg:text-left mb-4">
+                *Terms &amp; conditions apply.
+              </p>
 
               {/* Form */}
               <motion.div
@@ -45,7 +49,7 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Side - Image and Features (40% on desktop) */}
+          {/* Right Side - Image and Features */}
           <div className="w-full lg:w-2/5 flex flex-col">
             {/* Image Container */}
             <motion.div
@@ -94,11 +98,9 @@ export default function HeroSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">
-                      No Win, No Fee * Terms Apply
+                      No Win, No Fee
+                      <sup className="text-[10px] align-super ml-0.5">*</sup>
                     </h4>
-                    <p className="text-gray-600 text-base">
-                      A one-off $330 admin fee applies regardless of outcome.
-                    </p>
                   </div>
                 </li>
 
@@ -116,12 +118,13 @@ export default function HeroSection() {
                   </div>
                 </li>
               </ul>
+              <p className="mt-3 text-[11px] text-gray-500">
+                *Terms &amp; conditions apply.
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
-
-     
     </>
   );
 }
