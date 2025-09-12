@@ -8,7 +8,8 @@ import { motion } from "framer-motion";
 import FooterForm from "@/components/FooterForm";
 import ArrowIcon from "../assets/arrow.png";
 import ArrowIconM from "../assets/arrowm.png";
-import { generateMinimalStructuredData } from "../../utils/generateMinimalStructuredData";
+import StructuredData from "@/components/StructuredData";
+import { createPageSchema, addServiceSchema } from "@/utils/pageSchema";
 
 import Image from "next/image";
 import ReviewsWidget from "@/components/homepage/Testmonials";
@@ -65,23 +66,45 @@ export default function CreditEnquiryRemovalPage() {
   ];
 
   // Generate structured data for this service page
-  const structuredData = generateMinimalStructuredData({
-    pathname: "/credit-enquiry-removal",
+  const pageSchema = createPageSchema('service', {
     title: "Remove Credit Enquiries Fast | Australian Credit Solutions",
+    url: "/credit-enquiry-removal",
     description: "Remove unauthorised credit enquiries fast with Australia's specialists. 98% success rate when we take cases. Licensed specialists, No Win No Fee policy.",
-    isService: true,
-    serviceType: "Credit Enquiry Removal",
-    faqData: faqData
+    serviceName: "Credit Enquiry Removal"
   });
+
+  // Add service-specific schema
+  const serviceSchema = addServiceSchema('credit-enquiry-removal', {
+    url: "/credit-enquiry-removal"
+  });
+
+  // Add FAQ schema
+  const faqSchema = {
+    "@type": "FAQPage",
+    "@id": "https://www.australiancreditsolutions.com.au/credit-enquiry-removal#faq",
+    "mainEntity": faqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  // Combine all schemas
+  const structuredData = {
+    ...pageSchema,
+    "@graph": [
+      ...pageSchema["@graph"],
+      serviceSchema,
+      faqSchema
+    ].filter(Boolean)
+  };
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-slate-900">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
-        }}
-      />
+      <StructuredData schema={structuredData} />
       <Header />
 
       {/* Hero Section */}

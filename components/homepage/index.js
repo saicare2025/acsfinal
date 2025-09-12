@@ -8,7 +8,7 @@ import CreditRepairSection from "./CreditRepair";
 import CreditRepairProcess from "./CreditRepairProcess.js";
 import ReviewWidget from "../../components/homepage/TestmonialProduct";
 import LoanApprovals from "./LoanApprovals";
-import FAQ from "./FAQ";
+import FAQ from "./Faq";
 
 export default function HomePage() {
   return (
