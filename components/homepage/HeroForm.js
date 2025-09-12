@@ -147,8 +147,7 @@ const FooterForm = ({
         FREE CREDIT CHECK FORM
         </h2>
         <p className="mt-1 text-base text-center text-slate-600 sm:text-base">
-          See if your negative listings can be removed – quick, confidential,
-          and{" "}
+          See if your negative listings can be removed – quick and confidential
           
         </p>
       </div>
