@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FacebookIcon, LinkedinIcon, PlusIcon } from "lucide-react";
+import { FacebookIcon, LinkedinIcon, PlusIcon, PhoneIcon, MailIcon, MapPinIcon } from "lucide-react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import urlData from "../url.json";
 
 // Helper functions
@@ -247,7 +248,7 @@ function ExpandableLink({ item, similarLinks, isActive, onToggle }) {
           aria-label={`Show similar links for ${item.label}`}
           aria-expanded={isActive}
           aria-controls="footer-disclosure"
-          className="ml-2 inline-flex h-7 w-7 items-center justify-center rounded-full border hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="ml-2 inline-flex h-7 w-7 items-center justify-center rounded-full border hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-shrink-0"
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               e.preventDefault();
@@ -269,7 +270,7 @@ export default function Footer({
   maxSimilarPerItem = 8,
 
   googleReviewsLink = "https://www.google.com/search?q=Australian+Credit+Solutions+reviews",
-  trustpilotLink = "https://www.trustpilot.com/review/australiancreditsolutions.com.au"
+  trustpilotLink = "https://www.trustpilot.com/review/australiancreditlawyers.com.au"
 }) {
   const currentYear = new Date().getFullYear();
   const [activeDisclosure, setActiveDisclosure] = useState(null);
@@ -295,13 +296,6 @@ export default function Footer({
     ? [...canonicalItems.company, { label: 'Careers', href: '/careers' }]
     : canonicalItems.company;
   
-  // Add external trust links to legal-trust items
-  const legalTrustItems = [
-    ...canonicalItems['legal-trust'],
-    // { label: 'AFCA Membership (83546)', href: afcaLink },
-    // { label: 'ASIC Info', href: asicLink },
-    { label: 'External Reviews', href: googleReviewsLink }
-  ];
   
   // Handle escape key and outside clicks
   useEffect(() => {
@@ -354,13 +348,86 @@ export default function Footer({
 
       {/* Five Columns */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-8 gap-y-10 xl:grid-cols-[2fr_2fr_1fr_1fr_1fr]">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.2fr_1.5fr_1.5fr_1fr_1fr] gap-x-8 gap-y-10">
           
-          {/* Column A - Services */}
+          {/* Column A - Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="space-y-4"
+          >
+            {/* Company Logo */}
+            <div className="mb-6">
+              <Image
+                src="/logo.png"
+                alt="Australian Credit Solutions"
+                width={180}
+                height={60}
+                className="h-auto max-w-full"
+                priority
+              />
+            </div>
+            
+            {/* Contact Details */}
+            <div className="space-y-3">
+              {/* Mobile Phone */}
+              <div className="flex items-start gap-3">
+                <PhoneIcon className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <a 
+                    href="tel:0489265737"
+                    className="text-base text-gray-600 hover:text-blue-600 transition-colors hover:underline hover:underline-offset-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 rounded"
+                  >
+                    0489 265 737
+                  </a>
+                </div>
+              </div>
+              
+              {/* Landline Phone */}
+              <div className="flex items-start gap-3">
+                <PhoneIcon className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <a 
+                    href="tel:1300368302"
+                    className="text-base text-gray-600 hover:text-blue-600 transition-colors hover:underline hover:underline-offset-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 rounded"
+                  >
+                    1300 368 302
+                  </a>
+                </div>
+              </div>
+              
+              {/* Email */}
+              <div className="flex items-start gap-3">
+                <MailIcon className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <a 
+                    href="mailto:help@australiancreditsolutions.com.au"
+                    className="text-base text-gray-600 hover:text-blue-600 transition-colors hover:underline hover:underline-offset-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 rounded break-all"
+                  >
+                    help@australiancreditsolutions.com.au
+                  </a>
+                </div>
+              </div>
+              
+              {/* Address */}
+              <div className="flex items-start gap-3">
+                <MapPinIcon className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <address className="text-base text-gray-600 not-italic">
+                    805/220 Collins St<br />
+                    Melbourne VIC 3000
+                  </address>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          
+          {/* Column B - Services */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="space-y-4"
           >
             <h3 className="text-base font-semibold uppercase tracking-wide text-gray-900">Services</h3>
@@ -377,11 +444,11 @@ export default function Footer({
             </ul>
           </motion.div>
 
-          {/* Column B - Credit Help */}
+          {/* Column C - Credit Help */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="space-y-4"
           >
             <h3 className="text-base font-semibold uppercase tracking-wide text-gray-900">Credit Help</h3>
@@ -398,11 +465,11 @@ export default function Footer({
             </ul>
           </motion.div>
 
-          {/* Column C - Locations */}
+          {/* Column D - Locations */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="space-y-4"
           >
             <h3 className="text-base font-semibold uppercase tracking-wide text-gray-900">Locations</h3>
@@ -419,11 +486,11 @@ export default function Footer({
             </ul>
           </motion.div>
 
-          {/* Column D - Company */}
+          {/* Column E - Company */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="space-y-4"
           >
             <h3 className="text-base font-semibold uppercase tracking-wide text-gray-900">Company</h3>
@@ -440,26 +507,6 @@ export default function Footer({
             </ul>
           </motion.div>
 
-          {/* Column E - Legal & Trust */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="space-y-4"
-          >
-            <h3 className="text-base font-semibold uppercase tracking-wide text-gray-900">Legal & Trust</h3>
-            <ul className="space-y-2">
-              {legalTrustItems.map((item, index) => (
-                <ExpandableLink
-                  key={index}
-                  item={item}
-                  similarLinks={similarIndex[item.label]}
-                  isActive={activeDisclosure?.label === item.label}
-                  onToggle={() => toggleDisclosure(item)}
-                />
-              ))}
-            </ul>
-          </motion.div>
         </div>
          {/* Global Disclosure Row */}
       <div className="pt-6 relative z-10">
@@ -518,26 +565,24 @@ export default function Footer({
                 © Australian Credit Solutions, {currentYear}
                 {abn && ` • ABN ${abn}`}
               </p>
+              {/* Legal Links */}
+              <div className="flex flex-wrap gap-4 mt-2 justify-center sm:justify-start">
+                <Link
+                  href="/privacy-policy"
+                  className="text-sm text-gray-600 hover:text-blue-600 transition-colors hover:underline hover:underline-offset-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 rounded"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  href="/terms-conditions"
+                  className="text-sm text-gray-600 hover:text-blue-600 transition-colors hover:underline hover:underline-offset-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 rounded"
+                >
+                  Terms & Conditions
+                </Link>
+              </div>
             </div>
             <div className="flex items-center justify-center sm:justify-end gap-4">
-              <a
-                href="https://www.linkedin.com/company/australian-credit-solutions/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.facebook.com/australiancreditsolutions"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
-                aria-label="Facebook"
-              >
-                <FacebookIcon className="w-5 h-5" />
-              </a>
+             
               <a
                 href={googleReviewsLink}
                 target="_blank"

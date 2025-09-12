@@ -18,10 +18,7 @@ const TrustBadge = () => {
           <Users className="w-6 h-6 text-purple-600" />
           <span className="font-medium">1000+ Happy Clients</span>
         </div>
-        <div className="flex items-center space-x-2">
-          <CheckCircle className="w-6 h-6 text-green-600" />
-          <span className="font-medium">No Win No Fee</span>
-        </div>
+        
       </div>
     </div>
   </section>

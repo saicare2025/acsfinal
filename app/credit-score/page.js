@@ -10,7 +10,6 @@ import HomePage from "../../components/homepage";
 import CompanyCarousel from "../../components/homepage/CompanySection";
 import HeroSection from "../../components/homepage/HeroSection3";
 import HelpSection from "../../components/homepage/HowCan";
-import TestimonialSection from "../../components/homepage/ScrollTestimonials";
 import VideoServicesSection from "../../components/homepage/VideoServicesSection";
 import HowWorks from "../../components/HowWork";
 import Link from "next/link";
@@ -19,13 +18,13 @@ import RelatedBlock from "@/app/_seo/RelatedBlock";
 
 export default function Home() {
   return (
-    <main className="flex max-w-7xl mx-auto min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col">
       <Header />
       <HeroSection />
 
       {/* Breadcrumb Navigation */}
 
-      <section className=" py-12 px-4 sm:px-6 lg:px-8">
+      <section className=" max-w-7xl mx-auto  py-12 px-4 sm:px-6 lg:px-8">
         <ReviewsWidget />
         <div className="mx-auto max-w-6xl px-4">
           <Breadcrumb pathname="/credit-score" />
@@ -2034,7 +2033,7 @@ export default function Home() {
         currentSlug="/credit-score"
         heading="Related services & guides"
       />
-      <TestimonialSection />
+
       <CompanyCarousel />
       <section className="relative py-20 bg-gradient-to-b from-[#0668a5] to-[#0aa6e8] overflow-hidden">
         {/* Decorative elements */}

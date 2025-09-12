@@ -1,22 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import heroImage from "../../app/assets/hero2.webp";
-import CreditAssessmentForm from "./HeroForm";
+import heroImage from "../../app/assets/hero.png";
 import Image from "next/image";
 import {
   ShieldCheckIcon,
   LockClosedIcon,
   CurrencyDollarIcon,
 } from "@heroicons/react/24/solid";
+import HeroForm from "./HeroForm";
 
 export default function HeroSection() {
   return (
     <>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-white to-blue-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-8 flex flex-col-reverse lg:flex-row items-center relative z-10 gap-8">
-          {/* Left Side - Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-8 flex flex-col-reverse lg:flex-row items-center relative z-10 gap-8">
+          {/* Left Side - Content (60% on desktop) */}
           <div className="w-full lg:w-3/5 flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -24,17 +24,11 @@ export default function HeroSection() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="mb-8"
             >
-              <h3 className="text-3xl text-center lg:text-start sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-gray-700">
-                Get Your <span className="text-blue">Free Credit</span> Assessment Today
-              </h3>
+              <h1 className="text-3xl text-center lg:text-start md:text-4xl font-bold leading-tight mb-4 text-gray-700">
+                Credit Repair in Australia –<span className="text-blue">Fix Your Credit Score</span> with Australian Credit Solutions
+              </h1>
 
-              <h4 className="text-xl sm:text-2xl text-center lg:text-start font-semibold text-blue/90 mb-1">
-                No Win, No Fee
-                <sup className="text-[10px] align-super ml-0.5">*</sup>
-              </h4>
-              <p className="text-[11px] text-gray-500 text-center lg:text-left mb-4">
-                *Terms &amp; conditions apply.
-              </p>
+             
 
               {/* Form */}
               <motion.div
@@ -43,12 +37,12 @@ export default function HeroSection() {
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
                 className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
               >
-                <CreditAssessmentForm />
+                <HeroForm />
               </motion.div>
             </motion.div>
           </div>
 
-          {/* Right Side - Image and Features */}
+          {/* Right Side - Image and Features (40% on desktop) */}
           <div className="w-full lg:w-2/5 flex flex-col">
             {/* Image Container */}
             <motion.div
@@ -103,6 +97,7 @@ export default function HeroSection() {
                       No Win, No Fee
                       <sup className="text-[10px] align-super ml-0.5">*</sup>
                     </h4>
+                    {/* Removed the admin fee line as requested */}
                   </div>
                 </li>
 
@@ -112,7 +107,7 @@ export default function HeroSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">
-                      100% Confidential & Secure
+                      100% Confidential &amp; Secure
                     </h4>
                     <p className="text-gray-600 text-base">
                       Your data is protected with bank-level security
@@ -120,6 +115,8 @@ export default function HeroSection() {
                   </div>
                 </li>
               </ul>
+
+              {/* Tiny T&C note under features too (optional; remove if you only want it once) */}
               <p className="mt-3 text-[11px] text-gray-500">
                 *Terms &amp; conditions apply.
               </p>
