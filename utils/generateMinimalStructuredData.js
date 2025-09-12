@@ -186,6 +186,7 @@ function generateMinimalStructuredData({
   };
 }
 
+
 // Helper function to humanize URL segments
 function humanizeSegment(segment) {
   return segment
@@ -195,3 +196,4 @@ function humanizeSegment(segment) {
 }
 
 export { generateMinimalStructuredData };
+
