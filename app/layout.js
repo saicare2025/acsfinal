@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import AnalyticsRouteTracker from "@/components/AnalyticsRouteTracker";
 import ExitIntentPopupWithSuspense from "@/components/ExitIntentPopupWithSuspense";
+import StructuredData from "@/components/StructuredData";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: true });
 
@@ -12,7 +13,7 @@ export const metadata = {
   title: {
     default:
       "Credit Repair Australia: Quick Solutions to Fix Bad Credit",
-    template: "%s | Australian Credit Solutions",
+   
   },
   description:
     "Get defaults removed and improve your credit score with expert credit repair services in Australia. Fast, confidential, and effective",
@@ -76,8 +77,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Global Structured Data */}
+        <StructuredData />
+        
         {/* Preconnects to reduce connection latency */}
-
         <link
           rel="preconnect"
           href="https://www.googletagmanager.com"
