@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
       <head>
 
         <link rel="canonical" href="https://www.australiancreditsolutions.com.au/" />
+        <link rel="alternate" hreflang="en-au" href="https://www.australiancreditsolutions.com.au/" />  
 
         {/* Preconnects to reduce connection latency */}
 
