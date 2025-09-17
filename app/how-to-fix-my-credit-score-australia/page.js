@@ -101,11 +101,27 @@ export default function HowToFixMyCreditScorePage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Frustrated with your low credit score? Sick of loan rejections and high interest rates? You&apos;re in the right place, mate. Whether your credit <Link href="/credit-score" className="text-blue-600 hover:text-blue-800 underline">Credit Score</Link> score is 300, 400, 500, or stuck anywhere below 650, we&apos;ll show you exactly how to fix your credit score in Australia - step by step.
+                  Frustrated with your low credit score? Sick of loan rejections
+                  and high interest rates? You&apos;re in the right place, mate.
+                  Whether your credit{" "}
+                  <Link
+                    href="/credit-score"
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Credit Score
+                  </Link>{" "}
+                  score is 300, 400, 500, or stuck anywhere below 650,
+                  we&apos;ll show you exactly how to fix your credit score in
+                  Australia - step by step.
                 </p>
 
                 <p className="text-base text-gray-600">
-                  Here&apos;s the truth: Most Australians don&apos;t know how to fix their credit score properly. They focus on the wrong things, waste months on strategies that barely help, and miss the ONE thing that makes the biggest difference. Ready to learn how to fix your credit score the right way? Let&apos;s get your score from wherever it is now to{" "}
+                  Here&apos;s the truth: Most Australians don&apos;t know how to
+                  fix their credit score properly. They focus on the wrong
+                  things, waste months on strategies that barely help, and miss
+                  the ONE thing that makes the biggest difference. Ready to
+                  learn how to fix your credit score the right way? Let&apos;s
+                  get your score from wherever it is now to{" "}
                   <strong className="font-semibold text-blue">
                     700, 800, or even 850+
                   </strong>{" "}
@@ -168,8 +184,7 @@ export default function HowToFixMyCreditScorePage() {
 
             {/* Right Form */}
             <div className="w-full lg:w-1/3 relative">
-                      <RelatedBlock currentSlug="/how-to-fix-my-credit-score-australia" heading="Related services & guides" />
-        <FooterForm
+              <FooterForm
                 heading="Get My Free Credit Score Analysis"
                 subheading="Boost Your Score Fast"
                 paragraph="Quick credit check: Find out exactly what's affecting your score and how to fix it. Our expert team will review your entire credit file and show you the fastest path to better credit."
@@ -203,8 +218,15 @@ export default function HowToFixMyCreditScorePage() {
       <Section title="Why Centrelink Recipients Struggle with Credit Repair">
         <p className="text-slate-700">
           Let&apos;s be honest – most credit repair companies either don&apos;t
-          understand your <Link href="/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad" className="text-blue-600 hover:text-blue-800 underline">Repair Or Not To Repair Fixing Credit Report When It S Bad</Link> situation or want upfront fees you simply can&apos;t
-          afford. Here&apos;s what makes your situation different:
+          understand your{" "}
+          <Link
+            href="/blog-details/repair-or-not-to-repair-fixing-credit-report-when-it-s-bad"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Repair Or Not To Repair Fixing Credit Report When It S Bad
+          </Link>{" "}
+          situation or want upfront fees you simply can&apos;t afford.
+          Here&apos;s what makes your situation different:
         </p>
         <motion.div
           variants={staggerChildren}
@@ -235,8 +257,15 @@ export default function HowToFixMyCreditScorePage() {
         </motion.div>
         <p className="mt-6 text-slate-700 font-semibold">
           The truth? None of this is permanent. We&apos;ve seen people go from
-          Centrelink with <Link href="/our-services" className="text-blue-600 hover:text-blue-800 underline">Our Services</Link> multiple defaults to getting approved for car loans
-          within months of cleaning up their credit file.
+          Centrelink with{" "}
+          <Link
+            href="/our-services"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Our Services
+          </Link>{" "}
+          multiple defaults to getting approved for car loans within months of
+          cleaning up their credit file.
         </p>
       </Section>
 
@@ -244,7 +273,13 @@ export default function HowToFixMyCreditScorePage() {
       <Section title="Our Centrelink-Friendly Approach: No Win No Fee That Actually Works">
         <p className="text-slate-700">
           Here&apos;s what makes us different from other credit repair companies
-   <Link href="/blog-details/best-credit-repair-australia-how-it-works" className="text-blue-600 hover:text-blue-800 underline">Best Credit Repair Australia How It Works</Link>        when it comes to helping Centrelink recipients:
+          <Link
+            href="/blog-details/best-credit-repair-australia-how-it-works"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Best Credit Repair Australia How It Works
+          </Link>{" "}
+          when it comes to helping Centrelink recipients:
         </p>
         <motion.div
           variants={staggerChildren}
@@ -582,6 +617,10 @@ export default function HowToFixMyCreditScorePage() {
           ))}
         </motion.div>
       </Section>
+      <RelatedBlock
+        currentSlug="/how-to-fix-my-credit-score-australia"
+        heading="Related services & guides"
+      />
 
       {/* Next Steps */}
       <Section title="Next Steps: Get Your Free Credit Assessment">

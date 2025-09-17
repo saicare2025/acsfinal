@@ -78,6 +78,96 @@ const nextConfig = {
         destination: '/free-credit-assessment',
         permanent: true,
       },
+       {
+        source: '/credit-repair-after-divorce',
+        destination: '/credit-repair-after-divorce-or-separation',
+        permanent: true,
+      },
+       {
+        source: '/credit-repair-first-home-buyers',
+        destination: '/credit-repair-for-first-home-buyers',
+        permanent: true,
+      },
+       {
+        source: '/credit-repair-centrelink-recipients',
+        destination: '/credit-repair-for-centrelink-recipients-australia',
+        permanent: true,
+      },
+       {
+        source: '/services',
+        destination: '/our-services',
+        permanent: true,
+      },
+       {
+        source: '/credit-repair-bendigo-ballarat',
+        destination: '/credit-repair-bendigo-ballarat-regional-victoria',
+        permanent: true,
+      },
+      {
+        source: '/default-removal-services',
+        destination: '/default-removal-services-australia',
+        permanent: true,
+      },
+      {
+        source: '/late-payment-removal',
+        destination: '/does-late-rent-payment-affect-credit-score-australia',
+        permanent: true,
+      },
+      {
+        source: '/credit-repair-car-finance',
+        destination: '/credit-repair-for-car-finance',
+        permanent: true,
+      },
+      {
+        source: '/rhi-removal',
+        destination: '/worst-repayment-history-removal',
+        permanent: true,
+      },
+      {
+        source: '/default-removal',
+        destination: '/default-removal-services-australia',
+        permanent: true,
+      },
+      {
+        source: '/rhi-dispute-australia',
+        destination: '/worst-repayment-history-removal',
+        permanent: true,
+      },
+      {
+        source: '/credit-file-cleanup',
+        destination: '/credit-repair-australia',
+        permanent: true,
+      },
+      {
+        source: '/remove-incorrect-rhi-credit-report',
+        destination: '/worst-repayment-history-removal',
+        permanent: true,
+      },
+      {
+        source: '/rhi-credit-repair',
+        destination: '/worst-repayment-history-removal',
+        permanent: true,
+      },
+      {
+        source: '/repayment-history-removal',
+        destination: '/worst-repayment-history-removal',
+        permanent: true,
+      },
+      {
+        source: '/credit-payment-history-cleanup',
+        destination: '/worst-repayment-history-removal',
+        permanent: true,
+      },
+      {
+        source: '/blog',
+        destination: '/blogs',
+        permanent: true,
+      },
+      {
+        source: '/complaints-handling-policy',
+        destination: '/complaints-handling-policy',
+        permanent: true,
+      },
      
     ];
   },

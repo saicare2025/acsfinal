@@ -1,30 +1,41 @@
-// app/api/contacts/route.js
+// app/api/ghl/contacts/route.js
 import { createContact } from "@/lib/ghl";
+import { put } from "@vercel/blob";
 
-const errorResponse = (message, status = 500, details) =>
-  Response.json({ ok: false, error: message, details }, { status });
+// export const runtime = "nodejs"; // uncomment if you hit Edge upload limits
 
-// --- helpers ---------------------------------------------------------------
-const toArray = (v) =>
-  Array.isArray(v)
-    ? v
-    : typeof v === "string"
-      ? v.split(",")
-      : [];
+const LOCATION_ID = process.env.GHL_LOCATION_ID;
 
-const cleanTags = (tags) =>
-  [...new Set(
-    toArray(tags)
-      .map((t) => String(t).trim())
-      .filter(Boolean)
-  )];
-
+/* helpers */
 const lower = (s) => (s ? String(s).toLowerCase() : "");
-
+const extFromType = (type = "") => {
+  const [, subtype] = String(type).split("/");
+  return subtype ? subtype.replace("+xml", "").replace("+json", "") : "bin";
+};
+const safeFilename = (base = "upload", type = "", original = "") => {
+  const name = (original && original !== "blob" && original) || base;
+  const ext = extFromType(type);
+  const hasExt = /\.[a-z0-9]{2,5}$/i.test(name);
+  return hasExt ? name : `${name}.${ext}`;
+};
+const readUTMFromUrl = (urlStr) => {
+  const url = new URL(urlStr);
+  const p = url.searchParams;
+  const get = (k) => (p.get(k) || "").trim();
+  return {
+    source:   get("utm_source"),
+    medium:   get("utm_medium"),
+    campaign: get("utm_campaign"),
+    term:     get("utm_term"),
+    content:  get("utm_content"),
+    gclid:    get("gclid"),
+    fbclid:   get("fbclid"),
+    msclkid:  get("msclkid"),
+  };
+};
 const pickSourceTag = (u) => {
   const src = lower(u.source);
   const med = lower(u.medium);
-
   if (u.fbclid || ["facebook","fb","meta","instagram"].includes(src)) return "FB Campaign";
   if (u.gclid || ["google","googleads","adwords"].includes(src) || ["cpc","ppc","sem"].includes(med)) return "Google";
   if (u.msclkid || ["bing","microsoft"].includes(src)) return "Bing";
@@ -34,84 +45,119 @@ const pickSourceTag = (u) => {
   if (src) return src.charAt(0).toUpperCase() + src.slice(1);
   return "Direct";
 };
-
-const readUTM = (urlStr) => {
-  const url = new URL(urlStr);
-  const p = url.searchParams;
-  const read = (k) => (p.get(k) || "").trim();
-  return {
-    source: read("utm_source"),
-    medium: read("utm_medium"),
-    campaign: read("utm_campaign"),
-    term: read("utm_term"),
-    content: read("utm_content"),
-    gclid: read("gclid"),
-    fbclid: read("fbclid"),
-    msclkid: read("msclkid"),
-  };
+const pushIf = (arr, id, value) => {
+  if (id && value !== undefined && value !== null && String(value).trim() !== "") {
+    arr.push({ id, value });
+  }
+  return arr;
 };
-// --------------------------------------------------------------------------
 
 export async function POST(request) {
   try {
-    // Accept JSON even with charset param
-    const ct = request.headers.get("content-type") || "";
-    if (!ct.toLowerCase().includes("application/json")) {
-      return errorResponse("Invalid content type. Expected JSON.", 415);
+    if (!LOCATION_ID) {
+      return Response.json({ ok: false, error: "GHL_LOCATION_ID is not set" }, { status: 500 });
     }
 
-    let contactData;
-    try {
-      contactData = await request.json();
-    } catch {
-      return errorResponse("Malformed JSON in request body.", 400);
+    const formData = await request.formData();
+
+    // Prefer first/last; fallback to fullName if present
+    let firstName = (formData.get("firstName") || "").toString().trim();
+    let lastName  = (formData.get("lastName")  || "").toString().trim();
+
+    if (!firstName && !lastName) {
+      const fullName = (formData.get("fullName") || "").toString().trim();
+      if (fullName) {
+        const parts = fullName.split(/\s+/).filter(Boolean);
+        firstName = parts.shift() || "";
+        lastName  = parts.join(" ");
+      }
     }
 
-    const { firstName, lastName, email, phone } = contactData || {};
-    if (!firstName || !lastName) return errorResponse("First and last name required.", 400);
-    if (!email && !phone) return errorResponse("Provide email or phone.", 400);
+    const email = (formData.get("email") || "").toString().trim();
+    const phone = (formData.get("phone") || "").toString().trim();
 
-    // --- Tag normalization + UTM fallback ---------------------------------
-    // 1) Normalize any tags provided by the client
-    const incomingTags = cleanTags(contactData?.tags);
-
-    // 2) If no tags were provided, derive from UTM params in the request URL
-    const utm = readUTM(request.url);
-    const derived = [];
-    if (incomingTags.length === 0) {
-      const primary = pickSourceTag(utm);
-      derived.push(primary);
-      if (utm.campaign) derived.push(`cmp:${utm.campaign}`);
-      if (utm.medium)   derived.push(`med:${utm.medium}`);
-      if (utm.term)     derived.push(`term:${utm.term}`);
-    }
-
-    const tags = [...new Set([...incomingTags, ...derived])];
-
-    // Prepare payload for provider; keep all client fields but enforce tags array
-    const providerPayload = {
-      ...contactData,
-      tags,
+    // UTM (form overrides URL)
+    const urlUTM = readUTMFromUrl(request.url);
+    const read = (k) => (formData.get(k) || urlUTM[k.replace(/^utm_/, "")] || "").toString().trim();
+    const UTM = {
+      source:   read("utm_source"),
+      medium:   read("utm_medium"),
+      campaign: read("utm_campaign"),
+      term:     read("utm_term"),
+      gclid:    read("gclid"),
+      fbclid:   read("fbclid"),
+      msclkid:  read("msclkid"),
     };
 
-    // Create in GHL
-    const created = await createContact(providerPayload);
-
-    // 🔧 Normalize/flatten shape (some libs return { contact: {...} })
-    const contact = created?.contact ?? created;
-
-    // Optional: hard assert we have an ID to catch odd payloads
-    if (!contact || !contact.id) {
-      return errorResponse("Unexpected API response format from provider.", 502, created);
+    // Optional file (supports "file" or "creditFile")
+    let fileUrl = "";
+    let fileType = "";
+    const file = formData.get("file") || formData.get("creditFile");
+    if (file && typeof file.arrayBuffer === "function") {
+      try {
+        const ct = file.type || "application/octet-stream";
+        const filename = safeFilename("credit-file", ct, file.name);
+        const blob = await put(filename, file, {
+          access: "public",
+          contentType: ct,
+          addRandomSuffix: true,
+        });
+        fileUrl = blob.url;
+        fileType = ct;
+      } catch (e) {
+        return Response.json(
+          { ok: false, error: "File upload failed", details: String(e?.message || e) },
+          { status: 500 }
+        );
+      }
     }
 
-    // Return a consistent, shallow shape that the client can rely on
+    // Tags
+    const tagSet = new Set(["contact_form"]);
+    const primary = pickSourceTag(UTM);
+    if (primary) tagSet.add(primary);
+    if (UTM.campaign) tagSet.add(`cmp:${UTM.campaign}`);
+    if (UTM.medium)   tagSet.add(`med:${UTM.medium}`);
+    if (UTM.term)     tagSet.add(`term:${UTM.term}`);
+    if (fileUrl)      tagSet.add("has_credit_file");
+
+    // Custom fields (match quiz route: use `customField` singular)
+    const cf = [];
+    pushIf(cf, "3UFFWwdE59UkrEYjoexg", fileUrl);   // Credit file URL (ensure this ID is correct in your GHL)
+    pushIf(cf, "I5i3Mwm7YUBWj3mTlJD4", UTM.source);
+    pushIf(cf, "VlZaQZc9TsuwUJoF1ZOl", UTM.medium);
+    pushIf(cf, "HHOdEmsCC8sUd6FP9z2z", UTM.campaign);
+
+    // Final payload (include locationId)
+    const contactPayload = {
+      locationId: LOCATION_ID,
+      firstName,
+      lastName,
+      email,
+      phone,
+      tags: Array.from(tagSet),
+      customField: cf,          // <- keep singular to match your working quiz flow
+      customFields: cf,       // (optional) include both if you want to be extra safe
+    };
+
+    const created = await createContact(contactPayload);
+    const contact = created?.contact ?? created;
+
+    if (!contact?.id) {
+      return Response.json(
+        { ok: false, error: "Unexpected provider response", details: created },
+        { status: 502 }
+      );
+    }
+
     return Response.json(
-      { ok: true, contact },
+      { ok: true, message: "Contact created", contact, fileUrl, fileType },
       { status: 201 }
     );
   } catch (err) {
-    const status = err?.status && err.status >= 400 ? err.status : 500;
-    return errorResponse(err?.message || "Failed to create contact.", status, err?.details);
+    return Response.json(
+      { ok: false, error: err?.message || "Unexpected server error" },
+      { status: 500 }
+    );
   }
 }

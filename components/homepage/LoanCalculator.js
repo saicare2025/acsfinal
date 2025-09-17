@@ -56,28 +56,27 @@ const LoanCalculator = () => {
   return (
     <section
       id="tools"
-      className="py-14 bg-gradient-to-br from-blue-50 to-blue-100"
+      className="py-16 bg-gradient-to-b from-white to-blue-50"
     >
-      <div className="container mx-auto px-4 max-w-4xl">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-8"
+          className="text-center mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            Tools to Help You
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Tools to{" "}
+            <span className="bg-blue bg-clip-text text-transparent">
+              Help You
+            </span>
           </h2>
-          <div className="mt-4 space-y-2">
-            <h3 className="text-xl font-semibold text-gray-800">Loan Comparison Calculator</h3>
-            <h3 className="text-xl font-semibold text-gray-800">Credit Report Generator</h3>
-          </div>
-          <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto">
+          <p className="text-lg text-blue-700 max-w-3xl mx-auto">
             See how much you could save with clean credit versus default credit.
           </p>
         </motion.div>
 
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow-lg overflow-hidden border border-blue-100">
           <div className="flex flex-col md:flex-row gap-0">
             {/* Left: Form */}
             <div className="w-full md:w-1/2 flex flex-col justify-center p-6 md:p-8 border-b md:border-b-0 md:border-r border-blue-100">
@@ -93,7 +92,7 @@ const LoanCalculator = () => {
                   <select
                     id={idLoanType}
                     name="loanType"
-                    className="w-full px-4 py-2 rounded-lg border border-blue-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-blue-900 bg-blue-50"
+                    className="w-full px-4 py-2 rounded-lg border border-blue-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-blue-900 bg-white"
                   >
                     <option>Home Loan</option>
                     <option>Personal Loan</option>
@@ -112,7 +111,7 @@ const LoanCalculator = () => {
                   </label>
                   <div className="relative">
                     <span
-                      className="absolute left-3 top-1/2 -translate-y-1/2 text-blue-400"
+                      className="absolute left-3 top-1/2 -translate-y-1/2 text-blue-500"
                       aria-hidden="true"
                     >
                       $
@@ -125,7 +124,7 @@ const LoanCalculator = () => {
                       min={0}
                       value={loanAmount}
                       onChange={(e) => setLoanAmount(Number(e.target.value))}
-                      className="w-full pl-8 pr-4 py-2 rounded-lg border border-blue-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-blue-900 bg-white"
+                      className="w-full pl-8 pr-4 py-2 rounded-lg border border-blue-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-blue-900 bg-white"
                     />
                   </div>
                 </div>
@@ -143,7 +142,7 @@ const LoanCalculator = () => {
                     name="loanTerm"
                     value={loanTerm}
                     onChange={(e) => setLoanTerm(Number(e.target.value))}
-                    className="w-full px-4 py-2 rounded-lg border border-blue-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-blue-900 bg-blue-50"
+                    className="w-full px-4 py-2 rounded-lg border border-blue-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-blue-900 bg-white"
                   >
                     {[1, 2, 3, 5, 7, 10, 15, 20, 25, 30].map((year) => (
                       <option key={year} value={year}>
@@ -177,7 +176,7 @@ const LoanCalculator = () => {
                         onChange={(e) =>
                           setInterestRateClean(Number(e.target.value))
                         }
-                        className="w-full px-4 py-2 rounded-lg border border-blue-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-blue-900 bg-white"
+                        className="w-full px-4 py-2 rounded-lg border border-blue-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-blue-900 bg-white"
                       />
                     </div>
                     <div>
@@ -198,7 +197,7 @@ const LoanCalculator = () => {
                         onChange={(e) =>
                           setInterestRateDefault(Number(e.target.value))
                         }
-                        className="w-full px-4 py-2 rounded-lg border border-blue-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-blue-900 bg-white"
+                        className="w-full px-4 py-2 rounded-lg border border-blue-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-blue-900 bg-white"
                       />
                     </div>
                   </div>
@@ -218,7 +217,7 @@ const LoanCalculator = () => {
                     <div className="text-base font-semibold text-blue">
                       Clean Credit
                     </div>
-                    <div className="text-base text-blue-900">Interest</div>
+                    <div className="text-base text-blue-700">Interest</div>
                   </div>
                   <div className="text-2xl font-bold text-blue text-right">
                     ${cleanCreditInterest.toFixed(2)}
@@ -229,7 +228,7 @@ const LoanCalculator = () => {
                     <div className="text-base font-semibold text-blue-800">
                       Default Credit
                     </div>
-                    <div className="text-base text-blue-900">Interest</div>
+                    <div className="text-base text-blue-700">Interest</div>
                   </div>
                   <div className="text-2xl font-bold text-blue-800 text-right">
                     ${defaultCreditInterest.toFixed(2)}
@@ -247,7 +246,7 @@ const LoanCalculator = () => {
                     ${defaultCreditMonthly.toFixed(2)}
                   </div>
                 </div>
-                <div className="rounded-lg bg-blue text-white py-3 px-4 mt-2 flex flex-col items-center">
+                <div className="rounded-lg bg-gradient-to-r from-blue to-blue-700 text-white py-3 px-4 mt-2 flex flex-col items-center">
                   <div className="font-semibold text-base">
                     Potential Savings
                   </div>
@@ -269,8 +268,6 @@ const LoanCalculator = () => {
           </div>
         </div>
       </div>
-
-      
     </section>
   );
 };

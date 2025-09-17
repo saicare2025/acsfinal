@@ -14,7 +14,8 @@ const Logo = () => {
           >
             <Image
               src={logo}
-              alt="Company Logo"
+              alt="Australian Credit Solutions"
+              title='Australian Credit Solutions'
               width={200}
               height={60}
               priority

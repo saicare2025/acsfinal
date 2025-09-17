@@ -8,6 +8,7 @@ import CreditRepairSection from "./CreditRepair";
 import CreditRepairProcess from "./CreditRepairProcess.js";
 import ReviewWidget from "../../components/homepage/TestmonialProduct";
 import LoanApprovals from "./LoanApprovals";
+import TestimonialShowcase from "./VideoTestimonials";
 import FAQ from "./Faq";
 
 export default function HomePage() {
@@ -15,10 +16,12 @@ export default function HomePage() {
     <main className="min-h-screen">
       <HeroSection />
       <TrustBadge />
-      <ReviewWidget/>
+      <TestimonialShowcase />
+      <ReviewWidget />
+
       <WhyChooseUs />
-      <HelpSection />
       <CompanyCarousel />
+      <HelpSection />
       <CreditRepairSection />
       <CreditRepairProcess />
       <HomeClientSections />

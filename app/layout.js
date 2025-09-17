@@ -1,10 +1,12 @@
-import TawkDesktopOnly from "@/components/TawkDesktopOnly";
+
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import AnalyticsRouteTracker from "@/components/AnalyticsRouteTracker";
 import ExitIntentPopupWithSuspense from "@/components/ExitIntentPopupWithSuspense";
 import StructuredData from "@/components/StructuredData";
+import TawkDesktopOnly from "@/components/TawkDesktopOnly"
+
 
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: true });
 
@@ -70,7 +72,7 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-MVMW025XRV";
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-NSDFQNQ25X";
   const TIKTOK_ID =
     process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID || "C5B6LNC6J7TSRVQBTN00";
 

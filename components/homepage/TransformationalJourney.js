@@ -23,13 +23,14 @@ const CreditScoreTransformation = () => {
       id: 1,
       image: home1,
       alt: "Client celebrating credit approval",
+      title: "Client celebrating credit approval",
       beforeScore: 420,
       afterScore: 996,
-      duration: "2 weeks",
+     
       shortDescription: "Major bank default removed quickly",
       fullDescription: [
         "Facing mortgage rejection due to a bank default, our client was at a financial crossroads.",
-        "Our team initiated immediate action, successfully negotiating the default's removal by 10am the same morning.",
+        "Our team initiated immediate action, successfully negotiating the default's removal",
         "The 576-point credit score increase transformed their borrowing capacity.",
         "Specializing in defaults with all national banks, paid or unpaid."
       ],
@@ -39,13 +40,14 @@ const CreditScoreTransformation = () => {
       id: 2,
       image: home2,
       alt: "Client holding approval documents",
+      title: "Client holding approval documents",
       beforeScore: 380,
       afterScore: 803,
-      duration: "14 days",
+     
       shortDescription: "Multiple credit file errors corrected",
       fullDescription: [
         "Persistent loan rejections due to multiple credit file inaccuracies.",
-        "Within 14 days, we identified and disputed 3 reporting errors.",
+        "we identified and disputed 3 reporting errors.",
         "423-point improvement led to immediate loan qualification.",
         "Corrected bureau oversights that had persisted for years."
       ],
@@ -59,28 +61,26 @@ const CreditScoreTransformation = () => {
   };
 
   return (
-    <section id="results" className="pt-12 lg:py-16 bg-gradient-to-br from-white to-blue-100">
-      <div className="container max-w-7xl  mx-auto px-4">
+    <section id="results" className="lg:py-16 py-8 bg-gradient-to-b from-white to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-start mb-12"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            Real Client Success Stories
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Real Client{" "}
+            <span className="bg-blue bg-clip-text text-transparent">
+              Success Stories
+            </span>
           </h2>
-          <p className="text-lg text-blue ">
+          <p className="text-lg text-blue-700 max-w-3xl mx-auto">
             See actual results we&apos;ve achieved for our clients
           </p>
-          {/* <div className="mt-4 space-y-2">
-            <h3 className="text-xl font-semibold text-gray-800">Defaults Removed – Case Studies</h3>
-            <h3 className="text-xl font-semibold text-gray-800">Credit Score Improvements</h3>
-            <h3 className="text-xl font-semibold text-gray-800">Client Video Testimonial</h3>
-          </div> */}
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {successStories.map((story, index) => (
             <motion.div
               key={story.id}
@@ -88,15 +88,16 @@ const CreditScoreTransformation = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-md overflow-hidden border border-blue-100 hover:shadow-lg transition-all"
+              className="bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow-md overflow-hidden border border-blue-100 hover:shadow-lg transition-all"
             >
               {/* Image with Score Meter */}
-              <div className="relative h-[400px] lg:h-[500px]  w-full">
+              <div className="relative h-[400px] lg:h-[450px] w-full">
                 <Image
                   src={story.image}
                   alt={story.alt}
+                  title={story.title}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
@@ -105,27 +106,27 @@ const CreditScoreTransformation = () => {
                       <span className="text-base font-light">CREDIT SCORE INCREASE</span>
                       <h3 className="text-2xl font-bold">{story.afterScore - story.beforeScore} Points</h3>
                     </div>
-                    <span className="text-base">Resolved in {story.duration}</span>
+                    
                   </div>
                 </div>
               </div>
 
               {/* Credit Score Meter */}
-              <div className="p-6 border-b border-blue-50">
+              <div className="p-6 border-b border-blue-100">
                 <div className="flex justify-between mb-2">
-                  <span className="text-base text-gray-500">Before: {story.beforeScore}</span>
-                  <span className="text-base text-gray-500">After: {story.afterScore}</span>
+                  <span className="text-base text-blue-700">Before: {story.beforeScore}</span>
+                  <span className="text-base text-blue-700">After: {story.afterScore}</span>
                 </div>
-                <div className="relative h-3 bg-gray-100 rounded-full overflow-hidden">
+                <div className="relative h-3 bg-blue-100 rounded-full overflow-hidden">
                   <div 
                     className="absolute top-0 left-0 h-full bg-gradient-to-r from-red-400 via-yellow-400 to-green-500"
                     style={{ width: `${calculateScorePercentage(1200)}%` }}
                   />
                   <div 
-                    className="absolute top-0 left-0 h-full bg-gray-300"
+                    className="absolute top-0 left-0 h-full bg-blue-300"
                     style={{ 
                       width: `${calculateScorePercentage(story.beforeScore)}%`,
-                      background: `linear-gradient(to right, #ef4444, ${story.beforeScore > 600 ? '#f59e0b' : '#ef4444'})`
+                      background: `linear-gradient(to right, #93c5fd, ${story.beforeScore > 600 ? '#f59e0b' : '#93c5fd'})`
                     }}
                   />
                   <div 
@@ -136,7 +137,7 @@ const CreditScoreTransformation = () => {
                     }}
                   />
                 </div>
-                <div className="flex justify-between mt-1 text-xs text-gray-500">
+                <div className="flex justify-between mt-1 text-xs text-blue-700">
                   <span>300</span>
                   <span>600</span>
                   <span>900</span>
@@ -146,7 +147,7 @@ const CreditScoreTransformation = () => {
 
               {/* Story Content */}
               <div className="p-6">
-                <p className="text-gray-700 font-medium mb-4">
+                <p className="text-blue-800 font-medium mb-4">
                   {story.shortDescription}
                 </p>
 
@@ -158,12 +159,12 @@ const CreditScoreTransformation = () => {
                     className="space-y-3 mb-4"
                   >
                     {story.fullDescription.map((paragraph, i) => (
-                      <p key={i} className="text-gray-600">
+                      <p key={i} className="text-blue-700">
                         {paragraph}
                       </p>
                     ))}
-                    <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
-                      <p className="text-blue-700 font-medium">
+                    <div className="bg-blue-100 p-3 rounded-lg border border-blue-200">
+                      <p className="text-blue-800 font-medium">
                         Final Outcome: {story.result}
                       </p>
                     </div>
@@ -172,7 +173,7 @@ const CreditScoreTransformation = () => {
 
                 <button
                   onClick={() => toggleCard(index)}
-                  className="flex items-center text-blue font-medium hover:text-blue-700 transition-colors"
+                  className="flex items-center text-blue font-medium hover:text-blue-800 transition-colors"
                 >
                   {expandedCards.includes(index) ? (
                     <>

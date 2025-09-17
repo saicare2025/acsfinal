@@ -1,141 +1,102 @@
 "use client";
 import React, { useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import Image from "next/image";
-import arrowIcon from "../app/assets/arrow.png";
 
-const FooterForm = ({
-  heading = "Free Credit File Assessment",
-  subheading = "See if your negative listings can be removed – quick, confidential, and no win no fee.",
-  paragraph = "",
-}) => {
+export default function FooterForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  // ---- Parse UTM params from URL (normalized to: source, medium, campaign, term, content)
   const utm = useMemo(() => {
     const keys = [
-      "utm_source",
-      "utm_medium",
-      "utm_campaign",
-      "utm_term",
-      "utm_content",
-      "source",
-      "medium",
-      "campaign",
-      "term",
-      "content",
+      "utm_source","utm_medium","utm_campaign","utm_term","utm_content",
+      "source","medium","campaign","term","content","gclid","fbclid","msclkid",
     ];
-    const o = {};
+    const out = {};
     keys.forEach((k) => {
       const v = searchParams.get(k);
-      if (v) o[k.replace(/^utm_/, "")] = v;
+      if (v) out[k.replace(/^utm_/, "")] = v;
     });
-    return o;
+    return out;
   }, [searchParams]);
 
-  // ---- Build a primary source tag from UTM
-  const pickSourceTag = (u = {}) => {
-    const src = (u.source || "site").toLowerCase();
-    if (["google", "adwords", "ads"].includes(src)) return "src:google";
-    if (["facebook", "fb", "meta"].includes(src)) return "src:facebook";
-    if (["instagram", "ig"].includes(src)) return "src:instagram";
-    if (["tiktok", "tt"].includes(src)) return "src:tiktok";
-    if (["bing", "microsoft"].includes(src)) return "src:bing";
-    if (["referral", "partner"].includes(src)) return "src:referral";
-    return `src:${src || "site"}`;
-  };
-
   const [formData, setFormData] = useState({
-    fullName: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
   });
+  const [file, setFile] = useState(null);
+  const [fileError, setFileError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => {
+  const ACCEPTED_TYPES = [
+    "application/pdf","image/jpeg","image/png","image/tiff",
+    "application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "text/plain","application/rtf",
+  ];
+  const MAX_MB = 25;
+  const MAX_BYTES = MAX_MB * 1024 * 1024;
+
+  const onChange = (e) => {
     const { name, value } = e.target;
     setFormData((s) => ({ ...s, [name]: value }));
   };
 
-  const validateForm = () => {
-    const { fullName, email, phone } = formData;
-    if (!fullName.trim()) {
-      alert("Please enter your full name.");
-      return false;
+  const onFile = (e) => {
+    const f = e.target.files?.[0] || null;
+    setFileError("");
+    if (!f) return setFile(null);
+    if (f.size > MAX_BYTES) { setFile(null); return setFileError(`Max ${MAX_MB}MB.`); }
+    if (!ACCEPTED_TYPES.includes(f.type)) {
+      setFile(null);
+      return setFileError("Allowed: PDF, JPG/PNG, TIFF, DOC/DOCX, TXT, RTF.");
     }
-    if (!email.trim() || !/^\S+@\S+\.\S+$/.test(email)) {
-      alert("Please enter a valid email address.");
-      return false;
-    }
-    if (!phone.trim()) {
-      alert("Please enter your phone number.");
-      return false;
-    }
-    return true;
+    setFile(f);
   };
 
-  // ---- Robust reader for JSON or text error payloads
   const safeRead = async (res) => {
-    const ct = res.headers.get("content-type") || "";
-    if (ct.includes("application/json")) return await res.json();
-    const text = await res.text();
-    return { ok: false, error: text };
+    try {
+      const ct = res.headers.get("content-type") || "";
+      if (ct.includes("application/json")) return await res.json();
+      return { ok: false, error: await res.text() };
+    } catch { return { ok: false, error: "Failed to parse response" }; }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validateForm()) return;
+    if (isSubmitting) return;
+    // Minimal guard: need at least one contact method
+    if (!formData.email.trim() && !formData.phone.trim()) {
+      alert("Please provide an email or phone.");
+      return;
+    }
+
     setIsSubmitting(true);
-
     try {
-      // Tags from UTM
-      const primary = pickSourceTag(utm);
-      const tags = [primary];
-      if (utm.campaign) tags.push(`cmp:${utm.campaign}`);
-      if (utm.medium) tags.push(`med:${utm.medium}`);
-      if (utm.term) tags.push(`term:${utm.term}`);
+      // Build multipart payload
+      const fd = new FormData();
+      fd.append("firstName", (formData.firstName || "").trim());
+      fd.append("lastName",  (formData.lastName  || "").trim());
+      if (formData.email) fd.append("email", formData.email.trim());
+      if (formData.phone) fd.append("phone", formData.phone.trim());
 
-      // Split full name into first/last (best-effort)
-      const parts = formData.fullName.trim().split(/\s+/);
-      const firstName = parts.shift() || "";
-      const lastName = parts.join(" ");
+      // Pass UTMs (api reads utm_* and/or falls back to URL)
+      Object.entries(utm).forEach(([k, v]) => v && fd.append(`utm_${k}`, String(v)));
 
-      const payload = {
-        firstName,
-        lastName,
-        email: (formData.email || "").trim(),
-        phone: formData.phone,
-        tags,
-        // Add customFields here if you later collect them in this same form.
-      };
+      if (file) fd.append("file", file, file.name);
 
-      const res = await fetch("/api/ghl/contacts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      const res = await fetch("/api/ghl/contacts", { method: "POST", body: fd });
+      const payload = await safeRead(res);
 
-      const result = await safeRead(res);
-      console.log("Full API Response:", result);
-
-      if (!res.ok || result?.ok === false) {
-        const msg =
-          result?.details ||
-          result?.error ||
-          result?.message ||
-          `Request failed (${res.status})`;
+      if (!res.ok || payload?.ok === false) {
+        const msg = payload?.error || payload?.message || payload?.details || `Request failed (${res.status})`;
         throw new Error(msg);
       }
 
-      const contactId = result?.contact?.id || result?.id || result?.data?.id;
-      if (!contactId)
-        throw new Error("No contact ID received. Check console for details.");
-
       router.push("/meeting-schedule");
-    } catch (error) {
-      console.error("Submission failed:", error);
-      alert(`Error: ${error?.message || "Submission failed"}`);
+    } catch (err) {
+      console.error("Submit error:", err);
+      alert(err?.message || "Submission failed.");
     } finally {
       setIsSubmitting(false);
     }
@@ -143,64 +104,64 @@ const FooterForm = ({
 
   return (
     <div className="rounded-2xl border border-blue/10 bg-white/90 p-4 shadow-lg backdrop-blur-sm sm:p-6 md:p-8">
-      {/* Header with dynamic content */}
       <div className="mb-6 text-center">
         <h2 className="text-xl font-extrabold leading-tight text-blue sm:text-2xl lg:text-3xl">
-          {heading}
+          FREE CREDIT CHECK FORM
         </h2>
-        <p className="mt-1 text-base text-center text-slate-600 sm:text-base">
-          See if your negative listings can be removed – quick, confidential,
-          and{" "}
-          <span className="font-bold text-blue">
-            <br></br>no win no fee.
-          </span>
+        <p className="mt-1 text-base text-slate-600">
+          See if your negative listings can be removed – quick and confidential
         </p>
       </div>
 
-      {/* Form */}
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="space-y-3">
+        {/* First + Last Name in a row */}
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           <input
-            type="text"
-            name="fullName"
-            placeholder="Full Name"
-            value={formData.fullName}
-            onChange={handleChange}
-            required
-            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-2.5"
+            type="text" name="firstName" placeholder="First Name"
+            value={formData.firstName} onChange={onChange} required
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base focus:ring-2 focus:ring-blue-500"
           />
-
           <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-2.5"
-          />
-
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-2.5"
+            type="text" name="lastName" placeholder="Last Name"
+            value={formData.lastName} onChange={onChange} required
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
+        <input
+          type="email" name="email" placeholder="Email Address"
+          value={formData.email} onChange={onChange}
+          className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base focus:ring-2 focus:ring-blue-500"
+        />
+
+        <input
+          type="tel" name="phone" placeholder="Phone Number"
+          value={formData.phone} onChange={onChange}
+          className="w-full rounded-lg border border-gray-300 bg-white px-3 py-3 text-base focus:ring-2 focus:ring-blue-500"
+        />
+
+        {/* Credit File Upload */}
+        <div className="pt-1">
+          <label htmlFor="credit-file" className="block text-sm font-medium text-slate-700">
+            Upload your credit file (optional)
+          </label>
+          <input
+            id="credit-file" type="file"
+            accept=".pdf,.jpg,.jpeg,.png,.tif,.tiff,.doc,.docx,.txt,.rtf"
+            onChange={onFile}
+            className="mt-2 block w-full text-sm text-slate-700 file:mr-4 file:rounded-lg file:border-0 file:bg-blue file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-blue-700"
+          />
+          {fileError && <p className="mt-2 text-xs font-medium text-red-600">{fileError}</p>}
+          {file && !fileError && <p className="mt-2 text-xs text-slate-600">{file.name}</p>}
+        </div>
+
         <button
-          type="submit"
-          disabled={isSubmitting}
-          className="mt-4 w-full rounded-xl bg-blue px-4 py-3 text-base font-semibold uppercase tracking-wide text-white shadow-md transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 sm:px-5 sm:text-base"
+          type="submit" disabled={isSubmitting}
+          className="mt-4 w-full rounded-xl bg-blue px-4 py-3 text-base font-semibold uppercase tracking-wide text-white shadow-md transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isSubmitting ? "Processing..." : "Check My Removal Options"}
         </button>
       </form>
     </div>
   );
-};
-
-export default FooterForm;
+}

@@ -136,87 +136,102 @@ export default function ReviewsWidget() {
   }, [pathname]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
-      {/* Loader */}
-      <div
-        ref={loaderRef}
-        aria-live="polite"
-        aria-busy={isLoading ? "true" : "false"}
-        className="my-6 rounded-2xl border border-zinc-200 bg-blue-50 p-6 shadow-sm"
-        style={{ display: isLoading ? "" : "none" }}
-      >
-        <div className="flex items-center gap-3 mb-4">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gray-50 border border-emerald-200">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
-              <path
-                d="M12 2l2.09 3.97L18.5 7.5l-3 3 .71 4.5L12 13.5 7.79 15l.71-4.5-3-3 4.41-1.53L12 2z"
-                fill="currentColor"
-                className="text-emerald-500"
-              />
-            </svg>
-          </span>
-          <div className="text-lg font-semibold leading-tight">Loading verified reviews…</div>
+    <section className=" py-8 lg:py-16 bg-gradient-to-b from-white to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Added H2 Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            What Our{" "}
+            <span className="bg-blue bg-clip-text text-transparent">
+              Clients Say
+            </span>
+          </h2>
+          <p className="text-lg text-blue max-w-3xl mx-auto">
+            Discover why Australian Credit Solutions is trusted by clients across Australia
+          </p>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-10 w-10 rounded-full shimmer" />
-                <div className="flex-1">
-                  <div className="h-3 w-28 rounded shimmer mb-2" />
-                  <div className="h-3 w-20 rounded shimmer" />
+
+        {/* Loader */}
+        <div
+          ref={loaderRef}
+          aria-live="polite"
+          aria-busy={isLoading ? "true" : "false"}
+          className="my-6 rounded-2xl border border-blue-100 bg-gradient-to-b from-blue-50 to-white p-6 shadow-sm"
+          style={{ display: isLoading ? "" : "none" }}
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 border border-blue-200">
+              <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+                <path
+                  d="M12 2l2.09 3.97L18.5 7.5l-3 3 .71 4.5L12 13.5 7.79 15l.71-4.5-3-3 4.41-1.53L12 2z"
+                  fill="currentColor"
+                  className="text-blue"
+                />
+              </svg>
+            </span>
+            <div className="text-lg font-semibold leading-tight text-blue-900">Loading verified reviews…</div>
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="rounded-xl border border-blue-100 bg-white p-4 shadow-sm">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="h-10 w-10 rounded-full shimmer" />
+                  <div className="flex-1">
+                    <div className="h-3 w-28 rounded shimmer mb-2" />
+                    <div className="h-3 w-20 rounded shimmer" />
+                  </div>
                 </div>
+                <div className="flex items-center gap-2 mb-3">
+                  {Array.from({ length: 5 }).map((__, s) => (
+                    <div key={s} className="h-3 w-3 rounded shimmer" />
+                  ))}
+                  <div className="h-3 w-10 rounded shimmer ml-auto" />
+                </div>
+                <div className="space-y-2">
+                  <div className="h-3 w-full rounded shimmer" />
+                  <div className="h-3 w-11/12 rounded shimmer" />
+                  <div className="h-3 w-9/12 rounded shimmer" />
+                </div>
+                <div className="mt-4 h-6 w-24 rounded-full shimmer" />
               </div>
-              <div className="flex items-center gap-2 mb-3">
-                {Array.from({ length: 5 }).map((__, s) => (
-                  <div key={s} className="h-3 w-3 rounded shimmer" />
-                ))}
-                <div className="h-3 w-10 rounded shimmer ml-auto" />
-              </div>
-              <div className="space-y-2">
-                <div className="h-3 w-full rounded shimmer" />
-                <div className="h-3 w-11/12 rounded shimmer" />
-                <div className="h-3 w-9/12 rounded shimmer" />
-              </div>
-              <div className="mt-4 h-6 w-24 rounded-full shimmer" />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* ROMW will inject reviews here */}
-      <div
-        ref={containerRef}
-        data-romw-token="Un2YoIQfGfa3N1fM3aK9jrRYmudhaHraWDe42ioCB7Sy0POe2h"
-        style={{ minHeight: 300 }}
-      />
+        {/* ROMW will inject reviews here */}
+        <div
+          ref={containerRef}
+          data-romw-token="Un2YoIQfGfa3N1fM3aK9jrRYmudhaHraWDe42ioCB7Sy0POe2h"
+          style={{ minHeight: 300 }}
+        />
 
-      {/* Local shimmer styles */}
-      <style jsx>{`
-        .shimmer {
-          position: relative;
-          overflow: hidden;
-          background: #f3f4f6;
-        }
-        .shimmer::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          transform: translateX(-100%);
-          background: linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.7) 50%,
-            rgba(255, 255, 255, 0) 100%
-          );
-          animation: shimmer 1.2s infinite;
-        }
-        @keyframes shimmer {
-          100% {
-            transform: translateX(100%);
+        {/* Local shimmer styles */}
+        <style jsx>{`
+          .shimmer {
+            position: relative;
+            overflow: hidden;
+            background: #f3f4f6;
           }
-        }
-      `}</style>
-    </div>
+          .shimmer::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            transform: translateX(-100%);
+            background: linear-gradient(
+              90deg,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(255, 255, 255, 0.7) 50%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            animation: shimmer 1.2s infinite;
+          }
+          @keyframes shimmer {
+            100% {
+              transform: translateX(100%);
+            }
+          }
+        `}</style>
+      </div>
+    </section>
   );
 }

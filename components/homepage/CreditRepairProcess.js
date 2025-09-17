@@ -1,130 +1,152 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useMemo, useState } from "react";
 
-export default function CreditRepairProcess({ phoneNumber = "0489 265 737" }) {
+export default function CreditRepairProcess() {
   const [expandedId, setExpandedId] = useState(null);
+  const toggle = (id) => setExpandedId((p) => (p === id ? null : id));
 
   const steps = useMemo(
     () => [
       {
         id: 1,
-        title: "Generate Your Premium Credit Report",
-        description:
-          "The first step is generating a premium credit report—the same type lenders review before approving a loan.",
-        details:
-          "If you already have a premium report, share it with us. If not, we can generate one for $29.99. We'll guide you over the phone step by step and review the report together. You'll receive a copy once it's generated.",
+        title: "Step 1: Let's Check What's Actually On Your Credit File",
+        intro: `Got a credit report already? Sweet! Just email it over or pop it on our secure upload page.
+Don't have one yet? No worries at all, mate! We'll grab the same premium report that banks and lenders use (costs just $29.99) and explain everything in plain English - no confusing jargon here.
+📅 Book a quick chat with one of our credit experts through our online calendar. We'll go through your report together over the phone or video call. You'll finally understand:`,
+        bullets: [
+          "What's dragging your credit score down",
+          "Why certain things are on your file",
+          "What it all means for getting approved for loans",
+        ],
       },
       {
         id: 2,
-        title: "Identify & Dispute Negative Listings",
-        description:
-          "We perform a detailed assessment of your report, analyzing each item thoroughly. Normally $299, now offered as a no-obligation, risk-free assessment for a limited time.",
-        details:
-          "We'll go through each point with you on a call so you fully understand every aspect of your report.",
+        title: "Step 2: Your Personal Game Plan to Fix Things",
+        intro: `After we've had a good look at your credit file, here's what happens next:`,
+        bullets: [
+          "✅ We'll spot the problem listings - defaults, court judgments, dodgy credit inquiries, late repayment issues or plain old mistakes",
+          "✅ We'll tell you straight up - what can be removed, what's worth challenging, and what's probably staying put",
+          "✅ You'll get realistic timeframes - no false promises. We'll tell you how long it takes and exactly what it costs",
+        ],
+        note:
+          "Here's the best bit: We only take on your case if we're genuinely confident we can help you. That's why we offer our No Win, No Fee - if we can't remove those negative listings, you don't pay our success fees (terms and conditions apply).",
       },
       {
         id: 3,
-        title: "Remove Inaccuracies from Your Credit File",
-        description:
-          "We'll advise if we can take your case, estimate timelines, and discuss payment terms.",
-        details:
-          "We only proceed if we're confident, under our No Win No Fee policy (T&Cs apply), so you're in safe hands throughout.",
+        title: "Step 3: Get Your Life Back on Track",
+        intro: `Once we've cleaned up your credit file and your score starts climbing, that's when the magic happens:`,
+        bullets: [
+          "🏠 Ready for that home loan? We'll connect you with mortgage brokers who can help (not just sell you anything)",
+          "🚗 Need car finance? Our trusted partners work with people who've had credit issues before",
+          "💰 Personal loan for debt consolidation? We'll point you toward lenders who look at the whole picture, not just your credit score",
+        ],
+        note:
+          "The bottom line: After we fix your credit, you'll have finance options again.",
       },
     ],
     []
   );
 
-  const toggleExpand = (id) => setExpandedId((prev) => (prev === id ? null : id));
-
-  const telHref = `tel:${phoneNumber.replace(/\s+/g, "")}`;
-
   return (
-    <section id="our-process" className="lg:py-12 py-8">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-start mb-12">
+    <section
+      id="our-process"
+      className="py-16 bg-gradient-to-b from-white to-blue-50 relative z-10"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Heading */}
+        <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Proven Credit Repair Process
+            Our Simple <span className="bg-blue bg-clip-text text-transparent">3-Step Credit Repair Process</span>
           </h2>
-          <p className="text-lg text-gray-600">
-            A simple, transparent process to help improve your credit score
+          <p className="text-lg text-blue-700 max-w-3xl mx-auto">
+            A straightforward approach to improving your credit health
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {steps.map((step) => {
-            const isOpen = expandedId === step.id;
-            const detailsId = `step-details-${step.id}`;
+        {/* Cards row: equal card heights; overlays can escape */}
+        <div className="relative flex flex-col md:flex-row items-start gap-6 overflow-visible">
+          {steps.map((s) => {
+            const open = expandedId === s.id;
+            const panelId = `process-panel-${s.id}`;
+
             return (
-              <div
-                key={step.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border-t-4 border-[#0668a5]"
+              <article
+                key={s.id}
+                className={`relative w-full md:w-[calc(33.333%-0px)] self-start rounded-2xl bg-white border border-blue-100 shadow-sm hover:shadow-md transition-shadow
+                ${open ? "z-30" : "z-10"}`}
+                style={{ minHeight: 150 }} 
               >
-                <div className="p-2 bg-[#0668a5]">
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <span className="text-[#0668a5] font-bold text-xl">{step.id}</span>
+                {/* Number badge */}
+                <div className="flex justify-center -mt-5 pointer-events-none">
+                  <div className="h-10 w-10 rounded-full bg-gradient-to-r from-blue to-blue-700 text-white grid place-items-center shadow-lg ring-4 ring-white">
+                    <span className="font-bold">{s.id}</span>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">{step.title}</h3>
-                  <p className="text-gray-600 mb-4">{step.description}</p>
+                {/* Card content (kept compact so heights match) */}
+                <div className="px-6 pt-6 pb-5">
+                  <h3 className="text-lg font-bold text-blue-900 text-center mb-3 leading-tight">
+                    {s.title}
+                  </h3>
 
-                  <div
-                    id={detailsId}
-                    className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
-                      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                    }`}
-                    aria-hidden={!isOpen}
-                  >
-                    <div className="overflow-hidden">
-                      <div className="pt-4">
-                        <p className="text-gray-700 bg-blue-50 p-4 rounded-lg">{step.details}</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => toggleExpand(step.id)}
-                    className="mt-4 text-[#0668a5] font-semibold inline-flex items-center hover:underline focus:outline-none focus:ring-2 focus:ring-[#0668a5] focus:ring-offset-2 rounded"
-                    aria-expanded={isOpen}
-                    aria-controls={detailsId}
-                  >
-                    {isOpen ? "Read Less" : "Read More"}
-                    <svg
-                      className={`ml-2 w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
+                  <div className="flex justify-center">
+                    <button
+                      type="button"
+                      aria-expanded={open}
+                      aria-controls={panelId}
+                      onClick={() => setExpandedId(open ? null : s.id)}
+                      className="inline-flex items-center gap-2 text-blue font-semibold hover:text-blue-800 transition-colors"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
+                      {open ? "Read Less" : "Read More"}
+                      <svg
+                        className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        aria-hidden="true"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-              </div>
+
+                {/* DROPDOWN OVERLAY (absolute, high z-index, doesn't change card height) */}
+                <div
+                  id={panelId}
+                  className={`absolute left-0 right-0 top-full ${
+                    open ? "pointer-events-auto" : "pointer-events-none"
+                  }`}
+                  style={{ zIndex: 40 }} // ensure above neighbors/next sections
+                  aria-hidden={!open}
+                >
+                  <div
+                    className={`mx-0 md:mx-2 mt-3 rounded-xl border border-blue-200 bg-blue-50/80 backdrop-blur-sm px-4 py-4 shadow-lg transition-all
+                    ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}`}
+                  >
+                    <p className="whitespace-pre-line text-blue-900/90 leading-relaxed text-[15px]">
+                      {s.intro}
+                    </p>
+
+                    <ul className="mt-3 space-y-2">
+                      {s.bullets.map((b) => (
+                        <li key={b} className="flex items-start gap-2">
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue shrink-0" />
+                          <span className="text-blue-900/95 leading-relaxed text-[15px]">{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {s.note && (
+                      <p className="mt-4 text-blue-900/90 leading-relaxed text-[15px]">{s.note}</p>
+                    )}
+                  </div>
+                </div>
+              </article>
             );
           })}
-        </div>
-
-        <div className="mt-16 text-center bg-[#0668a5] text-white p-8 rounded-xl">
-          <h3 className="text-2xl font-bold mb-4">Improve Your Credit Score</h3>
-          <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-          <p className="mb-6 max-w-2xl mx-auto">
-            To begin your credit repair journey, you can chat with us live, schedule a call, or call us at{" "}
-            <a href={telHref} className="font-bold hover:underline ml-1">
-              {phoneNumber}
-            </a>
-            .
-          </p>
-          <a
-            href={telHref}
-            className="inline-block bg-white text-[#0668a5] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300"
-          >
-            Call Us Now
-          </a>
         </div>
       </div>
     </section>

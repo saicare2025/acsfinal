@@ -84,7 +84,7 @@ function categorizeUrl(href) {
   if (
     slug.includes("about") ||
     slug.includes("testimonial") ||
-    slug.includes("complaints-handling-policy") ||
+    
     slug.includes("contact") ||
     slug.includes("careers")
   ) {
@@ -137,10 +137,7 @@ const canonicalItems = {
   company: [
     { label: "About Us", href: "/about" },
     { label: "Testimonials", href: "/testimonial" },
-    {
-      label: "Complaints Handling Policy",
-      href: "/complaints-handling-policy",
-    },
+    
     { label: "Contact", href: "/contact-us" },
   ],
   "legal-trust": [
@@ -398,7 +395,7 @@ export default function Footer({
   }, [activeDisclosure]);
 
   return (
-    <footer className="bg-gradient-to-b from-blue-50 to-white text-gray-800 border-t border-gray-200">
+    <footer className="bg-gradient-to-b from-white to-blue-50 text-gray-800 border-t border-gray-200">
       <section className="bg-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -456,6 +453,7 @@ export default function Footer({
               <Image
                 src="/logo.png"
                 alt="Australian Credit Solutions"
+                title="Australian Credit Solutions"
                 width={180}
                 height={60}
                 className="h-auto max-w-full"
@@ -661,7 +659,7 @@ export default function Footer({
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-200 bg-white relative z-0">
+      <div className="border-t border-gray-200 bg-gradient-to-b from-blue-100 to-white relative z-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="text-center sm:text-left">
